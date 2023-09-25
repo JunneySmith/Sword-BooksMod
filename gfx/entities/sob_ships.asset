@@ -1,0 +1,38 @@
+########################												########################
+####							Mandate of Heaven - Asian Ships								####
+########################												########################
+
+
+
+########################												########################
+####	Heavy		####------------------------------------------------########################
+########################												##########
+entity = { clone = "asiangfx_GALLEY_1"        name = "sobchinesegfx_GALLEY_1" version = 3}
+entity = { clone = "asiangfx_GALLEY_2"        name = "sobchinesegfx_GALLEY_2" version = 3}
+entity = { clone = "asiangfx_GALLEY_3"        name = "sobchinesegfx_GALLEY_3" version = 3}
+entity = { clone = "asiangfx_GALLEY_4"        name = "sobchinesegfx_GALLEY_4" version = 3}
+entity = { clone = "asiangfx_GALLEY_5"        name = "sobchinesegfx_GALLEY_5" version = 3}
+entity = { clone = "asiangfx_GALLEY_6"        name = "sobchinesegfx_GALLEY_6" version = 3}
+
+
+entity = { clone = "asiangfx_HEAVY_SHIP_1"        name = "sobchinesegfx_HEAVY_SHIP_1" version = 3}
+entity = { clone = "asiangfx_HEAVY_SHIP_2"        name = "sobchinesegfx_HEAVY_SHIP_2" version = 3}
+entity = { clone = "asiangfx_HEAVY_SHIP_3"        name = "sobchinesegfx_HEAVY_SHIP_3" version = 3}
+entity = { clone = "asiangfx_HEAVY_SHIP_4"        name = "sobchinesegfx_HEAVY_SHIP_4" version = 3}
+entity = { clone = "asiangfx_HEAVY_SHIP_5"        name = "sobchinesegfx_HEAVY_SHIP_5" version = 3}
+entity = { clone = "asiangfx_HEAVY_SHIP_6"        name = "sobchinesegfx_HEAVY_SHIP_6" version = 3}
+
+
+entity = { clone = "asiangfx_TRANSPORT_1"        name = "sobchinesegfx_TRANSPORT_1" version = 3}
+entity = { clone = "asiangfx_TRANSPORT_2"        name = "sobchinesegfx_TRANSPORT_2" version = 3}
+entity = { clone = "asiangfx_TRANSPORT_3"        name = "sobchinesegfx_TRANSPORT_3" version = 3}
+entity = { clone = "asiangfx_TRANSPORT_4"        name = "sobchinesegfx_TRANSPORT_4" version = 3}
+entity = { clone = "asiangfx_TRANSPORT_5"        name = "sobchinesegfx_TRANSPORT_5" version = 3 }
+entity = { clone = "asiangfx_TRANSPORT_6"        name = "sobchinesegfx_TRANSPORT_6" version = 3}
+
+entity = { clone = "asiangfx_LIGHT_SHIP_1"        name = "sobchinesegfx_LIGHT_SHIP_1" version = 3}
+entity = { clone = "asiangfx_LIGHT_SHIP_2"        name = "sobchinesegfx_LIGHT_SHIP_2" version = 3}
+entity = { clone = "asiangfx_LIGHT_SHIP_3"        name = "sobchinesegfx_LIGHT_SHIP_3" version = 3}
+entity = { clone = "asiangfx_LIGHT_SHIP_4"        name = "sobchinesegfx_LIGHT_SHIP_4" version = 3}
+entity = { clone = "asiangfx_LIGHT_SHIP_5"        name = "sobchinesegfx_LIGHT_SHIP_5" version = 3}
+entity = { clone = "asiangfx_LIGHT_SHIP_6"        name = "sobchinesegfx_LIGHT_SHIP_6" version = 3}

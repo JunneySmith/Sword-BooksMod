@@ -1,0 +1,132 @@
+
+sob_theocracy_gov_ideas = {
+	category = MIL
+	
+	bonus = {
+		global_heretic_missionary_strength = 0.01
+		church_loyalty_modifier = 0.1
+		brahmins_hindu_loyalty_modifier = 0.1
+		brahmins_muslim_loyalty_modifier = 0.1
+	}
+	
+	trigger = {
+		has_reform = sob_peasant_united_empire
+	}
+	sob_servants_of_god = {
+		devotion = 1
+	}
+	sob_by_the_grace_of_god = {
+		fire_damage_received = -0.1
+	}
+	sob_friends_in_high_places = {
+		leader_cost = -0.2
+	}
+	sob_flesh_is_weak = {
+		land_morale = 0.1
+	}
+	sob_alpha_and_omega = {
+		enforce_religion_cost = -0.1
+		culture_conversion_cost = -0.1
+	}
+	sob_conviction_of_sin = {
+		global_unrest = -2
+	}
+	sob_martyrs = {
+		global_manpower_modifier = 0.15
+	}
+	ai_will_do = {
+		factor = 0.9
+		modifier = {
+			factor = 0
+			has_idea_group = humanist_ideas
+		}
+	}
+}
+sob_religious_ideas = {
+	category = ADM
+ 	trigger = {
+ 			 OR = {culture_group = east_asian  culture_group = chinese_group is_emperor_of_china= yes }	}
+	bonus = {
+cb_on_religious_enemies = yes
+		free_adm_policy = 1
+		may_convert_territories = yes
+	}
+	sob_inquisition = {
+		global_missionary_strength = 0.02
+	}
+	sob_religious_tradition = {
+		monthly_splendor = 1
+	}
+	sob_church_attendance_duty = {
+		state_maintenance_modifier = -0.25
+	}
+	sob_divine_supremacy = {
+	    missionaries = 1
+		colonists = 1
+	}
+	sob_missionary_schools = {
+		global_institution_spread = 0.15
+	}
+	sob_devoutness = {
+ 	governing_capacity_modifier = 0.1
+	max_absolutism = 10
+	}
+
+	sob_sanjiaoheyi = {
+	 	harmonization_speed = 0.5
+		
+	}
+
+	ai_will_do = {
+		factor = 20
+	}
+}
+
+
+sob_aristocracy_ideas = {
+	category = MIL
+
+	bonus = {
+	amount_of_banners = 0.33
+	}
+
+	trigger = {
+          OR = {culture_group = east_asian  culture_group = chinese_group is_emperor_of_china= yes }
+	}
+		sob_weisuo_system_i = {
+		global_manpower_modifier = 0.15
+		manpower_recovery_speed = 0.10
+	}
+	sob_noble_knights = {
+		cavalry_power = 0.10
+		
+	}
+	sob_military_traditions = {
+		mil_tech_cost_modifier  = -0.1
+
+	}
+	sob_chujiangruxiang = {
+		global_autonomy = -0.03
+		
+	}
+
+	sob_international_nobility = {
+		diplomats = 1
+		free_leader_pool = 1
+	}
+	sob_fanshang_fa_i = {
+		 	drill_decay_modifier = -0.5
+			
+	}
+	sob_chongjian_fubing = {
+	drill_gain_modifier = 0.33
+
+	}
+	
+
+	ai_will_do = {
+		factor = 20
+		
+
+	}
+}

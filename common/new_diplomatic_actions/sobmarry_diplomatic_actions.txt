@@ -1,0 +1,401 @@
+
+sob_colony_usa_state = {
+	category = emperor
+	alert_index = 30
+	alert_tooltip = sob_no_neighbor_tributary_state_tooltip
+	require_acceptance = no
+	is_visible = {
+	OR = {culture_group = east_asian  culture_group = chinese_group }
+   XSA = {
+    is_subject_of = ROOT
+   }
+	FROM = {
+
+					capital_scope = {
+					OR = {
+	continent = new_world
+				continent = north_america
+				continent =south_america
+		
+		}
+		}
+		}
+	}
+	is_allowed = {
+	OR = {culture_group = east_asian  culture_group = chinese_group }
+     XSA = {
+	 is_subject_of = ROOT
+	 }
+	FROM = {
+	NOT = {liberty_desire = 30}
+		    ai = yes
+			is_subject = yes
+			is_subject_of = ROOT
+			OR = {
+			is_subject_of_type = colony
+			is_subject_of_type = tributary_state
+			is_subject_of_type = tributary_state_2
+			is_subject_of_type = sob_tributary_state_3
+			}
+					capital_scope = {
+					OR = {
+	continent = new_world
+				continent = north_america
+				continent =south_america
+		
+		}
+		}
+		}
+	}
+	on_accept = {
+	XSA = {
+	inherit = FROM
+	}
+         
+	}
+
+
+}
+sob_colony_usa_state_end = {
+	category = emperor
+	alert_index = 30
+	alert_tooltip = sob_no_neighbor_tributary_state_tooltip
+	require_acceptance = no
+	is_visible = {
+	FROM = { tag = XSA}
+	ai = no
+	OR = {culture_group = east_asian  culture_group = chinese_group }
+   XSA = {
+    is_subject_of = ROOT
+   }
+
+	}
+	is_allowed = {
+     XSA = {
+	 is_subject_of = ROOT
+	 NOT = { total_development = ROOT}
+	 NOT = {liberty_desire = 30}
+	 } 
+	}
+	on_accept = {
+
+	inherit = XSA
+	
+         
+	}
+
+
+}
+sob_colony_usa_state_new = {
+	category = emperor
+	alert_index = 30
+	alert_tooltip = sob_no_neighbor_tributary_state_tooltip
+	require_acceptance = no
+	is_visible = {
+	ai = no
+	OR = {culture_group = east_asian  culture_group = chinese_group }
+	FROM = {
+	tag = XSA
+	}
+   XSA = {
+    is_subject_of = ROOT
+   }
+
+	}
+	is_allowed = {
+     XSA = {
+	 is_subject_of = ROOT
+	 NOT = { total_development = ROOT}
+	 } 
+	}
+	on_accept = {
+	  ROOT = {
+	  		create_subject = {
+			subject_type = personal_union
+			subject = FROM
+		}
+	  
+	  }
+	 XSA = {
+	   change_government = sob_chinese_monarchy
+	  change_tag = XNM
+	
+	 }
+
+	
+         
+	}
+
+
+}
+sob_colony_global_state = {
+	category = emperor
+	alert_index = 30
+	alert_tooltip = sob_no_neighbor_tributary_state_tooltip
+	require_acceptance = no
+	is_visible = {
+	OR = {culture_group = east_asian  culture_group = chinese_group }
+	FROM = {
+				any_subject_country = {
+			OR = {
+			is_subject_of_type =private_enterprise
+			is_subject_of_type =self_governing_colony
+			is_subject_of_type = crown_colony
+			is_subject_of_type = colony
+             is_subject_of_type = sob_duhu_vassal
+			 is_subject_of_type = vassal
+			 is_subject_of_type =client_vassal
+			}
+		}
+        	is_subject = yes
+			is_subject_of = ROOT
+            OR = {
+			is_subject_of_type = zhuhou_state
+			is_subject_of_type = zhuhou_claim_state
+			is_subject_of_type = celestial_client_state
+			}
+			
+		}
+	}
+	is_allowed = {
+
+	FROM = {
+	ai = yes
+	NOT = {liberty_desire = 30}
+			is_subject = yes
+			is_subject_of = ROOT
+			any_subject_country = {
+			OR = {
+			is_subject_of_type =private_enterprise
+			is_subject_of_type =self_governing_colony
+			is_subject_of_type = crown_colony
+			is_subject_of_type = colony
+             is_subject_of_type = sob_duhu_vassal
+			 is_subject_of_type = vassal
+			 is_subject_of_type =client_vassal
+			}
+		}
+		}
+	}
+	on_accept = {
+      FROM = {
+
+	  
+	  		 add_country_modifier = {
+				name = "sob_china_market"
+				duration = -1
+			}
+	  
+	  
+	  every_subject_country = {
+	  limit = { 
+	  OR = {
+	  is_subject_of_type = colony
+	  			is_subject_of_type =private_enterprise
+			is_subject_of_type =self_governing_colony
+			is_subject_of_type = crown_colony
+	  }
+	  }
+	  ROOT = {
+	  inherit = PREV
+	  
+	  }
+	  }
+	  	  every_subject_country = {
+	  limit = { 
+	  OR = {
+	  is_subject_of_type = sob_duhu_vassal
+	  			 is_subject_of_type = vassal
+			 is_subject_of_type =client_vassal
+	  }
+	  }
+	  ROOT = {
+	  		create_subject = {
+			subject_type = sob_duhu_vassal
+			subject = PREV
+		}
+	  
+	  }
+	  }
+	  
+	  
+	  }
+         
+	}
+
+
+}
+
+sob_no_neighbor_tributary_state = {
+	category = influence
+	alert_index = 30
+	alert_tooltip = sob_no_neighbor_tributary_state_tooltip
+	require_acceptance = yes
+	is_visible = {
+	OR = {
+	ai = no
+
+has_global_flag = ai_can_tributary_state
+has_country_modifier = sob_luanshi_emperor
+
+	
+	}
+	OR = {culture_group = east_asian  culture_group = chinese_group }
+		is_emperor_of_china = yes
+	FROM = {
+		    ai = yes
+			is_subject = no
+			
+			NOT = {is_subject_of_type = tributary_state}
+		}
+	}
+	is_allowed = {
+	is_at_war = no
+	OR = {
+	NOT = { is_neighbor_of = ROOT}
+num_of_subjects = 1
+	
+	}
+
+
+	
+		FROM = {
+	NOT = {	ai_attitude = {
+	who = ROOT
+	attitude = attitude_hostile
+}
+}
+	NOT = {	ai_attitude = {
+	who = ROOT
+	attitude = atittude_rivalry
+}
+}
+	NOT = {	ai_attitude = {
+	who = ROOT
+	attitude = attitude_outraged
+}
+}
+			is_at_war = no
+				
+			NOT = { total_development = ROOT}   
+		}
+         		
+	}
+	on_accept = {
+		create_subject = {
+			subject_type = tributary_state
+			subject = FROM
+		}
+	}
+		ai_acceptance = {
+		add_entry = {
+			name = SOB_board_dis
+			export_to_variable = {
+				variable_name = ai_value
+				value = border_distance
+				who = FROM
+				with = ROOT
+			}
+			multiply_variable = { which = ai_value value = -0.5 }
+		}
+		add_entry = {
+			name = SOB_dip_rep
+			export_to_variable = {
+				variable_name = ai_value
+				value = modifier:diplomatic_reputation
+				who = ROOT
+			}
+			multiply_variable = { which = ai_value value = 3 }
+		}
+		add_entry = {
+			name = SOB_army_size
+			export_to_variable = {
+				variable_name = ai_value
+				value = army_size
+				who = ROOT
+			}
+			export_to_variable = {
+				variable_name = sob_from_value
+				value = army_size
+				who = FROM
+			}			
+			change_variable = { which = sob_from_value value = 1 }
+			change_variable = { which = ai_value value = 1 }
+			
+			multiply_variable = { which = sob_from_value value = 160 }
+			divide_variable = { which = sob_from_value which = ai_value}	
+			
+			subtract_variable = { which = sob_from_value value = 50 }	
+			set_variable = { which = ai_value which = sob_from_value}
+			multiply_variable = { which = ai_value value = -1 }
+		}
+		add_entry = {
+			name = sob_mandate
+			export_to_variable = {
+				variable_name = ai_value
+				value = trigger_value:imperial_mandate
+				who = ROOT
+			}		
+			change_variable = { which = ai_value value = -50 }
+
+			multiply_variable = { which = ai_value value = 2 }
+		}
+
+		add_entry = {
+			name = SOB_subject_dev
+			export_to_variable = {
+				variable_name = ai_value
+				value = total_development
+				who = FROM
+			}
+			multiply_variable = { which = ai_value value = -0.5 }
+		}
+		
+		
+		add_entry = {
+			name = SOB_dev_dis
+			export_to_variable = {
+				variable_name = ai_value
+				value = total_development
+				who = ROOT
+			}
+			export_to_variable = {
+				variable_name = sob_from_value
+				value = total_development
+				who = FROM
+			}			
+			multiply_variable = { which = sob_from_value value = 305 }
+			divide_variable = { which = sob_from_value which = ai_value}	
+			subtract_variable = { which = sob_from_value value = 100 }	
+			set_variable = { which = ai_value which = sob_from_value}
+			multiply_variable = { which = ai_value value = -1 }	
+		}
+		add_entry = {
+			name = TRUST
+			export_to_variable = {
+				variable_name = ai_value
+				value = trust
+				who = FROM
+				with = ROOT
+			}
+			subtract_variable = { which = ai_value value = 50 }
+			multiply_variable = { which = ai_value value = 2 }
+		}
+		add_entry = {
+			name = OPINION
+			export_to_variable = {
+				variable_name = ai_value
+				value = opinion
+				who = FROM
+				with = ROOT
+			}
+			divide_variable = { which = ai_value value = 4 }
+		}
+
+
+		
+
+	}
+
+
+}

@@ -1,0 +1,8 @@
+government = republic
+add_government_reform = oligarchy_reform
+government_rank = 3
+technology_group = chinese
+religion = confucianism
+add_harmonized_religion = mahayana
+primary_culture = jianghuai
+capital = 2114	

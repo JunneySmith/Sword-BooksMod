@@ -1,0 +1,111 @@
+sob_shicigefu_dis = {
+	potential = {
+
+
+has_country_flag = sob_keju_shicigefu
+
+
+		NOT = {has_country_modifier = confucianism_reform}
+	  
+	}
+	
+	
+	can_start = {
+
+has_country_flag = sob_keju_shicigefu
+
+
+	}
+	
+	can_stop = {
+	OR = {
+	AND = {
+ ADM = 5
+ always = no
+ }
+ 							custom_trigger_tooltip = {
+				tooltip = sob_shisuhua_reform_tooltip_6
+has_country_flag = sob_comestate_sobshimin
+}
+
+NOT = {has_global_modifier_value = {
+	which = technology_cost 
+	value = -0.3
+}
+}
+}
+	}
+	
+	
+	progress = {
+
+		modifier = {
+			factor = 0.05
+			NOT = { ADM = 5}
+			religion = confucianism
+NOT = {num_of_aspects = 3}
+		}
+ 
+		modifier = {
+			factor = 0.015
+	NOT = { ADM = 5}
+			NOT = {production_income_percentage = 0.4  }
+		}
+
+		
+		modifier = {
+			factor = 0.03
+				NOT = { ADM = 5}
+			NOT ={		 production_efficiency = 0.25  
+			}
+		}
+
+					modifier = {
+			factor = -0.015
+			 ADM = 5
+
+			
+		}
+	}
+	
+	can_end = {
+	OR = {
+	has_country_modifier = confucianism_reform
+	AND = {
+ ADM = 5
+ months_of_ruling = 60
+ }
+ 							custom_trigger_tooltip = {
+				tooltip = sob_shisuhua_reform_tooltip_6
+has_country_flag = sob_comestate_sobshimin
+}
+
+NOT = {has_global_modifier_value = {
+	which = technology_cost 
+	value = -0.35
+}
+}
+}
+	}
+	
+
+	modifier = {
+	global_unrest = 1
+	imperial_mandate = -0.1
+		army_tradition_decay = 0.005
+ 	min_autonomy = 20
+ 	global_trade_goods_size_modifier = -0.25
+		 idea_cost = 0.25
+		 
+	}	
+	
+	on_monthly = {
+		events = {
+		
+		}
+		random_events = {
+			1000 = 0
+			#
+		}
+	}
+}

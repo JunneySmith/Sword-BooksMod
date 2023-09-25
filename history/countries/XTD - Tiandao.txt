@@ -1,0 +1,8 @@
+government = republic
+add_government_reform  = sob_scelestial_empire_zhou_reform_republic
+government_rank = 3
+technology_group = chinese
+religion = sob_catholic
+add_harmonized_religion = mahayana
+primary_culture = jianghuai
+capital = 1816	

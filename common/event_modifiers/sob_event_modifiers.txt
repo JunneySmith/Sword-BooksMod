@@ -1,0 +1,737 @@
+harmonized_sob_hussite = {
+	shock_damage_received = -0.05
+recover_army_morale_speed = 0.05
+}
+harmonized_sob_dreamtime = {
+			shock_damage = 0.025
+			hostile_attrition = 1
+
+}
+
+
+sob_mng_justice_year= {
+legitimacy = 1
+meritocracy = 1
+global_ship_recruit_speed = -0.5
+global_regiment_recruit_speed = -0.5
+ 	horde_unity = 1
+	 	devotion = 1
+		 	republican_tradition = 0.5
+			prestige = 2
+discipline = 0.1
+
+global_tax_income = 120
+}
+sob_mng_flee_end = {
+global_ship_recruit_speed = -0.99
+global_regiment_recruit_speed = -0.99
+land_morale = -0.99
+}
+sob_mng_colony_enthusiasm = {
+global_colonial_growth = 25
+colonist_placement_chance = 0.1
+}
+sob_already_canonization_modifier= {
+legitimacy = 1
+meritocracy = 1
+ 	horde_unity = 1
+	 	devotion = 1
+		 	republican_tradition = 0.5
+			stability_cost_modifier = -0.25
+}
+sob_mng_fleed_sad= {
+  war_exhaustion = 0.075
+  global_manpower_modifier = -0.10
+  prestige_decay = 0.01
+}
+
+sob_mng_fleed= {
+discipline = 0.1
+naval_attrition = -1
+land_attrition = -1
+land_forcelimit	= 70
+naval_forcelimit = 70
+land_maintenance_modifier = -0.5
+naval_maintenance_modifier = -0.5
+global_tax_income = 120
+core_creation = -0.35
+ae_impact = -0.35
+}
+sob_mng_fleed_bad= {
+core_creation = 0.25
+ae_impact = 0.25
+prestige_decay = 0.01
+}
+enforced_confucianism = {
+	
+	trade_goods_size_modifier = -1
+	supply_limit_modifier = -0.5
+min_local_autonomy = 50
+	local_hostile_movement_speed = -0.5
+	local_friendly_movement_speed = -0.5
+	local_unrest = 1
+	}
+	sob_refuse_player_modifier = {
+	global_unrest = -1
+}
+old_days_memory_sob = {
+ 	manpower_in_true_faith_provinces= 0.10
+	all_power_cost = -0.01
+reform_progress_growth = 0.2
+}
+sob_harmonized_jidu_effect = {
+tolerance_own = 0.5
+missionaries = 1
+}
+sob_mng_captured_oir_ruler ={
+
+	siege_ability = 0.25
+	land_morale = 0.2
+}
+sob_zhongcheng_liuhou = {
+tolerance_own = 0.5
+legitimacy = 1
+meritocracy = 0.5
+}
+
+sob_shishen_debuff_guwen = {
+tolerance_heathen =1
+advisor_cost = 0.25
+}
+sob_shishen_debuff_war = {
+discipline = -0.1
+land_morale = -0.1
+
+}
+sob_shishen_jingzheng = {
+min_autonomy = -5
+min_autonomy_in_territories = -0.05
+
+}
+
+sob_shishen_zhengfa = {
+min_autonomy = -5
+min_autonomy_in_territories = -0.05
+
+}
+sob_dongyuan_effect = {
+reduced_liberty_desire = 60
+liberty_desire_from_subject_development = -0.15
+}
+sob_harmonized_muslim_effect = {
+global_tax_modifier = 0.1
+missionaries = 1
+}
+sob_harmonized_hindu_effect = {
+harmonization_speed = 0.3
+ 	years_of_nationalism = -3
+}
+sob_harmonized_vajrayana_effect = {
+harmonization_speed = 0.3
+ 	religious_unity = 0.15
+}
+sob_harmonized_yuanshi_effect = {
+global_missionary_strength = 0.02
+enforce_religion_cost = -0.35
+}
+fanzhen = {
+land_forcelimit	= 10
+land_maintenance_modifier = -0.25
+global_tax_income = 60
+}
+
+sob_fanguo_empire = {
+
+discipline = 0.05
+land_morale = 0.10
+land_forcelimit	= 20
+global_tax_income = 60
+}
+
+
+
+
+sob_new_land_rus_1 = {
+global_colonial_growth = 15
+range = 0.2
+trade_range_modifier = 0.2
+}
+
+sob_empire_war = {
+land_maintenance_modifier = 0.05
+}
+
+sob_fubing_province_warrior_modifier = {
+army_tradition_decay = -0.01
+
+}
+sob_chinese_movingin = {
+local_development_cost = -0.15
+trade_goods_size_modifier = 0.1
+local_unrest = -1
+}
+harmonized_sobmingjiao= {
+ 	min_autonomy_in_territories = -0.1
+}
+
+sob_unfinished_member= {
+global_tax_income = -12
+}
+
+harmonized_taoist= {
+ 	land_morale = 0.05
+	missionaries =1
+}
+sob_testing_farmming = {
+ 	min_autonomy_in_territories = 0.35
+governing_capacity = 500
+   	development_cost = -0.1
+}
+sob_recent_abolish_tributary= {
+ 	province_warscore_cost = -0.2
+}
+
+sob_east_ming_modifier = {
+development_cost = -0.2
+}
+
+sob_songshu_1 = {
+global_supply_limit_modifier = 0.05
+}
+sob_court_reform_buff_1 = {
+governing_capacity_modifier = 0.1
+}
+sob_court_reform_buff_2 = {
+governing_capacity_modifier = 0.1
+}
+sob_court_reform_buff_3 = {
+governing_capacity_modifier = 0.1
+}
+sob_court_reform_buff_4 = {
+governing_capacity_modifier = 0.1
+}
+sob_fubing_on = {
+        global_tax_income = -5
+			min_local_autonomy = 35
+		core_creation = 0.02
+	 	estate_sobwarriors_influence_modifier = 0.01
+
+}
+sob_shishen_land_on = {
+			min_local_autonomy = 50
+	 	estate_sobshishen_influence_modifier = 0.005
+
+}
+sob_fubing_yes= {
+ 	local_hostile_movement_speed = -0.1
+}
+sob_fubing_culture_yes= {
+amount_of_banners = 0.015
+}
+sob_fubing_headquarter = {
+local_amount_of_banners = 0.5
+missionaries = -1
+}
+
+sob_china_market = {
+ 	global_foreign_trade_power = 0.5
+	 	global_trade_goods_size_modifier = 0.1
+		 	trade_efficiency = 0.1
+			 	development_cost = -0.2
+			 	production_efficiency = 0.1
+}
+
+
+sob_royal_forever_acts = {
+
+ imperial_mandate = 0.03
+  	imperial_authority_value = 0.1
+ imperial_authority = 0.1
+}
+sob_chinese_free_invasion  = {
+ae_impact = -0.2
+	liberty_desire = -50
+}
+sob_chinese_zongdu_mandate  = {
+merchants = 1
+imperial_mandate = 0.02
+}
+sob_china_naval_dominance = {
+	ship_durability = 0.1
+	global_sailors_modifier = 0.20
+}
+sob_chinese_fleet  = {
+	naval_morale = 0.1
+	navy_tradition = 1
+}
+sob_aus_modifier = {
+technology_cost = -0.1
+idea_cost = -0.1
+}
+
+sob_trade_modifier = {
+global_ship_trade_power = 0.15
+}
+
+sob_panama_modifier = {
+local_development_cost = -0.2
+allowed_num_of_buildings = 2
+local_build_cost = -0.25
+}
+
+sob_zhenghe_statue_modifier = {
+navy_tradition = 1
+prestige_from_naval = 1
+}
+
+sob_hanhai_modifier = {
+army_tradition = 1
+ 	local_defensiveness = 0.25
+}
+
+sob_abolish_official_ban = {
+ recover_army_morale_speed = 0.1
+ governing_capacity = 75
+}
+
+sob_nobles_rework = {
+
+discipline = 0.025
+global_manpower_modifier = -0.15
+
+}
+
+sob_re_fed = {
+shock_damage = 0.1
+global_regiment_cost = 0.1
+}
+
+
+
+
+sob_propagate_confucianism_modifier = {
+yearly_harmony = 0.5
+}
+ sob_disloyal_member = {
+ imperial_mandate = -0.08
+ }
+ sob_mongol_kahan = {
+loot_amount = 0.25
+ movement_speed = 0.05
+ }
+  sob_world_empire = {
+ imperial_mandate = 0.02
+ 	diplomatic_reputation = 1
+	prestige = 0.5
+	diplomatic_upkeep = 3
+ }
+ sob_human_rights  = {
+prestige = 0.5
+global_unrest = -1
+ }
+ 
+ sob_loyal_member = {
+ imperial_mandate = 0.05
+ }
+
+sob_culture_yimin_interface= {
+local_culture_conversion_cost = -0.01
+}
+kicked_from_empire = {
+	diplomatic_reputation = -3
+	prestige = -2
+	legitimacy = -3
+}
+given_to_sobwarrior = {
+	drill_gain_modifier = 0.75
+}
+given_to_sobshangren = {
+global_ship_trade_power = 0.25
+global_ship_recruit_speed = -0.15
+}
+given_to_sobshimin= {
+production_efficiency = 0.1
+trade_efficiency = 0.05
+	spy_offence = 0.25
+}
+given_to_sobguizu= {
+diplomatic_reputation = 1
+	diplomatic_annexation_cost =-0.15
+diplomats = 1
+	
+}
+sob_han_dongbei_kaifa = {
+local_development_cost = -0.15
+trade_goods_size_modifier = 0.1
+}
+sob_nomad_new_land = {
+	trade_goods_size_modifier = -0.2
+	supply_limit_modifier = -0.1
+	local_institution_spread = -0.05
+	local_development_cost = 0.3
+	local_manpower_modifier = -1.0
+	local_sailors_modifier = -1.0
+	local_hostile_movement_speed = -0.3
+	local_friendly_movement_speed = -0.3
+	local_unrest = 1
+}
+emperor_of_mankind = {
+	diplomatic_reputation = 2
+	prestige = 1
+	administrative_efficiency = 0.15
+	province_warscore_cost = -0.25
+	unjustified_demands = -1
+}
+sob_none_ap_culture = {
+	local_unrest = 3				#1% revolt risk!
+}
+agriculture_peasant = {
+global_manpower_modifier = -0.25
+global_tax_modifier = -0.25
+land_forcelimit_modifier = -0.3
+}
+agriculture_farmer = {
+
+global_tax_modifier = 0.10
+global_unrest = -1
+}
+agriculture_warrior = {
+global_manpower_modifier = 0.1
+land_forcelimit_modifier = 0.05
+}
+agriculture_poor = {
+land_forcelimit_modifier = 0.05
+}
+
+leading_estate_shishen = {
+global_manpower_modifier = 0.15
+land_forcelimit_modifier = 0.1
+discipline = -0.05
+mercenary_discipline = 0.05
+army_tradition_decay = 0.02
+}
+leading_estate_warriors = {
+land_maintenance_modifier = -0.1
+global_tax_modifier = -0.25
+discipline = 0.05
+army_tradition_decay = -0.01
+}
+leading_estate_noble = {
+land_maintenance_modifier = -0.1
+global_tax_modifier = -0.25
+discipline = 0.05
+army_tradition_decay = -0.01
+}
+
+leading_estate_shangren = {
+production_efficiency = 0.1
+global_tax_modifier = 0.1
+trade_efficiency = 0.1
+land_morale = 0.1
+discipline = 0.025
+global_manpower_modifier = 0.15
+manpower_recovery_speed = 0.1
+}
+
+missionary_confcianism = {
+local_unrest = -2
+local_manpower_modifier = 0.25
+missionaries = -1
+harmonization_speed = 0.2
+}
+
+
+
+loyal_from_empire = {
+	land_morale = 0.05
+	discipline = 0.025
+}
+army_household_title_generated ={
+	
+	yearly_army_professionalism = 0.0075
+	mercenary_cost = 0.05
+	
+}
+confucianism_middle_tolerance = {
+local_unrest = -10
+
+}
+purge_the_adm_influnence = {
+	fire_damage_received = -0.1
+	shock_damage_received = -0.1
+fire_damage = 0.1
+}
+harmonized_middle={
+harmonization_speed = 0.25
+yearly_harmony = 0.5
+}
+
+##################################################
+# Harmonized Modifiers
+##################################################
+mng_st_pauls_college = {
+    technology_cost = -0.025
+	local_missionary_strength = -0.08
+}
+mng_nobles_1 = {
+local_defensiveness = 0.5
+local_autonomy = 0.05
+local_unrest = -1
+local_hostile_attrition = 3
+}
+mng_nobles_1_sob = {
+local_defensiveness = 0.25
+local_unrest = -1
+local_hostile_attrition = 3
+}
+nomand_area_1 = {
+tax_income = -0.1
+local_development_cost = 1000
+years_of_nationalism = 1
+}
+mng_nobles_2 = {
+local_defensiveness = -0.15
+local_unrest = -1
+local_state_maintenance_modifier = -1
+local_friendly_movement_speed = 0.25
+local_hostile_movement_speed = 0.25
+}
+mng_nobles_3 = {
+local_defensiveness = 0.25
+local_production_efficiency = 0.15
+local_hostile_attrition = 1.5
+local_friendly_movement_speed = 0.5
+local_hostile_movement_speed = -0.5
+navy_tradition = 0.01
+}
+
+# Religions
+harmonized_vajrayana = {
+	production_efficiency = 0.1
+	years_of_nationalism = -3
+	religion = yes
+}
+
+harmonized_buddhism = { #Theravada
+	warscore_cost_vs_other_religion = -0.05
+	development_cost = -0.1
+	religion = yes
+}
+
+harmonized_mahayana = {
+	idea_cost = -0.1
+	global_tax_modifier = 0.075
+	religion = yes
+}
+
+harmonized_tengri = {
+	cav_to_inf_ratio = 0.25
+	cavalry_power = 0.05
+}
+
+harmonized_shinto = {
+	infantry_power = 0.1
+	discipline = 0.025
+	religion = yes
+}
+
+# Religion Groups
+harmonized_pagan = {
+	leader_land_manuever = 2
+	land_attrition = -0.15
+	religion = yes
+}
+
+harmonized_jewish_group = {
+	global_institution_spread = 0.1
+		advisor_cost = -0.1
+	religion = yes
+}
+
+harmonized_zoroastrian_group = {
+    merchants = 1
+	global_trade_goods_size_modifier = 0.1
+
+	religion = yes
+}
+
+harmonized_dharmic = {
+	 	war_exhaustion = -0.02
+	global_unrest = -1
+	religion = yes
+}
+
+harmonized_muslim = {
+	tolerance_own = 1
+		trade_efficiency = 0.1
+
+	religion = yes
+}
+
+harmonized_christian = {
+	diplomatic_reputation = 1
+	heavy_ship_power = 0.1
+	religion = yes
+}
+harmonized_coptic = {
+	siege_ability = 0.1
+	defensiveness = 0.1
+	religion = yes
+}
+harmonized_orthodox = {
+	church_power_modifier = 0.25
+	global_colonial_growth = 15
+	religion = yes
+}
+harmonized_protestant = {
+	colonists = 1
+    global_unrest = -1
+	religion = yes
+}
+harmonized_anglican = {
+	innovativeness_gain = 0.15
+	light_ship_power = 0.2
+	religion = yes
+}
+harmonized_reformed = {
+   artillery_power = 0.1
+	diplomatic_annexation_cost = -0.10
+	religion = yes
+}
+
+
+
+harmonized_shiite = {
+spy_offence = 0.25
+global_ship_trade_power = 0.1
+
+	religion = yes
+}
+harmonized_ibadi = {
+rebel_support_efficiency = 0.5
+	ship_durability = 0.05
+	religion = yes
+}
+harmonized_sikhism = {
+   cavalry_flanking = 0.3
+	ae_impact = -0.1
+	religion = yes
+}
+harmonized_shamanism = {
+   war_exhaustion = -0.02
+  war_taxes_cost_modifier = -0.3
+  
+	religion = yes
+}
+harmonized_totemism = {
+	cavalry_cost = -0.15
+	reinforce_speed = 0.10
+			
+	religion = yes
+}
+harmonized_inti= {
+			build_cost = -0.1
+			global_autonomy = -0.02
+	religion = yes
+}
+harmonized_nahuatl = {
+		fire_damage_received = -0.05
+		movement_speed = 0.05
+			raze_power_gain = 0.2
+	religion = yes
+}
+harmonized_mesoamerican_religion = {
+naval_attrition = -0.15
+
+placed_merchant_power = 15
+	religion = yes
+}
+harmonized_norse_pagan_reformed = {
+capture_ship_chance = 0.15
+envoy_travel_time = -0.1
+			galley_power = 0.1
+	religion = yes
+}
+
+
+
+#On the route to Harmonization:
+
+harmonization_classics_translated = {
+	idea_cost = -0.05
+	yearly_harmony = -1
+	religion = yes
+}
+
+harmonization_classics_defended = {
+	stability_cost_modifier = 0.1
+	yearly_harmony = 1
+}
+
+harmonization_converted_minister = {
+	global_institution_spread = 0.1
+	tolerance_own = -2
+}
+
+harmonization_local_rites_refused = {
+	local_unrest = 2
+	local_autonomy = -0.05
+}
+
+#Harmony
+harmony_banned_book = {
+	global_unrest = 1
+}
+
+mng_closed_china = {
+	technology_cost = 0.1
+	tolerance_own = 3
+	diplomatic_upkeep = -4
+	stability_cost_modifier = -0.5
+	global_institution_spread = -0.2
+	global_prov_trade_power_modifier = 0.5
+}
+mng_open_china = {
+	technology_cost = -0.025
+	global_institution_spread = 0.1
+
+}
+mng_balanced_china = {
+	global_colonial_growth = 10
+    diplomatic_reputation = 1
+	reduced_liberty_desire = 5
+}
+neo_confucianism = {
+	tolerance_heretic = 2
+	tolerance_heathen = 2
+	religion = yes
+}
+
+denounce_taoism = {
+	tolerance_own = 1
+	legitimacy = 1
+	religion = yes
+}
+
+eightbannero = {
+     num_accepted_cultures = -3
+}
+confucianism_reform ={
+  global_unrest = 1
+  global_institution_spread = 0.25
+}
+chinese_pinyin = {
+    technology_cost = -0.075
+    culture_conversion_cost = -0.1
+	global_institution_spread = 0.1
+}
+
+queue_order = { 
+   	technology_cost = 0.35
+	idea_cost = 0.35
+	global_institution_spread = -3
+	imperial_mandate = 0.15
+	years_of_nationalism = -50
+	global_manpower_modifier = -0.80
+	global_institution_spread = -1
+}

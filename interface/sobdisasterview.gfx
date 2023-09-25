@@ -1,0 +1,159 @@
+spriteTypes = {
+
+		spriteType = {
+		name = "GFX_faction_bg_sob_gongnv_faction"	
+		texturefile = "gfx//interface//faction_purple_frame.tga"
+		transparencecheck = yes
+	}	
+	spriteType = {
+		name = "GFX_faction_sob_gongnv_faction"	
+		texturefile = "gfx//interface//china_eunuch.tga"
+	}
+	
+		spriteType = {
+		name = "GFX_faction_bg_sob_balance_a"	
+		texturefile = "gfx//interface//faction_blue_frame.tga"
+		transparencecheck = yes
+	}	
+	spriteType = {
+		name = "GFX_faction_sob_balance_a"	
+		texturefile = "gfx//interface//guilds_icon.tga"
+	}
+	spriteType = {
+		name = "GFX_faction_bg_sob_wen_a"	
+		texturefile = "gfx//interface//faction_blue_frame.tga"
+		transparencecheck = yes
+	}	
+	spriteType = {
+		name = "GFX_faction_sob_wen_a"	
+		texturefile = "gfx//interface//china_bureaucrat.tga"
+	}
+	spriteType = {
+		name = "GFX_faction_bg_sob_wu_a"	
+		texturefile = "gfx//interface//faction_blue_frame.tga"
+		transparencecheck = yes
+	}	
+	spriteType = {
+		name = "GFX_faction_sob_wu_a"	
+		texturefile = "gfx//interface//china_temple.tga"
+	}
+
+	spriteType = {
+        name = "GFX_disaster_china_dyansty_cycle"
+        texturefile = "gfx//interface//disasters//civil_war.dds"
+        noOfFrames = 3
+        loadType = "INGAME"
+    }
+	
+	spriteType = {
+        name = "GFX_disaster_menfa_rising"
+        texturefile = "gfx//interface//disasters//warrior_rising.dds"
+        noOfFrames = 3
+        loadType = "INGAME"
+    }
+	
+		spriteType = {
+        name = "GFX_disaster_warrior_rising"
+        texturefile = "gfx//interface//disasters//warrior_rising.dds"
+        noOfFrames = 3
+        loadType = "INGAME"
+    }
+	
+	spriteType = {
+        name = "GFX_disaster_quanru_rising"
+        texturefile = "gfx//interface//disasters//bureaucracy_rising.dds"
+        noOfFrames = 3
+        loadType = "INGAME"
+    }
+		spriteType = {
+        name = "GFX_disaster_estate_nomadic_shihou_disaster"
+        texturefile = "gfx//interface//disasters//warrior_rising.dds"
+        noOfFrames = 3
+        loadType = "INGAME"
+    }
+		spriteType = {
+        name = "GFX_disaster_bureaucracy_rising"
+        texturefile = "gfx//interface//disasters//bureaucracy_rising.dds"
+        noOfFrames = 3
+        loadType = "INGAME"
+    }
+		
+	spriteType = {
+        name = "GFX_disaster_fanzhen_geju"
+        texturefile = "gfx//interface//disasters//china_dyansty_cycle.dds"
+        noOfFrames = 3
+        loadType = "INGAME"
+    }
+	
+			spriteType = {
+        name = "GFX_disaster_sob_china_low_mandate"
+        texturefile = "gfx//interface//disasters//china_dyansty_cycle.dds"
+        noOfFrames = 3
+        loadType = "INGAME"
+    }
+
+				spriteType = {
+        name = "GFX_disaster_sob_empire_of_china_in_name_disaster"
+        texturefile = "gfx//interface//disasters//china_dyansty_cycle.dds"
+        noOfFrames = 3
+        loadType = "INGAME"
+    }
+	spriteType = {
+		name = "GFX_disaster_sob_cleansing_nobles_dis"
+		texturefile = "gfx//interface//disasters//court_and_country.dds"
+		noOfFrames = 3
+		loadType = "INGAME"
+	}	
+
+	spriteType = {
+		name = "GFX_disaster_china_revolution"
+		texturefile = "gfx//interface//disasters//revolution.dds"
+		noOfFrames = 3
+		loadType = "INGAME"
+	}
+
+	
+	spriteType = {
+		name = "GFX_disaster_sob_quefa_baohu_shibing_dis"
+		texturefile = "gfx//interface//disasters//janissary_decadence.dds"
+		noOfFrames = 3
+		loadType = "INGAME"
+	}
+
+	
+	spriteType = {
+		name = "GFX_disaster_sob_shicigefu_dis"
+		texturefile = "gfx//interface//disasters//english_civil_war.dds"
+		noOfFrames = 3
+		loadType = "INGAME"
+	}
+	
+	spriteType = {
+		name = "GFX_disaster_sob_shushengtongzhi_dis"
+		texturefile = "gfx//interface//disasters//estate_burghers_disaster.dds"
+		noOfFrames = 3
+		loadType = "INGAME"
+	}	
+		spriteType = {
+		name = "GFX_disaster_estate_sobnobility_disaster"
+		texturefile = "gfx//interface//disasters//estate_nobility_disaster.dds"
+		noOfFrames = 3
+		loadType = "INGAME"
+	}	
+	
+	spriteType = {
+		name = "GFX_disaster_estate_sobburghers_disaster"
+		texturefile = "gfx//interface//disasters//estate_burghers_disaster.dds"
+		noOfFrames = 3
+		loadType = "INGAME"
+	}	
+	
+	spriteType = {
+		name = "GFX_disaster_banner_population"
+		texturefile = "gfx//interface//disasters//estate_nomadic_tribes_disaster.dds"
+		noOfFrames = 3
+		loadType = "INGAME"
+	}	
+	
+	
+}

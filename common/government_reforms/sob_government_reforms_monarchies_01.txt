@@ -1,0 +1,226 @@
+
+###############################top#
+
+
+sob_celestial_empire_song_reformed = {
+	icon = "sob_celestial_empire_song"
+	allow_normal_conversion = yes
+	potential = {
+	ai = no
+	}
+	#legacy_equivalent = sob_scelestial_empire_song
+	#maintain_dynasty = yes
+	allow_force_tributary = no
+	valid_for_nation_designer = yes
+	nation_designer_cost = 10
+	nation_designer_trigger = {
+		technology_group = chinese
+
+	}
+
+boost_income = yes
+	
+
+	modifiers = {
+		merchants = 2
+			 	global_trade_goods_size_modifier = 0.15
+		development_cost = -0.1
+		
+	}
+
+		conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+			NOT = { has_dlc = "Mare Nostrum" }
+		}
+		can_use_trade_post = yes
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Mare Nostrum"
+			NOT = { has_dlc = "Res Publica" }
+		}
+		can_form_trade_league = yes
+		trade_city_reform = trading_city
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+			has_dlc = "Mare Nostrum"
+		}
+		can_use_trade_post = yes
+		can_form_trade_league = yes
+		trade_city_reform = trading_city
+	}
+	custom_attributes = {
+		enables_plutocratic_idea_group = yes
+		enables_aristocratic_idea_group = no
+		is_merchant_republic = yes
+	}
+	conditional = {
+		allow = { has_dlc = "Mandate of Heaven" }
+		#has_meritocracy = yes
+	}
+		effect = {
+#set_meritocracy = 60
+
+	}
+		ai = {
+		factor = 3000
+	}
+}
+
+
+
+sob_scelestial_empire_qin_reform = {
+	icon = "sob_celestial_empire_qin"
+	allow_normal_conversion = yes
+	
+	#legacy_equivalent = sob_scelestial_empire_qin
+	allow_force_tributary = no
+	valid_for_nation_designer = yes
+		
+	nation_designer_cost = 10
+	lock_level_when_selected = no
+	nation_designer_trigger = {
+		technology_group = chinese
+	}
+
+
+
+	modifiers = {
+		administrative_efficiency = 0.10
+		governing_capacity_modifier = 0.35
+		state_governing_cost = -0.2
+	}
+	
+		effect = {
+#set_meritocracy = 60
+
+	}
+	conditional = {
+			allow = { has_dlc = "Mandate of Heaven" }
+		militarised_society = yes
+		#has_meritocracy = yes
+		
+	}
+			ai = {
+		factor = 3000
+	}
+}
+
+sob_scelestial_empire_han_reform = {
+	icon = "sob_celestial_empire_han"
+	allow_normal_conversion = yes
+
+	#legacy_equivalent = sob_scelestial_empire_han
+	#maintain_dynasty = yes
+	allow_force_tributary = no
+	valid_for_nation_designer = yes
+	nation_designer_cost = 10
+	lock_level_when_selected = no
+	nation_designer_trigger = {
+		technology_group = chinese
+	}
+
+	
+
+	modifiers = {
+	    cavalry_shock = 1
+		cavalry_fire = 1
+		 	governing_capacity = 500
+	}
+
+	
+		effect = {
+#set_meritocracy = 60
+
+	}
+
+	conditional = {
+			allow = { has_dlc = "Mandate of Heaven" }
+	#has_meritocracy = yes
+	}
+			ai = {
+		factor = 3000
+	}
+}
+
+
+sob_scelestial_empire_zhou_reform = {
+	icon = "sob_celestial_empire_zhou"
+	allow_normal_conversion = yes
+	#legacy_equivalent = sob_scelestial_empire_zhou
+	potential = {
+	ai = no
+	}
+	allow_force_tributary = no
+	valid_for_nation_designer = yes
+	nation_designer_cost = 10
+	lock_level_when_selected = no
+	nation_designer_trigger = {
+		technology_group = chinese
+	}
+	
+	
+
+	modifiers = {
+		diplomatic_upkeep = 5
+		reduced_liberty_desire = 15
+		liberty_desire_from_subject_development = -0.25
+	}
+	
+		effect = {
+#set_meritocracy = 60
+
+	}
+	conditional = {
+			allow = { 
+			has_dlc = "Mandate of Heaven" 
+			}
+		can_form_trade_league = yes
+		trade_city_reform = sob_trading_city
+	    #has_meritocracy = yes
+	}
+			ai = {
+		factor = 3000
+	}
+}
+
+
+sob_scelestial_empire_tng_reform = {
+	icon = "sob_celestial_empire_tng"
+	allow_normal_conversion = yes
+
+	#legacy_equivalent = sob_scelestial_empire_tng
+	allow_force_tributary = no
+	valid_for_nation_designer = yes
+	nation_designer_cost = 10
+	
+	nation_designer_trigger = {
+		technology_group = chinese
+
+	}
+	
+
+	modifiers = {
+        core_creation = -0.15
+		monarch_diplomatic_power = 2
+governing_capacity = 350
+	}
+	
+		effect = {
+#set_meritocracy = 60
+
+	}
+	conditional = {
+			allow = { has_dlc = "Mandate of Heaven" }
+		#has_meritocracy = yes
+		allow_banners = yes
+	}
+			ai = {
+		factor = 3000
+	}
+}
+
+#############leg

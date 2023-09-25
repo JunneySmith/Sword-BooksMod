@@ -1,0 +1,485 @@
+##################################################
+# China modifiers
+##################################################
+sob_great_celestial_empire_vassal_1 = {
+	potential = {
+     OR = {culture_group = east_asian culture_group = chinese_group}
+	 overlord={
+	 OR = {culture_group = east_asian culture_group = chinese_group}
+	 is_emperor_of_china = yes
+	 		vassal = 1
+		NOT = {vassal = 2}
+	 }
+	}
+	
+	trigger = {	
+        overlord = {
+		vassal = 1
+		NOT = {vassal = 2}
+		}
+	}
+development_cost = -0.01
+ 	global_unrest = -0.2
+  	years_of_nationalism = -0.5
+}
+
+sob_great_celestial_empire_vassal_2 = {
+	potential = {
+     OR = {culture_group = east_asian culture_group = chinese_group}
+	 overlord={
+	 OR = {culture_group = east_asian culture_group = chinese_group}
+	 is_emperor_of_china = yes
+	 		vassal = 2
+		NOT = {vassal = 3}
+	 }
+	}
+	
+	trigger = {	
+        overlord = {
+		vassal = 2
+		NOT = {vassal = 3}
+		}
+	}
+development_cost = -0.02
+ 	global_unrest = -0.4
+  	years_of_nationalism = -1
+}
+
+
+sob_great_celestial_empire_vassal_3 = {
+	potential = {
+     OR = {culture_group = east_asian culture_group = chinese_group}
+	 overlord={
+	 OR = {culture_group = east_asian culture_group = chinese_group}
+	 is_emperor_of_china = yes
+	 		vassal = 3
+		NOT = {vassal = 4}
+	 }
+	}
+	
+	trigger = {	
+        overlord = {
+		vassal = 3
+		NOT = {vassal = 4}
+		}
+	}
+development_cost = -0.03
+ 	global_unrest = -0.6
+  	years_of_nationalism = -1.5
+}
+sob_great_celestial_empire_vassal_4 = {
+	potential = {
+     OR = {culture_group = east_asian culture_group = chinese_group}
+	 overlord={
+	 OR = {culture_group = east_asian culture_group = chinese_group}
+	 is_emperor_of_china = yes
+	 		vassal = 4
+		NOT = {vassal = 5}
+	 }
+	}
+	
+	trigger = {	
+        overlord = {
+		vassal = 4
+		NOT = {vassal = 5}
+		}
+	}
+development_cost = -0.04
+ 	global_unrest = -0.8
+  	years_of_nationalism = -2
+}
+sob_great_celestial_empire_vassal_5 = {
+	potential = {
+     OR = {culture_group = east_asian culture_group = chinese_group}
+	 overlord={
+	 OR = {culture_group = east_asian culture_group = chinese_group}
+	 is_emperor_of_china = yes
+	 		vassal = 5
+		NOT = {vassal = 6}
+	 }
+	}
+	
+	trigger = {	
+        overlord = {
+		vassal = 5
+		NOT = {vassal = 6}
+		}
+	}
+development_cost = -0.05
+ 	global_unrest = -1
+  	years_of_nationalism = -2.5
+}
+sob_great_celestial_empire_vassal_6 = {
+	potential = {
+     OR = {culture_group = east_asian culture_group = chinese_group}
+	 overlord={
+	 OR = {culture_group = east_asian culture_group = chinese_group}
+	 is_emperor_of_china = yes
+	 		vassal = 6
+		NOT = {vassal = 7}
+	 }
+	}
+	
+	trigger = {	
+        overlord = {
+		vassal = 6
+		NOT = {vassal = 7}
+		}
+	}
+development_cost = -0.06
+ 	global_unrest = -1.2
+  	years_of_nationalism = -3
+}
+sob_great_celestial_empire_vassal_7 = {
+	potential = {
+     OR = {culture_group = east_asian culture_group = chinese_group}
+	 overlord={
+	 OR = {culture_group = east_asian culture_group = chinese_group}
+	 is_emperor_of_china = yes
+	 		vassal = 7
+		NOT = {vassal = 8}
+	 }
+	}
+	
+	trigger = {	
+        overlord = {
+		vassal = 7
+		NOT = {vassal = 8}
+		}
+	}
+development_cost = -0.07
+ 	global_unrest = -1.4
+  	years_of_nationalism = -3.5
+}sob_great_celestial_empire_vassal_8 = {
+	potential = {
+     OR = {culture_group = east_asian culture_group = chinese_group}
+	 overlord={
+	 OR = {culture_group = east_asian culture_group = chinese_group}
+	 is_emperor_of_china = yes
+	 		vassal = 8
+		NOT = {vassal = 9}
+	 }
+	}
+	
+	trigger = {	
+        overlord = {
+		vassal = 8
+		NOT = {vassal = 9}
+		}
+	}
+development_cost = -0.08
+ 	global_unrest = -1.6
+  	years_of_nationalism = -4
+}
+sob_great_celestial_empire_vassal_9 = {
+	potential = {
+     OR = {culture_group = east_asian culture_group = chinese_group}
+	 overlord={
+	 OR = {culture_group = east_asian culture_group = chinese_group}
+	 is_emperor_of_china = yes
+	 		vassal = 9
+		NOT = {vassal = 10}
+	 }
+	}
+	
+	trigger = {	
+        overlord = {
+		vassal = 9
+		NOT = {vassal = 10}
+		}
+	}
+development_cost = -0.09
+ 	global_unrest = -1.8
+  	years_of_nationalism = -4.5
+}
+sob_great_celestial_empire_vassal_10 = {
+	potential = {
+     OR = {culture_group = east_asian culture_group = chinese_group}
+	 overlord={
+	 OR = {culture_group = east_asian culture_group = chinese_group}
+	 is_emperor_of_china = yes
+	 		vassal = 10
+	 }
+	}
+	
+	trigger = {	
+        overlord = {
+		vassal = 10
+		}
+	}
+development_cost = -0.1
+ 	global_unrest = -2
+  	years_of_nationalism = -5
+}
+
+
+
+
+
+
+sob_great_celestial_empire_colony_1 = {
+	potential = {
+     OR = {culture_group = east_asian culture_group = chinese_group}
+	 overlord={
+	 OR = {culture_group = east_asian culture_group = chinese_group}
+	 is_emperor_of_china = yes
+	 		colony = 1
+		NOT = {colony = 2}
+	 }
+	}
+	
+	trigger = {	
+        overlord = {
+		colony = 1
+		NOT = {colony = 2}
+		}
+	}
+development_cost = -0.01
+stability_cost_modifier = -0.03
+ 	global_trade_goods_size_modifier = 0.02
+}
+
+sob_great_celestial_empire_colony_2 = {
+	potential = {
+     OR = {culture_group = east_asian culture_group = chinese_group}
+	 overlord={
+	 OR = {culture_group = east_asian culture_group = chinese_group}
+	 is_emperor_of_china = yes
+	 		colony = 2
+		NOT = {colony = 3}
+	 }
+	}
+	
+	trigger = {	
+        overlord = {
+		colony = 2
+		NOT = {colony = 3}
+		}
+	}
+development_cost = -0.02
+stability_cost_modifier = -0.06
+ 	global_trade_goods_size_modifier = 0.04
+}
+
+
+sob_great_celestial_empire_colony_3 = {
+	potential = {
+     OR = {culture_group = east_asian culture_group = chinese_group}
+	 overlord={
+	 OR = {culture_group = east_asian culture_group = chinese_group}
+	 is_emperor_of_china = yes
+	 		colony = 3
+		NOT = {colony = 4}
+	 }
+	}
+	
+	trigger = {	
+        overlord = {
+		colony = 3
+		NOT = {colony = 4}
+		}
+	}
+development_cost = -0.03
+stability_cost_modifier = -0.09
+ 	global_trade_goods_size_modifier = 0.06
+}
+sob_great_celestial_empire_colony_4 = {
+	potential = {
+     OR = {culture_group = east_asian culture_group = chinese_group}
+	 overlord={
+	 OR = {culture_group = east_asian culture_group = chinese_group}
+	 is_emperor_of_china = yes
+	 		colony = 4
+		NOT = {colony = 5}
+	 }
+	}
+	
+	trigger = {	
+        overlord = {
+		colony = 4
+		NOT = {colony = 5}
+		}
+	}
+development_cost = -0.04
+stability_cost_modifier = -0.12
+ 	global_trade_goods_size_modifier = 0.08
+}
+sob_great_celestial_empire_colony_5 = {
+	potential = {
+     OR = {culture_group = east_asian culture_group = chinese_group}
+	 overlord={
+	 OR = {culture_group = east_asian culture_group = chinese_group}
+	 is_emperor_of_china = yes
+	 		colony = 5
+		NOT = {colony = 6}
+	 }
+	}
+	
+	trigger = {	
+        overlord = {
+		colony = 5
+		NOT = {colony = 6}
+		}
+	}
+development_cost = -0.05
+stability_cost_modifier = -0.15
+ 	global_trade_goods_size_modifier = 0.1
+}
+sob_great_celestial_empire_colony_6 = {
+	potential = {
+     OR = {culture_group = east_asian culture_group = chinese_group}
+	 overlord={
+	 OR = {culture_group = east_asian culture_group = chinese_group}
+	 is_emperor_of_china = yes
+	 		colony = 6
+		NOT = {colony = 7}
+	 }
+	}
+	
+	trigger = {	
+        overlord = {
+		colony = 6
+		NOT = {colony = 7}
+		}
+	}
+development_cost = -0.06
+stability_cost_modifier = -0.18
+ 	global_trade_goods_size_modifier = 0.12
+}
+sob_great_celestial_empire_colony_7 = {
+	potential = {
+     OR = {culture_group = east_asian culture_group = chinese_group}
+	 overlord={
+	 OR = {culture_group = east_asian culture_group = chinese_group}
+	 is_emperor_of_china = yes
+	 		colony = 7
+		NOT = {colony = 8}
+	 }
+	}
+	
+	trigger = {	
+        overlord = {
+		colony = 7
+		NOT = {colony = 8}
+		}
+	}
+development_cost = -0.07
+stability_cost_modifier = -0.21
+ 	global_trade_goods_size_modifier = 0.14
+}
+
+sob_great_celestial_empire_colony_8 = {
+	potential = {
+     OR = {culture_group = east_asian culture_group = chinese_group}
+	 overlord={
+	 OR = {culture_group = east_asian culture_group = chinese_group}
+	 is_emperor_of_china = yes
+	 		colony = 8
+		NOT = {colony = 9}
+	 }
+	}
+	
+	trigger = {	
+        overlord = {
+		colony = 8
+		NOT = {colony = 9}
+		}
+	}
+development_cost = -0.08
+stability_cost_modifier = -0.24
+ 	global_trade_goods_size_modifier = 0.16
+}
+sob_great_celestial_empire_colony_9 = {
+	potential = {
+     OR = {culture_group = east_asian culture_group = chinese_group}
+	 overlord={
+	 OR = {culture_group = east_asian culture_group = chinese_group}
+	 is_emperor_of_china = yes
+	 		colony = 9
+		NOT = {colony = 10}
+	 }
+	}
+	
+	trigger = {	
+        overlord = {
+		colony = 9
+		NOT = {colony = 10}
+		}
+	}
+development_cost = -0.09
+stability_cost_modifier = -0.27
+ 	global_trade_goods_size_modifier = 0.18
+}
+sob_great_celestial_empire_colony_10 = {
+	potential = {
+     OR = {culture_group = east_asian culture_group = chinese_group}
+	 overlord={
+	 OR = {culture_group = east_asian culture_group = chinese_group}
+	 is_emperor_of_china = yes
+	 		colony = 10
+	 }
+	}
+	
+	trigger = {	
+        overlord = {
+		colony = 10
+		}
+	}
+development_cost = -0.1
+stability_cost_modifier = -0.3
+ 	global_trade_goods_size_modifier = 0.2
+}
+
+
+
+
+
+
+
+sob_great_celestial_empire_emperor_1 = {
+	potential = {
+     OR = {culture_group = east_asian culture_group = chinese_group}
+
+	 is_emperor_of_china = yes
+	 
+	}
+	
+	trigger = {	
+		vassal = 20
+		colony = 10
+	}
+liberty_desire_from_subject_development = -0.3
+}
+
+
+sob_chinese_dynasty_union_modifier = {
+	potential = {
+    NOT = { OR = {culture_group = east_asian culture_group = chinese_group}}
+any_subject_country = {
+OR ={
+tag = XZY
+tag = XZQ
+}
+}
+	 is_emperor_of_china = yes
+	 
+	}
+	
+	trigger = {	
+any_subject_country = {
+OR ={
+tag = XZY
+tag = XZQ
+}
+}
+	 is_emperor_of_china = yes
+	}
+	land_forcelimit	= 100
+}
+
+
+
+
+
+
+

@@ -1,0 +1,199 @@
+sob_china_low_mandate = {
+	potential = {
+	NOT = {	OR = {culture_group = east_asian  culture_group = chinese_group }}
+     NOT = { any_subject_country = { tag = XZY }}
+	 OR = {
+	 is_emperor_of_china = yes
+	has_country_flag = sob_waizu_had_revolution
+	 }
+	  
+	}
+	
+	
+	can_start = {
+	OR = {
+          NOT = { imperial_mandate = 60}
+		     NOT = {  
+				   has_reform =  celestial_empire
+				   
+				   }
+				   				   			   NOT = {  	estate_influence = {
+				estate = estate_sobshishen
+				influence = 80
+				}
+				}
+							    NOT = {  		estate_loyalty = {
+						estate = estate_sobshishen
+						loyalty = 70
+					}
+					
+					}
+	
+		  }
+	}
+	
+	can_stop = {
+	stability = 3
+       imperial_mandate = 60
+	   estate_influence = {
+				estate = estate_sobshishen
+				influence = 80
+				}
+					estate_loyalty = {
+						estate = estate_sobshishen
+						loyalty = 80
+					}
+				OR = {culture_group = east_asian  culture_group = chinese_group }	
+					
+			}
+			
+	
+	
+	
+	progress = {
+				  		modifier = {
+			factor = -2
+			AND = {
+		 ai = yes
+		has_country_flag = sob_mng_fleed_to_out
+						NOT = {	had_country_flag = {
+						flag = sob_mng_fleed_to_out
+						days = 54750
+					}
+					}
+		}
+		}
+ 
+	
+	
+			  		modifier = {
+			factor = 0.5
+		NOT = { stability = 0}
+		}
+  		modifier = {
+			factor = 1
+		NOT = { stability = -2}
+		}
+  		modifier = {
+			factor = 1
+		NOT = { legitimacy_equivalent = 60}
+		}
+			modifier = {
+			factor = 1
+        NOT = {	OR = {culture_group = east_asian  culture_group = chinese_group }}
+		}
+			modifier = {
+			factor = -0.1
+           has_reform = celestial_empire 
+		}
+					modifier = {
+			factor = -0.08
+           AND = {
+		   adm = 5
+		   dip =5
+		   mil =5
+		   
+		   }
+		}
+				modifier = {
+			factor = 0.5
+           NOT = {    	   estate_influence = {
+				estate = estate_sobshishen
+				influence = 60
+				}}
+		}
+						modifier = {
+			factor = -0.5
+             	   estate_influence = {
+				estate = estate_sobshishen
+				influence = 80
+				}
+		}
+		modifier = {
+			factor = -0.05
+          	   estate_influence = {
+				estate = estate_nobles
+				influence = 80
+				}
+		}
+						modifier = {
+			factor = -0.4
+        							 		estate_loyalty = {
+						estate = estate_sobshishen
+						loyalty = 70
+					} 
+		
+		}
+						modifier = {
+			factor = 0.1
+           NOT = {    	   estate_influence = {
+				estate = estate_sobshishen
+				influence = 80
+				}}
+		}
+				modifier = {
+			factor = 0.05
+        							    NOT = {  		estate_loyalty = {
+						estate = estate_sobshishen
+						loyalty = 70
+					} }
+		
+		}
+					modifier = {
+			factor = 1
+        							    NOT = {  		estate_loyalty = {
+						estate = estate_sobshishen
+						loyalty = 60
+					} }
+		
+		}
+		modifier = {
+			factor = 0.25
+           NOT = {     imperial_mandate = 35 }
+		}
+        		modifier = {
+			factor = 0.1
+           NOT = {     imperial_mandate = 60 }
+		}
+
+		
+	}
+	
+	can_end = {
+
+					custom_trigger_tooltip = {
+					tooltip = disaster_active_for_20_years_tooltip
+					had_country_flag = {
+						flag = sob_waizu_had_revolution
+						days = 7300
+					}
+				}
+
+				
+					
+	}
+	
+
+	modifier = {
+	 	global_unrest = 10
+	global_trade_goods_size_modifier = -0.5
+	fire_damage_received = 0.5
+	shock_damage_received = 0.5
+	mercenary_manpower = -0.5
+	global_manpower_modifier = -0.5
+      reduced_liberty_desire = -50
+	  
+	}	
+	
+	on_start = sob_waizu_events.1
+	on_end = sob_waizu_events.4
+	on_monthly = {
+		events = {
+		
+		}
+		random_events = {
+			1000 = 0
+			#
+		}
+	}
+}

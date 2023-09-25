@@ -1,0 +1,125 @@
+warrior_rising = {
+	potential = {
+	always = no
+			has_disaster = bureaucracy_rising
+		OR = {culture_group = east_asian  culture_group = chinese_group }
+		OR = {
+		has_reform = celestial_empire
+has_estate = estate_sobshishen
+		}
+	    NOT = { has_country_modifier = confucianism_reform }
+	}
+	
+	
+	can_start = {
+         		 OR = {
+NOT = {religion = confucianism}
+ has_church_aspect = wuju_kuozhao_aspect 
+ has_church_aspect = junzi_liuyi_aspect 
+ has_country_modifier = army_household_title_generated
+ }
+	   		estate_influence = {
+			estate = estate_sobwarriors
+			influence = 70
+		}
+		estate_loyalty = {
+					estate = estate_sobwarriors
+					loyalty = 50
+				}
+		
+			
+	}
+	
+	can_stop = {
+	OR = {
+	NOT = { has_disaster = bureaucracy_rising }
+	        AND = {
+		NOT = {
+		estate_influence = {
+			estate = estate_sobwarriors
+			influence = 40
+		}
+		}
+		NOT = {estate_loyalty = {
+					estate = estate_sobwarriors
+					loyalty = 50
+				}
+		    }
+			}
+			}
+	
+		
+
+		
+	}
+	
+	
+	progress = {
+
+		modifier = {
+			factor = -0.025
+			is_at_war = no
+		}
+
+		modifier = {
+			factor = 0.125
+			AND = {
+			estate_influence = {
+			estate = estate_sobwarriors
+			influence = 70
+		    }
+			estate_loyalty = {
+					estate = estate_sobwarriors
+					loyalty = 50
+		    }
+			}
+		}
+		modifier = {
+			factor = 0.05
+			is_at_war = yes
+		}
+		modifier = {
+			factor = -0.05
+			estate_influence = {
+			estate = estate_sobshishen
+			influence = 70
+		    }
+		}
+						modifier = {
+			factor = 0.5
+		NOT = {	   		estate_influence = {
+			estate = estate_sobshishen
+			influence = 40
+		}}
+		}
+				modifier = {
+			factor = 0.5
+ has_country_modifier = army_household_title_generated
+		}
+		
+	}
+	
+	can_end = {
+ NOT = { has_disaster = bureaucracy_rising }
+	}
+	
+
+	modifier = {
+	    tolerance_own = 4
+	    global_unrest = 6
+		land_morale = 0.2
+		discipline = 0.2
+		yearly_corruption = 0.1
+		army_tradition = 2
+	}	
+	
+	on_monthly = {
+		events = {
+		
+		}
+		random_events = {
+			1000 = 0
+			#
+		}
+	}
+}

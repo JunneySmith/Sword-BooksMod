@@ -1,0 +1,860 @@
+namespace = sob_opinion_events
+# Local Revolt
+country_event = {
+	id = sob_opinion_events.1
+	title = celestial_empire_events.2.t
+	desc = celestial_empire_events.2.d
+	picture = IMPERIAL_EXAMINATION_eventPicture
+	
+	hidden = yes
+	
+	trigger = {
+               any_country = {
+			   technology_group = ROOT
+			   NOT = {has_opinion_modifier = {
+	who = ROOT
+	modifier = sob_same_tech_group
+}}
+			   }
+		
+	}
+	
+
+	option = {
+		name = "celestial_empire_events.2.b"
+		ai_chance = {
+			factor = 0
+		}
+		every_country = {
+		limit = { technology_group = ROOT
+					   NOT = {has_opinion_modifier = {
+	who = ROOT
+	modifier = sob_same_tech_group
+}}
+		}
+		add_opinion = {
+    who = ROOT
+    modifier = sob_same_tech_group
+}
+		}
+	}
+}
+
+country_event = {
+	id = sob_opinion_events.2
+	title = celestial_empire_events.2.t
+	desc = celestial_empire_events.2.d
+	picture = IMPERIAL_EXAMINATION_eventPicture
+	
+	hidden = yes
+	
+	trigger = {
+               any_country = {
+			  NOT = { technology_group = ROOT }
+			  has_opinion_modifier = {
+	who = ROOT
+	modifier = sob_same_tech_group
+}
+			   }
+		
+	}
+	
+
+	option = {
+		name = "celestial_empire_events.2.b"
+		ai_chance = {
+			factor = 0
+		}
+		every_country = {
+		limit = { NOT = {technology_group = ROOT}
+					has_opinion_modifier = {
+	who = ROOT
+	modifier = sob_same_tech_group
+}
+		}
+		remove_opinion = {
+    who = ROOT
+    modifier = sob_same_tech_group
+}
+		}
+	}
+}
+
+
+country_event = {
+	id = sob_opinion_events.4
+	title = celestial_empire_events.2.t
+	desc = celestial_empire_events.2.d
+	picture = IMPERIAL_EXAMINATION_eventPicture
+	
+	hidden = yes
+	
+	trigger = {
+               any_country = {
+			  NOT = {  culture_group = ROOT  }
+			  has_opinion_modifier = {
+	who = ROOT
+	modifier = sob_same_nation
+}
+			   }
+		
+	}
+	
+
+	option = {
+		name = "celestial_empire_events.2.b"
+		ai_chance = {
+			factor = 0
+		}
+		every_country = {
+		limit = { NOT = { culture_group = ROOT }
+					has_opinion_modifier = {
+	who = ROOT
+	modifier = sob_same_nation
+}
+		}
+		remove_opinion = {
+    who = ROOT
+    modifier = sob_same_nation
+}
+		}
+	}
+}
+
+country_event = {
+	id = sob_opinion_events.3
+	title = celestial_empire_events.2.t
+	desc = celestial_empire_events.2.d
+	picture = IMPERIAL_EXAMINATION_eventPicture
+	
+	hidden = yes
+	
+	trigger = {
+	OR = {
+	OR = {culture_group = east_asian  culture_group = chinese_group }
+	is_institution_enabled = enlightenment
+	}
+               any_country = {
+			  culture_group = ROOT 
+			NOT =  { has_opinion_modifier = {
+	who = ROOT
+	modifier = sob_same_nation
+}
+}
+			   }
+		
+	}
+	
+
+	option = {
+		name = "celestial_empire_events.2.b"
+		ai_chance = {
+			factor = 0
+		}
+		every_country = {
+		limit = { culture_group = ROOT
+					NOT = {has_opinion_modifier = {
+	who = ROOT
+	modifier = sob_same_nation
+}
+		}
+		}
+		add_opinion = {
+    who = ROOT
+    modifier = sob_same_nation
+}
+		}
+	}
+}
+
+country_event = {
+	id = sob_opinion_events.10
+	title = celestial_empire_events.2.t
+	desc = celestial_empire_events.2.d
+	picture = IMPERIAL_EXAMINATION_eventPicture
+	
+	hidden = yes
+	
+	trigger = {
+       is_emperor_of_china = yes
+
+	   any_subject_country = {
+	   is_subject_of_type = zhuhou_claim_state
+	   }
+	   OR = {
+	   AND = {
+	   is_at_war = yes
+	   	   OR = {
+	   ai = no
+	   AND = {
+	  imperial_mandate = 70
+	   ai = yes
+	   }
+	   }
+	   	   NOT = {
+	    	
+
+is_in_war = {
+casus_belli = cb_insult
+
+}
+	   
+	   }
+	   
+	   	   	   NOT = {
+	    	
+
+is_in_war = {
+casus_belli = cb_chinese_unification
+
+}
+	   
+	   }
+	   	   	   NOT = {
+	    	
+
+is_in_war = {
+casus_belli = cb_core
+
+}
+	   
+	   }
+	   
+	   
+
+
+
+
+	   NOT = {
+	    	
+
+is_in_war = {
+casus_belli = cb_sob_yizhenzhuhou
+
+}
+	   
+	   }
+	   
+	   NOT = { has_country_flag = sob_emperor_has_war_mandate}
+	   }
+	   	   AND = {
+	   is_at_war = no
+	has_country_flag = sob_emperor_has_war_mandate
+	   }
+	   }
+	}
+	
+
+	option = {
+		name = "celestial_empire_events.2.b"
+		if = {
+		limit = { is_at_war = yes}
+        add_mandate = -10
+		set_country_flag = sob_emperor_has_war_mandate
+		}
+				if = {
+		limit = { is_at_war = no}
+
+		clr_country_flag = sob_emperor_has_war_mandate
+		}
+	}
+}
+
+
+country_event = {
+	id = sob_opinion_events.2001
+	title = celestial_empire_events.2.t
+	desc = celestial_empire_events.2.d
+	picture = IMPERIAL_EXAMINATION_eventPicture
+	
+	hidden = yes
+	
+	trigger = {
+	NOT = {has_global_flag = sob_set_hegemon_off}
+	is_hegemon = yes
+    any_country = {
+			   is_hegemon = no
+			   is_great_power = no
+			   NOT = {has_opinion_modifier = {
+	who = ROOT
+	modifier = sob_hegmon_small_country
+}}
+			   }
+		
+	}
+	
+
+	option = {
+		name = "celestial_empire_events.2.b"
+
+		every_country = {
+		limit = {   is_hegemon = no
+			   is_great_power = no
+			   NOT = {has_opinion_modifier = {
+	who = ROOT
+	modifier = sob_hegmon_small_country
+}}
+		}
+		add_opinion = {
+    who = ROOT
+    modifier = sob_hegmon_small_country
+}
+		}
+	}
+}
+
+country_event = {
+	id = sob_opinion_events.2002
+	title = celestial_empire_events.2.t
+	desc = celestial_empire_events.2.d
+	picture = IMPERIAL_EXAMINATION_eventPicture
+	
+	hidden = yes
+	
+	trigger = {
+OR = {
+AND = {
+	is_hegemon = no
+    any_country = {
+			  has_opinion_modifier = {
+	who = ROOT
+	modifier = sob_hegmon_small_country
+}}
+			   
+	}
+	
+	AND = {
+	is_hegemon = yes
+    any_country = {
+	OR = {
+			   is_hegemon = yes
+			   is_great_power = yes
+			   
+			   }
+			  has_opinion_modifier = {
+	who = ROOT
+	modifier = sob_hegmon_small_country
+}}
+			   
+	}
+	}
+	}
+	
+
+	option = {
+		name = "celestial_empire_events.2.b"
+		if = {
+		limit = { is_hegemon = no}
+		every_country = {
+		limit = {
+					has_opinion_modifier = {
+	who = ROOT
+	modifier = sob_hegmon_small_country
+}
+		}
+		remove_opinion = {
+    who = ROOT
+    modifier = sob_hegmon_small_country
+}
+		}
+	}
+			if = {
+		limit = { is_hegemon = yes}
+		every_country = {
+		limit = {
+			OR = {
+			   is_hegemon = yes
+			   is_great_power = yes
+			   
+			   }
+			  has_opinion_modifier = {
+	who = ROOT
+	modifier = sob_hegmon_small_country
+}
+
+		}
+		remove_opinion = {
+    who = ROOT
+    modifier = sob_hegmon_small_country
+}
+		}
+	}
+	}
+}
+
+
+
+
+country_event = {
+	id = sob_opinion_events.2003
+	title = celestial_empire_events.2.t
+	desc = celestial_empire_events.2.d
+	picture = IMPERIAL_EXAMINATION_eventPicture
+	
+	hidden = yes
+	
+	trigger = {
+	NOT = {has_global_flag = sob_set_hegemon_off}
+	is_hegemon = yes
+    any_country = {
+	alliance_with = ROOT
+	OR = {
+			   is_hegemon = yes
+			   is_great_power = yes
+			   
+			   }
+			   NOT = {has_opinion_modifier = {
+	who = ROOT
+	modifier = sob_hegmon_allied_super_power_country
+}}
+			   }
+		
+	}
+	
+
+	option = {
+		name = "celestial_empire_events.2.b"
+
+		every_country = {
+		limit = {   
+		alliance_with = ROOT
+		OR = {
+		is_hegemon = yes
+			   is_great_power = yes
+			 }
+			   NOT = {has_opinion_modifier = {
+	who = ROOT
+	modifier = sob_hegmon_allied_super_power_country
+}}
+		}
+		add_opinion = {
+    who = ROOT
+    modifier = sob_hegmon_allied_super_power_country
+}
+		}
+	}
+}
+
+country_event = {
+	id = sob_opinion_events.2004
+	title = celestial_empire_events.2.t
+	desc = celestial_empire_events.2.d
+	picture = IMPERIAL_EXAMINATION_eventPicture
+	
+	hidden = yes
+	
+	trigger = {
+OR = {
+AND = {
+	is_hegemon = no
+    any_country = {
+			  has_opinion_modifier = {
+	who = ROOT
+	modifier = sob_hegmon_allied_super_power_country
+}}
+			   
+	}
+	
+	AND = {
+	is_hegemon = yes
+    any_country = {
+	OR = {
+AND = {			
+			is_hegemon = no
+			   is_great_power = no
+			   }
+			  NOT = { alliance_with = ROOT}
+			   }
+			  has_opinion_modifier = {
+	who = ROOT
+	modifier = sob_hegmon_allied_super_power_country
+}
+
+}
+			   
+	}
+	}
+	}
+	
+
+	option = {
+		name = "celestial_empire_events.2.b"
+		if = {
+		limit = { is_hegemon = no}
+		every_country = {
+		limit = {
+					has_opinion_modifier = {
+	who = ROOT
+	modifier = sob_hegmon_allied_super_power_country
+}
+		}
+		remove_opinion = {
+    who = ROOT
+    modifier = sob_hegmon_allied_super_power_country
+}
+		}
+	}
+			if = {
+		limit = { is_hegemon = yes}
+		every_country = {
+		limit = {
+	OR = {
+AND = {			
+			is_hegemon = no
+			   is_great_power = no
+			   }
+			  NOT = { alliance_with = ROOT}
+			   }
+			  has_opinion_modifier = {
+	who = ROOT
+	modifier = sob_hegmon_allied_super_power_country
+}
+		}
+		remove_opinion = {
+    who = ROOT
+    modifier = sob_hegmon_allied_super_power_country
+}
+		}
+	}
+	}
+}
+
+
+
+
+
+country_event = {
+	id = sob_opinion_events.2005
+	title = celestial_empire_events.2.t
+	desc = celestial_empire_events.2.d
+	picture = IMPERIAL_EXAMINATION_eventPicture
+	
+	hidden = yes
+	
+	trigger = {
+	NOT = {has_global_flag = sob_set_hegemon_off}
+	is_hegemon = yes
+    any_country = {
+	NOT = {alliance_with = ROOT}
+		NOT = {	ai_attitude = {
+	who = ROOT
+	attitude = attitude_hostile
+}
+}
+	NOT = {	ai_attitude = {
+	who = ROOT
+	attitude = atittude_rivalry
+}
+}
+	NOT = {	ai_attitude = {
+	who = ROOT
+	attitude = attitude_outraged
+}
+}
+ROOT = {
+OR = {
+ai_attitude = {
+	who = PREV
+	attitude = attitude_friendly
+}
+ai_attitude = {
+	who = PREV
+	attitude = attitude_defensive
+}
+ai_attitude = {
+	who = PREV
+	attitude = attitude_protective
+}
+ai_attitude = {
+	who = PREV
+	attitude = attitude_allied
+}
+
+
+
+}
+}
+has_opinion = {
+	who = ROOT
+	value = 1
+}
+	OR = {
+			   is_hegemon = yes
+			   is_great_power = yes
+			   
+			   }
+			   NOT = {has_opinion_modifier = {
+	who = ROOT
+	modifier = sob_hegmon_non_allied_super_power_country
+}}
+			   }
+		
+	}
+	
+
+	option = {
+		name = "celestial_empire_events.2.b"
+
+		every_country = {
+		limit ={
+	NOT = {alliance_with = ROOT}
+		NOT = {	ai_attitude = {
+	who = ROOT
+	attitude = attitude_hostile
+}
+}
+	NOT = {	ai_attitude = {
+	who = ROOT
+	attitude = atittude_rivalry
+}
+}
+	NOT = {	ai_attitude = {
+	who = ROOT
+	attitude = attitude_outraged
+}
+}
+ROOT = {
+OR = {
+ai_attitude = {
+	who = PREV
+	attitude = attitude_friendly
+}
+ai_attitude = {
+	who = PREV
+	attitude = attitude_defensive
+}
+ai_attitude = {
+	who = PREV
+	attitude = attitude_protective
+}
+ai_attitude = {
+	who = PREV
+	attitude = attitude_allied
+}
+
+
+
+}
+}
+has_opinion = {
+	who = ROOT
+	value = 1
+}
+	OR = {
+			   is_hegemon = yes
+			   is_great_power = yes
+			   
+			   }
+			   NOT = {has_opinion_modifier = {
+	who = ROOT
+	modifier = sob_hegmon_non_allied_super_power_country
+}}
+}
+			   
+		add_opinion = {
+    who = ROOT
+    modifier = sob_hegmon_non_allied_super_power_country
+}
+		
+	}
+	}
+}
+
+country_event = {
+	id = sob_opinion_events.2006
+	title = celestial_empire_events.2.t
+	desc = celestial_empire_events.2.d
+	picture = IMPERIAL_EXAMINATION_eventPicture
+	
+	hidden = yes
+	
+	trigger = {
+OR = {
+AND = {
+	is_hegemon = no
+    any_country = {
+			  has_opinion_modifier = {
+	who = ROOT
+	modifier = sob_hegmon_non_allied_super_power_country
+}}
+			   
+	}
+	
+	AND = {
+	is_hegemon = yes
+    any_country = {
+	OR = {
+	alliance_with = ROOT
+		ai_attitude = {
+	who = ROOT
+	attitude = attitude_hostile
+}
+
+	ai_attitude = {
+	who = ROOT
+	attitude = atittude_rivalry
+}
+
+ai_attitude = {
+	who = ROOT
+	attitude = attitude_outraged
+}
+
+
+NOT = {has_opinion = {
+	who = ROOT
+	value = 1
+}
+}
+	AND = {
+			   is_hegemon = no
+			   is_great_power = no
+			   
+			   }
+			   }
+			has_opinion_modifier = {
+	who = ROOT
+	modifier = sob_hegmon_non_allied_super_power_country
+}
+}
+			   
+	}
+	}
+	}
+	
+
+	option = {
+		name = "celestial_empire_events.2.b"
+		if = {
+		limit = { is_hegemon = no}
+		every_country = {
+		limit = {
+					has_opinion_modifier = {
+	who = ROOT
+	modifier = sob_hegmon_non_allied_super_power_country
+}
+		}
+		remove_opinion = {
+    who = ROOT
+    modifier = sob_hegmon_non_allied_super_power_country
+}
+		}
+	}
+			if = {
+		limit = { is_hegemon = yes}
+		every_country = {
+		limit = {
+	OR = {
+	alliance_with = ROOT
+		ai_attitude = {
+	who = ROOT
+	attitude = attitude_hostile
+}
+
+	ai_attitude = {
+	who = ROOT
+	attitude = atittude_rivalry
+}
+
+ai_attitude = {
+	who = ROOT
+	attitude = attitude_outraged
+}
+
+
+NOT = {has_opinion = {
+	who = ROOT
+	value = 1
+}
+}
+	AND = {
+			   is_hegemon = no
+			   is_great_power = no
+			   
+			   }
+			   }
+			has_opinion_modifier = {
+	who = ROOT
+	modifier = sob_hegmon_non_allied_super_power_country
+}
+		}
+		remove_opinion = {
+    who = ROOT
+    modifier = sob_hegmon_non_allied_super_power_country
+}
+		}
+	}
+	}
+}
+
+
+country_event = {
+	id = sob_opinion_events.2007
+	title = celestial_empire_events.2.t
+	desc = celestial_empire_events.2.d
+	picture = IMPERIAL_EXAMINATION_eventPicture
+	
+	hidden = yes
+	
+	trigger = {
+	has_global_flag = sob_set_hegemon_off
+	is_hegemon = yes
+	any_country = {
+	OR = { 
+				has_opinion_modifier = {
+	who = ROOT
+	modifier = sob_hegmon_small_country
+}
+			has_opinion_modifier = {
+	who = ROOT
+	modifier = sob_hegmon_allied_super_power_country
+}
+			has_opinion_modifier = {
+	who = ROOT
+	modifier = sob_hegmon_non_allied_super_power_country
+}
+	
+	}
+	
+	}
+	}
+	
+
+	option = {
+		name = "celestial_empire_events.2.b"
+		every_country = {
+		limit = {
+			OR = { 
+				has_opinion_modifier = {
+	who = ROOT
+	modifier = sob_hegmon_small_country
+}
+			has_opinion_modifier = {
+	who = ROOT
+	modifier = sob_hegmon_allied_super_power_country
+}
+			has_opinion_modifier = {
+	who = ROOT
+	modifier = sob_hegmon_non_allied_super_power_country
+}
+	
+	}
+		
+		
+		}
+				remove_opinion = {
+    who = ROOT
+    modifier = sob_hegmon_small_country
+}
+		remove_opinion = {
+    who = ROOT
+    modifier = sob_hegmon_allied_super_power_country
+}
+		remove_opinion = {
+    who = ROOT
+    modifier = sob_hegmon_non_allied_super_power_country
+}
+		
+		}
+	}
+}

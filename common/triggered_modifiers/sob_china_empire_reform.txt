@@ -1,0 +1,378 @@
+sob_chinese_empire_reform_1 = {
+	potential = { always = no
+	NOT = { is_subject_of_type = sob_tributary_state_3}
+overlord = {
+is_emperor_of_china = yes
+}
+	}
+
+	trigger = {
+	NOT = { is_subject_of_type = sob_tributary_state_3}
+overlord = {
+is_emperor_of_china = yes
+}
+								custom_trigger_tooltip = {
+				tooltip = sob_confu_chinese_empire_refrom_lv1
+				has_global_flag = sob_reform_lev_1
+				}
+	}
+
+legitimacy = 0.5
+liberty_desire = -1
+}
+
+sob_chinese_empire_reform_2 = {
+	potential = { always = no
+	NOT = { is_subject_of_type = sob_tributary_state_3}
+overlord = {
+is_emperor_of_china = yes
+}
+	}
+
+	trigger = {
+	NOT = { is_subject_of_type = sob_tributary_state_3}
+overlord = {
+is_emperor_of_china = yes
+}
+								custom_trigger_tooltip = {
+				tooltip = sob_confu_chinese_empire_refrom_lv2
+				has_global_flag = sob_reform_lev_2
+				}
+	}
+
+trade_efficiency = 0.10
+liberty_desire = -1
+}
+
+sob_chinese_empire_reform_3 = {
+	potential = { always = no
+	NOT = { is_subject_of_type = sob_tributary_state_3}
+overlord = {
+is_emperor_of_china = yes
+}
+	}
+
+	trigger = {
+	NOT = { is_subject_of_type = sob_tributary_state_3}
+overlord = {
+is_emperor_of_china = yes
+}
+								custom_trigger_tooltip = {
+				tooltip = sob_confu_chinese_empire_refrom_lv3
+				has_global_flag = sob_reform_lev_3
+				}
+	}
+
+global_tax_income = 24
+liberty_desire = -1
+}
+
+sob_chinese_empire_reform_4 = {
+	potential = { always = no
+	NOT = { is_subject_of_type = sob_tributary_state_3}
+overlord = {
+is_emperor_of_china = yes
+}
+	}
+
+	trigger = {
+	NOT = { is_subject_of_type = sob_tributary_state_3}
+overlord = {
+is_emperor_of_china = yes
+}
+								custom_trigger_tooltip = {
+				tooltip = sob_confu_chinese_empire_refrom_lv4
+				has_global_flag = sob_reform_lev_4
+				}
+	}
+
+stability_cost_modifier = -0.10
+liberty_desire = -1
+}
+
+sob_chinese_empire_reform_5 = {
+	potential = { always = no
+	NOT = { is_subject_of_type = sob_tributary_state_3}
+overlord = {
+is_emperor_of_china = yes
+}
+	}
+
+	trigger = {
+	NOT = { is_subject_of_type = sob_tributary_state_3}
+overlord = {
+is_emperor_of_china = yes
+}
+								custom_trigger_tooltip = {
+				tooltip = sob_confu_chinese_empire_refrom_lv5
+				has_global_flag = sob_reform_lev_5
+				}
+	}
+
+prestige = 0.5
+liberty_desire = -1
+}
+
+sob_chinese_empire_reform_8 = {
+	potential = { always = no
+	NOT = { is_subject_of_type = sob_tributary_state_3}
+overlord = {
+is_emperor_of_china = yes
+}
+	}
+
+	trigger = {
+	NOT = { is_subject_of_type = sob_tributary_state_3}
+overlord = {
+is_emperor_of_china = yes
+}
+								custom_trigger_tooltip = {
+				tooltip = sob_confu_chinese_empire_refrom_lv8
+				has_global_flag = sob_reform_lev_8
+				}
+	}
+
+envoy_travel_time = -0.2
+liberty_desire = -1
+}
+
+
+sob_chinese_empire_reform_6 = {
+	potential = { always = no
+	NOT = { is_subject_of_type = sob_tributary_state_3}
+overlord = {
+is_emperor_of_china = yes
+}
+	}
+
+	trigger = {
+	NOT = { is_subject_of_type = sob_tributary_state_3}
+overlord = {
+is_emperor_of_china = yes
+}
+								custom_trigger_tooltip = {
+				tooltip = sob_confu_chinese_empire_refrom_lv6
+				has_global_flag = sob_reform_lev_6
+				}
+	}
+
+	num_accepted_cultures = 1
+		promote_culture_cost = -0.1
+		liberty_desire = -1
+}
+
+
+sob_chinese_empire_reform_7 = {
+	potential = { always = no
+	NOT = { is_subject_of_type = sob_tributary_state_3}
+overlord = {
+is_emperor_of_china = yes
+}
+	}
+
+	trigger = {
+	NOT = { is_subject_of_type = sob_tributary_state_3}
+overlord = {
+is_emperor_of_china = yes
+}
+								custom_trigger_tooltip = {
+				tooltip = sob_confu_chinese_empire_refrom_lv7
+				has_global_flag = sob_reform_lev_7
+				}
+	}
+
+	merchants = 1
+	liberty_desire = -1
+}
+
+
+sob_chinese_empire_reform_16 = {
+	potential = { always = no
+	NOT = { is_subject_of_type = sob_tributary_state_3}
+overlord = {
+is_emperor_of_china = yes
+}
+	}
+
+	trigger = {
+	NOT = { is_subject_of_type = sob_tributary_state_3}
+overlord = {
+is_emperor_of_china = yes
+}
+								custom_trigger_tooltip = {
+				tooltip = sob_confu_chinese_empire_refrom_lv16
+				has_global_flag = sob_reform_lev_16
+				}
+	}
+
+development_cost = -0.1
+liberty_desire = -1
+}
+
+
+sob_chinese_empire_reform_9 = {
+	potential = { always = no
+	NOT = { is_subject_of_type = sob_tributary_state_3}
+overlord = {
+is_emperor_of_china = yes
+}
+	}
+
+	trigger = {
+	NOT = { is_subject_of_type = sob_tributary_state_3}
+overlord = {
+is_emperor_of_china = yes
+}
+								custom_trigger_tooltip = {
+				tooltip = sob_confu_chinese_empire_refrom_lv9
+				has_global_flag = sob_reform_lev_9
+				}
+	}
+
+		republican_tradition = 0.15
+		meritocracy = 0.5
+		legitimacy = 0.5
+		liberty_desire = -1
+}
+
+
+sob_chinese_empire_reform_10 = {
+	potential = { always = no
+	NOT = { is_subject_of_type = sob_tributary_state_3}
+overlord = {
+is_emperor_of_china = yes
+}
+	}
+
+	trigger = {
+	NOT = { is_subject_of_type = sob_tributary_state_3}
+overlord = {
+is_emperor_of_china = yes
+}
+								custom_trigger_tooltip = {
+				tooltip = sob_confu_chinese_empire_refrom_lv10
+				has_global_flag = sob_reform_lev_10
+				}
+	}
+
+	core_creation = -0.1
+	liberty_desire = -1
+}
+
+sob_chinese_empire_reform_11 = {
+	potential = { always = no
+	NOT = { is_subject_of_type = sob_tributary_state_3}
+overlord = {
+is_emperor_of_china = yes
+}
+	}
+
+	trigger = {
+	NOT = { is_subject_of_type = sob_tributary_state_3}
+overlord = {
+is_emperor_of_china = yes
+}
+								custom_trigger_tooltip = {
+				tooltip = sob_confu_chinese_empire_refrom_lv11
+				has_global_flag = sob_reform_lev_11
+				}
+	}
+
+monarch_admin_power = 1
+liberty_desire = -1
+}
+
+
+sob_chinese_empire_reform_12 = {
+	potential = { always = no
+	NOT = { is_subject_of_type = sob_tributary_state_3}
+overlord = {
+is_emperor_of_china = yes
+}
+	}
+
+	trigger = {
+	NOT = { is_subject_of_type = sob_tributary_state_3}
+overlord = {
+is_emperor_of_china = yes
+}
+								custom_trigger_tooltip = {
+				tooltip = sob_confu_chinese_empire_refrom_lv12
+				has_global_flag = sob_reform_lev_12
+				}
+	}
+
+	discipline = 0.025
+	liberty_desire = -1
+}
+
+
+sob_chinese_empire_reform_13 = {
+	potential = { always = no
+	NOT = { is_subject_of_type = sob_tributary_state_3}
+overlord = {
+is_emperor_of_china = yes
+}
+	}
+
+	trigger = {
+	NOT = { is_subject_of_type = sob_tributary_state_3}
+overlord = {
+is_emperor_of_china = yes
+}
+								custom_trigger_tooltip = {
+				tooltip = sob_confu_chinese_empire_refrom_lv13
+				has_global_flag = sob_reform_lev_13
+				}
+	}
+
+global_unrest = -1
+liberty_desire = -1
+}
+
+
+sob_chinese_empire_reform_14 = {
+	potential = { always = no
+	NOT = { is_subject_of_type = sob_tributary_state_3}
+overlord = {
+is_emperor_of_china = yes
+}
+	}
+
+	trigger = {
+	NOT = { is_subject_of_type = sob_tributary_state_3}
+overlord = {
+is_emperor_of_china = yes
+}
+								custom_trigger_tooltip = {
+				tooltip = sob_confu_chinese_empire_refrom_lv14
+				has_global_flag = sob_reform_lev_14
+				}
+	}
+
+	global_autonomy = -0.03
+	liberty_desire = -1
+}
+sob_chinese_empire_reform_15 = {
+	potential = { always = no
+	NOT = { is_subject_of_type = sob_tributary_state_3}
+overlord = {
+is_emperor_of_china = yes
+}
+	}
+
+	trigger = {
+	NOT = { is_subject_of_type = sob_tributary_state_3}
+overlord = {
+is_emperor_of_china = yes
+}
+								custom_trigger_tooltip = {
+				tooltip = sob_confu_chinese_empire_refrom_lv15
+				has_global_flag = sob_reform_lev_15
+				}
+	}
+
+administrative_efficiency = 0.05
+liberty_desire = -1
+}
+

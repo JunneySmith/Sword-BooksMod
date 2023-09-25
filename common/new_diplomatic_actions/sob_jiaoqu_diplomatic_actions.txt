@@ -1,0 +1,98 @@
+sob_establish_jiaoqu_state = {
+	category = emperor
+	alert_index = 30
+	alert_tooltip = sob_no_neighbor_tributary_state_tooltip
+	require_acceptance = no
+	is_visible = {
+	always=no
+	ai =no
+	OR = {culture_group = east_asian  culture_group = chinese_group }
+
+	
+	FROM = {
+	OR = {
+        	is_subject = no
+			is_subject_of = ROOT
+ }
+		}
+	}
+	is_allowed = {
+	NOT = { sob_jiaoqu_vassal= 3}
+	    is_subject = no
+	FROM = {
+	OR = {
+        	is_subject = no
+			is_subject_of = ROOT
+ }
+        OR = {
+		has_reform = sob_jiaoqu_city
+		has_reform = sob_jiaoqu_con_reform
+		has_reform = sob_merchants_reform
+		has_reform = sob_trading_city
+		}
+		}
+     
+	}
+	on_accept = {
+
+	
+	
+      FROM = {
+      	remove_government_reform = sob_merchants_reform
+	  remove_government_reform = sob_trading_city
+	        	remove_government_reform = sob_jiaoqu_city
+	  remove_government_reform = sob_jiaoqu_con_reform
+	  change_government = sob_chinese_monarchy
+	  add_government_reform =sob_jiaoqu_reform
+	  change_primary_culture = ROOT
+	  change_religion = ROOT
+	  }
+	  			create_subject = {
+		subject_type = sob_jiaoqu_vassal
+		subject = FROM}
+         
+	}
+
+
+}
+
+
+sob_cancel_jiaoqu_state = {
+	category = emperor
+	alert_index = 30
+	alert_tooltip = sob_no_neighbor_tributary_state_tooltip
+	require_acceptance = no
+	is_visible = {
+	always =no
+	 OR = {culture_group = east_asian  culture_group = chinese_group }
+           FROM = {
+		   is_subject_of = ROOT
+		  is_subject_of_type =  sob_jiaoqu_vassal
+		   	
+
+		   }
+	
+         
+	}
+	is_allowed = {
+	OR = {
+years_in_vassalage_under = {
+	who = ROOT
+	years = 30
+}
+FROM = {
+NOT = { any_owned_province = { NOT = { religion = ROOT}}}
+}
+}
+	 OR = {culture_group = east_asian  culture_group = chinese_group }
+           FROM = {
+		   is_subject_of = ROOT
+		  is_subject_of_type =  sob_jiaoqu_vassal
+		   }
+	}
+	on_accept = {
+inherit = FROM
+	}
+
+
+}

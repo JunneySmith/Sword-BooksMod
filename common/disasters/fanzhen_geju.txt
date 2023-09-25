@@ -1,0 +1,150 @@
+fanzhen_geju = {
+	potential = {
+		OR = {culture_group = east_asian  culture_group = chinese_group }
+		is_emperor_of_china = yes
+ 	
+
+
+	}
+	
+	
+	can_start = {
+					custom_trigger_tooltip = {
+					tooltip = sob_hard_mode_kuanxian_tooltip
+					OR = {
+					had_country_flag = { flag = sob_hard_mode_kuanxian days = 18250 }
+					NOT = { has_country_flag = sob_hard_mode_kuanxian}
+					}
+				}
+	OR = {
+has_global_modifier_value = {
+	which = min_autonomy
+	value = 70
+}
+NOT = { imperial_mandate = 5}
+}
+	}
+	
+	can_stop = {
+	OR = {
+	AND = {
+NOT = {has_global_modifier_value = {
+	which = min_autonomy
+	value = 50
+}
+}
+imperial_mandate = 25
+
+}
+NOT = {num_of_cities = 35 }
+
+}
+
+	}
+	
+	
+	progress = {
+	modifier = {
+			factor = 0.02
+has_global_modifier_value = {
+	which = min_autonomy
+	value = 50
+}
+		}
+		          		modifier = {
+			factor = 0.15
+NOT = { legitimacy_equivalent  = 60}
+		}
+	          		modifier = {
+			factor = 0.2
+has_disaster = bureaucracy_rising
+		}
+			          		modifier = {
+			factor = 0.2
+has_disaster = china_dyansty_cycle
+		}
+	
+          		modifier = {
+			factor = 0.1
+ NOT = {stability = -2}
+		}
+		modifier = {
+			factor = 0.1
+ NOT = {imperial_mandate = 25}
+		}
+		modifier = {
+			factor = 0.25
+ NOT = {imperial_mandate = 5}
+		}
+				modifier = {
+			factor = 0.02
+has_global_modifier_value = {
+	which = min_autonomy
+	value = 50
+}
+		}
+
+
+		modifier = {
+			factor = -0.1
+			estate_loyalty = {
+					estate = estate_nobles
+					loyalty = 60
+		    }
+		}
+				modifier = {
+			factor = -0.2
+			estate_loyalty = {
+					estate = estate_sobwarriors
+					loyalty = 60
+		    }
+		}
+		modifier = {
+			factor = -0.1
+			estate_influence = {
+			estate = estate_sobshishen
+			influence = 50
+		    }
+		}
+
+		
+	}
+	
+	can_end = {
+	OR = {
+	AND = {
+NOT = {has_global_modifier_value = {
+	which = min_autonomy
+	value = 50
+}
+}
+imperial_mandate = 50
+}
+is_emperor_of_china = no
+AND = {
+NOT = {
+num_of_cities = 25
+}
+				custom_trigger_tooltip = {
+					tooltip = sob_had_disaster_for_10_years
+					had_country_flag = { flag = sob_had_fanzhen_geju days = 3650 }
+				}
+}
+}
+	}
+	
+
+	modifier = {
+	    global_unrest = 10
+			reduced_liberty_desire_on_same_continent = -30
+	}	
+		on_start = sobempireevents.222
+		on_end = sobchineseempire.567
+	on_monthly = {
+
+		random_events = {
+			1000 = 0
+			#
+		}
+	}
+}

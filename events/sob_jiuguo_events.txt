@@ -1,0 +1,680 @@
+namespace = sob_save_mng_event
+country_event = {
+	id = sob_save_mng_event.1
+	title = "sob_save_mng_event.1.t"
+	desc = "sob_save_mng_event.1.d"
+	picture = GIFTS_TO_EMPEROR_eventPicture
+	is_triggered_only = yes
+	immediate = {
+	set_country_flag =sob_ming_has_fall
+	set_global_flag = sob_ming_fall_global_flag_1
+						change_estate_land_share = {
+			estate = estate_church
+			share = -100.0
+		}	
+					change_estate_land_share = {
+			estate = estate_nobles
+			share = -100.0
+		}	
+					change_estate_land_share = {
+			estate = estate_burghers
+			share = -100.0
+		}	
+					change_estate_land_share = {
+			estate = estate_sobwarriors
+			share = -100.0
+		}	
+			change_estate_land_share = {
+			estate = estate_sobshishen
+			share = -100.0
+		}	
+		change_estate_land_share = {
+			estate = estate_sobshimin
+			share = -100.0
+		}	
+	}
+	option = {
+		name = "sob_save_mng_event.1.a"
+		
+		trigger = {
+		NOT = {
+		any_country ={
+		has_country_flag = sob_mng_usa_flee
+		
+		}
+		
+		}
+		
+		}
+				random_owned_province = {
+    limit = { has_port = yes }
+    ROOT = {
+        transport = PREV
+		transport = PREV
+		transport = PREV
+		transport = PREV
+		transport = PREV
+		transport = PREV
+		transport = PREV
+		transport = PREV
+		transport = PREV
+		transport = PREV
+		transport = PREV
+		transport = PREV
+		transport = PREV
+		transport = PREV
+		transport = PREV
+		transport = PREV
+		transport = PREV
+		transport = PREV
+		transport = PREV
+    }
+}
+			clr_global_flag = sob_ming_fall_global_flag_1
+        set_country_flag = sob_mng_usa_flee
+				define_ruler = {
+    name = "Shugui"
+    dynasty = "Zhu"
+    age = 52
+    claim = 100
+}
+define_heir = {
+    dynasty = "Zhu"
+    age = 10
+    claim = 100
+}
+	}
+	option = {
+		name = "sob_save_mng_event.1.b"
+				trigger = {
+		NOT = {
+		any_country ={
+		has_country_flag = sob_mng_europe_flee
+		
+		}
+		
+		}
+		
+		}
+				random_owned_province = {
+    limit = { has_port = yes }
+    ROOT = {
+        transport = PREV
+		transport = PREV
+		transport = PREV
+		transport = PREV
+		transport = PREV
+		transport = PREV
+		transport = PREV
+		transport = PREV
+		transport = PREV
+		transport = PREV
+		transport = PREV
+		transport = PREV
+		transport = PREV
+		transport = PREV
+		transport = PREV
+		transport = PREV
+		transport = PREV
+		transport = PREV
+		transport = PREV
+    }
+}
+
+		
+			clr_global_flag = sob_ming_fall_global_flag_1
+        set_country_flag = sob_mng_europe_flee
+		define_ruler = {
+    name = "Constantine"
+    dynasty = "Zhu"
+    age = 25
+    claim = 100
+}
+define_heir = {
+    dynasty = "Zhu"
+    age = 10
+    claim = 100
+}
+	}
+	option = {
+		name = "sob_save_mng_event.1.c"
+						trigger = {
+		NOT = {
+		any_country ={
+		has_country_flag = sob_mng_nanyang_flee
+		
+		}
+		
+		}
+		
+		}
+						random_owned_province = {
+    limit = { has_port = yes }
+    ROOT = {
+        transport = PREV
+		transport = PREV
+		transport = PREV
+		transport = PREV
+		transport = PREV
+		transport = PREV
+		transport = PREV
+		transport = PREV
+		transport = PREV
+		transport = PREV
+		transport = PREV
+		transport = PREV
+		transport = PREV
+		transport = PREV
+		transport = PREV
+		transport = PREV
+		transport = PREV
+		transport = PREV
+		transport = PREV
+    }
+}
+add_sailors = 5000
+add_treasury = 1000
+		set_country_flag = sob_mng_nanyang_flee
+		clr_global_flag = sob_ming_fall_global_flag_1
+	}
+	
+		option = {
+		name = "sob_save_mng_event.1.de"
+		trigger = {
+				any_country ={
+		has_country_flag = sob_mng_europe_flee
+		
+		}
+				any_country ={
+		has_country_flag = sob_mng_usa_flee
+		
+		}
+		any_country ={
+		has_country_flag = sob_mng_nanyang_flee
+		
+		}
+		
+		
+		
+		}
+		set_country_flag = sob_mng_wuchu_ketui
+							add_country_modifier = {
+				name = "sob_mng_justice_year"
+				duration = 3650
+			}
+			remove_country_modifier = sob_mng_flee_end
+	}
+
+}
+
+namespace = sob_save_mng_event
+country_event = {
+	id = sob_save_mng_event.2
+	title = "sob_save_mng_event.2.t"
+	desc = "sob_save_mng_event.2.d"
+	picture = GIFTS_TO_EMPEROR_eventPicture
+	is_triggered_only = yes
+	immediate = {
+	set_country_flag =sob_ming_has_fall_2
+	
+	}
+
+	option = {
+		name = "sob_save_mng_event.2.a"
+		
+				set_global_flag = sob_abolish_tributary_system
+		custom_tooltip = sob_reform_gov_hardest_mode_desc_19
+		custom_tooltip = sob_reform_gov_hardest_mode_desc_17
+set_country_flag = sob_reform_jingdian_mode_easy
+								
+													set_country_flag =sob_reform_mode_setted_no_gov_mode_2
+	remove_estate_privilege = sob_estate_jianghu_siren_wen
+	remove_estate_privilege = sob_estate_jianghu_gongchang_wen
+	remove_estate_privilege = sob_estate_jianghu_education_wen
+	remove_estate_privilege = sob_estate_warrior_soldier_number_down
+	remove_estate_privilege = sob_estate_warrior_direct_reward_wen
+	remove_estate_privilege = sob_estate_warrior_education_wen
+							remove_government_reform = celestial_empire
+		set_country_flag = sob_shishua_reform_1
+		set_country_flag = sob_shishua_reform_2
+		set_country_flag = sob_shishua_reform_3
+		set_country_flag = sob_shishua_reform_4
+		set_country_flag = sob_shishua_reform_5
+           set_country_flag = sob_reform_mode_setted
+		   set_country_flag = sob_reform_gov_mode_on
+
+				if = {
+		limit = { war_with = QNG}
+		white_peace = QNG
+		}
+		QNG = {
+		add_stability = 5
+		add_mandate = 100
+		add_prestige = 100
+	set_estate_privilege = sob_estate_inward_production_power
+	set_estate_privilege = sob_estate_bookperfection_taxes_direct
+	set_estate_privilege = sob_estate_shinonggongshang
+	set_estate_privilege = sob_estate_shishen_road_to_sky_rew
+									add_estate_loyalty = {
+			estate = estate_sobshishen
+			loyalty = 100
+		}
+		mongolia_region = {
+		add_core = QNG
+		
+		}
+			tibet_region = {
+	add_core = QNG
+	}
+		}
+		add_prestige = -25
+				add_stability = -2
+				china_superregion = {
+		remove_core = ROOT
+		}
+		custom_tooltip = sob_china_fuguojieyi_mission_flag_3_tooltip
+		if ={
+		limit = { has_country_flag = sob_mng_usa_flee
+		 	is_random_new_world = no
+		}
+		2021 ={
+
+
+				change_religion = ROOT
+		change_culture = ROOT
+		cede_province = ROOT
+		add_core = ROOT
+		}
+		
+		4637={
+				change_religion = ROOT
+		change_culture = ROOT
+		cede_province = ROOT
+		add_core = ROOT
+		}
+		set_capital = 4637
+				738 = {
+		cede_province = QNG
+		
+		}
+		change_tag = XSA
+		XSA= {
+		override_country_name = SOB_NEW_MING_TITLE
+		}
+		country_event = { id = ideagroups.1 }
+		}
+				if ={
+		limit = { has_country_flag = sob_mng_usa_flee
+		 	is_random_new_world = yes
+		}
+		random_province = { 
+		limit = {
+				continent = new_world
+				}
+				region = {
+				cede_province = ROOT
+				add_core = ROOT
+				change_culture = ROOT
+				change_religion = ROOT
+				}
+				ROOT = {
+				set_capital = PREV
+				}
+				}
+		
+				738 = {
+		cede_province = QNG
+		
+		}
+		change_tag = XSA
+		XSA= {
+		override_country_name = SOB_NEW_MING_TITLE
+		}
+		country_event = { id = ideagroups.1 }
+		}
+		if ={
+		limit = { has_country_flag = sob_mng_europe_flee}
+		add_adm_tech = 5
+		add_dip_tech = 5
+		add_mil_tech = 5
+		120 ={
+		area = {
+		change_culture = ROOT
+		cede_province = ROOT
+		add_core = ROOT
+		remove_core = SPA
+		remove_core = PAP
+		}
+		}
+		
+		set_capital = 120
+		738 = {
+		cede_province = QNG
+		
+		}
+				 every_country = {
+		 limit = { capital_scope = {superregion = europe_superregion }}
+		 
+		 set_ai_attitude = {
+    attitude = attitude_friendly
+    who = ROOT
+    locked = no
+}
+		 add_opinion = {
+    who = ROOT
+    modifier = chi_trade_opportunity
+}
+		 }
+		set_ruler_religion = catholic
+		set_heir_religion = catholic
+		change_religion = catholic
+		override_country_name = SOB_CAN_MING_TITLE
+		}
+		if ={
+		limit = { has_country_flag = sob_mng_nanyang_flee}
+		640 ={
+		area = {
+		change_religion = ROOT
+		change_culture = ROOT
+		cede_province = ROOT
+		add_core = ROOT
+		}
+		}
+		change_tag = XHC
+		set_capital = 640
+		738 = {
+		cede_province = QNG
+		
+		}
+		}
+				every_province = {
+				limit = {
+					area = taiwan_area
+				
+				}
+				add_core = QNG
+				cede_province = QNG
+		}
+			add_country_modifier = {
+				name = "sob_mng_fleed_sad"
+				duration = -1
+			}
+	}
+
+}
+
+country_event = {
+	id = sob_save_mng_event.3
+	title = "sob_save_mng_event.3.t"
+	desc = "sob_save_mng_event.3.d"
+	picture = GIFTS_TO_EMPEROR_eventPicture
+	is_triggered_only = yes
+	immediate = {
+	set_country_flag =sob_ming_has_fall_3
+	
+	}
+
+	option = {
+		name = "sob_save_mng_event.3.a"
+		add_prestige = 25
+	}
+
+}
+
+country_event = {
+	id = sob_save_mng_event.4
+	title = "sob_save_mng_event.4.t"
+	desc = "sob_save_mng_event.4.d"
+	picture = GIFTS_TO_EMPEROR_eventPicture
+	is_triggered_only = yes
+	immediate = {
+	set_country_flag =sob_ming_has_fall_4
+	
+	}
+
+	option = {
+		name = "sob_save_mng_event.4.a"
+add_prestige = 25
+	}
+
+}
+
+country_event = {
+	id = sob_save_mng_event.5
+	title = "sob_save_mng_event.5.t"
+	desc = "sob_save_mng_event.5.d"
+	picture = GIFTS_TO_EMPEROR_eventPicture
+	is_triggered_only = yes
+	immediate = {
+	set_country_flag =sob_ming_has_fall_5
+	
+	}
+
+	option = {
+		name = "sob_save_mng_event.5.a"
+add_prestige = 25
+	}
+
+}
+
+country_event = {
+	id = sob_save_mng_event.6
+	title = "sob_save_mng_event.6.t"
+	desc = "sob_save_mng_event.6.d"
+	picture = GIFTS_TO_EMPEROR_eventPicture
+	is_triggered_only = yes
+	immediate = {
+	set_country_flag =sob_ming_has_fall_6
+	
+	}
+
+	option = {
+		name = "sob_save_mng_event.6.a"
+add_prestige = 25
+	}
+
+}
+
+country_event = {
+	id = sob_save_mng_event.7
+	title = "sob_save_mng_event.7.t"
+	desc = "sob_save_mng_event.7.d"
+	picture = GIFTS_TO_EMPEROR_eventPicture
+	is_triggered_only = yes
+	immediate = {
+	set_country_flag =sob_ming_has_fall_7
+	
+	}
+
+	option = {
+		name = "sob_save_mng_event.7.a"
+add_prestige = 25
+		 		 enable_religion = threeself
+        enable_religion = sob_catholic
+		enable_religion = sob_anglican
+		enable_religion = sob_reformed
+		enable_religion = sob_orthodox
+		enable_religion = sob_coptic
+
+change_religion = confucianism
+add_harmonized_religion = catholic
+	}
+	
+		option = {
+		name = "sob_save_mng_event.7.b"
+
+	}
+
+}
+
+
+country_event = {
+	id = sob_save_mng_event.8
+	title = "sob_save_mng_event.8.t"
+	desc = "sob_save_mng_event.8.d"
+	picture = GIFTS_TO_EMPEROR_eventPicture
+	is_triggered_only = yes
+	immediate = {
+	set_country_flag =sob_ming_has_fall_8
+	
+	}
+
+	option = {
+		name = "sob_save_mng_event.8.a"
+add_prestige = 25
+	}
+
+}
+
+
+country_event = {
+	id = sob_save_mng_event.9
+	title = "sob_save_mng_event.9.t"
+	desc = "sob_save_mng_event.9.d"
+	picture = GIFTS_TO_EMPEROR_eventPicture
+	is_triggered_only = yes
+	immediate = {
+	set_country_flag =sob_ming_has_fall_9
+	
+	}
+
+	option = {
+		name = "sob_save_mng_event.9.a"
+add_prestige = 25
+override_country_name = SOB_BACK_MING_TITLE
+	}
+
+}
+
+country_event = {
+	id = sob_save_mng_event.10
+	title = "sob_save_mng_event.10.t"
+	desc = "sob_save_mng_event.10.d"
+	picture = GIFTS_TO_EMPEROR_eventPicture
+	is_triggered_only = yes
+	immediate = {
+	set_country_flag =sob_ming_has_fall_10
+	
+	}
+
+	option = {
+		name = "sob_save_mng_event.10.a"
+add_prestige = 25
+	}
+
+}
+
+country_event = {
+	id = sob_save_mng_event.11
+	title = "sob_save_mng_event.11.t"
+	desc = "sob_save_mng_event.11.d"
+	picture = GIFTS_TO_EMPEROR_eventPicture
+	is_triggered_only = yes
+immediate = {
+set_country_flag = sob_mng_fleed_zhengbianjundui_already_debug
+}
+
+	option = {
+		name = "sob_save_mng_event.11.a"
+		set_country_flag = sob_mng_fleed_zhengbianjundui_already_debug
+		set_country_flag = sob_mng_fleed_zhengbianjundui_already
+		if = {
+		limit = { NOT = { has_country_flag = sob_mng_europe_flee}}
+			  		add_adm_tech = 2
+		add_dip_tech = 2
+		add_mil_tech = 2
+		}
+		capital_scope = {
+		add_base_tax = 10
+		add_base_production = 10
+		add_base_manpower = 10
+		}
+		custom_tooltip = sob_mng_fleed_zhengbianjundui_already_tooltip
+      hidden_effect = {
+	
+		random_owned_province = {
+    limit = { has_port = yes }
+    ROOT = {
+	artillery = PREV
+	artillery = PREV
+	artillery = PREV
+	artillery = PREV
+	artillery = PREV
+	artillery = PREV
+	artillery = PREV
+	artillery = PREV
+	artillery = PREV
+	artillery = PREV
+	artillery = PREV
+	artillery = PREV
+	artillery = PREV
+	artillery = PREV
+	artillery = PREV
+
+marine_infantry  = PREV
+marine_infantry  = PREV
+marine_infantry  = PREV
+marine_infantry  = PREV
+marine_infantry  = PREV
+marine_infantry  = PREV
+marine_infantry  = PREV
+marine_infantry  = PREV
+marine_infantry  = PREV
+marine_infantry  = PREV
+marine_infantry  = PREV
+marine_infantry  = PREV
+marine_infantry  = PREV
+marine_infantry  = PREV
+marine_infantry  = PREV
+marine_infantry  = PREV
+marine_infantry  = PREV
+marine_infantry  = PREV
+marine_infantry  = PREV
+marine_infantry  = PREV
+marine_infantry  = PREV
+marine_infantry  = PREV
+marine_infantry  = PREV
+marine_infantry  = PREV
+marine_infantry  = PREV
+cossack_cavalry= PREV
+cossack_cavalry= PREV
+cossack_cavalry= PREV
+cossack_cavalry= PREV
+cossack_cavalry= PREV
+cossack_cavalry= PREV
+cossack_cavalry= PREV
+cossack_cavalry= PREV
+cossack_cavalry= PREV
+cossack_cavalry= PREV
+cossack_cavalry= PREV
+cossack_cavalry= PREV
+cossack_cavalry= PREV
+cossack_cavalry= PREV
+cossack_cavalry= PREV
+cossack_cavalry= PREV
+
+        heavy_ship = PREV
+		heavy_ship = PREV
+		heavy_ship = PREV
+		heavy_ship = PREV
+		heavy_ship = PREV
+		heavy_ship = PREV
+		heavy_ship = PREV
+		heavy_ship = PREV
+		heavy_ship = PREV
+		heavy_ship = PREV
+		heavy_ship = PREV
+		heavy_ship = PREV
+		heavy_ship = PREV
+		heavy_ship = PREV
+		heavy_ship = PREV
+    }
+}
+	  }
+	}
+
+}
+
+
+
+

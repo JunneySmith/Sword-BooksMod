@@ -1,0 +1,3000 @@
+namespace = sob_tributary_events
+# Local Revolt
+
+country_event = {
+	id = sob_tributary_events.102
+	title = sob_tributary_events.102.t
+	desc = sob_tributary_events.102.d
+	picture = IMPERIAL_EXAMINATION_eventPicture
+	
+     is_triggered_only = yes
+	
+
+	option = {
+		name = "sob_tributary_events.102.b"
+
+	}
+}
+
+country_event = {
+	id = sob_tributary_events.2310102
+	title = sob_tributary_events.102.t
+	desc = sob_tributary_events.2.d
+	picture = IMPERIAL_EXAMINATION_eventPicture
+	
+  	hidden = yes
+     trigger = {
+	 is_at_war = no
+	 overlord = {
+	 is_at_war = no
+	 }
+	  total_development = 800
+	 NOT  ={  capital_scope = { superregion = china_superregion} }
+	 liberty_desire = 65
+						overlord = {
+						is_emperor_of_china = yes
+						
+						}																OR = {
+is_subject_of_type = zhuhou_state
+is_subject_of_type = celestial_client_state
+}
+		any_country ={
+		is_great_power = yes
+		NOT = { total_development = ROOT}
+		
+		}
+	 
+	 }
+	mean_time_to_happen = {
+	days = 1
+	}
+
+	option = {
+		name = "sob_tributary_events.2.b"
+
+		overlord = {
+		create_subject = {
+		subject_type = sob_celestial_member_2
+		subject = ROOT}
+		
+		}
+		
+	}
+}
+country_event = {
+	id = sob_tributary_events.2310108
+	title = sob_tributary_events.102.t
+	desc = sob_tributary_events.2.d
+	picture = IMPERIAL_EXAMINATION_eventPicture
+	
+  	hidden = yes
+     trigger = {
+	 always  = no
+		is_emperor_of_china = yes
+		any_subject_country = {
+		NOT = {any_country ={
+		is_great_power = yes
+		NOT = { total_development = PREV}
+		
+		}
+		
+		}
+												
+is_subject_of_type = sob_celestial_member
+
+		
+		}
+	 
+	 }
+	
+
+	option = {
+		name = "sob_tributary_events.2.b"
+		every_subject_country ={
+		limit = {
+				any_country ={
+		is_great_power = yes
+		NOT = { total_development = PREV}
+		
+		}
+																		OR = {
+is_subject_of_type = zhuhou_state
+is_subject_of_type = celestial_client_state
+}
+		
+		}
+		ROOT = {
+		create_subject = {
+		subject_type = sob_celestial_member
+		subject = PREV}
+		
+		}
+		}
+	}
+}
+country_event = {
+	id = sob_tributary_events.2310101
+	title = sob_tributary_events.102.t
+	desc = sob_tributary_events.2.d
+	picture = IMPERIAL_EXAMINATION_eventPicture
+	
+     trigger = {
+	 ai = yes
+	 is_subject = yes
+	 overlord = {
+	 is_emperor_of_china = yes
+	 ai = yes
+	 }
+had_country_flag = {
+	flag = sob_defeated_fomer_emperor
+	days = 365
+}
+	 
+	 }
+	immediate = {
+	overlord = {
+	save_event_target_as = sob_eoc_going_to_get_inland
+	
+	}
+	
+	}
+	mean_time_to_happen = {
+	months = 1
+	
+	}
+	option = {
+		name = "sob_tributary_events.2.b"
+		clr_country_flag = sob_defeated_fomer_emperor
+		clr_country_flag = sob_fight_land_taking
+		every_owned_province = {
+		limit = {   superregion = china_superregion}
+		add_core = event_target:sob_eoc_going_to_get_inland
+		cede_province = event_target:sob_eoc_going_to_get_inland
+		}
+	}
+	option = {
+		name = "sob_tributary_events.2.b"
+		clr_country_flag = sob_defeated_fomer_emperor
+		set_country_flag = sob_defeated_fomer_emperor
+		set_country_flag = sob_fight_land_taking
+		grant_independence = yes
+        declare_war_with_cb = {
+    who = event_target:sob_eoc_going_to_get_inland
+    casus_belli = cb_take_mandate_celestial
+}
+	}
+}
+country_event = {
+	id = sob_tributary_events.103
+	title = sob_tributary_events.103.t
+	desc = sob_tributary_events.3.d
+	picture = IMPERIAL_EXAMINATION_eventPicture
+	
+     is_triggered_only = yes
+	
+
+	option = {
+		name = "sob_tributary_events.3.b"
+        
+    FROM = {
+	change_religion = ROOT
+	}
+
+	}
+}
+
+country_event = {
+	id = sob_tributary_events.105
+	title = sob_tributary_events.105.t
+	desc = sob_tributary_events.105.d
+	picture = IMPERIAL_EXAMINATION_eventPicture
+	
+     is_triggered_only = yes
+		trigger = {
+        
+
+	ai = no
+	
+
+	}
+
+	option = {
+		name = "sob_tributary_events.5.b"
+
+	}
+}
+country_event = {
+	id = sob_tributary_events.106
+	title = sob_tributary_events.106.t
+	desc = sob_tributary_events.106.d
+	picture = IMPERIAL_EXAMINATION_eventPicture
+	
+     is_triggered_only = yes
+	
+	trigger = {
+        
+
+	ai = no
+	
+
+	}
+	option = {
+		name = "sob_tributary_events.3.b"
+         tooltip = {
+    FROM = {
+	change_primary_culture = ROOT
+	}
+}
+	}
+}
+
+
+
+country_event = {
+	id = sob_tributary_events.101
+	title = celestial_empire_events.2.t
+	desc = celestial_empire_events.2.d
+	picture = IMPERIAL_EXAMINATION_eventPicture
+	
+	hidden = yes
+	mean_time_to_happen = {
+		years = 1
+	}
+	trigger = {
+       
+
+		has_country_flag = sob_tributary_religion_change_1
+	
+OR = {
+		NOT = { 			OR = {
+	 is_subject_of_type = tributary_state 
+is_subject_of_type = xuanweisi_state 
+is_subject_of_type = sob_tributary_state_3
+	is_subject_of_type = tributary_state_2 
+		
+		}}
+		is_subject = no
+					   overlord = {
+					has_spy_network_in = {
+					who = ROOT
+					value = 50
+				}
+				}
+					   overlord = {
+religion  = ROOT
+				}
+
+}
+
+	}
+	
+immediate = {
+overlord = {
+
+save_event_target_as = sob_tributary_events_province_overlord
+}
+
+}
+	option = {
+		name = "celestial_empire_events.2.b"
+		trigger = {
+		NOT = {has_country_flag = sob_culture_advisor_5}
+					   overlord = {
+					has_spy_network_in = {
+					who = ROOT
+					value = 50
+				}
+				}
+					OR = {
+					is_subject_of_type = sob_tributary_state_3
+	 is_subject_of_type = tributary_state 
+is_subject_of_type = xuanweisi_state 
+	is_subject_of_type = tributary_state_2 
+		
+		}
+		NOT = { religion = event_target:sob_tributary_events_province_overlord}
+		any_owned_province = {
+		NOT = { religion = event_target:sob_tributary_events_province_overlord}
+		}
+		}
+		random_list = {
+    90 = {   
+	overlord = {
+			add_spy_network_in = {
+				who = ROOT
+				value = -60
+			}
+			}
+define_advisor = {
+    religion = event_target:sob_tributary_events_province_overlord
+    discount = yes
+}
+if = {
+limit = { NOT = { has_country_flag = sob_culture_advisor_1}}
+set_country_flag = sob_culture_advisor_1
+}
+if = {
+limit = { NOT = { has_country_flag = sob_culture_advisor_2}
+has_country_flag = sob_culture_advisor_1
+}
+set_country_flag = sob_culture_advisor_2
+}
+if = {
+limit = { NOT = { has_country_flag = sob_culture_advisor_3}
+has_country_flag = sob_culture_advisor_2
+}
+set_country_flag = sob_culture_advisor_3
+}
+if = {
+limit = { NOT = { has_country_flag = sob_culture_advisor_4}
+has_country_flag = sob_culture_advisor_3
+}
+set_country_flag = sob_culture_advisor_4
+}
+if = {
+limit = { NOT = { has_country_flag = sob_culture_advisor_5}
+has_country_flag = sob_culture_advisor_4
+}
+set_country_flag = sob_culture_advisor_5
+}
+overlord = {
+country_event = { id = sob_tributary_events.102 }
+}
+		}
+    10 = {
+	overlord = {
+			add_spy_network_in = {
+				who = ROOT
+				value = -100
+			}
+			}
+	set_country_flag = sob_tributary_events_changed_religion
+             change_religion = event_target:sob_tributary_events_province_overlord
+			 overlord = {country_event = { id = sob_tributary_events.3 }}
+	}
+
+
+}
+
+	}
+	
+	
+		option = {
+		name = "celestial_empire_events.2.b"
+		trigger = {
+					OR = {
+	 is_subject_of_type = tributary_state 
+is_subject_of_type = xuanweisi_state 
+is_subject_of_type = sob_tributary_state_3
+	is_subject_of_type = tributary_state_2 
+		
+		}
+		OR = {
+		has_country_flag = sob_culture_advisor_5
+		AND = {
+		NOT = { religion = event_target:sob_tributary_events_province_overlord}
+		NOT = {any_owned_province = {
+		NOT = { religion = event_target:sob_tributary_events_province_overlord}
+		}
+		}
+		}
+		}
+		}
+		random_list = {
+
+    100 = { set_country_flag = sob_tributary_events_changed_religion
+             change_religion = overlord
+			 overlord = {country_event = { id = sob_tributary_events.3 }}
+	}
+    0 = { 
+	 clr_country_flag =   sob_tributary_events_no_effect
+	set_country_flag = sob_tributary_events_no_effect }
+
+}
+
+	}
+		option = {
+		name = "celestial_empire_events.2.b"
+		trigger = {
+		OR = {
+		NOT = { 			OR = {
+	 is_subject_of_type = tributary_state 
+is_subject_of_type = xuanweisi_state 
+is_subject_of_type = sob_tributary_state_3
+	is_subject_of_type = tributary_state_2 
+		
+		}}
+		religion = event_target:sob_tributary_events_province_overlord
+		is_subject = no
+		}
+		}
+		 clr_country_flag =sob_culture_advisor_1
+		  clr_country_flag =sob_culture_advisor_2
+		   clr_country_flag =sob_culture_advisor_3
+		    clr_country_flag =sob_culture_advisor_4
+			 clr_country_flag =sob_culture_advisor_5
+          clr_country_flag = sob_tributary_religion_change_1
+		  clr_country_flag = sob_tributary_events_no_effect
+		  set_country_flag = sob_tributary_religion_changed_com
+
+	}
+}
+
+country_event = {
+	id = sob_tributary_events.104
+	title = celestial_empire_events.4.t
+	desc = celestial_empire_events.4.d
+	picture = IMPERIAL_EXAMINATION_eventPicture
+	
+	hidden = yes
+	mean_time_to_happen = {
+		years = 1
+	}
+	trigger = {
+        government = monarchy
+		has_country_flag = sob_tributary_culture_change_1
+			OR = {
+			culture_group = chinese_group culture_group = east_asian
+		NOT = {			OR = {
+	 is_subject_of_type = tributary_state 
+is_subject_of_type = xuanweisi_state 
+is_subject_of_type = sob_tributary_state_3
+	is_subject_of_type = tributary_state_2 
+		
+		}}
+	AND = {
+	NOT = { culture_group = chinese_group culture_group = east_asian}
+	        NOT = {  	heir_culture = sob_celestial_han }
+		 NOT = {   ruler_culture = sob_celestial_han   }
+	}
+		AND = {
+			NOT = { culture_group = chinese_group culture_group = east_asian}
+ ruler_culture = sob_celestial_han 
+	}
+		is_subject = no
+		}
+
+	}
+	immediate = {
+overlord = {
+
+save_event_target_as = sob_tributary_events_province_overlord
+}
+
+}
+
+	option = {
+		name = "celestial_empire_events.4.a"
+		trigger = {
+			OR = {
+	 is_subject_of_type = tributary_state 
+	 is_subject_of_type = sob_tributary_state_3
+is_subject_of_type = xuanweisi_state 
+	is_subject_of_type = tributary_state_2 
+		
+		}
+		NOT = { culture_group = chinese_group culture_group = east_asian}
+        NOT = {  	heir_culture = sob_celestial_han }
+		 NOT = {   ruler_culture = sob_celestial_han   }
+		}
+		set_heir_religion = event_target:sob_tributary_events_province_overlord
+		set_heir_culture = sob_celestial_han
+		 overlord = {country_event = { id = sob_tributary_events.105 }}
+	}
+
+		option = {
+		name = "celestial_empire_events.2.b"
+  
+		trigger = {
+					OR = {
+	 is_subject_of_type = tributary_state 
+is_subject_of_type = xuanweisi_state 
+is_subject_of_type = sob_tributary_state_3
+	is_subject_of_type = tributary_state_2 
+		
+		}
+			NOT = { culture_group = chinese_group culture_group = east_asian}
+ ruler_culture = sob_celestial_han 
+
+		}
+		
+
+
+ set_country_flag = sob_tributary_events_changed_religion
+             change_primary_culture = sob_celestial_han
+			 overlord = {country_event = { id = sob_tributary_events.106 }}
+	
+
+
+
+
+	}
+		option = {
+		name = "celestial_empire_events.2.b"
+		trigger = {
+		OR = {
+		NOT = {			OR = {
+	 is_subject_of_type = tributary_state 
+is_subject_of_type = xuanweisi_state 
+is_subject_of_type = sob_tributary_state_3
+	is_subject_of_type = tributary_state_2 
+		
+		}}
+		culture_group = chinese_group culture_group = east_asian
+		is_subject = no
+		}
+		}
+          clr_country_flag = sob_tributary_culture_change_1
+		 clr_country_flag =   sob_tributary_events_no_effect
+  set_country_flag = sob_tributary_culture_changed_com
+	}
+}
+country_event = {
+	id = sob_tributary_events.1
+	title = celestial_empire_events.2.t
+	desc = celestial_empire_events.2.d
+	picture = IMPERIAL_EXAMINATION_eventPicture
+	
+	hidden = yes
+	mean_time_to_happen = {
+		years = 1
+	}
+	trigger = {
+        
+	always = no
+		has_country_flag = sob_tributary_religion_change_1
+	
+
+	}
+	
+immediate = {
+overlord = {
+
+save_event_target_as = sob_tributary_events_province_overlord
+}
+
+}
+	option = {
+		name = "celestial_empire_events.2.b"
+		trigger = {
+		
+					   overlord = {
+					has_spy_network_in = {
+					who = ROOT
+					value = 25
+				}
+				}
+					OR = {
+					is_subject_of_type = sob_tributary_state_3
+	 is_subject_of_type = tributary_state 
+is_subject_of_type = xuanweisi_state 
+	is_subject_of_type = tributary_state_2 
+		
+		}
+		NOT = { religion = event_target:sob_tributary_events_province_overlord}
+		any_owned_province = {
+		NOT = { religion = event_target:sob_tributary_events_province_overlord}
+		}
+		}
+		random_list = {
+    60 = {   
+	overlord = {
+			add_spy_network_in = {
+				who = ROOT
+				value = -25
+			}
+			}
+	random_owned_province = {
+	limit = {  NOT = { religion = event_target:sob_tributary_events_province_overlord}
+	
+	}
+		change_religion = event_target:sob_tributary_events_province_overlord
+		set_province_flag = sob_tributary_events_province_overlord_1
+		save_event_target_as = sob_tributary_events_province_religion
+		}
+			random_owned_province = {
+	limit = {  NOT = { religion = overlord}
+	NOT = {has_province_flag = sob_tributary_events_province_overlord_1 }
+	}
+		change_religion = event_target:sob_tributary_events_province_overlord
+	
+		save_event_target_as = sob_tributary_events_province_religion_2
+		}
+		every_owned_province = {
+		clr_province_flag = sob_tributary_events_province_overlord_1
+		}
+		overlord = {country_event = { id = sob_tributary_events.2 		
+		}
+		}
+		}
+    20 = {
+	overlord = {
+			add_spy_network_in = {
+				who = ROOT
+				value = -25
+			}
+			}
+	set_country_flag = sob_tributary_events_changed_religion
+             change_religion = event_target:sob_tributary_events_province_overlord
+			 overlord = {country_event = { id = sob_tributary_events.3 }}
+	}
+    20 = { 
+	 clr_country_flag =   sob_tributary_events_no_effect
+	set_country_flag = sob_tributary_events_no_effect }
+
+}
+
+	}
+	
+		option = {
+		name = "celestial_empire_events.2.b"
+		trigger = {
+		
+					NOT = {   overlord = {
+					has_spy_network_in = {
+					who = ROOT
+					value = 25
+				}
+				}
+				}
+					OR = {
+					is_subject_of_type = sob_tributary_state_3
+	 is_subject_of_type = tributary_state 
+is_subject_of_type = xuanweisi_state 
+	is_subject_of_type = tributary_state_2 
+		
+		}
+		NOT = { religion = event_target:sob_tributary_events_province_overlord}
+		any_owned_province = {
+		NOT = { religion = event_target:sob_tributary_events_province_overlord}
+		}
+		}
+		random_list = {
+    50 = {       	random_owned_province = {
+	limit = {  NOT = { religion = event_target:sob_tributary_events_province_overlord}
+	
+	}
+		change_religion = event_target:sob_tributary_events_province_overlord
+		set_province_flag = sob_tributary_events_province_overlord_1
+		save_event_target_as = sob_tributary_events_province_religion
+		}
+			random_owned_province = {
+	limit = {  NOT = { religion = event_target:sob_tributary_events_province_overlord}
+	NOT = {has_province_flag = sob_tributary_events_province_overlord_1 }
+	}
+		change_religion = event_target:sob_tributary_events_province_overlord
+	
+		save_event_target_as = sob_tributary_events_province_religion_2
+		}
+		every_owned_province = {
+		clr_province_flag = sob_tributary_events_province_overlord_1
+		}
+		
+		overlord = {country_event = { id = sob_tributary_events.2 		
+		}
+		}
+		}
+    3 = { set_country_flag = sob_tributary_events_changed_religion
+             change_religion = event_target:sob_tributary_events_province_overlord
+			 overlord = {country_event = { id = sob_tributary_events.3 }}
+	}
+    45 = { 
+	 clr_country_flag =   sob_tributary_events_no_effect
+	set_country_flag = sob_tributary_events_no_effect }
+
+}
+
+	}
+		option = {
+		name = "celestial_empire_events.2.b"
+		trigger = {
+					OR = {
+	 is_subject_of_type = tributary_state 
+is_subject_of_type = xuanweisi_state 
+is_subject_of_type = sob_tributary_state_3
+	is_subject_of_type = tributary_state_2 
+		
+		}
+		NOT = { religion = event_target:sob_tributary_events_province_overlord}
+		NOT = {any_owned_province = {
+		NOT = { religion = event_target:sob_tributary_events_province_overlord}
+		}
+		}
+		}
+		random_list = {
+
+    35 = { set_country_flag = sob_tributary_events_changed_religion
+             change_religion = overlord
+			 overlord = {country_event = { id = sob_tributary_events.3 }}
+	}
+    65 = { 
+	 clr_country_flag =   sob_tributary_events_no_effect
+	set_country_flag = sob_tributary_events_no_effect }
+
+}
+
+	}
+		option = {
+		name = "celestial_empire_events.2.b"
+		trigger = {
+		OR = {
+		NOT = { 			OR = {
+	 is_subject_of_type = tributary_state 
+is_subject_of_type = xuanweisi_state 
+is_subject_of_type = sob_tributary_state_3
+	is_subject_of_type = tributary_state_2 
+		
+		}}
+		religion = event_target:sob_tributary_events_province_overlord
+		is_subject = no
+		}
+		}
+          clr_country_flag = sob_tributary_religion_change_1
+		  clr_country_flag = sob_tributary_events_no_effect
+
+	}
+}
+
+
+country_event = {
+	id = sob_tributary_events.95588
+	title = sob_tributary_events.95588.t
+	desc = sob_tributary_events.95588.d
+	picture = IMPERIAL_EXAMINATION_eventPicture
+	
+     is_triggered_only = yes
+	
+
+	option = {
+		name = "sob_tributary_events.95588.b"
+       release = XZY
+	   		XZY = {
+	change_religion = confucianism
+change_primary_culture = jianghuai	
+		change_government = sob_chinese_monarchy
+		add_government_reform = celestial_empire
+		}
+		release = XZY
+		ROOT  = {
+			create_subject = {
+		subject_type = sob_dynasty_union
+		subject = XZY}
+
+		}
+		set_emperor_of_china = ROOT
+	}
+}
+country_event = {
+	id = sob_tributary_events.95599
+	title = sob_tributary_events.95599.t
+	desc = sob_tributary_events.95599.d
+	picture = IMPERIAL_EXAMINATION_eventPicture
+	
+     is_triggered_only = yes
+	
+
+	option = {
+		name = "sob_tributary_events.95588.b"
+       release = XZQ
+	   		XZQ = {
+	change_religion = confucianism
+change_primary_culture = sob_celestial_han	
+		change_government = sob_chinese_monarchy
+		add_government_reform = celestial_empire
+		}
+		release = XZQ
+		ROOT  = {
+			create_subject = {
+		subject_type = sob_dynasty_union
+		subject = XZQ}
+
+		}
+		set_emperor_of_china = ROOT
+	}
+}
+country_event = {
+	id = sob_tributary_events.2
+	title = sob_tributary_events.2.t
+	desc = sob_tributary_events.2.d
+	picture = IMPERIAL_EXAMINATION_eventPicture
+	
+     is_triggered_only = yes
+	
+
+	option = {
+		name = "sob_tributary_events.2.b"
+         tooltip = {
+    event_target:sob_tributary_events_province_religion = {
+	change_religion = ROOT
+	}
+}
+         tooltip = {
+    event_target:sob_tributary_events_province_religion_2 = {
+	change_religion = ROOT
+	}
+}
+	}
+}
+country_event = {
+	id = sob_tributary_events.3
+	title = sob_tributary_events.3.t
+	desc = sob_tributary_events.3.d
+	picture = IMPERIAL_EXAMINATION_eventPicture
+	
+     is_triggered_only = yes
+	
+
+	option = {
+		name = "sob_tributary_events.3.b"
+        
+    FROM = {
+	change_religion = ROOT
+	}
+
+	}
+}
+
+country_event = {
+	id = sob_tributary_events.5
+	title = sob_tributary_events.5.t
+	desc = sob_tributary_events.5.d
+	picture = IMPERIAL_EXAMINATION_eventPicture
+	
+     is_triggered_only = yes
+		trigger = {
+        
+
+	ai = no
+	
+
+	}
+
+	option = {
+		name = "sob_tributary_events.5.b"
+         tooltip = {
+    event_target:sob_tributary_events_province_religion = {
+	change_culture = ROOT
+	}
+}
+         tooltip = {
+    event_target:sob_tributary_events_province_religion_2 = {
+	change_culture = ROOT
+	}
+}
+	}
+}
+country_event = {
+	id = sob_tributary_events.6
+	title = sob_tributary_events.6.t
+	desc = sob_tributary_events.6.d
+	picture = IMPERIAL_EXAMINATION_eventPicture
+	
+     is_triggered_only = yes
+	
+	trigger = {
+        
+
+	ai = no
+	
+
+	}
+	option = {
+		name = "sob_tributary_events.3.b"
+         tooltip = {
+    FROM = {
+	change_primary_culture = ROOT
+	}
+}
+	}
+}
+
+country_event = {
+	id = sob_tributary_events.4
+	title = celestial_empire_events.4.t
+	desc = celestial_empire_events.4.d
+	picture = IMPERIAL_EXAMINATION_eventPicture
+	
+	hidden = yes
+	mean_time_to_happen = {
+		years = 1
+	}
+	trigger = {
+government = republic
+		has_country_flag = sob_tributary_culture_change_1
+OR = {
+		NOT = { 			OR = {
+	 is_subject_of_type = tributary_state 
+is_subject_of_type = xuanweisi_state 
+is_subject_of_type = sob_tributary_state_3
+	is_subject_of_type = tributary_state_2 
+		
+		}}
+		is_subject = no
+					   overlord = {
+					has_spy_network_in = {
+					who = ROOT
+					value = 50
+				}
+				}
+					   overlord = {
+primary_culture  = ROOT
+				}
+
+}
+
+	}
+	immediate = {
+overlord = {
+
+save_event_target_as = sob_tributary_events_province_overlord
+}
+
+}
+
+	option = {
+		name = "celestial_empire_events.4.a"
+		trigger = {
+						  overlord = {
+					has_spy_network_in = {
+					who = ROOT
+					value = 50
+				}
+				
+				}
+			OR = {
+	 is_subject_of_type = tributary_state 
+	 is_subject_of_type = sob_tributary_state_3
+is_subject_of_type = xuanweisi_state 
+	is_subject_of_type = tributary_state_2 
+		
+		}
+		NOT = { OR = {culture_group = chinese_group culture_group = east_asian} }
+		any_owned_province = {
+		NOT = { OR = {culture_group = chinese_group culture_group = east_asian}}
+		}
+		}
+			overlord = {
+			add_spy_network_in = {
+				who = ROOT
+				value = -60
+			}
+			}
+		
+		random_list = {
+    80 = { 
+
+	random_owned_province = {
+	limit = {  NOT = { OR = {culture_group = chinese_group culture_group = east_asian}}}
+		change_culture = sob_celestial_han
+		save_event_target_as = sob_tributary_events_province_religion
+		set_province_flag = sob_tributary_events_province_religion_1
+		}
+		   random_owned_province = {
+	limit = {NOT = {OR = {culture_group = chinese_group culture_group = east_asian}}
+	NOT = {has_province_flag = sob_tributary_events_province_religion_1}
+	}
+		change_culture = sob_celestial_han
+		save_event_target_as = sob_tributary_events_province_religion_2
+		
+		}
+				every_owned_province = {
+		clr_province_flag = sob_tributary_events_province_overlord_1
+		}
+		overlord = {country_event = { id = sob_tributary_events.5 }
+		}
+
+		}
+    10 = { set_country_flag = sob_tributary_events_changed_religion
+             change_primary_culture = sob_celestial_han
+			     random_owned_province = {
+	limit = { any_owned_province = { NOT = { culture_group = chinese_group culture_group = east_asian}}}
+		change_culture = overlord
+		save_event_target_as = sob_tributary_events_province_religion
+		}
+			 overlord = {country_event = { id = sob_tributary_events.6 }}
+	}
+    10 = { 
+	 clr_country_flag =   sob_tributary_events_no_effect
+	set_country_flag = sob_tributary_events_no_effect }
+
+}
+
+	}
+		
+		option = {
+		name = "celestial_empire_events.2.b"
+		ai_chance = { factor = 10000 }
+		trigger = {
+					OR = {
+	 is_subject_of_type = tributary_state 
+is_subject_of_type = xuanweisi_state 
+is_subject_of_type = sob_tributary_state_3
+	is_subject_of_type = tributary_state_2 
+		
+		}
+		NOT = { culture_group = chinese_group culture_group = east_asian}
+
+		NOT = {
+		any_owned_province = {
+		
+		NOT = { OR = {culture_group = chinese_group culture_group = east_asian}}
+		}
+		
+		}
+
+		}
+		
+		random_list = {
+
+    100 = { set_country_flag = sob_tributary_events_changed_religion
+             change_primary_culture = sob_celestial_han
+			 overlord = {country_event = { id = sob_tributary_events.6 }}
+	}
+    0 = { 
+	 clr_country_flag =   sob_tributary_events_no_effect
+	set_country_flag = sob_tributary_events_no_effect }
+
+}
+
+	}
+		option = {
+		name = "celestial_empire_events.2.b"
+		trigger = {
+		OR = {
+		NOT = {			OR = {
+	 is_subject_of_type = tributary_state 
+is_subject_of_type = xuanweisi_state 
+is_subject_of_type = sob_tributary_state_3
+	is_subject_of_type = tributary_state_2 
+		
+		}}
+		primary_culture = sob_celestial_han
+		is_subject = no
+		}
+		}
+          clr_country_flag = sob_tributary_culture_change_1
+		 clr_country_flag =   sob_tributary_events_no_effect
+
+	}
+}
+
+country_event = {
+	id = sob_tributary_events.7
+	title = sob_tributary_events.6.t
+	desc = sob_tributary_events.6.d
+	picture = IMPERIAL_EXAMINATION_eventPicture
+	
+    	hidden = yes
+	mean_time_to_happen = {
+		days = 1
+	}
+	trigger = {
+	is_emperor_of_china = yes
+	is_at_war = no
+        NOT = {has_global_flag = sob_abolish_tributary_system}
+		NOT = {has_global_flag = celetial_empire_tri_take}
+ 
+		NOT = {has_global_flag = celetial_empire_tri_not_take}
+NOT = { has_country_modifier = sob_age1_buff }
+		NOT = { has_country_modifier = sob_age2_buff }
+		NOT = { has_country_modifier = sob_age3_buff }
+		NOT = { has_country_modifier = sob_age4_buff }
+		NOT = { has_country_modifier = sob_age5_buff }
+		
+	any_subject_country = {
+	is_subject_of_type = tributary_state
+	
+	}
+
+	}
+	
+
+	option = {
+		name = "sob_tributary_events.3.b"
+           every_subject_country ={
+		   		   limit = {
+		   
+		   is_subject_of_type = tributary_state
+		   }
+		   ROOT = {
+		   						create_subject = {
+		subject_type = sob_tributary_state_3
+		subject = PREV}
+		   
+		   }
+		   
+		   }
+	}
+}
+
+country_event = {
+	id = sob_tributary_events.8
+	title = sob_tributary_events.6.t
+	desc = sob_tributary_events.6.d
+	picture = IMPERIAL_EXAMINATION_eventPicture
+	
+    hidden = yes
+	mean_time_to_happen = {
+		days = 1
+	}
+	trigger = {
+	is_at_war = no
+        OR = {
+	has_global_flag =	celetial_empire_tri_not_take
+			has_global_flag =	celetial_empire_tri_take
+			has_global_flag = sob_abolish_tributary_system
+			
+			has_country_modifier = sob_age1_buff 
+	has_country_modifier = sob_age2_buff 
+		has_country_modifier = sob_age3_buff 
+			has_country_modifier = sob_age4_buff 
+				has_country_modifier = sob_age5_buff 
+		}
+
+		NOT = {has_global_flag = sob_celetial_empire_new_tri}
+	any_subject_country = {
+	is_subject_of_type = sob_tributary_state_3
+	
+	}
+
+	}
+	
+
+	option = {
+		name = "sob_tributary_events.3.b"
+           every_subject_country ={
+		   limit = {
+		   
+		   is_subject_of_type = sob_tributary_state_3
+		   }
+		   ROOT = {
+		   						create_subject = {
+		subject_type = tributary_state
+		subject = PREV}
+		   
+		   }
+		   
+		   }
+	}
+}
+
+
+country_event = {
+	id =sob_tributary_events.9
+	title = "sob_tributary_events.9.t"
+	desc = "sob_tributary_events.9.d"
+	picture = GIFTS_TO_EMPEROR_eventPicture
+	is_triggered_only = yes
+
+	
+	option = {
+		name = "sob_tributary_system_rice_import_modifier"
+       FROM = {
+	  clr_country_flag = sob_tributary_system_rice_import
+	  clr_country_flag =  sob_tributary_system_trade_permission
+	  clr_country_flag =  sob_tributary_system_offical_import
+	  clr_country_flag =  sob_tributary_system_development
+	  clr_country_flag =  sob_tributary_system_prestige
+	  clr_country_flag =  sob_tributary_system_mil_amount
+	  clr_country_flag =  sob_tributary_system_mil_cost
+	  clr_country_flag = sob_tributary_system_mil_maintance
+	  clr_country_flag =  sob_tributary_system_mil_ca
+	  clr_country_flag =  sob_tributary_system_mil_ft
+	  clr_country_flag =  sob_tributary_system_mil_naval_amount
+	  clr_country_flag =  sob_tributary_system_mil_naval_maintance
+	  clr_country_flag =  sob_tributary_system_mil_naval_buildcost
+	  clr_country_flag =  sob_tributary_system_mil_naval_moral
+	  clr_country_flag =  sob_tributary_system_mil_naval_shipdru
+	  clr_country_flag =  sob_tributary_system_mil_naval_sailorrec
+	  clr_country_flag =   sob_tributary_system_mil_naval_ship_buildspeed
+	  set_country_flag = sob_tributary_system_rice_import
+	   
+	   }
+	   tooltip = {
+	   add_country_modifier = { 
+    name = sob_tributary_system_rice_import_modifier
+    duration = -1  
+
+}
+	   
+	   }
+		
+	}
+	option = {
+		name = "sob_tributary_system_trade_permission_modifier"
+		       FROM = {
+	  clr_country_flag = sob_tributary_system_rice_import
+	  clr_country_flag =  sob_tributary_system_trade_permission
+	  clr_country_flag =  sob_tributary_system_offical_import
+	  clr_country_flag =  sob_tributary_system_development
+	  clr_country_flag =  sob_tributary_system_prestige
+	  clr_country_flag =  sob_tributary_system_mil_amount
+	  clr_country_flag =  sob_tributary_system_mil_cost
+	  clr_country_flag = sob_tributary_system_mil_maintance
+	  clr_country_flag =  sob_tributary_system_mil_ca
+	  clr_country_flag =  sob_tributary_system_mil_ft
+	  clr_country_flag =  sob_tributary_system_mil_naval_amount
+	  clr_country_flag =  sob_tributary_system_mil_naval_maintance
+	  clr_country_flag =  sob_tributary_system_mil_naval_buildcost
+	  clr_country_flag =  sob_tributary_system_mil_naval_moral
+	  clr_country_flag =  sob_tributary_system_mil_naval_shipdru
+	  clr_country_flag =  sob_tributary_system_mil_naval_sailorrec
+	  clr_country_flag =   sob_tributary_system_mil_naval_ship_buildspeed
+	  set_country_flag =  sob_tributary_system_trade_permission}
+	  	   tooltip = {
+	   add_country_modifier = { 
+    name = sob_tributary_system_trade_permission_modifier
+    duration = -1  
+
+}
+	   
+	   }
+	}
+		option = {
+		name = "sob_tributary_system_offical_import_modifier"
+		       FROM = {
+	  clr_country_flag = sob_tributary_system_rice_import
+	  clr_country_flag =  sob_tributary_system_trade_permission
+	  clr_country_flag =  sob_tributary_system_offical_import
+	  clr_country_flag =  sob_tributary_system_development
+	  clr_country_flag =  sob_tributary_system_prestige
+	  clr_country_flag =  sob_tributary_system_mil_amount
+	  clr_country_flag =  sob_tributary_system_mil_cost
+	  clr_country_flag = sob_tributary_system_mil_maintance
+	  clr_country_flag =  sob_tributary_system_mil_ca
+	  clr_country_flag =  sob_tributary_system_mil_ft
+	  clr_country_flag =  sob_tributary_system_mil_naval_amount
+	  clr_country_flag =  sob_tributary_system_mil_naval_maintance
+	  clr_country_flag =  sob_tributary_system_mil_naval_buildcost
+	  clr_country_flag =  sob_tributary_system_mil_naval_moral
+	  clr_country_flag =  sob_tributary_system_mil_naval_shipdru
+	  clr_country_flag =  sob_tributary_system_mil_naval_sailorrec
+	  clr_country_flag =   sob_tributary_system_mil_naval_ship_buildspeed
+	  set_country_flag =  sob_tributary_system_offical_import}
+	  
+	  
+	  	  	   tooltip = {
+	   add_country_modifier = { 
+    name = sob_tributary_system_offical_import_modifier
+    duration = -1  
+
+}
+	   
+	   }
+	}
+		option = {
+		name = "sob_tributary_system_development_modifier"
+		       FROM = {
+			  clr_country_flag = sob_tributary_system_rice_import
+	  clr_country_flag =  sob_tributary_system_trade_permission
+	  clr_country_flag =  sob_tributary_system_offical_import
+	  clr_country_flag =  sob_tributary_system_development
+	  clr_country_flag =  sob_tributary_system_prestige
+	  clr_country_flag =  sob_tributary_system_mil_amount
+	  clr_country_flag =  sob_tributary_system_mil_cost
+	  clr_country_flag = sob_tributary_system_mil_maintance
+	  clr_country_flag =  sob_tributary_system_mil_ca
+	  clr_country_flag =  sob_tributary_system_mil_ft
+	  clr_country_flag =  sob_tributary_system_mil_naval_amount
+	  clr_country_flag =  sob_tributary_system_mil_naval_maintance
+	  clr_country_flag =  sob_tributary_system_mil_naval_buildcost
+	  clr_country_flag =  sob_tributary_system_mil_naval_moral
+	  clr_country_flag =  sob_tributary_system_mil_naval_shipdru
+	  clr_country_flag =  sob_tributary_system_mil_naval_sailorrec
+	  clr_country_flag =   sob_tributary_system_mil_naval_ship_buildspeed
+	  set_country_flag =  sob_tributary_system_development}
+	  
+	  	  	  	   tooltip = {
+	   add_country_modifier = { 
+    name = sob_tributary_system_development_modifier
+    duration = -1  
+
+}
+	   
+	   }
+	}
+		option = {
+		name = "sob_tributary_system_prestige_modifier"
+		       FROM = {
+			  clr_country_flag = sob_tributary_system_rice_import
+	  clr_country_flag =  sob_tributary_system_trade_permission
+	  clr_country_flag =  sob_tributary_system_offical_import
+	  clr_country_flag =  sob_tributary_system_development
+	  clr_country_flag =  sob_tributary_system_prestige
+	  clr_country_flag =  sob_tributary_system_mil_amount
+	  clr_country_flag =  sob_tributary_system_mil_cost
+	  clr_country_flag = sob_tributary_system_mil_maintance
+	  clr_country_flag =  sob_tributary_system_mil_ca
+	  clr_country_flag =  sob_tributary_system_mil_ft
+	  clr_country_flag =  sob_tributary_system_mil_naval_amount
+	  clr_country_flag =  sob_tributary_system_mil_naval_maintance
+	  clr_country_flag =  sob_tributary_system_mil_naval_buildcost
+	  clr_country_flag =  sob_tributary_system_mil_naval_moral
+	  clr_country_flag =  sob_tributary_system_mil_naval_shipdru
+	  clr_country_flag =  sob_tributary_system_mil_naval_sailorrec
+	  clr_country_flag =   sob_tributary_system_mil_naval_ship_buildspeed
+	  set_country_flag =  sob_tributary_system_prestige}
+	  
+	  	  	  	  	   tooltip = {
+	   add_country_modifier = { 
+    name = sob_tributary_system_prestige_modifier
+    duration = -1  
+
+}
+	   
+	   }
+	}
+			option = {
+		name = "sob_tributary_system_mil_amount_modifier"
+		       FROM = {
+				  clr_country_flag = sob_tributary_system_rice_import
+	  clr_country_flag =  sob_tributary_system_trade_permission
+	  clr_country_flag =  sob_tributary_system_offical_import
+	  clr_country_flag =  sob_tributary_system_development
+	  clr_country_flag =  sob_tributary_system_prestige
+	  clr_country_flag =  sob_tributary_system_mil_amount
+	  clr_country_flag =  sob_tributary_system_mil_cost
+	  clr_country_flag = sob_tributary_system_mil_maintance
+	  clr_country_flag =  sob_tributary_system_mil_ca
+	  clr_country_flag =  sob_tributary_system_mil_ft
+	  clr_country_flag =  sob_tributary_system_mil_naval_amount
+	  clr_country_flag =  sob_tributary_system_mil_naval_maintance
+	  clr_country_flag =  sob_tributary_system_mil_naval_buildcost
+	  clr_country_flag =  sob_tributary_system_mil_naval_moral
+	  clr_country_flag =  sob_tributary_system_mil_naval_shipdru
+	  clr_country_flag =  sob_tributary_system_mil_naval_sailorrec
+	  clr_country_flag =   sob_tributary_system_mil_naval_ship_buildspeed
+	  set_country_flag =  sob_tributary_system_mil_amount}
+	  	  	  	  	  	   tooltip = {
+	   add_country_modifier = { 
+    name = sob_tributary_system_mil_amount_modifier
+    duration = -1  
+
+}
+	   
+	   }
+	}
+
+	
+	
+					option = {
+		name = "sob_tributary_system_mil_maintance_modifier"
+		       FROM = {
+						  clr_country_flag = sob_tributary_system_rice_import
+	  clr_country_flag =  sob_tributary_system_trade_permission
+	  clr_country_flag =  sob_tributary_system_offical_import
+	  clr_country_flag =  sob_tributary_system_development
+	  clr_country_flag =  sob_tributary_system_prestige
+	  clr_country_flag =  sob_tributary_system_mil_amount
+	  clr_country_flag =  sob_tributary_system_mil_cost
+	  clr_country_flag = sob_tributary_system_mil_maintance
+	  clr_country_flag =  sob_tributary_system_mil_ca
+	  clr_country_flag =  sob_tributary_system_mil_ft
+	  clr_country_flag =  sob_tributary_system_mil_naval_amount
+	  clr_country_flag =  sob_tributary_system_mil_naval_maintance
+	  clr_country_flag =  sob_tributary_system_mil_naval_buildcost
+	  clr_country_flag =  sob_tributary_system_mil_naval_moral
+	  clr_country_flag =  sob_tributary_system_mil_naval_shipdru
+	  clr_country_flag =  sob_tributary_system_mil_naval_sailorrec
+	  clr_country_flag =   sob_tributary_system_mil_naval_ship_buildspeed
+	  set_country_flag =  sob_tributary_system_mil_maintance}
+	  	  	  	  	  	  	   tooltip = {
+	   add_country_modifier = { 
+    name = sob_tributary_system_mil_maintance_modifier
+    duration = -1  
+
+}
+	   
+	   }
+	  
+	}
+	
+	
+					option = {
+		name = "sob_tributary_system_mil_ca_modifier"
+		       FROM = {
+						  clr_country_flag = sob_tributary_system_rice_import
+	  clr_country_flag =  sob_tributary_system_trade_permission
+	  clr_country_flag =  sob_tributary_system_offical_import
+	  clr_country_flag =  sob_tributary_system_development
+	  clr_country_flag =  sob_tributary_system_prestige
+	  clr_country_flag =  sob_tributary_system_mil_amount
+	  clr_country_flag =  sob_tributary_system_mil_cost
+	  clr_country_flag = sob_tributary_system_mil_maintance
+	  clr_country_flag =  sob_tributary_system_mil_ca
+	  clr_country_flag =  sob_tributary_system_mil_ft
+	  clr_country_flag =  sob_tributary_system_mil_naval_amount
+	  clr_country_flag =  sob_tributary_system_mil_naval_maintance
+	  clr_country_flag =  sob_tributary_system_mil_naval_buildcost
+	  clr_country_flag =  sob_tributary_system_mil_naval_moral
+	  clr_country_flag =  sob_tributary_system_mil_naval_shipdru
+	  clr_country_flag =  sob_tributary_system_mil_naval_sailorrec
+	  clr_country_flag =   sob_tributary_system_mil_naval_ship_buildspeed
+	  set_country_flag =  sob_tributary_system_mil_ca}
+	  	  	  	  	  	  	  	   tooltip = {
+	   add_country_modifier = { 
+    name = sob_tributary_system_mil_ca_modifier
+    duration = -1  
+
+}
+	   
+	   }
+	  
+	}
+	
+	
+					option = {
+		name = "sob_tributary_system_mil_ft_modifier"
+		       FROM = {
+						  clr_country_flag = sob_tributary_system_rice_import
+	  clr_country_flag =  sob_tributary_system_trade_permission
+	  clr_country_flag =  sob_tributary_system_offical_import
+	  clr_country_flag =  sob_tributary_system_development
+	  clr_country_flag =  sob_tributary_system_prestige
+	  clr_country_flag =  sob_tributary_system_mil_amount
+	  clr_country_flag =  sob_tributary_system_mil_cost
+	  clr_country_flag = sob_tributary_system_mil_maintance
+	  clr_country_flag =  sob_tributary_system_mil_ca
+	  clr_country_flag =  sob_tributary_system_mil_ft
+	  clr_country_flag =  sob_tributary_system_mil_naval_amount
+	  clr_country_flag =  sob_tributary_system_mil_naval_maintance
+	  clr_country_flag =  sob_tributary_system_mil_naval_buildcost
+	  clr_country_flag =  sob_tributary_system_mil_naval_moral
+	  clr_country_flag =  sob_tributary_system_mil_naval_shipdru
+	  clr_country_flag =  sob_tributary_system_mil_naval_sailorrec
+	  clr_country_flag =   sob_tributary_system_mil_naval_ship_buildspeed
+	  set_country_flag =  sob_tributary_system_mil_ft}
+	  	  	  	  	  	  	  	  	   tooltip = {
+	   add_country_modifier = { 
+    name = sob_tributary_system_mil_ft_modifier
+    duration = -1  
+
+}
+	   
+	   }
+	  
+	}
+	
+	
+					option = {
+		name = "sob_tributary_system_mil_naval_amount_modifier"
+		       FROM = {
+						  clr_country_flag = sob_tributary_system_rice_import
+	  clr_country_flag =  sob_tributary_system_trade_permission
+	  clr_country_flag =  sob_tributary_system_offical_import
+	  clr_country_flag =  sob_tributary_system_development
+	  clr_country_flag =  sob_tributary_system_prestige
+	  clr_country_flag =  sob_tributary_system_mil_amount
+	  clr_country_flag =  sob_tributary_system_mil_cost
+	  clr_country_flag = sob_tributary_system_mil_maintance
+	  clr_country_flag =  sob_tributary_system_mil_ca
+	  clr_country_flag =  sob_tributary_system_mil_ft
+	  clr_country_flag =  sob_tributary_system_mil_naval_amount
+	  clr_country_flag =  sob_tributary_system_mil_naval_maintance
+	  clr_country_flag =  sob_tributary_system_mil_naval_buildcost
+	  clr_country_flag =  sob_tributary_system_mil_naval_moral
+	  clr_country_flag =  sob_tributary_system_mil_naval_shipdru
+	  clr_country_flag =  sob_tributary_system_mil_naval_sailorrec
+	  clr_country_flag =   sob_tributary_system_mil_naval_ship_buildspeed
+	  set_country_flag =  sob_tributary_system_mil_naval_amount}
+	  	  	  	  	  	  	  	  	  	   tooltip = {
+	   add_country_modifier = { 
+    name = sob_tributary_system_mil_naval_amount_modifier
+    duration = -1  
+
+}
+	   
+	   }
+	}
+	
+	
+					option = {
+		name = "sob_tributary_system_mil_naval_maintance_modifier"
+		       FROM = {
+						  clr_country_flag = sob_tributary_system_rice_import
+	  clr_country_flag =  sob_tributary_system_trade_permission
+	  clr_country_flag =  sob_tributary_system_offical_import
+	  clr_country_flag =  sob_tributary_system_development
+	  clr_country_flag =  sob_tributary_system_prestige
+	  clr_country_flag =  sob_tributary_system_mil_amount
+	  clr_country_flag =  sob_tributary_system_mil_cost
+	  clr_country_flag = sob_tributary_system_mil_maintance
+	  clr_country_flag =  sob_tributary_system_mil_ca
+	  clr_country_flag =  sob_tributary_system_mil_ft
+	  clr_country_flag =  sob_tributary_system_mil_naval_amount
+	  clr_country_flag =  sob_tributary_system_mil_naval_maintance
+	  clr_country_flag =  sob_tributary_system_mil_naval_buildcost
+	  clr_country_flag =  sob_tributary_system_mil_naval_moral
+	  clr_country_flag =  sob_tributary_system_mil_naval_shipdru
+	  clr_country_flag =  sob_tributary_system_mil_naval_sailorrec
+	  clr_country_flag =   sob_tributary_system_mil_naval_ship_buildspeed
+	  set_country_flag =  sob_tributary_system_mil_naval_maintance}
+	  	  	  	  	  	  	  	  	  	  	   tooltip = {
+	   add_country_modifier = { 
+    name = sob_tributary_system_mil_naval_maintance_modifier
+    duration = -1  
+
+}
+	   
+	   }
+	  
+	}
+	
+
+	
+					option = {
+		name = "sob_tributary_system_mil_naval_moral_modifier"
+		       FROM = {
+						  clr_country_flag = sob_tributary_system_rice_import
+	  clr_country_flag =  sob_tributary_system_trade_permission
+	  clr_country_flag =  sob_tributary_system_offical_import
+	  clr_country_flag =  sob_tributary_system_development
+	  clr_country_flag =  sob_tributary_system_prestige
+	  clr_country_flag =  sob_tributary_system_mil_amount
+	  clr_country_flag =  sob_tributary_system_mil_cost
+	  clr_country_flag = sob_tributary_system_mil_maintance
+	  clr_country_flag =  sob_tributary_system_mil_ca
+	  clr_country_flag =  sob_tributary_system_mil_ft
+	  clr_country_flag =  sob_tributary_system_mil_naval_amount
+	  clr_country_flag =  sob_tributary_system_mil_naval_maintance
+	  clr_country_flag =  sob_tributary_system_mil_naval_buildcost
+	  clr_country_flag =  sob_tributary_system_mil_naval_moral
+	  clr_country_flag =  sob_tributary_system_mil_naval_shipdru
+	  clr_country_flag =  sob_tributary_system_mil_naval_sailorrec
+	  clr_country_flag =   sob_tributary_system_mil_naval_ship_buildspeed
+	  set_country_flag =  sob_tributary_system_mil_naval_moral}
+	  	  	  	  	  	  	  	  	  	  	  	   tooltip = {
+	   add_country_modifier = { 
+    name = sob_tributary_system_mil_naval_moral_modifier
+    duration = -1  
+
+}
+	   
+	   }
+	  
+	}
+	
+						option = {
+		name = "sob_tributary_system_mil_naval_shipdru_modifier"
+		       FROM = {
+						  clr_country_flag = sob_tributary_system_rice_import
+	  clr_country_flag =  sob_tributary_system_trade_permission
+	  clr_country_flag =  sob_tributary_system_offical_import
+	  clr_country_flag =  sob_tributary_system_development
+	  clr_country_flag =  sob_tributary_system_prestige
+	  clr_country_flag =  sob_tributary_system_mil_amount
+	  clr_country_flag =  sob_tributary_system_mil_cost
+	  clr_country_flag = sob_tributary_system_mil_maintance
+	  clr_country_flag =  sob_tributary_system_mil_ca
+	  clr_country_flag =  sob_tributary_system_mil_ft
+	  clr_country_flag =  sob_tributary_system_mil_naval_amount
+	  clr_country_flag =  sob_tributary_system_mil_naval_maintance
+	  clr_country_flag =  sob_tributary_system_mil_naval_buildcost
+	  clr_country_flag =  sob_tributary_system_mil_naval_moral
+	  clr_country_flag =  sob_tributary_system_mil_naval_shipdru
+	  clr_country_flag =  sob_tributary_system_mil_naval_sailorrec
+	  clr_country_flag =   sob_tributary_system_mil_naval_ship_buildspeed
+	  set_country_flag =  sob_tributary_system_mil_naval_shipdru}
+	  	  	  	  	  	  	  	  	  	  	  	  	   tooltip = {
+	   add_country_modifier = { 
+    name = sob_tributary_system_mil_naval_shipdru_modifier
+    duration = -1  
+
+}
+	   
+	   }
+	}
+	
+						option = {
+		name = "sob_tributary_system_mil_naval_sailorrec_modifier"
+		       FROM = {
+						  clr_country_flag = sob_tributary_system_rice_import
+	  clr_country_flag =  sob_tributary_system_trade_permission
+	  clr_country_flag =  sob_tributary_system_offical_import
+	  clr_country_flag =  sob_tributary_system_development
+	  clr_country_flag =  sob_tributary_system_prestige
+	  clr_country_flag =  sob_tributary_system_mil_amount
+	  clr_country_flag =  sob_tributary_system_mil_cost
+	  clr_country_flag = sob_tributary_system_mil_maintance
+	  clr_country_flag =  sob_tributary_system_mil_ca
+	  clr_country_flag =  sob_tributary_system_mil_ft
+	  clr_country_flag =  sob_tributary_system_mil_naval_amount
+	  clr_country_flag =  sob_tributary_system_mil_naval_maintance
+	  clr_country_flag =  sob_tributary_system_mil_naval_buildcost
+	  clr_country_flag =  sob_tributary_system_mil_naval_moral
+	  clr_country_flag =  sob_tributary_system_mil_naval_shipdru
+	  clr_country_flag =  sob_tributary_system_mil_naval_sailorrec
+	  clr_country_flag =   sob_tributary_system_mil_naval_ship_buildspeed
+	  set_country_flag =  sob_tributary_system_mil_naval_sailorrec}
+	  	  	  	  	  	  	  	  	  	  	  	  	  	   tooltip = {
+	   add_country_modifier = { 
+    name = sob_tributary_system_mil_naval_sailorrec_modifier
+    duration = -1  
+
+}
+	   
+	   }
+	  
+	}
+	
+						option = {
+		name = "sob_tributary_system_mil_naval_ship_buildspeed_modifier"
+		       FROM = {
+						  clr_country_flag = sob_tributary_system_rice_import
+	  clr_country_flag =  sob_tributary_system_trade_permission
+	  clr_country_flag =  sob_tributary_system_offical_import
+	  clr_country_flag =  sob_tributary_system_development
+	  clr_country_flag =  sob_tributary_system_prestige
+	  clr_country_flag =  sob_tributary_system_mil_amount
+	  clr_country_flag =  sob_tributary_system_mil_cost
+	  clr_country_flag = sob_tributary_system_mil_maintance
+	  clr_country_flag =  sob_tributary_system_mil_ca
+	  clr_country_flag =  sob_tributary_system_mil_ft
+	  clr_country_flag =  sob_tributary_system_mil_naval_amount
+	  clr_country_flag =  sob_tributary_system_mil_naval_maintance
+	  clr_country_flag =  sob_tributary_system_mil_naval_buildcost
+	  clr_country_flag =  sob_tributary_system_mil_naval_moral
+	  clr_country_flag =  sob_tributary_system_mil_naval_shipdru
+	  clr_country_flag =  sob_tributary_system_mil_naval_sailorrec
+	  clr_country_flag =   sob_tributary_system_mil_naval_ship_buildspeed
+	  set_country_flag =  sob_tributary_system_mil_naval_ship_buildspeed}
+	  	  	  	  	  	  	  	  	  	  	  	  	  	   tooltip = {
+	   add_country_modifier = { 
+    name = sob_tributary_system_mil_naval_ship_buildspeed_modifier
+    duration = -1  
+
+}
+	   
+	   }
+	}
+	
+}
+
+country_event = {
+	id = sob_tributary_events.10
+	title = sob_tributary_events.6.t
+	desc = sob_tributary_events.6.d
+	picture = IMPERIAL_EXAMINATION_eventPicture
+	hidden = yes
+     is_triggered_only = yes
+immediate = {
+           save_event_target_as = sob_tributary_events_change_tri
+		   FROM = {
+		    country_event = { id = sob_tributary_events.9} 
+		   }
+
+}
+	option = {
+		name = "sob_tributary_events.3.b"
+
+	}
+}
+
+country_event = {
+	id = sob_tributary_events.11
+	title = sob_tributary_events.6.t
+	desc = sob_tributary_events.6.d
+	picture = IMPERIAL_EXAMINATION_eventPicture
+	hidden = yes
+     is_triggered_only = yes
+immediate = {
+           save_event_target_as = sob_tributary_events_change_tri
+		   FROM = {
+		    country_event = { id = sob_tributary_events.12} 
+		   }
+
+}
+	option = {
+		name = "sob_tributary_events.3.b"
+
+	}
+}
+
+country_event = {
+	id =sob_tributary_events.12
+	title = "sob_tributary_events.12.t"
+	desc = "sob_tributary_events.12.d"
+	picture = GIFTS_TO_EMPEROR_eventPicture
+	is_triggered_only = yes
+
+	
+	option = {
+		name = "sob_tributary_system_rice_import_modifier"
+ 
+	   
+	          FROM = {
+			  every_neighbor_country ={
+			  
+			  
+			  limit = { 
+			  is_subject_of_type = sob_tributary_state_3
+			  ROOT = { overlord_of = PREV}
+			  OR = { NOT = { has_country_flag = sob_tributary_state_3_recent_changed} had_country_flag = {
+	flag = sob_tributary_state_3_recent_changed
+	days = 730
+}}}
+	  clr_country_flag = sob_tributary_system_rice_import
+	  clr_country_flag =  sob_tributary_system_trade_permission
+	  clr_country_flag =  sob_tributary_system_offical_import
+	  clr_country_flag =  sob_tributary_system_development
+	  clr_country_flag =  sob_tributary_system_prestige
+	  clr_country_flag =  sob_tributary_system_mil_amount
+	  clr_country_flag =  sob_tributary_system_mil_cost
+	  clr_country_flag = sob_tributary_system_mil_maintance
+	  clr_country_flag =  sob_tributary_system_mil_ca
+	  clr_country_flag =  sob_tributary_system_mil_ft
+	  clr_country_flag =  sob_tributary_system_mil_naval_amount
+	  clr_country_flag =  sob_tributary_system_mil_naval_maintance
+	  clr_country_flag =  sob_tributary_system_mil_naval_buildcost
+	  clr_country_flag =  sob_tributary_system_mil_naval_moral
+	  clr_country_flag =  sob_tributary_system_mil_naval_shipdru
+	  clr_country_flag =  sob_tributary_system_mil_naval_sailorrec
+	  clr_country_flag =   sob_tributary_system_mil_naval_ship_buildspeed
+	  set_country_flag = sob_tributary_system_rice_import
+	   
+	   }
+	   }
+	   tooltip = {
+	   add_country_modifier = { 
+    name = sob_tributary_system_rice_import_modifier
+    duration = -1  
+
+}
+	   
+	   }
+		
+	}
+	option = {
+		name = "sob_tributary_system_trade_permission_modifier"
+					  every_neighbor_country ={
+			  
+			  
+			  limit = { 
+			  is_subject_of_type = sob_tributary_state_3
+			  ROOT = { overlord_of = PREV}
+			  OR = { NOT = { has_country_flag = sob_tributary_state_3_recent_changed} had_country_flag = {
+	flag = sob_tributary_state_3_recent_changed
+	days = 730
+}}}
+		       FROM = {
+	  clr_country_flag = sob_tributary_system_rice_import
+	  clr_country_flag =  sob_tributary_system_trade_permission
+	  clr_country_flag =  sob_tributary_system_offical_import
+	  clr_country_flag =  sob_tributary_system_development
+	  clr_country_flag =  sob_tributary_system_prestige
+	  clr_country_flag =  sob_tributary_system_mil_amount
+	  clr_country_flag =  sob_tributary_system_mil_cost
+	  clr_country_flag = sob_tributary_system_mil_maintance
+	  clr_country_flag =  sob_tributary_system_mil_ca
+	  clr_country_flag =  sob_tributary_system_mil_ft
+	  clr_country_flag =  sob_tributary_system_mil_naval_amount
+	  clr_country_flag =  sob_tributary_system_mil_naval_maintance
+	  clr_country_flag =  sob_tributary_system_mil_naval_buildcost
+	  clr_country_flag =  sob_tributary_system_mil_naval_moral
+	  clr_country_flag =  sob_tributary_system_mil_naval_shipdru
+	  clr_country_flag =  sob_tributary_system_mil_naval_sailorrec
+	  clr_country_flag =   sob_tributary_system_mil_naval_ship_buildspeed
+	  set_country_flag =  sob_tributary_system_trade_permission}
+	  	   tooltip = {
+	   add_country_modifier = { 
+    name = sob_tributary_system_trade_permission_modifier
+    duration = -1  
+
+}
+	   
+	   }
+	}
+	}
+		option = {
+		name = "sob_tributary_system_offical_import_modifier"
+		       FROM = {
+			   			  every_neighbor_country ={
+			  
+			  
+			  limit = { 
+			  is_subject_of_type = sob_tributary_state_3
+			  ROOT = { overlord_of = PREV}
+			  OR = { NOT = { has_country_flag = sob_tributary_state_3_recent_changed} had_country_flag = {
+	flag = sob_tributary_state_3_recent_changed
+	days = 730
+}}}
+	  clr_country_flag = sob_tributary_system_rice_import
+	  clr_country_flag =  sob_tributary_system_trade_permission
+	  clr_country_flag =  sob_tributary_system_offical_import
+	  clr_country_flag =  sob_tributary_system_development
+	  clr_country_flag =  sob_tributary_system_prestige
+	  clr_country_flag =  sob_tributary_system_mil_amount
+	  clr_country_flag =  sob_tributary_system_mil_cost
+	  clr_country_flag = sob_tributary_system_mil_maintance
+	  clr_country_flag =  sob_tributary_system_mil_ca
+	  clr_country_flag =  sob_tributary_system_mil_ft
+	  clr_country_flag =  sob_tributary_system_mil_naval_amount
+	  clr_country_flag =  sob_tributary_system_mil_naval_maintance
+	  clr_country_flag =  sob_tributary_system_mil_naval_buildcost
+	  clr_country_flag =  sob_tributary_system_mil_naval_moral
+	  clr_country_flag =  sob_tributary_system_mil_naval_shipdru
+	  clr_country_flag =  sob_tributary_system_mil_naval_sailorrec
+	  clr_country_flag =   sob_tributary_system_mil_naval_ship_buildspeed
+	  set_country_flag =  sob_tributary_system_offical_import}
+	  
+	  
+	  	  	   tooltip = {
+	   add_country_modifier = { 
+    name = sob_tributary_system_offical_import_modifier
+    duration = -1  
+
+}
+	   
+	   }
+	}
+	}
+		option = {
+		name = "sob_tributary_system_development_modifier"
+		       FROM = {
+			   			  every_neighbor_country ={
+			  
+			  
+			  limit = { 
+			  is_subject_of_type = sob_tributary_state_3
+			  ROOT = { overlord_of = PREV}
+			  OR = { NOT = { has_country_flag = sob_tributary_state_3_recent_changed} had_country_flag = {
+	flag = sob_tributary_state_3_recent_changed
+	days = 730
+}}}
+			  clr_country_flag = sob_tributary_system_rice_import
+	  clr_country_flag =  sob_tributary_system_trade_permission
+	  clr_country_flag =  sob_tributary_system_offical_import
+	  clr_country_flag =  sob_tributary_system_development
+	  clr_country_flag =  sob_tributary_system_prestige
+	  clr_country_flag =  sob_tributary_system_mil_amount
+	  clr_country_flag =  sob_tributary_system_mil_cost
+	  clr_country_flag = sob_tributary_system_mil_maintance
+	  clr_country_flag =  sob_tributary_system_mil_ca
+	  clr_country_flag =  sob_tributary_system_mil_ft
+	  clr_country_flag =  sob_tributary_system_mil_naval_amount
+	  clr_country_flag =  sob_tributary_system_mil_naval_maintance
+	  clr_country_flag =  sob_tributary_system_mil_naval_buildcost
+	  clr_country_flag =  sob_tributary_system_mil_naval_moral
+	  clr_country_flag =  sob_tributary_system_mil_naval_shipdru
+	  clr_country_flag =  sob_tributary_system_mil_naval_sailorrec
+	  clr_country_flag =   sob_tributary_system_mil_naval_ship_buildspeed
+	  set_country_flag =  sob_tributary_system_development}
+	  
+	  	  	  	   tooltip = {
+	   add_country_modifier = { 
+    name = sob_tributary_system_development_modifier
+    duration = -1  
+
+}
+	   
+	   }
+	}
+	}
+		option = {
+		name = "sob_tributary_system_prestige_modifier"
+		       FROM = {
+			   			  every_neighbor_country ={
+			  
+			  
+			  limit = { 
+			  is_subject_of_type = sob_tributary_state_3
+			  ROOT = { overlord_of = PREV}
+			  OR = { NOT = { has_country_flag = sob_tributary_state_3_recent_changed} had_country_flag = {
+	flag = sob_tributary_state_3_recent_changed
+	days = 730
+}}}
+			  clr_country_flag = sob_tributary_system_rice_import
+	  clr_country_flag =  sob_tributary_system_trade_permission
+	  clr_country_flag =  sob_tributary_system_offical_import
+	  clr_country_flag =  sob_tributary_system_development
+	  clr_country_flag =  sob_tributary_system_prestige
+	  clr_country_flag =  sob_tributary_system_mil_amount
+	  clr_country_flag =  sob_tributary_system_mil_cost
+	  clr_country_flag = sob_tributary_system_mil_maintance
+	  clr_country_flag =  sob_tributary_system_mil_ca
+	  clr_country_flag =  sob_tributary_system_mil_ft
+	  clr_country_flag =  sob_tributary_system_mil_naval_amount
+	  clr_country_flag =  sob_tributary_system_mil_naval_maintance
+	  clr_country_flag =  sob_tributary_system_mil_naval_buildcost
+	  clr_country_flag =  sob_tributary_system_mil_naval_moral
+	  clr_country_flag =  sob_tributary_system_mil_naval_shipdru
+	  clr_country_flag =  sob_tributary_system_mil_naval_sailorrec
+	  clr_country_flag =   sob_tributary_system_mil_naval_ship_buildspeed
+	  set_country_flag =  sob_tributary_system_prestige}
+	  
+	  	  	  	  	   tooltip = {
+	   add_country_modifier = { 
+    name = sob_tributary_system_prestige_modifier
+    duration = -1  
+
+}
+	   
+	   }
+	}
+	}
+			option = {
+		name = "sob_tributary_system_mil_amount_modifier"
+		       FROM = {
+			   			  every_neighbor_country ={
+			  
+			  
+			  limit = { 
+			  is_subject_of_type = sob_tributary_state_3
+			  ROOT = { overlord_of = PREV}
+			  OR = { NOT = { has_country_flag = sob_tributary_state_3_recent_changed} had_country_flag = {
+	flag = sob_tributary_state_3_recent_changed
+	days = 730
+}}}
+				  clr_country_flag = sob_tributary_system_rice_import
+	  clr_country_flag =  sob_tributary_system_trade_permission
+	  clr_country_flag =  sob_tributary_system_offical_import
+	  clr_country_flag =  sob_tributary_system_development
+	  clr_country_flag =  sob_tributary_system_prestige
+	  clr_country_flag =  sob_tributary_system_mil_amount
+	  clr_country_flag =  sob_tributary_system_mil_cost
+	  clr_country_flag = sob_tributary_system_mil_maintance
+	  clr_country_flag =  sob_tributary_system_mil_ca
+	  clr_country_flag =  sob_tributary_system_mil_ft
+	  clr_country_flag =  sob_tributary_system_mil_naval_amount
+	  clr_country_flag =  sob_tributary_system_mil_naval_maintance
+	  clr_country_flag =  sob_tributary_system_mil_naval_buildcost
+	  clr_country_flag =  sob_tributary_system_mil_naval_moral
+	  clr_country_flag =  sob_tributary_system_mil_naval_shipdru
+	  clr_country_flag =  sob_tributary_system_mil_naval_sailorrec
+	  clr_country_flag =   sob_tributary_system_mil_naval_ship_buildspeed
+	  set_country_flag =  sob_tributary_system_mil_amount}
+	  	  	  	  	  	   tooltip = {
+	   add_country_modifier = { 
+    name = sob_tributary_system_mil_amount_modifier
+    duration = -1  
+
+}
+	   
+	   }
+	}
+	}
+
+	
+	
+					option = {
+		name = "sob_tributary_system_mil_maintance_modifier"
+		       FROM = {
+			   			  every_neighbor_country ={
+			  
+			  
+			  limit = { 
+			  is_subject_of_type = sob_tributary_state_3
+			  ROOT = { overlord_of = PREV}
+			  OR = { NOT = { has_country_flag = sob_tributary_state_3_recent_changed} had_country_flag = {
+	flag = sob_tributary_state_3_recent_changed
+	days = 730
+}}}
+						  clr_country_flag = sob_tributary_system_rice_import
+	  clr_country_flag =  sob_tributary_system_trade_permission
+	  clr_country_flag =  sob_tributary_system_offical_import
+	  clr_country_flag =  sob_tributary_system_development
+	  clr_country_flag =  sob_tributary_system_prestige
+	  clr_country_flag =  sob_tributary_system_mil_amount
+	  clr_country_flag =  sob_tributary_system_mil_cost
+	  clr_country_flag = sob_tributary_system_mil_maintance
+	  clr_country_flag =  sob_tributary_system_mil_ca
+	  clr_country_flag =  sob_tributary_system_mil_ft
+	  clr_country_flag =  sob_tributary_system_mil_naval_amount
+	  clr_country_flag =  sob_tributary_system_mil_naval_maintance
+	  clr_country_flag =  sob_tributary_system_mil_naval_buildcost
+	  clr_country_flag =  sob_tributary_system_mil_naval_moral
+	  clr_country_flag =  sob_tributary_system_mil_naval_shipdru
+	  clr_country_flag =  sob_tributary_system_mil_naval_sailorrec
+	  clr_country_flag =   sob_tributary_system_mil_naval_ship_buildspeed
+	  set_country_flag =  sob_tributary_system_mil_maintance}
+	  	  	  	  	  	  	   tooltip = {
+	   add_country_modifier = { 
+    name = sob_tributary_system_mil_maintance_modifier
+    duration = -1  
+
+}
+	   
+	   }
+	  
+	}
+	}
+	
+	
+					option = {
+		name = "sob_tributary_system_mil_ca_modifier"
+		       FROM = {
+			   			  every_neighbor_country ={
+			  
+			  
+			  limit = { 
+			  is_subject_of_type = sob_tributary_state_3
+			  ROOT = { overlord_of = PREV}
+			  OR = { NOT = { has_country_flag = sob_tributary_state_3_recent_changed} had_country_flag = {
+	flag = sob_tributary_state_3_recent_changed
+	days = 730
+}}}
+						  clr_country_flag = sob_tributary_system_rice_import
+	  clr_country_flag =  sob_tributary_system_trade_permission
+	  clr_country_flag =  sob_tributary_system_offical_import
+	  clr_country_flag =  sob_tributary_system_development
+	  clr_country_flag =  sob_tributary_system_prestige
+	  clr_country_flag =  sob_tributary_system_mil_amount
+	  clr_country_flag =  sob_tributary_system_mil_cost
+	  clr_country_flag = sob_tributary_system_mil_maintance
+	  clr_country_flag =  sob_tributary_system_mil_ca
+	  clr_country_flag =  sob_tributary_system_mil_ft
+	  clr_country_flag =  sob_tributary_system_mil_naval_amount
+	  clr_country_flag =  sob_tributary_system_mil_naval_maintance
+	  clr_country_flag =  sob_tributary_system_mil_naval_buildcost
+	  clr_country_flag =  sob_tributary_system_mil_naval_moral
+	  clr_country_flag =  sob_tributary_system_mil_naval_shipdru
+	  clr_country_flag =  sob_tributary_system_mil_naval_sailorrec
+	  clr_country_flag =   sob_tributary_system_mil_naval_ship_buildspeed
+	  set_country_flag =  sob_tributary_system_mil_ca}
+	  	  	  	  	  	  	  	   tooltip = {
+	   add_country_modifier = { 
+    name = sob_tributary_system_mil_ca_modifier
+    duration = -1  
+
+}
+	   
+	   }
+	  
+	}
+	}
+	
+	
+					option = {
+		name = "sob_tributary_system_mil_ft_modifier"
+		       FROM = {
+			   
+			  every_neighbor_country ={
+			  
+			  
+			  limit = { 
+			  is_subject_of_type = sob_tributary_state_3
+			  ROOT = { overlord_of = PREV}
+			  OR = { NOT = { has_country_flag = sob_tributary_state_3_recent_changed} had_country_flag = {
+	flag = sob_tributary_state_3_recent_changed
+	days = 730
+}}}
+						  clr_country_flag = sob_tributary_system_rice_import
+	  clr_country_flag =  sob_tributary_system_trade_permission
+	  clr_country_flag =  sob_tributary_system_offical_import
+	  clr_country_flag =  sob_tributary_system_development
+	  clr_country_flag =  sob_tributary_system_prestige
+	  clr_country_flag =  sob_tributary_system_mil_amount
+	  clr_country_flag =  sob_tributary_system_mil_cost
+	  clr_country_flag = sob_tributary_system_mil_maintance
+	  clr_country_flag =  sob_tributary_system_mil_ca
+	  clr_country_flag =  sob_tributary_system_mil_ft
+	  clr_country_flag =  sob_tributary_system_mil_naval_amount
+	  clr_country_flag =  sob_tributary_system_mil_naval_maintance
+	  clr_country_flag =  sob_tributary_system_mil_naval_buildcost
+	  clr_country_flag =  sob_tributary_system_mil_naval_moral
+	  clr_country_flag =  sob_tributary_system_mil_naval_shipdru
+	  clr_country_flag =  sob_tributary_system_mil_naval_sailorrec
+	  clr_country_flag =   sob_tributary_system_mil_naval_ship_buildspeed
+	  set_country_flag =  sob_tributary_system_mil_ft}
+	  	  	  	  	  	  	  	  	   tooltip = {
+	   add_country_modifier = { 
+    name = sob_tributary_system_mil_ft_modifier
+    duration = -1  
+
+}
+	   
+	   }
+	  
+	}
+	}
+	
+					option = {
+		name = "sob_tributary_system_mil_naval_amount_modifier"
+		       FROM = {
+			   			  every_neighbor_country ={
+			  
+			  
+			  limit = { 
+			  is_subject_of_type = sob_tributary_state_3
+			  ROOT = { overlord_of = PREV}
+			  OR = { NOT = { has_country_flag = sob_tributary_state_3_recent_changed} had_country_flag = {
+	flag = sob_tributary_state_3_recent_changed
+	days = 730
+}}}
+						  clr_country_flag = sob_tributary_system_rice_import
+	  clr_country_flag =  sob_tributary_system_trade_permission
+	  clr_country_flag =  sob_tributary_system_offical_import
+	  clr_country_flag =  sob_tributary_system_development
+	  clr_country_flag =  sob_tributary_system_prestige
+	  clr_country_flag =  sob_tributary_system_mil_amount
+	  clr_country_flag =  sob_tributary_system_mil_cost
+	  clr_country_flag = sob_tributary_system_mil_maintance
+	  clr_country_flag =  sob_tributary_system_mil_ca
+	  clr_country_flag =  sob_tributary_system_mil_ft
+	  clr_country_flag =  sob_tributary_system_mil_naval_amount
+	  clr_country_flag =  sob_tributary_system_mil_naval_maintance
+	  clr_country_flag =  sob_tributary_system_mil_naval_buildcost
+	  clr_country_flag =  sob_tributary_system_mil_naval_moral
+	  clr_country_flag =  sob_tributary_system_mil_naval_shipdru
+	  clr_country_flag =  sob_tributary_system_mil_naval_sailorrec
+	  clr_country_flag =   sob_tributary_system_mil_naval_ship_buildspeed
+	  set_country_flag =  sob_tributary_system_mil_naval_amount}
+	  	  	  	  	  	  	  	  	  	   tooltip = {
+	   add_country_modifier = { 
+    name = sob_tributary_system_mil_naval_amount_modifier
+    duration = -1  
+
+}
+	   
+	   }
+	}
+	}
+	
+	
+					option = {
+		name = "sob_tributary_system_mil_naval_maintance_modifier"
+		       FROM = {
+			   			  every_neighbor_country ={
+			  
+			  
+			  limit = { 
+			  is_subject_of_type = sob_tributary_state_3
+			  ROOT = { overlord_of = PREV}
+			  OR = { NOT = { has_country_flag = sob_tributary_state_3_recent_changed} had_country_flag = {
+	flag = sob_tributary_state_3_recent_changed
+	days = 730
+}}}
+						  clr_country_flag = sob_tributary_system_rice_import
+	  clr_country_flag =  sob_tributary_system_trade_permission
+	  clr_country_flag =  sob_tributary_system_offical_import
+	  clr_country_flag =  sob_tributary_system_development
+	  clr_country_flag =  sob_tributary_system_prestige
+	  clr_country_flag =  sob_tributary_system_mil_amount
+	  clr_country_flag =  sob_tributary_system_mil_cost
+	  clr_country_flag = sob_tributary_system_mil_maintance
+	  clr_country_flag =  sob_tributary_system_mil_ca
+	  clr_country_flag =  sob_tributary_system_mil_ft
+	  clr_country_flag =  sob_tributary_system_mil_naval_amount
+	  clr_country_flag =  sob_tributary_system_mil_naval_maintance
+	  clr_country_flag =  sob_tributary_system_mil_naval_buildcost
+	  clr_country_flag =  sob_tributary_system_mil_naval_moral
+	  clr_country_flag =  sob_tributary_system_mil_naval_shipdru
+	  clr_country_flag =  sob_tributary_system_mil_naval_sailorrec
+	  clr_country_flag =   sob_tributary_system_mil_naval_ship_buildspeed
+	  set_country_flag =  sob_tributary_system_mil_naval_maintance}
+	  	  	  	  	  	  	  	  	  	  	   tooltip = {
+	   add_country_modifier = { 
+    name = sob_tributary_system_mil_naval_maintance_modifier
+    duration = -1  
+
+}
+	   
+	   }
+	  
+	}
+	}
+
+	
+					option = {
+		name = "sob_tributary_system_mil_naval_moral_modifier"
+		       FROM = {
+			   			  every_neighbor_country ={
+			  
+			  
+			  limit = { 
+			  is_subject_of_type = sob_tributary_state_3
+			  ROOT = { overlord_of = PREV}
+			  OR = { NOT = { has_country_flag = sob_tributary_state_3_recent_changed} had_country_flag = {
+	flag = sob_tributary_state_3_recent_changed
+	days = 730
+}}}
+						  clr_country_flag = sob_tributary_system_rice_import
+	  clr_country_flag =  sob_tributary_system_trade_permission
+	  clr_country_flag =  sob_tributary_system_offical_import
+	  clr_country_flag =  sob_tributary_system_development
+	  clr_country_flag =  sob_tributary_system_prestige
+	  clr_country_flag =  sob_tributary_system_mil_amount
+	  clr_country_flag =  sob_tributary_system_mil_cost
+	  clr_country_flag = sob_tributary_system_mil_maintance
+	  clr_country_flag =  sob_tributary_system_mil_ca
+	  clr_country_flag =  sob_tributary_system_mil_ft
+	  clr_country_flag =  sob_tributary_system_mil_naval_amount
+	  clr_country_flag =  sob_tributary_system_mil_naval_maintance
+	  clr_country_flag =  sob_tributary_system_mil_naval_buildcost
+	  clr_country_flag =  sob_tributary_system_mil_naval_moral
+	  clr_country_flag =  sob_tributary_system_mil_naval_shipdru
+	  clr_country_flag =  sob_tributary_system_mil_naval_sailorrec
+	  clr_country_flag =   sob_tributary_system_mil_naval_ship_buildspeed
+	  set_country_flag =  sob_tributary_system_mil_naval_moral}
+	  	  	  	  	  	  	  	  	  	  	  	   tooltip = {
+	   add_country_modifier = { 
+    name = sob_tributary_system_mil_naval_moral_modifier
+    duration = -1  
+
+}
+	   
+	   }
+	  
+	}
+	}
+	
+						option = {
+		name = "sob_tributary_system_mil_naval_shipdru_modifier"
+		       FROM = {
+			   			  every_neighbor_country ={
+			  
+			  
+			  limit = { 
+			  is_subject_of_type = sob_tributary_state_3
+			  ROOT = { overlord_of = PREV}
+			  OR = { NOT = { has_country_flag = sob_tributary_state_3_recent_changed} had_country_flag = {
+	flag = sob_tributary_state_3_recent_changed
+	days = 730
+}}}
+						  clr_country_flag = sob_tributary_system_rice_import
+	  clr_country_flag =  sob_tributary_system_trade_permission
+	  clr_country_flag =  sob_tributary_system_offical_import
+	  clr_country_flag =  sob_tributary_system_development
+	  clr_country_flag =  sob_tributary_system_prestige
+	  clr_country_flag =  sob_tributary_system_mil_amount
+	  clr_country_flag =  sob_tributary_system_mil_cost
+	  clr_country_flag = sob_tributary_system_mil_maintance
+	  clr_country_flag =  sob_tributary_system_mil_ca
+	  clr_country_flag =  sob_tributary_system_mil_ft
+	  clr_country_flag =  sob_tributary_system_mil_naval_amount
+	  clr_country_flag =  sob_tributary_system_mil_naval_maintance
+	  clr_country_flag =  sob_tributary_system_mil_naval_buildcost
+	  clr_country_flag =  sob_tributary_system_mil_naval_moral
+	  clr_country_flag =  sob_tributary_system_mil_naval_shipdru
+	  clr_country_flag =  sob_tributary_system_mil_naval_sailorrec
+	  clr_country_flag =   sob_tributary_system_mil_naval_ship_buildspeed
+	  set_country_flag =  sob_tributary_system_mil_naval_shipdru}
+	  	  	  	  	  	  	  	  	  	  	  	  	   tooltip = {
+	   add_country_modifier = { 
+    name = sob_tributary_system_mil_naval_shipdru_modifier
+    duration = -1  
+
+}
+	   
+	   }
+	}
+	}
+	
+						option = {
+		name = "sob_tributary_system_mil_naval_sailorrec_modifier"
+		       FROM = {
+			   			  every_neighbor_country ={
+			  
+			  
+			  limit = { 
+			  is_subject_of_type = sob_tributary_state_3
+			  ROOT = { overlord_of = PREV}
+			  OR = { NOT = { has_country_flag = sob_tributary_state_3_recent_changed} had_country_flag = {
+	flag = sob_tributary_state_3_recent_changed
+	days = 730
+}}}
+						  clr_country_flag = sob_tributary_system_rice_import
+	  clr_country_flag =  sob_tributary_system_trade_permission
+	  clr_country_flag =  sob_tributary_system_offical_import
+	  clr_country_flag =  sob_tributary_system_development
+	  clr_country_flag =  sob_tributary_system_prestige
+	  clr_country_flag =  sob_tributary_system_mil_amount
+	  clr_country_flag =  sob_tributary_system_mil_cost
+	  clr_country_flag = sob_tributary_system_mil_maintance
+	  clr_country_flag =  sob_tributary_system_mil_ca
+	  clr_country_flag =  sob_tributary_system_mil_ft
+	  clr_country_flag =  sob_tributary_system_mil_naval_amount
+	  clr_country_flag =  sob_tributary_system_mil_naval_maintance
+	  clr_country_flag =  sob_tributary_system_mil_naval_buildcost
+	  clr_country_flag =  sob_tributary_system_mil_naval_moral
+	  clr_country_flag =  sob_tributary_system_mil_naval_shipdru
+	  clr_country_flag =  sob_tributary_system_mil_naval_sailorrec
+	  clr_country_flag =   sob_tributary_system_mil_naval_ship_buildspeed
+	  set_country_flag =  sob_tributary_system_mil_naval_sailorrec}
+	  	  	  	  	  	  	  	  	  	  	  	  	  	   tooltip = {
+	   add_country_modifier = { 
+    name = sob_tributary_system_mil_naval_sailorrec_modifier
+    duration = -1  
+
+}
+	   
+	   }
+	  
+	}
+	}
+	
+						option = {
+		name = "sob_tributary_system_mil_naval_ship_buildspeed_modifier"
+		       FROM = {
+			   			  every_neighbor_country ={
+			  
+			  
+			  limit = { 
+			  is_subject_of_type = sob_tributary_state_3
+			  ROOT = { overlord_of = PREV}
+			  OR = { NOT = { has_country_flag = sob_tributary_state_3_recent_changed} had_country_flag = {
+	flag = sob_tributary_state_3_recent_changed
+	days = 730
+}}}
+						  clr_country_flag = sob_tributary_system_rice_import
+	  clr_country_flag =  sob_tributary_system_trade_permission
+	  clr_country_flag =  sob_tributary_system_offical_import
+	  clr_country_flag =  sob_tributary_system_development
+	  clr_country_flag =  sob_tributary_system_prestige
+	  clr_country_flag =  sob_tributary_system_mil_amount
+	  clr_country_flag =  sob_tributary_system_mil_cost
+	  clr_country_flag = sob_tributary_system_mil_maintance
+	  clr_country_flag =  sob_tributary_system_mil_ca
+	  clr_country_flag =  sob_tributary_system_mil_ft
+	  clr_country_flag =  sob_tributary_system_mil_naval_amount
+	  clr_country_flag =  sob_tributary_system_mil_naval_maintance
+	  clr_country_flag =  sob_tributary_system_mil_naval_buildcost
+	  clr_country_flag =  sob_tributary_system_mil_naval_moral
+	  clr_country_flag =  sob_tributary_system_mil_naval_shipdru
+	  clr_country_flag =  sob_tributary_system_mil_naval_sailorrec
+	  clr_country_flag =   sob_tributary_system_mil_naval_ship_buildspeed
+	  set_country_flag =  sob_tributary_system_mil_naval_ship_buildspeed}
+	  	  	  	  	  	  	  	  	  	  	  	  	  	   tooltip = {
+	   add_country_modifier = { 
+    name = sob_tributary_system_mil_naval_ship_buildspeed_modifier
+    duration = -1  
+
+}
+	   
+	   }
+	}
+	}
+	
+}
+
+country_event = {
+	id =sob_tributary_events.13
+	title = "sob_tributary_events.13.t"
+	desc = "sob_tributary_events.13.d"
+	picture = GIFTS_TO_EMPEROR_eventPicture
+	is_triggered_only = yes
+
+	
+	option = {
+		name = "sob_tributary_system_rice_import_modifier"
+ 
+	   
+	          ROOT= {
+			  every_subject_country ={
+			  
+			  
+			  limit = { 
+			  is_subject_of_type = sob_tributary_state_3
+			  num_of_owned_provinces_with = {
+			  value = 5
+			  trade_goods = grain
+			  
+			  }
+			  OR = { had_country_flag = {
+	flag = sob_tributary_state_3_recent_changed
+	days = 730
+}}}
+	  clr_country_flag = sob_tributary_system_rice_import
+	  clr_country_flag =  sob_tributary_system_trade_permission
+	  clr_country_flag =  sob_tributary_system_offical_import
+	  clr_country_flag =  sob_tributary_system_development
+	  clr_country_flag =  sob_tributary_system_prestige
+	  clr_country_flag =  sob_tributary_system_mil_amount
+	  clr_country_flag =  sob_tributary_system_mil_cost
+	  clr_country_flag = sob_tributary_system_mil_maintance
+	  clr_country_flag =  sob_tributary_system_mil_ca
+	  clr_country_flag =  sob_tributary_system_mil_ft
+	  clr_country_flag =  sob_tributary_system_mil_naval_amount
+	  clr_country_flag =  sob_tributary_system_mil_naval_maintance
+	  clr_country_flag =  sob_tributary_system_mil_naval_buildcost
+	  clr_country_flag =  sob_tributary_system_mil_naval_moral
+	  clr_country_flag =  sob_tributary_system_mil_naval_shipdru
+	  clr_country_flag =  sob_tributary_system_mil_naval_sailorrec
+	  clr_country_flag =  sob_tributary_system_mil_naval_ship_buildspeed
+	  set_country_flag = sob_tributary_system_rice_import
+	   
+	   }
+	   }
+	   tooltip = {
+	   add_country_modifier = { 
+    name = sob_tributary_system_rice_import_modifier
+    duration = -1  
+
+}
+	   
+	   }
+		
+	}
+	option = {
+		name = "sob_tributary_system_trade_permission_modifier"
+					  every_subject_country ={
+			  
+			  
+			  limit = { 
+			  is_subject_of_type = sob_tributary_state_3
+			 
+			  OR = { always= yes had_country_flag = {
+	flag = sob_tributary_state_3_recent_changed
+	days = 730
+}}}
+		       ROOT= {
+	  clr_country_flag = sob_tributary_system_rice_import
+	  clr_country_flag =  sob_tributary_system_trade_permission
+	  clr_country_flag =  sob_tributary_system_offical_import
+	  clr_country_flag =  sob_tributary_system_development
+	  clr_country_flag =  sob_tributary_system_prestige
+	  clr_country_flag =  sob_tributary_system_mil_amount
+	  clr_country_flag =  sob_tributary_system_mil_cost
+	  clr_country_flag = sob_tributary_system_mil_maintance
+	  clr_country_flag =  sob_tributary_system_mil_ca
+	  clr_country_flag =  sob_tributary_system_mil_ft
+	  clr_country_flag =  sob_tributary_system_mil_naval_amount
+	  clr_country_flag =  sob_tributary_system_mil_naval_maintance
+	  clr_country_flag =  sob_tributary_system_mil_naval_buildcost
+	  clr_country_flag =  sob_tributary_system_mil_naval_moral
+	  clr_country_flag =  sob_tributary_system_mil_naval_shipdru
+	  clr_country_flag =  sob_tributary_system_mil_naval_sailorrec
+	  clr_country_flag =   sob_tributary_system_mil_naval_ship_buildspeed
+	  set_country_flag =  sob_tributary_system_trade_permission}
+
+	}
+		  	   tooltip = {
+	   add_country_modifier = { 
+    name = sob_tributary_system_trade_permission_modifier
+    duration = -1  
+
+}
+	   
+	   }
+	}
+		option = {
+		name = "sob_tributary_system_offical_import_modifier"
+		       ROOT= {
+			   			  every_subject_country ={
+			  
+			  
+			  limit = { 
+			  is_subject_of_type = sob_tributary_state_3
+		
+			  OR = { always= yes had_country_flag = {
+	flag = sob_tributary_state_3_recent_changed
+	days = 730
+}}}
+	  clr_country_flag = sob_tributary_system_rice_import
+	  clr_country_flag =  sob_tributary_system_trade_permission
+	  clr_country_flag =  sob_tributary_system_offical_import
+	  clr_country_flag =  sob_tributary_system_development
+	  clr_country_flag =  sob_tributary_system_prestige
+	  clr_country_flag =  sob_tributary_system_mil_amount
+	  clr_country_flag =  sob_tributary_system_mil_cost
+	  clr_country_flag = sob_tributary_system_mil_maintance
+	  clr_country_flag =  sob_tributary_system_mil_ca
+	  clr_country_flag =  sob_tributary_system_mil_ft
+	  clr_country_flag =  sob_tributary_system_mil_naval_amount
+	  clr_country_flag =  sob_tributary_system_mil_naval_maintance
+	  clr_country_flag =  sob_tributary_system_mil_naval_buildcost
+	  clr_country_flag =  sob_tributary_system_mil_naval_moral
+	  clr_country_flag =  sob_tributary_system_mil_naval_shipdru
+	  clr_country_flag =  sob_tributary_system_mil_naval_sailorrec
+	  clr_country_flag =   sob_tributary_system_mil_naval_ship_buildspeed
+	  set_country_flag =  sob_tributary_system_offical_import}
+	  
+	  
+	  	  	   tooltip = {
+	   add_country_modifier = { 
+    name = sob_tributary_system_offical_import_modifier
+    duration = -1  
+
+}
+	   
+	   }
+	}
+	}
+		option = {
+		name = "sob_tributary_system_development_modifier"
+		       ROOT= {
+			   			  every_subject_country ={
+			  
+			  
+			  limit = { 
+			  is_subject_of_type = sob_tributary_state_3
+		
+			  OR = { always= yes had_country_flag = {
+	flag = sob_tributary_state_3_recent_changed
+	days = 730
+}}}
+			  clr_country_flag = sob_tributary_system_rice_import
+	  clr_country_flag =  sob_tributary_system_trade_permission
+	  clr_country_flag =  sob_tributary_system_offical_import
+	  clr_country_flag =  sob_tributary_system_development
+	  clr_country_flag =  sob_tributary_system_prestige
+	  clr_country_flag =  sob_tributary_system_mil_amount
+	  clr_country_flag =  sob_tributary_system_mil_cost
+	  clr_country_flag = sob_tributary_system_mil_maintance
+	  clr_country_flag =  sob_tributary_system_mil_ca
+	  clr_country_flag =  sob_tributary_system_mil_ft
+	  clr_country_flag =  sob_tributary_system_mil_naval_amount
+	  clr_country_flag =  sob_tributary_system_mil_naval_maintance
+	  clr_country_flag =  sob_tributary_system_mil_naval_buildcost
+	  clr_country_flag =  sob_tributary_system_mil_naval_moral
+	  clr_country_flag =  sob_tributary_system_mil_naval_shipdru
+	  clr_country_flag =  sob_tributary_system_mil_naval_sailorrec
+	  clr_country_flag =   sob_tributary_system_mil_naval_ship_buildspeed
+	  set_country_flag =  sob_tributary_system_development}
+	  
+	  	  	  	   tooltip = {
+	   add_country_modifier = { 
+    name = sob_tributary_system_development_modifier
+    duration = -1  
+
+}
+	   
+	   }
+	}
+	}
+		option = {
+		name = "sob_tributary_system_prestige_modifier"
+		       ROOT= {
+			   			  every_subject_country ={
+			  
+			  
+			  limit = { 
+			  is_subject_of_type = sob_tributary_state_3
+			  OR = { always= yes had_country_flag = {
+	flag = sob_tributary_state_3_recent_changed
+	days = 730
+}}}
+			  clr_country_flag = sob_tributary_system_rice_import
+	  clr_country_flag =  sob_tributary_system_trade_permission
+	  clr_country_flag =  sob_tributary_system_offical_import
+	  clr_country_flag =  sob_tributary_system_development
+	  clr_country_flag =  sob_tributary_system_prestige
+	  clr_country_flag =  sob_tributary_system_mil_amount
+	  clr_country_flag =  sob_tributary_system_mil_cost
+	  clr_country_flag = sob_tributary_system_mil_maintance
+	  clr_country_flag =  sob_tributary_system_mil_ca
+	  clr_country_flag =  sob_tributary_system_mil_ft
+	  clr_country_flag =  sob_tributary_system_mil_naval_amount
+	  clr_country_flag =  sob_tributary_system_mil_naval_maintance
+	  clr_country_flag =  sob_tributary_system_mil_naval_buildcost
+	  clr_country_flag =  sob_tributary_system_mil_naval_moral
+	  clr_country_flag =  sob_tributary_system_mil_naval_shipdru
+	  clr_country_flag =  sob_tributary_system_mil_naval_sailorrec
+	  clr_country_flag =   sob_tributary_system_mil_naval_ship_buildspeed
+	  set_country_flag =  sob_tributary_system_prestige}
+	  
+	  	  	  	  	   tooltip = {
+	   add_country_modifier = { 
+    name = sob_tributary_system_prestige_modifier
+    duration = -1  
+
+}
+	   
+	   }
+	}
+	}
+			option = {
+		name = "sob_tributary_system_mil_amount_modifier"
+		       ROOT= {
+			   			  every_subject_country ={
+			  
+			  
+			  limit = { 
+			  is_subject_of_type = sob_tributary_state_3
+
+			  OR = { always= yes had_country_flag = {
+	flag = sob_tributary_state_3_recent_changed
+	days = 730
+}}}
+				  clr_country_flag = sob_tributary_system_rice_import
+	  clr_country_flag =  sob_tributary_system_trade_permission
+	  clr_country_flag =  sob_tributary_system_offical_import
+	  clr_country_flag =  sob_tributary_system_development
+	  clr_country_flag =  sob_tributary_system_prestige
+	  clr_country_flag =  sob_tributary_system_mil_amount
+	  clr_country_flag =  sob_tributary_system_mil_cost
+	  clr_country_flag = sob_tributary_system_mil_maintance
+	  clr_country_flag =  sob_tributary_system_mil_ca
+	  clr_country_flag =  sob_tributary_system_mil_ft
+	  clr_country_flag =  sob_tributary_system_mil_naval_amount
+	  clr_country_flag =  sob_tributary_system_mil_naval_maintance
+	  clr_country_flag =  sob_tributary_system_mil_naval_buildcost
+	  clr_country_flag =  sob_tributary_system_mil_naval_moral
+	  clr_country_flag =  sob_tributary_system_mil_naval_shipdru
+	  clr_country_flag =  sob_tributary_system_mil_naval_sailorrec
+	  clr_country_flag =   sob_tributary_system_mil_naval_ship_buildspeed
+	  set_country_flag =  sob_tributary_system_mil_amount}
+	  	  	  	  	  	   tooltip = {
+	   add_country_modifier = { 
+    name = sob_tributary_system_mil_amount_modifier
+    duration = -1  
+
+}
+	   
+	   }
+	}
+	}
+
+	
+	
+					option = {
+		name = "sob_tributary_system_mil_maintance_modifier"
+		       ROOT= {
+			   			  every_subject_country ={
+			  
+			  
+			  limit = { 
+			  is_subject_of_type = sob_tributary_state_3
+			  OR = { always= yes had_country_flag = {
+	flag = sob_tributary_state_3_recent_changed
+	days = 730
+}}}
+						  clr_country_flag = sob_tributary_system_rice_import
+	  clr_country_flag =  sob_tributary_system_trade_permission
+	  clr_country_flag =  sob_tributary_system_offical_import
+	  clr_country_flag =  sob_tributary_system_development
+	  clr_country_flag =  sob_tributary_system_prestige
+	  clr_country_flag =  sob_tributary_system_mil_amount
+	  clr_country_flag =  sob_tributary_system_mil_cost
+	  clr_country_flag = sob_tributary_system_mil_maintance
+	  clr_country_flag =  sob_tributary_system_mil_ca
+	  clr_country_flag =  sob_tributary_system_mil_ft
+	  clr_country_flag =  sob_tributary_system_mil_naval_amount
+	  clr_country_flag =  sob_tributary_system_mil_naval_maintance
+	  clr_country_flag =  sob_tributary_system_mil_naval_buildcost
+	  clr_country_flag =  sob_tributary_system_mil_naval_moral
+	  clr_country_flag =  sob_tributary_system_mil_naval_shipdru
+	  clr_country_flag =  sob_tributary_system_mil_naval_sailorrec
+	  clr_country_flag =   sob_tributary_system_mil_naval_ship_buildspeed
+	  set_country_flag =  sob_tributary_system_mil_maintance}
+	  	  	  	  	  	  	   tooltip = {
+	   add_country_modifier = { 
+    name = sob_tributary_system_mil_maintance_modifier
+    duration = -1  
+
+}
+	   
+	   }
+	  
+	}
+	}
+	
+	
+					option = {
+		name = "sob_tributary_system_mil_ca_modifier"
+		       ROOT= {
+			   			  every_subject_country ={
+			  
+			  
+			  limit = { 
+			  is_subject_of_type = sob_tributary_state_3
+			  OR = { always= yes had_country_flag = {
+	flag = sob_tributary_state_3_recent_changed
+	days = 730
+}}}
+						  clr_country_flag = sob_tributary_system_rice_import
+	  clr_country_flag =  sob_tributary_system_trade_permission
+	  clr_country_flag =  sob_tributary_system_offical_import
+	  clr_country_flag =  sob_tributary_system_development
+	  clr_country_flag =  sob_tributary_system_prestige
+	  clr_country_flag =  sob_tributary_system_mil_amount
+	  clr_country_flag =  sob_tributary_system_mil_cost
+	  clr_country_flag = sob_tributary_system_mil_maintance
+	  clr_country_flag =  sob_tributary_system_mil_ca
+	  clr_country_flag =  sob_tributary_system_mil_ft
+	  clr_country_flag =  sob_tributary_system_mil_naval_amount
+	  clr_country_flag =  sob_tributary_system_mil_naval_maintance
+	  clr_country_flag =  sob_tributary_system_mil_naval_buildcost
+	  clr_country_flag =  sob_tributary_system_mil_naval_moral
+	  clr_country_flag =  sob_tributary_system_mil_naval_shipdru
+	  clr_country_flag =  sob_tributary_system_mil_naval_sailorrec
+	  clr_country_flag =   sob_tributary_system_mil_naval_ship_buildspeed
+	  set_country_flag =  sob_tributary_system_mil_ca}
+	  	  	  	  	  	  	  	   tooltip = {
+	   add_country_modifier = { 
+    name = sob_tributary_system_mil_ca_modifier
+    duration = -1  
+
+}
+	   
+	   }
+	  
+	}
+	}
+	
+	
+					option = {
+		name = "sob_tributary_system_mil_ft_modifier"
+		       ROOT= {
+			   
+			  every_subject_country ={
+			  
+			  
+			  limit = { 
+			  is_subject_of_type = sob_tributary_state_3
+			  OR = { always= yes had_country_flag = {
+	flag = sob_tributary_state_3_recent_changed
+	days = 730
+}}}
+						  clr_country_flag = sob_tributary_system_rice_import
+	  clr_country_flag =  sob_tributary_system_trade_permission
+	  clr_country_flag =  sob_tributary_system_offical_import
+	  clr_country_flag =  sob_tributary_system_development
+	  clr_country_flag =  sob_tributary_system_prestige
+	  clr_country_flag =  sob_tributary_system_mil_amount
+	  clr_country_flag =  sob_tributary_system_mil_cost
+	  clr_country_flag = sob_tributary_system_mil_maintance
+	  clr_country_flag =  sob_tributary_system_mil_ca
+	  clr_country_flag =  sob_tributary_system_mil_ft
+	  clr_country_flag =  sob_tributary_system_mil_naval_amount
+	  clr_country_flag =  sob_tributary_system_mil_naval_maintance
+	  clr_country_flag =  sob_tributary_system_mil_naval_buildcost
+	  clr_country_flag =  sob_tributary_system_mil_naval_moral
+	  clr_country_flag =  sob_tributary_system_mil_naval_shipdru
+	  clr_country_flag =  sob_tributary_system_mil_naval_sailorrec
+	  clr_country_flag =   sob_tributary_system_mil_naval_ship_buildspeed
+	  set_country_flag =  sob_tributary_system_mil_ft}
+	  	  	  	  	  	  	  	  	   tooltip = {
+	   add_country_modifier = { 
+    name = sob_tributary_system_mil_ft_modifier
+    duration = -1  
+
+}
+	   
+	   }
+	  
+	}
+	}
+	
+					option = {
+		name = "sob_tributary_system_mil_naval_amount_modifier"
+		       ROOT= {
+			   			  every_subject_country ={
+			  
+			  
+			  limit = { 
+			  is_subject_of_type = sob_tributary_state_3
+			  OR = { always= yes had_country_flag = {
+	flag = sob_tributary_state_3_recent_changed
+	days = 730
+}}}
+						  clr_country_flag = sob_tributary_system_rice_import
+	  clr_country_flag =  sob_tributary_system_trade_permission
+	  clr_country_flag =  sob_tributary_system_offical_import
+	  clr_country_flag =  sob_tributary_system_development
+	  clr_country_flag =  sob_tributary_system_prestige
+	  clr_country_flag =  sob_tributary_system_mil_amount
+	  clr_country_flag =  sob_tributary_system_mil_cost
+	  clr_country_flag = sob_tributary_system_mil_maintance
+	  clr_country_flag =  sob_tributary_system_mil_ca
+	  clr_country_flag =  sob_tributary_system_mil_ft
+	  clr_country_flag =  sob_tributary_system_mil_naval_amount
+	  clr_country_flag =  sob_tributary_system_mil_naval_maintance
+	  clr_country_flag =  sob_tributary_system_mil_naval_buildcost
+	  clr_country_flag =  sob_tributary_system_mil_naval_moral
+	  clr_country_flag =  sob_tributary_system_mil_naval_shipdru
+	  clr_country_flag =  sob_tributary_system_mil_naval_sailorrec
+	  clr_country_flag =   sob_tributary_system_mil_naval_ship_buildspeed
+	  set_country_flag =  sob_tributary_system_mil_naval_amount}
+	  	  	  	  	  	  	  	  	  	   tooltip = {
+	   add_country_modifier = { 
+    name = sob_tributary_system_mil_naval_amount_modifier
+    duration = -1  
+
+}
+	   
+	   }
+	}
+	}
+	
+	
+					option = {
+		name = "sob_tributary_system_mil_naval_maintance_modifier"
+		       ROOT= {
+			   			  every_subject_country ={
+			  
+			  
+			  limit = { 
+			  is_subject_of_type = sob_tributary_state_3
+			  OR = { always= yes had_country_flag = {
+	flag = sob_tributary_state_3_recent_changed
+	days = 730
+}}}
+						  clr_country_flag = sob_tributary_system_rice_import
+	  clr_country_flag =  sob_tributary_system_trade_permission
+	  clr_country_flag =  sob_tributary_system_offical_import
+	  clr_country_flag =  sob_tributary_system_development
+	  clr_country_flag =  sob_tributary_system_prestige
+	  clr_country_flag =  sob_tributary_system_mil_amount
+	  clr_country_flag =  sob_tributary_system_mil_cost
+	  clr_country_flag = sob_tributary_system_mil_maintance
+	  clr_country_flag =  sob_tributary_system_mil_ca
+	  clr_country_flag =  sob_tributary_system_mil_ft
+	  clr_country_flag =  sob_tributary_system_mil_naval_amount
+	  clr_country_flag =  sob_tributary_system_mil_naval_maintance
+	  clr_country_flag =  sob_tributary_system_mil_naval_buildcost
+	  clr_country_flag =  sob_tributary_system_mil_naval_moral
+	  clr_country_flag =  sob_tributary_system_mil_naval_shipdru
+	  clr_country_flag =  sob_tributary_system_mil_naval_sailorrec
+	  clr_country_flag =   sob_tributary_system_mil_naval_ship_buildspeed
+	  set_country_flag =  sob_tributary_system_mil_naval_maintance}
+	  	  	  	  	  	  	  	  	  	  	   tooltip = {
+	   add_country_modifier = { 
+    name = sob_tributary_system_mil_naval_maintance_modifier
+    duration = -1  
+
+}
+	   
+	   }
+	  
+	}
+	}
+
+	
+					option = {
+		name = "sob_tributary_system_mil_naval_moral_modifier"
+		       ROOT= {
+			   			  every_subject_country ={
+			  
+			  
+			  limit = { 
+			  is_subject_of_type = sob_tributary_state_3
+			  OR = { always= yes had_country_flag = {
+	flag = sob_tributary_state_3_recent_changed
+	days = 730
+}}}
+						  clr_country_flag = sob_tributary_system_rice_import
+	  clr_country_flag =  sob_tributary_system_trade_permission
+	  clr_country_flag =  sob_tributary_system_offical_import
+	  clr_country_flag =  sob_tributary_system_development
+	  clr_country_flag =  sob_tributary_system_prestige
+	  clr_country_flag =  sob_tributary_system_mil_amount
+	  clr_country_flag =  sob_tributary_system_mil_cost
+	  clr_country_flag = sob_tributary_system_mil_maintance
+	  clr_country_flag =  sob_tributary_system_mil_ca
+	  clr_country_flag =  sob_tributary_system_mil_ft
+	  clr_country_flag =  sob_tributary_system_mil_naval_amount
+	  clr_country_flag =  sob_tributary_system_mil_naval_maintance
+	  clr_country_flag =  sob_tributary_system_mil_naval_buildcost
+	  clr_country_flag =  sob_tributary_system_mil_naval_moral
+	  clr_country_flag =  sob_tributary_system_mil_naval_shipdru
+	  clr_country_flag =  sob_tributary_system_mil_naval_sailorrec
+	  clr_country_flag =   sob_tributary_system_mil_naval_ship_buildspeed
+	  set_country_flag =  sob_tributary_system_mil_naval_moral}
+	  	  	  	  	  	  	  	  	  	  	  	   tooltip = {
+	   add_country_modifier = { 
+    name = sob_tributary_system_mil_naval_moral_modifier
+    duration = -1  
+
+}
+	   
+	   }
+	  
+	}
+	}
+	
+						option = {
+		name = "sob_tributary_system_mil_naval_shipdru_modifier"
+		       ROOT= {
+			   			  every_subject_country ={
+			  
+			  
+			  limit = { 
+			  is_subject_of_type = sob_tributary_state_3
+			  OR = { always= yes had_country_flag = {
+	flag = sob_tributary_state_3_recent_changed
+	days = 730
+}}}
+						  clr_country_flag = sob_tributary_system_rice_import
+	  clr_country_flag =  sob_tributary_system_trade_permission
+	  clr_country_flag =  sob_tributary_system_offical_import
+	  clr_country_flag =  sob_tributary_system_development
+	  clr_country_flag =  sob_tributary_system_prestige
+	  clr_country_flag =  sob_tributary_system_mil_amount
+	  clr_country_flag =  sob_tributary_system_mil_cost
+	  clr_country_flag = sob_tributary_system_mil_maintance
+	  clr_country_flag =  sob_tributary_system_mil_ca
+	  clr_country_flag =  sob_tributary_system_mil_ft
+	  clr_country_flag =  sob_tributary_system_mil_naval_amount
+	  clr_country_flag =  sob_tributary_system_mil_naval_maintance
+	  clr_country_flag =  sob_tributary_system_mil_naval_buildcost
+	  clr_country_flag =  sob_tributary_system_mil_naval_moral
+	  clr_country_flag =  sob_tributary_system_mil_naval_shipdru
+	  clr_country_flag =  sob_tributary_system_mil_naval_sailorrec
+	  clr_country_flag =   sob_tributary_system_mil_naval_ship_buildspeed
+	  set_country_flag =  sob_tributary_system_mil_naval_shipdru}
+	  	  	  	  	  	  	  	  	  	  	  	  	   tooltip = {
+	   add_country_modifier = { 
+    name = sob_tributary_system_mil_naval_shipdru_modifier
+    duration = -1  
+
+}
+	   
+	   }
+	}
+	}
+	
+						option = {
+		name = "sob_tributary_system_mil_naval_sailorrec_modifier"
+		       ROOT= {
+			   			  every_subject_country ={
+			  
+			  
+			  limit = { 
+			  is_subject_of_type = sob_tributary_state_3
+			  OR = { always= yes had_country_flag = {
+	flag = sob_tributary_state_3_recent_changed
+	days = 730
+}}}
+						  clr_country_flag = sob_tributary_system_rice_import
+	  clr_country_flag =  sob_tributary_system_trade_permission
+	  clr_country_flag =  sob_tributary_system_offical_import
+	  clr_country_flag =  sob_tributary_system_development
+	  clr_country_flag =  sob_tributary_system_prestige
+	  clr_country_flag =  sob_tributary_system_mil_amount
+	  clr_country_flag =  sob_tributary_system_mil_cost
+	  clr_country_flag = sob_tributary_system_mil_maintance
+	  clr_country_flag =  sob_tributary_system_mil_ca
+	  clr_country_flag =  sob_tributary_system_mil_ft
+	  clr_country_flag =  sob_tributary_system_mil_naval_amount
+	  clr_country_flag =  sob_tributary_system_mil_naval_maintance
+	  clr_country_flag =  sob_tributary_system_mil_naval_buildcost
+	  clr_country_flag =  sob_tributary_system_mil_naval_moral
+	  clr_country_flag =  sob_tributary_system_mil_naval_shipdru
+	  clr_country_flag =  sob_tributary_system_mil_naval_sailorrec
+	  clr_country_flag =   sob_tributary_system_mil_naval_ship_buildspeed
+	  set_country_flag =  sob_tributary_system_mil_naval_sailorrec}
+	  	  	  	  	  	  	  	  	  	  	  	  	  	   tooltip = {
+	   add_country_modifier = { 
+    name = sob_tributary_system_mil_naval_sailorrec_modifier
+    duration = -1  
+
+}
+	   
+	   }
+	  
+	}
+	}
+	
+						option = {
+		name = "sob_tributary_system_mil_naval_ship_buildspeed_modifier"
+		       ROOT= {
+			   			  every_subject_country ={
+			  
+			  
+			  limit = { 
+			  is_subject_of_type = sob_tributary_state_3
+			  OR = { always= yes had_country_flag = {
+	flag = sob_tributary_state_3_recent_changed
+	days = 730
+}}}
+						  clr_country_flag = sob_tributary_system_rice_import
+	  clr_country_flag =  sob_tributary_system_trade_permission
+	  clr_country_flag =  sob_tributary_system_offical_import
+	  clr_country_flag =  sob_tributary_system_development
+	  clr_country_flag =  sob_tributary_system_prestige
+	  clr_country_flag =  sob_tributary_system_mil_amount
+	  clr_country_flag =  sob_tributary_system_mil_cost
+	  clr_country_flag = sob_tributary_system_mil_maintance
+	  clr_country_flag =  sob_tributary_system_mil_ca
+	  clr_country_flag =  sob_tributary_system_mil_ft
+	  clr_country_flag =  sob_tributary_system_mil_naval_amount
+	  clr_country_flag =  sob_tributary_system_mil_naval_maintance
+	  clr_country_flag =  sob_tributary_system_mil_naval_buildcost
+	  clr_country_flag =  sob_tributary_system_mil_naval_moral
+	  clr_country_flag =  sob_tributary_system_mil_naval_shipdru
+	  clr_country_flag =  sob_tributary_system_mil_naval_sailorrec
+	  clr_country_flag =   sob_tributary_system_mil_naval_ship_buildspeed
+	  set_country_flag =  sob_tributary_system_mil_naval_ship_buildspeed}
+	  	  	  	  	  	  	  	  	  	  	  	  	  	   tooltip = {
+	   add_country_modifier = { 
+    name = sob_tributary_system_mil_naval_ship_buildspeed_modifier
+    duration = -1  
+
+}
+	   
+	   }
+	}
+	}
+	
+}

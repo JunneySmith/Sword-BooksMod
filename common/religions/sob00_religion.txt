@@ -1,0 +1,887 @@
+buddhic = {
+
+	flags_with_emblem_percentage = 33
+	flag_emblem_index_range = { 58 80 }
+
+	
+	mahayana = {
+		color = { 204 76 127 }
+		icon = 23
+		allowed_conversion = {
+			vajrayana
+			buddhism #Theravada
+		}
+		country = {
+			tolerance_heretic = 2
+			idea_cost = -0.05
+		}
+		country_as_secondary = {
+			global_tax_modifier = 0.1
+			tolerance_heathen = 2
+		}
+		on_convert = {
+			add_prestige = -100
+			add_stability = -1
+			add_country_modifier = {
+				name = "conversion_zeal"
+				duration = 3650
+			}
+		}
+		
+		harmonized_modifier = harmonized_mahayana
+		
+		heretic = { ZEN }
+		
+		uses_karma = yes
+	}
+		buddhism = { #Theravada
+		color = { 204 76 0 }
+		icon = 24
+		allowed_conversion = {
+			vajrayana
+			mahayana
+		}
+		country = {
+			tolerance_heretic = 2
+			advisor_cost = -0.1
+		}
+		country_as_secondary = {
+			development_cost = -0.1
+			diplomats = 1
+		}
+		on_convert = {
+			add_prestige = -100
+			add_stability = -1
+			add_country_modifier = {
+				name = "conversion_zeal"
+				duration = 3650
+			}
+		}
+		
+		heretic = { ZEN }
+		
+		harmonized_modifier = harmonized_buddhism
+		
+		uses_karma = yes
+	}
+	
+		vajrayana = {
+		color = { 204 76 76 }
+		icon = 25
+		allowed_conversion = {
+			mahayana
+			buddhism #Theravada
+		}
+		country = {
+			tolerance_heretic = 1
+			land_morale = 0.05
+		}
+		country_as_secondary = {
+			horde_unity = 1
+			tolerance_own = 1
+		}
+		on_convert = {
+			add_prestige = -100
+			add_stability = -1
+			add_country_modifier = {
+				name = "conversion_zeal"
+				duration = 3650
+			}
+		}
+		
+		heretic = { ZEN }
+		
+		uses_karma = yes
+	
+		harmonized_modifier = harmonized_vajrayana
+	}
+	harmonized_modifier = harmonized_mahayana
+crusade_name = CRUSADE
+	
+}
+	
+	japan_group = {
+	flags_with_emblem_percentage = 33
+	flag_emblem_index_range = { 58 80 }
+	shinto = {
+		color = { 204 0 0 }
+		icon = 10
+		country = {
+			land_morale = 0.1
+		}
+		province = {
+			local_missionary_strength = -0.02
+		}
+		country_as_secondary = {
+			discipline = 0.05
+			global_unrest = -1
+		}
+		heretic = { SHUGENDO }
+		uses_isolationism = yes
+		
+		harmonized_modifier = harmonized_shinto
+		
+	}
+	harmonized_modifier = harmonized_shinto
+	crusade_name = CRUSADE
+}
+tengri_pagan_group = {
+	flags_with_emblem_percentage = 33
+	flag_emblem_index_range = { 58 80 }
+	tengri_pagan_reformed = {
+		icon = 27
+		color = { 25 76 217 }
+		country = {
+			cav_to_inf_ratio = 0.25
+			global_regiment_cost = -0.2
+		}
+				country_as_secondary = {
+           			cav_to_inf_ratio = 0.15
+			cavalry_power = 0.1
+	        cavalry_cost = 0.2
+			   
+		}
+		harmonized_modifier = harmonized_tengri
+		can_have_secondary_religion = yes
+		heretic = { OLD_TENGRI }
+	}
+
+
+
+		harmonized_modifier = harmonized_tengri
+	crusade_name = CRUSADE
+}
+
+
+sob_taoist_group = {
+    center_of_religion = 1821
+	flags_with_emblem_percentage = 33
+	flag_emblem_index_range = { 58 80 }
+	
+	
+	religious_schools = {
+		sob_tiandi_school = {
+			potential_invite_scholar = {
+				always = yes
+			}
+
+			# THIS = Nation wanting to invite the scholar, FROM = Nation that follows that school
+			can_invite_scholar = {
+			dip_power = 50
+                				OR = {
+					alliance_with = FROM
+					is_subject_of = FROM
+					overlord_of = FROM
+					reverse_has_opinion = { who = FROM value = 75 }
+				}
+				NOT = { has_country_modifier = sob_tiandi_scholar_modifier }
+			}
+
+			# THIS = Nation wanting to invite the scholar, FORM = Nation that sends scholar
+			on_invite_scholar = {
+				add_dip_power = -50
+				
+				
+					remove_country_modifier = sob_tiandi_scholar_modifier
+					remove_country_modifier = sob_zhengyi_school_modifier
+	remove_country_modifier = sob_ziran_school_modifier
+	remove_country_modifier = icon_sob_haotian_modifier
+	remove_country_modifier = icon_sob_taiyi_modifier
+	remove_country_modifier = icon_sob_zhenwudadi_modifier
+		remove_country_modifier = icon_sob_wufangtiandi_modifier
+	remove_country_modifier = icon_sob_minjian_modifier
+	remove_country_modifier = icon_sob_wenchangdijun_modifier
+	
+	
+	
+				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
+				add_country_modifier = { name = sob_tiandi_scholar_modifier duration = 7300 }
+			}
+
+			# If you don't set this it will expand on_invite_scholar effect which might be super big
+			invite_scholar_modifier_display = sob_tiandi_scholar_modifier
+
+			picture = "GFX_icon_sob_school_tiandi"
+
+			# religion_sub_modifier = no is possible, will hide icon in religious screen
+							legitimacy = 1
+		devotion = 1
+		horde_unity = 1
+		republican_tradition = 1
+		meritocracy = 1
+	 	drill_gain_modifier = 0.75
+		}
+		sob_ziran_school = {
+			potential_invite_scholar = {
+		always = yes
+			}
+
+			# THIS = Nation wanting to invite the scholar, FROM = Nation that follows that school
+			can_invite_scholar = {
+						dip_power = 50
+                				OR = {
+					alliance_with = FROM
+					is_subject_of = FROM
+					overlord_of = FROM
+					reverse_has_opinion = { who = FROM value = 75 }
+				}
+				NOT = { has_country_modifier = sob_ziran_school_modifier }
+			}
+
+			# THIS = Nation wanting to invite the scholar, FORM = Nation that sends scholar
+			on_invite_scholar = {
+				add_dip_power = -50
+						
+				
+					remove_country_modifier = sob_tiandi_scholar_modifier
+					remove_country_modifier = sob_zhengyi_school_modifier
+	remove_country_modifier = sob_ziran_school_modifier
+	remove_country_modifier = icon_sob_haotian_modifier
+	remove_country_modifier = icon_sob_taiyi_modifier
+	remove_country_modifier = icon_sob_zhenwudadi_modifier
+		remove_country_modifier = icon_sob_wufangtiandi_modifier
+	remove_country_modifier = icon_sob_minjian_modifier
+	remove_country_modifier = icon_sob_wenchangdijun_modifier
+	
+				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
+				add_country_modifier = { name = sob_ziran_school_modifier duration = 7300 }
+			}
+
+			# If you don't set this it will expand on_invite_scholar effect which might be super big
+			invite_scholar_modifier_display = sob_ziran_school_modifier
+
+			picture = "GFX_icon_sob_ziran_school"
+	development_cost = -0.1
+	technology_cost = -0.1
+		}
+		sob_zhengyi_school = {
+			potential_invite_scholar = {
+	always = yes
+			}
+
+			# THIS = Nation wanting to invite the scholar, FROM = Nation that follows that school
+			can_invite_scholar = {
+							dip_power = 50
+                				OR = {
+					alliance_with = FROM
+					is_subject_of = FROM
+					overlord_of = FROM
+					reverse_has_opinion = { who = FROM value = 75 }
+				}
+				NOT = { has_country_modifier = sob_zhengyi_school_modifier }
+			}
+
+			# THIS = Nation wanting to invite the scholar, FORM = Nation that sends scholar
+			on_invite_scholar = {
+				add_dip_power = -50
+									remove_country_modifier = sob_tiandi_scholar_modifier
+					remove_country_modifier = sob_zhengyi_school_modifier
+	remove_country_modifier = sob_ziran_school_modifier
+	remove_country_modifier = icon_sob_haotian_modifier
+	remove_country_modifier = icon_sob_taiyi_modifier
+	remove_country_modifier = icon_sob_zhenwudadi_modifier
+		remove_country_modifier = icon_sob_wufangtiandi_modifier
+	remove_country_modifier = icon_sob_minjian_modifier
+	remove_country_modifier = icon_sob_wenchangdijun_modifier
+				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
+				add_country_modifier = { name = sob_zhengyi_school_modifier duration = 7300 }
+			}
+
+			# If you don't set this it will expand on_invite_scholar effect which might be super big
+			invite_scholar_modifier_display = sob_zhengyi_school_modifier
+
+			picture = "GFX_icon_sob_zhengyi_school"
+
+				 	tolerance_heathen = 2
+	 	tolerance_heretic = 3
+		}
+	
+		
+				icon_sob_haotian = {
+			potential_invite_scholar = {
+				always = yes
+			}
+
+			# THIS = Nation wanting to invite the scholar, FROM = Nation that follows that school
+			can_invite_scholar = {
+                			dip_power = 50
+                				OR = {
+					alliance_with = FROM
+					is_subject_of = FROM
+					overlord_of = FROM
+					reverse_has_opinion = { who = FROM value = 75 }
+				}
+				NOT = { has_country_modifier = icon_sob_haotian_modifier }
+			}
+
+			# THIS = Nation wanting to invite the scholar, FORM = Nation that sends scholar
+			on_invite_scholar = {
+				add_dip_power = -50
+								remove_country_modifier = sob_tiandi_scholar_modifier
+					remove_country_modifier = sob_zhengyi_school_modifier
+	remove_country_modifier = sob_ziran_school_modifier
+	remove_country_modifier = icon_sob_haotian_modifier
+	remove_country_modifier = icon_sob_taiyi_modifier
+	remove_country_modifier = icon_sob_zhenwudadi_modifier
+		remove_country_modifier = icon_sob_wufangtiandi_modifier
+	remove_country_modifier = icon_sob_minjian_modifier
+	remove_country_modifier = icon_sob_wenchangdijun_modifier
+				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
+				add_country_modifier = { name = icon_sob_haotian_modifier duration = 7300 }
+			}
+
+			# If you don't set this it will expand on_invite_scholar effect which might be super big
+			invite_scholar_modifier_display = icon_sob_haotian_modifier
+
+			picture = "GFX_icon_icon_sob_haotian"
+
+			# religion_sub_modifier = no is possible, will hide icon in religious screen
+				missionaries = 2
+				 	global_missionary_strength = 0.03
+		}
+						icon_sob_taiyi = {
+			potential_invite_scholar = {
+				always = yes
+			}
+
+			# THIS = Nation wanting to invite the scholar, FROM = Nation that follows that school
+			can_invite_scholar = {
+                			dip_power = 50
+                				OR = {
+					alliance_with = FROM
+					is_subject_of = FROM
+					overlord_of = FROM
+					reverse_has_opinion = { who = FROM value = 75 }
+				}
+				NOT = { has_country_modifier = icon_sob_taiyi_modifier }
+			}
+
+			# THIS = Nation wanting to invite the scholar, FORM = Nation that sends scholar
+			on_invite_scholar = {
+				add_dip_power = -50
+									remove_country_modifier = sob_tiandi_scholar_modifier
+					remove_country_modifier = sob_zhengyi_school_modifier
+	remove_country_modifier = sob_ziran_school_modifier
+	remove_country_modifier = icon_sob_haotian_modifier
+	remove_country_modifier = icon_sob_taiyi_modifier
+	remove_country_modifier = icon_sob_zhenwudadi_modifier
+		remove_country_modifier = icon_sob_wufangtiandi_modifier
+	remove_country_modifier = icon_sob_minjian_modifier
+	remove_country_modifier = icon_sob_wenchangdijun_modifier
+				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
+				add_country_modifier = { name = icon_sob_taiyi_modifier duration = 7300 }
+			}
+
+			# If you don't set this it will expand on_invite_scholar effect which might be super big
+			invite_scholar_modifier_display = icon_sob_taiyi_modifier
+
+			picture = "GFX_icon_icon_sob_taiyi"
+
+			# religion_sub_modifier = no is possible, will hide icon in religious screen
+                   	tolerance_own = 3
+				   	culture_conversion_cost = -0.25
+		}
+		
+				icon_sob_zhenwudadi = {
+			potential_invite_scholar = {
+				always = yes
+			}
+
+			# THIS = Nation wanting to invite the scholar, FROM = Nation that follows that school
+			can_invite_scholar = {
+    			dip_power = 50
+                				OR = {
+					alliance_with = FROM
+					is_subject_of = FROM
+					overlord_of = FROM
+					reverse_has_opinion = { who = FROM value = 75 }
+				}
+				NOT = { has_country_modifier = icon_sob_zhenwudadi_modifier }
+			}
+
+			# THIS = Nation wanting to invite the scholar, FORM = Nation that sends scholar
+			on_invite_scholar = {
+				add_dip_power = -50
+								remove_country_modifier = sob_tiandi_scholar_modifier
+					remove_country_modifier = sob_zhengyi_school_modifier
+	remove_country_modifier = sob_ziran_school_modifier
+	remove_country_modifier = icon_sob_haotian_modifier
+	remove_country_modifier = icon_sob_taiyi_modifier
+	remove_country_modifier = icon_sob_zhenwudadi_modifier
+		remove_country_modifier = icon_sob_wufangtiandi_modifier
+	remove_country_modifier = icon_sob_minjian_modifier
+	remove_country_modifier = icon_sob_wenchangdijun_modifier
+				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
+				add_country_modifier = { name = icon_sob_zhenwudadi_modifier duration = 7300 }
+			}
+
+			# If you don't set this it will expand on_invite_scholar effect which might be super big
+			invite_scholar_modifier_display = icon_sob_zhenwudadi_modifier
+
+			picture = "GFX_icon_icon_sob_zhenwudadi"
+
+			# religion_sub_modifier = no is possible, will hide icon in religious screen
+				discipline = 0.05
+				army_tradition = 1
+		}
+		
+		
+				icon_sob_wufangtiandi = {
+			potential_invite_scholar = {
+				always = yes
+			}
+
+			# THIS = Nation wanting to invite the scholar, FROM = Nation that follows that school
+			can_invite_scholar = {
+                			dip_power = 50
+                				OR = {
+					alliance_with = FROM
+					is_subject_of = FROM
+					overlord_of = FROM
+					reverse_has_opinion = { who = FROM value = 75 }
+				}
+				NOT = { has_country_modifier = icon_sob_wufangtiandi_modifier }
+			}
+
+			# THIS = Nation wanting to invite the scholar, FORM = Nation that sends scholar
+			on_invite_scholar = {
+				add_dip_power = -50
+									remove_country_modifier = sob_tiandi_scholar_modifier
+					remove_country_modifier = sob_zhengyi_school_modifier
+	remove_country_modifier = sob_ziran_school_modifier
+	remove_country_modifier = icon_sob_haotian_modifier
+	remove_country_modifier = icon_sob_taiyi_modifier
+	remove_country_modifier = icon_sob_zhenwudadi_modifier
+		remove_country_modifier = icon_sob_wufangtiandi_modifier
+	remove_country_modifier = icon_sob_minjian_modifier
+	remove_country_modifier = icon_sob_wenchangdijun_modifier
+				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
+				add_country_modifier = { name = icon_sob_wufangtiandi_modifier duration = 7300 }
+			}
+
+			# If you don't set this it will expand on_invite_scholar effect which might be super big
+			invite_scholar_modifier_display = icon_sob_wufangtiandi_modifier
+
+			picture = "GFX_icon_icon_sob_wufangtiandi"
+
+			# religion_sub_modifier = no is possible, will hide icon in religious screen
+				global_unrest = -3
+				harsh_treatment_cost = -0.25
+		}
+		
+		
+				icon_sob_wenchangdijun = {
+			potential_invite_scholar = {
+				always = yes
+			}
+
+			# THIS = Nation wanting to invite the scholar, FROM = Nation that follows that school
+			can_invite_scholar = {
+                			dip_power = 50
+                				OR = {
+					alliance_with = FROM
+					is_subject_of = FROM
+					overlord_of = FROM
+					reverse_has_opinion = { who = FROM value = 75 }
+				}
+				NOT = { has_country_modifier = icon_sob_wenchangdijun_modifier }
+			}
+
+			# THIS = Nation wanting to invite the scholar, FORM = Nation that sends scholar
+			on_invite_scholar = {
+				add_dip_power = -50
+									remove_country_modifier = sob_tiandi_scholar_modifier
+					remove_country_modifier = sob_zhengyi_school_modifier
+	remove_country_modifier = sob_ziran_school_modifier
+	remove_country_modifier = icon_sob_haotian_modifier
+	remove_country_modifier = icon_sob_taiyi_modifier
+	remove_country_modifier = icon_sob_zhenwudadi_modifier
+		remove_country_modifier = icon_sob_wufangtiandi_modifier
+	remove_country_modifier = icon_sob_minjian_modifier
+	remove_country_modifier = icon_sob_wenchangdijun_modifier
+				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
+				add_country_modifier = { name = icon_sob_wenchangdijun_modifier duration = 7300 }
+			}
+
+			# If you don't set this it will expand on_invite_scholar effect which might be super big
+			invite_scholar_modifier_display = icon_sob_wenchangdijun_modifier
+
+			picture = "GFX_icon_icon_sob_wenchangdijun"
+
+			# religion_sub_modifier = no is possible, will hide icon in religious screen
+				development_cost = -0.10
+				idea_cost = -0.1
+		}
+		
+		
+				icon_sob_minjian = {
+			potential_invite_scholar = {
+				always = yes
+			}
+
+			# THIS = Nation wanting to invite the scholar, FROM = Nation that follows that school
+			can_invite_scholar = {
+                			dip_power = 50
+                				OR = {
+					alliance_with = FROM
+					is_subject_of = FROM
+					overlord_of = FROM
+					reverse_has_opinion = { who = FROM value = 75 }
+				}
+				NOT = { has_country_modifier = icon_sob_minjian_modifier }
+			}
+
+			# THIS = Nation wanting to invite the scholar, FORM = Nation that sends scholar
+			on_invite_scholar = {
+
+				add_dip_power = -50
+									remove_country_modifier = sob_tiandi_scholar_modifier
+					remove_country_modifier = sob_zhengyi_school_modifier
+	remove_country_modifier = sob_ziran_school_modifier
+	remove_country_modifier = icon_sob_haotian_modifier
+	remove_country_modifier = icon_sob_taiyi_modifier
+	remove_country_modifier = icon_sob_zhenwudadi_modifier
+		remove_country_modifier = icon_sob_wufangtiandi_modifier
+	remove_country_modifier = icon_sob_minjian_modifier
+	remove_country_modifier = icon_sob_wenchangdijun_modifier
+				
+				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
+				add_country_modifier = { name = icon_sob_minjian_modifier duration = 7300 }
+			}
+
+			# If you don't set this it will expand on_invite_scholar effect which might be super big
+			invite_scholar_modifier_display = icon_sob_minjian_modifier
+
+			picture = "GFX_icon_icon_sob_minjian"
+
+			# religion_sub_modifier = no is possible, will hide icon in religious screen
+				improve_relation_modifier = 0.33
+				all_power_cost = -0.015
+		}
+		
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+	
+	
+	
+	sob_taoist_religion = {
+	icon = 9
+
+	allowed_conversion = {
+		}
+	    allowed_center_conversion = {
+			confucianism
+			mahayana
+			vajrayana
+			hinduism
+			buddhism
+			animism
+		}
+		country = {
+institution_spread_from_true_faith = 0.33
+innovativeness_gain = 0.5
+		}
+		country_as_secondary = {
+institution_spread_from_true_faith = 0.15
+innovativeness_gain = 0.33
+		}
+		province = {
+			local_missionary_strength = -0.02
+		}
+		will_get_center = { #Refered to even for initial CoR Spawn
+          any_owned_province = {
+            NOT = { religion = ROOT}
+			}
+		}
+		misguided_heretic = yes
+		heretic = { OLD_BELIEVER MOLOKAN DUKHOBOR KHLYST SKOPTSY ICONOCLAST }
+		
+		papacy = {
+			papal_tag = XTS
+			election_cost = 5
+			seat_of_papacy = 1816 # rome
+			
+			levy_church_tax = {
+				cost = 50
+				potential = {
+					NOT = { tag = XTS }
+				}
+				allow = {
+					NOT = { war_with = XTS }
+					NOT = { has_country_modifier = papal_sanction_for_church_taxes }
+				}
+				effect = {
+				add_reform_desire = 0.015
+					add_country_modifier = {
+						name = "papal_sanction_for_church_taxes"
+						duration = 7300
+					}
+				}
+				ai_will_do = {
+					factor = 1
+				}				
+			}			
+			bless_monarch = {
+				cost = 50
+				potential = {
+					NOT = { tag = XTS }
+				}
+				allow = {
+					NOT = { war_with = XTS }
+					NOT = { prestige = 100 }
+					NOT = { has_country_modifier = papal_blessing }
+				}
+				effect = {
+				add_reform_desire = 0.015
+					add_country_modifier = {
+						name = "papal_blessing"
+						duration = 7300
+					}
+				}
+				ai_will_do = {
+					factor = 1
+				}
+			}
+			indulgence_for_sins = {
+				cost = 50
+				potential = {
+					government = monarchy
+					NOT = { tag = XTS }
+				}
+				allow = {
+					NOT = { war_with = XTS }
+					NOT = { legitimacy = 100 }
+					NOT = { has_country_modifier = papal_indulgence }
+				}
+				effect = {
+				add_reform_desire = 0.015
+					add_country_modifier = {
+						name = "papal_indulgence"
+						duration = 7300
+					}
+				}
+				ai_will_do = {
+					factor = 1
+				}
+			}	
+			local_saint = {
+				cost = 100
+				potential = {
+					NOT = { tag = XTS }
+				}
+				allow = {
+					NOT = { war_with = XTS }
+					NOT = { stability = 3 }
+				}
+				effect = {
+				add_reform_desire = 0.015
+					add_stability = 1
+				}
+				ai_will_do = {
+					factor = 1
+					modifier = {
+						factor = 2
+						NOT = { stability = 0 }
+					}
+				}
+			}
+			forgiveness_for_usury = {
+				cost = 50
+				potential = {
+					NOT = { tag = XTS }
+				}
+				allow = {
+					NOT = { war_with = XTS }
+					NOT = { has_country_modifier = usury_forgiven }
+				}
+				effect = {
+				add_reform_desire = 0.015
+					add_country_modifier = {
+						name = "usury_forgiven"
+						duration = 7300
+					}
+				}
+				ai_will_do = {
+					factor = 1
+					modifier = {
+						factor = 0
+						NOT = { num_of_loans = 1 }
+					}
+				}
+			}			
+			proclaim_holy_war = {
+				cost = 50
+				potential = {
+					NOT = { tag = XTS }
+				}
+				allow = {
+					is_at_war = yes
+					NOT = { war_with = XTS }
+					NOT = { has_country_modifier = papal_sanction_for_holy_war }
+				}
+				effect = {
+				add_reform_desire = 0.015
+					add_country_modifier = {
+						name = "papal_sanction_for_holy_war"
+						duration = 7300
+					}
+				}
+				ai_will_do = {
+					factor = 1
+					modifier = {
+						factor = 0
+						manpower_percentage = 0.5
+					}
+				}
+			}
+			send_papal_legate = {
+				cost = 50
+				potential = {
+					NOT = { tag = XTS }
+				}
+				allow = {
+					NOT = { war_with = XTS }
+					NOT = { has_country_modifier = papal_legate }
+				}
+				effect = {
+				add_reform_desire = 0.015
+					add_country_modifier = {
+						name = "papal_legate"
+						duration = 7300
+					}
+				}
+				ai_will_do = {
+					factor = 1
+				}
+			}	
+			sanction_commercial_monopoly = {
+				cost = 50
+				potential = {
+					NOT = { tag = XTS }
+				}
+				allow = {
+					NOT = { war_with = XTS }
+					NOT = { mercantilism = 100 }
+				}
+				effect = {
+				add_reform_desire = 0.015
+					add_mercantilism = 1
+				}
+				ai_will_do = {
+					factor = 1
+					modifier = {
+						factor = 0
+						NOT = { has_idea_group = trade_ideas }
+					}
+				}
+			}			
+		}
+		
+		on_convert = {
+		
+		
+			change_religion = sob_taoist_religion
+			add_prestige = 15
+															capital_scope = { area = {
+			change_religion = sob_taoist_religion
+			}
+			}
+
+	
+	
+					random_owned_province = {
+						limit = {
+                         NOT = { religion = ROOT
+						 }
+						 continent = asia
+
+						}
+						change_religion = sob_taoist_religion
+						add_reform_center = sob_taoist_religion
+					}
+				
+
+			remove_country_modifier = the_test_act
+			remove_country_modifier = superintendent_office
+			remove_country_modifier = the_popery_act
+			
+			add_country_modifier = {
+				name = "expansionist_country"
+				duration = 3650
+			}			
+		
+		}
+        	harmonized_modifier =   harmonized_taoist
+	
+	
+	}
+
+	harmonized_modifier =   harmonized_taoist
+	
+	
+
+}
+zoroastrian_group = {
+	flag_emblem_index_range = { 110 110 }
+	sob_zoroastrian = {
+		icon = 26
+		color = { 127 178 51 }
+		province = {
+			local_missionary_strength = -0.02
+		}
+		country = {
+			tolerance_own = 2
+			merchants = 2
+		}
+		country_as_secondary = {
+			merchants = 1
+			tolerance_own = 1
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		date = 9999.12.30 # act of supremacy
+			harmonized_modifier = harmonized_sobmingjiao
+		heretic = { MAZDAKI MANICHEAN }	
+	}
+	
+	harmonized_modifier = harmonized_zoroastrian_group
+	
+	crusade_name = HOLY_WAR
+	
+}

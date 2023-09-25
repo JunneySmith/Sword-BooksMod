@@ -1,0 +1,287 @@
+china_dyansty_cycle = {
+	potential = {
+	NOT =  {has_global_flag = sob_chinese_american_est}
+	NOT = { has_global_flag = sob_reform_mode_setted_no_gov_mode_2}
+		NOT = { has_country_flag = had_revolution }
+		OR = {culture_group = east_asian  culture_group = chinese_group }
+ NOT = { colony = 5 }
+  NOT = { self_governing_colony = 5 }
+   NOT = { private_enterprise = 5 }
+      NOT = { crown_colony = 5 }
+ 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+	value = 200
+	NOT = {superregion = china_superregion}
+	OR = {
+	has_terrain = grasslands
+	has_terrain = farmlands
+		has_terrain = drylands
+		AND = {
+		owner = {
+		has_estate = estate_sobmongol
+		}
+		has_terrain = steppe
+		}
+	}
+}
+ 
+ 
+	 is_emperor_of_china = yes
+	}
+	
+	
+	can_start = {
+	
+			NOT = {
+				   estate_influence = {
+				estate = estate_sobshimin
+				influence = 50
+				}
+			
+			}
+      			   NOT = { 
+			   estate_influence = {
+				estate = estate_burghers
+				influence = 50
+				}
+			}
+	}
+	
+	can_stop = {
+	OR = {
+
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+	value = 200
+	NOT = {superregion = china_superregion}
+	OR = {
+	has_terrain = grasslands
+	has_terrain = farmlands
+		has_terrain = drylands
+		AND = {
+		owner = {
+		has_estate = estate_sobmongol
+		}
+		has_terrain = steppe
+		}
+	}
+}
+
+			self_governing_colony = 5 
+private_enterprise = 5 
+  crown_colony = 5 
+ 
+				colony = 5
+				}
+			
+			
+	
+			
+			
+			
+
+			
+	}
+			
+	
+	
+	
+	progress = {
+		modifier = {
+			factor = 0.075
+			ai = no
+			OR = {
+				NOT = {estate_territory = {
+					estate = estate_sobshimin
+					territory = 10
+				
+				
+				}
+				}
+								NOT = {estate_territory = {
+					estate = estate_sobshimin
+					territory = 10
+				
+				
+				}
+				}
+				AND = {
+				 has_estate = estate_burghers
+			   NOT = { 
+			   estate_influence = {
+				estate = estate_burghers
+				influence = 50
+				}}
+				}
+						 NOT = { 	 estate_influence = {
+				estate = estate_sobshimin
+				influence = 50
+				
+			}
+			}
+			}
+			
+		}
+		modifier = {
+			factor = -0.03
+
+				custom_trigger_tooltip = {
+				tooltip = sob_confu_has_reformed_outland		      
+has_country_flag = sob_confu_has_reformed_outland
+		}
+		}
+		
+				modifier = {
+			factor = 0.05
+		NOT = {			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+	value = 200
+	NOT = {superregion = china_superregion}
+	OR = {
+	has_terrain = grasslands
+	has_terrain = farmlands
+		has_terrain = drylands
+		AND = {
+		owner = {
+		has_estate = estate_sobmongol
+		}
+		has_terrain = steppe
+		}
+	}
+}
+
+}
+
+		}
+		
+	  modifier = {
+			factor = -0.05
+			730 = {
+			has_great_project = {
+				type = monument
+				tier = 4
+			}
+			}
+
+		}
+
+				modifier = {
+			factor = -0.01
+			 estate_influence = {
+				estate = estate_sobshimin
+				influence = 40
+				
+			}
+		}
+
+		
+		
+	modifier = {
+			factor = 0.075
+			ai = yes
+			
+			   NOT = { 
+			   estate_influence = {
+				estate = estate_burghers
+				influence = 50
+				}}
+					   NOT = { 		 estate_influence = {
+				estate = estate_sobshimin
+				influence = 50
+				
+			
+			}
+			}
+		}
+		modifier = {
+			factor = -0.015
+			is_at_war = no
+		}
+		
+		modifier = {
+			factor = 0.025
+			is_at_war = yes
+		}
+		
+		modifier = {
+			factor = -0.01
+			stability = 3
+		}
+		modifier = {
+			factor = -0.08
+			OR = {
+			colony = 1
+						self_governing_colony = 1
+private_enterprise = 1 
+  crown_colony = 1 
+  }
+ 
+	
+		}
+		modifier = {
+			factor = -0.5
+									OR = {
+			colony = 3
+						self_governing_colony = 3
+private_enterprise = 3
+  crown_colony = 3 
+  }
+		}
+		modifier = {
+			factor = 0.02
+			war_exhaustion = 5
+		} 	
+
+	}
+	
+	can_end = {
+	OR = {
+		AND = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+	value = 200
+	NOT = {superregion = china_superregion}
+	OR = {
+	has_terrain = grasslands
+	has_terrain = farmlands
+		has_terrain = drylands
+		AND = {
+		owner = {
+		has_estate = estate_sobmongol
+		}
+		has_terrain = steppe
+		}
+	}
+}
+				custom_trigger_tooltip = {
+				tooltip = sob_confu_has_reformed_outland		      
+has_country_flag = sob_confu_has_reformed_outland
+		}
+}
+
+    
+		
+									OR = {
+			colony = 5
+						self_governing_colony = 5
+private_enterprise = 5
+  crown_colony = 5 
+  }
+				
+				NOT = {num_of_cities = 20}
+				}
+	}
+	
+
+	modifier = {
+		global_unrest = 10
+		imperial_mandate = -0.5
+	}	
+	
+	
+	on_monthly = {
+		events = {
+		
+		}
+		random_events = {
+			1000 = 0
+			#
+		}
+	}
+}

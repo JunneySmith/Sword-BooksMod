@@ -1,0 +1,175 @@
+sob_quefa_baohu_shibing_dis = {
+	potential = {
+
+has_country_flag = sob_quefa_baohu_shibing
+
+		NOT = {has_country_modifier = confucianism_reform}
+	  
+	}
+	
+	
+	can_start = {
+
+has_country_flag = sob_quefa_baohu_shibing
+
+
+
+	}
+	
+	can_stop = {
+	OR = {
+	AND = {
+ MIL = 5
+ always = no
+ }
+							custom_trigger_tooltip = {
+				tooltip = sob_society_warrior_reform_tooltip_2
+has_country_flag = sob_comestate_sobwarriors
+}
+}
+	}
+	
+	
+	progress = {
+
+		modifier = {
+			factor = 0.05
+			NOT = {MIL = 5}
+
+	num_of_owned_provinces_with = {
+							has_estate = estate_sobshishen
+							value = 5
+						}
+		  
+		}
+		modifier = {
+			factor = 0.025
+					NOT = {MIL = 5}
+			
+						estate_influence = {
+			estate = estate_sobshishen
+			influence = 70
+		    }
+
+
+		
+		}
+		modifier = {
+			factor = 0.025
+					NOT = {MIL = 5}
+			is_at_war = no
+			NOT = {   has_country_modifier = army_household_title_generated}
+		}
+		modifier = {
+			factor = 0.03
+					NOT = {MIL = 5}
+			is_at_war = no
+		  has_country_modifier = army_household_title_generated
+		  NOT = { army_tradition = 80}
+		}
+		
+		modifier = {
+			factor = 0.1
+					NOT = {MIL = 5}
+			NOT ={			estate_influence = {
+			estate = estate_sobwarriors
+			influence = 50
+		    }
+			}
+		}
+		modifier = {
+			factor = -0.185
+            ai = yes
+		}
+
+
+
+			modifier = {
+			factor = 0.012
+					NOT = {MIL = 5}
+		NOT = {	estate_influence = {
+			estate = estate_sobshishen
+			influence = 70
+		    }
+			}
+	estate_influence = {
+			estate = estate_sobshishen
+			influence = 50
+		    }
+
+		}
+		
+		
+
+				modifier = {
+			factor = -0.04
+			OR = {
+  has_country_modifier = army_household_title_generated
+  army_tradition = 75
+  MIL = 5
+  }
+  } 
+		
+
+		
+		modifier = {
+			factor = -0.015
+			AND = {
+			estate_influence = {
+			estate = estate_sobwarriors
+			influence = 50
+		    }
+			}
+		}
+		modifier = {
+			factor = -0.01
+         		 OR = {
+
+ has_church_aspect = wuju_kuozhao_aspect 
+ has_church_aspect = junzi_liuyi_aspect 
+ 
+ }
+		}
+		modifier = {
+			factor = -0.03
+			is_at_war = yes
+		}
+			
+	}
+	
+	can_end = {
+	OR = {
+	has_country_modifier = confucianism_reform
+	AND = {
+ MIL = 5
+ months_of_ruling = 60
+ }
+							custom_trigger_tooltip = {
+				tooltip = sob_society_warrior_reform_tooltip_2
+has_country_flag = sob_comestate_sobwarriors
+}
+
+}
+	}
+	
+
+	modifier = {
+	global_unrest = 1
+ 	min_autonomy = 15
+		global_manpower_modifier = -0.5
+		imperial_mandate = -0.1
+		manpower_recovery_speed = -0.05
+				 	land_forcelimit_modifier = -0.05
+		development_cost = 0.1
+	}	
+	
+	on_monthly = {
+		events = {
+		
+		}
+		random_events = {
+			1000 = 0
+			#
+		}
+	}
+}

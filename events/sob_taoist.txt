@@ -1,0 +1,422 @@
+namespace = sob_chinese_school_events
+
+country_event = {
+	id = sob_chinese_school_events.21
+	title = sob_chinese_school_events.20.t
+	desc = sob_chinese_school_events.20.d
+	picture = MYSTIC_IN_PRAYER_eventPicture
+	 is_triggered_only = yes
+	trigger = {
+		has_dlc = "Cradle of Civilization"
+		religion_group = sob_taoist_group
+        ai = no
+	}
+	
+	option = {
+		name = sob_chinese_school_events.20.b #Hanafi
+		trigger = {
+
+			ai = no
+		}
+			set_religious_school = {
+				group = sob_taoist_group
+				school = sob_zhengyi_school
+			}
+	}
+	option = {
+		name = sob_chinese_school_events.20.c #Hanbali
+		trigger = {
+
+			ai = no
+		}
+			set_religious_school = {
+				group = sob_taoist_group
+				school = sob_ziran_school
+			}
+	}
+	option = {
+		name = sob_chinese_school_events.20.dd #Maliki
+		trigger = {
+	
+			ai = no
+		}
+			set_religious_school = {
+				group = sob_taoist_group
+				school = sob_tiandi_school
+			}
+	}
+	
+	
+	
+	
+	option = {
+		name = sob_chinese_school_events.20.e #Hanafi
+		trigger = {
+
+			ai = no
+		}
+			set_religious_school = {
+				group = sob_taoist_group
+				school = icon_sob_haotian
+			}
+	}
+	
+	
+	option = {
+		name = sob_chinese_school_events.20.f #Hanafi
+		trigger = {
+
+			ai = no
+		}
+			set_religious_school = {
+				group = sob_taoist_group
+				school = icon_sob_taiyi
+			}
+	}
+	
+	
+	option = {
+		name = sob_chinese_school_events.20.g #Hanafi
+		trigger = {
+
+			ai = no
+		}
+			set_religious_school = {
+				group = sob_taoist_group
+				school = icon_sob_zhenwudadi
+			}
+	}
+	
+	
+	
+	option = {
+		name = sob_chinese_school_events.20.h #Hanafi
+		trigger = {
+
+			ai = no
+		}
+			set_religious_school = {
+				group = sob_taoist_group
+				school = icon_sob_wufangtiandi
+			}
+	}
+	
+	
+	
+	option = {
+		name = sob_chinese_school_events.20.i #Hanafi
+		trigger = {
+
+			ai = no
+		}
+			set_religious_school = {
+				group = sob_taoist_group
+				school = icon_sob_wenchangdijun
+			}
+	}
+	
+	
+	option = {
+		name = sob_chinese_school_events.20.j #Hanafi
+		trigger = {
+
+			ai = no
+		}
+			set_religious_school = {
+				group = sob_taoist_group
+				school = icon_sob_minjian
+			}
+	}
+	
+}
+country_event = {
+	id = sob_chinese_school_events.20
+	title = sob_chinese_school_events.20.t
+	desc = sob_chinese_school_events.20.d
+	picture = MYSTIC_IN_PRAYER_eventPicture
+	
+	trigger = {
+		has_dlc = "Cradle of Civilization"
+		religion_group = sob_taoist_group
+        ai = yes
+			has_religious_school = no
+		
+	}
+	immediate = {
+	set_country_flag = sob_setted_ai_school
+	}
+
+		mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = sob_chinese_school_events.20.b #Hanafi
+		trigger = {
+
+			ai = yes
+		}
+		ai_chance = { 	factor = 11
+				modifier = {
+			factor = 2000
+		 NOT = {
+		 any_country = {
+		  	
+
+religious_school = {
+	group = sob_taoist_group
+	school = sob_zhengyi_school
+}
+		 
+		 }
+		 
+		 }
+		}
+		
+		
+		}
+			set_religious_school = {
+				group = sob_taoist_group
+				school = sob_zhengyi_school
+			}
+	}
+	option = {
+		name = sob_chinese_school_events.20.c #Hanbali
+		trigger = {
+
+			ai = yes
+		}
+				ai_chance = { 	factor = 11
+				modifier = {
+			factor = 2000
+		 NOT = {
+		 any_country = {
+		  	
+
+religious_school = {
+	group = sob_taoist_group
+	school = sob_ziran_school
+}
+		 
+		 }
+		 
+		 }
+		}
+		
+		
+		}
+			set_religious_school = {
+				group = sob_taoist_group
+				school = sob_ziran_school
+			}
+	}
+	option = {
+		name = sob_chinese_school_events.20.dd #Maliki
+		trigger = {
+	
+			ai = yes
+		}
+		ai_chance = { 	factor = 11}
+			set_religious_school = {
+				group = sob_taoist_group
+				school = sob_tiandi_school
+			}
+	}
+	
+	
+	
+	
+	option = {
+		name = sob_chinese_school_events.20.e #Hanafi
+		trigger = {
+
+			ai = yes
+		}
+						ai_chance = { 	factor = 11
+				modifier = {
+			factor = 2000
+		 NOT = {
+		 any_country = {
+		  	
+
+religious_school = {
+	group = sob_taoist_group
+	school = icon_sob_haotian
+}
+		 
+		 }
+		 
+		 }
+		}
+		
+		
+		}
+			set_religious_school = {
+				group = sob_taoist_group
+				school = icon_sob_haotian
+			}
+	}
+	
+	
+	option = {
+		name = sob_chinese_school_events.20.f #Hanafi
+		trigger = {
+
+			ai = yes
+		}
+								ai_chance = { 	factor = 11
+				modifier = {
+			factor = 2000
+		 NOT = {
+		 any_country = {
+		  	
+
+religious_school = {
+	group = sob_taoist_group
+	school = icon_sob_taiyi
+}
+		 
+		 }
+		 
+		 }
+		}
+		
+		
+		}
+			set_religious_school = {
+				group = sob_taoist_group
+				school = icon_sob_taiyi
+			}
+	}
+	
+	
+	option = {
+		name = sob_chinese_school_events.20.g #Hanafi
+		trigger = {
+
+			ai = yes
+		}
+										ai_chance = { 	factor = 11
+				modifier = {
+			factor = 2000
+		 NOT = {
+		 any_country = {
+		  	
+
+religious_school = {
+	group = sob_taoist_group
+	school = icon_sob_zhenwudadi
+}
+		 
+		 }
+		 
+		 }
+		}
+		
+		
+		}
+			set_religious_school = {
+				group = sob_taoist_group
+				school = icon_sob_zhenwudadi
+			}
+	}
+	
+	
+	
+	option = {
+		name = sob_chinese_school_events.20.h #Hanafi
+		trigger = {
+
+			ai = yes
+		}
+												ai_chance = { 	factor = 11
+				modifier = {
+			factor = 2000
+		 NOT = {
+		 any_country = {
+		  	
+
+religious_school = {
+	group = sob_taoist_group
+	school = icon_sob_wufangtiandi
+}
+		 
+		 }
+		 
+		 }
+		}
+		
+		
+		}
+			set_religious_school = {
+				group = sob_taoist_group
+				school = icon_sob_wufangtiandi
+			}
+	}
+	
+	
+	
+	option = {
+		name = sob_chinese_school_events.20.i #Hanafi
+		trigger = {
+
+			ai = yes
+		}
+														ai_chance = { 	factor = 11
+				modifier = {
+			factor = 2000
+		 NOT = {
+		 any_country = {
+		  	
+
+religious_school = {
+	group = sob_taoist_group
+	school = icon_sob_wenchangdijun
+}
+		 
+		 }
+		 
+		 }
+		}
+		
+		
+		}
+			set_religious_school = {
+				group = sob_taoist_group
+				school = icon_sob_wenchangdijun
+			}
+	}
+	
+	
+	option = {
+		name = sob_chinese_school_events.20.j #Hanafi
+		trigger = {
+
+			ai = yes
+		}
+																ai_chance = { 	factor = 11
+				modifier = {
+			factor = 2000
+		 NOT = {
+		 any_country = {
+		  	
+
+religious_school = {
+	group = sob_taoist_group
+	school = icon_sob_minjian
+}
+		 
+		 }
+		 
+		 }
+		}
+		
+		
+		}
+			set_religious_school = {
+				group = sob_taoist_group
+				school = icon_sob_minjian
+			}
+	}
+	
+}
+

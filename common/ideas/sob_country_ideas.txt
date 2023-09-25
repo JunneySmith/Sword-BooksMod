@@ -1,0 +1,230 @@
+HHE_ideas = {
+	start = {
+	 idea_cost = -0.1
+		reform_progress_growth = 0.2
+	}
+
+	bonus = {
+		candidate_random_bonus = 1
+		legitimacy = 1
+		meritocracy =1
+	}
+	
+	trigger = {
+	
+		tag = HHE
+	}
+	free = yes		#will be added at load.
+	
+	sob_guangfu = {
+    enemy_core_creation = 3
+	}
+	sob_liansheng_republic = {
+		yearly_absolutism = 1
+		republican_tradition  = 0.5
+	}
+	sob_junzhengfu= {
+		discipline = 0.05
+	}
+	sob_jianbianling = {
+		diplomatic_reputation = 2
+		prestige = 1
+	}
+	sob_sanminzhuyi = {
+		land_morale = 0.2
+		development_cost = -0.1
+		global_institution_spread =0.15
+	}
+	sob_guozutongyuanlun = {
+	culture_conversion_cost = -0.25
+	}
+	sob_junguomin_dongyuan = {
+	drill_gain_modifier = 0.33
+	drill_decay_modifier = -1
+	}
+}
+SOB_MGE_ideas = {
+	start = {
+		may_establish_frontier = yes
+		cavalry_power = 0.20
+	}
+	bonus = {
+		governing_capacity =120 
+	}
+	trigger = {
+			AND = {
+		tag = MGE
+		any_country = {
+		overlord_of = ROOT
+		is_emperor_of_china = yes
+		
+		}
+		
+		}
+	}
+	free = yes
+	
+	yua_da_zai_qian_yuan = {
+		core_creation = -0.25
+	}
+	yua_a_savage_kingdom_holy_and_enchanted = {
+		land_morale = 0.1
+	}
+	yua_the_three_teachings_and_nine_schools_respected = {
+		technology_cost = -0.1
+	}
+	yua_keshik_and_weijun = {
+		shock_damage = 0.1
+	}
+	yua_a_thousand_miles_as_if_at_home = {
+		movement_speed = 0.15
+		envoy_travel_time = -0.1
+	}
+	yua_sino_mongol_administration = {
+		administrative_efficiency = 0.05
+	}
+	yua_pax_mongolica = {
+		global_trade_goods_size_modifier = 0.1
+	}
+}
+XTD_ideas = {
+	start = {
+	    garrison_size = 1
+		idea_cost = -0.10
+	}
+
+	bonus = {
+		diplomatic_reputation = 2
+	}
+
+	trigger = {
+		always = no
+	}
+	free = yes		#will be added at load.
+
+	siberian_frontier = {
+		may_establish_frontier = yes
+		auto_explore_adjacent_to_colony = yes
+	}
+	firearm_training = {
+		infantry_power = 0.2
+		shock_damage_received = -0.05
+	}
+	nine_garrisons_of_the_great_wall_chi = {
+		defensiveness = 0.2
+		mil_tech_cost_modifier = -0.025
+	}
+	revived_three_grand_divisions = {
+		discipline = 0.05
+	}
+	order_of_four_occupations = {
+		production_efficiency = 0.10
+		global_trade_goods_size_modifier = 0.1
+	}
+	single_whip_law_chi = {
+		global_tax_modifier = 0.10
+		yearly_corruption = -0.02
+	}
+	the_red_cannon_chi = {
+		extra_manpower_at_religious_war = yes
+		artillery_power = 0.1
+		leader_land_fire = 1
+	}
+}
+
+
+NPS_ideas = {
+	start = {
+	 			idea_cost = -0.1
+				
+				auto_explore_adjacent_to_colony = yes
+		may_establish_frontier = yes
+	}
+
+	bonus = {
+		discipline = 0.05
+	}
+
+	trigger = {
+	OR = {
+		tag = NPS
+		tag = XSA
+
+		}
+	}
+	free = yes		#will be added at load.
+	sob_zhuzibaijia_group_idea = {
+        technology_cost = -0.1
+
+	}
+	sob_putianzhixia_group_idea = {
+administrative_efficiency = 0.1
+	}
+	sob_shuaituzhibin_group_idea = {
+		diplomatic_reputation = 2
+	}
+
+	sob_shiyeanmin_group_idea = {
+development_cost = -0.2
+	}
+		sob_wuweisheji_group_idea = {
+		 	local_amount_of_banners = 0.1
+			harmonization_speed = 1
+	}
+	sob_chongzhulongji_idea = {
+
+land_morale = 0.15
+	}
+	sob_shijiediguo_idea = {
+		naval_morale = 0.15
+		naval_tradition_from_trade = 1
+	}
+}
+
+PRC_ideas = {
+	start = {
+	 idea_cost = -0.1
+	governing_capacity_modifier = 0.25
+	}
+
+	bonus = {
+    yearly_absolutism = 1
+	}
+	
+	trigger = {
+	OR = {
+		tag = PRC
+		tag = XCH
+		tag = XNM
+		}
+	}
+	free = yes		#will be added at load.
+	
+	sob_minzhugemingjichengren = {
+	max_absolutism = 40
+    republican_tradition  = 0.5
+	}
+	sob_renmingongheguo = {
+	candidate_random_bonus =1
+       election_cycle = 2
+	}
+	sob_renminjundui= {
+		discipline = 0.05
+	}
+	sob_gaigekaifang = {
+		development_cost = -0.1
+
+	}
+	sob_baxiangguiding = {
+		yearly_corruption = -0.35
+	}
+	sob_minzupingdeng = {
+   years_of_nationalism = -10
+   no_religion_penalty = yes
+	}
+
+	sob_anti_xuwuzhuyi = {
+	land_morale = 0.2
+    administrative_efficiency = 0.1
+	}
+}

@@ -1,0 +1,22 @@
+bookmark =
+{
+	name = "SOB_ZUIHOUXIWANG"
+	desc = "SOB_ZUIHOUXIWANG_DESC"
+	date = 1682.11.11
+	
+	country = CZH
+	country = QNG
+	country = MNG
+	
+#	effect = {
+#		#Country 1
+#		SWE = {
+#			add_stability = 4
+#		}
+#		
+#		#Province 1
+#		1 = {
+#			add_base_tax = 5
+#		}
+#	}
+}

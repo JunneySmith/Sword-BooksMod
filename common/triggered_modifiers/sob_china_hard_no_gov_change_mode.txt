@@ -1,0 +1,73 @@
+sob_sob_hard_gov_no_1 = {
+	potential = { always = no
+     	
+  has_country_flag = sob_reform_mode_setted_no_gov_mode_1
+	has_country_flag = sob_keju_shicigefu
+	NOT = { has_country_flag =sob_all_land_for_sobshimin}
+	}
+	trigger = {	
+	 	legitimacy_equivalent = 50
+has_country_flag = sob_keju_shicigefu
+has_disaster = sob_shicigefu_dis
+	NOT = { has_faction = sob_balance_a}	
+	}
+meritocracy = 0.15
+global_tax_modifier = 0.25
+}
+
+sob_sob_hard_gov_no_2= {
+
+	potential = { always = no	
+	 	
+  has_country_flag = sob_reform_mode_setted_no_gov_mode_1
+	has_country_flag = sob_cleasing_nobles
+	}
+	trigger = {	
+	legitimacy_equivalent = 50
+	has_disaster = sob_cleansing_nobles_dis
+has_country_flag = sob_cleasing_nobles
+				NOT = { has_country_modifier = sob_royal_forever_acts}	
+	}
+    
+meritocracy = 0.25
+global_tax_modifier = 0.25
+}
+
+sob_sob_hard_gov_no_3= {
+
+	potential = { always = no	
+	 	
+  has_country_flag = sob_reform_mode_setted_no_gov_mode_1
+	has_country_flag = sob_quefa_baohu_shibing
+	}
+	trigger = {	
+	legitimacy_equivalent = 50
+	has_disaster = sob_quefa_baohu_shibing_dis
+has_country_flag = sob_quefa_baohu_shibing
+			NOT = { has_country_modifier = sob_re_fed}
+	}
+meritocracy = 0.15
+global_tax_modifier = 0.25
+	
+}
+sob_sob_hard_gov_no_4= {
+
+	potential = { always = no	
+	 	
+  has_country_flag = sob_reform_mode_setted_no_gov_mode_1
+	has_country_flag = sob_shushengtongzhi
+	}
+	trigger = {	
+	legitimacy_equivalent = 50
+	has_disaster = sob_shushengtongzhi_dis
+has_country_flag = sob_shushengtongzhi
+			NOT = { has_country_modifier = given_to_sobshangren}
+	}
+ tolerance_heretic = 1
+ 	tolerance_own = 1
+	global_tax_modifier = 0.2
+}
+
+
+
+

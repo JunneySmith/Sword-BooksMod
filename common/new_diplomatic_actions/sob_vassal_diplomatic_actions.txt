@@ -1,0 +1,310 @@
+sob_tributary_state_3_for_celestial_empire = {
+	category = alliance
+	alert_index = 41
+	alert_tooltip = marrige_for_celestial_empire_tooltip
+
+	
+	is_visible = {
+	always = no
+      any_subject_country = {
+	  is_subject_of_type = sob_tributary_state_3
+	  }
+	  FROM = {
+	  is_subject_of = ROOT
+	   is_subject_of_type = sob_tributary_state_3
+	  }
+	}
+	is_allowed = {
+ 	  FROM = {
+	  is_subject_of = ROOT
+	   is_subject_of_type = sob_tributary_state_3
+	   OR = {
+	   NOT = { has_country_flag = sob_tributary_state_3_recent_changed}
+ 	
+
+had_country_flag = {
+	flag = sob_tributary_state_3_recent_changed
+	days = 730
+}
+	   }
+	  }
+	
+	}
+	on_accept = {
+    
+    FROM = {
+	clr_country_flag = sob_tributary_state_3_recent_changed
+	set_country_flag = sob_tributary_state_3_recent_changed
+
+	 country_event = { id = sob_tributary_events.10} 
+	
+	
+	}
+
+		
+			
+	}
+    on_decline =
+	{
+     add_prestige = -5
+	}
+	
+	ai_acceptance = {
+		add_entry = {
+			name = TRUST
+			export_to_variable = {
+				variable_name = ai_value
+				value = trust
+				who = FROM
+				with = THIS
+			}
+		
+			divide_variable = { which = ai_value value = 4 }
+		}
+		add_entry = {
+			name = OPINION
+			export_to_variable = {
+				variable_name = ai_value
+				value = opinion
+				who = FROM
+				with = THIS
+			}
+			divide_variable = { which = ai_value value = 4 }
+		}
+
+	}
+	ai_will_do = { 
+		legitimacy = 90
+		development = 100
+	}
+}
+sob_tributary_state_3_for_celestial_empire3 = {
+	category = alliance
+	alert_index = 41
+	alert_tooltip = marrige_for_celestial_empire_tooltip
+
+	
+	is_visible = {
+	always=no
+      any_subject_country = {
+	  is_subject_of_type = sob_tributary_state_3
+	  }
+	  FROM = {
+	  is_subject_of = ROOT
+	   is_subject_of_type = sob_tributary_state_3
+	  }
+	}
+	is_allowed = {
+ 	  FROM = {
+	  is_subject_of = ROOT
+	   is_subject_of_type = sob_tributary_state_3
+	   any_neighbor_country = {
+	   is_subject_of_type = sob_tributary_state_3
+	   ROOT = {
+	   overlord_of = PREV
+	   
+	   }
+	   OR = {
+	   NOT = { has_country_flag = sob_tributary_state_3_recent_changed}
+ 	
+
+had_country_flag = {
+	flag = sob_tributary_state_3_recent_changed
+	days = 730
+}
+	   }
+	  }
+	  }
+	
+	}
+	on_accept = {
+    
+		       FROM = {
+			   			  every_neighbor_country ={
+			  
+			  
+			  limit = { 
+			  is_subject_of_type = sob_tributary_state_3
+			  ROOT = { overlord_of = PREV}
+			  OR = { NOT = { has_country_flag = sob_tributary_state_3_recent_changed} had_country_flag = {
+	flag = sob_tributary_state_3_recent_changed
+	days = 730
+}}}
+	clr_country_flag = sob_tributary_state_3_recent_changed
+	set_country_flag = sob_tributary_state_3_recent_changed
+}
+	 country_event = { id = sob_tributary_events.11} 
+	
+	
+	}
+
+		
+			
+	}
+    on_decline =
+	{
+     add_prestige = -5
+	}
+	
+	ai_acceptance = {
+		add_entry = {
+			name = TRUST
+			export_to_variable = {
+				variable_name = ai_value
+				value = trust
+				who = FROM
+				with = THIS
+			}
+		
+			divide_variable = { which = ai_value value = 4 }
+		}
+		add_entry = {
+			name = OPINION
+			export_to_variable = {
+				variable_name = ai_value
+				value = opinion
+				who = FROM
+				with = THIS
+			}
+			divide_variable = { which = ai_value value = 4 }
+		}
+
+	}
+	ai_will_do = { 
+		legitimacy = 90
+		development = 100
+	}
+}
+
+sob_emperors_loyaity_vassal = {
+	category = emperor
+	alert_index = 30
+	alert_tooltip = sob_no_neighbor_tributary_state_tooltip
+	require_acceptance = no
+	is_visible = {
+	ai = no
+	OR = {culture_group = east_asian  culture_group = chinese_group }
+
+	FROM = {
+
+        is_subject_of = ROOT
+		NOT = { is_subject_of_type = tributary_state } 
+		NOT=  {is_subject_of_type = sob_tributary_state_3}
+		NOT = { is_subject_of_type = tributary_state_2} 
+		}
+
+	}
+	is_allowed = {
+
+			any_owned_province = {
+             has_province_flag = sob_state_given
+		}
+		
+		
+		
+	FROM = {
+						custom_trigger_tooltip = {
+				tooltip = sob_emperors_loyaity_vassal_tooltip_3
+has_country_flag = sob_state_given_country
+}
+        is_subject_of = ROOT
+		NOT = { is_subject_of_type = tributary_state } 
+		NOT = { is_subject_of_type = sob_tributary_state_3}
+		NOT = { is_subject_of_type = tributary_state_2} 
+		}
+	}
+	on_accept = {
+	
+         every_owned_province = {
+		 limit = { 
+		 NOT = { superregion = china_superregion}
+ has_province_flag = sob_state_given
+		 
+		 }
+		 		 if = {
+		 limit = { is_core = ROOT}
+		 add_core = FROM
+		 remove_core = ROOT
+		 }
+		 clr_country_flag = sob_state_given
+		 cede_province = FROM
+
+		 }
+		          every_province = {
+		 limit = { 
+ has_province_flag = sob_state_given
+		 
+		 }
+		 clr_country_flag = sob_state_given
+		 }
+		 FROM = {
+		 clr_country_flag = sob_state_given_country
+		 
+		 }
+		 
+		 
+	}
+
+
+}
+
+
+sob_emperors_loyaity_vassal_1 = {
+	category = emperor
+	alert_index = 30
+	alert_tooltip = sob_no_neighbor_tributary_state_tooltip
+	require_acceptance = no
+	is_visible = {
+	ai = no
+	OR = {culture_group = east_asian  culture_group = chinese_group }
+
+	FROM = {
+		NOT = { is_subject_of_type = tributary_state } 
+		NOT = { is_subject_of_type = sob_tributary_state_3 }
+		NOT = { is_subject_of_type = tributary_state_2} 
+        is_subject_of = ROOT
+		}
+
+	}
+	is_allowed = {
+		
+	FROM = {
+          NOT = { capital_scope = { superregion = china_superregion}}
+        is_subject_of = ROOT
+		NOT = { is_subject_of_type = tributary_state } 
+		NOT = { is_subject_of_type = sob_tributary_state_3 }
+		NOT = { is_subject_of_type = tributary_state_2} 
+		}
+	}
+	on_accept = {
+
+	
+	every_owned_province = {
+	limit = { has_province_flag = sob_state_given}
+	 clr_country_flag = sob_state_given
+	}
+	
+	every_subject_country = {
+	limit = { has_country_flag = sob_state_given_country}
+	clr_country_flag = sob_state_given_country
+	}
+     FROM = {
+	 set_country_flag = sob_state_given_country
+	 capital_scope = {
+	 region = {
+     set_province_flag = sob_state_given
+	 
+	 }
+	 
+	 
+	 }
+	 
+	 
+	 }
+		 
+		 
+	}
+
+
+}
+

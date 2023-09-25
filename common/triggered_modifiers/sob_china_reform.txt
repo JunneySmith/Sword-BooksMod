@@ -1,0 +1,769 @@
+counter_revolution_1 = {
+	potential = {
+		revolution_target_exists = yes
+		is_revolution_target = no
+		NOT = {current_age = age_of_revolutions}
+	}
+
+	trigger = {
+	NOT = {current_age = age_of_revolutions}
+		capital_scope = { continent = europe }
+		revolution_target_exists = yes
+		is_revolution_target = no
+		is_free_or_tributary_trigger = yes
+		NOT = {
+			revolution_target = {
+				war_with = ROOT
+			}
+			revolution_target = {
+				truce_with = ROOT
+			} 
+		}
+government = monarchy
+	}
+
+	prestige = 5
+	stability_cost_modifier = -0.3
+	global_unrest =-5
+}
+
+the_mandate_of_heaven_confu = {
+	potential = {
+	OR = {culture_group = east_asian  culture_group = chinese_group }
+is_emperor_of_china = yes
+	any_country = {
+	OR = {
+	ROOT = {
+	defensive_war_with = PREV
+	}
+	AND = {
+	any_owned_province = {
+	OR = {culture_group = east_asian  culture_group = chinese_group }
+	}
+	war_with = ROOT
+	}
+	}
+	  OR = {NOT = {OR = {culture_group = east_asian  culture_group = chinese_group }}
+primary_culture = manchu
+primary_culture = togoku
+primary_culture =japanese 
+primary_culture =kyushuan
+primary_culture = korean
+}
+	}
+	}
+	
+	
+	trigger = {	
+
+	any_country = {
+	OR = {
+		ROOT = {
+
+	defensive_war_with = PREV
+	}
+	AND = {
+	any_owned_province = {
+	OR = {culture_group = east_asian  culture_group = chinese_group }
+	}
+	war_with = ROOT
+	}
+	}
+	}
+	
+	}
+
+reduced_liberty_desire = 5000
+}
+
+
+sob_guard_succession_1 = {
+	potential = {
+		is_emperor_of_china = yes
+		is_emperor = yes
+	}
+	
+	trigger = {	
+	
+				calc_true_if = {
+                 all_subject_country = {
+				 is_elector	= yes
+				 }
+					amount = 1
+					
+				}
+				
+				
+						NOT= {		calc_true_if = {
+                 all_subject_country = {
+				 is_elector	= yes
+				 }
+					amount = 2
+					
+				}
+				}
+	}
+ imperial_authority_value = 0.2
+}
+sob_guard_succession_2 = {
+	potential = {
+		is_emperor_of_china = yes
+		is_emperor = yes
+	}
+	
+	trigger = {	
+				calc_true_if = {
+                 all_subject_country = {
+				 is_elector	= yes
+				 }
+					amount = 2
+					
+				}
+								
+						NOT= {		calc_true_if = {
+                 all_subject_country = {
+				 is_elector	= yes
+				 }
+					amount = 3
+					
+				}
+				}
+	}
+ imperial_authority_value = 0.4
+}
+sob_guard_succession_3 = {
+	potential = {
+		is_emperor_of_china = yes
+		is_emperor = yes
+	}
+	
+	trigger = {	
+				calc_true_if = {
+                 all_subject_country = {
+				 is_elector	= yes
+				 }
+					amount = 3
+					
+				}
+								
+						NOT= {		calc_true_if = {
+                 all_subject_country = {
+				 is_elector	= yes
+				 }
+					amount = 4
+					
+				}
+				}
+	}
+ imperial_authority_value = 0.6
+}
+sob_guard_succession_4 = {
+	potential = {
+		is_emperor_of_china = yes
+		is_emperor = yes
+	}
+	
+	trigger = {	
+				calc_true_if = {
+                 all_subject_country = {
+				 is_elector	= yes
+				 }
+					amount = 4
+					
+				}
+								
+						NOT= {		calc_true_if = {
+                 all_subject_country = {
+				 is_elector	= yes
+				 }
+					amount = 5
+					
+				}
+				}
+	}
+ imperial_authority_value = 0.8
+}
+sob_guard_succession_5 = {
+	potential = {
+		is_emperor_of_china = yes
+		is_emperor = yes
+	}
+	
+	trigger = {	
+				calc_true_if = {
+                 all_subject_country = {
+				 is_elector	= yes
+				 }
+					amount = 5
+					
+				}
+								
+						NOT= {		calc_true_if = {
+                 all_subject_country = {
+				 is_elector	= yes
+				 }
+					amount = 6
+					
+				}
+				}
+	}
+ imperial_authority_value = 1.6
+}
+sob_guard_succession_6 = {
+	potential = {
+		is_emperor_of_china = yes
+		is_emperor = yes
+	}
+	
+	trigger = {	
+				calc_true_if = {
+                 all_subject_country = {
+				 is_elector	= yes
+				 }
+					amount = 6
+					
+				}
+								
+						NOT= {		calc_true_if = {
+                 all_subject_country = {
+				 is_elector	= yes
+				 }
+					amount = 7
+					
+				}
+				}
+	}
+ imperial_authority_value = 2
+}
+sob_guard_succession_7 = {
+	potential = {
+		is_emperor_of_china = yes
+		is_emperor = yes
+	}
+	
+	trigger = {	
+				calc_true_if = {
+                 all_subject_country = {
+				 is_elector	= yes
+				 }
+					amount = 7
+					
+				}
+	}
+ imperial_authority_value = 2.8
+}
+
+
+
+tributary_system_celestial_ai = {
+	potential = {
+	always = no
+		is_emperor_of_china = yes
+		ai = yes
+	}
+	
+	trigger = {	
+    legitimacy = 80
+	meritocracy = 75
+	}
+diplomatic_upkeep = 4
+imperial_mandate = 0.1
+}
+sob_luanshi_emperor = {
+	potential = {
+     is_emperor_of_china = yes
+
+	}
+	
+	trigger = {
+zhuhou_claim_state = 3
+	}
+	core_creation = 0.25
+	province_warscore_cost = 0.2
+	unjustified_demands = -0.2
+	global_unrest = 5				#-1% revolt risk each step
+	global_tax_modifier = -0.15
+	global_missionary_strength = -0.015
+	temples_influence = -0.06
+	mr_aristocrats_influence = -0.09
+	rr_jacobins_influence = -0.09
+	stability_cost_modifier = -1.50
+	monthly_fervor_increase = -3
+	devotion = -1.5
+	yearly_corruption = 0.06
+	global_institution_spread = -0.15
+}
+
+
+
+none_nomad_cavalry = {
+
+	potential = {	
+	always = no
+	NOT = { mil_tech = 17 }
+	
+       is_nomad = no
+	   is_colonial_nation = no
+
+	}
+	trigger = {	
+	always = no
+	is_nomad = no
+
+	NOT = { mil_tech = 17 }
+	
+		   NOT = {      estate_influence = {
+				estate = estate_nobles
+				influence = 20
+				}
+				}
+
+		   NOT = {      estate_influence = {
+				estate = estate_sobwarriors
+				influence = 20
+				}
+				}
+	     
+	}
+	cavalry_power = -0.2
+	cavalry_cost = 0.5
+	cav_to_inf_ratio = -0.15
+	
+}
+
+
+
+
+sob_warriosr_peace = {
+	potential = {
+		OR = {culture_group = east_asian  culture_group = chinese_group }
+			ai = no
+	
+	}
+	trigger = {
+	manpower_percentage = 0.80
+	army_tradition = 60
+    legitimacy_equivalent  = 45
+						NOT= {	estate_loyalty = {
+							estate = estate_sobwarriors
+							loyalty = 65
+						}
+						}
+							estate_influence = {
+							estate = estate_sobwarriors
+							influence = 80
+						}
+	is_at_war = no
+	}
+   legitimacy = -1
+   meritocracy = -1
+   stability_cost_modifier = 0.5
+   prestige_decay = 0.02
+	
+}
+
+ mandate_colony = {
+	potential = {
+		OR = {culture_group = east_asian  culture_group = chinese_group }
+	      		OR = {
+			is_former_colonial_nation = yes
+				is_colonial_nation = yes
+				}
+	}
+	
+	trigger = {	
+		OR = {culture_group = east_asian  culture_group = chinese_group }
+		OR = {
+			is_former_colonial_nation = yes
+				is_colonial_nation = yes
+				ai = yes
+				}
+				any_country = {
+				is_emperor_of_china = yes
+				has_country_modifier = mng_open_china
+				}
+	}
+global_colonial_growth = 100
+colonist_placement_chance = 0.1
+colonists = 1
+}
+
+sob_greenstand_system = {
+	potential = {
+	   culture_group = evenks
+	     has_idea = manchu_eight_banners
+	}
+	trigger = {
+	NOT = { 		war_exhaustion = 10
+		corruption = 10}
+	   has_idea = manchu_eight_banners
+	   NOT = {  has_country_flag = banner_population_low }
+       any_owned_province = {
+	   culture = manchu
+	   }
+	}
+	 reinforce_cost_modifier = -0.5
+	war_exhaustion_cost = 50
+	mercenary_cost = -0.25
+
+	yearly_corruption = 0.15
+	merc_maintenance_modifier = -0.25
+	global_manpower_modifier = -1.5
+}
+
+
+banner_army = {
+	potential = {
+	   culture_group = evenks
+	     has_idea = manchu_eight_banners
+	}
+	trigger = {
+	   has_idea = manchu_eight_banners
+	   NOT = {  has_country_flag = banner_population_low }
+       any_owned_province = {
+	   culture = manchu
+	   }
+	}
+	reinforce_cost_modifier = 1
+	war_exhaustion_cost = 100
+    land_morale = 0.05
+	num_accepted_cultures = -3
+	yearly_corruption = 0.1
+	amount_of_banners = 0.5
+	global_manpower_modifier = -1.5
+}
+mongol_relation = {
+	potential = {
+	   culture_group = evenks
+	     has_idea = manchu_eight_banners
+	}
+	trigger = {
+	   has_idea = manchu_eight_banners
+	  NOT = { accepted_culture = mongol }
+	   OR = {
+	   tag = MCH
+	   tag = QNG
+	   }
+	}
+	
+	war_exhaustion_cost = 100
+	amount_of_banners = -0.25
+	shock_damage_received = 0.2
+	global_manpower_modifier = -0.2
+}
+
+
+sob_shishen_tuanlian = {
+	potential = {
+	   OR = {culture_group = east_asian  culture_group = chinese_group }
+	   NOT = {  has_country_modifier = confucianism_reform}
+	}
+	trigger = {
+ has_country_modifier = sob_inward_perfection
+ NOT = {  has_country_modifier = confucianism_reform}
+	}
+	mercenary_discipline = 0.1
+	mercenary_cost = -0.35
+
+	yearly_corruption = 0.05
+	merc_maintenance_modifier = -0.25
+	global_manpower_modifier = -2
+}
+sob_mongol_banners = { 	
+
+	potential = {
+	   OR = {culture_group = east_asian  culture_group = chinese_group }
+	   
+	}
+	trigger = {
+OR = {
+has_reform = sob_scelestial_empire_tng_reform
+}
+	}
+		has_banners = yes
+	amount_of_banners = 0.05
+		mercenary_cost = 0.05
+
+}
+
+sob_mongol_banners_1 = {
+
+	potential = {
+	   OR = {culture_group = east_asian  culture_group = chinese_group }
+	}
+	trigger = {
+									custom_trigger_tooltip = {
+				tooltip = sob_sob_mengqi_system_tooltip
+
+has_country_flag = sob_mengqi_system 
+}
+
+	}
+	amount_of_banners = 0.25
+	has_banners = yes
+		mercenary_cost = -0.05
+
+}
+banner_army_pl = {
+	potential = {
+	   culture_group = evenks
+	     has_idea = manchu_eight_banners
+	}
+	trigger = {
+	   has_idea = manchu_eight_banners
+        primary_culture = manchu
+		war_exhaustion = 10
+		corruption = 10
+	}
+    amount_of_banners = -1
+	shock_damage_received = 0.25
+		mercenary_cost = 0.5
+	merc_maintenance_modifier = 0.5
+	fire_damage_received = 0.25
+    global_manpower_modifier = -1
+}
+
+
+
+
+
+sob_bianjiangqu = {
+	potential = {
+	OR = {culture_group = east_asian  culture_group = chinese_group }
+	is_emperor_of_china = no
+	}
+
+	trigger = {
+	OR = {
+is_subject_of_type =sob_zhengyijiangjun_vassal
+is_subject_of_type = sob_duhu_vassal
+
+}
+    OR = {culture_group = east_asian  culture_group = chinese_group }
+	is_emperor_of_china = no
+	any_country = {
+	is_emperor_of_china = yes
+	overlord_of = ROOT
+	}
+	NOT = {capital_scope = {
+	superregion = china_superregion
+	}
+	}
+	
+}
+hostile_attrition = 2
+garrison_size = 1
+fort_maintenance_modifier = -0.5
+defensiveness = 0.25
+}
+
+
+sob_xingzhengqu = {
+	potential = {
+	OR = {culture_group = east_asian  culture_group = chinese_group }
+	is_emperor_of_china = no
+	}
+
+	trigger = {
+	OR = {
+	is_subject_of_type = sob_colony
+	is_subject_of_type = sob_zhenshoufu_vassal
+	}
+    OR = {culture_group = east_asian  culture_group = chinese_group }
+	is_emperor_of_china = no
+	any_country = {
+	is_emperor_of_china = yes
+	overlord_of = ROOT
+	}
+	NOT = {capital_scope = {
+	superregion = china_superregion
+	}
+	}
+	
+}
+    tolerance_own = 2
+ 	global_unrest = -2
+	administrative_efficiency = 0.1
+}
+
+
+
+mandate_claim = {
+	potential = {
+	is_emperor_of_china = no
+	OR = {culture_group = east_asian  culture_group = chinese_group }
+	OR = {
+
+AND = {
+is_emperor_of_china = no
+OR = {
+is_subject = no
+overlord = {
+OR = {culture_group = east_asian  culture_group = chinese_group }
+}
+}
+any_country = {
+	is_emperor_of_china = yes
+	OR = {culture_group = east_asian  culture_group = chinese_group }
+	war_with =ROOT
+	}
+}
+AND = {
+is_emperor_of_china = no
+OR = {
+is_subject = no
+overlord = {
+OR = {culture_group = east_asian  culture_group = chinese_group }
+}
+}
+	NOT = {any_country = {
+	is_emperor_of_china = yes
+	}
+	}
+}
+AND = {
+	OR = {
+is_subject = no
+overlord = {
+OR = {culture_group = east_asian  culture_group = chinese_group }
+}
+}
+	any_country = {
+	is_emperor_of_china = yes
+	NOT = {OR = {culture_group = east_asian  culture_group = chinese_group }}
+
+	
+	}
+	}
+	}
+	}
+		trigger = {
+ NOT= { num_of_cities = 40}
+
+}
+land_morale = 0.10
+land_maintenance_modifier = -0.25
+ 	meritocracy = 1
+global_tax_income = 60
+}
+
+mandate_claim3 = {
+	potential = {
+	is_emperor_of_china = yes
+	OR = {culture_group = east_asian  culture_group = chinese_group }
+	ai = yes
+	any_country = {
+	OR = {
+	ROOT = {defensive_war_with = PREV}
+	AND = {
+	any_owned_province = {
+	OR = {culture_group = east_asian  culture_group = chinese_group }
+	}
+	war_with = ROOT
+	}
+	}
+	  OR = {NOT = {OR = {culture_group = east_asian  culture_group = chinese_group }}
+primary_culture = manchu
+primary_culture = togoku
+primary_culture =japanese 
+primary_culture =kyushuan
+primary_culture = korean
+}
+	}
+	}
+		trigger = {
+ always = yes
+
+}
+manpower_recovery_speed = 0.15
+discipline = 0.05
+ 	meritocracy = 1
+land_morale = 0.10
+global_tax_income = 60
+}
+the_mandate_of_heaven_lost = {
+	potential = {
+		has_reform = celestial_empire
+		NOT = { has_dlc = "Mandate of Heaven" }
+	}
+
+	trigger = {
+		OR = {
+			NOT = { stability = 0 }
+			NOT = { legitimacy = 60 }
+			NOT = { num_of_cities = 20 }	
+		}
+	}
+
+	stability_cost_modifier = 0.5
+	global_unrest = 10
+}
+
+sob_col_mandate_of_heaven_lost = {
+	potential = {
+	OR = {culture_group = east_asian  culture_group = chinese_group }
+    ai = yes
+	is_year = 1498
+	is_emperor_of_china = yes
+	NOT =  { primary_culture = manchu}
+	}
+trigger = {
+    ai = yes
+	is_emperor_of_china = yes
+	}
+colonists = 1
+}
+
+
+sob_inward_perfection = {
+	potential = {
+		OR = {religion = confucianism  religion = threeself}
+	     ai = no
+		 NOT = { has_country_modifier = confucianism_reform}
+	}
+	
+	trigger = {
+OR = {religion = confucianism  religion = threeself}
+ NOT = { harmony = 40}
+  				estate_influence = {
+				estate = estate_sobshishen
+				influence = 70
+				}
+				  		NOT = {		estate_influence = {
+				estate = estate_sobwarriors
+				influence = 40
+				}
+				}
+								  		NOT = {		estate_influence = {
+				estate = estate_burghers
+				influence = 40
+				}
+				}
+	}
+
+yearly_harmony = -1
+imperial_mandate = 0.05
+army_tradition = -0.5
+discipline = -0.1
+}
+
+
+sob_huanguan_system = {
+	potential = {
+	NOT = { has_country_flag = sob_fuguojieyi_flag_1}
+	NOT = {is_year = 1911}
+	is_emperor_of_china = yes
+     NOT = { has_country_flag = sob_chinese_abolish_enuch}
+	
+	}
+
+	trigger = {
+	is_emperor_of_china = yes
+     NOT = { has_country_flag = sob_chinese_abolish_enuch}
+
+	
+}
+        global_autonomy = -0.025
+ 	prestige_decay = 0.015
+}
+

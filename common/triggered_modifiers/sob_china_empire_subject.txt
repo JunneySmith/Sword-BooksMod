@@ -1,0 +1,22 @@
+sob_chinese_empire_reform_1 = {
+	potential = {
+	OR = {
+is_subject_of_type = zhuhou_claim_state
+
+is_subject_of_type =  sob_zhongyuan_claim_state
+}
+ai = yes
+
+	}
+
+	trigger = {
+	ai = yes
+	OR = {
+is_subject_of_type = zhuhou_claim_state
+
+is_subject_of_type =  sob_zhongyuan_claim_state
+}
+	}
+
+	stability_cost_to_declare_war = -3
+}

@@ -1,0 +1,298 @@
+namespace = sobdirection
+country_event = {
+	id = sobdirection.922
+	title = "sobdirection.922.t"
+	desc = "sobdirection.922.d"
+	picture = GIFTS_TO_EMPEROR_eventPicture
+	
+is_triggered_only = yes
+	trigger = {
+
+		ai = no
+
+	}
+
+	
+	option = {
+		name = "sobdirection.924.b"
+		
+	}
+
+}
+country_event = {
+	id = sobdirection.923
+	title = "sobdirection.923.t"
+	desc = "sobdirection.923.d"
+	picture = GIFTS_TO_EMPEROR_eventPicture
+	
+is_triggered_only = yes
+	trigger = {
+
+		ai = no
+
+
+	}
+	
+	option = {
+		name = "confucian_events.924.b"
+		
+	}
+
+}
+
+country_event = {
+	id = sobdirection.924
+	title = "sobdirection.924.t"
+	desc = "sobdirection.924.d"
+	picture = GIFTS_TO_EMPEROR_eventPicture
+	
+is_triggered_only = yes
+	trigger = {
+
+		ai = no
+
+
+	}
+	
+	option = {
+		name = "sobdirection.924.b"
+		
+	}
+
+}
+
+
+country_event = {
+	id = sobdirection.925
+	title = "sobdirection.925.t"
+	desc = "sobdirection.925.d"
+	picture = GIFTS_TO_EMPEROR_eventPicture
+	
+is_triggered_only = yes
+	trigger = {
+
+		ai = no
+
+
+	}
+	
+	option = {
+		name = "sobdirection.924.b"
+		
+	}
+
+}
+
+country_event = {
+	id = sobdirection.926
+	title = "sobdirection.926.t"
+	desc = "sobdirection.926.d"
+	picture = GIFTS_TO_EMPEROR_eventPicture
+	
+is_triggered_only = yes
+	trigger = {
+
+		ai = no
+
+
+	}
+	
+	option = {
+		name = "sobdirection.924.b"
+		
+	}
+
+}
+country_event = {
+	id = sobdirection.927
+	title = "sobdirection.927.t"
+	desc = "sobdirection.927.d"
+	picture = GIFTS_TO_EMPEROR_eventPicture
+	
+is_triggered_only = yes
+	trigger = {
+
+		ai = no
+
+
+	}
+	
+	option = {
+		name = "sobdirection.924.b"
+		
+	}
+
+}
+
+country_event = {
+	id = sobdirection.928
+	title = "sobdirection.928.t"
+	desc = "sobdirection.928.d"
+	picture = GIFTS_TO_EMPEROR_eventPicture
+	
+is_triggered_only = yes
+	trigger = {
+
+		ai = no
+
+
+	}
+	
+	option = {
+		name = "sobdirection.924.b"
+		
+	}
+
+}
+country_event = {
+	id = sobdirection.929
+	title = "sobdirection.929.t"
+	desc = "sobdirection.929.d"
+	picture = GIFTS_TO_EMPEROR_eventPicture
+	
+is_triggered_only = yes
+	trigger = {
+
+		ai = no
+
+
+	}
+	
+	option = {
+		name = "sobdirection.922.t"
+				  country_event = { id = sobdirection.922 } 
+	}
+		option = {
+		name = "sobdirection.923.t"
+		 country_event = { id = sobdirection.923 } 
+	}
+		option = {
+		name = "sobdirection.924.t"
+		         country_event = { id = sobdirection.924 } 
+	}
+		option = {
+		name = "sobdirection.925.t"
+		  country_event = { id = sobdirection.925 } 
+	}
+		option = {
+		name = "sobdirection.926.t"
+				  	  country_event = { id = sobdirection.926 } 
+	}
+		option = {
+		name = "sobdirection.927.t"
+					  	  country_event = { id = sobdirection.927 } 
+	}
+		option = {
+		name = "sobdirection.928.t"
+					  	  country_event = { id = sobdirection.928 } 
+	}
+
+}
+country_event = {
+	id = sobdirection.123
+	title = "sobdirection.929.t"
+	desc = "sobdirection.929.d"
+	picture = GIFTS_TO_EMPEROR_eventPicture
+	
+ hidden = yes
+ mean_time_to_happen = {
+ days = 1
+ }
+	trigger = {
+
+		has_reform = sob_chinese_republic_mechanic
+		NOT = {OR = {culture_group = east_asian  culture_group = chinese_group }}
+NOT = { is_emperor_of_china = yes}
+   
+	}
+	
+	option = {
+		name = "sobdirection.922.t"
+		change_government = republic
+		if = {
+		limit = { has_ruler_flag = cromwell_flag}
+		add_government_reform = presidential_despot_reform
+		}
+		add_government_reform = republic_mechanic
+	}
+
+}
+
+country_event = {
+	id = sobdirection.124
+	title = "sobdirection.929.t"
+	desc = "sobdirection.929.d"
+	picture = GIFTS_TO_EMPEROR_eventPicture
+	
+ hidden = yes
+ mean_time_to_happen = {
+ days = 1
+ }
+	trigger = {
+
+		has_reform = sob_chinese_monarchy_mechanic
+		NOT = {OR = {culture_group = east_asian  culture_group = chinese_group }}
+		NOT = { is_emperor_of_china = yes}
+
+	}
+	
+	option = {
+		name = "sobdirection.922.t"
+		change_government = monarchy
+		add_government_reform = monarchy_mechanic
+	}
+
+}
+
+country_event = {
+	id = sobdirection.125
+	title = "sobdirection.929.t"
+	desc = "sobdirection.929.d"
+	picture = GIFTS_TO_EMPEROR_eventPicture
+	
+ hidden = yes
+ mean_time_to_happen = {
+ days = 1
+ }
+	trigger = {
+	has_global_flag = sob_auto_fix_gov
+		NOT = {has_reform = monarchy_mechanic}
+		NOT = {has_reform = native_basic_reform}
+		NOT = {has_reform = theocracy_mechanic}
+		NOT = {has_reform = tribe_mechanic}
+		NOT = {has_reform = republic_mechanic}
+		NOT = {has_reform = sob_chinese_republic_mechanic}
+		NOT = {has_reform = sob_chinese_monarchy_mechanic}
+	}
+	
+	option = {
+		name = "sobdirection.922.t"
+		if = {
+		limit  = {	government = monarchy}
+		change_government = monarchy
+		add_government_reform = monarchy_mechanic
+		}
+				if = {
+		limit  = {	government = republic}
+		change_government = republic
+		add_government_reform = republic_mechanic
+		}
+		
+						if = {
+		limit  = {	government = theocracy}
+		change_government = theocracy
+		add_government_reform = theocracy_mechanic
+		}
+								if = {
+		limit  = {	government = tribal}
+		change_government = tribal
+		add_government_reform = tribe_mechanic
+		}
+										if = {
+		limit  = {	government = native}
+		change_government = native
+		add_government_reform = native_basic_reform
+		}
+	}
+
+}

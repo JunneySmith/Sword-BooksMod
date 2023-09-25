@@ -1,0 +1,796 @@
+#All scopes are country scope
+#All parameters are optional
+
+# estate_privilege = {
+# 	is_valid = { triggers }						#Conditions for whether it is possible for the country to have this privilege (it will not display on the list if they are false, and will be revoked if it has already been granted)
+# 	can_select = { triggers } 					#Conditions for whether the country is allowed to select the privilege (with conditions for why not displayed)
+# 	on_granted = { effects } 					#Effects executed immediately upon the privilege being taken
+# 	can_revoke = { triggers } 					#Conditions for whether the country can revoke the privilege
+# 	on_revoked = { effects } 					#Effects executed upon the privilege being revoked by the country
+# 	on_invalid = { effects } 					#Effects executed upon the privilege being removed due to invalidity (is_valid becomes false or the estate is removed)
+# 	penalties = { modifiers } 					#Negative modifiers granted while the privilege is active (creates different tooltip to benefits)
+# 	conditional_modifier = { 					#Modifier that are applied if the specified conditions are true.
+# 		trigger = { triggers }
+# 		modifier = { modifiers }
+# 		is_bad = yes/no							#Specifies whether the modifier should be listed as positive or negative in the tooltips.
+# 	}
+# 	modifier_by_land_ownership = { modifiers } 	#Multiplies the modifier by the % of land owned by the estate.
+# 	mechanics = { mechanics } 					#Special mechanics the privilege enables
+# 	cooldown_years = int 						#Time limit before which the privilege cannot be revoked
+# 	on_cooldown_expires = { effects }			#Effect executed once the specified cooldown_years timer has run down
+#	ai_will_do									#If above ESTATE_PRIVILEGE_GRANT_THRESHOLD define, AI will try to apply. If below ESTATE_PRIVILEGE_REVOKE_THRESHOLD, AI will try to revoke.
+# }
+
+sob_estate_warrior_land_rights = {
+	icon = privilege_monopoly_of_goods_livestock
+	max_absolutism = -5
+	loyalty = 0.15
+	influence = 0.1
+	is_valid = { 
+	OR = {
+	NOT = { has_country_flag = sob_estate_warrior_land_rights_shishen}
+NOT = {	had_country_flag = {
+	flag = sob_estate_warrior_land_rights_shishen
+	days = 3650
+    }
+	}
+	
+	}
+	OR = {
+				estate_territory = {
+					estate = estate_sobshishen
+					territory = 1
+				}
+				any_owned_province = {
+				has_province_modifier = sob_shishen_land_on
+				
+				}
+				}
+	}	
+	can_select = {
+	OR=  {
+ai = yes
+any_owned_province = {
+has_state_edict = sob_landreform_junhu
+has_province_modifier = sob_shishen_land_on
+}
+
+}
+								custom_trigger_tooltip = {
+				tooltip = sob_soc_reform_tooltip_1
+				has_country_flag= sob_soc_reform_tooltip_1
+				
+				}
+				OR = {
+				estate_territory = {
+					estate = estate_sobshishen
+					territory = 5
+				}
+				any_owned_province ={
+				has_province_modifier = sob_shishen_land_on
+				
+				}
+				}
+	}
+	can_revoke = {  NOT = { has_estate = estate_sobshishen} } 		
+	on_revoked = { clr_country_flag = sob_estate_warrior_land_rights_shishen } 
+		mechanics = {
+		exempt_from_seize_land
+	}
+	on_granted = {
+	set_country_flag = sob_junhu_prov_d_loyal
+	set_country_flag =sob_estate_warrior_land_rights_shishen
+	custom_tooltip = sob_estate_warrior_land_rights_shishen_tooltip
+			add_estate_loyalty = {
+			estate = estate_sobshishen
+			loyalty = -10
+		}
+	}
+	on_invalid = {
+	if = {
+	limit = {NOT = { has_country_flag =sob_land_reform_start}}
+	add_war_exhaustion = 5
+	}
+		change_estate_land_share = {
+			estate = estate_sobshishen
+			share = -1.0
+		}	
+		change_estate_land_share = {
+			estate = estate_sobwarriors
+			share = 1.0
+		}	
+
+		clr_country_flag = sob_estate_warrior_land_rights_shishen
+				if = {
+		limit = {
+		NOT = { has_country_flag = sob_jikong_reform_tooltip_o_3} NOT = { has_global_flag = sob_jikong_reform_tooltip_o_2}
+		NOT = {has_country_modifier = confucianism_reform}
+			any_owned_province ={
+			has_province_modifier = sob_shishen_land_on
+			
+			}
+
+			
+		}
+		random_owned_province ={
+		limit ={
+		has_province_modifier = sob_shishen_land_on
+			NOT = { has_province_flag = sob_shishen_land_recovering }
+		}
+		remove_province_modifier = sob_shishen_land_on
+		set_province_flag = sob_wa_complete_tugai
+		
+		if = {
+		limit= {owner = {	ai = no			NOT = {
+					estate_loyalty = {
+						estate = estate_sobshishen
+						loyalty = 40
+					}
+				}}}
+				set_province_flag = sob_shishen_land_recovering
+				spawn_rebels = {
+			type = sobshishen_rebels
+			size = 2
+		}
+		
+		}
+				if = {
+		limit= {owner = {		ai = no		NOT = {
+					estate_loyalty = {
+						estate = estate_sobshishen
+						loyalty = 30
+					}
+				}}}
+				area = {
+				limit = { has_province_modifier = sob_shishen_land_on
+				NOT = { has_province_flag = sob_shishen_land_recovering }
+				}
+				set_province_flag = sob_shishen_land_recovering
+				spawn_rebels = {
+			type = sobshishen_rebels
+			size = 2
+		}
+		
+		}
+		}
+						if = {
+		limit= {
+		
+		owner = {		ai = no		NOT = {
+					estate_loyalty = {
+						estate = estate_sobshishen
+						loyalty = 20
+					}
+				}}}
+				region = {
+				limit = { has_province_modifier = sob_shishen_land_on
+								NOT = { has_province_flag = sob_shishen_land_recovering }
+				}
+				set_province_flag = sob_shishen_land_recovering
+				spawn_rebels = {
+			type = sobshishen_rebels
+			size = 2
+		}
+		
+		}
+		}
+		}
+		}
+						if = {
+		limit = {
+				NOT = { has_country_flag = sob_jikong_reform_tooltip_o_3} NOT = { has_global_flag = sob_jikong_reform_tooltip_o_2}
+		NOT = {has_country_modifier = confucianism_reform}
+				always = no
+								estate_territory = {
+					estate = estate_sobwarriors
+					territory = 15
+				
+				
+				}
+
+			
+		}
+		random_owned_province ={
+				limit ={
+		OR = { culture_group = east_asian culture_group = chinese_group}
+		
+		}
+		area = {
+		set_province_flag = sob_wa_complete_tugai
+		}
+		if = {
+		limit= {owner = {				NOT = {
+					estate_loyalty = {
+						estate = estate_sobshishen
+						loyalty = 30
+					}
+				}}}
+				area = {
+				spawn_rebels = {
+			type = sobshishen_rebels
+			size = 2
+		}
+		}
+		}
+		}
+		}
+				if = {
+		limit = {
+		NOT = {
+		any_owned_province = {
+		has_province_modifier = sob_shishen_land_on
+		
+		
+		}
+		
+		}
+		
+		
+		}
+		every_owned_province = {
+		set_province_flag = sob_wa_complete_tugai
+		}
+		}
+	} 
+	penalties = {
+	}
+	modifier_by_land_ownership = { governing_capacity = 200
+
+	}
+	benefits = {
+		
+	}
+	ai_will_do = {
+		factor = 1500
+		modifier = {
+			factor = 10.8
+			is_absolutism_active = yes
+		}
+	}
+}
+sob_estate_warrior_fund_rights = {
+	icon = privilege_give_money
+	loyalty = 0.1
+	influence = 0.1
+	max_absolutism = -5
+	is_valid = {
+	has_estate = estate_sobshishen
+NOT = { has_country_modifier =confucianism_reform}
+	}
+	can_select = {
+	has_disaster = sob_shushengtongzhi_dis
+	}
+	on_revoked = { } 
+	on_granted = {
+	}
+	on_invalid = {
+		change_estate_land_share = {
+			estate = estate_sobshishen
+			share = -5.0
+		}	
+		change_estate_land_share = {
+			estate = estate_sobwarriors
+			share = 5.0
+		}	
+					add_estate_loyalty = {
+			estate = estate_sobwarriors
+			loyalty = 20
+		}
+
+	} 
+	penalties = {
+	fort_maintenance_modifier = 0.15
+	}
+	benefits = {
+		garrison_size = 0.35
+		defensiveness = 0.15
+		global_tax_modifier = 0.2
+	}
+	ai_will_do = {
+	factor = 1250
+		modifier = {
+			factor = 12.8
+			is_absolutism_active = yes
+		}
+	}
+}
+sob_estate_warrior_fund_rights_2 = {
+	icon = privilege_give_money
+	max_absolutism = -5
+	loyalty = 0.1
+	influence = 0.1
+	is_valid = {
+	NOT = { has_disaster = sob_shushengtongzhi_dis}
+	}
+	can_select = {
+		OR = {
+	
+									custom_trigger_tooltip = {
+				tooltip = sob_soc_reform_tooltip_3
+				has_country_flag= sob_soc_reform_tooltip_3
+				
+				}
+				NOT = { has_estate = estate_sobshishen}
+				}
+	NOT = {has_disaster = sob_shushengtongzhi_dis}
+	}
+	on_revoked = { } 
+	on_granted = {
+	}
+	on_invalid = {
+		change_estate_land_share = {
+			estate = estate_sobshishen
+			share = -5.0
+		}	
+		change_estate_land_share = {
+			estate = estate_sobwarriors
+			share = 5.0
+		}	
+					add_estate_loyalty = {
+			estate = estate_sobwarriors
+			loyalty = 20
+		}
+
+	} 
+	penalties = {
+	fort_maintenance_modifier = 0.15
+	}
+	benefits = {
+		garrison_size = 0.15
+		defensiveness = 0.10
+	}
+	ai_will_do = {
+	factor = 1250
+		modifier = {
+			factor = 12.8
+			is_absolutism_active = yes
+		}
+	}
+}
+
+sob_estate_warrior_soldier_number = {
+	icon = privilege_limited_war_support
+	max_absolutism = 5
+
+	is_valid = {
+	has_estate = estate_sobshishen
+NOT = { has_country_modifier =confucianism_reform}
+has_disaster = sob_quefa_baohu_shibing_dis
+	}
+	can_select = {
+has_disaster = sob_quefa_baohu_shibing_dis
+	}
+	on_revoked = { } 
+	on_granted = {
+	}
+	on_invalid = {
+		add_estate_loyalty = {
+			estate = estate_sobwarriors
+			loyalty = 20
+		}
+
+	} 
+	penalties = {
+	}
+	benefits = {
+		global_regiment_cost = -0.1
+		global_tax_modifier = 0.25
+	}
+	ai_will_do = {
+		factor = 1250
+	}
+}
+sob_estate_warrior_soldier_number_down = {
+	icon = privilege_limited_war_support
+	max_absolutism = 5
+influence = -0.05
+	is_valid = {
+		ai = no
+	OR = {
+				estate_territory = {
+					estate = estate_sobshishen
+					territory = 1
+				}
+				}
+	}
+	can_select = {
+	has_estate_privilege = sob_estate_warrior_soldier_number_down
+	}
+	on_revoked = { } 
+	on_granted = {
+	}
+	can_revoke = { 
+
+NOT = {any_owned_province = {
+has_state_edict = sob_landreform_jianghu
+has_province_modifier = sob_shishen_land_on
+}
+}
+	NOT = {		estate_territory = {
+					estate = estate_sobshishen
+					territory = 1
+				}}
+				
+				}
+	on_invalid = {
+		add_estate_loyalty = {
+			estate = estate_sobwarriors
+			loyalty = 20
+		}
+
+	} 
+	penalties = {
+		army_tradition_decay = 0.01
+
+	}
+	benefits = {
+	}
+	ai_will_do = {
+		factor = 1250
+	}
+}
+sob_estate_warrior_direct_reward_wen = {
+	icon = privilege_military_power
+	max_absolutism = 5
+influence = -0.1
+	is_valid = {
+	ai = no
+	OR = {
+				estate_territory = {
+					estate = estate_sobshishen
+					territory = 1
+				}
+				}
+	}
+	can_select = {
+	has_estate_privilege = sob_estate_warrior_direct_reward_wen
+	}
+	on_revoked = { } 
+	on_granted = {
+	}
+	can_revoke = { 
+
+NOT = {any_owned_province = {
+has_state_edict = sob_landreform_jianghu
+has_province_modifier = sob_shishen_land_on
+}
+}
+	NOT = {		estate_territory = {
+					estate = estate_sobshishen
+					territory = 1
+				}}
+				
+				}
+	on_invalid = {
+		add_estate_loyalty = {
+			estate = estate_sobwarriors
+			loyalty = 20
+		}
+
+	} 
+	penalties = {
+	global_regiment_cost = 0.1
+	}
+	benefits = {
+	}
+	ai_will_do = {
+		factor = 1250
+	}
+}
+
+sob_estate_warrior_education_wen = {
+	icon = privilege_promote_rajput_nobility
+	max_absolutism = 5
+influence = -0.05
+	is_valid = {
+		ai = no
+	OR = {
+				estate_territory = {
+					estate = estate_sobshishen
+					territory = 1
+				}
+				}
+	}
+	can_select = {
+has_estate_privilege = sob_estate_warrior_education_wen
+	}
+	on_revoked = { } 
+	on_granted = {
+	}
+	can_revoke = { 
+
+NOT = {any_owned_province = {
+has_state_edict = sob_landreform_jianghu
+has_province_modifier = sob_shishen_land_on
+}
+}
+	NOT = {		estate_territory = {
+					estate = estate_sobshishen
+					territory = 1
+				}}
+				
+				}
+	on_invalid = {
+		add_estate_loyalty = {
+			estate = estate_sobwarriors
+			loyalty = 20
+		}
+
+	} 
+	penalties = {
+	
+		 	cav_to_inf_ratio = -0.10
+		 	cavalry_power = -0.05
+	 
+	}
+	benefits = {
+	}
+	ai_will_do = {
+		factor = 1250
+	}
+}
+sob_estate_warrior_direct_reward = {
+	icon = privilege_military_power
+	loyalty = 0.1
+	influence = 0.05
+	land_share = 10
+	can_select = {
+	
+	}
+	on_revoked = { } 
+	on_granted = {
+						add_estate_loyalty = {
+			estate = estate_sobshishen
+			loyalty = -20
+		}
+	}
+	on_invalid = {
+
+					add_estate_loyalty = {
+			estate = estate_sobwarriors
+			loyalty = 20
+		}
+
+	} 
+	penalties = {
+	state_maintenance_modifier = 0.25
+	}
+	benefits = {
+		land_morale = 0.025
+		legitimacy = 0.5
+		devotion = 0.5
+		meritocracy = 0.25
+	}
+	ai_will_do = {
+		factor = 16
+	}
+}
+
+
+sob_estate_warrior_education = {
+	icon = privilege_promote_rajput_nobility
+	loyalty = 0.1
+	influence = 0.1
+
+	can_select = {
+	OR = {
+	
+									custom_trigger_tooltip = {
+				tooltip = sob_soc_reform_tooltip_2
+				has_country_flag= sob_soc_reform_tooltip_2
+				
+				}
+				NOT = { has_estate = estate_sobshishen}
+				}
+					estate_territory = {
+					estate = estate_sobwarriors
+					territory = 20
+				}
+	NOT = {		estate_territory = {
+					estate = estate_sobshishen
+					territory = 40
+				} 
+				
+				}
+	
+	
+	} 
+	on_revoked = { } 
+	on_granted = {
+						add_estate_loyalty = {
+			estate = estate_sobshishen
+			loyalty = -20
+		}
+	}
+	penalties = {
+	}
+	mechanics = {
+		exempt_from_seize_land
+	}
+	benefits = {
+	  	army_tradition = 1
+	   
+	}
+	modifier_by_land_ownership = {
+		amount_of_banners = 1.25
+
+	}
+	ai_will_do = {
+	factor = 1250
+	}
+}
+
+
+sob_estate_warrior_only_power = {
+	icon = privilege_supply_arms
+	influence = 0.1
+max_absolutism = -10
+
+	can_select = 
+	{
+
+	
+									custom_trigger_tooltip = {
+				tooltip = sob_soc_reform_tooltip_4
+				has_country_flag= sob_soc_reform_tooltip_4
+				
+				}
+
+estate_influence = {
+					estate = estate_sobwarriors
+					influence = 50
+
+}
+	NOT = {		estate_territory = {
+					estate = estate_sobshishen
+					territory = 5
+				} 
+				
+				}
+	
+	
+	} 
+	on_revoked = { } 
+	on_granted = {
+						add_estate_loyalty = {
+			estate = estate_sobshishen
+			loyalty = -20
+		}
+	}
+	penalties = {
+	}
+	benefits = {
+		manpower_in_true_faith_provinces= 0.10
+	infantry_shock = 1
+	}
+	ai_will_do = {
+	factor = 1250
+	}
+}
+
+sob_estate_warrior_organized_colonist = {
+	icon = privilege_reqruit_conouistador
+	loyalty = 0.1
+	max_absolutism = -5
+	can_select = { 
+has_institution = new_world_i
+	NOT = {		estate_territory = {
+					estate = estate_sobshishen
+					territory = 5
+				} 
+				
+				}
+	
+	
+	} 
+	on_revoked = { } 
+	on_granted = {
+						add_estate_loyalty = {
+			estate = estate_sobshishen
+			loyalty = -20
+		}
+	}
+	penalties = {
+	}
+	benefits = {
+	native_uprising_chance = -0.25
+	global_colonial_growth = 25
+	}
+	ai_will_do = {
+		factor = 1250
+	}
+}
+
+sob_estate_warrior_noble_rew = {
+	icon = privilege_monopoly_of_goods_paper
+	loyalty = 0.1
+	influence = 0.1
+max_absolutism = -5
+
+	can_select = { 
+
+	
+									custom_trigger_tooltip = {
+				tooltip = sob_soc_reform_tooltip_5
+				has_country_flag= sob_soc_reform_tooltip_5
+				
+				}
+
+					estate_territory = {
+					estate = estate_sobwarriors
+					territory = 40
+				}
+	NOT = {		estate_territory = {
+					estate = estate_sobshishen
+					territory = 5
+				} 
+				
+				}
+	
+	
+	} 
+	on_revoked = { } 
+	on_granted = {
+						add_estate_loyalty = {
+			estate = estate_sobshishen
+			loyalty = -20
+		}
+	}
+	penalties = {
+	}
+	benefits = {
+	infantry_power = 0.05
+land_morale = 0.05
+
+	}
+	ai_will_do = {
+	factor = 1250
+	}
+}
+
+sob_estate_warrior_road_to_sky_rew = {
+	icon = privilege_spawn_rajput_regiments
+	loyalty = 0.1
+	influence = 0.1
+max_absolutism = -15
+	can_select = { 	
+									custom_trigger_tooltip = {
+				tooltip = sob_soc_reform_tooltip_6
+				has_country_flag= sob_soc_reform_tooltip_6
+				
+				}
+					estate_territory = {
+					estate = estate_sobwarriors
+					territory = 30
+				}
+	NOT = {		estate_territory = {
+					estate = estate_sobshishen
+					territory = 5
+				} 
+				
+				}
+	
+	
+	} 
+	on_revoked = { } 
+	on_granted = {
+						add_estate_loyalty = {
+			estate = estate_sobshishen
+			loyalty = -20
+		}
+	}
+	penalties = {
+	}
+	benefits = {
+	  artillery_shock = 1
+      cavalry_shock = 1
+	}
+		modifier_by_land_ownership = {
+		amount_of_banners = 2
+
+	}
+
+	ai_will_do = {
+	factor = 12500
+	}
+}

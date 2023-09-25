@@ -1,0 +1,327 @@
+
+each_estate_effect = {
+	if = {
+		limit = {
+			has_estate = estate_sobmongol
+		}
+		[[effect]
+			$effect$
+		]
+		[[sobmongol_effect]
+			$sobmongol_effect$
+		]
+	}
+		if = {
+		limit = {
+			has_estate = estate_sobshimin
+		}
+		[[effect]
+			$effect$
+		]
+		[[sobshimin_effect]
+			$sobshimin_effect$
+		]
+	}
+		if = {
+		limit = {
+			has_estate = estate_sobwarriors
+		}
+		[[effect]
+			$effect$
+		]
+		[[sobwarriors_effect]
+			$sobwarriors_effect$
+		]
+	}
+			if = {
+		limit = {
+			has_estate = estate_sobshishen
+		}
+		[[effect]
+			$effect$
+		]
+		[[sobshishen_effect]
+			$sobshishen_effect$
+		]
+	}
+	if = {
+		limit = {
+			has_estate = estate_brahmins
+		}
+		[[effect]
+			$effect$
+		]
+		[[brahmins_effect]
+			$brahmins_effect$
+		]
+	}
+	if = {
+		limit = {
+			has_estate = estate_church
+		}
+		[[effect]
+			$effect$
+		]
+		[[church_effect]
+			$church_effect$
+		]
+	}
+	if = {
+		limit = {
+			has_estate = estate_maratha
+		}
+		[[effect]
+			$effect$
+		]
+		[[maratha_effect]
+			$maratha_effect$
+		]
+	}
+	if = {
+		limit = {
+			has_estate = estate_nobles
+		}
+		[[effect]
+			$effect$
+		]
+		[[nobles_effect]
+			$nobles_effect$
+		]
+	}
+	if = {
+		limit = {
+			has_estate = estate_rajput
+		}
+		[[effect]
+			$effect$
+		]
+		[[rajput_effect]
+			$rajput_effect$
+		]
+	}
+	if = {
+		limit = {
+			has_estate = estate_burghers
+		}
+		[[effect]
+			$effect$
+		]
+		[[burghers_effect]
+			$burghers_effect$
+		]
+	}
+	if = {
+		limit = {
+			has_estate = estate_vaisyas
+		}
+		[[effect]
+			$effect$
+		]
+		[[vaisyas_effect]
+			$vaisyas_effect$
+		]
+	}
+	if = {
+		limit = {
+			has_estate = estate_cossacks
+		}
+		[[effect]
+			$effect$
+		]
+		[[cossacks_effect]
+			$cossacks_effect$
+		]
+	}
+	if = {
+		limit = {
+			has_estate = estate_nomadic_tribes
+		}
+		[[effect]
+			$effect$
+		]
+		[[tribes_effect]
+			$tribes_effect$
+		]
+	}
+	if = {
+		limit = {
+			has_estate = estate_dhimmi
+		}
+		[[effect]
+			$effect$
+		]
+		[[dhimmi_effect]
+			$dhimmi_effect$
+		]
+	}
+	if = {
+		limit = {
+			has_estate = estate_jains
+		}
+		[[effect]
+			$effect$
+		]
+		[[jains_effect]
+			$jains_effect$
+		]
+	}
+}
+
+pick_random_estate_if_present = {
+if = {
+limit = {
+OR = {
+culture_group = east_asian
+
+culture_group = chinese_group
+}
+}
+if = {
+limit = { has_estate = estate_sobwarriors}
+			
+			[[estate_action]
+			$estate_action$ = estate_sobwarriors
+			]
+			
+			}
+	if = {
+limit = { has_estate = estate_sobshimin}
+					
+			
+			[[estate_action]
+			$estate_action$ = estate_sobshimin
+			]
+			
+			}
+				if = {
+limit = { has_estate = estate_sobmongol}
+					
+			
+			[[estate_action]
+			$estate_action$ = estate_sobmongol
+			]
+			
+			}
+							if = {
+limit = { has_estate = estate_sobshishen}
+					
+			
+			[[estate_action]
+			$estate_action$ = estate_sobshishen
+			]
+			
+			}
+}
+	random_list = {
+		1 = { 
+			trigger = {
+				has_estate = estate_brahmins
+				NOT = { has_country_flag = estate_brahmins_$flag$ }
+			}
+			set_country_flag = estate_brahmins_$flag$
+			[[estate_action]
+			$estate_action$ = estate_brahmins
+			]
+		}
+		1 = { 
+			trigger = {
+				has_estate = estate_church
+				NOT = { has_country_flag = estate_church_$flag$ }
+			}
+			set_country_flag = estate_church_$flag$
+			[[estate_action]
+			$estate_action$ = estate_church
+			]
+		}
+		1 = { 
+			trigger = {
+				has_estate = estate_maratha
+				NOT = { has_country_flag = estate_maratha_$flag$ }
+			}
+			set_country_flag = estate_maratha_$flag$ 
+			[[estate_action]
+			$estate_action$ = estate_maratha
+			]
+		}
+		1 = { 
+			trigger = {
+				has_estate = estate_nobles
+				NOT = { has_country_flag = estate_nobles_$flag$ }
+			}
+			set_country_flag = estate_nobles_$flag$
+			[[estate_action]
+			$estate_action$ = estate_nobles
+			]
+		}
+		1 = { 
+			trigger = {
+				has_estate = estate_burghers
+				NOT = { has_country_flag = estate_burghers_$flag$ }
+			}
+			set_country_flag = estate_burghers_$flag$
+			[[estate_action]
+			$estate_action$ = estate_burghers
+			]
+		}
+		1 = { 
+			trigger = {
+				has_estate = estate_vaisyas
+				NOT = { has_country_flag = estate_vaisyas_$flag$ }
+			}
+			set_country_flag = estate_vaisyas_$flag$
+			[[estate_action]
+			$estate_action$ = estate_vaisyas
+			]
+		}
+		1 = { 
+			trigger = {
+				has_estate = estate_cossacks
+				NOT = { has_country_flag = estate_cossacks_$flag$ }
+			}
+			set_country_flag = estate_cossacks_$flag$
+			[[estate_action]
+			$estate_action$ = estate_cossacks
+			]
+		}
+		1 = { 
+			trigger = {
+				has_estate = estate_nomadic_tribes
+				NOT = { has_country_flag = estate_nomadic_tribes_$flag$ }
+			}
+			set_country_flag = estate_nomadic_tribes_$flag$
+			[[estate_action]
+			$estate_action$ = estate_nomadic_tribes
+			]
+		}
+		1 = { 
+			trigger = {
+				has_estate = estate_dhimmi
+				NOT = { has_country_flag = estate_dhimmi_$flag$ }
+			}
+			set_country_flag = estate_dhimmi_$flag$
+			[[estate_action]
+			$estate_action$ = estate_dhimmi
+			]
+		}
+		1 = { 
+			trigger = {
+				has_estate = estate_jains
+				NOT = { has_country_flag = estate_jains_$flag$ }
+			}
+			set_country_flag = estate_jains_$flag$
+			[[estate_action]
+			$estate_action$ = estate_jains
+			]
+		}
+		1 = { 
+			trigger = {
+				has_estate = estate_rajput
+				NOT = { has_country_flag = estate_rajput_$flag$ }
+			}
+			set_country_flag = estate_rajput_$flag$
+			[[estate_action]
+			$estate_action$ = estate_rajput
+			]
+		}
+	}
+}

@@ -1,0 +1,26 @@
+sob_taoist_reform_desire = {
+
+	potential = {	
+
+		religion = sob_taoist_religion
+
+
+	}
+	trigger = {	
+ reform_desire = 1
+	}
+land_morale = 0.075
+development_cost = -0.05
+	
+}
+sob_taoist_reform_desire_2 = {
+
+	potential = {	
+	religion = sob_taoist_religion
+	}
+	trigger = {	
+ reform_desire = 2
+	}
+discipline = 0.025
+	global_missionary_strength = 0.025
+}

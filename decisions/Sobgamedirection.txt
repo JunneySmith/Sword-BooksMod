@@ -1,0 +1,89 @@
+country_decisions = {
+	sob_mod_direction = {
+		potential = {
+       always = no
+         ai = no
+		}
+		allow = {
+        always = yes
+		}
+		effect = {
+		
+
+   
+			
+	
+				  	  country_event = { id = sobdirection.929 } 
+
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+		sob_flee_debug_direction = {
+		potential = {
+		 	has_country_flag = sob_mng_fleed_zhengbianjundui_flag
+	NOT = { has_country_flag = sob_mng_fleed_zhengbianjundui_already_debug}
+
+		}
+		allow = {
+       			any_owned_province = {
+		transports_in_province = 24
+		
+		}
+		}
+		effect = {
+		
+
+   
+			
+	
+				  	  country_event = { id = sob_save_mng_event.11 } 
+
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	
+	
+
+	sob_trimod_direction = {
+		potential = {
+             any_subject_country = {
+	  is_subject_of_type = sob_tributary_state_3
+	  }
+	  always = no
+         ai = no
+		}
+		allow = {
+		             any_subject_country = {
+	  is_subject_of_type = sob_tributary_state_3
+	  }
+        	   OR = {
+	   NOT = { has_country_flag = sob_tributary_state_4_recent_changed}
+ 	
+
+had_country_flag = {
+	flag = sob_tributary_state_4_recent_changed
+	days = 730
+}
+	   }
+		}
+		effect = {
+			clr_country_flag = sob_tributary_state_4_recent_changed
+	set_country_flag = sob_tributary_state_4_recent_changed
+	 country_event = { id = sob_tributary_events.13} 
+   
+			
+	
+	
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	
+	}

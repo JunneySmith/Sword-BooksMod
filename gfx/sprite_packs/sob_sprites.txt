@@ -1,0 +1,53 @@
+
+
+00_sob_mng_sprite_pack = {
+	# Tests against every tag in game
+	country_trigger = {
+		OR = {
+		culture_group = east_asian
+		culture_group = chinese_group
+			tag = MNG
+			tag = MIN
+			tag = YUE
+			tag = SHU
+			tag = NNG
+			tag = CHC
+			tag = TNG
+			tag = WUU
+			tag = QIC
+			tag = YAN
+			tag = JIN
+			tag = LNG
+			tag = QIN
+			tag = HUA
+			tag = CGS
+			tag = CMI
+			tag = FRM
+			tag = CSH
+		}
+	}
+	graphical_cultures = {
+		sobchinesegfx
+	}
+	sprite_infantry = {
+		0 = MNG_INFANTRY_1
+		1 = MNG_INFANTRY_2
+		2 = MNG_INFANTRY_3
+		3 = MNG_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = MNG_CAVALRY_1
+		1 = MNG_CAVALRY_2
+		2 = MNG_CAVALRY_3
+		3 = MNG_CAVALRY_4
+	}
+
+	sprite_artillery = {
+		0 = MNG_ARTILLERY_1
+		1 = MNG_ARTILLERY_2
+		2 = MNG_ARTILLERY_3
+		3 = MNG_ARTILLERY_4
+	}
+}
+

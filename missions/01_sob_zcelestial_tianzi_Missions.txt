@@ -1,0 +1,2243 @@
+sob_han_c_missions_131_2 = {
+	slot = 9
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = MNG
+			OR = {culture_group = east_asian culture_group = chinese_group}
+		}
+	}
+	has_country_shield = yes
+
+		sob_out_conquer_mission = {
+		icon = mission_unite_coromandel
+		required_missions = {  }
+		position = 1
+		provinces_to_highlight = {
+			OR = {
+				region = south_china_region
+				region = xinan_region
+				region = north_china_region
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {is_subject = no  
+		OR = {
+is_emperor_of_china = yes
+NOT = {
+any_country = {
+is_emperor_of_china = yes
+num_of_cities = 1
+
+}
+
+}
+
+}
+stability = 2
+		OR = {culture_group = east_asian culture_group = chinese_group}
+		treasury = 1000
+		}
+		effect = {
+					2166 = { add_core = ROOT}
+      660= { add_core = ROOT}
+
+		}
+	}
+	
+
+	sob_harmonized_jingang = {
+		icon =mission_european_church
+		required_missions = {  }
+		position = 2
+		ai_weight = {
+			factor = 5
+		}
+
+		trigger = {OR = {culture_group = east_asian culture_group = chinese_group}
+         		OR = {
+						NOT = {religion = confucianism}
+		has_harmonized_with = vajrayana
+
+
+		has_harmonized_with = vajrayana_confu_group
+		
+		}
+
+		}
+		effect = {
+		if = {
+		limit = { religion = confucianism}
+		 enable_religion = sob_mahayana
+		  }
+				add_country_modifier = {
+				name = "sob_harmonized_vajrayana_effect"
+				duration = -1
+			}
+		}
+	}
+	sob_harmonized_pagan = {
+		icon =mission_european_church
+		required_missions = {  }
+		position = 3
+		ai_weight = {
+			factor = 5
+		}
+
+		trigger = {OR = {culture_group = east_asian culture_group = chinese_group}
+		         		OR = {
+						NOT = {religion = confucianism}
+          has_harmonized_with = pagan
+		  
+		  }
+
+		}
+		effect = {
+				if = {
+		limit = { religion = confucianism}
+		 		 enable_religion = sob_shamanism
+		 enable_religion = sob_shinto
+		 }
+		  					add_country_modifier = {
+				name = "sob_harmonized_yuanshi_effect"
+				duration = -1
+			}
+		
+		}
+	}
+					sob_harmonized_mu = {
+		icon = mission_european_church
+		position = 4
+required_missions = {  }
+		trigger = {OR = {culture_group = east_asian culture_group = chinese_group}
+		         		OR = {
+						NOT = {religion = confucianism}
+         has_harmonized_with = muslim
+         }
+		}
+		effect = {
+				if = {
+		limit = { religion = confucianism}
+					 enable_religion = sob_sunni
+					 }
+		  					add_country_modifier = {
+				name = "sob_harmonized_muslim_effect"
+				duration = -1
+			}
+		}
+	}
+			sob_harmonized_dharmic = {
+		icon =mission_european_church
+		required_missions = {  }
+		position = 5
+		ai_weight = {
+			factor = 5
+		}
+
+
+		trigger = {OR = {culture_group = east_asian culture_group = chinese_group}
+		         		OR = {
+						NOT = {religion = confucianism}
+						AND = {
+		  has_harmonized_with = dharmic 
+		  has_harmonized_with = sikhism_confu_group
+		  }
+		  }
+		}
+		effect = {
+				if = {
+		limit = { religion = confucianism}
+		 enable_religion = sob_hinduism
+		 }
+		  		  					add_country_modifier = {
+				name = "sob_harmonized_hindu_effect"
+				duration = -1
+			}
+		
+		}
+	}
+	}
+sob_han_c_missions_131_1 = {
+	slot = 7
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = MNG
+			OR = {culture_group = east_asian culture_group = chinese_group}
+		}
+	}
+	has_country_shield = yes
+
+		sob_out_conquer_wen_mission = {
+		icon = mission_dominate_home_trade_node
+		required_missions = {  }
+		position = 1
+		provinces_to_highlight = {
+			OR = {
+				region = south_china_region
+				region = xinan_region
+				region = north_china_region
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+stability = 1
+OR = {
+is_emperor_of_china = yes
+NOT = {
+any_country = {
+is_emperor_of_china = yes
+num_of_cities = 1
+
+}
+
+}
+
+}
+NOT = { any_owned_province = { unrest = 1 }}
+		OR = {culture_group = east_asian culture_group = chinese_group}
+        num_of_cities = 100
+		}
+		effect = {
+		manchuria_region = {
+
+	add_permanent_claim = ROOT
+	
+	}
+	  707 = { add_core = ROOT}
+
+		}
+	}
+	
+				sob_land_reform_mission = {
+		icon = mission_expel_the_moriscos
+		required_missions = {  }
+		position = 2
+
+		trigger = {OR = {culture_group = east_asian culture_group = chinese_group}
+				prestige =25
+		}
+		effect = {
+			add_stability = 1
+			add_splendor = 150
+                    
+		}
+	}
+					sob_land_jiangnan_mission = {
+		icon = mission_trade_with_cathay
+		required_missions = { sob_land_reform_mission  }
+		position = 3
+
+		trigger = {OR = {culture_group = east_asian culture_group = chinese_group}
+			
+		calc_true_if = {
+	
+		all_owned_province = {
+		development = 50
+		
+		}
+	amount = 2
+}
+		
+	
+         
+		}
+		effect = {
+           add_meritocracy = 50
+	add_splendor = 150
+		}
+	}
+						sob_land_jiangnan_jingji_mission = {
+		icon = mission_trade_with_cathay
+		required_missions = { sob_land_jiangnan_mission }
+		position = 4
+
+		trigger = {OR = {culture_group = east_asian culture_group = chinese_group}
+
+		  num_of_merchants = 5
+
+		
+	
+         
+		}
+		effect = {
+		add_adm_power = 250
+           add_dip_power = 200
+		   add_splendor = 150
+		}
+	}
+						sob_land_jiangnan_fazhan_mission = {
+		icon = mission_trade_with_cathay
+		required_missions = { sob_land_jiangnan_jingji_mission }
+		position = 5
+
+		trigger = {OR = {culture_group = east_asian culture_group = chinese_group}
+		calc_true_if = {
+	
+		all_owned_province = {
+		development = 40
+		
+		}
+	amount = 5
+}
+		
+		}
+		effect = {
+		add_splendor = 150
+         add_treasury = 2000
+         add_mil_power = 200
+		 	   			add_country_modifier = {
+				name = "proto_industrialization"
+				duration = 9125
+			}
+		}
+	}
+	
+	
+	
+	
+	
+	
+		   sob_mongol_conquer_mission = {
+		icon = mission_chinese_general_riding
+		required_missions = {sob_conquer_central_aisa  }
+		position = 6
+		provinces_to_highlight = {
+			OR = {
+				region = mongolia_region
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {is_subject = no   OR = {culture_group = east_asian culture_group = chinese_group}
+
+		 					custom_trigger_tooltip = {
+				tooltip = sob_conquer_mongol_empire_1_mission
+        MGE = {
+		had_country_flag = {
+	flag = sob_arrive_hanland_officals
+	days = 36500
+}
+		
+		}
+		}
+
+	
+	
+		}
+		effect = {
+		
+		add_mandate = 10
+		every_owned_province = {
+		limit = { 
+		OR = {
+		region = central_asia_region
+		superregion = persia_superregion
+		}}
+		cede_province = WPS
+		add_core = WPS
+		}
+		every_owned_province = {
+		limit = { region = mongolia_region}
+		cede_province = NPS
+		add_core = NPS
+		}
+	
+				hidden_effect = {
+					every_province = {
+						limit = {
+							OR = {
+								culture = mongol
+								culture = oirats
+								culture = khalkha
+								culture = chahar
+							}
+						}
+						change_culture = altaic_new
+					}
+					every_country = {
+						limit = {
+							OR = {
+								primary_culture = mongol
+								primary_culture = oirats
+								primary_culture = khalkha
+								primary_culture = chahar
+							}
+						}
+						change_primary_culture = altaic_new
+						set_ruler_culture = altaic_new
+						if = {
+							limit = {
+								has_heir = yes
+							}
+							set_heir_culture = altaic_new
+						}
+						if = {
+							limit = {
+								has_consort = yes
+								OR = {
+									consort_culture = mongol
+									consort_culture = oirats
+									consort_culture = khalkha
+									consort_culture = chahar
+								}
+							}
+							set_consort_culture = altaic_new
+						}
+					}
+					set_global_flag = sinicized_altaic_flag
+				}
+				custom_tooltip = sob_sinicize_mongols_ct
+	    NPS = {
+			inherit = MGE
+		
+		}
+		
+		
+					NPS = {
+		set_country_flag = celestial_converted
+			 change_government = republic
+	 add_government_reform = oligarchy_reform
+		}
+		
+		create_subject = {
+		subject_type = sob_duhu_vassal
+		subject = NPS
+		}
+
+		}
+	}
+	}
+sob_han_c_missions_1 = {
+	slot = 6
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = MNG
+			OR = {culture_group = east_asian culture_group = chinese_group}
+		}
+	}
+	has_country_shield = yes
+
+	sob_east_conquer_mission = {
+		icon = mission_mnd_dai_control_the_army
+		required_missions = {sob_out_conquer_mission  sob_out_conquer_wen_mission}
+		position = 2
+		provinces_to_highlight = {
+		
+				region = manchuria_region
+			is_empty = no
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {is_subject = no   OR = {culture_group = east_asian culture_group = chinese_group}
+		NOT = {
+		any_province = {
+		region = manchuria_region
+		is_empty = no
+		NOT = {country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		}
+		
+		}
+		effect = {
+add_splendor = 1000
+		custom_tooltip = sob_china_dongbei_yimin
+		add_mandate = 25
+		set_global_flag = sob_china_dongbei_yimin_flag
+		tooltip = {
+			730 = {	
+				set_great_project_tier_1 = {
+					type = sob_black_land_of_dongbei
+				}
+
+			}
+			}
+
+		}
+	}
+	
+		sob_koeras_fate_mission = {
+		icon = mission_have_two_subjects
+		required_missions = { sob_east_conquer_mission }
+		position = 3
+		provinces_to_highlight = {
+		
+				region = korea_region 
+			is_empty = no
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {is_subject = no   OR = {culture_group = east_asian culture_group = chinese_group}
+korea_region  = {
+type = all
+country_or_vassal_holds = ROOT
+ }
+		}
+		effect = {
+add_mandate = 5
+custom_tooltip = sob_sinicize_kors_ct
+		every_subject_country = {
+		limit = {
+		capital_scope = {
+		region = korea_region 
+		}
+		OR = {
+		is_subject_of_type = tributary_state
+		is_subject_of_type = sob_tributary_state_3
+		is_subject_of_type = tributary_state_2
+		is_subject_of_type = tusi_state
+		is_subject_of_type = xuanweisi_state
+		}
+		}
+		ROOT = {
+				create_subject = {
+		subject_type = vassal
+		subject = PREV
+		}
+		
+		}
+		}
+		
+		
+
+		
+		
+		}
+	}
+	
+	sob_japans_crown_mission = {
+		icon = mission_war_chest
+		position = 4
+		provinces_to_highlight = {
+province_id = 1020
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {is_subject = no   OR = {culture_group = east_asian culture_group = chinese_group} 
+		num_of_heavy_ship = 40
+		num_of_light_ship = 30
+			num_of_galley = 20
+		1021 = {
+			heavy_ships_in_province = ROOT
+		light_ships_in_province = ROOT
+		galleys_in_province = ROOT
+		heavy_ships_in_province = 40
+		light_ships_in_province = 30
+		galleys_in_province = 20
+		
+		}
+		OR = {
+owns = 1020
+any_subject_country = {
+owns = 1020
+OR = {
+has_reform = shogunate
+tag = JAP
+}
+has_opinion = {
+	who = ROOT
+	value = 190
+}
+NOT = {  liberty_desire = 1}
+}
+}
+OR = {
+ 
+
+
+									custom_trigger_tooltip = {
+				tooltip = sob_japan_mission_tooltip
+NOT = {
+any_country ={
+capital_scope = {
+region = japan_region
+}
+NOT = {has_opinion = {
+	who = ROOT
+	value = 75
+}
+}
+}
+
+
+}
+}
+japan_region = {
+type = all
+country_or_vassal_holds = ROOT
+
+}
+
+
+}
+}
+
+
+		
+		effect = {
+add_mandate = 10
+add_splendor = 500
+		every_country = {
+		limit = {
+		NOT = {is_subject_of_type = zhuhou_state
+is_subject_of_type = zhuhou_claim_state
+is_subject_of_type = celestial_client_state}
+		capital_scope = {
+		region = japan_region
+		}
+		}
+		ROOT = {
+				create_subject = {
+		subject_type = sob_zhengyijiangjun_vassal
+		subject = PREV
+		}
+		
+		}
+		}
+		
+		
+
+		
+		
+		}
+	}
+	sob_chinese_donghai_mission = {
+		icon = mission_have_manufactories
+		required_missions = { sob_japans_crown_mission }
+		position = 5
+
+		trigger = {is_subject = no   OR = {culture_group = east_asian culture_group = chinese_group}
+				num_of_owned_provinces_with = {
+	value = 25
+        has_building = dock
+}
+east_china_sea_area = {
+type = all
+ 	has_discovered = ROOT
+
+}
+ num_of_heavy_ship = 30
+		}
+		effect = {
+		every_owned_province = {
+		limit ={
+		superregion = china_superregion
+        has_port = yes
+		}
+		add_province_modifier = { 
+    name = rebuilding_efforts
+    duration = 1850
+
+}
+		
+
+		
+		
+		}
+		}
+	
+	}
+sob_conquer_new_never_had = {
+		icon = mission_plus_ultra
+		required_missions = { }
+		position = 6
+		ai_weight = {
+			factor = 5
+		}
+
+		trigger = {is_subject = no   OR = {culture_group = east_asian culture_group = chinese_group}
+		OR = {
+						num_of_owned_provinces_with = {
+	value = 36
+        has_building = dock
+}
+
+			full_idea_group =exploration_ideas 
+}
+		}
+		effect = {
+ 			add_country_modifier = {
+				name = "sob_mng_colony_enthusiasm"
+				duration = -1
+			}
+		}
+	}
+	
+	sob_chinese_new_land_mission = {
+		icon = mission_colonize_california
+		required_missions = {sob_conquer_new_never_had }
+		position = 7
+		provinces_to_highlight = {
+continent = north_america
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {is_subject = no   OR = {culture_group = east_asian culture_group = chinese_group}
+          			custom_trigger_tooltip = {
+				tooltip = obj_discover_america_tooltip
+					OR = {
+						north_america = { has_discovered = ROOT }
+						south_america = { has_discovered = ROOT }
+						new_world = { has_discovered = ROOT }
+					}
+				}
+		          			custom_trigger_tooltip = {
+				tooltip = sob_obj_discover_america_tooltip
+				any_owned_province = {
+	is_island = no
+	OR  = {
+	
+	continent = new_world
+				continent = north_america
+				
+				}
+				}
+				}
+		}
+		effect = {
+random_owned_province = {
+limit = { 	
+				continent = north_america
+                is_island = no
+				 }
+				cede_province = XSA
+}
+random_owned_province = {
+limit = { 	
+				continent = south_america
+                is_island = no
+				 }
+				cede_province = XSA
+}
+random_owned_province = {
+limit = { 	
+				continent = new_world
+                is_island = no
+				 }
+				cede_province = XSA
+}
+							XSA = {
+		set_country_flag = celestial_converted
+			 change_government = republic
+
+		}
+		create_subject = {
+		subject_type = colony
+		subject = XSA
+		}
+		
+		
+		
+		
+		
+
+		
+		
+		}
+	}
+	
+					sob_chinese_panama_mission = {
+		icon = mission_iberian_conquistador
+		required_missions = { sob_chinese_new_land_mission }
+		position = 8
+		provinces_to_highlight = {
+continent = south_america
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {is_subject = no   OR = {culture_group = east_asian culture_group = chinese_group}
+          			custom_trigger_tooltip = {
+				tooltip = obj_discover_america_tooltip
+					OR = {
+						north_america = { has_discovered = ROOT }
+						south_america = { has_discovered = ROOT }
+						new_world = { has_discovered = ROOT }
+					}
+				}
+
+				OR = {
+                  835 = {
+				  country_or_non_sovereign_subject_holds = ROOT
+				  }
+				  						          			custom_trigger_tooltip = {
+				tooltip = sob_obj_discover_america_tooltip
+				  any_owned_province = {
+
+	
+	continent = new_world
+				  
+}
+				  }
+		}
+		}
+		effect = {
+		add_splendor = 200
+         835  = {
+		 change_culture = ROOT
+		 change_religion = ROOT
+		 if = {
+		 limit = { 	is_colony = yes}
+		 add_colonysize = 500
+		 }
+		 add_base_tax =3
+		 add_base_production = 3
+		 add_base_manpower = 2
+		 
+		 		           		 		add_province_modifier = {
+				name = "sob_panama_modifier"
+				duration = -1
+			}
+		 }
+		
+		
+		
+		
+		
+
+		
+		
+		}
+	}
+	
+	sob_chinese_nammei_mission = {
+		icon = mission_new_kingdom_of_granada
+		required_missions = { sob_chinese_panama_mission }
+		position = 9
+		provinces_to_highlight = {
+continent = north_america
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {is_subject = no   OR = {culture_group = east_asian culture_group = chinese_group}
+          			custom_trigger_tooltip = {
+				tooltip = obj_discover_america_tooltip
+					OR = {
+						north_america = { has_discovered = ROOT }
+						south_america = { has_discovered = ROOT }
+						new_world = { has_discovered = ROOT }
+					}
+				}
+								  						          			custom_trigger_tooltip = {
+				tooltip = sob_obj_discover_america2_tooltip
+				any_owned_province = {
+		 
+              OR = {
+				continent = south_america
+continent =new_world
+				}
+				}
+				}
+												  						          			custom_trigger_tooltip = {
+				tooltip = sob_obj_discover_america3_tooltip
+				OR = {
+						calc_true_if = {
+	all_country = {
+		 capital_scope = {
+		continent = south_america
+		
+		}
+	 	
+
+has_opinion = {
+	who = ROOT
+	value = 75
+}
+	}
+	amount = 3
+}
+						NOT = {calc_true_if = {
+	all_country = {
+		 capital_scope = {
+		continent = south_america
+		
+		}
+	 	
+
+
+	}
+	amount = 3
+}
+}
+				
+				
+				}
+				}
+				}
+		
+		effect = {
+south_america = {
+    discover_country = ROOT
+}
+
+		new_world = {
+    discover_country = ROOT
+}
+		}
+	}
+    sob_chinese_american_mission = {
+		icon = mission_colonial
+		required_missions = { sob_chinese_nammei_mission }
+		position = 10
+		provinces_to_highlight = {
+		OR = {
+continent = north_america
+continent = south_america
+}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+				is_subject = no   OR = {culture_group = east_asian culture_group = chinese_group}
+		OR = {
+		AND = {
+						1466 = {
+					is_strongest_trade_power = ROOT
+				}
+										1516 = {
+					is_strongest_trade_power = ROOT
+				}
+				}
+
+num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+	value = 200
+	OR = {culture_group = east_asian culture_group = chinese_group}
+					 OR = {
+		 continent = north_america
+continent = south_america  
+continent = new_world  
+}
+	is_city = yes
+}
+
+}
+		}
+		effect = {
+		set_global_flag = sob_chinese_american_est
+		custom_tooltip = sob_chinese_american_est_1
+		every_country = {
+		limit = { 
+		OR = {culture_group = east_asian culture_group = chinese_group}
+		capital_scope = {
+		
+				 OR = {
+		 continent = north_america
+continent = south_america  
+continent = new_world  
+}
+		}
+		}
+				 add_country_modifier = {
+				name = "sob_east_ming_modifier"
+				duration = -1
+			}
+		}
+		hidden_effect = {
+         every_province = {
+		 limit = { 
+		province_has_center_of_trade_of_level = 1
+		 OR = {
+		 continent = north_america
+continent = south_america  
+continent = new_world  
+}}
+add_base_tax = 10
+add_base_production = 10
+add_base_manpower =5
+
+		 
+		 }
+		add_disaster_progress = {
+    disaster = china_dyansty_cycle
+    value = -100
+}
+		
+		}
+		}
+	}
+	
+	
+	
+	
+	
+	
+}
+
+
+
+sob_han_missions_1 = {
+	slot = 8
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = MNG
+			OR = {culture_group = east_asian culture_group = chinese_group}
+		}
+	}
+	has_country_shield = yes
+
+sob_reform_mission = {
+		icon = mission_build_up_to_force_limit
+		required_missions = {  }
+		position = 1
+		provinces_to_highlight = {
+			OR = {
+				region = south_china_region
+				region = xinan_region
+				region = north_china_region
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {OR = {culture_group = east_asian culture_group = chinese_group}
+		OR = {
+		  num_of_war_reparations = 5
+		  707 = { owned_by = ROOT}
+		  							custom_trigger_tooltip = {
+				tooltip = sob_ai_mission_tooltip
+AND = {
+ai = yes
+			OR = {
+				ADM = 4
+				DIP = 4
+				MIL = 4
+
+			
+				army_reformer = 3
+				commandant = 3
+				army_organiser = 3
+				
+				
+			}
+}
+}
+		}
+		}
+		effect = {
+		add_prestige = 35
+				custom_tooltip = sob_all_reform_tooltip_1
+						set_country_flag = sob_land_reform_start
+		  add_mil_power = 150
+
+
+		}
+	}
+        sob_west_conquer_mission = {
+		icon = mission_mnd_dai_control_the_army
+		required_missions = {sob_out_conquer_mission sob_out_conquer_wen_mission sob_reform_mission}
+		position = 2
+		provinces_to_highlight = {
+			OR = {
+				region = mongolia_region
+				region = central_asia_region
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {is_subject = no   OR = {culture_group = east_asian culture_group = chinese_group}
+         
+		   army_tradition = 10
+		   		OR = {
+		
+		NOT = { exists = KHA}
+		KHA = {
+		
+		NOT = {is_subject_of  = OIR}
+
+		}
+		}
+		}
+		effect = {
+		        add_stability = 1
+
+		if = {
+		limit = { NOT = { primary_culture = manchu}
+		 NOT = { primary_culture = manchu_chinese}
+		}
+ mongolia_region= {
+add_core = NPS
+	add_permanent_claim = NPS
+	
+	}
+	tibet_region = {
+	add_core = ROOT
+	}
+
+		}
+		}
+	}
+	        sob_tibet_conquer_mission = {
+		icon = mission_asian_city
+		required_missions = {sob_west_conquer_mission sob_harmonized_jingang}
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				region = tibet_region
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = { 
+		 tibet_region = {
+		 type = all
+		 country_or_non_sovereign_subject_holds = ROOT
+		 
+		 }
+		
+		}
+		effect = {
+		add_splendor = 100
+		custom_tooltip = sob_sinicize_tibs_ct
+						hidden_effect = {
+					every_province = {
+						limit = {
+							culture_group = tibetan_group
+						}
+						change_culture = tibetan_new
+					}
+					every_country = {
+						limit = {
+							culture_group = tibetan_group
+						}
+						change_primary_culture = tibetan_new
+						set_ruler_culture = tibetan_new
+						if = {
+							limit = {
+								has_heir = yes
+							}
+							set_heir_culture = tibetan_new
+						}
+						if = {
+							limit = {
+								has_consort = yes
+								OR = {
+									consort_culture = tibetan
+									consort_culture = yi
+									consort_culture = bai
+									consort_culture = miao
+								}
+							}
+							set_consort_culture = tibetan_new
+						}
+					}
+					set_global_flag = sinicized_tibetan_flag
+				}
+            every_owned_province = {
+			limit = {
+			region = tibet_region
+			
+			}
+			 	add_unrest = -10
+			}
+			if = {
+			limit = {
+			religion = confucianism
+			
+			}
+			every_country ={
+			limit = {
+			culture_group = altaic
+			
+			}
+			add_opinion = {
+    who = ROOT 
+    modifier = opinion_diplomatic_solution
+}
+			
+			}
+			}
+		}
+	}
+	
+			sob_conquer_north = {
+		icon = mission_non-western_cavalry_raid
+		required_missions = {sob_tibet_conquer_mission  sob_harmonized_pagan}
+		position = 4
+		ai_weight = {
+			factor = 5
+		}
+
+		trigger = {is_subject = no   OR = {culture_group = east_asian culture_group = chinese_group}
+		 is_emperor_of_china = yes
+		 		OR = {
+		NOT = {current_age = age_of_discovery}
+				 					custom_trigger_tooltip = {
+				tooltip = sob_conquer_mongol_empire_tumu_mission
+				has_country_flag = sob_tumubao_dajie
+				}
+				}
+
+		 					custom_trigger_tooltip = {
+				tooltip = sob_conquer_mongol_empire_mission_vassal
+		NOT = { any_country = {
+		culture_group = altaic 
+
+		NOT = { is_subject_of = ROOT}
+		 }
+		}
+        
+
+		}
+				 					custom_trigger_tooltip = {
+				tooltip = sob_conquer_mongol_empire_mission_20_desire
+				NOT = { any_country = {
+		culture_group = altaic 
+		AND = {
+		 liberty_desire = 20
+		 is_subject_of = ROOT
+		 }
+		 }
+		}
+		}
+		
+		custom_trigger_tooltip = {
+				tooltip = sob_conquer_mongol_empire_mission_land
+				 		NOT = {any_province = {
+		is_empty = no
+		region = mongolia_region
+	     NOT ={	country_or_vassal_holds = ROOT}
+		}
+		}
+		}
+		OR = {
+		
+		NOT = { exists = KHA}
+		KHA = {
+		
+		is_subject_of  = ROOT
+		NOT = { liberty_desire = 20}
+		}
+		}
+		}
+		effect = {
+		add_splendor = 800
+		custom_tooltip = sob_mengqi_tooltip_8
+		custom_tooltip = sob_sob_mengqi_system_tooltip
+		 set_country_flag = sob_mengqi_system 
+		 if = {
+		 limit = { religion = sob_taoist_religion }
+		 country_event = { id = sob_fubing_events.7 } 
+		 }
+		 add_country_modifier = {
+				name = "sob_mongol_kahan"
+				duration = -1
+			}
+		 
+		 add_accepted_culture = mongol
+		 add_accepted_culture = chahar 
+		  add_accepted_culture =khalkha 
+		 add_accepted_culture = oirats 
+		  add_accepted_culture =uzbehk 
+		 add_accepted_culture = turkmeni
+		 add_accepted_culture = khazak 
+		 add_accepted_culture = kirgiz 
+		 if = {
+		 
+		 limit = { NOT = { exists = KHA}
+		 any_owned_province = {
+		 region = mongolia_region
+		 }
+		 }
+		 random_owned_province = {
+		 limit = {
+		 region = mongolia_region
+		 }
+		 cede_province = KHA
+		 }
+		 }
+		 		 if = {
+		 
+		 limit = { NOT = { exists = KHA}
+		NOT = { any_owned_province = {
+		 region = mongolia_region
+		 }
+		 }
+		 any_subject_country = {
+		 any_owned_province = {
+		 region = mongolia_region
+		 }
+		 
+		 }
+		 }
+		 random_subject_country = {
+		 limit = { any_owned_province = {
+		 region = mongolia_region
+		 }}
+		 random_owned_province = {
+		 limit = {
+		 region = mongolia_region
+		 }
+		 cede_province = KHA
+		 }
+		 }
+		 }
+		 every_subject_country = {
+		 limit = { culture_group = altaic}
+		 every_owned_province = {
+		 cede_province = KHA
+		 add_core = KHA
+		
+		 
+		 }
+		 }
+		 
+		 
+		 		 create_subject = {
+    subject_type = personal_union
+    subject = KHA
+}
+		 KHA = {
+		 set_country_flag = sob_arrive_hanland_officals
+		 change_tag = MGE
+         set_government_rank = 3
+		 change_government = monarchy
+		 			country_event = { id = ideagroups.1 } #Swap Ideas
+					swap_non_generic_missions = yes
+		 }
+		}
+	}
+			sob_conquer_central_aisa = {
+		icon = mission_chinese_general_riding
+		required_missions = { sob_conquer_north sob_harmonized_mu}
+		position = 5
+		ai_weight = {
+			factor = 5
+		}
+
+		trigger = {is_subject = no  
+		OR = {culture_group = east_asian culture_group = chinese_group}
+OR = {
+								454= {
+					is_strongest_trade_power = ROOT
+				
+
+						}
+any_subject_country = {
+
+								454= {
+					is_strongest_trade_power = this
+				
+
+						}
+}
+}
+		}
+		effect = {
+		add_mandate  = 30
+
+              		every_owned_province = {
+		limit = { region = central_asia_region}
+		cede_province = WPS
+		add_core = WPS
+		remove_core = ROOT
+		
+		}
+		hidden_effect = {
+		every_subject_country = {
+		every_owned_province = {
+		limit = {
+OR = {
+region = central_asia_region
+		region = persia_region 
+		region = khorasan_region 
+		}
+		
+		}
+						cede_province = WPS
+		add_core = WPS
+		remove_core = NPS
+		
+		
+		}
+
+		}
+		}
+									WPS = {
+		set_country_flag = celestial_converted
+			 change_government = republic
+	 add_government_reform = oligarchy_reform
+		}
+				create_subject = {
+		subject_type = sob_duhu_vassal
+		subject = WPS
+		}
+		central_asia_region = {
+
+				add_permanent_claim = WPS
+			}
+		}
+	}
+			sob_conquer_sib = {
+		icon = mission_great_wall
+		required_missions = {sob_conquer_central_aisa }
+		position = 6
+		ai_weight = {
+			factor = 5
+		}
+
+
+		trigger = {is_subject = no   OR = {culture_group = east_asian culture_group = chinese_group}
+			east_siberia_region = {
+			type = all
+			country_or_vassal_holds = ROOT
+			}
+	west_siberia_region = {
+	
+				type = all
+			country_or_vassal_holds = ROOT
+	}
+		}
+		effect = {
+		1057 = {
+				 			add_province_modifier = {
+				name = "sob_hanhai_modifier"
+				duration = -1
+			}
+			}
+					east_siberia_region = {
+		add_base_tax = 1
+add_base_production = 1
+add_base_manpower =1
+			}
+				west_siberia_region = {
+	
+			add_base_tax = 1
+add_base_production = 1
+add_base_manpower =1
+	}
+        add_disaster_progress = {
+    disaster = china_dyansty_cycle
+    value = -10
+}
+       
+ 
+		}
+		
+	}
+			   sob_central_asia_conquer_mission = {
+		icon = mission_chinese_general_riding
+		required_missions = { sob_conquer_sib }
+		position = 7
+		provinces_to_highlight = {
+		
+				region = central_asia_region
+			
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {is_subject = no   OR = {culture_group = east_asian culture_group = chinese_group}
+        
+		central_asia_region = {
+			type = all
+			country_or_non_sovereign_subject_holds = ROOT
+			
+			}
+	
+	
+		}
+		effect = {
+		add_mandate = 10
+           central_asia_region = {
+			   limit = {
+			   OR = {
+			   owner = {
+ OR = {is_subject_of_type = tributary_state
+is_subject_of_type = tributary_state_2
+is_subject_of_type = sob_tributary_state_3
+	}
+	
+			   
+			   }
+			   
+			   owned_by = ROOT
+			   }
+			   
+		   
+		   }
+		   cede_province = WPS
+		   add_core = WPS
+		   remove_core = ROOT
+		   }
+		   454 = {
+		   		add_trade_modifier = {
+					who = ROOT
+					duration = -1
+					power = 1000
+					key = sob_tributary_soured_relations
+				}
+		   
+		   }
+		}
+	}
+	sob_wulaer_conquer_mission = {
+		icon = mission_build_up_to_force_limit
+		required_missions = { sob_central_asia_conquer_mission }
+		position = 8
+		provinces_to_highlight = {
+		
+			superregion = eastern_europe_superregion
+			
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {is_subject = no   OR = {culture_group = east_asian culture_group = chinese_group}
+        any_owned_province = {
+		superregion =eastern_europe_superregion
+		
+		}
+	OR = {
+	has_harmonized_with = orthodox
+	has_harmonized_with = orthodox_confu_group
+	
+	
+	}
+	
+		}
+		effect = {
+			add_country_modifier = {
+				name = "sob_new_land_rus_1"
+				duration = -1
+			}
+		}
+	}
+
+
+		sob_harmonized_chr = {
+		icon =mission_european_church
+		required_missions = {  }
+		position = 9
+		ai_weight = {
+			factor = 5
+		}
+
+
+		trigger = {OR = {culture_group = east_asian culture_group = chinese_group}
+    has_harmonized_with = christian
+	
+		}
+		effect = {
+		 		 enable_religion = threeself
+        enable_religion = sob_catholic
+		enable_religion = sob_anglican
+		enable_religion = sob_reformed
+		enable_religion = sob_orthodox
+		enable_religion = sob_coptic
+		  			  					add_country_modifier = {
+				name = "sob_harmonized_jidu_effect"
+				duration = -1
+			}
+		
+		}
+	}
+
+
+
+	
+
+	
+
+
+}
+sob_sib_conquer_mission= {
+	slot = 9
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = MNG
+			OR = {culture_group = east_asian culture_group = chinese_group}
+		}
+	}
+	has_country_shield = yes
+
+
+
+			sob_nan_yang_officals = {
+		icon =  mission_sail_to_the_east_indies
+		required_missions = { sob_recover_dongnan  }
+		position = 6
+		ai_weight = {
+			factor = 5
+		}
+
+
+		trigger = {
+		custom_trigger_tooltip = {
+				tooltip = sob_chi_nanyang_time_tooltip	
+				had_country_flag = {
+	flag = sob_chi_nanyang_time
+	days = 7300
+}
+}
+		is_emperor_of_china = yes
+		OR = {culture_group = east_asian culture_group = chinese_group}
+		OR = {
+		LFA = {
+		is_subject_of = ROOT
+		}
+		NOT = { exists = LFA}
+		}
+
+		}
+		effect = {
+		custom_tooltip = sob_chi_nanyang_time_con
+		LFA = {
+		
+		override_country_name = SOB_NANYANG_DUHU
+		}
+		hidden_effect = {
+			every_subject_country = {
+			limit = {
+			ai = yes
+			
+					 capital_scope = {
+		superregion = 	east_indies_superregion
+		
+		}
+		OR = {
+		is_subject_of_type = xuanweisi_state
+		is_subject_of_type = tributary_state
+		is_subject_of_type = sob_tributary_state_3
+		is_subject_of_type = tributary_state_2
+		}
+			}
+		 every_owned_province = {
+		 cede_province = LFA
+		 add_core = LFA
+		
+		 
+		 }
+			
+			}
+							create_subject = {
+		subject_type = sob_duhu_vassal
+		subject = LFA
+		}
+		
+		}
+
+		
+		}
+	}
+	sob_way_to_daishu = {
+		icon =  mission_potosi_silver
+		required_missions = {   }
+		position = 7
+		ai_weight = {
+			factor = 5
+		}
+
+		trigger = {is_subject = no   OR = {culture_group = east_asian culture_group = chinese_group}
+australia_region = {
+				type = all
+				has_discovered = ROOT
+			}
+		}
+		effect = {
+		custom_tooltip = sob_no_aosong_1
+		 			add_country_modifier = {
+				name = "sob_songshu_1"
+				duration = -1
+			}
+
+		add_disaster_progress = {
+    disaster = china_dyansty_cycle
+    value = -10
+}            
+       
+        
+
+
+		
+		}
+	}
+	sob_way_to_aosong = {
+		icon =  mission_trade_with_cathay
+		required_missions = { sob_way_to_daishu }
+		position = 8
+		ai_weight = {
+			factor = 5
+		}
+
+
+		trigger = {is_subject = no   OR = {culture_group = east_asian culture_group = chinese_group}
+		
+		NOT = { exists = TIW }
+		NOT = { exists = LAR}
+		NOT = { exists = YOL}
+		NOT = { exists = YNU}
+		NOT = { exists = AWN}
+		NOT = { exists = MIA}
+		NOT = { exists = GMI}
+		NOT = { exists = EOR}
+		NOT = { exists = WRU}
+		NOT = { exists = PLW}
+		NOT = { exists = KAU}
+		NOT = { exists = NOO}
+		NOT = { exists = MLG}
+
+		australia_region = {
+				type = all
+				country_or_vassal_holds = ROOT
+			}
+
+		}
+		effect = {
+		custom_tooltip = sob_no_aosong
+					add_mandate = 5
+
+			1087 = {
+ 			add_province_modifier = {
+				name = "sob_aus_modifier"
+				duration = -1
+			}
+}
+		
+		}
+	}
+	
+
+			sob_daolian_fangxian = {
+		icon =  mission_portuguese_oman
+		required_missions = { sob_way_to_aosong }
+		position = 9
+		ai_weight = {
+			factor = 5
+		}
+
+		trigger = {is_subject = no   OR = {culture_group = east_asian culture_group = chinese_group}
+oceania_superregion = {
+				type = all
+				country_or_vassal_holds = ROOT
+			}
+		}
+		effect = {
+
+           add_navy_tradition = 15
+              	
+		 			add_country_modifier = {
+				name = "sob_chinese_fleet"
+				duration = -1
+			}				
+       
+        
+
+
+		
+		}
+	}
+
+
+	}
+
+sob_south_mission= {
+	slot = 10
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = MNG
+			OR = {culture_group = east_asian culture_group = chinese_group}
+		}
+	}
+	has_country_shield = yes
+
+
+	
+		sob_conquer_south_mission = {
+		icon = mission_mnd_dai_control_the_army
+		required_missions = { sob_out_conquer_mission sob_out_conquer_wen_mission}
+		position = 2
+		ai_weight = {
+			factor = 5
+		}
+
+		trigger = {is_subject = no   OR = {culture_group = east_asian culture_group = chinese_group}
+		owns = 2166
+        owns = 660
+		
+		}
+		effect = {
+		DAI = {
+		every_owned_province = {
+		add_permanent_claim = ROOT
+		}
+		
+		}
+          		add_casus_belli = {
+			target = DAI
+			type = cb_vassalize_mission
+			months = 1200
+		}
+		}
+	}
+				sob_conquer_dai_mission = {
+		icon = mission_great_wall
+		required_missions = { sob_conquer_south_mission }
+		position = 3
+		ai_weight = {
+			factor = 5
+		}
+
+
+		trigger = {
+		
+		
+		is_subject = no   OR = {culture_group = east_asian culture_group = chinese_group}
+		OR = {
+		DAI = {
+		is_subject_of = ROOT 
+		NOT = { is_subject_of_type = tributary_state}
+		NOT = { is_subject_of_type = tributary_state_2}
+		NOT = { is_subject_of_type = sob_tributary_state_3}
+		
+		}
+		AND = {
+		red_river_delta_area = {
+		type = all
+		country_or_non_sovereign_subject_holds = ROOT
+		
+		}
+				vietnam_area = {
+		type = all
+		country_or_non_sovereign_subject_holds = ROOT
+		
+		}
+		}
+		
+		}
+		}
+		effect = {
+		custom_tooltip = sob_sinicize_viets_ct
+						hidden_effect = {
+					every_province = {
+						limit = {
+							culture = vietnamese
+						}
+						change_culture = vietnamese_new
+					}
+					every_country = {
+						limit = {
+							primary_culture = vietnamese
+						}
+						change_primary_culture = vietnamese_new
+						set_ruler_culture = vietnamese_new
+						if = {
+							limit = {
+								has_heir = yes
+							}
+							set_heir_culture = vietnamese_new
+						}
+						if = {
+							limit = {
+								has_consort = yes
+								consort_culture = vietnamese
+							}
+							set_consort_culture = vietnamese_new
+						}
+					}
+				}
+		AVA = {
+		every_owned_province = {
+		add_permanent_claim = ROOT
+		}
+		
+		}
+				red_river_delta_area = {
+ 
+		add_core = ROOT
+		
+		}
+				vietnam_area = {
+		add_core = ROOT
+		
+		}
+          		add_casus_belli = {
+			target = AVA
+			type = cb_vassalize_mission
+			months = 1200
+		}
+		}
+	}
+	
+			sob_end_ava_mission = {
+		icon = mission_unite_home_region
+		required_missions = { sob_conquer_dai_mission }
+		position = 4
+		ai_weight = {
+			factor = 5
+		}
+
+		trigger = {is_subject = no   OR = {culture_group = east_asian culture_group = chinese_group}
+		imperial_mandate = 100
+										custom_trigger_tooltip = {
+				tooltip = sob_ava_mission_tooltip	
+NOT = {
+any_country ={
+capital_scope = {
+region = burma_region
+}
+NOT = {has_opinion = {
+	who = ROOT
+	value = 50
+}
+}
+}
+
+
+}
+}
+
+
+
+
+		OR = {
+		AND = {
+		owns = 4393
+        owns = 2399
+		  owns =4394
+		    owns =4395
+			  owns = 584
+			    owns = 581
+		
+		}
+		AVA = {
+		 	is_subject_of = ROOT
+			NOT = { is_subject_of_type = tributary_state}
+		NOT = {is_subject_of_type = tributary_state_2}
+		NOT = {is_subject_of_type = sob_tributary_state_3}
+		}
+		
+		}
+		}
+		
+		effect = {
+		add_mandate = -50
+           every_country = {
+				limit = { ai = yes
+				capital_scope = {
+		region = burma_region
+		
+		}
+						NOT= {
+				is_subject_of_type = zhuhou_state
+is_subject_of_type = zhuhou_claim_state
+is_subject_of_type = celestial_client_state}
+		}
+		   	  ROOT = {create_subject = {
+		subject_type = xuanweisi_state
+		subject = PREV
+		}
+		   }
+		   }
+		   
+		 random_subject_country= {
+		 limit  = {
+
+		 capital_scope = {
+		region = indo_china_region
+		
+		}
+		OR = {
+		is_subject_of_type = tributary_state
+		is_subject_of_type = sob_tributary_state_3
+		is_subject_of_type = tributary_state_2
+		}
+		}
+		 grant_independence = yes
+		 every_owned_province = {
+		 set_province_flag = sob_mng_mission_1
+		 add_permanent_claim = ROOT
+		 }
+		 }
+		}
+	}
+	
+
+	sob_recover_dongnan = {
+		icon = mission_sail_to_the_east_indies
+		required_missions = { sob_end_ava_mission }
+		position = 5
+		ai_weight = {
+			factor = 5
+		}
+
+		trigger = {is_subject = no   OR = {culture_group = east_asian culture_group = chinese_group}
+		imperial_mandate= 100
+		OR = {
+		calc_true_if = {
+	all_country = {
+		 capital_scope = {
+		superregion = 	east_indies_superregion
+		
+		}
+	 	
+
+has_opinion = {
+	who = ROOT
+	value = 50
+}
+	}
+	amount = 5
+}
+indo_china_region= {
+type = all
+country_or_non_sovereign_subject_holds = ROOT
+}
+	NOT = {	calc_true_if = {
+	all_country = {
+		 capital_scope = {
+		superregion = 	east_indies_superregion
+		
+		}
+
+	}
+	amount = 5
+}
+
+}
+}
+any_owned_province = {
+superregion = 	east_indies_superregion
+OR = {culture_group = east_asian culture_group = chinese_group}
+}
+									custom_trigger_tooltip = {
+				tooltip = sob_shaji_mission_tooltip
+         NOT = {
+		 any_province ={
+		 has_province_flag = sob_mng_mission_1
+		 NOT = { country_or_non_sovereign_subject_holds = ROOT}
+		 
+		 }
+		 
+		 }
+		 }
+		}
+		effect = {
+				set_country_flag = sob_chi_nanyang_time
+		add_mandate = -50
+		add_splendor = 500
+           every_country = {
+				limit = { ai = yes
+				NOT= {OR = {culture_group = east_asian culture_group = chinese_group} }
+				
+				NOT= {
+				is_subject_of_type = zhuhou_state
+is_subject_of_type = zhuhou_claim_state
+is_subject_of_type = celestial_client_state}
+				capital_scope = {
+		superregion = 	east_indies_superregion
+		
+		}}
+		   	  ROOT = {create_subject = {
+		subject_type = xuanweisi_state
+		subject = PREV
+		}
+		   }
+		   }
+		}
+	}
+	sob_recover_tib = {
+		icon =  mission_indian_trade_company
+		required_missions = { sob_recover_dongnan sob_harmonized_dharmic}
+		position = 6
+		ai_weight = {
+			factor = 5
+		}
+
+		trigger = {is_subject = no  
+		 any_owned_province = {
+		 region = bengal_region
+		 
+		 }
+		OR = {culture_group = east_asian culture_group = chinese_group}
+tibet_region = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+
+					add_prestige = 20
+					add_mandate = 20
+			add_adm_power = 200
+		bengal_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+					hindusthan_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+								west_india_region= {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+								deccan_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+											coromandel_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		
+		}
+	}
+		
+
+	
+	sob_conquer_chongjian = {
+		icon = mission_early_game_buildings
+		required_missions = { sob_recover_tib}
+		position = 7
+		ai_weight = {
+			factor = 5
+		}
+
+		trigger = {is_subject = no   OR = {culture_group = east_asian culture_group = chinese_group}
+           num_of_heavy_ship = 68
+		}
+		effect = {
+         add_navy_tradition = 25
+		 
+		 		add_country_modifier = {
+				name = "sob_china_naval_dominance"
+				duration = -1
+			}
+		 
+		 
+		}
+		
+	}
+		sob_continue_zhenghe_cruse= {
+		icon = mission_west_african_ports
+		required_missions = { sob_conquer_chongjian }
+		position = 8
+		ai_weight = {
+			factor = 5
+		}
+
+
+		trigger = {is_subject = no   OR = {culture_group = east_asian culture_group = chinese_group}
+		custom_trigger_tooltip = {
+				tooltip = sob_obj_discover_america5_tooltip
+          south_african_plateau_area = {
+		  type = all
+		  has_discovered =ROOT
+		  }
+		}
+		}
+		effect = {
+         add_navy_tradition = 25
+		}
+		
+	}
+	sob_continue_haowangjiao= {
+		icon = mission_unite_coromandel
+		required_missions = { sob_continue_zhenghe_cruse }
+		position = 9
+		ai_weight = {
+			factor = 5
+		}
+
+
+		trigger = {is_subject = no   OR = {culture_group = east_asian culture_group = chinese_group}
+          south_african_plateau_area = {
+		  type = all
+		  country_or_vassal_holds = ROOT
+		  }
+		}
+		effect = {
+		add_prestige = 50
+		  1177= {
+
+		  
+         		 		add_province_modifier = {
+				name = "sob_zhenghe_statue_modifier"
+				duration = -1
+			}
+			}
+		}
+		
+	}
+	
+		sob_arrive_europe = {
+		icon = mission_the_triangle_trade
+		required_missions = { sob_continue_haowangjiao }
+		position = 10
+		ai_weight = {
+			factor = 5
+		}
+
+
+		trigger = {is_subject = no   OR = {culture_group = east_asian culture_group = chinese_group}
+		custom_trigger_tooltip = {
+				tooltip = sob_obj_discover_america6_tooltip
+         any_province = {
+		 superregion = europe_superregion
+		 heavy_ships_in_province = ROOT
+		 }
+		 }
+		}
+		effect = {
+		custom_tooltip = sob_statment_reform_tooltip_5
+         add_navy_tradition = 15
+		 every_country = {
+		 limit = { capital_scope = {superregion = europe_superregion }}
+		 
+		 
+		 add_opinion = {
+    who = ROOT
+    modifier = chi_trade_opportunity
+}
+		 }
+		 add_adm_power = 100
+		 add_dip_power = 100
+		 add_mil_power = 100
+		}
+		
+	}
+
+	
+
+	
+	}
+	

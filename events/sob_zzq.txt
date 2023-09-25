@@ -1,0 +1,304 @@
+namespace = sobzzqevent
+country_event = {
+	id = sobzzqevent.1
+	title = "sobzzqevent.1.t"
+	desc = "sobzzqevent.1.d"
+	picture = GIFTS_TO_EMPEROR_eventPicture
+	
+	mean_time_to_happen = {
+	 months = 1
+	}
+	trigger = {
+     		 had_country_flag = {
+	flag = sob_had_conflict
+	days = 30000
+}
+	OR = {
+	tag = XZQ
+	tag = XZY
+	}
+
+	}
+
+	immediate = {
+	clr_country_flag = sob_had_conflict
+set_country_flag = sob_had_conflict
+	}
+	option = {
+		name = "sobzzqevent.924.b"
+		add_liberty_desire = 60
+	}
+
+}
+country_event = {
+	id = sobzzqevent.10
+	title = "sobzzqevent.10.t"
+	desc = "sobzzqevent.10.d"
+	picture = GIFTS_TO_EMPEROR_eventPicture
+ is_triggered_only = yes
+ 
+ 
+	option = {
+		name = "sobzzqevent.10.a"
+		set_mandate = 100
+	}
+
+}
+
+country_event = {
+	id = sobzzqevent.2
+	title = "sobzzqevent.2.t"
+	desc = "sobzzqevent.2.d"
+	picture = GIFTS_TO_EMPEROR_eventPicture
+	
+	mean_time_to_happen = {
+	 months = 1
+	}
+	trigger = {
+OR = {culture_group = east_asian  culture_group = chinese_group }
+any_subject_country ={
+	OR = {
+	tag = XZQ
+	tag = XZY
+	}
+
+	}
+}
+	option = {
+		name = "sobzzqevent.924.b"
+		every_subject_country = {
+		limit = {	OR = {
+	tag = XZQ
+	tag = XZY
+	}
+}
+		ROOT = {inherit = PREV}
+		}
+	}
+
+}
+country_event = {
+	id = sobzzqevent.5
+	title = "sobzzqevent.5.t"
+	desc = "sobzzqevent.5.d"
+	picture = GIFTS_TO_EMPEROR_eventPicture
+is_triggered_only = yes
+
+	option = {
+		name = "sobzzqevent.5.a"
+		inherit = MGE
+	}
+	option = {
+		name = "sobzzqevent.5.b"
+inherit = MGE 
+change_tag = MGE
+	}
+}
+
+country_event = {
+	id = sobzzqevent.6
+	title = "sobzzqevent.6.t"
+	desc = "sobzzqevent.6.d"
+	picture = GIFTS_TO_EMPEROR_eventPicture
+	trigger = {
+	tag = YUA
+has_country_flag = sob_wih_xiaozhuan_country_flag
+NOT = { has_ruler_flag = sob_xiaozhuang_in}
+NOT = {has_country_flag = sob_wih_xiaozhuan_country_flag_2}
+	}
+	immediate = {
+	set_country_flag = sob_wih_xiaozhuan_country_flag_2
+	}
+	option = {
+		name = "sobzzqevent.6.a"
+		country_event = { id = sobchineseempire.123 } 
+		set_dynasty = original_dynasty
+	
+	
+		
+		
+	}
+	option = {
+		name = "sobzzqevent.6.b"
+		trigger = {
+		OR = {
+		has_consort_regency = yes
+		has_regency = yes
+		
+		}
+		
+		}
+		country_event = { id = sobchineseempire.123 } 
+		set_ruler = sob_chinese_ruler_exile_xiaozhuang
+	
+		
+		
+	}
+	option = {
+		name = "sobzzqevent.6.c"
+	}
+}
+country_event = {
+	id = sobzzqevent.3
+	title = women_history_events.48.t
+	desc = women_history_events.48.d
+	picture = wihgfx_FEMALE_RULER_eventPicture
+
+	trigger = {
+       is_emperor_of_china = yes
+		is_year = 1613
+		NOT = {
+			is_year = 1688
+		}
+		OR = {
+		has_regency = yes
+		OR = {culture_group = east_asian  culture_group = chinese_group }
+		}
+		is_lesser_in_union = no
+		government = monarchy
+		NOT = {
+			has_global_flag = sob_wih_xiaozhuan_flag
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 200
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_global_flag = sob_wih_xiaozhuan_flag
+			set_country_flag = sob_wih_xiaozhuan_country_flag
+		}
+	}
+	
+	option = {
+		name = women_history_events.48.a
+		add_adm_power = 100
+		add_dip_power = 100
+		add_mil_power = 100
+		add_meritocracy_effect = yes
+		define_advisor = {
+			female = yes
+			culture = chihan
+			discount = yes
+			type = diplomat
+			skill = 5
+			name = "Empress Dowager Xiaozhuang"
+		}
+	}
+	option = {
+		name = women_history_events.48.b
+						define_heir = {
+    male = yes
+    dynasty = "Borjigin"
+    claim = 100
+    adm = 6
+				dip = 6
+			mil = 6
+}
+exile_ruler_as = { name = sob_chinese_ruler_exile_xiaozhuang }
+		define_ruler = {
+			name = "Xiaozhuang"
+			dynasty = "Borjigin"
+			#fixed = yes
+			culture = mongol
+			adm = 5
+			dip = 4
+			mil = 4
+			female = yes
+		}
+set_ruler_flag = sob_xiaozhuang_in
+		if = {
+			limit = {
+				has_states_general_mechanic = yes
+			}
+			change_statists_vs_orangists = 1
+		}
+		if = {
+			limit = {
+				has_dlc = "Rights of Man" 
+			}
+			hidden_effect = { add_ruler_personality = benevolent_personality }
+		}
+	}
+			option = {
+		name = women_history_events.48.b
+		
+			trigger = {
+			OR = {culture_group = east_asian  culture_group = chinese_group }
+			has_regency = yes
+			}
+					define_heir = {
+    male = yes
+    dynasty = ROOT
+    claim = 100
+    adm = 6
+				dip = 6
+			mil = 6
+}
+exile_ruler_as = { name = sob_chinese_ruler_exile_xiaozhuang }
+		define_ruler = {
+			name = "Xiaozhuang"
+			dynasty = "Borjigin"
+			#fixed = yes
+			culture = mongol
+			adm = 5
+			dip = 4
+			mil = 4
+			female = yes
+			regency = yes
+		}
+set_ruler_flag = sob_xiaozhuang_in
+		if = {
+			limit = {
+				has_states_general_mechanic = yes
+			}
+			change_statists_vs_orangists = 1
+		}
+		if = {
+			limit = {
+				has_dlc = "Rights of Man" 
+			}
+			hidden_effect = { add_ruler_personality = benevolent_personality }
+		}
+	}
+		option = {
+		name = women_history_events.48.a
+		
+			trigger = {
+			OR = {culture_group = east_asian  culture_group = chinese_group }
+			has_regency = no
+			}
+		define_consort = {
+			name = "Xiaozhuang"
+			dynasty = "Borjigin"
+			#fixed = yes
+			culture = mongol
+			adm = 5
+			dip = 4
+			mil = 4
+			female = yes
+		}
+		define_heir = {
+    male = yes
+    dynasty = ROOT
+    claim = 100
+    adm = 6
+				dip = 6
+			mil = 6
+}
+		if = {
+			limit = {
+				has_states_general_mechanic = yes
+			}
+			change_statists_vs_orangists = 1
+		}
+		if = {
+			limit = {
+				has_dlc = "Rights of Man" 
+			}
+			hidden_effect = { add_ruler_personality = benevolent_personality }
+		}
+	}
+}

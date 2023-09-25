@@ -1,0 +1,335 @@
+estate_sobshishen =
+{
+	icon = 6
+
+	# If true, country will get estate
+		trigger = {
+		OR = {
+		started_in = 998
+		has_global_flag = sob_shishen_created
+		}
+		NOT = { has_global_flag =  sob_shishen_destoried}
+	NOT = { has_country_flag =  sob_tugai_reform_done}
+	NOT = { has_country_flag = sob_reform_gov_mode_on}
+	OR = {
+		religion = confucianism
+		is_emperor_of_china= yes
+		has_country_flag = sob_confu_actived
+		}
+		OR = {
+		has_reform = celestial_empire
+		AND = {
+		has_country_flag = sob_waizu_att_shishen
+		NOT = {OR = {culture_group = east_asian  culture_group = chinese_group }}
+		}
+		has_estate = estate_sobshishen
+		}
+		NOT = { has_country_modifier = confucianism_reform}
+				OR = {
+		has_reform =  celestial_empire
+		AND = {
+		has_country_flag = sob_waizu_att_shishen
+		NOT = {OR = {culture_group = east_asian  culture_group = chinese_group }}
+		}
+		OR = {culture_group = east_asian  culture_group = chinese_group }
+		}
+		is_colonial_nation = no
+	}
+	# These scale with loyalty & power
+country_modifier_happy = {
+		global_tax_modifier = 0.1
+		core_creation = 0.1
+		unjustified_demands = 0.1
+	}
+	country_modifier_neutral = {
+	 	unjustified_demands = 0.25
+		global_tax_modifier = 0.05
+		core_creation = 0.15
+	}	
+	country_modifier_angry = {
+ 	global_unrest = 4
+ 	enemy_core_creation = -0.35
+		 	unjustified_demands = 0.2
+		stability_cost_modifier = 0.25
+	}	
+
+	land_ownership_modifier = {
+		 	amount_of_banners = -1
+			unjustified_demands = 0.5
+	}
+
+	province_independence_weight = {
+		factor = 1
+
+			modifier = {
+			factor = 1000
+			has_province_modifier = sob_shishen_land_on 
+		}
+		modifier = {
+			factor = 0
+			NOT = { has_province_modifier = sob_shishen_land_on }
+		}
+
+
+	}
+
+	influence_modifier = {
+		desc = EST_VAL_STATE_RELIGIOUS_MINORITY
+		trigger = {
+			NOT = { dominant_religion = ROOT }
+		}	
+		influence = -15
+	}
+	influence_modifier = {
+		desc = EST_VAL_STATE_RELIGIOUS_MINORITY_SOB_REFORM
+		trigger = {
+			has_global_flag = sob_countryside_gov_passed
+		}	
+		influence = -300
+	}
+
+
+	influence_modifier = {
+		desc = EST_VAL_OTHER_ESTATE_IN_POWER
+		trigger = {
+			OR = {
+				has_disaster = estate_nobility_disaster
+				has_disaster = estate_burghers_disaster
+			}
+		}
+		influence = -40
+	}
+	influence_modifier = {
+		desc = EST_VAL_CELESTIAL_EMPIRE_GD
+		trigger = {
+ 
+ 
+				NOT = {		estate_territory = {
+					estate = estate_sobshishen
+					territory = 5
+				}
+
+		}		
+		}
+		influence = -40
+	}
+		influence_modifier = {
+		desc = EST_VAL_CELESTIAL_EMPIRE_GD
+		trigger = {
+		has_reform = celestial_empire
+		NOT = {						estate_territory = {
+					estate = estate_sobshishen
+					territory = 5
+				}
+				}
+		}		
+		influence = -10
+	}
+		influence_modifier = {
+		desc = EST_VAL_CELESTIAL_EMPIRE_KARMA_C
+		trigger = {
+		has_reform =  celestial_empire
+			estate_influence = {
+				estate = estate_nobles
+				influence = 50
+				}
+							estate_influence = {
+				estate = estate_sobwarriors
+				influence = 50
+				}
+				
+ NOT  ={has_church_aspect = wuju_kuozhao_aspect }
+		 NOT = { has_church_aspect = junzi_liuyi_aspect  }
+	
+		}
+		influence = 20
+	}
+		influence_modifier = {
+		desc = EST_VAL_CELESTIAL_EMPIRE_NOBLES
+		trigger = {
+			has_reform = celestial_empire
+			estate_influence = {
+				estate = estate_nobles
+				influence = 50
+				}
+
+		}		
+		influence = -15
+	}
+		influence_modifier = {
+		desc = EST_VAL_CELESTIAL_EMPIRE_NOBLESW
+		trigger = {
+			has_reform =celestial_empire
+							estate_influence = {
+				estate = estate_sobwarriors
+				influence = 50
+				}
+		}		
+		influence = -1
+	}
+
+	
+			influence_modifier = {
+		desc = EST_VAL_CELESTIAL_EMPIRE_KARMA_D
+		trigger = {
+			has_reform =celestial_empire
+	               		 OR = {
+
+ has_church_aspect = wuju_kuozhao_aspect 
+ has_church_aspect = junzi_liuyi_aspect 
+ 
+ }
+		}		
+		influence = -1
+	}
+	
+	# Loyalty modifiers
+	loyalty_modifier = {
+		desc = EST_VAL_PIOUS
+		trigger = {
+			religion_group = muslim
+			piety = 0.5
+			NOT = { piety = 0.75 }
+		}
+		loyalty = 5
+	}
+	loyalty_modifier = {
+		desc = EST_VAL_VERY_PIOUS
+		trigger = {
+			religion_group = muslim
+			piety = 0.75
+		}
+		loyalty = 10
+	}
+	loyalty_modifier = {
+		desc = EST_VAL_NOT_PIOUS
+		trigger = {
+			religion_group = muslim
+			NOT = { piety = -0.5 }
+			piety = -0.75
+		}
+		loyalty = -5
+	}
+	loyalty_modifier = {
+		desc = EST_VAL_VERY_UNPIOUS
+		trigger = {
+			religion_group = muslim
+			NOT = { piety = -0.75 }
+		}
+		loyalty = -10
+	}
+	loyalty_modifier = {
+		desc = EST_VAL_PROTESTANT
+		trigger = {
+			religion = protestant
+		}
+		loyalty = 10
+	}
+	loyalty_modifier = {
+		desc = EST_VAL_PAPAL_CONTROLLER
+		trigger = {
+			is_papal_controller = yes
+		}
+		loyalty = 10
+	}
+	loyalty_modifier = {
+		desc = EST_VAL_STATUTE_IN_RESTRAINTS
+		trigger = {
+			has_country_modifier = the_statue_in_restraint_of_appeals
+		}
+		loyalty = 5
+	}
+	loyalty_modifier = {
+		desc = EST_VAL_FEUDAL_THEOCRACY
+		trigger = {
+			has_reform =feudal_theocracy
+		}
+		loyalty = 5
+	}
+	loyalty_modifier = {
+		desc = EST_VAL_SHEIKH_UL_ISLAM
+		trigger = {
+			has_country_modifier = the_sheikh_ul_islam
+		}
+		loyalty = 5
+	}
+	loyalty_modifier = {
+		desc = EST_VAL_OTHER_ESTATE_IN_POWER_LOY
+		trigger = {
+			OR = {
+				has_disaster = estate_nobility_disaster
+				has_disaster = estate_burghers_disaster
+			}
+		}
+		loyalty = -20
+	}
+	loyalty_modifier = {
+		desc = EST_VAL_FULL_RELIGIOUS
+		trigger = {
+			full_idea_group = religious_ideas
+		}
+		loyalty = 10
+	}
+		loyalty_modifier = {
+		desc = EST_VAL_FULL_RELIGIOUS_4
+		trigger = {
+			has_church_aspect = mysticism_belief_aspect
+		}
+		loyalty = 20
+	}
+			loyalty_modifier = {
+		desc = EST_VAL_FULL_RELIGIOUS_3
+		trigger = {
+			has_church_aspect = demilitarization_belief_aspect
+		}
+		loyalty = 20
+	}
+				loyalty_modifier = {
+		desc = EST_VAL_FULL_RELIGIOUS_2
+		trigger = {
+			has_church_aspect = only_books_aspect
+		}
+		loyalty = 20
+	}
+	
+					loyalty_modifier = {
+		desc = EST_VAL_FULL_RELIGIOUS_1
+		trigger = {
+			has_church_aspect = zongjiao_kuanrong_aspect
+		}
+		loyalty = 20
+	}
+	
+
+	color = { 0 255 0 }
+
+	privileges = {
+sob_estate_qingcha_tianmu
+sob_estate_nonggong_gold
+sob_estate_shishen_baoshui
+sob_estate_zhuanye_zhianguan
+sob_estate_fuzhi_didang_count
+sob_estate_inward_production_power
+sob_estate_bookperfection_taxes_direct
+sob_estate_shinonggongshang
+sob_estate_shishen_road_to_sky_rew
+	}
+
+	agendas = {
+	estate_sobshishen_relations_with_dotf
+	estate_sobshishen_propagate_religion
+		estate_sobshishen_hire_advisor
+		estate_sobshishen_fire_advisor
+		estate_sobshishen_stop_convert_province_x
+		estate_sobshishen_war_exhaustion
+		estate_sobshishen_corruption
+		estate_sobshishen_recover_stability
+		estate_sobshishen_increase_stability
+		estate_sobshishen_reduce_overextension
+		estate_sobshishen_restore_devotion
+		estate_sobshishen_root_out_heresy
+		estate_sobshishen_crush_religious_revolts
+		estate_sobshishen_protect_brethren
+	}
+	influence_from_dev_modifier =  2.0
+}

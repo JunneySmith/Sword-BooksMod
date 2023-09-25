@@ -1,0 +1,146 @@
+can_have_center_of_reformation_trigger = { #Province Scope
+	#$RELIGION$ needs to match the religion of the center that is being spawned.
+		OR = {
+		continent = europe
+		continent = asia
+		owner = {
+		religion = confucianism
+		}
+       
+	}
+	OR = {
+		religion = protestant
+		religion = catholic
+		religion = reformed
+		religion = confucianism
+		religion = sob_test
+	}
+	NOT = { province_id = 118 }
+	OR = {
+	is_in_capital_area = yes
+	owner = {
+	religion = confucianism
+	}
+	}
+	is_reformation_center = no
+	is_island = no
+	expelling_minorities = no
+	development = 10
+	NOT = {
+		any_neighbor_province = {
+			is_reformation_center = yes
+		}
+	}
+	NOT = {
+		any_province = {
+			area = PREV
+			is_reformation_center = yes
+			religion = $RELIGION$
+		}
+	}
+	NOT = { has_climate = arctic }
+	NOT = { has_climate = arid }
+	NOT = { has_terrain = coastline }
+	NOT = { has_terrain = coastal_desert }
+	NOT = { has_terrain = steppe }
+	NOT = { has_terrain = desert }
+	NOT = { has_terrain = glacier }
+	NOT = { has_climate = tropical }
+}
+
+province_viable_for_industrialization_events_trigger = { #Province Scope
+	is_state = yes
+	NOT = { devastation = 1 }
+	OR = {
+		is_in_capital_area = yes
+		continent = CAPITAL
+	}
+	enlightenment = 100
+}
+
+is_subject_other_than_tributary_trigger = { #Ie Tags that cannot conduct independent diplomacy
+	custom_trigger_tooltip = {
+		tooltip = is_subject_other_than_tributary_trigger_tooltip
+		is_subject = yes
+		NOT = { is_subject_of_type = sob_tributary_state_3}
+		NOT = { is_subject_of_type = tributary_state_2 }
+		NOT = { is_subject_of_type = tributary_state }
+	}
+}
+
+is_free_or_tributary_trigger = { #I.e. Tags that can conduct independent diplomacy
+	custom_trigger_tooltip = {
+		tooltip = is_free_or_tributary_trigger_tooltip
+		OR = {
+			is_subject = no
+		is_subject_of_type = sob_celestial_member_2
+		is_subject_of_type = sob_celestial_member
+			is_subject_of_type = sob_tributary_state_3
+			is_subject_of_type = tributary_state_2 
+			is_subject_of_type = tributary_state
+		}
+	}
+}
+province_is_or_accepts_religion_group = {
+	custom_trigger_tooltip = {
+		tooltip = province_is_or_accepts_$religion_group$_tt
+		OR = {
+			AND = {
+				religion_group = $religion_group$
+				has_owner_religion = yes
+			}
+			AND = {
+				owner = { secondary_religion_group = $religion_group$ }
+				OR = {
+					religion_group = $religion_group$
+					has_owner_religion = yes
+				}
+			}
+			AND = {
+				owner ={
+
+				OR = {
+				secondary_religion = prev
+				NOT = {has_global_flag = sob_great_project_sec_need}
+				} 
+				has_harmonized_with = prev
+				
+				
+				}
+				
+			}
+		}
+	}
+}
+
+province_is_or_accepts_religion = {
+	custom_trigger_tooltip = {
+		tooltip = province_is_or_accepts_$religion$_tt
+		OR = {
+			AND = {
+				religion = $religion$
+				has_owner_religion = yes
+			}
+			AND = {
+				owner = { secondary_religion = $religion$ }
+				OR = {
+					religion = $religion$
+					has_owner_religion = yes
+				}
+			}
+			AND = {
+				owner ={
+
+				OR = {
+				secondary_religion = prev
+				NOT = {has_global_flag = sob_great_project_sec_need}
+				} 
+				has_harmonized_with = prev
+				
+				
+				}
+				
+			}
+		}
+	}
+}

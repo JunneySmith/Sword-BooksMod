@@ -1,0 +1,672 @@
+entity = {
+	name = "sobchinesegfx_INFANTRY_1"
+	pdxmesh = "mandate_sobchinesegfx_infantry_01"
+	version = 5
+	state = { name = "idle" 		animation = "idle" }
+	state = { name = "walk" 		animation = "walk" }
+	state = { name = "attack"		animation = "attack" }
+	state = { name = "retreat"		animation = "retreat" }
+	#state = { name = "death"		animation = "death" }
+	#state = { name = "extra_state_1"		animation = "extra_state_1" }
+	#state = { name = "extra_state_2"		animation = "extra_state_2" }
+	#state = { name = "extra_state_3"		animation = "extra_state_3" }
+
+	attach = { 
+		Right_hand_node = "mandate_MNG_spear_entity" 
+	}
+}
+entity = {
+	name = "sobchinesegfx_CAVALRY_1"
+	pdxmesh = "mandate_cavalry_horse_01_mesh"
+	version = 2
+	state = { name = "idle" 		animation = "horse_idle" }
+	state = { name = "walk" 		animation = "horse_walk" }
+	state = { name = "attack"		animation = "horse_attack" }
+	state = { name = "retreat"		animation = "horse_retreat" }
+	#state = { name = "death"		animation = "horse_death" }
+	#state = { name = "extra_state_1"		animation = "extra_state_1" }
+	#state = { name = "extra_state_2"		animation = "extra_state_2" }
+	#state = { name = "extra_state_3"		animation = "extra_state_3" }
+
+	attach = {
+		name = "rider"
+		Saddle_Node = "MNG_CAVALRY_1_rider" 
+	}
+}	
+entity = {
+	name = "sobchinesegfx_CAVALRY_1_rider"
+	pdxmesh = "mandate_sobchinesegfx_infantry_01"
+	version = 5
+	state = { name = "idle" 		animation = "horse_idle" }
+	state = { name = "walk" 		animation = "horse_walk" }
+	state = { name = "attack"		animation = "horse_attack" }
+	state = { name = "retreat"		animation = "horse_retreat" }
+	#state = { name = "death"		animation = "horse_death" }
+	#state = { name = "extra_state_1"		animation = "extra_state_1" }
+	#state = { name = "extra_state_2"		animation = "extra_state_2" }
+	#state = { name = "extra_state_3"		animation = "extra_state_3" }
+
+	attach = { 
+		Right_hand_node = "mandate_sword_01_entity" 
+	}
+}
+entity = {
+	name = "sobchinesegfx_ARTILLERY_1"
+	pdxmesh = "artillery_base_mesh"
+	version = 2	
+	state = { name = "attack"		animation = "artillery_base_attack" }
+	state = { name = "idle" 		animation = "artillery_base_idle" }
+	#state = { name = "death" 		animation = "artillery_base_idle" }
+	state = { name = "walk" 		animation = "artillery_base_moving" }
+	state = { name = "retreat" 		animation = "artillery_base_moving" }
+	
+	attach = { 
+		name = "gunman"
+		infantry_node = "sobchinesegfx_INFANTRY_1" 
+		cannon_node = "asiangfx_ARTILLERY_1_cannon" 
+	}
+}
+entity = {
+	name = "sobchinesegfx_INFANTRY_2"
+	pdxmesh = "mandate_sobchinesegfx_infantry_02"
+	version = 5
+	state = { name = "idle" 		animation = "idle" }
+	state = { name = "walk" 		animation = "walk" }
+	state = { name = "attack"		animation = "attack" }
+	state = { name = "retreat"		animation = "retreat" }
+	#state = { name = "death"		animation = "death" }
+	#state = { name = "extra_state_1"		animation = "extra_state_1" }
+	#state = { name = "extra_state_2"		animation = "extra_state_2" }
+	#state = { name = "extra_state_3"		animation = "extra_state_3" }
+
+	attach = { 
+		Left_hand_node = "mandate_rifle_02_entity" 
+	}
+}
+entity = {
+	name = "sobchinesegfx_CAVALRY_2"
+	pdxmesh = "mandate_cavalry_horse_01_mesh"
+	version = 2
+	state = { name = "idle" 		animation = "horse_idle" }
+	state = { name = "walk" 		animation = "horse_walk" }
+	state = { name = "attack"		animation = "horse_attack" }
+	state = { name = "retreat"		animation = "horse_retreat" }
+	#state = { name = "death"		animation = "horse_death" }
+	#state = { name = "extra_state_1"		animation = "extra_state_1" }
+	#state = { name = "extra_state_2"		animation = "extra_state_2" }
+	#state = { name = "extra_state_3"		animation = "extra_state_3" }
+
+	attach = {
+		name = "rider"
+		Saddle_Node = "MNG_CAVALRY_2_rider" 
+	}
+}	
+entity = {
+	name = "sobchinesegfx_CAVALRY_2_rider"
+	pdxmesh = "mandate_sobchinesegfx_infantry_02"
+	version = 5
+	state = { name = "idle" 		animation = "horse_idle" }
+	state = { name = "walk" 		animation = "horse_walk" }
+	state = { name = "attack"		animation = "horse_attack" }
+	state = { name = "retreat"		animation = "horse_retreat" }
+	#state = { name = "death"		animation = "horse_death" }
+	#state = { name = "extra_state_1"		animation = "extra_state_1" }
+	#state = { name = "extra_state_2"		animation = "extra_state_2" }
+	#state = { name = "extra_state_3"		animation = "extra_state_3" }
+
+	attach = { 
+		Right_hand_node = "mandate_sword_01_entity" 
+	}
+}
+entity = {
+	name = "sobchinesegfx_ARTILLERY_2"
+	pdxmesh = "artillery_base_mesh"
+	version = 2	
+	state = { name = "attack"		animation = "artillery_base_attack" }
+	state = { name = "idle" 		animation = "artillery_base_idle" }
+	#state = { name = "death" 		animation = "artillery_base_idle" }
+	state = { name = "walk" 		animation = "artillery_base_moving" }
+	state = { name = "retreat" 		animation = "artillery_base_moving" }
+	
+	attach = { 
+		name = "gunman"
+		infantry_node = "sobchinesegfx_INFANTRY_2" 
+		cannon_node = "asiangfx_ARTILLERY_2_cannon" 
+	}
+}
+entity = {
+	name = "sobchinesegfx_INFANTRY_3"
+	pdxmesh = "mandate_sobchinesegfx_infantry_03"
+	version = 5
+	state = { name = "idle" 		animation = "idle" }
+	state = { name = "walk" 		animation = "walk" }
+	state = { name = "attack"		animation = "attack" }
+	state = { name = "retreat"		animation = "retreat" }
+	#state = { name = "death"		animation = "death" }
+	#state = { name = "extra_state_1"		animation = "extra_state_1" }
+	#state = { name = "extra_state_2"		animation = "extra_state_2" }
+	#state = { name = "extra_state_3"		animation = "extra_state_3" }
+
+	attach = { 
+		Left_hand_node = "mandate_rifle_02_entity" 
+	}
+}
+entity = {
+	name = "sobchinesegfx_CAVALRY_3"
+	pdxmesh = "mandate_cavalry_horse_01_mesh"
+	version = 2
+	state = { name = "idle" 		animation = "horse_idle" }
+	state = { name = "walk" 		animation = "horse_walk" }
+	state = { name = "attack"		animation = "horse_attack" }
+	state = { name = "retreat"		animation = "horse_retreat" }
+	#state = { name = "death"		animation = "horse_death" }
+	#state = { name = "extra_state_1"		animation = "extra_state_1" }
+	#state = { name = "extra_state_2"		animation = "extra_state_2" }
+	#state = { name = "extra_state_3"		animation = "extra_state_3" }
+
+	attach = {
+		name = "rider"
+		Saddle_Node = "MNG_CAVALRY_3_rider" 
+	}
+}	
+entity = {
+	name = "sobchinesegfx_CAVALRY_3_rider"
+	pdxmesh = "mandate_sobchinesegfx_infantry_03"
+	version = 5
+	state = { name = "idle" 		animation = "horse_idle" }
+	state = { name = "walk" 		animation = "horse_walk" }
+	state = { name = "attack"		animation = "horse_attack" }
+	state = { name = "retreat"		animation = "horse_retreat" }
+	#state = { name = "death"		animation = "horse_death" }
+	#state = { name = "extra_state_1"		animation = "extra_state_1" }
+	#state = { name = "extra_state_2"		animation = "extra_state_2" }
+	#state = { name = "extra_state_3"		animation = "extra_state_3" }
+
+	attach = { 
+		Right_hand_node = "mandate_sword_01_entity" 
+	}
+}
+entity = {
+	name = "sobchinesegfx_ARTILLERY_3"
+	pdxmesh = "artillery_base_mesh"
+	version = 2	
+	state = { name = "attack"		animation = "artillery_base_attack" }
+	state = { name = "idle" 		animation = "artillery_base_idle" }
+	#state = { name = "death" 		animation = "artillery_base_idle" }
+	state = { name = "walk" 		animation = "artillery_base_moving" }
+	state = { name = "retreat" 		animation = "artillery_base_moving" }
+	
+	attach = { 
+		name = "gunman"
+		infantry_node = "sobchinesegfx_INFANTRY_3" 
+		cannon_node = "asiangfx_ARTILLERY_3_cannon" 
+	}
+}
+entity = {
+	name = "sobchinesegfx_INFANTRY_4"
+	pdxmesh = "mandate_sobchinesegfx_infantry_04"
+	version = 5
+	state = { name = "idle" 		animation = "idle" }
+	state = { name = "walk" 		animation = "walk" }
+	state = { name = "attack"		animation = "attack" }
+	state = { name = "retreat"		animation = "retreat" }
+	#state = { name = "death"		animation = "death" }
+	#state = { name = "extra_state_1"		animation = "extra_state_1" }
+	#state = { name = "extra_state_2"		animation = "extra_state_2" }
+	#state = { name = "extra_state_3"		animation = "extra_state_3" }
+
+	attach = { 
+		Left_hand_node = "western_musket_2" 
+	}
+}
+entity = {
+	name = "sobchinesegfx_CAVALRY_4"
+	pdxmesh = "mandate_cavalry_horse_01_mesh"
+	version = 2
+	state = { name = "idle" 		animation = "horse_idle" }
+	state = { name = "walk" 		animation = "horse_walk" }
+	state = { name = "attack"		animation = "horse_attack" }
+	state = { name = "retreat"		animation = "horse_retreat" }
+	#state = { name = "death"		animation = "horse_death" }
+	#state = { name = "extra_state_1"		animation = "extra_state_1" }
+	#state = { name = "extra_state_2"		animation = "extra_state_2" }
+	#state = { name = "extra_state_3"		animation = "extra_state_3" }
+
+	attach = {
+		name = "rider"
+		Saddle_Node = "MNG_CAVALRY_4_rider" 
+	}
+}	
+entity = {
+	name = "sobchinesegfx_CAVALRY_4_rider"
+	pdxmesh = "mandate_sobchinesegfx_infantry_04"
+	version = 5
+	state = { name = "idle" 		animation = "horse_idle" }
+	state = { name = "walk" 		animation = "horse_walk" }
+	state = { name = "attack"		animation = "horse_attack" }
+	state = { name = "retreat"		animation = "horse_retreat" }
+	#state = { name = "death"		animation = "horse_death" }
+	#state = { name = "extra_state_1"		animation = "extra_state_1" }
+	#state = { name = "extra_state_2"		animation = "extra_state_2" }
+	#state = { name = "extra_state_3"		animation = "extra_state_3" }
+
+	attach = { 
+		Right_hand_node = "mandate_sword_01_entity" 
+	}
+}
+entity = {
+	name = "sobchinesegfx_ARTILLERY_4"
+	pdxmesh = "artillery_base_mesh"
+	version = 2	
+	state = { name = "attack"		animation = "artillery_base_attack" }
+	state = { name = "idle" 		animation = "artillery_base_idle" }
+	#state = { name = "death" 		animation = "artillery_base_idle" }
+	state = { name = "walk" 		animation = "artillery_base_moving" }
+	state = { name = "retreat" 		animation = "artillery_base_moving" }
+	
+	attach = { 
+		name = "gunman"
+		infantry_node = "sobchinesegfx_INFANTRY_4" 
+		cannon_node = "asiangfx_ARTILLERY_4_cannon" 
+	}
+}
+
+
+
+entity = { clone = "sobchinesegfx_INFANTRY_1"        name = "PRC_INFANTRY_1"	version = 3  } ##NPS
+entity = { clone = "sobchinesegfx_CAVALRY_1"         name = "PRC_CAVALRY_1"	version = 3  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_1"       name = "PRC_ARTILLERY_1"	version = 3  }
+entity = { clone = "sobchinesegfx_INFANTRY_2"        name = "PRC_INFANTRY_2"	version = 3  } ##NPS
+entity = { clone = "sobchinesegfx_CAVALRY_2"         name = "PRC_CAVALRY_2"	version = 3  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_2"       name = "PRC_ARTILLERY_2"	version = 3  }
+entity = { clone = "sobchinesegfx_INFANTRY_3"        name = "PRC_INFANTRY_3"	version = 3  } ##NPS
+entity = { clone = "sobchinesegfx_CAVALRY_3"         name = "PRC_CAVALRY_3"	version = 3  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_3"       name = "PRC_ARTILLERY_3"	version = 3  }
+entity = { clone = "sobchinesegfx_INFANTRY_4"        name = "PRC_INFANTRY_4"	version = 3  } ##NPS
+entity = { clone = "sobchinesegfx_CAVALRY_4"         name = "PRC_CAVALRY_4"	version = 3  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_4"       name = "PRC_ARTILLERY_4"	version = 3  }
+
+entity = { clone = "sobchinesegfx_INFANTRY_1"        name = "HHE_INFANTRY_1"	version = 3  } ##NPS
+entity = { clone = "sobchinesegfx_CAVALRY_1"         name = "HHE_CAVALRY_1"	version = 3  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_1"       name = "HHE_ARTILLERY_1"	version = 3  }
+entity = { clone = "sobchinesegfx_INFANTRY_2"        name = "HHE_INFANTRY_2"	version = 3  } ##NPS
+entity = { clone = "sobchinesegfx_CAVALRY_2"         name = "HHE_CAVALRY_2"	version = 3  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_2"       name = "HHE_ARTILLERY_2"	version = 3  }
+entity = { clone = "sobchinesegfx_INFANTRY_3"        name = "HHE_INFANTRY_3"	version = 3  } ##NPS
+entity = { clone = "sobchinesegfx_CAVALRY_3"         name = "HHE_CAVALRY_3"	version = 3  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_3"       name = "HHE_ARTILLERY_3"	version = 3  }
+entity = { clone = "sobchinesegfx_INFANTRY_4"        name = "HHE_INFANTRY_4"	version = 3  } ##NPS
+entity = { clone = "sobchinesegfx_CAVALRY_4"         name = "HHE_CAVALRY_4"	version = 3  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_4"       name = "HHE_ARTILLERY_4"	version = 3  }
+entity = { clone = "sobchinesegfx_INFANTRY_1"        name = "KOR_INFANTRY_1"	version = 4  } ##Changseng
+entity = { clone = "sobchinesegfx_CAVALRY_1"         name = "KOR_CAVALRY_1"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_1"       name = "KOR_ARTILLERY_1"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_2"        name = "KOR_INFANTRY_2"	version = 4  } ##Changseng
+entity = { clone = "sobchinesegfx_CAVALRY_2"         name = "KOR_CAVALRY_2"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_2"       name = "KOR_ARTILLERY_2"	version = 4  }
+
+
+entity = { clone = "sobchinesegfx_INFANTRY_4"        name = "MIN_INFANTRY_4"	version = 4  } ##Min (MIN)
+entity = { clone = "sobchinesegfx_CAVALRY_4"         name = "MIN_CAVALRY_4"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_4"       name = "MIN_ARTILLERY_4"	version = 4  }	
+entity = { clone = "sobchinesegfx_INFANTRY_4"        name = "YUE_INFANTRY_4"	version = 4  } ##YUE (YUE)
+entity = { clone = "sobchinesegfx_CAVALRY_4"         name = "YUE_CAVALRY_4"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_4"       name = "YUE_ARTILLERY_4"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_4"        name = "SHU_INFANTRY_4"	version = 4  } ##SHU
+entity = { clone = "sobchinesegfx_CAVALRY_4"         name = "SHU_CAVALRY_4"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_4"       name = "SHU_ARTILLERY_4"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_4"        name = "NNG_INFANTRY_4"	version = 4  } ##Ning
+entity = { clone = "sobchinesegfx_CAVALRY_4"         name = "NNG_CAVALRY_4"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_4"       name = "NNG_ARTILLERY_4"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_4"        name = "CHC_INFANTRY_4"	version = 4  } ##Chu
+entity = { clone = "sobchinesegfx_CAVALRY_4"         name = "CHC_CAVALRY_4"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_4"       name = "CHC_ARTILLERY_4"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_4"        name = "TNG_INFANTRY_4"	version = 4  } ##Tang
+entity = { clone = "sobchinesegfx_CAVALRY_4"         name = "TNG_CAVALRY_4"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_4"       name = "TNG_ARTILLERY_4"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_4"        name = "WUU_INFANTRY_4"	version = 4  } ##WU
+entity = { clone = "sobchinesegfx_CAVALRY_4"         name = "WUU_CAVALRY_4"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_4"       name = "WUU_ARTILLERY_4"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_4"        name = "QIC_INFANTRY_4"	version = 4  } ##QI
+entity = { clone = "sobchinesegfx_CAVALRY_4"         name = "QIC_CAVALRY_4"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_4"       name = "QIC_ARTILLERY_4"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_4"        name = "YAN_INFANTRY_4"	version = 4  } ##Yan
+entity = { clone = "sobchinesegfx_CAVALRY_4"         name = "YAN_CAVALRY_4"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_4"       name = "YAN_ARTILLERY_4"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_4"        name = "JIN_INFANTRY_4"	version = 4  } ##Jin
+entity = { clone = "sobchinesegfx_CAVALRY_4"         name = "JIN_CAVALRY_4"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_4"       name = "JIN_ARTILLERY_4"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_4"        name = "LNG_INFANTRY_4"	version = 4  } ##Liang
+entity = { clone = "sobchinesegfx_CAVALRY_4"         name = "LNG_CAVALRY_4"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_4"       name = "LNG_ARTILLERY_4"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_4"        name = "QIN_INFANTRY_4"	version = 4  } ##Qin
+entity = { clone = "sobchinesegfx_CAVALRY_4"         name = "QIN_CAVALRY_4"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_4"       name = "QIN_ARTILLERY_4"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_4"        name = "HUA_INFANTRY_4"	version = 4  } ##Huai
+entity = { clone = "sobchinesegfx_CAVALRY_4"         name = "HUA_CAVALRY_4"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_4"       name = "HUA_ARTILLERY_4"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_4"        name = "CMI_INFANTRY_4"	version = 4  } ##Miao
+entity = { clone = "sobchinesegfx_CAVALRY_4"         name = "CMI_CAVALRY_4"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_4"       name = "CMI_ARTILLERY_4"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_1"        name = "NPS_INFANTRY_1"	version = 4  } ##NPS
+entity = { clone = "sobchinesegfx_CAVALRY_1"         name = "NPS_CAVALRY_1"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_1"       name = "NPS_ARTILLERY_1"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_2"        name = "NPS_INFANTRY_2"	version = 4  } ##NPS
+entity = { clone = "sobchinesegfx_CAVALRY_2"         name = "NPS_CAVALRY_2"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_2"       name = "NPS_ARTILLERY_2"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_3"        name = "NPS_INFANTRY_3"	version = 4  } ##NPS
+entity = { clone = "sobchinesegfx_CAVALRY_3"         name = "NPS_CAVALRY_3"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_3"       name = "NPS_ARTILLERY_3"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_4"        name = "NPS_INFANTRY_4"	version = 4  } ##NPS
+entity = { clone = "sobchinesegfx_CAVALRY_4"         name = "NPS_CAVALRY_4"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_4"       name = "NPS_ARTILLERY_4"	version = 4  }
+
+
+entity = { clone = "sobchinesegfx_INFANTRY_1"        name = "CZH_INFANTRY_1"	version = 4  } ##NPS
+entity = { clone = "sobchinesegfx_CAVALRY_1"         name = "CZH_CAVALRY_1"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_1"       name = "CZH_ARTILLERY_1"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_2"        name = "CZH_INFANTRY_2"	version = 4  } ##NPS
+entity = { clone = "sobchinesegfx_CAVALRY_2"         name = "CZH_CAVALRY_2"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_2"       name = "CZH_ARTILLERY_2"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_3"        name = "CZH_INFANTRY_3"	version = 4  } ##NPS
+entity = { clone = "sobchinesegfx_CAVALRY_3"         name = "CZH_CAVALRY_3"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_3"       name = "CZH_ARTILLERY_3"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_4"        name = "CZH_INFANTRY_4"	version = 4  } ##NPS
+entity = { clone = "sobchinesegfx_CAVALRY_4"         name = "CZH_CAVALRY_4"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_4"       name = "CZH_ARTILLERY_4"	version = 4  }
+
+entity = { clone = "sobchinesegfx_INFANTRY_1"        name = "WPS_INFANTRY_1"	version = 4  } ##WPS
+entity = { clone = "sobchinesegfx_CAVALRY_1"         name = "WPS_CAVALRY_1"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_1"       name = "WPS_ARTILLERY_1"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_2"        name = "WPS_INFANTRY_2"	version = 4  } ##WPS
+entity = { clone = "sobchinesegfx_CAVALRY_2"         name = "WPS_CAVALRY_2"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_2"       name = "WPS_ARTILLERY_2"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_3"        name = "WPS_INFANTRY_3"	version = 4  } ##WPS
+entity = { clone = "sobchinesegfx_CAVALRY_3"         name = "WPS_CAVALRY_3"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_3"       name = "WPS_ARTILLERY_3"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_4"        name = "WPS_INFANTRY_4"	version = 4  } ##WPS
+entity = { clone = "sobchinesegfx_CAVALRY_4"         name = "WPS_CAVALRY_4"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_4"       name = "WPS_ARTILLERY_4"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_1"        name = "XTD_INFANTRY_1"	version = 4  } ##XTD
+entity = { clone = "sobchinesegfx_CAVALRY_1"         name = "XTD_CAVALRY_1"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_1"       name = "XTD_ARTILLERY_1"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_2"        name = "XTD_INFANTRY_2"	version = 4  } ##XTD
+entity = { clone = "sobchinesegfx_CAVALRY_2"         name = "XTD_CAVALRY_2"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_2"       name = "XTD_ARTILLERY_2"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_3"        name = "XTD_INFANTRY_3"	version = 4  } ##XTD
+entity = { clone = "sobchinesegfx_CAVALRY_3"         name = "XTD_CAVALRY_3"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_3"       name = "XTD_ARTILLERY_3"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_4"        name = "XTD_INFANTRY_4"	version = 4  } ##XTD
+entity = { clone = "sobchinesegfx_CAVALRY_4"         name = "XTD_CAVALRY_4"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_4"       name = "XTD_ARTILLERY_4"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_1"        name = "XNM_INFANTRY_1"	version = 4  } ##XNM
+entity = { clone = "sobchinesegfx_CAVALRY_1"         name = "XNM_CAVALRY_1"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_1"       name = "XNM_ARTILLERY_1"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_2"        name = "XNM_INFANTRY_2"	version = 4  } ##XNM
+entity = { clone = "sobchinesegfx_CAVALRY_2"         name = "XNM_CAVALRY_2"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_2"       name = "XNM_ARTILLERY_2"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_3"        name = "XNM_INFANTRY_3"	version = 4  } ##XNM
+entity = { clone = "sobchinesegfx_CAVALRY_3"         name = "XNM_CAVALRY_3"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_3"       name = "XNM_ARTILLERY_3"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_4"        name = "XNM_INFANTRY_4"	version = 4  } ##XNM
+entity = { clone = "sobchinesegfx_CAVALRY_4"         name = "XNM_CAVALRY_4"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_4"       name = "XNM_ARTILLERY_4"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_1"        name = "XSA_INFANTRY_1"	version = 4  } ##XSA
+entity = { clone = "sobchinesegfx_CAVALRY_1"         name = "XSA_CAVALRY_1"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_1"       name = "XSA_ARTILLERY_1"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_2"        name = "XSA_INFANTRY_2"	version = 4  } ##XSA
+entity = { clone = "sobchinesegfx_CAVALRY_2"         name = "XSA_CAVALRY_2"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_2"       name = "XSA_ARTILLERY_2"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_3"        name = "XSA_INFANTRY_3"	version = 4  } ##XSA
+entity = { clone = "sobchinesegfx_CAVALRY_3"         name = "XSA_CAVALRY_3"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_3"       name = "XSA_ARTILLERY_3"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_4"        name = "XSA_INFANTRY_4"	version = 4  } ##XSA
+entity = { clone = "sobchinesegfx_CAVALRY_4"         name = "XSA_CAVALRY_4"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_4"       name = "XSA_ARTILLERY_4"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_4"        name = "CMI_INFANTRY_4"	version = 4  } ##Miao
+entity = { clone = "sobchinesegfx_CAVALRY_4"         name = "CMI_CAVALRY_4"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_4"       name = "CMI_ARTILLERY_4"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_1"        name = "NPS_INFANTRY_1"	version = 4  } ##NPS
+entity = { clone = "sobchinesegfx_CAVALRY_1"         name = "NPS_CAVALRY_1"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_1"       name = "NPS_ARTILLERY_1"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_2"        name = "NPS_INFANTRY_2"	version = 4  } ##NPS
+entity = { clone = "sobchinesegfx_CAVALRY_2"         name = "NPS_CAVALRY_2"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_2"       name = "NPS_ARTILLERY_2"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_3"        name = "NPS_INFANTRY_3"	version = 4  } ##NPS
+entity = { clone = "sobchinesegfx_CAVALRY_3"         name = "NPS_CAVALRY_3"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_3"       name = "NPS_ARTILLERY_3"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_4"        name = "NPS_INFANTRY_4"	version = 4  } ##NPS
+entity = { clone = "sobchinesegfx_CAVALRY_4"         name = "NPS_CAVALRY_4"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_4"       name = "NPS_ARTILLERY_4"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_1"        name = "CSH_INFANTRY_1"	version = 4  } ##CSH
+entity = { clone = "sobchinesegfx_CAVALRY_1"         name = "CSH_CAVALRY_1"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_1"       name = "CSH_ARTILLERY_1"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_2"        name = "CSH_INFANTRY_2"	version = 4  } ##CSH
+entity = { clone = "sobchinesegfx_CAVALRY_2"         name = "CSH_CAVALRY_2"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_2"       name = "CSH_ARTILLERY_2"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_3"        name = "CSH_INFANTRY_3"	version = 4  } ##CSH
+entity = { clone = "sobchinesegfx_CAVALRY_3"         name = "CSH_CAVALRY_3"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_3"       name = "CSH_ARTILLERY_3"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_4"        name = "CSH_INFANTRY_4"	version = 4  } ##CSH
+entity = { clone = "sobchinesegfx_CAVALRY_4"         name = "CSH_CAVALRY_4"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_4"       name = "CSH_ARTILLERY_4"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_1"        name = "CXI_INFANTRY_1"	version = 4  } ##CXI
+entity = { clone = "sobchinesegfx_CAVALRY_1"         name = "CXI_CAVALRY_1"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_1"       name = "CXI_ARTILLERY_1"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_2"        name = "CXI_INFANTRY_2"	version = 4  } ##CXI
+entity = { clone = "sobchinesegfx_CAVALRY_2"         name = "CXI_CAVALRY_2"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_2"       name = "CXI_ARTILLERY_2"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_3"        name = "CXI_INFANTRY_3"	version = 4  } ##CXI
+entity = { clone = "sobchinesegfx_CAVALRY_3"         name = "CXI_CAVALRY_3"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_3"       name = "CXI_ARTILLERY_3"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_4"        name = "CXI_INFANTRY_4"	version = 4  } ##CXI
+entity = { clone = "sobchinesegfx_CAVALRY_4"         name = "CXI_CAVALRY_4"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_4"       name = "CXI_ARTILLERY_4"	version = 4  }
+entity = { clone = "sobchinesegfx_ARTILLERY_1"       name = "CZH_ARTILLERY_1"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_2"        name = "CZH_INFANTRY_2"	version = 4  } ##CXI
+entity = { clone = "sobchinesegfx_CAVALRY_2"         name = "CZH_CAVALRY_2"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_2"       name = "CZH_ARTILLERY_2"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_3"        name = "CZH_INFANTRY_3"	version = 4  } ##CXI
+entity = { clone = "sobchinesegfx_CAVALRY_3"         name = "CZH_CAVALRY_3"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_3"       name = "CZH_ARTILLERY_3"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_4"        name = "CZH_INFANTRY_4"	version = 4  } ##CXI
+entity = { clone = "sobchinesegfx_CAVALRY_4"         name = "CZH_CAVALRY_4"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_4"       name = "CZH_ARTILLERY_4"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_1"        name = "XZY_INFANTRY_1"	version = 4  } ##XZY
+entity = { clone = "sobchinesegfx_CAVALRY_1"         name = "XZY_CAVALRY_1"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_1"       name = "XZY_ARTILLERY_1"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_2"        name = "XZY_INFANTRY_2"	version = 4  } ##XZY
+entity = { clone = "sobchinesegfx_CAVALRY_2"         name = "XZY_CAVALRY_2"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_2"       name = "XZY_ARTILLERY_2"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_3"        name = "XZY_INFANTRY_3"	version = 4  } ##XZY
+entity = { clone = "sobchinesegfx_CAVALRY_3"         name = "XZY_CAVALRY_3"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_3"       name = "XZY_ARTILLERY_3"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_4"        name = "XZY_INFANTRY_4"	version = 4  } ##XZY
+entity = { clone = "sobchinesegfx_CAVALRY_4"         name = "XZY_CAVALRY_4"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_4"       name = "XZY_ARTILLERY_4"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_1"        name = "XZQ_INFANTRY_1"	version = 4  } ##XZQ
+entity = { clone = "sobchinesegfx_CAVALRY_1"         name = "XZQ_CAVALRY_1"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_1"       name = "XZQ_ARTILLERY_1"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_2"        name = "XZQ_INFANTRY_2"	version = 4  } ##XZQ
+entity = { clone = "sobchinesegfx_CAVALRY_2"         name = "XZQ_CAVALRY_2"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_2"       name = "XZQ_ARTILLERY_2"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_3"        name = "XZQ_INFANTRY_3"	version = 4  } ##XZQ
+entity = { clone = "sobchinesegfx_CAVALRY_3"         name = "XZQ_CAVALRY_3"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_3"       name = "XZQ_ARTILLERY_3"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_4"        name = "XZQ_INFANTRY_4"	version = 4  } ##XZQ
+entity = { clone = "sobchinesegfx_CAVALRY_4"         name = "XZQ_CAVALRY_4"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_4"       name = "XZQ_ARTILLERY_4"	version = 4  }
+entity = { clone = "sobchinesegfx_ARTILLERY_1"       name = "CZH_ARTILLERY_1"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_2"        name = "CZH_INFANTRY_2"	version = 4  } ##XZQ
+entity = { clone = "sobchinesegfx_CAVALRY_2"         name = "CZH_CAVALRY_2"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_2"       name = "CZH_ARTILLERY_2"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_3"        name = "CZH_INFANTRY_3"	version = 4  } ##XZQ
+entity = { clone = "sobchinesegfx_CAVALRY_3"         name = "CZH_CAVALRY_3"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_3"       name = "CZH_ARTILLERY_3"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_4"        name = "CZH_INFANTRY_4"	version = 4  } ##XZQ
+entity = { clone = "sobchinesegfx_CAVALRY_4"         name = "CZH_CAVALRY_4"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_4"       name = "CZH_ARTILLERY_4"	version = 4  }
+
+entity = { clone = "sobchinesegfx_INFANTRY_1"        name = "MIN_INFANTRY_1"	version = 4  } ##Min (MIN)
+entity = { clone = "sobchinesegfx_CAVALRY_1"         name = "MIN_CAVALRY_1"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_1"       name = "MIN_ARTILLERY_1"	version = 4  }	
+entity = { clone = "sobchinesegfx_INFANTRY_1"        name = "YUE_INFANTRY_1"	version = 4  } ##YUE (YUE)
+entity = { clone = "sobchinesegfx_CAVALRY_1"         name = "YUE_CAVALRY_1"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_1"       name = "YUE_ARTILLERY_1"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_1"        name = "SHU_INFANTRY_1"	version = 4  } ##SHU
+entity = { clone = "sobchinesegfx_CAVALRY_1"         name = "SHU_CAVALRY_1"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_1"       name = "SHU_ARTILLERY_1"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_1"        name = "NNG_INFANTRY_1"	version = 4  } ##Ning
+entity = { clone = "sobchinesegfx_CAVALRY_1"         name = "NNG_CAVALRY_1"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_1"       name = "NNG_ARTILLERY_1"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_1"        name = "CHC_INFANTRY_1"	version = 4  } ##Chu
+entity = { clone = "sobchinesegfx_CAVALRY_1"         name = "CHC_CAVALRY_1"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_1"       name = "CHC_ARTILLERY_1"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_1"        name = "TNG_INFANTRY_1"	version = 4  } ##Tang
+entity = { clone = "sobchinesegfx_CAVALRY_1"         name = "TNG_CAVALRY_1"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_1"       name = "TNG_ARTILLERY_1"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_1"        name = "WUU_INFANTRY_1"	version = 4  } ##WU
+entity = { clone = "sobchinesegfx_CAVALRY_1"         name = "WUU_CAVALRY_1"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_1"       name = "WUU_ARTILLERY_1"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_1"        name = "QIC_INFANTRY_1"	version = 4  } ##QI
+entity = { clone = "sobchinesegfx_CAVALRY_1"         name = "QIC_CAVALRY_1"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_1"       name = "QIC_ARTILLERY_1"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_1"        name = "YAN_INFANTRY_1"	version = 4  } ##Yan
+entity = { clone = "sobchinesegfx_CAVALRY_1"         name = "YAN_CAVALRY_1"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_1"       name = "YAN_ARTILLERY_1"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_1"        name = "JIN_INFANTRY_1"	version = 4  } ##Jin
+entity = { clone = "sobchinesegfx_CAVALRY_1"         name = "JIN_CAVALRY_1"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_1"       name = "JIN_ARTILLERY_1"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_1"        name = "LNG_INFANTRY_1"	version = 4  } ##Liang
+entity = { clone = "sobchinesegfx_CAVALRY_1"         name = "LNG_CAVALRY_1"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_1"       name = "LNG_ARTILLERY_1"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_1"        name = "QIN_INFANTRY_1"	version = 4  } ##Qin
+entity = { clone = "sobchinesegfx_CAVALRY_1"         name = "QIN_CAVALRY_1"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_1"       name = "QIN_ARTILLERY_1"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_1"        name = "HUA_INFANTRY_1"	version = 4  } ##Huai
+entity = { clone = "sobchinesegfx_CAVALRY_1"         name = "HUA_CAVALRY_1"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_1"       name = "HUA_ARTILLERY_1"	version = 4  }
+
+
+
+entity = { clone = "sobchinesegfx_INFANTRY_2"        name = "MIN_INFANTRY_2"	version = 4  } ##Min (MIN)
+entity = { clone = "sobchinesegfx_CAVALRY_2"         name = "MIN_CAVALRY_2"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_2"       name = "MIN_ARTILLERY_2"	version = 4  }	
+entity = { clone = "sobchinesegfx_INFANTRY_2"        name = "YUE_INFANTRY_2"	version = 4  } ##YUE (YUE)
+entity = { clone = "sobchinesegfx_CAVALRY_2"         name = "YUE_CAVALRY_2"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_2"       name = "YUE_ARTILLERY_2"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_2"        name = "SHU_INFANTRY_2"	version = 4  } ##SHU
+entity = { clone = "sobchinesegfx_CAVALRY_2"         name = "SHU_CAVALRY_2"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_2"       name = "SHU_ARTILLERY_2"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_2"        name = "NNG_INFANTRY_2"	version = 4  } ##Ning
+entity = { clone = "sobchinesegfx_CAVALRY_2"         name = "NNG_CAVALRY_2"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_2"       name = "NNG_ARTILLERY_2"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_2"        name = "CHC_INFANTRY_2"	version = 4  } ##Chu
+entity = { clone = "sobchinesegfx_CAVALRY_2"         name = "CHC_CAVALRY_2"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_2"       name = "CHC_ARTILLERY_2"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_2"        name = "TNG_INFANTRY_2"	version = 4  } ##Tang
+entity = { clone = "sobchinesegfx_CAVALRY_2"         name = "TNG_CAVALRY_2"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_2"       name = "TNG_ARTILLERY_2"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_2"        name = "WUU_INFANTRY_2"	version = 4  } ##WU
+entity = { clone = "sobchinesegfx_CAVALRY_2"         name = "WUU_CAVALRY_2"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_2"       name = "WUU_ARTILLERY_2"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_2"        name = "QIC_INFANTRY_2"	version = 4  } ##QI
+entity = { clone = "sobchinesegfx_CAVALRY_2"         name = "QIC_CAVALRY_2"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_2"       name = "QIC_ARTILLERY_2"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_2"        name = "YAN_INFANTRY_2"	version = 4  } ##Yan
+entity = { clone = "sobchinesegfx_CAVALRY_2"         name = "YAN_CAVALRY_2"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_2"       name = "YAN_ARTILLERY_2"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_2"        name = "JIN_INFANTRY_2"	version = 4  } ##Jin
+entity = { clone = "sobchinesegfx_CAVALRY_2"         name = "JIN_CAVALRY_2"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_2"       name = "JIN_ARTILLERY_2"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_2"        name = "LNG_INFANTRY_2"	version = 4  } ##Liang
+entity = { clone = "sobchinesegfx_CAVALRY_2"         name = "LNG_CAVALRY_2"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_2"       name = "LNG_ARTILLERY_2"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_2"        name = "QIN_INFANTRY_2"	version = 4  } ##Qin
+entity = { clone = "sobchinesegfx_CAVALRY_2"         name = "QIN_CAVALRY_2"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_2"       name = "QIN_ARTILLERY_2"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_2"        name = "HUA_INFANTRY_2"	version = 4  } ##Huai
+entity = { clone = "sobchinesegfx_CAVALRY_2"         name = "HUA_CAVALRY_2"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_2"       name = "HUA_ARTILLERY_2"	version = 4  }
+
+
+entity = { clone = "sobchinesegfx_INFANTRY_3"        name = "MIN_INFANTRY_3"	version = 4  } ##Min (MIN)
+entity = { clone = "sobchinesegfx_CAVALRY_3"         name = "MIN_CAVALRY_3"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_3"       name = "MIN_ARTILLERY_3"	version = 4  }	
+entity = { clone = "sobchinesegfx_INFANTRY_3"        name = "YUE_INFANTRY_3"	version = 4  } ##YUE (YUE)
+entity = { clone = "sobchinesegfx_CAVALRY_3"         name = "YUE_CAVALRY_3"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_3"       name = "YUE_ARTILLERY_3"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_3"        name = "SHU_INFANTRY_3"	version = 4  } ##SHU
+entity = { clone = "sobchinesegfx_CAVALRY_3"         name = "SHU_CAVALRY_3"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_3"       name = "SHU_ARTILLERY_3"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_3"        name = "NNG_INFANTRY_3"	version = 4  } ##Ning
+entity = { clone = "sobchinesegfx_CAVALRY_3"         name = "NNG_CAVALRY_3"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_3"       name = "NNG_ARTILLERY_3"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_3"        name = "CHC_INFANTRY_3"	version = 4  } ##Chu
+entity = { clone = "sobchinesegfx_CAVALRY_3"         name = "CHC_CAVALRY_3"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_3"       name = "CHC_ARTILLERY_3"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_3"        name = "TNG_INFANTRY_3"	version = 4  } ##Tang
+entity = { clone = "sobchinesegfx_CAVALRY_3"         name = "TNG_CAVALRY_3"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_3"       name = "TNG_ARTILLERY_3"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_3"        name = "WUU_INFANTRY_3"	version = 4  } ##WU
+entity = { clone = "sobchinesegfx_CAVALRY_3"         name = "WUU_CAVALRY_3"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_3"       name = "WUU_ARTILLERY_3"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_3"        name = "QIC_INFANTRY_3"	version = 4  } ##QI
+entity = { clone = "sobchinesegfx_CAVALRY_3"         name = "QIC_CAVALRY_3"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_3"       name = "QIC_ARTILLERY_3"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_3"        name = "YAN_INFANTRY_3"	version = 4  } ##Yan
+entity = { clone = "sobchinesegfx_CAVALRY_3"         name = "YAN_CAVALRY_3"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_3"       name = "YAN_ARTILLERY_3"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_3"        name = "JIN_INFANTRY_3"	version = 4  } ##Jin
+entity = { clone = "sobchinesegfx_CAVALRY_3"         name = "JIN_CAVALRY_3"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_3"       name = "JIN_ARTILLERY_3"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_3"        name = "LNG_INFANTRY_3"	version = 4  } ##Liang
+entity = { clone = "sobchinesegfx_CAVALRY_3"         name = "LNG_CAVALRY_3"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_3"       name = "LNG_ARTILLERY_3"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_3"        name = "QIN_INFANTRY_3"	version = 4  } ##Qin
+entity = { clone = "sobchinesegfx_CAVALRY_3"         name = "QIN_CAVALRY_3"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_3"       name = "QIN_ARTILLERY_3"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_3"        name = "HUA_INFANTRY_3"	version = 4  } ##Huai
+entity = { clone = "sobchinesegfx_CAVALRY_3"         name = "HUA_CAVALRY_3"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_3"       name = "HUA_ARTILLERY_3"	version = 4  }
+
+
+entity = { clone = "sobchinesegfx_INFANTRY_4"        name = "MIN_INFANTRY_4"	version = 4  } ##Min (MIN)
+entity = { clone = "sobchinesegfx_CAVALRY_4"         name = "MIN_CAVALRY_4"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_4"       name = "MIN_ARTILLERY_4"	version = 4  }	
+entity = { clone = "sobchinesegfx_INFANTRY_4"        name = "YUE_INFANTRY_4"	version = 4  } ##YUE (YUE)
+entity = { clone = "sobchinesegfx_CAVALRY_4"         name = "YUE_CAVALRY_4"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_4"       name = "YUE_ARTILLERY_4"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_4"        name = "SHU_INFANTRY_4"	version = 4  } ##SHU
+entity = { clone = "sobchinesegfx_CAVALRY_4"         name = "SHU_CAVALRY_4"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_4"       name = "SHU_ARTILLERY_4"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_4"        name = "NNG_INFANTRY_4"	version = 4  } ##Ning
+entity = { clone = "sobchinesegfx_CAVALRY_4"         name = "NNG_CAVALRY_4"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_4"       name = "NNG_ARTILLERY_4"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_4"        name = "CHC_INFANTRY_4"	version = 4  } ##Chu
+entity = { clone = "sobchinesegfx_CAVALRY_4"         name = "CHC_CAVALRY_4"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_4"       name = "CHC_ARTILLERY_4"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_4"        name = "TNG_INFANTRY_4"	version = 4  } ##Tang
+entity = { clone = "sobchinesegfx_CAVALRY_4"         name = "TNG_CAVALRY_4"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_4"       name = "TNG_ARTILLERY_4"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_4"        name = "WUU_INFANTRY_4"	version = 4  } ##WU
+entity = { clone = "sobchinesegfx_CAVALRY_4"         name = "WUU_CAVALRY_4"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_4"       name = "WUU_ARTILLERY_4"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_4"        name = "QIC_INFANTRY_4"	version = 4  } ##QI
+entity = { clone = "sobchinesegfx_CAVALRY_4"         name = "QIC_CAVALRY_4"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_4"       name = "QIC_ARTILLERY_4"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_4"        name = "YAN_INFANTRY_4"	version = 4  } ##Yan
+entity = { clone = "sobchinesegfx_CAVALRY_4"         name = "YAN_CAVALRY_4"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_4"       name = "YAN_ARTILLERY_4"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_4"        name = "JIN_INFANTRY_4"	version = 4  } ##Jin
+entity = { clone = "sobchinesegfx_CAVALRY_4"         name = "JIN_CAVALRY_4"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_4"       name = "JIN_ARTILLERY_4"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_4"        name = "LNG_INFANTRY_4"	version = 4  } ##Liang
+entity = { clone = "sobchinesegfx_CAVALRY_4"         name = "LNG_CAVALRY_4"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_4"       name = "LNG_ARTILLERY_4"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_4"        name = "QIN_INFANTRY_4"	version = 4  } ##Qin
+entity = { clone = "sobchinesegfx_CAVALRY_4"         name = "QIN_CAVALRY_4"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_4"       name = "QIN_ARTILLERY_4"	version = 4  }
+entity = { clone = "sobchinesegfx_INFANTRY_4"        name = "HUA_INFANTRY_4"	version = 4  } ##Huai
+entity = { clone = "sobchinesegfx_CAVALRY_4"         name = "HUA_CAVALRY_4"	version = 4  }	
+entity = { clone = "sobchinesegfx_ARTILLERY_4"       name = "HUA_ARTILLERY_4"	version = 4  }

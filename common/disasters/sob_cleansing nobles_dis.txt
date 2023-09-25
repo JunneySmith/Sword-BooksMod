@@ -1,0 +1,140 @@
+sob_cleansing_nobles_dis = {
+	potential = {
+
+has_country_flag = sob_cleasing_nobles
+
+		NOT = {has_country_modifier = confucianism_reform}
+	  
+	}
+	
+	
+	can_start = {
+
+has_country_flag = sob_cleasing_nobles
+
+
+	}
+	
+	can_stop = {
+	OR = {
+		AND = {
+MIL = 3
+ADM = 3
+DIP = 3
+always = no
+}
+							custom_trigger_tooltip = {
+				tooltip = sob_court_reform_tooltip_6
+has_country_flag = sob_all_land_for_nobles
+}
+}
+	}
+	
+	
+	progress = {
+		modifier = {
+			factor = -0.17
+	AND = {
+MIL = 3
+DIP = 3
+ADM = 3
+}
+		  }
+				modifier = {
+			factor = 0.065
+
+	has_country_flag = sob_cleasing_nobles
+	
+		  }
+
+		modifier = {
+			factor = 0.025
+			OR = {
+						estate_influence = {
+			estate = estate_sobshishen
+			influence = 80
+		    }
+		}
+		}
+		modifier = {
+			factor = 0.03
+			is_at_war = no
+		  has_country_modifier = army_household_title_generated
+		  NOT = { army_tradition = 80}
+		}
+		
+		modifier = {
+			factor = 0.05
+			NOT ={			estate_influence = {
+			estate = estate_nobles
+			influence = 50
+		    }
+			}
+		}
+		modifier = {
+			factor = -0.085
+            ai = yes
+		}
+
+
+
+		
+		
+		
+
+		modifier = {
+			factor = -0.025
+			AND = {
+			estate_influence = {
+			estate = estate_nobles
+			influence = 50
+		    }
+			estate_loyalty = {
+					estate = estate_nobles
+					loyalty = 50
+		    }
+			}
+		}
+		
+
+			
+	}
+	
+	can_end = {
+		OR = {
+		has_country_modifier = confucianism_reform
+		AND = {
+MIL = 3
+ADM = 3
+DIP = 3
+prestige = 50
+ months_of_ruling = 60
+}
+							custom_trigger_tooltip = {
+				tooltip = sob_court_reform_tooltip_6
+has_country_flag = sob_all_land_for_nobles
+}
+}
+	}
+	
+
+	modifier = {
+	global_unrest = 1
+	army_tradition_decay = 0.01
+ 	min_autonomy = 15
+	imperial_mandate = -0.1
+		global_tax_modifier = -0.1
+	 	land_forcelimit_modifier = -0.45
+	manpower_recovery_speed = -0.15
+	}	
+	
+	on_monthly = {
+		events = {
+		
+		}
+		random_events = {
+			1000 = 0
+			#
+		}
+	}
+}

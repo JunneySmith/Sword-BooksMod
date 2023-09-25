@@ -1,0 +1,289 @@
+estate_sobshimin =
+{
+	icon = 3
+	color = { 0 191 255 }
+
+	# If true, country will get estate
+trigger = {	
+	 OR = {culture_group = east_asian  culture_group = chinese_group AND = {    is_emperor_of_china = yes    NOT = { any_country = { OR = {culture_group = east_asian  culture_group = chinese_group culture_group = sob_prc_chinese_group}  NOT = {is_subject_of = ROOT} } } }}
+	}
+
+	# These scale with loyalty & power
+    country_modifier_happy = {
+	sob_balance_a_influence = 0.06
+	production_efficiency = 0.15
+	global_institution_spread = 0.15
+		max_revolutionary_zeal = 20
+	}
+	country_modifier_neutral = {
+	sob_balance_a_influence = 0.03
+	production_efficiency = 0.1
+					stability_cost_modifier = 0.25
+global_institution_spread = 0.1
+			max_revolutionary_zeal = 10
+	}	
+	country_modifier_angry = {
+		trade_efficiency = -0.1
+		production_efficiency = -0.1
+		max_absolutism = -30
+	}
+	land_ownership_modifier = {
+		development_cost = -0.2
+		reinforce_speed = 1
+		global_institution_spread = 1
+		
+	}
+	
+	province_independence_weight = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			NOT = { development = 5 }
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				NOT = { development = 10 }
+				NOT = { province_trade_power = 5 }
+			}
+		}
+		modifier = {
+			factor = 2
+			development = 20
+		}
+		modifier = {
+			factor = 0.5
+			is_territorial_core = owner
+		}
+		modifier = {
+			factor = 1.5
+			province_trade_power = 10
+		}
+		modifier = {
+			factor = 1.5
+			province_trade_power = 20
+		}
+		modifier = {
+			factor = 1.5
+			has_province_modifier = thankful_guilds
+		}
+	}
+
+	# Influence modifiers
+	base_influence = 0
+	influence_modifier = {	
+		desc = EST_HIGH_DEVELOPMENT_PROVINCE
+		trigger = {
+			any_owned_province = {
+				development = 30
+			}
+		}
+		influence = 5
+	}	
+	influence_modifier = {	
+		desc = EST_VAL_IMPERIAL_CITY
+		trigger = {
+			has_reform =  imperial_city
+		}
+		influence = 15
+	}
+
+	influence_modifier = {
+		desc = EST_VAL_HANSEATIC_CITY
+		trigger = {
+			NOT = {has_reform = imperial_city }
+			OR = {
+				capital = 1 #Stockholm
+				capital = 6 #Skåne
+				capital = 23 #Bergen
+				capital = 36 #Reval
+				capital = 38 #Riga
+				capital = 41 #Königsberg
+				capital = 43 #Danzig
+				capital = 44 #Hamburg
+				capital = 45 #Lubeck
+				capital = 46 #Wismar
+				capital = 47 #Stralsund
+				capital = 52 #Magdeburg
+				capital = 53 #Luneburg
+				capital = 54 #Stade
+				capital = 56 #Osnabruck
+				capital = 57 #Brunswick
+				capital = 85 #Köln
+				capital = 86 #Munster
+				capital = 90 #Bruges
+				capital = 100 #Groningen
+				capital = 236 #London
+				capital = 238 #Ipswich
+				capital = 274 #Pskov
+				capital = 275 #Polotsk
+				capital = 310 #Novgorod
+				capital = 1744 # Antwerp
+				capital = 1834 # Dorpat
+				capital = 1858 # Stettin
+				capital = 1859 # Torun
+				capital = 1860 # Bishop's Lynn
+				capital = 1874 # Bremen
+				capital = 1936 # Kaunas
+				capital = 2994 # Greifswald
+				capital = 2995 # Stolp
+			}
+		}	
+		influence = 5
+	}
+	influence_modifier = {
+		desc = EST_VAL_EAST_AFRICAN_TRADE_CITIES
+		trigger = {
+			capital_scope = {
+				OR = {
+					area = central_swahili_coast_area
+					area = mombasa_area
+					area = mozambique_area
+					area = northern_swahili_coast_area
+					area = mogadishu_area
+				}
+			}
+		}
+		influence = 5
+	}
+	influence_modifier = {
+		desc = EST_VAL_NAHUATL
+		trigger = {
+			religion = nahuatl
+		}	
+		influence = -5
+	}
+	influence_modifier = {
+		desc = EST_VAL_LOW_TRADE_INCOME
+		trigger = {
+			NOT = { trade_income_percentage = 0.25 }
+		}	
+		influence = -5
+	}
+	influence_modifier = {
+		desc = EST_VAL_HIGH_TRADE_INCOME
+		trigger = {
+			trade_income_percentage = 0.5
+			NOT = { trade_income_percentage = 0.75 }
+		}	
+		influence = 5
+	}
+	influence_modifier = {
+		desc = EST_VAL_VERY_HIGH_TRADE_INCOME
+		trigger = {
+			trade_income_percentage = 0.75
+		}	
+		influence = 10
+	}
+			influence_modifier = {
+		desc = EST_VAL_CELESTIAL_EMPIRE_COURT_SOB_REFORM
+		trigger = {
+			has_global_flag = sob_landhold_reform_passed
+
+		}		
+		influence = 10
+	}
+	influence_modifier = {
+		desc = EST_VAL_OTHER_ESTATE_IN_POWER
+		trigger = {
+			OR = {
+				has_disaster = estate_nobility_disaster
+				has_disaster = estate_church_disaster
+			}
+		}	
+		influence = -40
+	}
+		influence_modifier = {
+		desc = EST_VAL_OTHER_ESTATE_IN_POWER
+		trigger = {
+		NOT = {has_estate = estate_sobshishen}
+		}	
+		influence = 10
+	}
+		loyalty_modifier = {
+		desc = EST_VAL_CELESTIAL_EMPIRE_COURT_SOB_REFORM_LOY
+		trigger = {
+has_global_flag = sob_landhold_reform_passed
+		}
+		loyalty = 10
+	}
+	loyalty_modifier = {
+		desc = EST_VAL_OTHER_ESTATE_IN_POWER_LOY
+		trigger = {
+			OR = {
+				has_disaster = estate_nobility_disaster
+				has_disaster = estate_church_disaster
+			}
+		}
+		loyalty = -20
+	}
+	loyalty_modifier = {
+		desc = EST_VAL_FULL_PLUTOCRATIC
+		trigger = {
+			full_idea_group = plutocracy_ideas
+		}
+		loyalty = 10
+	}
+	
+
+	custom_name = {
+		desc = estate_sobshimine
+		trigger = {
+			OR = {culture_group = east_asian  culture_group = chinese_group }
+		}
+	}
+
+	
+
+
+	privileges = {
+sob_estate_kuojian_gongchang
+sob_estate_mianyiyin_gold
+sob_estate_jianghu_ziying
+sob_estate_jianghu_ziying_2
+sob_estate_jianghu_siren_wen
+sob_estate_jianghu_gongchang_wen
+sob_estate_jianghu_education_wen
+sob_estate_jianghu_direct_reward
+sob_estate_jianghu_direct_reward_2
+sob_estate_jianghu_education
+sob_estate_jianghu_production_power
+sob_estate_jianghu_taxes_direct
+sob_estate_jianghu_keju
+sob_estate_jianghu_road_to_sky_rew
+	}
+
+	agendas = {
+		estate_sobshimin_develop_x
+		estate_sobshimin_build_trade_building_in_y
+		estate_sobshimin_build_port_building_in_y
+		estate_sobshimin_build_production_building_in_y
+		estate_sobshimin_build_university_in_y
+		estate_sobshimin_build_manufactory_in_y
+		estate_sobshimin_restore_republican_tradition
+		estate_sobshimin_recovery_from_hyperinflation
+		estate_sobshimin_increase_trade_power_in_X
+		estate_sobshimin_access_sea
+		estate_sobshimin_build_a_fleet
+		estate_sobshimin_bigger_fleet_than_rival
+		estate_sobshimin_get_cash
+		estate_sobshimin_discover_X_in_america
+		estate_sobshimin_colonise_X
+		estate_sobshimin_colonise_more_X
+		estate_sobshimin_colonial_nation
+		estate_sobshimin_expand_trade_company
+		estate_sobshimin_trade_post_in_india
+		estate_sobshimin_trade_post_in_malacca
+		estate_sobshimin_trade_post_in_china
+		estate_sobshimin_silk_trade
+		estate_sobshimin_spice_trade
+		estate_sobshimin_tea_trade
+		estate_sobshimin_reduce_corruption
+		estate_sobshimin_protect_against_piracy
+		estate_sobshimin_hire_advisor
+		estate_sobshimin_fire_advisor
+	}
+
+	influence_from_dev_modifier = 1.8
+
+}

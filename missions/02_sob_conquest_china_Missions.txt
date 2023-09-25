@@ -1,0 +1,139 @@
+sob_empire_of_china_waizu_mission_1= {
+	slot = 7
+	generic = no
+	ai = yes
+	potential = {
+
+	is_emperor_of_china = no
+	}
+	sob_china_first_mission = {
+		icon = mission_war_chest
+		position = 1
+		trigger = {
+		OR = {
+						custom_trigger_tooltip = {
+				tooltip = sob_start_world_unification_tooltip		
+		has_country_flag = sob_start_world_unification
+		}
+						custom_trigger_tooltip = {
+				tooltip = sob_special_mission_tooltip		
+		has_country_flag = sob_special_mission_conquer_china
+		}
+		}
+		}
+		effect = {
+		custom_tooltip = sob_waizu_att_shishen_tooltip
+			set_country_flag = sob_waizu_att_shishen
+			set_country_flag = sob_confu_actived
+		}
+	}
+	sob_shishen_loyalty_mission = {
+		icon = mission_scholar_officials
+		position = 2
+required_missions = { sob_china_first_mission }
+		trigger = {
+		has_estate = estate_sobshishen
+		OR = {
+		religion = confucianism
+		secondary_religion = confucianism
+		}
+		any_country ={
+		is_emperor_of_china = yes
+		has_estate = estate_sobshishen
+		
+		OR= {
+		AND ={
+		ai = yes
+		NOT = { imperial_mandate = 30}
+		}
+			NOT = {		estate_loyalty = {
+						estate = estate_sobshishen
+						loyalty = 40
+					}
+		}
+		}
+		
+		}
+		estate_influence = {
+				estate = estate_sobshishen
+				influence = 70
+				}
+				
+									estate_loyalty = {
+						estate = estate_sobshishen
+						loyalty = 80
+					}
+		}
+		effect = {
+		set_country_flag = sob_waizu_allowed_celestial_empire
+		custom_tooltip = sob_waizu_allowed_celestial_empire_tooltip
+		custom_tooltip = sob_waizu_allowed_celestial_empire_2_tooltip
+		}
+	}
+	sob_shishen_dailudang_mission = {
+		icon = mission_kowtow
+		position = 3
+required_missions = { sob_shishen_loyalty_mission }
+		trigger = {
+			NOT = {OR = {culture_group = east_asian culture_group = chinese_group} }
+		total_development = 800
+		has_reform = celestial_empire
+		has_estate = estate_sobshishen
+		estate_influence = {
+				estate = estate_sobshishen
+				influence = 80
+				}
+				
+									estate_loyalty = {
+						estate = estate_sobshishen
+						loyalty = 100
+					}
+		}
+		effect = {
+		set_country_flag = sob_waizu_dailudang_celestial_empire
+		custom_tooltip = sob_waizu_dailudang_celestial_empire_tooltip
+		}
+	}
+		sob_shishen_zhengfu_mission = {
+		icon = mission_defy_the_dragon
+		position = 4
+required_missions = { sob_shishen_dailudang_mission }
+		trigger = {
+			NOT = {OR = {culture_group = east_asian culture_group = chinese_group} }
+		total_development = 1500
+		NOT = {
+		any_country = {
+		is_emperor_of_china = yes
+		num_of_cities = 1
+		
+		}
+		
+		}
+		has_reform = celestial_empire
+		has_estate = estate_sobshishen
+		estate_influence = {
+				estate = estate_sobshishen
+				influence = 80
+				}
+				
+									estate_loyalty = {
+						estate = estate_sobshishen
+						loyalty = 100
+					}
+					china_superregion = {
+					type = all
+					owned_by = ROOT
+					}
+		}
+		effect = {
+set_emperor_of_china = ROOT
+add_mandate = 25
+												add_estate_loyalty = {
+			estate = estate_sobshishen
+			loyalty = -25
+		}
+	add_treasury = 1000
+		}
+	}
+
+}

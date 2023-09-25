@@ -1,0 +1,55 @@
+
+
+
+sob_scelestial_empire_tolerance = {#noble
+	icon = "people_walking"
+	allow_normal_conversion = yes
+	potential = {
+ always = yes
+	}
+	modifiers = {
+  	tolerance_heretic = 1
+	tolerance_heathen = 1
+	}
+}
+
+sob_scelestial_empire_jiaoqu = {#noble
+	icon = "crown"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+	ai = no
+     NOT = {   has_reform = sob_scelestial_empire_zhou_reform_republic }
+  NOT = {   has_reform = sob_celestial_empire_song_reform_republic }
+  NOT = {   has_reform = sob_scelestial_empire_zhou_reform }
+		  NOT = {   has_reform = sob_celestial_empire_song_reformed }
+	}
+	
+			trigger = {
+								custom_trigger_tooltip = {
+				tooltip = sob_religious_new_system_subject_tooltip
+		has_country_flag = sob_religious_new_system_subject
+		}
+	}
+	modifiers = {
+ religious_unity = 0.1
+	}
+	
+	
+
+			can_form_trade_league = yes
+		trade_city_reform = sob_jiaoqu_city
+	
+}
+
+sob_scelestial_empire_moralize = {#noble
+	icon = "papacy"
+	allow_normal_conversion = yes
+	potential = {
+ always = yes
+	}
+	modifiers = {
+  	tolerance_own = 1
+	global_missionary_strength = 0.005
+	}
+}

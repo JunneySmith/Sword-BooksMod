@@ -1,0 +1,734 @@
+#All scopes are country scope
+#All parameters are optional
+
+# estate_privilege = {
+# 	is_valid = { triggers }						#Conditions for whether it is possible for the country to have this privilege (it will not display on the list if they are false, and will be revoked if it has already been granted)
+# 	can_select = { triggers } 					#Conditions for whether the country is allowed to select the privilege (with conditions for why not displayed)
+# 	on_granted = { effects } 					#Effects executed immediately upon the privilege being taken
+# 	can_revoke = { triggers } 					#Conditions for whether the country can revoke the privilege
+# 	on_revoked = { effects } 					#Effects executed upon the privilege being revoked by the country
+# 	on_invalid = { effects } 					#Effects executed upon the privilege being removed due to invalidity (is_valid becomes false or the estate is removed)
+# 	penalties = { modifiers } 					#Negative modifiers granted while the privilege is active (creates different tooltip to benefits)
+# 	conditional_modifier = { 					#Modifier that are applied if the specified conditions are true.
+# 		trigger = { triggers }
+# 		modifier = { modifiers }
+# 		is_bad = yes/no							#Specifies whether the modifier should be listed as positive or negative in the tooltips.
+# 	}
+# 	modifier_by_land_ownership = { modifiers } 	#Multiplies the modifier by the % of land owned by the estate.
+# 	mechanics = { mechanics } 					#Special mechanics the privilege enables
+# 	cooldown_years = int 						#Time limit before which the privilege cannot be revoked
+# 	on_cooldown_expires = { effects }			#Effect executed once the specified cooldown_years timer has run down
+#	ai_will_do									#If above ESTATE_PRIVILEGE_GRANT_THRESHOLD define, AI will try to apply. If below ESTATE_PRIVILEGE_REVOKE_THRESHOLD, AI will try to revoke.
+# }
+
+sob_estate_qingcha_tianmu = { #清查田亩
+	icon = privilege_monopoly_of_goods_paper
+	max_absolutism = 5
+	loyalty = -0.05
+	influence = -0.15
+	is_valid = { 
+	OR = {
+	NOT = { has_country_flag = sob_estate_jiu_land_rights_shishen}
+	had_country_flag = {
+	flag = sob_estate_jiu_land_rights_shishen
+	days = 3650
+    }
+	}
+
+	}	
+	can_select = {
+		OR = {culture_group = east_asian culture_group = chinese_group} 
+				estate_territory = {
+					estate = estate_sobshishen
+					territory = 5
+				}
+	}
+	on_revoked = { clr_country_flag = sob_estate_jiu_land_rights_shishen } 
+	on_granted = {
+			add_estate_loyalty = {
+			estate = estate_sobshishen
+			loyalty = -20
+		}
+	}
+	on_invalid = {
+take_estate_land_share_massive = { estate = estate_sobshishen }
+							add_estate_loyalty = {
+			estate = estate_sobshimin
+			loyalty = 5
+		}
+		spawn_rebels_seize_land_switch = yes
+		clr_country_flag = sob_estate_jiu_land_rights_shishen
+	} 
+
+	penalties = {
+	}
+	modifier_by_land_ownership = { 
+	global_trade_goods_size_modifier = -0.5
+
+	}
+	benefits = {
+		
+	}
+	ai_will_do = {
+		factor = 0
+		modifier = {
+			factor = 0.8
+			is_absolutism_active = yes
+		}
+	}
+}
+sob_estate_nonggong_gold = {#鼓励农工
+	icon = privilege_monopoly_of_goods_cloth
+	max_absolutism = -10
+	loyalty = -0.1
+	influence = -0.1
+
+	is_valid = {
+				estate_territory = {
+					estate = estate_sobshishen
+					territory = 5
+				}
+	}
+		can_select = {
+			OR = {culture_group = east_asian culture_group = chinese_group} 
+	NOT = {has_estate_privilege =sob_estate_bookperfection_taxes_direct }
+	}
+
+	on_revoked = { } 
+	on_granted = {
+	}
+	on_invalid = {
+					add_estate_loyalty = {
+			estate = estate_sobshimin
+			loyalty = 20
+		}
+
+	} 
+	penalties = {
+	global_autonomy = 0.0125
+	}
+	benefits = {
+		production_efficiency = 0.10
+	}
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 0.8
+			is_absolutism_active = yes
+		}
+	}
+}
+
+sob_estate_shishen_baoshui = {#包税制
+	icon = GFX_crownland
+	max_absolutism = 5
+
+	is_valid = {
+		estate_territory = {
+			estate = estate_sobshishen
+			territory = 5
+		}
+	}
+			can_select = {
+				OR = {culture_group = east_asian culture_group = chinese_group} 
+			NOT = {has_estate_privilege =sob_estate_shinonggongshang }
+
+	}
+	on_revoked = { } 
+	on_granted = {
+	}
+	on_invalid = {
+		add_estate_loyalty = {
+			estate = estate_sobshishen
+			loyalty = -20
+		}
+
+	} 
+	penalties = {
+	prestige = -0.5
+	}
+	benefits = {
+		global_tax_modifier = 0.1
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+sob_estate_zhuanye_zhianguan= {#转业治安官
+	icon = privilege_demand_more_troops
+	max_absolutism = 5
+	loyalty = -0.1
+	influence = -0.05
+	can_select = {
+		OR = {culture_group = east_asian culture_group = chinese_group} 
+		NOT = {has_estate_privilege =sob_estate_inward_production_power }
+	}
+	is_valid = {
+				estate_territory = {
+					estate = estate_sobshishen
+					territory = 5
+				}
+	}
+	on_revoked = { } 
+	on_granted = {
+						add_estate_loyalty = {
+			estate = estate_sobshishen
+			loyalty = -20
+		}
+	}
+	on_invalid = {
+
+					add_estate_loyalty = {
+			estate = estate_sobshimin
+			loyalty = 20
+		}
+
+	} 
+	penalties = {
+	state_maintenance_modifier = 0.35
+	}
+	benefits = {
+min_autonomy = -10
+  }
+	ai_will_do = {
+		factor = 5
+	}
+}
+
+
+sob_estate_fuzhi_didang_count = {#扶植帝党
+	icon = GFX_seize_land
+	max_absolutism = 10
+	loyalty = -0.1
+	influence = -0.1
+
+
+	can_select = {
+		OR = {culture_group = east_asian culture_group = chinese_group} 
+ NOT = {has_estate_privilege =sob_estate_shishen_road_to_sky_rew }
+ 
+ 
+	NOT = {		estate_territory = {
+					estate = estate_sobshishen
+					territory = 75
+				} 
+				
+				}
+	
+	
+	} 
+	on_revoked = { } 
+	on_granted = {
+						add_estate_loyalty = {
+			estate = estate_sobshishen
+			loyalty = -20
+		}
+	}
+	penalties = {
+	global_unrest = 2
+	}
+
+	benefits = {
+governing_capacity = 100
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+
+sob_estate_inward_production_power = {#士绅优待
+	icon = privilege_make_generous_donation
+	max_absolutism = 5
+	loyalty = 0.1
+	#land_share = 15
+	influence = 0.1
+can_revoke = {
+OR = {
+AND = {
+	NOT = {OR = {culture_group = east_asian  culture_group = chinese_group }}
+				estate_influence = {
+				estate = estate_nobles
+				influence = 80
+				}
+	}
+							custom_trigger_tooltip = {
+				tooltip = sob_all_land_for_shangren_tooltip
+				
+				 has_country_flag = sob_all_land_for_shangren
+				}
+
+				}
+ }
+
+	is_valid = {
+	NOT = {has_country_flag = sob_all_land_for_shangren}
+	}
+	
+	on_revoked = {
+				if = {
+		limit = {
+			any_owned_province ={
+			has_province_modifier = sob_shishen_land_on
+			
+			}
+
+			
+		}
+		random_owned_province ={
+		limit ={
+		has_province_modifier = sob_shishen_land_on
+		
+		}
+		
+		if = {
+		limit= {owner = {	ai = no			NOT = {
+					estate_loyalty = {
+						estate = estate_sobshishen
+						loyalty = 40
+					}
+				}}}
+				spawn_rebels = {
+			type = sobshishen_rebels
+			size = 2
+		}
+		
+		}
+				if = {
+		limit= {owner = {		ai = no		NOT = {
+					estate_loyalty = {
+						estate = estate_sobshishen
+						loyalty = 30
+					}
+				}}}
+				area = {
+				limit = { has_province_modifier = sob_shishen_land_on}
+				spawn_rebels = {
+			type = sobshishen_rebels
+			size = 2
+		}
+		
+		}
+		}
+						if = {
+		limit= {
+		
+		owner = {		ai = no		NOT = {
+					estate_loyalty = {
+						estate = estate_sobshishen
+						loyalty = 20
+					}
+				}}}
+				region = {
+				limit = { has_province_modifier = sob_shishen_land_on}
+				spawn_rebels = {
+			type = sobshishen_rebels
+			size = 2
+		}
+		
+		}
+		}
+		}
+		}
+	} 
+	on_granted = {
+						add_estate_loyalty = {
+			estate = estate_sobshishen
+			loyalty = 20
+		}
+	}
+				modifier_by_land_ownership = { 		
+production_efficiency = -0.10
+global_tax_modifier = -0.15
+		}
+	penalties = {
+	}
+	benefits = {
+
+	}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {culture_group = east_asian  culture_group = chinese_group }
+		}
+		modifier = {
+			factor = 1000
+			NOT = {OR = {culture_group = east_asian  culture_group = chinese_group }}
+		}
+	}
+}
+
+sob_estate_bookperfection_taxes_direct = {#以经书取士
+	icon = privilege_permit_self_governance
+	max_absolutism = 5
+	loyalty = 0.1
+	#land_share = 15
+	influence = 0.1
+	is_valid = {
+	NOT = {has_country_flag = sob_all_land_for_warriors}
+	}
+can_revoke = { 
+
+OR = {
+AND = {
+	NOT = {OR = {culture_group = east_asian  culture_group = chinese_group }}
+				estate_influence = {
+				estate = estate_nobles
+				influence = 80
+				}
+	}
+							custom_trigger_tooltip = {
+				tooltip = sob_all_land_for_warriors_tooltip
+				
+				 has_country_flag = sob_all_land_for_warriors
+				}
+
+				}
+				}
+	on_revoked = {
+
+				if = {
+		limit = {
+			any_owned_province ={
+			has_province_modifier = sob_shishen_land_on
+			
+			}
+
+			
+		}
+		random_owned_province ={
+		limit ={
+		has_province_modifier = sob_shishen_land_on
+		
+		}
+		
+		if = {
+		limit= {owner = {	ai = no			NOT = {
+					estate_loyalty = {
+						estate = estate_sobshishen
+						loyalty = 40
+					}
+				}}}
+				spawn_rebels = {
+			type = sobshishen_rebels
+			size = 2
+		}
+		
+		}
+				if = {
+		limit= {owner = {		ai = no		NOT = {
+					estate_loyalty = {
+						estate = estate_sobshishen
+						loyalty = 30
+					}
+				}}}
+				area = {
+				limit = { has_province_modifier = sob_shishen_land_on}
+				spawn_rebels = {
+			type = sobshishen_rebels
+			size = 2
+		}
+		
+		}
+		}
+						if = {
+		limit= {
+		
+		owner = {		ai = no		NOT = {
+					estate_loyalty = {
+						estate = estate_sobshishen
+						loyalty = 20
+					}
+				}}}
+				region = {
+				limit = { has_province_modifier = sob_shishen_land_on}
+				spawn_rebels = {
+			type = sobshishen_rebels
+			size = 2
+		}
+		
+		}
+		}
+		}
+		}
+	} 
+	on_granted = {
+						add_estate_loyalty = {
+			estate = estate_sobshishen
+			loyalty = 20
+		}
+	}
+			modifier_by_land_ownership = { 		
+			unjustified_demands = 0.25
+	yearly_corruption = 0.1
+	global_prov_trade_power_modifier = -0.25
+	mil_tech_cost_modifier = 0.10
+		}
+	penalties = {
+	
+	}
+	benefits = {
+	}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {culture_group = east_asian  culture_group = chinese_group }
+		}
+		modifier = {
+			factor = 1000
+			NOT = {OR = {culture_group = east_asian  culture_group = chinese_group }}
+		}
+	}
+}
+
+sob_estate_shinonggongshang = {#士农工商
+	icon = privilege_recruit_inouisitor
+	max_absolutism = 5
+	loyalty = 0.1
+	influence = 0.1
+	#land_share = 15
+can_revoke = {	
+OR = {
+AND = {
+	NOT = {OR = {culture_group = east_asian  culture_group = chinese_group }}
+				estate_influence = {
+				estate = estate_nobles
+				influence = 80
+				}
+	}
+			custom_trigger_tooltip = {
+				tooltip = sob_all_land_for_sobshimin_tooltip
+				
+				 has_country_flag = sob_all_land_for_sobshimin
+				}
+
+				}
+				}
+	is_valid = {
+	NOT = {has_country_flag = sob_all_land_for_sobshimin}
+	}
+	on_revoked = { 
+					if = {
+		limit = {
+			any_owned_province ={
+			has_province_modifier = sob_shishen_land_on
+			
+			}
+
+			
+		}
+		random_owned_province ={
+		limit ={
+		has_province_modifier = sob_shishen_land_on
+		
+		}
+		
+		if = {
+		limit= {owner = {	ai = no			NOT = {
+					estate_loyalty = {
+						estate = estate_sobshishen
+						loyalty = 40
+					}
+				}}}
+				spawn_rebels = {
+			type = sobshishen_rebels
+			size = 2
+		}
+		
+		}
+				if = {
+		limit= {owner = {		ai = no		NOT = {
+					estate_loyalty = {
+						estate = estate_sobshishen
+						loyalty = 30
+					}
+				}}}
+				area = {
+				limit = { has_province_modifier = sob_shishen_land_on}
+				spawn_rebels = {
+			type = sobshishen_rebels
+			size = 2
+		}
+		
+		}
+		}
+						if = {
+		limit= {
+		
+		owner = {		ai = no		NOT = {
+					estate_loyalty = {
+						estate = estate_sobshishen
+						loyalty = 20
+					}
+				}}}
+				region = {
+				limit = { has_province_modifier = sob_shishen_land_on}
+				spawn_rebels = {
+			type = sobshishen_rebels
+			size = 2
+		}
+		
+		}
+		}
+		}
+		}
+	
+	} 
+	on_granted = {
+						add_estate_loyalty = {
+			estate = estate_sobshishen
+			loyalty = 20
+		}
+	}
+		modifier_by_land_ownership = { 		
+		development_cost = 0.1
+		global_institution_spread = -0.2
+		}
+	penalties = {
+	}
+	benefits = {
+
+
+	}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {culture_group = east_asian  culture_group = chinese_group }
+		}
+		modifier = {
+			factor = 1000
+			NOT = {OR = {culture_group = east_asian  culture_group = chinese_group }}
+		}
+	}
+}
+
+sob_estate_shishen_road_to_sky_rew = {#登天梯
+	icon = privilege_royal_authority
+	max_absolutism = -10
+	loyalty = 0.1
+	#land_share = 15
+	influence = 0.1
+ 
+ can_revoke = {
+OR = {
+AND = {
+	NOT = {OR = {culture_group = east_asian  culture_group = chinese_group }}
+				estate_influence = {
+				estate = estate_nobles
+				influence = 80
+				}
+	}
+ custom_trigger_tooltip = {
+				tooltip = sob_all_land_for_nobles_tooltip
+				
+				 has_country_flag = sob_all_land_for_nobles
+				}
+
+				}
+				
+				}
+	is_valid = {
+	NOT = {has_country_flag = sob_all_land_for_nobles}
+	}
+	
+	on_revoked = { 
+					if = {
+		limit = {
+			any_owned_province ={
+			has_province_modifier = sob_shishen_land_on
+			
+			}
+
+			
+		}
+		random_owned_province ={
+		limit ={
+		has_province_modifier = sob_shishen_land_on
+		
+		}
+		
+		if = {
+		limit= {owner = {	ai = no			NOT = {
+					estate_loyalty = {
+						estate = estate_sobshishen
+						loyalty = 40
+					}
+				}}}
+				spawn_rebels = {
+			type = sobshishen_rebels
+			size = 2
+		}
+		
+		}
+				if = {
+		limit= {owner = {		ai = no		NOT = {
+					estate_loyalty = {
+						estate = estate_sobshishen
+						loyalty = 30
+					}
+				}}}
+				area = {
+				limit = { has_province_modifier = sob_shishen_land_on}
+				spawn_rebels = {
+			type = sobshishen_rebels
+			size = 2
+		}
+		
+		}
+		}
+						if = {
+		limit= {
+		
+		owner = {		ai = no		NOT = {
+					estate_loyalty = {
+						estate = estate_sobshishen
+						loyalty = 20
+					}
+				}}}
+				region = {
+				limit = { has_province_modifier = sob_shishen_land_on}
+				spawn_rebels = {
+			type = sobshishen_rebels
+			size = 2
+		}
+		
+		}
+		}
+		}
+		}
+	
+	} 
+	on_granted = {
+						add_estate_loyalty = {
+			estate = estate_sobshishen
+			loyalty = 20
+		}
+	}
+	modifier_by_land_ownership = { 		
+	unjustified_demands = 0.25
+	global_manpower_modifier = -0.2
+		army_tradition_decay = 0.015
+        technology_cost = 0.1
+		}
+	penalties = {
+
+	}
+	benefits = {
+
+	}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {culture_group = east_asian  culture_group = chinese_group }
+		}
+		modifier = {
+			factor = 1000
+			NOT = {OR = {culture_group = east_asian  culture_group = chinese_group }}
+		}
+	}
+}

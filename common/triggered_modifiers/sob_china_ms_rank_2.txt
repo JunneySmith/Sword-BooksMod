@@ -1,0 +1,351 @@
+sob_confu_msn_rank_two_1 = {
+	potential = {    always = no
+			OR = { religion = confucianism religion = threeself religion =sob_catholic  religion =sob_reformed	religion = sob_orthodox 	religion = sob_coptic	religion = sob_mahayana	religion = sob_sunni religion =sob_shinto 		religion = sob_hinduism religion = sob_shamanism	religion = sob_anglican	}
+NOT = { num_of_missionaries = 2}
+
+	}
+
+		trigger = { harmony = 80   NOT = { harmony = 100} always = no
+num_of_missionaries = 1
+NOT = { num_of_missionaries = 2}
+}
+	harmonization_speed = 0.33
+	papal_influence = 0.65
+}
+
+
+sob_confu_msn_rank_two_2 = {
+	potential = {    always = no
+			OR = { religion = confucianism religion = threeself religion =sob_catholic  religion =sob_reformed	religion = sob_orthodox 	religion = sob_coptic	religion = sob_mahayana	religion = sob_sunni religion =sob_shinto 		religion = sob_hinduism religion = sob_shamanism	religion = sob_anglican	}
+	num_of_missionaries = 2
+NOT = { num_of_missionaries = 3}
+
+	}
+
+		trigger = { harmony = 80   NOT = { harmony = 100} always = no
+num_of_missionaries = 2
+NOT = { num_of_missionaries = 3}
+}
+	harmonization_speed = 0.66
+	papal_influence = 1.3
+}
+
+
+sob_confu_msn_rank_two_3 = {
+	potential = {    always = no
+			OR = { religion = confucianism religion = threeself religion =sob_catholic  religion =sob_reformed	religion = sob_orthodox 	religion = sob_coptic	religion = sob_mahayana	religion = sob_sunni religion =sob_shinto 		religion = sob_hinduism religion = sob_shamanism	religion = sob_anglican	}
+	num_of_missionaries = 3
+NOT = { num_of_missionaries = 4}
+
+	}
+
+		trigger = { harmony = 80   NOT = { harmony = 100} always = no
+num_of_missionaries = 3
+NOT = { num_of_missionaries = 4}
+}
+	harmonization_speed = 0.99
+	papal_influence = 1.95
+}
+
+sob_confu_msn_rank_two_4 = {
+	potential = {    always = no
+			OR = { religion = confucianism religion = threeself religion =sob_catholic  religion =sob_reformed	religion = sob_orthodox 	religion = sob_coptic	religion = sob_mahayana	religion = sob_sunni religion =sob_shinto 		religion = sob_hinduism religion = sob_shamanism	religion = sob_anglican	}
+	num_of_missionaries = 4
+NOT = { num_of_missionaries = 5}
+
+	}
+
+		trigger = { harmony = 80   NOT = { harmony = 100} always = no
+num_of_missionaries = 4
+NOT = { num_of_missionaries = 5}
+}
+	harmonization_speed = 1.32
+	papal_influence = 2.6
+}
+
+sob_confu_msn_rank_two_5 = {
+	potential = {    always = no
+			OR = { religion = confucianism religion = threeself religion =sob_catholic  religion =sob_reformed	religion = sob_orthodox 	religion = sob_coptic	religion = sob_mahayana	religion = sob_sunni religion =sob_shinto 		religion = sob_hinduism religion = sob_shamanism	religion = sob_anglican	}
+	num_of_missionaries = 5
+NOT = { num_of_missionaries = 6}
+
+	}
+
+		trigger = { harmony = 80   NOT = { harmony = 100} always = no
+num_of_missionaries = 5
+NOT = { num_of_missionaries = 6}
+}
+	harmonization_speed = 1.65
+	papal_influence = 3.25
+}
+
+sob_confu_msn_rank_two_6 = {
+	potential = {    always = no
+	always = no
+			OR = { religion = confucianism religion = threeself religion =sob_catholic  religion =sob_reformed	religion = sob_orthodox 	religion = sob_coptic	religion = sob_mahayana	religion = sob_sunni religion =sob_shinto 		religion = sob_hinduism religion = sob_shamanism	religion = sob_anglican	}
+	num_of_missionaries = 5
+NOT = { num_of_missionaries = 6}
+
+	}
+
+		trigger = { harmony = 80   NOT = { harmony = 100} always = no
+num_of_missionaries = 5
+NOT = { num_of_missionaries = 6}
+}
+	harmonization_speed = 1.98
+	papal_influence = 3.9
+}
+
+sob_confu_msn_rank_two_7 = {
+	potential = {    always = no
+			OR = { religion = confucianism religion = threeself religion =sob_catholic  religion =sob_reformed	religion = sob_orthodox 	religion = sob_coptic	religion = sob_mahayana	religion = sob_sunni religion =sob_shinto 		religion = sob_hinduism religion = sob_shamanism	religion = sob_anglican	}
+	num_of_missionaries = 6
+NOT = { num_of_missionaries = 7}
+
+	}
+
+		trigger = { harmony = 80   NOT = { harmony = 100} always = no
+num_of_missionaries = 6
+NOT = { num_of_missionaries = 7}
+}
+	harmonization_speed = 2.31
+	papal_influence = 4.55
+}
+
+sob_confu_msn_rank_two_8 = {
+	potential = {    always = no
+			OR = { religion = confucianism religion = threeself religion =sob_catholic  religion =sob_reformed	religion = sob_orthodox 	religion = sob_coptic	religion = sob_mahayana	religion = sob_sunni religion =sob_shinto 		religion = sob_hinduism religion = sob_shamanism	religion = sob_anglican	}
+	num_of_missionaries = 7
+NOT = { num_of_missionaries = 8}
+
+	}
+
+		trigger = { harmony = 80   NOT = { harmony = 100} always = no
+num_of_missionaries = 7
+NOT = { num_of_missionaries = 8}
+}
+	harmonization_speed = 2.64
+	papal_influence = 5.2
+}
+
+sob_confu_msn_rank_two_9 = {
+	potential = {    always = no
+			OR = { religion = confucianism religion = threeself religion =sob_catholic  religion =sob_reformed	religion = sob_orthodox 	religion = sob_coptic	religion = sob_mahayana	religion = sob_sunni religion =sob_shinto 		religion = sob_hinduism religion = sob_shamanism	religion = sob_anglican	}
+	num_of_missionaries = 8
+NOT = { num_of_missionaries = 9}
+
+	}
+
+		trigger = { harmony = 80   NOT = { harmony = 100} always = no
+num_of_missionaries = 8
+NOT = { num_of_missionaries = 9}
+}
+	harmonization_speed = 2.97
+	papal_influence = 5.2
+}
+
+sob_confu_msn_rank_two_10 = {
+	potential = {    always = no
+			OR = { religion = confucianism religion = threeself religion =sob_catholic  religion =sob_reformed	religion = sob_orthodox 	religion = sob_coptic	religion = sob_mahayana	religion = sob_sunni religion =sob_shinto 		religion = sob_hinduism religion = sob_shamanism	religion = sob_anglican	}
+	num_of_missionaries = 9
+NOT = { num_of_missionaries = 10}
+
+	}
+
+		trigger = { harmony = 80   NOT = { harmony = 100} always = no
+num_of_missionaries = 9
+NOT = { num_of_missionaries = 10}
+}
+	harmonization_speed = 3.3
+	papal_influence = 5.2
+}
+
+sob_confu_msn_rank_two_11 = {
+	potential = {    always = no
+			OR = { religion = confucianism religion = threeself religion =sob_catholic  religion =sob_reformed	religion = sob_orthodox 	religion = sob_coptic	religion = sob_mahayana	religion = sob_sunni religion =sob_shinto 		religion = sob_hinduism religion = sob_shamanism	religion = sob_anglican	}
+	num_of_missionaries = 10
+NOT = { num_of_missionaries = 11}
+
+	}
+
+		trigger = { harmony = 80   NOT = { harmony = 100} always = no
+num_of_missionaries = 10
+NOT = { num_of_missionaries = 11}
+}
+	harmonization_speed = 3.63
+	papal_influence = 5.2
+}
+
+sob_confu_msn_rank_two_12 = {
+	potential = {    always = no
+			OR = { religion = confucianism religion = threeself religion =sob_catholic  religion =sob_reformed	religion = sob_orthodox 	religion = sob_coptic	religion = sob_mahayana	religion = sob_sunni religion =sob_shinto 		religion = sob_hinduism religion = sob_shamanism	religion = sob_anglican	}
+	num_of_missionaries = 11
+NOT = { num_of_missionaries = 12}
+
+	}
+
+		trigger = { harmony = 80   NOT = { harmony = 100} always = no
+num_of_missionaries = 11
+NOT = { num_of_missionaries = 12}
+}
+	harmonization_speed = 3.96
+	papal_influence = 5.2
+}
+
+sob_confu_msn_rank_two_13 = {
+	potential = {    always = no
+			OR = { religion = confucianism religion = threeself religion =sob_catholic  religion =sob_reformed	religion = sob_orthodox 	religion = sob_coptic	religion = sob_mahayana	religion = sob_sunni religion =sob_shinto 		religion = sob_hinduism religion = sob_shamanism	religion = sob_anglican	}
+	num_of_missionaries = 12
+NOT = { num_of_missionaries = 13}
+
+	}
+
+		trigger = { harmony = 80   NOT = { harmony = 100} always = no
+num_of_missionaries = 12
+NOT = { num_of_missionaries = 13}
+}
+	harmonization_speed = 4.29
+	papal_influence = 5.2
+}
+
+sob_confu_msn_rank_two_14 = {
+	potential = {    always = no
+			OR = { religion = confucianism religion = threeself religion =sob_catholic  religion =sob_reformed	religion = sob_orthodox 	religion = sob_coptic	religion = sob_mahayana	religion = sob_sunni religion =sob_shinto 		religion = sob_hinduism religion = sob_shamanism	religion = sob_anglican	}
+	num_of_missionaries = 13
+NOT = { num_of_missionaries = 14}
+
+	}
+
+		trigger = { harmony = 80   NOT = { harmony = 100} always = no
+num_of_missionaries = 13
+NOT = { num_of_missionaries = 14}
+}
+	harmonization_speed = 4.62
+	papal_influence = 5.2
+}
+
+sob_confu_msn_rank_two_15 = {
+	potential = {    always = no
+			OR = { religion = confucianism religion = threeself religion =sob_catholic  religion =sob_reformed	religion = sob_orthodox 	religion = sob_coptic	religion = sob_mahayana	religion = sob_sunni religion =sob_shinto 		religion = sob_hinduism religion = sob_shamanism	religion = sob_anglican	}
+	num_of_missionaries = 14
+NOT = { num_of_missionaries = 15}
+
+	}
+
+		trigger = { harmony = 80   NOT = { harmony = 100} always = no
+num_of_missionaries = 14
+NOT = { num_of_missionaries = 15}
+}
+	harmonization_speed = 4.95
+	papal_influence = 5.2
+}
+
+sob_confu_msn_rank_two_16 = {
+	potential = {    always = no
+			OR = { religion = confucianism religion = threeself religion =sob_catholic  religion =sob_reformed	religion = sob_orthodox 	religion = sob_coptic	religion = sob_mahayana	religion = sob_sunni religion =sob_shinto 		religion = sob_hinduism religion = sob_shamanism	religion = sob_anglican	}
+	num_of_missionaries = 15
+NOT = { num_of_missionaries = 16}
+
+	}
+
+		trigger = { harmony = 80   NOT = { harmony = 100} always = no
+num_of_missionaries = 15
+NOT = { num_of_missionaries = 16}
+}
+	harmonization_speed = 5.28
+	papal_influence = 5.2
+}
+
+sob_confu_msn_rank_two_17 = {
+	potential = {    always = no
+			OR = { religion = confucianism religion = threeself religion =sob_catholic  religion =sob_reformed	religion = sob_orthodox 	religion = sob_coptic	religion = sob_mahayana	religion = sob_sunni religion =sob_shinto 		religion = sob_hinduism religion = sob_shamanism	religion = sob_anglican	}
+	num_of_missionaries = 16
+NOT = { num_of_missionaries = 17}
+
+	}
+
+		trigger = { harmony = 80   NOT = { harmony = 100} always = no
+num_of_missionaries = 16
+NOT = { num_of_missionaries = 17}
+}
+	harmonization_speed = 5.61
+	papal_influence = 5.2
+}
+
+sob_confu_msn_rank_two_18 = {
+	potential = {    always = no
+			OR = { religion = confucianism religion = threeself religion =sob_catholic  religion =sob_reformed	religion = sob_orthodox 	religion = sob_coptic	religion = sob_mahayana	religion = sob_sunni religion =sob_shinto 		religion = sob_hinduism religion = sob_shamanism	religion = sob_anglican	}
+	num_of_missionaries = 17
+NOT = { num_of_missionaries = 18}
+
+	}
+
+		trigger = { harmony = 80   NOT = { harmony = 100} always = no
+num_of_missionaries = 17
+NOT = { num_of_missionaries = 18}
+}
+	harmonization_speed = 5.94
+	papal_influence = 5.2
+}
+
+sob_confu_msn_rank_two_19 = {
+	potential = {    always = no
+			OR = { religion = confucianism religion = threeself religion =sob_catholic  religion =sob_reformed	religion = sob_orthodox 	religion = sob_coptic	religion = sob_mahayana	religion = sob_sunni religion =sob_shinto 		religion = sob_hinduism religion = sob_shamanism	religion = sob_anglican	}
+	num_of_missionaries = 18
+NOT = { num_of_missionaries = 19}
+
+	}
+
+		trigger = { harmony = 80   NOT = { harmony = 100} always = no
+num_of_missionaries = 18
+NOT = { num_of_missionaries = 19}
+}
+	harmonization_speed = 6.27
+	papal_influence = 5.2
+}
+
+sob_confu_msn_rank_two_20 = {
+	potential = {    always = no
+			OR = { religion = confucianism religion = threeself religion =sob_catholic  religion =sob_reformed	religion = sob_orthodox 	religion = sob_coptic	religion = sob_mahayana	religion = sob_sunni religion =sob_shinto 		religion = sob_hinduism religion = sob_shamanism	religion = sob_anglican	}
+	num_of_missionaries = 19
+NOT = { num_of_missionaries = 20}
+
+	}
+
+		trigger = { harmony = 80   NOT = { harmony = 100} always = no
+num_of_missionaries = 19
+NOT = { num_of_missionaries = 20}
+}
+	harmonization_speed = 6.6
+	papal_influence = 5.2
+}
+
+sob_confu_msn_rank_two_21 = {
+	potential = {    always = no
+			OR = { religion = confucianism religion = threeself religion =sob_catholic  religion =sob_reformed	religion = sob_orthodox 	religion = sob_coptic	religion = sob_mahayana	religion = sob_sunni religion =sob_shinto 		religion = sob_hinduism religion = sob_shamanism	religion = sob_anglican	}
+	num_of_missionaries = 20
+NOT = { num_of_missionaries = 21}
+
+	}
+
+		trigger = { harmony = 80   NOT = { harmony = 100} always = no
+num_of_missionaries = 20
+NOT = { num_of_missionaries = 21}
+}
+	harmonization_speed = 6.93
+	papal_influence = 5.2
+}
+
+sob_confu_msn_rank_two_22 = {
+	potential = {    always = no
+			OR = { religion = confucianism religion = threeself religion =sob_catholic  religion =sob_reformed	religion = sob_orthodox 	religion = sob_coptic	religion = sob_mahayana	religion = sob_sunni religion =sob_shinto 		religion = sob_hinduism religion = sob_shamanism	religion = sob_anglican	}
+	num_of_missionaries = 21
+
+	}
+
+		trigger = { harmony = 80   NOT = { harmony = 100} always = no
+num_of_missionaries = 21
+}
+	harmonization_speed = 7.26
+	papal_influence = 5.2
+}

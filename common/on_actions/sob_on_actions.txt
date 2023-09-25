@@ -1,0 +1,2091 @@
+
+
+on_religion_change = {
+	if = {
+		limit = {
+			has_dlc = "Dharma"
+			has_reform = indian_sultanate_reform
+			NOT = { religion_group = muslim }
+		}
+		remove_government_reform = indian_sultanate_reform
+	}
+	else_if = {
+		limit = {
+			has_reform = indian_sultanate_reform
+			NOT = { religion_group = muslim }
+		}
+		set_legacy_government = despotic_monarchy
+	}
+
+	if = {
+		limit = {
+			has_reform = feudal_theocracy
+			NOT = { religion_group = muslim }
+			has_dlc = "Dharma"
+		}
+		remove_government_reform = feudal_theocracy
+	}
+	else_if = {
+		limit = {
+			has_reform = feudal_theocracy
+			NOT = { religion_group = muslim }
+		}
+		set_legacy_government = despotic_monarchy
+	}
+
+
+
+	if = {
+		limit = {
+			has_heir = yes
+		}
+		set_heir_religion = ROOT
+	}
+	if = {
+		limit = {
+			has_regency = no
+		}
+		set_ruler_religion = ROOT
+	}
+	if = {
+		limit = {
+			has_dlc = "Rights of Man"
+			has_consort = yes
+		}
+		set_consort_religion = ROOT
+	}
+	if = {
+		limit = {
+			NOT = { religion = orthodox }
+		}
+		every_known_country = {
+			limit = {
+				reverse_has_opinion_modifier = {
+					who = ROOT
+					modifier = closed_down_the_patriarchate
+				}
+			}
+			reverse_remove_opinion = {
+				who = ROOT
+				modifier = closed_down_the_patriarchate
+			}
+		}
+	}
+	if = {
+		limit = {
+			religion = catholic
+			has_ruler_flag = personal_catholic_sympathies
+		}
+		country_event = { id = protestantism_events.19 }
+	}
+	if = {
+		limit = {
+			religion = protestant
+		}
+		set_country_flag = converted_to_protestantism
+	}
+	events = {
+		muslim_school_events.20 #Pick School
+		propagate_religion_events.7 #Propagated Country is now Muslim
+	}
+	
+	if = {
+	limit = { OR = {religion = confucianism  religion = threeself}}
+	swap_non_generic_missions = yes
+	if = {
+		limit = {
+		religion = confucianism  
+		}
+		every_owned_province = {
+		limit = {religion = threeself}
+		change_religion = confucianism
+	
+		}
+					every_subject_country = {
+	  limit = { religion = threeself
+	  NOT = {is_subject_of_type  = tributary_state}}
+					every_owned_province = {
+		limit = {religion = threeself}
+		change_religion = confucianism
+	
+		}
+		change_religion = confucianism
+		}
+	}
+		if = {
+		limit = {
+		religion = threeself
+		}
+		every_owned_province = {
+		limit = {religion = confucianism}
+		change_religion = threeself
+		
+		}
+			every_subject_country = {
+	  limit = { religion = confucianism
+	  NOT = {is_subject_of_type  = tributary_state}}
+					every_owned_province = {
+		limit = {religion = confucianism}
+		change_religion = threeself
+	
+		}
+		change_religion = threeself
+		}
+	}
+
+	
+	}
+			if = {
+		limit = {
+	 		OR = { religion = confucianism religion = threeself religion =sob_catholic  religion =sob_reformed	religion = sob_orthodox 	religion = sob_coptic	religion = sob_mahayana	religion = sob_sunni religion =sob_shinto 		religion = sob_hinduism religion = sob_shamanism	religion = sob_anglican	}
+	   has_country_flag = sob_new_national_religious_mission_1
+		}
+		every_owned_province = {
+		limit = {religion = confucianism
+		OR = {
+		superregion = china_superregion
+		OR = {culture_group = east_asian  culture_group = chinese_group }
+		}
+		}
+		change_religion = ROOT
+		
+		}
+			every_subject_country = {
+	  limit = { religion = confucianism
+	  NOT = {is_subject_of_type  = tributary_state}}
+					every_owned_province = {
+		limit = {religion = confucianism}
+		change_religion = ROOT
+	
+		}
+		change_religion = ROOT
+		}
+	}	
+}
+
+
+
+on_siege_lost_province =  {
+	events = {
+		war_of_the_roses.10		# Lancaster Stronghold
+		war_of_the_roses.11		# York Stronghold
+		french_wars_of_religion.7 #Ravening Religious Fanatics
+		french_wars_of_religion.9 #french_wars_of_religion.9
+	}
+	  	  	if = {
+          limit = {
+		  FROM = {
+		  has_country_flag = sob_waizu_dailudang_celestial_empire
+		  }
+		ROOT = { has_province_modifier = sob_shishen_land_on
+		  owner = { has_estate = estate_sobshishen
+		  OR= {
+		  		AND ={
+		ai = yes
+		NOT = { imperial_mandate = 30}
+		}
+			NOT = {		estate_loyalty = {
+						estate = estate_sobshishen
+						loyalty = 40
+					}
+		}
+		  
+		  }
+		  
+		  }
+		}
+		
+		  }
+		  set_province_flag = sob_month_on_province_1
+		  }
+		  
+		  			  
+	 if = {
+	 limit = { culture_group  = east_asian
+	            from = {
+             OR = {culture_group = east_asian  culture_group = chinese_group }
+                }
+	 }
+
+	  if = {
+          limit = {
+            from = {
+             OR = {culture_group = east_asian  culture_group = chinese_group }
+			 OR = {
+			 imperial_mandate = 60
+			 tag = MNG
+			 }
+                }
+				root = {
+                				
+				OR = {culture_group = east_asian  culture_group = chinese_group }
+				owner = {
+			     OR = {
+			  tag = CSH
+			  tag = CXI
+		     	  }
+			
+				
+				
+				}
+				}
+              }
+            root = {
+				add_core = from
+              cede_province = from
+		  
+         }
+      }
+	  
+	  	  	if = {
+          limit = {
+		  has_global_flag = sob_month_on
+		  OR = {culture_group = east_asian  culture_group = chinese_group }
+		  FROM = {
+		  OR = {culture_group = east_asian  culture_group = chinese_group }
+		  }
+		  owner = {NOT = { OR = {culture_group = east_asian culture_group = chinese_group}}}
+		  }
+		  set_province_flag = sob_month_on_province_1
+		  }
+	  	if = {
+          limit = {
+		  		  NOT = { has_global_flag = sob_all_mode_off}
+				   NOT = { has_global_flag = sob_month_on}
+		  OR = {
+		  AND = {
+		  owner = {
+	NOT = {	  war_score_against = {
+	who = FROM
+	value = -49
+          }
+		  }
+		  
+		  }
+		  has_global_flag = sob_40_on
+		  
+		  }
+  has_global_flag = sob_liji_on
+		  
+		  
+		  
+		  }
+            from = {
+             OR = {culture_group = east_asian  culture_group = chinese_group }
+                }
+				root = {
+
+				OR = {culture_group = east_asian  culture_group = chinese_group }
+
+				owner = {
+				ROOT = {
+				                						NOT = {fort_level = 2}
+								NOT = { any_neighbor_province = {
+				fort_level = 2
+				owned_by =  PREVPREV
+				}}
+						
+				
+				}
+			
+				NOT ={ OR = {culture_group = east_asian  culture_group = chinese_group } }
+
+				}
+				}
+              }
+			  from ={
+			  if = {
+			  limit = {NOT = {manpower_percentage = 1}}
+			  	add_manpower = 2
+				
+				}
+           add_mandate = 5
+		   add_prestige = 2
+		   add_war_exhaustion = -1
+			  }
+            ROOT = {
+
+				  remove_core = owner
+				  add_core = from
+          cede_province = from
+		 
+		  
+         }
+      }
+	if = {
+          limit = {
+		 		  		  NOT = { has_global_flag= sob_all_mode_off}
+						   NOT = { has_global_flag = sob_month_on}
+		  OR = {
+		  AND = {
+		  owner = {
+	NOT = {	  war_score_against = {
+	who = FROM
+	value = -49
+          }
+		  }
+		  
+		  }
+		  has_global_flag = sob_40_on
+		  
+		  }
+  has_global_flag= sob_liji_on
+		  
+		  
+		  
+		  }
+            from = {
+             OR = {culture_group = east_asian  culture_group = chinese_group }
+              
+                }
+
+
+				owner = {
+															ROOT = {
+												fort_level = 2
+												OR = {
+					OR = {culture_group = east_asian  culture_group = chinese_group }
+ any_neighbor_province = {
+	OR = {culture_group = east_asian  culture_group = chinese_group }
+				owned_by = PREVPREV
+				}
+				
+				}
+				}
+				NOT ={ OR = {culture_group = east_asian  culture_group = chinese_group } }
+				
+
+				
+				}
+              }
+			  from ={
+			  if = {
+			  limit = {NOT = {manpower_percentage = 1}}
+			  	add_manpower = 2
+				
+				}
+           add_mandate = 5
+		   add_prestige = 2
+		   add_war_exhaustion = -1
+			  }
+            root = {
+		         owner = {add_war_exhaustion = 0.5
+	
+				 }
+every_neighbor_province  = {
+limit = { owned_by = owner 
+OR = {culture_group = east_asian  culture_group = chinese_group }
+NOT = {fort_level = 2}
+controlled_by = from
+}
+				  remove_core = owner
+				  add_core = from
+          cede_province = from
+}
+				  remove_core = owner
+				  add_core = from
+          cede_province = from
+		 
+		  
+         }
+      }
+	  
+	  	if = {
+          limit = {
+            from = {
+             OR = {culture_group = east_asian  culture_group = chinese_group }
+                }
+				root = {
+                				
+				OR = {culture_group = east_asian  culture_group = chinese_group }
+				controller  = {
+			    NOT = { owns = ROOT}
+				
+				NOT ={ OR = {culture_group = east_asian  culture_group = chinese_group } }
+				
+				
+				}
+				}
+              }
+			  from ={
+			  			  if = {
+			  limit = {NOT = {manpower_percentage = 1}}
+			  	add_manpower = 2
+				
+				}
+           add_mandate = 2	 
+		   add_prestige = 2
+		   add_war_exhaustion = -1
+			  }
+      }
+		
+	  }
+      
+}
+
+
+
+
+# province
+# FROM = old owner
+on_province_owner_change = {
+
+if = {
+limit ={
+FROM = {
+OR = {culture_group = east_asian  culture_group = chinese_group }
+}
+owner = {
+is_subject = no
+NOT = { num_of_cities = 2}
+OR = {
+		has_reform = sob_jiaoqu_city
+		has_reform = sob_jiaoqu_con_reform
+}
+}
+}
+owner = {
+FROM = {
+	  			create_subject = {
+		subject_type = sob_jiaoqu_vassal
+		subject = PREV}
+}
+}
+}
+
+
+
+
+
+      if = {
+	  limit = { 			OR = {
+			religion = buddhism_confu
+			religion = vajrayana_confu
+			religion = mahayana_confu
+					religion  = shiite_confu
+			religion  = ibadi_confu
+				religion  = shamanism_confu
+					religion  = totemism_confu
+					 religion  = inti_confu
+						religion  = nahuatl_confu
+						 religion  = mesoamerican_religion_confu
+							  religion  = norse_pagan_reformed_confu
+							    religion  = sikhism_confu
+											religion = anglican_confu
+													religion =sob_catholic 
+															religion =sob_reformed
+																	religion = sob_orthodox
+																			religion = sob_coptic
+																					religion = sob_mahayana
+																							religion = sob_sunni
+																									religion =sob_shinto 
+																											religion = sob_hinduism 
+																													religion = sob_shamanism
+																															religion = sob_anglican
+
+											
+											
+			religion = protestant_confu
+			religion = reformed_confu
+			religion = orthodox_confu
+			religion = coptic_confu
+			religion = sob_dreamtime_confu
+			religion = sob_hussite_confu
+			}}
+		   if = {
+		  limit = {
+			owner = {
+			
+			NOT = { OR = {religion = confucianism
+			religion = threeself
+			AND = {
+			religion = ROOT 
+			OR = {
+													religion =sob_catholic 
+															religion =sob_reformed
+																	religion = sob_orthodox
+																			religion = sob_coptic
+																					religion = sob_mahayana
+																							religion = sob_sunni
+																									religion =sob_shinto 
+																											religion = sob_hinduism 
+																													religion = sob_shamanism
+																															religion = sob_anglican
+			}
+			
+			}
+			}}
+
+			
+			
+			
+			
+			
+			
+			}
+
+		  }
+		  ROOT = {
+		   if = {
+		   limit = {religion = mahayana_confu}
+		    change_religion = mahayana
+		   }
+         		   if = {
+		   limit = {religion = buddhism_confu}
+		    change_religion = buddhism
+		   }
+		   		   if = {
+		   limit = {religion = vajrayana_confu}
+		    change_religion = vajrayana
+		   }
+
+		   		   if = {
+		   limit = {religion = shiite_confu}
+		    change_religion = shiite
+		   }
+         		   if = {
+		   limit = {religion = ibadi_confu}
+		    change_religion = ibadi
+		   }
+		   		   if = {
+		   limit = {religion = shamanism_confu}
+		    change_religion = shamanism
+		   }
+		   		   if = {
+		   limit = {religion = totemism_confu}
+		    change_religion = totemism
+		   }
+         		   if = {
+		   limit = {religion = inti_confu}
+		    change_religion = inti
+		   }
+		   		   if = {
+		   limit = {religion = nahuatl_confu}
+		    change_religion = nahuatl
+		   }
+		   		   if = {
+		   limit = {religion = mesoamerican_religion_confu}
+		    change_religion = mesoamerican_religion
+		   }
+         		   if = {
+		   limit = {religion = norse_pagan_reformed_confu}
+		    change_religion =norse_pagan_reformed
+		   }
+		   		   if = {
+		   limit = {religion =  sikhism_confu}
+		    change_religion =  sikhism
+		   }
+         		   if = {
+		   limit = {religion = anglican_confu}
+		    change_religion = anglican
+		   }
+		   		   if = {
+		   limit = {religion = protestant_confu}
+		    change_religion = protestant
+		   }
+		   		   if = {
+		   limit = {religion = reformed_confu}
+		    change_religion = reformed
+		   }
+		   		   if = {
+		   limit = {religion = orthodox_confu}
+		    change_religion = orthodox
+		   }
+	   		   if = {
+		   limit = {religion = coptic_confu}
+		    change_religion = coptic
+		   }
+		   	   		   if = {
+		   limit = {religion = sob_hussite_confu}
+		    change_religion =hussite
+		   }
+		   	   		   if = {
+		   limit = {religion = sob_dreamtime_confu}
+		    change_religion = dreamtime
+		   }
+		
+		
+		
+		
+		         		   if = {
+		   limit = {religion = sob_anglican}
+		    change_religion = anglican
+		   }
+
+		   		   if = {
+		   limit = {religion = sob_reformed}
+		    change_religion = reformed
+		   }
+		   		   if = {
+		   limit = {religion = sob_orthodox}
+		    change_religion = orthodox
+		   }
+	   		   if = {
+		   limit = {religion = sob_coptic}
+		    change_religion = coptic
+		   }
+		   
+		   
+		    if = {
+		   limit = {religion = sob_mahayana}
+		    change_religion = mahayana
+		   }
+         		   if = {
+		   limit = {religion = sob_sunni}
+		    change_religion = sunni
+		   }
+		   		   if = {
+		   limit = {religion = sob_shinto }
+		    change_religion = shinto 
+		   }
+
+		   		   if = {
+		   limit = {religion = sob_hinduism }
+		    change_religion = hinduism 
+		   }
+         		   if = {
+		   limit = {religion =  sob_shamanism}
+		    change_religion =  shamanism
+		   }
+
+		   
+		   
+		
+}
+		  }
+
+		   if = {
+		  limit = {
+			owner = {
+			
+		 OR = {religion = confucianism
+			religion = threeself
+
+		
+													religion =sob_catholic 
+															religion =sob_reformed
+																	religion = sob_orthodox
+																			religion = sob_coptic
+																					religion = sob_mahayana
+																							religion = sob_sunni
+																									religion =sob_shinto 
+																											religion = sob_hinduism 
+																													religion = sob_shamanism
+																															religion = sob_anglican
+			}
+			
+				OR = {
+					has_harmonized_with  = sob_dreamtime_confu_group
+			has_harmonized_with  = sob_hussite_confu_group
+					has_harmonized_with  = shiite_confu_group
+			has_harmonized_with  = ibadi_confu_group
+				has_harmonized_with  = shamanism_confu_group
+					has_harmonized_with  = totemism_confu_group
+					 has_harmonized_with  = inti_confu_group
+						has_harmonized_with  = nahuatl_confu_group
+						 has_harmonized_with  = mesoamerican_has_harmonized_with_confu_group
+							  has_harmonized_with  = norse_pagan_reformed_confu_group
+							    has_harmonized_with  = sikhism_confu_group
+											has_harmonized_with = anglican_confu_group				
+			has_harmonized_with = protestant_confu_group
+			has_harmonized_with = reformed_confu_group
+			has_harmonized_with = orthodox_confu_group
+			has_harmonized_with = coptic_confu_group
+			}
+			
+			
+			}
+		
+
+			
+			
+			
+			
+			
+			
+		
+
+		  }
+		  ROOT = {
+		   if = {
+		   limit = {
+		   owner = { has_harmonized_with = mahayana_confu_group}
+		   
+		   religion = mahayana_confu
+		   
+		   
+		   }
+		    change_religion = mahayana
+		   }
+         		   if = {
+		  		   limit = {
+		   owner = { has_harmonized_with = buddhism_confu_group}
+		   religion = buddhism_confu}
+		    change_religion = buddhism
+		   }
+		   		   if = {
+		   		   limit = {
+		   owner = { has_harmonized_with = vajrayana_confu_group}
+		   religion = vajrayana_confu}
+		    change_religion = vajrayana
+		   }
+
+		   		   if = {
+		 		   limit = {
+		   owner = { has_harmonized_with = shiite_confu_group}
+		   religion = shiite_confu}
+		    change_religion = shiite
+		   }
+         		   if = {
+		   		   limit = {
+		   owner = { has_harmonized_with = ibadi_confu_group}
+		   religion = ibadi_confu}
+		    change_religion = ibadi
+		   }
+		   		   if = {
+		   		   limit = {
+		   owner = { has_harmonized_with = shamanism_confu_group}
+		   religion = shamanism_confu}
+		    change_religion = shamanism
+		   }
+		   		   if = {
+		   		   limit = {
+		   owner = { has_harmonized_with = totemism_confu_group}
+		   religion = totemism_confu}
+		    change_religion = totemism
+		   }
+         		   if = {
+		   		   limit = {
+		   owner = { has_harmonized_with = inti_confu_group}
+		   religion = inti_confu}
+		    change_religion = inti
+		   }
+		   		   if = {
+		  		   limit = {
+		   owner = { has_harmonized_with = nahuatl_confu_group}
+		   religion = nahuatl_confu}
+		    change_religion = nahuatl
+		   }
+		   		   if = {
+		   		   limit = {
+		   owner = { has_harmonized_with = mesoamerican_religion_confu_group}
+		   religion = mesoamerican_religion_confu}
+		    change_religion = mesoamerican_religion
+		   }
+         		   if = {
+		   		   limit = {
+		   owner = { has_harmonized_with = norse_pagan_reformed_confu_group}
+		   religion = norse_pagan_reformed_confu}
+		    change_religion =norse_pagan_reformed
+		   }
+		   		   if = {
+		  		   limit = {
+		   owner = { has_harmonized_with = sikhism_confu_group}
+		   religion =  sikhism_confu}
+		    change_religion =  sikhism
+		   }
+         		   if = {
+		  		   limit = {
+		   owner = { has_harmonized_with = anglican_confu_group}
+		   religion = anglican_confu}
+		    change_religion = anglican
+		   }
+		   		   if = {
+		   		   limit = {
+		   owner = { has_harmonized_with = protestant_confu_group}
+		   religion = protestant_confu}
+		    change_religion = protestant
+		   }
+		   		   if = {
+		 		   limit = {
+		   owner = { has_harmonized_with = reformed_confu_group}
+		   religion = reformed_confu}
+		    change_religion = reformed
+		   }
+		   		   if = {
+		  		   limit = {
+		   owner = { has_harmonized_with =orthodox_confu_group}
+		   religion = orthodox_confu}
+		    change_religion = orthodox
+		   }
+	   		   if = {
+				   limit = {
+		   owner = { has_harmonized_with = coptic_confu_group}
+		   religion = coptic_confu}
+		    change_religion = coptic
+		   }
+			   		   if = {
+				   limit = {
+		   owner = { has_harmonized_with = sob_dreamtime_confu_group}
+		   religion = sob_dreamtime_confu}
+		    change_religion =dreamtime
+		   }
+		   	   		   if = {
+				   limit = {
+		   owner = { has_harmonized_with = sob_hussite_confu_group}
+		   religion = sob_hussite_confu}
+		    change_religion = hussite
+		   }
+		
+	
+
+		   
+		   
+		
+}
+		  }  		  
+		  }
+	if = {
+          limit = {
+		  NOT = { area = ordos_area}
+		  owner = {
+		  ai = no
+		  is_nomad = no
+		  }
+		 
+		  has_global_flag = sob_enable_new_one
+		 NOT = { owner  ={culture_group = ROOT }}
+		 NOT = { OR = {culture_group = east_asian  culture_group = chinese_group }}
+            FROM = {
+         is_nomad = yes
+                }
+				}
+				if = {
+				limit = { exists = FROM}
+		  FROM = {
+		  random_owned_province = {
+		  add_base_tax = 1
+		  add_base_production = 1
+		  add_base_manpower = 1
+		  }
+		  }
+		  }
+		  	add_permanent_province_modifier = {
+					name = "sob_nomad_new_land"
+					duration = 7200
+				}
+        cede_province = xxx
+		
+      }
+	if = {
+          limit = {
+		  
+		  owner  ={OR = {culture_group = east_asian  culture_group = chinese_group } }
+		  OR = {culture_group = east_asian  culture_group = chinese_group }
+            from = {
+           NOT = {   OR = {culture_group = east_asian  culture_group = chinese_group }}
+                }
+				}
+            from = {
+		
+         add_war_exhaustion = 0.25
+		  
+         }
+		 owner = { 
+					  if = {
+			  limit = {NOT = {manpower_percentage = 1}}
+			  	add_manpower = 5
+				
+				}
+         add_mandate = 6	 
+		 add_prestige = 2
+		 add_war_exhaustion = -1
+		 }
+      }
+	events = {
+		japan.1
+	}
+	
+	if = {
+		limit = {
+			OR = {
+				has_province_modifier = wine_bonus_prod
+				has_province_modifier = grain_bonus_prod
+			}
+			FROM = { has_reform = monastic_breweries_reform }
+			NOT = { owner = { has_reform = monastic_breweries_reform } }
+		}
+		remove_province_modifier = wine_bonus_prod
+		remove_province_modifier = grain_bonus_prod
+	}
+	
+	if = {
+		limit = {
+			NOT = {
+				OR = {
+					has_province_modifier = wine_bonus_prod
+					has_province_modifier = grain_bonus_prod
+				}
+			}
+			owner = { has_reform = monastic_breweries_reform }
+			NOT = { FROM = { has_reform = monastic_breweries_reform } }
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					trade_goods = wine
+				}
+				add_province_modifier = { 
+					name = wine_bonus_prod
+					duration = -1
+					hidden = yes
+				}
+			}
+			if = {
+				limit = {
+					trade_goods = grain
+				}
+				add_province_modifier = { 
+					name = grain_bonus_prod
+					duration = -1
+					hidden = yes
+				}
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			owned_by = SRU
+			exists = ARA
+		}
+		ARA = {
+			set_country_flag = ARA_defeat_saruhan
+		}
+	}
+	if = {
+		limit = {
+			NOT = { owner = { religion_group = muslim } }
+			has_province_modifier = sufi_shrine
+		}
+		remove_province_modifier = sufi_shrine
+	}
+	on_province_owner_change_estate_privileges_effect = yes
+
+	if = {
+		limit = {
+			owned_by = SRU
+			exists = ARA
+		}
+		ARA = {
+			set_country_flag = ARA_defeat_saruhan
+		}
+		
+	}
+	if = {
+	limit = { owner = {
+	OR = { religion = confucianism
+	religion = threeself
+														religion =sob_catholic 
+															religion =sob_reformed
+																	religion = sob_orthodox
+																			religion = sob_coptic
+																					religion = sob_mahayana
+																							religion = sob_sunni
+																									religion =sob_shinto 
+																											religion = sob_hinduism 
+																													religion = sob_shamanism
+																															religion = sob_anglican
+	
+	
+	
+	
+	
+	
+	}
+	
+	}}
+	 if = {
+		  limit = {
+		  
+			owner = { 
+			
+			OR = {
+			AND = {
+			has_harmonized_with = ROOT
+			OR = {
+			religion = confucianism
+			religion = threeself
+											
+																					religion = sob_mahayana
+																							religion = sob_sunni
+																									religion =sob_shinto 
+																											religion = sob_hinduism 
+																													religion = sob_shamanism
+															
+			
+			}
+			}
+			AND = {
+			
+			OR = {
+			religion = threeself
+																religion =sob_catholic 
+															religion =sob_reformed
+																	religion = sob_orthodox
+																			religion = sob_coptic
+																				religion = sob_anglican
+
+			}
+			has_harmonized_with = christian
+			}
+			}
+			}
+			religion_group = christian
+			OR = {
+			religion = catholic
+			religion = anglican
+			religion = protestant
+			religion = reformed
+			religion = orthodox
+			religion = coptic
+			religion = hussite
+			}
+		  }
+		   ROOT = {
+		   if = {
+		   limit = {religion = catholic
+		   		   			 OR = {
+			 owner = {
+			 OR = {
+			has_country_flag = sob_religion_law_religion_off
+			 }
+			 OR = {
+			 has_country_flag = sob_religious_ideas_off
+			 			 full_idea_group = religious_ideas
+			  full_idea_group = sob_religious_ideas
+			  }
+			 }
+
+			  has_state_edict = sob_force_harmonized
+			  
+			 }
+		   
+		   }
+		    change_religion = owner
+
+				if = {
+	limit = { 
+	development = 5
+	NOT = { development = 10}}
+	owner = {
+	add_papal_influence = 5
+	}
+	}
+		if = {
+	limit = { 
+	development = 10
+	NOT = { development = 20}}
+		owner = {
+	add_papal_influence = 10
+	}
+	}
+			if = {
+	limit = { 
+	development = 20
+	NOT = { development = 30}}
+		owner = {
+	add_papal_influence = 15
+	}
+	}
+				if = {
+	limit = { 
+	development = 30
+}
+	owner = {
+	add_papal_influence = 20
+	}
+	}
+		if = {
+	limit = { 
+
+	NOT = { development = 5}}
+		owner = {
+	add_papal_influence = 2.5
+	}
+	}
+		   }
+   if ={
+		   limit = {religion = anglican
+		   	         owner  = {
+			 has_harmonized_with = ROOT
+			NOT = { has_harmonized_with = anglican_confu_group }
+			 }}
+		    change_religion = anglican_confu
+		   }
+		   		   if ={
+		   limit = {religion = protestant
+		   	         owner  = {
+			 has_harmonized_with = ROOT
+			 NOT = { has_harmonized_with = protestant_confu_group }
+			 
+			 }}
+		    change_religion = protestant_confu
+		   }
+		   		   if ={
+		   limit = {religion = reformed
+		   	         owner  = {
+			 has_harmonized_with = ROOT
+			  NOT = { has_harmonized_with = reformed_confu_group }
+			 }}
+		    change_religion = reformed_confu
+		   }
+		   	   if ={
+		   limit = {religion = orthodox
+		   	         owner  = {
+			 has_harmonized_with = ROOT
+			 NOT = { has_harmonized_with = orthodox_confu_group }
+			 }}
+		    change_religion = orthodox_confu
+		   }
+	   		    if ={
+		   limit = {religion = coptic
+		   	         owner  = {
+			 has_harmonized_with = ROOT
+			 NOT = { has_harmonized_with = coptic_confu_group }
+			 }}
+		    change_religion = coptic_confu
+		   }
+		   	   		    if ={
+		   limit = {religion = hussite
+		   	         owner  = {
+			 has_harmonized_with = ROOT
+			 NOT = { has_harmonized_with = sob_hussite_confu_group }
+			 }}
+		    change_religion = sob_hussite_confu
+		   }
+		
+         }
+		  }  
+		  
+		  ###CA
+		  				 if = {
+		  limit = {
+		   			 OR = {
+			 owner = {
+			 			 OR = {
+			has_country_flag = sob_religion_law_religion_off
+			 }
+			 OR = {
+			 has_country_flag = sob_religious_ideas_off
+			 			 full_idea_group = religious_ideas
+			  full_idea_group = sob_religious_ideas
+			  }
+			 }
+
+			  has_state_edict = sob_force_harmonized
+			  
+			 }
+			owner = { 
+			has_harmonized_with = ROOT
+			religion = threeself
+			}
+			religion_group = christian
+
+		  }
+		   ROOT = {
+		   if = {
+		   limit = {religion_group = christian}
+		    change_religion = owner
+						
+				if = {
+	limit = { 
+	development = 5
+	NOT = { development = 10}}
+	owner = {
+	add_papal_influence = 5
+	}
+	}
+		if = {
+	limit = { 
+	development = 10
+	NOT = { development = 20}}
+		owner = {
+	add_papal_influence = 10
+	}
+	}
+			if = {
+	limit = { 
+	development = 20
+	NOT = { development = 30}}
+		owner = {
+	add_papal_influence = 15
+	}
+	}
+				if = {
+	limit = { 
+	development = 30
+}
+	owner = {
+	add_papal_influence = 20
+	}
+	}
+		if = {
+	limit = { 
+
+	NOT = { development = 5}}
+		owner = {
+	add_papal_influence = 2.5
+	}
+	}
+		   }
+
+		
+         }
+		  }  
+		  		  				 if = {
+		  limit = {
+			owner = { 
+			OR = {
+			religion = threeself
+																			religion =sob_catholic 
+															religion =sob_reformed
+																	religion = sob_orthodox
+																			religion = sob_coptic
+																				religion =sob_anglican
+			}
+			}
+			religion_group = christian
+						NOT = {
+			religion = catholic
+			religion = anglican
+			religion = protestant
+			religion = reformed
+			religion = orthodox
+			religion = coptic
+			religion = hussite
+			}
+
+		  }
+		   ROOT = {
+		   if = {
+		   limit = {religion_group = christian}
+		    change_religion = owner
+				if = {
+	limit = { 
+	development = 5
+	NOT = { development = 10}}
+	owner = {
+	add_papal_influence = 5
+	}
+	}
+		if = {
+	limit = { 
+	development = 10
+	NOT = { development = 20}}
+		owner = {
+	add_papal_influence = 10
+	}
+	}
+			if = {
+	limit = { 
+	development = 20
+	NOT = { development = 30}}
+		owner = {
+	add_papal_influence = 15
+	}
+	}
+				if = {
+	limit = { 
+	development = 30
+}
+	owner = {
+	add_papal_influence = 20
+	}
+	}
+		if = {
+	limit = { 
+
+	NOT = { development = 5}}
+		owner = {
+	add_papal_influence = 2.5
+	}
+	}
+		   }
+
+		
+         }
+		  }  
+		  
+		  
+		  
+		  ###BUDD
+		  
+		   if = {
+		  limit = {
+		  
+			owner = { 
+			
+			OR = {
+			AND = {
+			has_harmonized_with = ROOT
+			OR= {
+			religion = confucianism
+			religion = threeself
+														religion =sob_catholic 
+															religion =sob_reformed
+																	religion = sob_orthodox
+																			religion = sob_coptic
+																					religion = sob_mahayana
+																							religion = sob_sunni
+																									religion =sob_shinto 
+			
+																													religion = sob_shamanism
+																															religion = sob_anglican
+			
+			}
+			
+			
+			}
+			AND = {
+			
+			religion = sob_hinduism 
+			has_harmonized_with = dharmic
+			}
+			}
+			}
+			religion_group = dharmic
+			OR = {
+			religion =sikhism
+			religion = hinduism 
+			}
+		  }
+		   ROOT = {
+		   if = {
+		   limit = {religion = hinduism
+		   		   			 OR = {
+			 owner = {
+			 			 OR = {
+			has_country_flag = sob_religion_law_religion_off
+			 }
+			 OR = {
+			 has_country_flag = sob_religious_ideas_off
+			 			 full_idea_group = religious_ideas
+			  full_idea_group = sob_religious_ideas
+			  }
+			 }
+
+			  has_state_edict = sob_force_harmonized
+			  
+			 }
+		   
+		   }
+		    change_religion = owner
+						
+				if = {
+	limit = { 
+	development = 5
+	NOT = { development = 10}}
+	owner = {
+	add_papal_influence = 5
+	}
+	}
+		if = {
+	limit = { 
+	development = 10
+	NOT = { development = 20}}
+		owner = {
+	add_papal_influence = 10
+	}
+	}
+			if = {
+	limit = { 
+	development = 20
+	NOT = { development = 30}}
+		owner = {
+	add_papal_influence = 15
+	}
+	}
+				if = {
+	limit = { 
+	development = 30
+}
+	owner = {
+	add_papal_influence = 20
+	}
+	}
+		if = {
+	limit = { 
+
+	NOT = { development = 5}}
+		owner = {
+	add_papal_influence = 2.5
+	}
+	}
+		   }
+         		   if = {
+		   limit = {religion = sikhism}
+		    change_religion = sikhism_confu
+		   }
+		   		 
+		
+         }
+		  }  
+		  				 if = {
+		  limit = {
+		   			 OR = {
+			 owner = {
+			 			 OR = {
+			has_country_flag = sob_religion_law_religion_off
+			 }
+			 OR = {
+			 has_country_flag = sob_religious_ideas_off
+			 			 full_idea_group = religious_ideas
+			  full_idea_group = sob_religious_ideas
+			  }
+			 }
+
+			  has_state_edict = sob_force_harmonized
+			  
+			 }
+			owner = { 
+			has_harmonized_with = ROOT
+			religion = sob_hinduism 
+			}
+			religion_group = dharmic
+
+		  }
+		   ROOT = {
+		   if = {
+		   limit = {religion_group = dharmic}
+		    change_religion = owner
+						
+				if = {
+	limit = { 
+	development = 5
+	NOT = { development = 10}}
+	owner = {
+	add_papal_influence = 5
+	}
+	}
+		if = {
+	limit = { 
+	development = 10
+	NOT = { development = 20}}
+		owner = {
+	add_papal_influence = 10
+	}
+	}
+			if = {
+	limit = { 
+	development = 20
+	NOT = { development = 30}}
+		owner = {
+	add_papal_influence = 15
+	}
+	}
+				if = {
+	limit = { 
+	development = 30
+}
+	owner = {
+	add_papal_influence = 20
+	}
+	}
+		if = {
+	limit = { 
+
+	NOT = { development = 5}}
+		owner = {
+	add_papal_influence = 2.5
+	}
+	}
+		   }
+
+		
+         }
+		  }  
+		  		  				 if = {
+		  limit = {
+			owner = { 
+			religion = sob_hinduism 
+			}
+			religion_group = dharmic
+						NOT = {
+			religion = hinduism 
+			religion = sikhism
+			}
+
+		  }
+		   ROOT = {
+		   if = {
+		   limit = {religion_group = dharmic}
+		    change_religion = owner
+						
+				if = {
+	limit = { 
+	development = 5
+	NOT = { development = 10}}
+	owner = {
+	add_papal_influence = 5
+	}
+	}
+		if = {
+	limit = { 
+	development = 10
+	NOT = { development = 20}}
+		owner = {
+	add_papal_influence = 10
+	}
+	}
+			if = {
+	limit = { 
+	development = 20
+	NOT = { development = 30}}
+		owner = {
+	add_papal_influence = 15
+	}
+	}
+				if = {
+	limit = { 
+	development = 30
+}
+	owner = {
+	add_papal_influence = 20
+	}
+	}
+		if = {
+	limit = { 
+
+	NOT = { development = 5}}
+		owner = {
+	add_papal_influence = 2.5
+	}
+	}
+		   }
+
+		
+         }
+		  } 
+		  
+		  ######M
+		  
+		  
+		  
+		  		   if = {
+		  limit = {
+		  
+			owner = { 
+			
+			OR = {
+			AND = {
+			has_harmonized_with = ROOT
+			OR = {
+			religion = confucianism
+			religion = threeself
+														religion =sob_catholic 
+															religion =sob_reformed
+																	religion = sob_orthodox
+																			religion = sob_coptic
+																					religion = sob_mahayana
+																									religion =sob_shinto 
+																											religion = sob_hinduism 
+																													religion = sob_shamanism
+																															religion = sob_anglican
+			
+			}
+			}
+			AND = {
+			
+			religion = sob_hinduism 
+			has_harmonized_with = dharmic
+			}
+			}
+			}
+			religion_group = dharmic
+			OR = {
+			religion =sikhism
+			religion = hinduism 
+			}
+		  }
+		   ROOT = {
+		   if = {
+		   limit = {religion = hinduism
+		   		   			 OR = {
+			 owner = {
+			 			 OR = {
+			has_country_flag = sob_religion_law_religion_off
+			 }
+			 OR = {
+			 has_country_flag = sob_religious_ideas_off
+			 			 full_idea_group = religious_ideas
+			  full_idea_group = sob_religious_ideas
+			  }
+			 }
+
+			  has_state_edict = sob_force_harmonized
+			  
+			 }
+		   
+		   }
+		    change_religion = owner
+						
+				if = {
+	limit = { 
+	development = 5
+	NOT = { development = 10}}
+	owner = {
+	add_papal_influence = 5
+	}
+	}
+		if = {
+	limit = { 
+	development = 10
+	NOT = { development = 20}}
+		owner = {
+	add_papal_influence = 10
+	}
+	}
+			if = {
+	limit = { 
+	development = 20
+	NOT = { development = 30}}
+		owner = {
+	add_papal_influence = 15
+	}
+	}
+				if = {
+	limit = { 
+	development = 30
+}
+	owner = {
+	add_papal_influence = 20
+	}
+	}
+		if = {
+	limit = { 
+
+	NOT = { development = 5}}
+		owner = {
+	add_papal_influence = 2.5
+	}
+	}
+		   }
+         		   if = {
+		   limit = {religion = sikhism}
+		    change_religion = sikhism_confu
+		   }
+		   		 
+		
+         }
+		  }  
+		  				 if = {
+		  limit = {
+		   			 OR = {
+			 owner = {
+			 			 OR = {
+			has_country_flag = sob_religion_law_religion_off
+			 }
+			 OR = {
+			 has_country_flag = sob_religious_ideas_off
+			 			 full_idea_group = religious_ideas
+			  full_idea_group = sob_religious_ideas
+			  }
+			 }
+
+			  has_state_edict = sob_force_harmonized
+			  
+			 }
+			owner = { 
+			has_harmonized_with = ROOT
+			religion = sob_hinduism 
+			}
+			religion_group = dharmic
+
+		  }
+		   ROOT = {
+		   if = {
+		   limit = {religion_group = dharmic}
+		    change_religion = owner
+						
+				if = {
+	limit = { 
+	development = 5
+	NOT = { development = 10}}
+	owner = {
+	add_papal_influence = 5
+	}
+	}
+		if = {
+	limit = { 
+	development = 10
+	NOT = { development = 20}}
+		owner = {
+	add_papal_influence = 10
+	}
+	}
+			if = {
+	limit = { 
+	development = 20
+	NOT = { development = 30}}
+		owner = {
+	add_papal_influence = 15
+	}
+	}
+				if = {
+	limit = { 
+	development = 30
+}
+	owner = {
+	add_papal_influence = 20
+	}
+	}
+		if = {
+	limit = { 
+
+	NOT = { development = 5}}
+		owner = {
+	add_papal_influence = 2.5
+	}
+	}
+		   }
+
+		
+         }
+		  }  
+		  		  				 if = {
+		  limit = {
+			owner = { 
+			religion = sob_hinduism 
+			}
+			religion_group = dharmic
+						NOT = {
+			religion = hinduism 
+			religion = sikhism
+			}
+
+		  }
+		   ROOT = {
+		   if = {
+		   limit = {religion_group = dharmic}
+		    change_religion = owner
+						
+				if = {
+	limit = { 
+	development = 5
+	NOT = { development = 10}}
+	owner = {
+	add_papal_influence = 5
+	}
+	}
+		if = {
+	limit = { 
+	development = 10
+	NOT = { development = 20}}
+		owner = {
+	add_papal_influence = 10
+	}
+	}
+			if = {
+	limit = { 
+	development = 20
+	NOT = { development = 30}}
+		owner = {
+	add_papal_influence = 15
+	}
+	}
+				if = {
+	limit = { 
+	development = 30
+}
+	owner = {
+	add_papal_influence = 20
+	}
+	}
+		if = {
+	limit = { 
+
+	NOT = { development = 5}}
+		owner = {
+	add_papal_influence = 2.5
+	}
+	}
+		   }
+
+		
+         }
+		  } 
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  ###############
+		   if = {
+		  limit = {
+	  
+			owner = { 
+			has_harmonized_with = ROOT
+			}
+			OR = {
+					religion  = shiite
+			religion  = ibadi
+				religion  = shamanism
+				religion = dreamtime
+					religion  = totemism
+					 religion  = inti
+						religion  = nahuatl
+						 religion  = mesoamerican_religion
+							  religion  = norse_pagan_reformed
+			}
+		  }
+		   ROOT = {
+		   if = {
+		   limit = {religion = mahayana
+		   		   			 OR = {
+			 owner = {
+			 			 OR = {
+			has_country_flag = sob_religion_law_religion_off
+			 }
+			 OR = {
+			 has_country_flag = sob_religious_ideas_off
+			 			 full_idea_group = religious_ideas
+			  full_idea_group = sob_religious_ideas
+			  }
+			 }
+
+			  has_state_edict = sob_force_harmonized
+			  
+			 }
+		   }
+		    change_religion = owner
+
+				if = {
+	limit = { 
+	development = 5
+	NOT = { development = 10}}
+	owner = {
+	add_papal_influence = 5
+	}
+	}
+		if = {
+	limit = { 
+	development = 10
+	NOT = { development = 20}}
+		owner = {
+	add_papal_influence = 10
+	}
+	}
+			if = {
+	limit = { 
+	development = 20
+	NOT = { development = 30}}
+		owner = {
+	add_papal_influence = 15
+	}
+	}
+				if = {
+	limit = { 
+	development = 30
+}
+	owner = {
+	add_papal_influence = 20
+	}
+	}
+		if = {
+	limit = { 
+
+	NOT = { development = 5}}
+		owner = {
+	add_papal_influence = 2.5
+	}
+	}
+		   }
+
+	    if ={
+		   limit = {
+		   
+		   religion = shiite
+		   	         owner  = {
+			 has_harmonized_with = ROOT
+			 NOT = { has_harmonized_with = shiite_confu_group }
+			 
+			 }}
+		    change_religion = shiite_confu
+		   }
+		
+			   		    if ={
+		   limit = {religion = ibadi
+		   	         owner  = {
+			 has_harmonized_with = ROOT
+			  NOT = { has_harmonized_with = ibadi_confu_group }
+			 }}
+		    change_religion = ibadi_confu
+		   }
+		   	   		    if ={
+		   limit = {religion = shamanism
+		   	         owner  = {
+			 has_harmonized_with = ROOT
+			 NOT = { has_harmonized_with = shamanism_confu_group }
+			 }}
+		    change_religion = shamanism_confu
+		   }
+		
+			   		    if ={
+		   limit = {religion = totemism
+		   	         owner  = {
+			 has_harmonized_with = ROOT
+			 NOT = { has_harmonized_with = totemism_confu_group }
+			 }}
+		    change_religion =totemism_confu
+		   }
+		   			   		    if ={
+		   limit = {religion = dreamtime
+		   	         owner  = {
+			 has_harmonized_with = ROOT
+			 NOT = { has_harmonized_with = sob_dreamtime_confu_group }
+			 }}
+		    change_religion =sob_dreamtime_confu
+		   }
+		
+			   		    if ={
+		   limit = {religion = inti
+		   	         owner  = {
+			 has_harmonized_with = ROOT
+			 NOT = { has_harmonized_with = inti_confu_group }
+			 }}
+		    change_religion = inti_confu
+		   }
+		
+			   		    if ={
+		   limit = {religion =nahuatl
+		   	         owner  = {
+			 has_harmonized_with = ROOT
+			  NOT = { has_harmonized_with = nahuatl_confu_group }
+			 }}
+		    change_religion = nahuatl_confu
+		   }
+		
+			   		    if ={
+		   limit = {religion = mesoamerican_religion
+		   	         owner  = {
+			 has_harmonized_with = ROOT
+			 NOT = { has_harmonized_with = mesoamerican_religion_confu_group }
+			 }}
+		    change_religion = mesoamerican_religion_confu
+		   }
+		
+			   		    if ={
+		   limit = {religion = norse_pagan_reformed
+		   	         owner  = {
+			 has_harmonized_with = ROOT
+			  NOT = { has_harmonized_with = norse_pagan_reformed_confu_group }
+			 }}
+		    change_religion = norse_pagan_reformed_confu
+		   }
+		
+			   		    if ={
+		   limit = {religion =  sikhism
+		   	         owner  = {
+			 has_harmonized_with = ROOT
+			 NOT = { has_harmonized_with = sikhism_confu_group }
+			 }}
+		    change_religion =  sikhism_confu
+		   }
+		
+         }
+		  }  
+			 if = {
+		  limit = {
+		   			 OR = {
+			 owner = {
+			 			 OR = {
+			has_country_flag = sob_religion_law_religion_off
+			 }
+			 OR = {
+			 has_country_flag = sob_religious_ideas_off
+			 			 full_idea_group = religious_ideas
+			  full_idea_group = sob_religious_ideas
+			  }
+			 }
+
+			  has_state_edict = sob_force_harmonized
+			  
+			 }
+			owner = { 
+			has_harmonized_with = ROOT
+
+			}
+						     NOT = {religion  = shiite}
+				   NOT = {religion  = ibadi}
+				     NOT = {religion  = shamanism}
+					   NOT = {religion  = totemism}
+					     NOT = {religion  = inti}
+						   NOT = {religion  = nahuatl}
+						     NOT = {religion  = mesoamerican_religion}
+							   NOT = {religion  = norse_pagan_reformed}
+							     NOT = {religion  = sikhism}
+								 OR = {
+								 AND = {
+			 NOT = {religion = coptic}
+			  NOT = {religion = dreamtime}
+			   NOT = {religion = hussite}
+			  NOT = {religion = catholic}
+			   NOT = {religion = anglican}
+			    NOT = {religion = protestant}
+				 NOT = {religion = reformed}
+				  NOT = {religion = orthodox}
+				  }
+				  owner = { religion = threeself
+				  NOT = { has_country_flag = confucianism_converted_threeself}
+				  }
+				  }
+						  NOT = {religion  = buddhism}
+			   NOT = {religion  = vajrayana}
+			NOT = {has_country_flag = ban_religion_auto}
+		  }
+		   ROOT = {
+          change_religion = owner
+
+				if = {
+	limit = { 
+	development = 5
+	NOT = { development = 10}}
+	owner = {
+	add_papal_influence = 5
+	}
+	}
+		if = {
+	limit = { 
+	development = 10
+	NOT = { development = 20}}
+		owner = {
+	add_papal_influence = 10
+	}
+	}
+			if = {
+	limit = { 
+	development = 20
+	NOT = { development = 30}}
+		owner = {
+	add_papal_influence = 15
+	}
+	}
+				if = {
+	limit = { 
+	development = 30
+}
+	owner = {
+	add_papal_influence = 20
+	}
+	}
+		if = {
+	limit = { 
+
+	NOT = { development = 5}}
+		owner = {
+	add_papal_influence = 2.5
+	}
+	}
+		
+         }
+		  }	
+}		  
+		  			
+		  
+}
+

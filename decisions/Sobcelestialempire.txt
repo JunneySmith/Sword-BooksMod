@@ -1,0 +1,163 @@
+country_decisions = {
+
+	    sob_zhongyuan_court = {
+		potential = {
+		NOT = {OR = {culture_group = east_asian  culture_group = chinese_group }}
+		OR = {
+		any_country = {
+		is_emperor_of_china = yes
+		ROOT = {
+		knows_country = PREV
+		}
+		}
+					custom_trigger_tooltip = {
+				tooltip = empire_of_china_not_in_china		      
+			  NOT = { any_country = { is_emperor_of_china = yes
+		 num_of_cities = 1}}
+		}
+		
+		}
+
+		 
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = empire_of_china_not_in_china		      
+			  NOT = { any_country = { is_emperor_of_china = yes
+		 num_of_cities = 1}}
+		}
+		is_subject = no
+		china_superregion = {
+		type = all
+		owned_by = ROOT
+		}
+		OR = {
+          			custom_trigger_tooltip = {
+				tooltip = sob_waizu_allowed_celestial_empire_tooltip
+				has_country_flag = sob_waizu_allowed_celestial_empire
+				}
+				 custom_trigger_tooltip = {
+		 tooltip = sob_renhuang_controled_china_tooltip
+has_country_flag = sob_renhuang_controled_china
+
+		 
+		 }
+		}
+		}
+		effect = {
+		
+		every_owned_province = {
+		limit = {OR = {culture_group = east_asian  culture_group = chinese_group }}
+		
+		add_core = XZY
+		add_core = HHE
+		
+		}
+		tooltip = {
+				release = XZY
+		ROOT  = {
+			create_subject = {
+		subject_type = sob_dynasty_union
+		subject = XZY}
+
+		}
+		set_emperor_of_china = ROOT
+		
+		}
+country_event = {id = sob_tributary_events.95588}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	
+		    sob_zizhiqu = {
+		potential = {
+		culture_group = sob_prc_chinese_group
+		OR = {
+		any_country = {
+		is_emperor_of_china = yes
+		ROOT = {
+		knows_country = PREV
+		}
+		}
+					custom_trigger_tooltip = {
+				tooltip = empire_of_china_not_in_china		      
+			  NOT = { any_country = { is_emperor_of_china = yes
+		 num_of_cities = 1}}
+		}
+		
+		}
+
+		 
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = empire_of_china_not_in_china		      
+			  NOT = { any_country = { is_emperor_of_china = yes
+		 num_of_cities = 1}}
+		}
+		is_subject = no
+        NOT = { any_country = { OR = {culture_group = east_asian  culture_group = chinese_group culture_group = sob_prc_chinese_group}  NOT = {is_subject_of = ROOT} } }
+		NOT = { any_province = { OR = {culture_group = east_asian  culture_group = sob_prc_chinese_group culture_group = chinese_group } NOT = { country_or_non_sovereign_subject_holds = ROOT}}}
+		}
+		effect = {
+		
+		every_owned_province = {
+		limit = {OR = {culture_group = east_asian  culture_group = chinese_group culture = sob_prc_han}}
+		
+		add_core = XZQ
+		add_core = HHE
+		
+		}
+		tooltip = {
+				release = XZQ
+		ROOT  = {
+			create_subject = {
+		subject_type = sob_dynasty_union
+		subject = XZQ}
+
+		}
+		set_emperor_of_china = ROOT
+		
+		}
+country_event = {id = sob_tributary_events.95599}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	sob_celestial_empire_create_options = {
+		potential = {
+         has_country_flag = sob_waizu_allowed_celestial_empire
+
+		 OR = {
+		  ai = no
+		  NOT = {OR = {culture_group = east_asian culture_group = chinese_group} }
+		  }
+		 is_emperor_of_china =no
+		 NOT = {has_reform = celestial_empire}
+		}
+		allow = {
+          			custom_trigger_tooltip = {
+				tooltip = sob_waizu_allowed_celestial_empire_tooltip
+				has_country_flag = sob_waizu_allowed_celestial_empire
+				}
+				 NOT = {has_reform = celestial_empire}
+		}
+		effect = {
+
+			add_prestige = 25
+			change_government = monarchy
+			add_government_reform= celestial_empire
+												add_estate_loyalty = {
+			estate = estate_sobshishen
+			loyalty = 50
+		}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

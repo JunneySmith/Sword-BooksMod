@@ -1,0 +1,2695 @@
+namespace = sobchineseempire
+country_event = {
+	id = sobchineseempire.100860018
+	title = sobchineseempire.100860018.t
+	desc = sobchineseempire.100860018.d
+	picture = MONGOL_BANNERS_eventPicture
+	
+	is_triggered_only = yes
+	major = yes
+	immediate = {
+	FROM = {
+	clr_country_flag = sob_emperor_trouble
+	}
+	}
+	option = { # Ok
+		name = "sobchineseempire.100860018.a"
+		FROM  = {
+							create_alliance = ROOT
+		join_all_defensive_wars_of = ROOT
+		}
+		if = {
+		limit = { has_country_flag = sob_overlord_want_money}
+		add_treasury = -200
+				FROM = {
+				
+		add_treasury = 200
+		}
+		}
+		if = {
+		limit = { has_country_flag = sob_overlord_want_art}
+		add_prestige = -20
+				FROM = {
+		add_prestige = 20
+		}
+		}
+		if = {
+		limit = { has_country_flag = sob_overlord_want_adm}
+		add_adm_power = -30
+				FROM = {
+		add_adm_power = 30
+		}
+		}
+			if = {
+		limit = { has_country_flag = sob_overlord_want_dip}
+		add_dip_power = -30
+				FROM = {
+		add_dip_power = 30
+		}
+		}
+				if = {
+		limit = { has_country_flag = sob_overlord_want_mil}
+		add_mil_power = -30
+				FROM = {
+		add_mil_power = 30
+		}
+		}
+				if = {
+		limit = { has_country_flag = sob_overlord_want_vassal}
+					FROM = {	create_subject = {
+		subject_type = zhuhou_state
+		subject = ROOT}
+		}
+		}
+		clr_country_flag = sob_overlord_want_money
+		clr_country_flag = sob_overlord_want_art
+		clr_country_flag = sob_overlord_want_adm
+		clr_country_flag = sob_overlord_want_dip
+		clr_country_flag = sob_overlord_want_mil
+		clr_country_flag = sob_overlord_want_vassal
+		clr_country_flag = sob_had_asked_falg
+	}
+		option = { # Ok
+		name = "sobchineseempire.100860018.b"
+		trigger = {
+		OR = {
+		ai = no
+		NOT = {
+	    any_country  = {
+		war_with = ROOT
+			army_strength = {
+	who = ROOT
+	value = 1.5
+}
+		}
+		}
+		}
+		}
+		clr_country_flag = sob_overlord_want_money
+		clr_country_flag = sob_overlord_want_art
+		clr_country_flag = sob_overlord_want_adm
+		clr_country_flag = sob_overlord_want_dip
+		clr_country_flag = sob_overlord_want_mil
+		clr_country_flag = sob_overlord_want_vassal
+	}
+	}
+country_event = {
+	id = sobchineseempire.100860017
+	title = sobchineseempire.100860017.title
+	desc = sobchineseempire.100860017.desc
+	picture = MONGOL_BANNERS_eventPicture
+	
+	is_triggered_only = yes
+	major = yes
+	option = { # Ok
+		name = "sobchineseempire.100860017.a"
+		trigger = {
+		FROM = { treasury = 200}
+		NOT = { is_bankrupt = yes}
+OR = {
+manpower_percentage = 0.01		
+		
+ai = no
+}
+		
+		}
+		FROM = {
+		set_country_flag = sob_overlord_want_money
+		country_event = { id = sobchineseempire.100860018 }
+		
+		}
+	}
+		option = { # Ok
+		name = "sobchineseempire.100860017.b"
+		trigger = {
+		FROM = {prestige = 20}
+		NOT = { is_bankrupt = yes}
+OR = {
+manpower_percentage = 0.01		
+		
+ai = no
+}
+		
+		}
+
+				FROM = {
+		set_country_flag = sob_overlord_want_art
+		country_event = { id = sobchineseempire.100860018 }
+		
+		}
+	}
+			option = { # Ok
+		name = "sobchineseempire.100860017.c"
+		trigger = {
+		FROM = { adm_power = 30}
+		NOT = { is_bankrupt = yes}
+OR = {
+manpower_percentage = 0.01		
+		
+ai = no
+}
+		
+		}
+
+				FROM = {
+		set_country_flag = sob_overlord_want_adm
+		country_event = { id = sobchineseempire.100860018 }
+		
+		}
+	}
+				option = { # Ok
+		name = "sobchineseempire.100860017.d"
+		trigger = {
+		FROM = { dip_power = 30}
+		NOT = { is_bankrupt = yes}
+OR = {
+manpower_percentage = 0.01		
+		
+ai = no
+}
+		
+		}
+
+				FROM = {
+		set_country_flag = sob_overlord_want_dip
+		country_event = { id = sobchineseempire.100860018 }
+		
+		}
+	}
+				option = { # Ok
+		name = "sobchineseempire.100860017.e"
+		trigger = {
+		FROM = { mil_power = 30}
+		NOT = { is_bankrupt = yes}
+OR = {
+manpower_percentage = 0.01		
+		
+ai = no
+}
+		
+		}
+
+				FROM = {
+		set_country_flag = sob_overlord_want_mil
+		country_event = { id = sobchineseempire.100860018 }
+		
+		}
+	}
+	option = { # Ok
+		name = "sobchineseempire.100860017.f"
+		trigger = {
+		NOT = { is_bankrupt = yes}
+OR = {
+manpower_percentage = 0.01		
+		
+ai = no
+}
+		
+		}
+				FROM = {
+		clr_country_flag = sob_had_asked_falg
+		}
+		clr_country_flag = sob_emperor_trouble
+					create_alliance = FROM
+		join_all_defensive_wars_of = FROM 
+	}
+			option = { 
+		name = "sobchineseempire.100860017.h"
+		trigger = {
+		FROM = {
+		is_subject = no
+		}
+		NOT = { is_bankrupt = yes}
+OR = {
+manpower_percentage = 0.01		
+		
+ai = no
+}
+		
+		}
+				FROM = {
+		set_country_flag = sob_overlord_want_vassal
+		country_event = { id = sobchineseempire.100860018 }
+		
+		}
+	
+	}
+		option = { # No
+		name = "sobchineseempire.100860017.g"
+		trigger = {
+				OR = {
+			NOT ={	manpower_percentage = 0.20}
+				ai = no
+				war_exhaustion = 10
+				 is_bankrupt = yes
+				 NOT = {stability =-2}
+				 }
+				 }
+		add_prestige = -5
+		clr_country_flag = sob_emperor_trouble
+	
+	}
+}
+country_event = {
+	id = sobchineseempire.10086019
+	title = sobchineseempire.10086019.t
+	desc = sobchineseempire.10086019.d
+	picture = MONGOL_BANNERS_eventPicture
+	
+	hidden = yes
+	
+	trigger = {
+		is_subject_of_type = sob_protected_tributary_state
+		is_at_war = no
+	}	
+	option = { # Onward to Hanhai!
+	name = "sobchineseempire.100860017.g"
+			overlord = {
+							create_subject = {
+			subject_type = tributary_state
+			subject = FROM
+		}
+			
+			}
+	}
+}
+
+
+country_event = {
+	id = sobchineseempire.10086020
+	title = sobchineseempire.10086020.t
+	desc = sobchineseempire.10086020.d
+	picture = MONGOL_BANNERS_eventPicture
+	
+	major = yes
+	
+	trigger = {
+	always = no
+	NOT = { has_country_flag = sob_tri_mentioned_to}
+	NOT = { is_subject_of_type = zhuhou_state}
+NOT = { is_subject_of_type = sob_zhongyuan_claim_state}
+NOT = { is_subject_of_type = sob_celestial_member}
+NOT = { is_subject_of_type = sob_celestial_member_2}
+NOT = {is_subject_of_type = zhuhou_claim_state}
+NOT = {is_subject_of_type = celestial_client_state}
+any_country = {
+overlord = {
+NOT = { war_with = ROOT}
+}
+is_in_war = {
+    defender_leader = PREV
+	attacker_leader = ROOT
+}
+	OR = {
+	 is_subject_of_type = tributary_state 
+is_subject_of_type = sob_tributary_state_3
+	is_subject_of_type = tributary_state_2 
+		
+}
+
+}
+	}	
+
+	option = { # Onward to Hanhai!
+	name = "sobchineseempire.10086020.a"
+	set_country_flag = sob_tri_mentioned_to
+	}
+}
+
+country_event = {
+	id = sobchineseempire.10086022
+	title = sobchineseempire.10086022.t
+	desc = sobchineseempire.10086022.d
+	picture = MONGOL_BANNERS_eventPicture
+	
+	major = yes
+	
+	trigger = {
+	always = no
+	overlord = {
+	is_emperor_of_china = yes
+	}
+
+	OR = {
+is_subject_of_type = zhuhou_state
+is_subject_of_type = zhuhou_claim_state
+is_subject_of_type = sob_zhongyuan_claim_state
+is_subject_of_type = sob_celestial_member
+is_subject_of_type = sob_celestial_member_2
+is_subject_of_type = celestial_client_state
+}
+overlord = {
+any_subject_country ={
+
+	NOT = { is_subject_of_type = zhuhou_state}
+NOT = { is_subject_of_type = sob_zhongyuan_claim_state}
+NOT = { is_subject_of_type = sob_celestial_member}
+NOT = { is_subject_of_type = sob_celestial_member_2}
+NOT = {is_subject_of_type = zhuhou_claim_state}
+NOT = {is_subject_of_type = celestial_client_state}
+offensive_war_with = ROOT
+is_in_war = {
+    defender_leader = ROOT
+	attacker_leader = THIS
+}
+
+}
+}
+}
+immediate = { 
+overlord = {
+save_event_target_as = sob_war_chinese_empoeror
+
+}
+
+}
+		mean_time_to_happen = {
+		days = 1
+		}
+	
+	option = { # Onward to Hanhai!
+	name = "sobchineseempire.10086022.a"
+	overlord = {
+every_subject_country = {
+limit = {	NOT = { is_subject_of_type = zhuhou_state}
+NOT = { is_subject_of_type = sob_zhongyuan_claim_state}
+NOT = { is_subject_of_type = sob_celestial_member}
+NOT = { is_subject_of_type = sob_celestial_member_2}
+NOT = {is_subject_of_type = zhuhou_claim_state}
+NOT = {is_subject_of_type = celestial_client_state}
+war_with = ROOT
+
+ }
+ white_peace =ROOT
+  declare_war_with_cb = {
+    who = event_target:sob_war_chinese_empoeror
+    casus_belli = cb_imperial
+}
+}
+country_event = { id = sobchineseempire.10086021 } 
+}
+	
+
+
+
+}
+	
+
+}
+country_event = {
+	id = sobchineseempire.10086024
+	title = sobchineseempire.10086021.t
+	desc = sobchineseempire.10086021.d
+	picture = MONGOL_BANNERS_eventPicture
+	trigger = {
+	always = no
+			OR = {
+is_subject_of_type = zhuhou_state
+is_subject_of_type = zhuhou_claim_state
+is_subject_of_type = sob_celestial_member
+is_subject_of_type = celestial_client_state
+}
+		
+		any_country = {
+			OR = {
+	 is_subject_of_type = tributary_state 
+is_subject_of_type = sob_tributary_state_3
+	is_subject_of_type = tributary_state_2 
+		
+}
+overlord = {
+overlord_of =ROOT
+}
+		ROOT = {
+		
+		is_in_war = {
+    defender_leader = ROOT
+	attacker_leader = PREV
+}
+		}
+		
+		
+		}
+	}
+		option = { # Onward to Hanhai!
+	name = "sobchineseempire.10086021.a"
+
+}
+}
+country_event = {
+	id = sobchineseempire.10086021
+	title = sobchineseempire.10086021.t
+	desc = sobchineseempire.10086021.d
+	picture = MONGOL_BANNERS_eventPicture
+	is_triggered_only = yes
+	major = yes
+		option = { # Onward to Hanhai!
+	name = "sobchineseempire.10086021.a"
+	create_alliance = FROM
+join_all_defensive_wars_of = FROM
+join_all_offensive_wars_of = FROM
+}
+}
+
+country_event = {
+	id = sobchineseempire.10086023
+	title = sobchineseempire.10086023.t
+	desc = sobchineseempire.10086023.d
+	picture = MONGOL_BANNERS_eventPicture
+	is_triggered_only = yes
+	major = yes
+		option = { # Onward to Hanhai!
+	name = "sobchineseempire.10086023.a"
+	create_alliance = DAI
+join_all_defensive_wars_of = DAI
+join_all_offensive_wars_of = DAI
+}
+}
+
+country_event = {
+	id = sobchineseempire.10086001
+	title = sobchineseempire.10086001.t
+	desc = sobchineseempire.10086001.d
+	picture = MONGOL_BANNERS_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	major = yes
+	
+	immediate = {
+		hidden_effect = {
+		set_country_flag = sob_tumubao_dajie
+			set_country_flag = sob_captured_oir_emperor
+			OIR = {
+				set_country_flag = sob_oir_ruler_captured
+				country_event = { id = sobchineseempire.10087002 }
+			}
+		}
+	}	
+	option = { # Onward to Hanhai!
+		name = "sobchineseempire.10086001.a"
+		add_ruler_modifier = {
+			name = "sob_mng_captured_oir_ruler" # siege ability and morale
+			duration = -1
+		}
+	}
+}
+country_event = {
+	id = sobchineseempire.10086013
+	title = sobchineseempire.10086013.t
+	desc = sobchineseempire.10086013.d
+	picture = MONGOL_BANNERS_eventPicture
+	
+trigger = {
+overlord = {
+is_emperor_of_china = yes
+OR = { culture_group = east_asian culture_group = chinese_group}
+
+}
+is_subject_of_type = zhuhou_claim_state 
+has_country_flag = sob_liuhou_cefeng
+NOT = { has_ruler_modifier = sob_zhongcheng_liuhou}
+}
+mean_time_to_happen = {
+months = 1
+}
+	
+	immediate = {
+overlord = {
+		create_subject = {
+		subject_type = sob_zhongyuan_claim_state
+		subject = ROOT}
+
+}
+clr_country_flag = sob_liuhou_cefeng
+	}	
+	option = { # Onward to Hanhai!
+		name = "sobchineseempire.10086013.a"
+		overlord = {
+		country_event = { id = sobchineseempire.10086014 }
+		
+		}
+	}
+}
+
+country_event = {
+	id = sobchineseempire.10086014
+	title = sobchineseempire.10086014.t
+	desc = sobchineseempire.10086014.d
+	picture = MONGOL_BANNERS_eventPicture
+	
+ is_triggered_only = yes
+	
+	option = { # Onward to Hanhai!
+		name = "sobchineseempire.10086014.a"
+
+	}
+}
+country_event = {
+	id = sobchineseempire.10086006
+	title = sobchineseempire.10086006.t
+	desc = sobchineseempire.10086006.d
+	picture = MONGOL_BANNERS_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	major = yes
+	
+
+	option = { # Onward to Hanhai!
+		name = "sobchineseempire.10086006.a"
+		add_mandate = 50
+		OIR = {
+		clr_country_flag = sob_oir_ruler_captured
+		
+		}
+				MNG = {
+            		create_subject = {
+		subject_type = tributary_state
+		subject = OIR}
+		            		create_subject = {
+		subject_type = vassal
+		subject = KHA }
+		
+		}
+		OIR = {
+			define_ruler = {
+				dynasty = "Zhu"
+				culture = ROOT
+				religion = ROOT
+				male = yes
+			}
+				kill_heir = {}
+			}
+	}
+		option = { # Onward to Hanhai!
+		name = "sobchineseempire.10086006.b"
+		add_prestige = 100
+	}
+}
+country_event = {
+	id = sobchineseempire.10086004
+	title = sobchineseempire.10086004.t
+	desc = sobchineseempire.10086004.d
+	picture = MONGOL_BANNERS_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	major = yes
+	
+
+	option = { # Onward to Hanhai!
+	
+			OIR = {
+		clr_country_flag = sob_oir_ruler_captured
+		
+		}
+		name = "sobchineseempire.10086004.a"
+		add_mandate = 50
+					MNG = {
+            		create_subject = {
+		subject_type = personal_union
+		subject = OIR}
+		            		create_subject = {
+		subject_type = vassal
+		subject = KHA}
+		
+		}
+	}
+		option = { # Onward to Hanhai!
+		name = "sobchineseempire.10086004.b"
+		add_prestige = 100
+	}
+}
+country_event = {
+	id = sobchineseempire.10086005
+	title = sobchineseempire.10086005.t
+	desc = sobchineseempire.10086005.d
+	picture = MONGOL_BANNERS_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	major = yes
+		
+	option = { # Onward to Hanhai!
+		name = "sobchineseempire.10086005.a"
+		add_mandate = 50
+		add_prestige =100
+	}
+}
+# Notification for OIR
+country_event = {
+	id = sobchineseempire.10087002
+	title = sobchineseempire.10087002.t
+	desc = sobchineseempire.10087002.d
+	picture = MONGOL_BANNERS_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { # Disastrous!
+		name = "sobchineseempire.10087002.a"
+add_horde_unity = -100
+		add_stability = -5
+		hidden_effect = {
+			if = {
+				limit = {
+					has_heir = yes
+				}
+				exile_heir_as = oir_exiled_heir
+				set_country_flag = oir_exiled_heir_flag
+			}
+			exile_ruler_as = { name = oir_exiled_ruler }
+		}
+	
+	}
+}
+country_event = {
+	id = sobchineseempire.10087003
+	title = sobchineseempire.10087003.t
+	desc = {
+		trigger = {
+			has_heir = yes
+		}
+		desc = sobchineseempire.10087003.d
+	}
+	desc = {
+		trigger = {
+			has_heir = no
+		}
+		desc = sobchineseempire.10087003.d2
+	}
+	picture = BAD_WITH_MONARCH_eventPicture
+	
+	fire_only_once = yes
+	major = yes
+	
+	trigger = {
+		tag = OIR
+
+		has_country_flag = sob_oir_ruler_captured
+OR = {
+AND = {
+OR = {
+		had_country_flag = {
+			flag = sob_oir_ruler_captured
+			days = 730
+		}
+				capital_scope = {
+		controlled_by = MNG
+		
+		}
+		}
+				war_with = MNG
+	NOT = {	war_score_against = {
+	who = MNG
+	value = -80
+}
+}
+		}
+
+	AND = {
+	is_at_war = no
+	NOT = {	
+has_won_war_against = {
+	who = MNG
+	max_years_since = 10
+}}
+	}
+		
+		}
+		NOT = { MNG = { has_country_flag = mng_demands_sent } }
+		NOT = {
+			1816 = {
+				num_of_units_in_province = {
+					who = OIR
+					amount = 9
+				}
+			}
+		}
+	}
+	
+
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = { # May he have better judgement than his predecessor
+		name = "sobchineseempire.10087003.a"
+		MNG = {
+country_event = { id = sobchineseempire.10086006} 
+}
+			add_stability = -1
+						every_owned_province = {
+			add_nationalism = 10
+			
+			
+			}
+
+		
+	}
+		option = { # May he have better judgement than his predecessor
+		name = "sobchineseempire.10087003.b"
+		MNG = {
+country_event = { id = sobchineseempire.10086004} 
+}
+			add_stability = 3
+
+		
+		}
+		
+				option = { # May he have better judgement than his predecessor
+		name = "sobchineseempire.10087003.c"
+		MNG = {
+		country_event = { id = sobchineseempire.10086005} 
+		}
+add_stability = -6
+			add_war_exhaustion = 20
+			every_owned_province = {
+			add_nationalism = 20
+			
+			
+			}
+		
+		
+		
+		
+	}
+}
+
+country_event = {
+	id = sobchineseempire.1978
+	title = "confucian_events.21.t"
+	desc = "confucian_events.21.d"
+	picture = IMPERIAL_SEAL_eventPicture
+ 
+
+	is_triggered_only = yes
+		option = {
+				name = "sobempireevents.1978.a"
+		change_technology_group = chinese
+}
+		option = {
+				name = "sobempireevents.1978.b"
+				
+				change_technology_group = chinese
+				change_unit_type = chinese
+}
+		option = {
+				name = "sobempireevents.1978.c"
+					change_unit_type = chinese
+}
+		option = {
+				name = "sobempireevents.1978.d" 
+}
+
+
+
+}
+country_event = {
+	id = sobchineseempire.114003
+	title = "sobchineseempire.114003.t"
+	desc = "sobchineseempire.114003.d"
+	picture = IMPERIAL_SEAL_eventPicture
+ 
+trigger = {
+is_subject_of_type = sob_zhongyuan_claim_state
+ 	liberty_desire = 60
+
+overlord = {
+is_emperor_of_china = yes
+any_subject_country = {
+OR = {
+is_subject_of_type = zhuhou_claim_state
+is_subject_of_type = sob_zhongyuan_claim_state
+}
+development_of_overlord_fraction = 0.35
+num_of_cities = PREV
+army_strength = {
+	who = PREV
+	value = 0.33
+}
+}
+
+
+}
+
+}
+mean_time_to_happen = {
+days = 1
+
+}
+		option = {
+				name = "sobchineseempire.114003.a" 
+				overlord = {
+
+										create_subject = {
+		subject_type = zhuhou_claim_state
+		subject = ROOT}
+				
+				}
+				
+}
+
+
+
+}
+country_event = {
+	id = sobchineseempire.114004
+	title = "sobchineseempire.114004.t"
+	desc = "sobchineseempire.114004.d"
+	picture = IMPERIAL_SEAL_eventPicture
+ 
+trigger = {
+NOT = {has_country_flag = sob_china_notice_1}
+any_subject_country = {
+OR = {
+is_subject_of_type = celestial_client_state
+is_subject_of_type = zhuhou_state
+}
+}
+
+
+
+}
+immediate = { set_country_flag = sob_china_notice_1}
+mean_time_to_happen = {
+days = 1
+
+}
+		option = {
+				name = "sobchineseempire.114003.a" 
+
+				
+}
+
+
+
+}
+country_event = {
+	id = sobchineseempire.114002
+	title = "sobchineseempire.114002.t"
+	desc = "sobchineseempire.114002.d"
+	picture = IMPERIAL_SEAL_eventPicture
+ 
+trigger = {
+is_at_war = no
+OR= {
+NOT = {has_country_flag = sob_had_fanzhen_geju}
+had_global_flag = {
+	flag = sob_had_fanzhen_geju
+	days = 3650
+}
+}
+OR = {culture_group = east_asian  culture_group = chinese_group }
+NOT = {
+any_subject_country = {
+is_subject_of_type = zhuhou_claim_state
+OR = {
+development_of_overlord_fraction = 0.35
+num_of_cities = ROOT
+army_strength = {
+	who = ROOT
+	value = 0.2
+}
+}
+
+}
+
+}
+is_emperor_of_china = yes
+any_subject_country = {
+is_subject_of_type = zhuhou_claim_state
+
+}
+}
+mean_time_to_happen = {
+days = 1
+
+}
+		option = {
+				name = "sobchineseempire.114002.a" 
+				every_subject_country = {
+				limit = {
+				
+				is_subject_of_type = zhuhou_claim_state
+				}
+				ROOT = {
+										create_subject = {
+		subject_type = sob_zhongyuan_claim_state
+		subject = PREV}
+				}
+				}
+				
+}
+
+
+
+}
+
+
+
+country_event = {
+	id = sobchineseempire.1980
+	title = "sobempireevents.1980.t"
+	desc = "sobempireevents.1980.d"
+	picture = IMPERIAL_SEAL_eventPicture
+ is_triggered_only = yes
+	immediate = {
+	set_global_flag = sob_setted_ai_change_to_chinese_group
+	
+	}
+	option = {
+				name = "sobempireevents.1980.a"
+		set_global_flag = sob_setted_ai_change_to_chinese_group_yes
+    }
+	option = {
+				name = "sobempireevents.1980.b"
+set_global_flag = sob_setted_ai_change_to_chinese_group_no
+    }
+
+
+
+
+}
+country_event = {
+	id = sobchineseempire.20211980
+	title = "sobempireevents.1980.t"
+	desc = "sobempireevents.1980.d"
+	picture = IMPERIAL_SEAL_eventPicture
+hidden = yes
+trigger = {
+tag = HHE
+NOT = { 	OR = {culture_group = east_asian  culture_group = chinese_group } }
+}
+	immediate = {
+	set_global_flag = sob_setted_ai_change_to_chinese_group
+	
+	}
+	option = {
+				name = "sobempireevents.1980.a"
+		set_global_flag = sob_setted_ai_change_to_chinese_group_yes
+    }
+	option = {
+				name = "sobempireevents.1980.b"
+set_global_flag = sob_setted_ai_change_to_chinese_group_no
+    }
+
+
+
+
+}
+country_event = {
+	id = sobchineseempire.1929
+	title = "sobevents.123.t"
+	desc = "china_events.31.d"
+	picture = IMPERIAL_SEAL_eventPicture
+ 
+	hidden = yes
+	trigger = {
+	OR = {culture_group = east_asian  culture_group = chinese_group }
+	
+	
+	any_country = {
+	OR = {culture_group = east_asian  culture_group = chinese_group }
+		NOT ={		trust = {
+				who = ROOT
+				value = 50
+			}}
+	}
+	
+	}
+		option = {
+				name = "sobevents.123.o" #Ignore these barbarians
+
+       random_country = {
+	   limit = {
+           OR = {culture_group = east_asian  culture_group = chinese_group }
+	   NOT ={		trust = {
+				who = ROOT
+				value = 50
+			}}
+			}
+	   add_trust = {
+    who = ROOT
+    value = 5
+}
+	   }
+}
+}
+
+country_event = {
+	id = sobchineseempire.566
+	title = "sobevents.566.t"
+	desc = "sobevents.56968.d"
+	picture = IMPERIAL_SEAL_eventPicture
+	is_triggered_only = yes
+
+	option = {
+	 
+		name = "sobevents.566.a" #Ignore these barbarians
+		end_disaster = bureaucracy_rising
+		end_disaster = fanzhen_geju
+		end_disaster = china_dyansty_cycle
+									change_estate_land_share = {
+			estate = estate_sobshishen
+			share = -100.0
+		}
+																			custom_tooltip = sob_shisuhua_reform_tooltip_4
+
+		
+		clr_country_flag = sob_cleasing_nobles
+			clr_country_flag = sob_keju_shicigefu
+			clr_country_flag = sob_shushengtongzhi
+			clr_country_flag = sob_quefa_baohu_shibing
+		
+		set_country_flag = sob_shishua_reform_4
+
+		
+	if = {
+	limit = {	
+	has_reform = celestial_empire
+	}
+	remove_government_reform = celestial_empire
+	}
+	}
+	
+
+}
+
+country_event = {
+	id = sobchineseempire.567
+	title = "sobchineseempire.567.t"
+	desc = "sobchineseempire.567.d"
+	picture = IMPERIAL_SEAL_eventPicture
+	is_triggered_only = yes
+	hidden = yes
+	immediate = {
+	clr_country_flag = sob_had_disaster_for_10_years
+	}
+	option = {
+	 
+		name = "sobchineseempire.567.a" #Ignore these barbarians
+
+	}
+	
+
+}
+country_event = {
+	id = sobchineseempire.1927
+	title = "flavor_mng.20.t"
+	desc = "flavor_mng.20.d"
+	picture = UNIVERSITY_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+	always = no
+		tag = MNG
+		owns = 668
+		has_country_flag = mng_accepted_jesuits
+	}
+	
+	mean_time_to_happen = {
+		months = 300
+	}
+	
+	option = {
+		name = "flavor_mng.20.a" #Allow it
+		set_country_flag = mng_st_pauls
+		668 = {
+			add_province_modifier = {
+				name = mng_st_pauls_college
+				duration = -1
+			}
+			change_religion = catholic
+			add_institution_embracement = {
+				which = renaissance
+				value = 100
+			}
+		}
+	}
+	
+	option = {
+		name = "flavor_mng.20.b" #Don't allow it
+		add_stability_or_adm_power = yes
+		add_prestige = 15
+	}
+}
+
+country_event = {
+	id = sobchineseempire.123
+	title = "sobevents.123.t"
+	desc = "china_events.31.d"
+	picture = IMPERIAL_SEAL_eventPicture
+ 
+ is_triggered_only = yes
+	
+			option = {
+	 trigger = {
+	 ai = yes
+    has_custom_ideas = yes
+}
+		name = "sobevents.123.o" #Ignore these barbarians
+
+		ai_chance = { factor = 1000 }
+add_mandate = 5
+	}
+
+	
+	
+		option = {
+	 trigger = {
+	 OR = {
+	 ai = no
+	 AND = {
+	 ai = yes
+	 NOT = { tag = HHE }
+	 NOT = { tag = PRC }
+NOT = { tag = YUA }
+NOT = { tag = QNG }
+}
+}
+}
+		name = "sobevents.123.o" #Ignore these barbarians
+
+add_mandate = 5
+
+	}
+	
+	
+	
+	
+	option = {
+	 
+		name = "sobevents.123.a" #Ignore these barbarians
+trigger = {
+NOT = { exists  = MNG }
+
+
+	 OR = {
+	 ai = no
+	 AND = {
+	 ai = yes
+NOT = { tag = MNG }
+NOT = { tag = QIN }
+NOT = { tag = TNG }
+NOT = { tag = YAN }
+NOT = { tag = QIC }
+NOT = { tag = LNG }
+NOT = { tag = SHU }
+NOT = { tag = CHC }
+NOT = { tag = HUA }
+NOT = { tag = NNG }
+NOT = { tag = JIN }
+NOT = { tag = MIN }
+NOT = { tag = YUE }
+
+}
+}
+
+}
+country_event = { id = sobempireevents.19980108} 
+
+  change_tag = MNG
+add_mandate = 5
+	}
+		option = {
+	 
+		name = "sobevents.123.b" #Ignore these barbarians
+trigger = {
+NOT = { exists  = QIN }
+	 OR = {
+	 ai = no
+	 AND = {
+	 ai = yes
+NOT = { tag = MNG }
+NOT = { tag = QIN }
+NOT = { tag = TNG }
+NOT = { tag = YAN }
+NOT = { tag = QIC }
+NOT = { tag = LNG }
+NOT = { tag = SHU }
+NOT = { tag = CHC }
+NOT = { tag = HUA }
+NOT = { tag = NNG }
+NOT = { tag = JIN }
+NOT = { tag = MIN }
+NOT = { tag = YUE }
+
+}
+}
+}
+country_event = { id = sobempireevents.19980108}
+  change_tag = QIN
+add_mandate = 5
+	}
+		option = {
+	 
+		name = "sobevents.123.c" #Ignore these barbarians
+trigger = {
+NOT = { exists  = TNG }
+	 OR = {
+	 ai = no
+	 AND = {
+	 ai = yes
+NOT = { tag = MNG }
+NOT = { tag = QIN }
+NOT = { tag = TNG }
+NOT = { tag = YAN }
+NOT = { tag = QIC }
+NOT = { tag = LNG }
+NOT = { tag = SHU }
+NOT = { tag = CHC }
+NOT = { tag = HUA }
+NOT = { tag = NNG }
+NOT = { tag = JIN }
+NOT = { tag = MIN }
+NOT = { tag = YUE }
+
+}
+}
+}
+country_event = { id = sobempireevents.19980108} 
+  change_tag = TNG
+add_mandate = 5
+	}
+		option = {
+	 
+		name = "sobevents.123.d" #Ignore these barbarians
+trigger = {
+NOT = { exists  = YAN }
+	 OR = {
+	 ai = no
+	 AND = {
+	 ai = yes
+NOT = { tag = MNG }
+NOT = { tag = QIN }
+NOT = { tag = TNG }
+NOT = { tag = YAN }
+NOT = { tag = QIC }
+NOT = { tag = LNG }
+NOT = { tag = SHU }
+NOT = { tag = CHC }
+NOT = { tag = HUA }
+NOT = { tag = NNG }
+NOT = { tag = JIN }
+NOT = { tag = MIN }
+NOT = { tag = YUE }
+
+}
+}
+}
+country_event = { id = sobempireevents.19980108} 
+  change_tag = YAN
+add_mandate = 5
+	}
+		option = {
+	 
+		name = "sobevents.123.e" #Ignore these barbarians
+trigger = {
+NOT = { exists  = QIC }
+	 OR = {
+	 ai = no
+	 AND = {
+	 ai = yes
+NOT = { tag = MNG }
+NOT = { tag = QIN }
+NOT = { tag = TNG }
+NOT = { tag = YAN }
+NOT = { tag = QIC }
+NOT = { tag = LNG }
+NOT = { tag = SHU }
+NOT = { tag = CHC }
+NOT = { tag = HUA }
+NOT = { tag = NNG }
+NOT = { tag = JIN }
+NOT = { tag = MIN }
+NOT = { tag = YUE }
+
+}
+}
+}
+country_event = { id = sobempireevents.19980108} 
+change_tag = QIC
+add_mandate = 5
+	}
+		option = {
+	 
+		name = "sobevents.123.f" #Ignore these barbarians
+trigger = {
+NOT = { exists  = LNG }
+	 OR = {
+	 ai = no
+	 AND = {
+	 ai = yes
+NOT = { tag = MNG }
+NOT = { tag = QIN }
+NOT = { tag = TNG }
+NOT = { tag = YAN }
+NOT = { tag = QIC }
+NOT = { tag = LNG }
+NOT = { tag = SHU }
+NOT = { tag = CHC }
+NOT = { tag = HUA }
+NOT = { tag = NNG }
+NOT = { tag = JIN }
+NOT = { tag = MIN }
+NOT = { tag = YUE }
+
+}
+}
+}
+country_event = { id = sobempireevents.19980108}
+  change_tag = LNG
+add_mandate = 5
+	}
+		option = {
+	 
+		name = "sobevents.123.g" #Ignore these barbarians
+trigger = {
+NOT = { exists  = SHU }
+	 OR = {
+	 ai = no
+	 AND = {
+	 ai = yes
+NOT = { tag = MNG }
+NOT = { tag = QIN }
+NOT = { tag = TNG }
+NOT = { tag = YAN }
+NOT = { tag = QIC }
+NOT = { tag = LNG }
+NOT = { tag = SHU }
+NOT = { tag = CHC }
+NOT = { tag = HUA }
+NOT = { tag = NNG }
+NOT = { tag = JIN }
+NOT = { tag = MIN }
+NOT = { tag = YUE }
+
+}
+}
+}
+country_event = { id = sobempireevents.19980108}
+  change_tag = SHU
+add_mandate = 5
+	}
+		option = {
+	 
+		name = "sobevents.123.h" #Ignore these barbarians
+trigger = {
+NOT = { exists  = CHC }
+	 OR = {
+	 ai = no
+	 AND = {
+	 ai = yes
+NOT = { tag = MNG }
+NOT = { tag = QIN }
+NOT = { tag = TNG }
+NOT = { tag = YAN }
+NOT = { tag = QIC }
+NOT = { tag = LNG }
+NOT = { tag = SHU }
+NOT = { tag = CHC }
+NOT = { tag = HUA }
+NOT = { tag = NNG }
+NOT = { tag = JIN }
+NOT = { tag = MIN }
+NOT = { tag = YUE }
+
+}
+}
+}
+country_event = { id = sobempireevents.19980108}
+ change_tag = CHC
+add_mandate = 5
+	}
+		option = {
+	 
+		name = "sobevents.123.i" #Ignore these barbarians
+trigger = {
+NOT = { exists  = HUA  }
+	 OR = {
+	 ai = no
+	 AND = {
+	 ai = yes
+NOT = { tag = MNG }
+NOT = { tag = QIN }
+NOT = { tag = TNG }
+NOT = { tag = YAN }
+NOT = { tag = QIC }
+NOT = { tag = LNG }
+NOT = { tag = SHU }
+NOT = { tag = CHC }
+NOT = { tag = HUA }
+NOT = { tag = NNG }
+NOT = { tag = JIN }
+NOT = { tag = MIN }
+NOT = { tag = YUE }
+
+}
+}
+}
+country_event = { id = sobempireevents.19980108} 
+  change_tag = HUA
+add_mandate = 5
+	}
+		option = {
+	 
+		name = "sobevents.123.j" #Ignore these barbarians
+trigger = {
+NOT = { exists  = NNG }
+	 OR = {
+	 ai = no
+	 AND = {
+	 ai = yes
+NOT = { tag = MNG }
+NOT = { tag = QIN }
+NOT = { tag = TNG }
+NOT = { tag = YAN }
+NOT = { tag = QIC }
+NOT = { tag = LNG }
+NOT = { tag = SHU }
+NOT = { tag = CHC }
+NOT = { tag = HUA }
+NOT = { tag = NNG }
+NOT = { tag = JIN }
+NOT = { tag = MIN }
+NOT = { tag = YUE }
+
+}
+}
+}
+country_event = { id = sobempireevents.19980108} 
+ change_tag = NNG
+add_mandate = 5
+	}
+		option = {
+	 
+		name = "sobevents.123.k" #Ignore these barbarians
+trigger = {
+NOT = { exists  = WUU }
+	 OR = {
+	 ai = no
+	 AND = {
+	 ai = yes
+NOT = { tag = MNG }
+NOT = { tag = QIN }
+NOT = { tag = TNG }
+NOT = { tag = YAN }
+NOT = { tag = QIC }
+NOT = { tag = LNG }
+NOT = { tag = SHU }
+NOT = { tag = CHC }
+NOT = { tag = HUA }
+NOT = { tag = NNG }
+NOT = { tag = JIN }
+NOT = { tag = MIN }
+NOT = { tag = YUE }
+
+}
+}
+}
+country_event = { id = sobempireevents.19980108}
+  change_tag = WUU
+add_mandate = 5
+	}
+		option = {
+	 
+		name = "sobevents.123.l" #Ignore these barbarians
+trigger = {
+NOT = { exists  = JIN }
+	 OR = {
+	 ai = no
+	 AND = {
+	 ai = yes
+NOT = { tag = MNG }
+NOT = { tag = QIN }
+NOT = { tag = TNG }
+NOT = { tag = YAN }
+NOT = { tag = QIC }
+NOT = { tag = LNG }
+NOT = { tag = SHU }
+NOT = { tag = CHC }
+NOT = { tag = HUA }
+NOT = { tag = NNG }
+NOT = { tag = JIN }
+NOT = { tag = MIN }
+NOT = { tag = YUE }
+
+}
+}
+}
+country_event = { id = sobempireevents.19980108}
+  change_tag = JIN
+add_mandate = 5
+	}
+		option = {
+	 
+		name = "sobevents.123.m" #Ignore these barbarians
+trigger = {
+NOT = { exists  = MIN }
+	 OR = {
+	 ai = no
+	 AND = {
+	 ai = yes
+NOT = { tag = MNG }
+NOT = { tag = QIN }
+NOT = { tag = TNG }
+NOT = { tag = YAN }
+NOT = { tag = QIC }
+NOT = { tag = LNG }
+NOT = { tag = SHU }
+NOT = { tag = CHC }
+NOT = { tag = HUA }
+NOT = { tag = NNG }
+NOT = { tag = JIN }
+NOT = { tag = MIN }
+NOT = { tag = YUE }
+
+}
+}
+}
+country_event = { id = sobempireevents.19980108}
+  change_tag = MIN
+add_mandate = 5
+	}
+		option = {
+	 
+		name = "sobevents.123.n" #Ignore these barbarians
+trigger = {
+NOT = { exists  = YUE }
+	 OR = {
+	 ai = no
+	 AND = {
+	 ai = yes
+NOT = { tag = MNG }
+NOT = { tag = QIN }
+NOT = { tag = TNG }
+NOT = { tag = YAN }
+NOT = { tag = QIC }
+NOT = { tag = LNG }
+NOT = { tag = SHU }
+NOT = { tag = CHC }
+NOT = { tag = HUA }
+NOT = { tag = NNG }
+NOT = { tag = JIN }
+NOT = { tag = MIN }
+NOT = { tag = YUE }
+
+}
+}
+}
+country_event = { id = sobempireevents.19980108} 
+ change_tag = YUE
+add_mandate = 5
+	}
+}
+country_event = {
+	id = sobchineseempire.927
+	title = "confucian_events.16.t"
+	desc = "confucian_events.16.d"
+	picture = IMPERIAL_SEAL_eventPicture
+		hidden = yes
+	trigger = {
+has_country_flag =  celestial_client_culture_new
+NOT = { OR = {culture_group = east_asian  culture_group = chinese_group }}
+	}
+	
+	mean_time_to_happen = {
+		days =1
+	}
+	
+	option = {
+	
+		name = "confucian_events.16.a" #Ignore these barbarians
+ clr_country_flag = celestial_client_culture_new
+	}
+}
+country_event = {
+	id = sobchineseempire.1111
+	title = celestial_empire_events.1.t
+	desc = celestial_empire_events.1.d
+	picture = SUFFERING_CHINESE_VILLAGE_eventPicture
+	
+	is_triggered_only = yes
+	
+	major = yes
+	
+	trigger = {
+		FROM = { is_emperor_of_china = yes }
+	}
+	
+	option = {
+		name = "celestial_empire_events.1.a"
+		add_prestige = 20
+		add_dip_power = 50
+		add_mil_power = 50
+		add_adm_power = 50
+	}
+}
+
+
+country_event = {
+	id = sobchineseempire.3253
+	title = "sobevents.5001.t"
+	desc = "sobevents.5001.d"
+	picture = IMPERIAL_SEAL_eventPicture
+	is_triggered_only = yes
+		hidden = yes
+	trigger = {
+	
+   is_emperor_of_china = yes
+   NOT = { has_country_flag = sob_tested_waizu_rulership_system}
+   NOT = { any_subject_country = {
+           tag = XZY
+   
+   }}
+   NOT = { OR = {culture_group = east_asian  culture_group = chinese_group }}
+	}
+
+
+	
+	
+	mean_time_to_happen = {
+		days =1
+	}
+
+	option = {
+		name = "sobevents.5001.b" #Ignore these barbarians
+
+		
+		
+				if = {
+		limit = {
+		    is_emperor_of_china = yes
+								  
+				    NOT = {  has_reform =  celestial_empire  }
+				  NOT = {   has_estate = estate_sobshishen }
+				 
+			   NOT = { any_subject_country = {
+           tag = XZY
+   
+   }}
+			NOT = { OR = {culture_group = east_asian  culture_group = chinese_group } }
+		}
+		set_emperor_of_china = XCH
+		}
+			
+			add_prestige = 100
+			add_country_modifier = {
+			 name = conquerors_presence
+			 duration = -1
+			}
+			set_country_flag = conquer_china_one
+	
+	}
+	
+
+}
+#####################################RE
+
+
+
+#######################################
+country_event = {
+	id = sobchineseempire.10086119527
+	title = "sobchineseempire.10086119527.t"
+	desc = "sobchineseempire.10086119527.d"
+	picture = GIFTS_TO_EMPEROR_eventPicture
+	is_triggered_only = yes
+
+	trigger = {
+		ai = no
+	}
+	
+	option = {
+		name = "sobchineseempire.10086119527.c"
+		clr_country_flag = sob_religious_ideas_off
+		clr_country_flag = sob_religious_new_system_subject
+		set_country_flag = sob_religious_ideas_off
+		set_country_flag = sob_religion_law_religion_off
+		
+	}
+	
+	option = {
+		name = "sobchineseempire.10086119527.b"
+    		clr_country_flag = sob_religious_ideas_off
+		clr_country_flag = sob_religious_new_system_subject
+		clr_country_flag = sob_religion_law_religion_off
+		
+	}
+	
+					option = {
+		name = "sobevents.9552926.exit"
+	  
+	}
+}
+
+country_event = {
+	id = sobchineseempire.920
+	title = "confucian_events.920.t"
+	desc = "confucian_events.920.d"
+	picture = GIFTS_TO_EMPEROR_eventPicture
+	is_triggered_only = yes
+
+	trigger = {
+	      
+		ai = no
+
+	}
+	
+	option = {
+		name = "confucian_events.920.b"
+		set_global_flag = ai_can_tributary_state
+        clr_global_flag =  ai_no_tributary_state
+		
+	}
+	option = {
+		name = "confucian_events.921.b"
+		set_global_flag = ai_no_tributary_state
+		clr_global_flag =  ai_can_tributary_state
+	}
+					option = {
+		name = "sobevents.9552926.exit"
+	  
+	}
+}
+country_event = {
+	id = sobchineseempire.90007
+	title = "confucian_events.90007.t"
+	desc = "confucian_events.90007.d"
+	picture = GIFTS_TO_EMPEROR_eventPicture
+	is_triggered_only = yes
+
+	trigger = {
+	      
+		ai = no
+
+	}
+	
+	option = {
+		name = "confucian_events.90007.a"
+		set_global_flag = sob_enable_new_one
+        clr_global_flag =  sob_no_enable_new_one
+		
+	}
+	option = {
+		name = "confucian_events.90007.b"
+		set_global_flag = sob_no_enable_new_one
+		clr_global_flag =  sob_enable_new_one
+	}
+					option = {
+		name = "sobevents.9552926.exit"
+	  
+	}
+}
+country_event = {
+	id = sobchineseempire.921
+	title = "confucian_events.921.t"
+	desc = "confucian_events.921.d"
+	picture = GIFTS_TO_EMPEROR_eventPicture
+	
+is_triggered_only = yes
+	trigger = {
+	      
+		ai = no
+
+	}
+	
+	option = {
+		name = "confucian_events.923.b"
+set_global_flag = celetial_empire_tri_not_take
+clr_global_flag = celetial_empire_tri_take
+clr_global_flag = sob_celetial_empire_new_tri
+		
+	}
+			option = {
+		name = "confucian_events.922.b"
+clr_global_flag = celetial_empire_tri_not_take
+clr_global_flag = sob_celetial_empire_new_tri
+set_global_flag = celetial_empire_tri_take
+		
+	}
+	
+				option = {
+		name = "soboption.922.c"
+	clr_global_flag = celetial_empire_tri_not_take
+set_global_flag = sob_celetial_empire_new_tri
+clr_global_flag = celetial_empire_tri_take
+	}
+	
+					option = {
+		name = "sobevents.9552926.exit"
+	  
+	}
+
+}
+country_event = {
+	id = sobchineseempire.106
+	title = "flavor_mng.EVTNAME6"
+	desc = "flavor_mng.EVTDESC6"
+	picture = REFORM_eventPicture
+	
+	trigger = {
+		OR = {culture_group = east_asian  culture_group = chinese_group }
+		is_year = 1558
+		NOT = { has_country_modifier = perfecting_the_musket }
+	}
+	
+	mean_time_to_happen = {
+		months = 50
+	}
+	
+	option = {
+		name = "flavor_mng.EVTOPTA6" #Go with the reforms
+		add_mil_power = 100
+		add_country_modifier = {
+			name = perfecting_the_musket
+			duration = -1
+		}
+		if= {
+		limit = { ai = yes}
+				add_country_modifier = {
+			name = military_reform
+			duration = -1
+		}
+		
+		}
+	}
+}
+
+country_event = {
+	id = sobchineseempire.10086029
+	title = "sobchineseempire.10086029.t"
+	desc = "sobchineseempire.10086029.d"
+	picture = REFORM_eventPicture
+	
+ is_triggered_only = yes
+	
+	option = {
+		name = "sobchineseempire.10086029.a" #Go with the reforms
+		clr_country_flag = sob_nongmin_heir
+		define_heir = {
+    male = yes
+    dynasty = ROOT
+    claim = 100
+         }
+	}
+}
+
+country_event = {
+	id = sobchineseempire.10086030
+	title = "sobchineseempire.10086030.t"
+	desc = "sobchineseempire.10086030.d"
+	picture = REFORM_eventPicture
+	
+	trigger = {
+	any_province = {
+	superregion = china_superregion
+	NOT = { owner = { OR = {culture_group = east_asian  culture_group = chinese_group }} }
+	}
+				calc_true_if = {
+					all_province = {
+				superregion = china_superregion
+						owner = { OR = {culture_group = east_asian  culture_group = chinese_group }
+						OR = {
+						is_subject = no
+						overlord = {
+						OR = {culture_group = east_asian  culture_group = chinese_group }
+						}
+						}
+						
+						}
+					}
+					amount = 35 # Taiwan is three provinces, so at least one non-Taiwanese province must be taken
+				}
+			OR = {culture_group = east_asian  culture_group = chinese_group }
+			is_emperor_of_china = no
+			NOT = {
+			any_country = {
+			is_emperor_of_china = yes
+			num_of_cities = 1
+			
+			}
+			
+			}
+	capital_scope = { superregion = china_superregion}
+	is_subject = no
+	is_at_war = no
+	OR=  {
+	ai = no
+	NOT = {	any_country = {
+	ai = no
+	is_subject = no
+				OR = {culture_group = east_asian  culture_group = chinese_group }
+	capital_scope = { superregion = china_superregion}
+	
+	}
+	}
+	}
+	
+	any_country = {
+	is_subject = no
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+	value = 35
+	superregion = china_superregion
+	
+	}
+	is_at_war = no
+				OR = {culture_group = east_asian  culture_group = chinese_group }
+	capital_scope = { superregion = china_superregion}
+	
+	}
+	}
+	mean_time_to_happen = {
+	months = 1
+	}
+	option = {
+		name = "sobchineseempire.10086030.a" #Go with the reforms
+		random_country ={
+		limit = {capital_scope = { superregion = china_superregion}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+	value = 35
+	superregion = china_superregion
+	
+	}
+		num_of_cities = 1
+		is_at_war = no
+		is_subject = no
+		OR = {culture_group = east_asian  culture_group = chinese_group }
+		}
+		set_emperor_of_china = THIS
+		dismantle_empire_of_china = no
+		clr_global_flag = empire_of_china_dismantled
+		}
+		
+		}
+	
+}
+country_event = {
+	id = sobchineseempire.10997
+	title = "flavor_mng.ICE2"
+	desc = "flavor_mng.ICE3"
+	picture = RELIGION_eventPicture
+
+	trigger = {
+		OR = {culture_group = east_asian  culture_group = chinese_group }
+        is_emperor_of_china = yes
+		
+		has_country_modifier = chinese_pinyin
+		NOT = {has_global_flag = han_unified }
+
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "flavor_mng.EVTOPTA6" #Go with the reforms
+		every_owned_province = {
+		limit = { OR = {culture_group = east_asian  culture_group = chinese_group } }
+        change_culture = sob_celestial_han
+		}
+		set_global_flag = han_unified
+		change_primary_culture = sob_celestial_han
+	}
+}
+
+country_event = {
+	id = sobchineseempire.10994
+	title = "flavor_mng.ICE2"
+	desc = "flavor_mng.ICE3"
+	picture = RELIGION_eventPicture
+
+	trigger = {
+		OR = {culture_group = east_asian  culture_group = chinese_group }
+		OR = {
+        has_global_flag = han_unified
+		has_reform = sob_peace_reform
+			has_country_modifier = chinese_pinyin
+		}
+				any_owned_province = {
+	      OR = {culture_group = east_asian  culture_group = chinese_group } 
+        NOT = {culture = sob_celestial_han}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "flavor_mng.EVTOPTA6" #Go with the reforms
+		every_owned_province = {
+		limit = {OR = {culture_group = east_asian  culture_group = chinese_group }}
+        change_culture = sob_celestial_han
+		}
+		change_primary_culture = sob_celestial_han
+		set_global_flag = han_unified
+	}
+}
+
+
+country_event = {
+	id = sobchineseempire.929
+	title = "confucian_events.16.ad"
+	desc = "confucian_events.16.a"
+	picture = GIFTS_TO_EMPEROR_eventPicture
+	
+	hidden = yes
+
+	trigger = {
+	OR = {culture_group = east_asian  culture_group = chinese_group } 
+	OR = {
+		any_owned_province = {
+	   has_province_modifier = sob_none_ap_culture
+		OR = {culture_group = east_asian  culture_group = chinese_group } 
+		}
+		AND = {
+						any_owned_province = {
+	   has_province_modifier = sob_none_ap_culture
+		}
+		government = republic
+		}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "confucian_events.16.a"
+			every_owned_province = {
+	limit = {
+	OR = {
+	AND = {
+	OR = {culture_group = east_asian  culture_group = chinese_group } 
+ has_province_modifier = sob_none_ap_culture
+	}
+	}
+	}
+	remove_province_modifier = sob_none_ap_culture
+	
+	}
+	if = {
+	limit = { government = republic}
+				every_owned_province = {
+
+	remove_province_modifier = sob_none_ap_culture
+	
+	}
+	}
+	}
+}
+country_event = {
+	id = sobchineseempire.984
+	title = "confucian_events.16.ae"
+	desc = "confucian_events.16.a"
+	picture = GIFTS_TO_EMPEROR_eventPicture
+	
+	hidden = yes
+
+	trigger = {
+	   NOT = { OR = {culture_group = east_asian  culture_group = chinese_group } }
+		any_owned_province = {
+	    OR = {culture_group = east_asian  culture_group = chinese_group }
+		}
+	}
+	
+
+	mean_time_to_happen = {
+		years = 50
+	}
+	
+	option = {
+		name = "confucian_events.16.a"
+			every_owned_province = {
+	limit = {
+       OR = {culture_group = east_asian  culture_group = chinese_group }
+	}
+	add_nationalism = 10
+	}
+
+	}
+}
+
+country_event = {
+	id = sobchineseempire.930
+	title = "confucian_events.16.af"
+	desc = "confucian_events.16.a"
+	picture = GIFTS_TO_EMPEROR_eventPicture
+	
+	hidden = yes
+
+	trigger = {
+	   NOT = { OR = {culture_group = east_asian  culture_group = chinese_group } }
+		any_owned_province = {
+	    OR = {culture_group = east_asian  culture_group = chinese_group }
+		NOT = {  has_province_modifier = sob_none_ap_culture }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "confucian_events.16.a"
+			every_owned_province = {
+	limit = {
+       OR = {culture_group = east_asian  culture_group = chinese_group }
+	   NOT = {  has_province_modifier = sob_none_ap_culture }
+	}
+			add_province_modifier = {
+					name = sob_none_ap_culture
+					duration = -1
+				}
+	}
+	}
+}
+
+country_event = {
+	id = sobchineseempire.932
+	title = "confucian_events.16.ag"
+	desc = "confucian_events.16.a"
+	picture = GIFTS_TO_EMPEROR_eventPicture
+	
+	hidden = yes
+
+	trigger = {
+	    OR = {culture_group = east_asian  culture_group = chinese_group } 
+		any_owned_province = {
+		OR = {
+	    OR = {culture_group = east_asian  culture_group = chinese_group }
+	   has_owner_accepted_culture = yes
+	   }
+		 has_province_modifier = sob_none_ap_culture 
+		}
+	}
+	
+	
+	
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "confucian_events.16.a"
+			every_owned_province = {
+	limit = {
+		OR = {
+	    OR = {culture_group = east_asian  culture_group = chinese_group }
+	   has_owner_accepted_culture = yes
+	   }
+	has_province_modifier = sob_none_ap_culture 
+	}
+			remove_province_modifier = sob_none_ap_culture
+	}
+	}
+}
+
+
+
+country_event = {
+	id = sobchineseempire.7799
+	title = "confucian_events.16.ah"
+	desc = "confucian_events.16.a"
+	picture = GIFTS_TO_EMPEROR_eventPicture
+	
+	hidden = yes
+
+	trigger = {
+     is_emperor_of_china = yes
+		has_global_flag = celetial_empire_tri_not_take
+		any_subject_country = {
+is_part_of_hre = no
+is_subject_of_type = tributary_state
+OR = {
+NOT = {  is_neighbor_of = ROOT  }
+NOT = { any_owned_province = {
+ any_neighbor_province = {
+owned_by = ROOT
+NOT = { any_province = {area = PREV NOT = {owned_by = ROOT}}}
+}
+}
+
+
+}
+}
+
+						}
+	}
+	
+
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "confucian_events.17.b"
+		every_subject_country = {
+						limit = {
+		is_part_of_hre = no
+is_subject_of_type = tributary_state
+ NOT = { is_neighbor_of = ROOT }
+ NOT = { any_owned_province = {
+ any_neighbor_province = {
+owned_by = ROOT
+NOT = { any_province = {area = PREV NOT = {owned_by = ROOT}}}
+}
+}
+
+
+}
+						}
+						ROOT = {
+						create_subject = {
+		subject_type = tributary_state_2
+		subject = PREV}
+						}
+			
+						}
+	}
+
+}
+
+
+
+country_event = {
+	id = sobchineseempire.7743
+	title = "confucian_events.16.ai"
+	desc = "confucian_events.16.a"
+	picture = GIFTS_TO_EMPEROR_eventPicture
+	
+	hidden = yes
+
+	trigger = {
+   NOT = { has_global_flag = celetial_empire_tri_not_take}
+		any_subject_country = {
+
+is_subject_of_type = tributary_state_2
+
+
+						}
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "confucian_events.17.b"
+			every_subject_country = {
+						limit = {
+		
+is_subject_of_type = tributary_state_2
+						}
+						ROOT = {
+						create_subject = {
+		subject_type = tributary_state
+		subject = PREV}
+						}
+			
+						}
+	}
+
+}
+
+country_event = {
+	id = sobchineseempire.7780
+	title = "confucian_events.16.aj"
+	desc = "confucian_events.16.a"
+	picture = GIFTS_TO_EMPEROR_eventPicture
+	
+	hidden = yes
+
+	trigger = {
+		any_subject_country = {
+
+is_subject_of_type = tributary_state_2
+is_neighbor_of = ROOT 
+ any_owned_province = {
+ any_neighbor_province = {
+owned_by = ROOT
+NOT = { any_province = {area = PREV NOT = {owned_by = ROOT}}}
+}
+}
+
+
+						}
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "confucian_events.17.b"
+			every_subject_country = {
+						limit = {
+		
+is_subject_of_type = tributary_state_2
+   is_neighbor_of = ROOT 
+ any_owned_province = {
+ any_neighbor_province = {
+owned_by = ROOT
+NOT = { any_province = {area = PREV NOT = {owned_by = ROOT}}}
+}
+}
+
+						}
+						ROOT = {
+						create_subject = {
+		subject_type = tributary_state
+		subject = PREV}
+						}
+			
+						}
+	}
+
+}
+country_event = {
+	id = sobchineseempire.978
+	title = "confucian_events.16.ak"
+	desc = "confucian_events.16.a"
+	picture = GIFTS_TO_EMPEROR_eventPicture
+	
+	hidden = yes
+
+	trigger = {
+		any_subject_country = {
+					OR = {
+is_subject_of_type = tributary_state
+is_subject_of_type =  xuanweisi_state
+is_subject_of_type = sob_tributary_state_3
+is_subject_of_type = tributary_state_2
+}
+NOT = { has_reform = sob_trading_city}
+	NOT = {	has_reform = sob_jiaoqu_city}
+		NOT = {has_reform = sob_jiaoqu_con_reform}
+		NOT = {has_reform = sob_merchants_reform}
+		NOT = {has_reform = sob_trading_city}
+						OR = {culture_group = east_asian  culture_group = chinese_group }
+						}
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "confucian_events.17.b"
+		every_subject_country = {
+						limit = {
+					OR = {
+is_subject_of_type = tributary_state
+is_subject_of_type =  xuanweisi_state
+is_subject_of_type = sob_tributary_state_3
+is_subject_of_type = tributary_state_2
+}
+NOT = { has_reform = sob_trading_city}
+	NOT = {	has_reform = sob_jiaoqu_city}
+		NOT = {has_reform = sob_jiaoqu_con_reform}
+		NOT = {has_reform = sob_merchants_reform}
+		NOT = {has_reform = sob_trading_city}
+OR = {culture_group = east_asian  culture_group = chinese_group }
+						}
+						ROOT = {
+						create_subject = {
+		subject_type = celestial_client_state
+		subject = PREV}
+						}
+						set_country_flag = celestial_client_state_1
+						}
+	}
+
+}
+
+country_event = {
+	id = sobchineseempire.7766
+	title = "confucian_events.16.al"
+	desc = "confucian_events.16.a"
+	picture = GIFTS_TO_EMPEROR_eventPicture
+	
+	hidden = yes
+
+	trigger = {
+	has_global_flag = chinese_empire_unified_law
+		any_subject_country = {
+		OR = {
+is_subject_of_type = tributary_state
+is_subject_of_type = sob_tributary_state_3
+}
+					NOT = {	OR = {culture_group = east_asian  culture_group = chinese_group }}
+						}
+	}
+	
+
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "confucian_events.17.b"
+		every_subject_country = {
+						limit = {
+						OR = {
+is_subject_of_type = tributary_state
+is_subject_of_type = sob_tributary_state_3
+}
+
+NOT = {OR = {culture_group = east_asian  culture_group = chinese_group }}
+						}
+						ROOT = {
+						create_subject = {
+		subject_type = xuanweisi_state
+		subject = PREV}
+						}
+
+						}
+	}
+
+}
+country_event = {
+	id = sobchineseempire.960
+	title = "confucian_events.16.am"
+	desc = "confucian_events.16.a"
+	picture = GIFTS_TO_EMPEROR_eventPicture
+	
+	hidden = yes
+
+	trigger = {
+
+has_country_flag = celestial_client_state_2
+NOT = { has_country_flag = celestial_client_state_3}
+is_subject = no
+any_country = 
+{is_emperor_of_china = yes
+ NOT = { war_with = ROOT}
+}
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "confucian_events.17.b"
+		       clr_country_flag = celestial_client_state_1
+			  set_country_flag = celestial_client_state_2
+						random_country = {
+						limit = {
+						is_emperor_of_china = yes
+						OR = {culture_group = east_asian  culture_group = chinese_group }
+						}
+						create_subject = {
+		subject_type = zhuhou_state
+		subject = ROOT}
+						}
+	}
+
+}
+
+country_event = {
+	id = sobchineseempire.6012
+	title = "confucian_events.16.an"
+	desc = "confucian_events.16.a"
+	picture = GIFTS_TO_EMPEROR_eventPicture
+	
+	hidden = yes
+
+	trigger = {
+
+has_country_modifier = loyal_from_empire
+OR = {
+is_subject_of_type = tributary_state
+is_subject_of_type = sob_tributary_state_3
+is_subject_of_type = tributary_state_2
+}
+	}
+	
+
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "confucian_events.17.b"
+		
+						random_country = {
+						limit = {
+						is_emperor_of_china = yes
+						OR = {culture_group = east_asian  culture_group = chinese_group }
+						}
+						create_subject = {
+		subject_type = tusi_state
+		subject = ROOT}
+						}
+				
+	}
+
+}
+
+country_event = {
+	id = sobchineseempire.6013
+	title = "confucian_events.16.ao"
+	desc = "confucian_events.16.a"
+	picture = GIFTS_TO_EMPEROR_eventPicture
+	
+	hidden = yes
+
+	trigger = {
+is_at_war = no
+NOT = {has_country_modifier = loyal_from_empire}
+is_subject_of_type = tusi_state
+	}
+	
+
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "confucian_events.17.b"
+		
+						random_country = {
+						limit = {
+						is_emperor_of_china = yes
+						OR = {culture_group = east_asian  culture_group = chinese_group }
+						}
+						create_subject = {
+		subject_type = tributary_state
+		subject = ROOT}
+						}
+	}
+
+}
+country_event = {
+	id = sobchineseempire.951
+	title = "confucian_events.16.aa"
+	desc = "confucian_events.16.a"
+	picture = GIFTS_TO_EMPEROR_eventPicture
+	
+	hidden = yes
+
+	trigger = {
+	always = no
+           is_subject = yes
+		   overlord = {
+		   OR = {culture_group = east_asian  culture_group = chinese_group }
+		   any_owned_province = {
+		   is_core = ROOT
+		   }
+		   }
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "confucian_events.17.b"
+		      overlord = {
+		   every_owned_province = {
+		   remove_core = ROOT
+		   }
+		   }
+	}
+
+}
+
+country_event = {
+	id = sobchineseempire.959
+	title = "confucian_events.16.ab"
+	desc = "confucian_events.16.a"
+	picture = GIFTS_TO_EMPEROR_eventPicture
+	
+	hidden = yes
+
+	trigger = {
+
+has_country_flag = celestial_client_state_1
+is_subject = no
+any_country = 
+{is_emperor_of_china = yes
+ war_with = ROOT
+}
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "confucian_events.17.b"
+		
+              clr_country_flag = celestial_client_state_1
+			  set_country_flag = celestial_client_state_2
+	}
+
+}
+country_event = {
+	id = sobchineseempire.977
+	title = "confucian_events.16.ac"
+	desc = "confucian_events.16.a"
+	picture = GIFTS_TO_EMPEROR_eventPicture
+	
+	hidden = yes
+
+	trigger = {
+
+has_country_flag = celestial_client_state_1
+is_subject = no
+any_country = 
+{is_emperor_of_china = yes
+ NOT = { war_with = ROOT}
+}
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "confucian_events.17.b"
+								random_country = {
+						limit = {
+						is_emperor_of_china = yes
+						OR = {culture_group = east_asian  culture_group = chinese_group }
+						}
+						create_subject = {
+		subject_type = celestial_client_state
+		subject = ROOT}
+						}
+	}
+
+}
+
+
+
+

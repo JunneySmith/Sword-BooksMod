@@ -1,0 +1,593 @@
+########################################
+# Events for Art of War patch
+#
+# written by Rufus Tronde
+########################################
+
+namespace = sob_aow_events
+
+
+# Heretics Encroach On Our Land
+
+
+# The Cause of the Protestant Plague
+
+# The Cause of the Calvinist Plague
+
+# [From.GetName] Confronts Us About Rebels
+country_event = {
+	id = sob_aow_events.39
+	title = "aow_events.39.t"
+	desc = "aow_events.39.d"
+	picture = DIPLOMACY_eventPicture
+
+	is_triggered_only = yes
+
+	# Cuius regio, eius religio. They should respect the will of their rulers.
+	option = {
+		name = "aow_events.39.a"
+		add_opinion = {
+			who = FROM
+			modifier = renounced_heretic_rebels
+		}
+		add_country_modifier = {
+			name = "abadoned_religious_rebels"
+			duration = 1825
+		}
+		FROM = {
+			country_event = { id = sob_aow_events.40 days = 30 }
+		}
+	}
+
+	# We demand that you cease your oppression of these poor [Root.Religion.GetName] subjects!
+	option = {
+		name = "aow_events.39.b"
+		add_prestige = 15
+		add_opinion = {
+			who = FROM
+			modifier = defended_heretic_rebels
+		}
+		FROM = {
+			country_event = { id = sob_aow_events.41 days = 30 }
+		}
+	}
+
+	# We will support the faithful against you, openly and gladly!
+	option = {
+		name = "aow_events.39.c"
+		add_years_of_income = -0.2
+		add_opinion = {
+			who = FROM
+			modifier = roused_heretic_rebels
+		}
+		FROM = {
+			country_event = { id = sob_aow_events.42 days = 30 }
+		}
+	}
+}
+
+# [From.GetName] Renounce [From.Religion.GetName] Rebels
+country_event = {
+	id = sob_aow_events.40
+	title = "aow_events.40.t"
+	desc = "aow_events.40.d"
+	picture = RELIGIOUS_CONVERSION_eventPicture
+
+	is_triggered_only = yes
+
+	# Let us hope this is not duplicitous talk.
+	option = {
+		name = "aow_events.40.a"
+		add_prestige = 15
+	}
+}
+
+# [From.GetName] Defend [From.Religion.GetName] Rebels
+country_event = {
+	id = sob_aow_events.41
+	title = "aow_events.41.t"
+	desc = "aow_events.41.d"
+	picture = RELIGIOUS_TURMOIL_eventPicture
+
+	is_triggered_only = yes
+
+	# 
+	option = {
+		name = "aow_events.41.a"
+		add_prestige = -10
+	}
+}
+
+# [From.GetName] Fund [From.Religion.GetName] Rebels!
+country_event = {
+	id = sob_aow_events.42
+	title = "aow_events.42.t"
+	desc = "aow_events.42.d"
+	picture = RELIGIOUS_TURMOIL_eventPicture
+
+	is_triggered_only = yes
+
+	# There can be no absolution for those who persist in sin.
+	option = {
+		name = "aow_events.42.a"
+		if = {
+			limit = {
+				FROM = { religion = protestant }
+			}
+			random_owned_province = {
+				limit = { likely_rebels = protestant_rebels }
+				create_revolt = 2
+			}
+		}
+		if = {
+			limit = {
+				FROM = { religion = reformed }
+			}
+			random_owned_province = {
+				limit = { likely_rebels = reformed_rebels }
+				create_revolt = 2
+			}
+		}
+		add_casus_belli = {
+			target = FROM
+			type = cb_insult
+			months = 12
+		}
+	}
+}
+
+# Cardinal Events
+
+# Cardinal Across the Border
+country_event = {
+	id = sob_aow_events.43
+	title = "aow_events.43.t"
+	desc = "aow_events.43.d"
+	picture = RELIGION_eventPicture
+
+	trigger = {
+
+		religion = sob_catholic
+		NOT = { tag = XTD }
+		NOT = { num_of_cardinals = 7 }
+		any_owned_province = {
+			development = 10
+			has_cardinal = no
+			religion = sob_catholic
+			any_neighbor_province = {
+				has_cardinal = yes
+				NOT = { owned_by = ROOT }
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 480
+		modifier = {
+			factor = 1.2
+			num_of_cardinals = 5
+		}
+	}
+
+	immediate = {
+		check_if_non_state_advisor_effect = { #Hidden, must be followed by erase_advisor_flags_effect
+			chance_of_primary = 75 #Not percentages!
+			chance_of_tertiary = 5
+			chance_of_secondary = 25
+		}
+	}
+	
+	# 
+	option = {
+		name = "aow_events.43.a"
+		add_years_of_income = -0.05
+		add_corruption = 0.5
+		random_owned_province = {
+			limit = {
+				has_cardinal = no
+				religion = sob_catholic
+				development = 10
+				any_neighbor_province = {
+					has_cardinal = yes
+					NOT = { owned_by = ROOT }
+				}
+			}
+			add_cardinal = yes
+			random_neighbor_province = {
+				limit = {
+					has_cardinal = yes
+					NOT = { owned_by = ROOT }
+				}
+				remove_cardinal = yes
+				random = {
+					chance = 50
+						hidden_effect = {
+							province_event = {
+								id = sob_aow_events.44
+								days = 7
+							}
+						}
+					owner = {
+						tooltip = {
+							add_casus_belli = {
+								target = ROOT
+								type = cb_insult
+								months = 32
+							}
+							add_opinion = {
+								who = ROOT
+								modifier = bribed_cardinal
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "aow_events.43.b"
+		generate_advisor_of_type_and_semi_random_religion_effect = {
+			advisor_type=spymaster
+			advisor_type_if_not_state=spymaster
+			scaled_skill = yes
+			discount=yes
+		}
+	}
+	after = {
+		erase_advisor_flags_effect = yes
+	}
+}
+
+# Cardinal Bribed to Move
+province_event = {
+	id = sob_aow_events.44
+	title = "aow_events.44.t"
+	desc = "aow_events.44.d"
+	picture = CORRUPTION_eventPicture
+
+	is_triggered_only = yes
+
+	# 
+	option = {
+		name = "aow_events.44.a"
+		owner = {
+			add_casus_belli = {
+				target = FROM
+				type = cb_insult
+				months = 32
+			}
+			add_corruption = 1
+			add_opinion = {
+				who = FROM
+				modifier = bribed_cardinal
+			}
+		}
+	}
+}
+
+# Thoughts of Heresy
+province_event = {
+	id = sob_aow_events.45
+	title = "aow_events.45.t"
+	desc = "aow_events.45.d"
+	picture = PRAYING_eventPicture
+
+	trigger = {
+		has_cardinal = yes
+		any_neighbor_province = {
+			NOT = { religion = sob_catholic }
+			religion_group = christian
+		}
+	}
+
+	is_mtth_scaled_to_size = 1
+	
+	mean_time_to_happen = {
+		months = 480
+	}
+
+	# 
+	option = {
+		name = "aow_events.45.a"
+		owner = {
+			add_years_of_income = -0.1
+		}
+			random = {
+				chance = 40
+				province_event = {
+					id = sob_aow_events.46
+					days = 180
+					tooltip = "aow_events.45.a.tt"
+				}
+			}
+
+	}
+
+	option = {
+		name = "aow_events.45.b"
+		remove_cardinal = yes
+	}
+}
+
+# Pope Discovers Duplicity
+province_event = {
+	id = sob_aow_events.46
+	title = "aow_events.46.t"
+	desc = "aow_events.46.d"
+	picture = POPE_PREACHING_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		exists = PAP
+	}
+
+	# 
+	option = {
+		name = "aow_events.46.a"
+		PAP = {
+			add_opinion = {
+				who = ROOT
+				modifier = bribed_cardinal
+			}
+		}
+	}
+}
+
+# Cardinal Distrusts Heathens
+province_event = {
+	id = sob_aow_events.47
+	title = "aow_events.47.t"
+	desc = "aow_events.47.d"
+	picture = RELIGIOUS_TURMOIL_eventPicture
+
+	trigger = {
+		has_cardinal = yes
+		any_neighbor_province = {
+			NOT = { religion_group = christian }
+		}
+		NOT = { owner = { has_country_modifier = distrusts_heathens } }
+	}
+
+	mean_time_to_happen = {
+		months = 480
+	}
+
+	# 
+	option = {
+		name = "aow_events.47.a"
+		owner = {
+			add_country_modifier = {
+				name = "distrusts_heathens"
+				duration = 1825
+			}
+		}
+	}
+
+	option = {
+		name = "aow_events.47.b"
+		remove_cardinal = yes
+	}
+}
+
+# Contacts in the Holy See
+country_event = {
+	id = sob_aow_events.48
+	title = "aow_events.48.t"
+	desc = "aow_events.48.d"
+	picture = RELIGION_eventPicture
+
+	trigger = {
+		religion = sob_catholic
+		NOT = { tag = XTD }
+		OR = {
+			employed_advisor = {
+				type = theologian
+				religion = sob_catholic
+			}
+			employed_advisor = {
+				type = inquisitor
+				religion = sob_catholic
+			}
+			NOT = { num_of_cardinals = 1 }
+		}
+		NOT = { num_of_cardinals = 7 }
+		NOT = { total_number_of_cardinals = 49 }
+		any_owned_province = {
+			development = 10
+ religion = sob_catholic
+			has_cardinal = no
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 480
+	}
+
+	# 
+	option = {
+		name = "aow_events.48.a"
+		add_adm_power = -100
+		random_owned_province = {
+			limit = {
+				development = 10
+			religion = sob_catholic
+				has_cardinal = no
+			}
+			add_cardinal = yes
+		}
+	}
+
+	option = {
+		name = "aow_events.48.b"
+		add_adm_power = 100
+	}
+}
+
+# Cardinal Minister
+country_event = {
+	id = sob_aow_events.49
+	title = "aow_events.49.t"
+	desc = "aow_events.49.d"
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		NOT = { has_country_modifier = cardinal_in_administration }
+		num_of_cardinals = 1
+	}
+
+	mean_time_to_happen = {
+		months = 480
+	}
+
+	# 
+	option = {
+		name = "aow_events.49.a"
+		if = {
+			limit = {
+				has_estate = estate_church
+				NOT = {
+					has_estate_influence_modifier = {
+						estate = estate_church
+						modifier = EST_VAL_CARDINAL_IN_ADMINISTRATION
+					}
+				}
+			}
+			add_estate_influence_modifier = {
+				estate = estate_church
+				desc = EST_VAL_CARDINAL_IN_ADMINISTRATION
+				influence = 5
+				duration = 7300
+			}
+		}
+		add_country_modifier = {
+			name = "cardinal_in_administration"
+			duration = 7300
+		}
+	}
+
+	option = {
+		name = "aow_events.49.b"
+		add_prestige = 10
+	}
+}
+
+# Cardinal's Policies Upset Nobles
+country_event = {
+	id = sob_aow_events.50
+	title = "aow_events.50.t"
+	desc = "aow_events.50.d"
+	picture = REFORM_eventPicture
+
+	trigger = {
+		has_country_modifier = cardinal_in_administration
+		NOT = { has_country_modifier = centralization_modifier }
+		num_of_cardinals = 1
+	}
+
+	mean_time_to_happen = {
+		months = 1200
+	}
+
+	# 
+	option = {
+		name = "aow_events.50.a"
+		add_country_modifier = {
+			name = "centralization_modifier"
+			duration = 3650
+		}
+		random_owned_province = {
+			limit = {
+				any_neighbor_province = {
+					is_capital = yes
+					owned_by = ROOT
+				}
+			}
+			spawn_rebels = {
+				type = noble_rebels
+				size = 2
+			}
+		}
+	}
+
+	#
+	option = {
+		name = "aow_events.50.b"
+		remove_country_modifier = cardinal_in_administration
+		random_owned_province = {
+			limit = { has_cardinal = yes }
+			remove_cardinal = yes
+		}
+	}
+}
+
+# Cardinal Sins
+country_event = {
+	id = sob_aow_events.51
+	title = "aow_events.51.t"
+	desc = "aow_events.51.d"
+	picture = SPY_eventPicture
+
+	trigger = {
+		has_idea_group = spy_ideas
+		religion = sob_catholic
+		any_neighbor_country = {
+			num_of_cardinals = 1
+		}
+		NOT = { has_country_modifier = blackmailing_cardinal }
+	}
+
+	mean_time_to_happen = {
+		months = 1200
+	}
+
+	# 
+	option = {
+		name = "aow_events.51.a"
+		random_neighbor_country = {
+			limit = { num_of_cardinals = 1 }
+			random_owned_province = {
+				limit = { has_cardinal = yes }
+				hidden_effect = {
+					province_event = {
+						id = sob_aow_events.52
+						days = 1
+					}
+				}
+				tooltip = {
+					remove_cardinal = yes
+				}
+			}
+			add_opinion = {
+				who = ROOT
+				modifier = exposed_cardinal
+			}
+		}
+	}
+
+	#
+	option = {
+		name = "aow_events.51.b"
+		add_corruption = 0.5
+		add_country_modifier = {
+			name = "blackmailing_cardinal"
+			duration = 1825
+		}
+	}
+}
+
+# Cardinal Exposed
+province_event = {
+	id = sob_aow_events.52
+	title = "aow_events.52.t"
+	desc = "aow_events.52.d"
+	picture = ACCUSATION_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = "aow_events.52.a"
+		remove_cardinal = yes
+	}
+}

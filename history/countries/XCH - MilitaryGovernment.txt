@@ -1,0 +1,24 @@
+government = republic
+government_rank = 3
+technology_group = chinese
+religion = confucianism
+add_harmonized_religion = mahayana
+primary_culture = sob_celestial_han
+capital = 1821
+
+1.1.1 = {
+	monarch = {
+		name = "(Interregnum)"
+		adm = 6
+		mil = 6
+		dip = 6
+	}
+}
+1644.10.29 = {
+	monarch = {
+		name = "(Interregnum)"
+		adm = 6
+		mil = 6
+		dip = 6
+	}
+}

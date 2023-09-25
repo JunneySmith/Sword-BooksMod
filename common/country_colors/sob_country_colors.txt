@@ -1,0 +1,34 @@
+
+NPS = {
+    color1= { 62 122 189  }
+    color2= { 248 229 12 }
+    color3= { 62 122 189  }
+}
+
+HHE = {
+    color3= { 255 0 0 }
+    color2= { 0 0 0 }
+    color3= { 255 0 0 }
+}
+
+PRC = {
+    color3= { 255 0 0 }
+    color2= { 0 0 0 }
+    color3= { 255 0 0 }
+}
+
+MNG = {
+    color1= { 191 133 24  }
+    color2= { 60 60 60	}
+    color3= { 230 20 15  }
+}
+XZY = {
+    color3= { 1 1 1 }
+    color2= { 0 0 0	}
+    color3= { 1 0 1 }
+}
+XZQ = {
+    color3= { 255 0 0 }
+    color2= { 0 0 0	}
+    color3= { 255 0 0 }
+}

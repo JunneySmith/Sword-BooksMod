@@ -1,0 +1,465 @@
+sob_confu_ms_decrease_1 = {
+	potential = {
+			OR = { religion = confucianism religion = threeself religion =sob_catholic  religion =sob_reformed	religion = sob_orthodox 	religion = sob_coptic	religion = sob_mahayana	religion = sob_sunni religion =sob_shinto 		religion = sob_hinduism religion = sob_shamanism	religion = sob_anglican	}
+
+
+NOT = {
+has_global_modifier_value = {
+    which = global_missionary_strength
+    value = 0.04
+}
+}
+	}
+
+	trigger = { any_province = { ROOT = { is_harmonizing_with = PREV}  } 
+has_global_modifier_value = {
+    which = global_missionary_strength
+    value = 0.02
+}
+
+NOT = {
+has_global_modifier_value = {
+    which = global_missionary_strength
+    value = 0.04
+}
+}
+	
+}
+		yearly_harmony = -1
+		#harmonization_speed = 0.2
+}
+
+
+sob_confu_ms_decrease_2 = {
+	potential = {
+			OR = { religion = confucianism religion = threeself religion =sob_catholic  religion =sob_reformed	religion = sob_orthodox 	religion = sob_coptic	religion = sob_mahayana	religion = sob_sunni religion =sob_shinto 		religion = sob_hinduism religion = sob_shamanism	religion = sob_anglican	}
+has_global_modifier_value = {
+    which = global_missionary_strength
+    value = 0.04
+}
+NOT = {
+has_global_modifier_value = {
+    which = global_missionary_strength
+    value = 0.06
+}
+}
+	
+	}
+
+	trigger = { any_province = { ROOT = { is_harmonizing_with = PREV}  } 
+has_global_modifier_value = {
+    which = global_missionary_strength
+    value = 0.04
+}
+NOT = {
+has_global_modifier_value = {
+    which = global_missionary_strength
+    value = 0.06
+}
+}
+	
+}
+		yearly_harmony = -2
+		#harmonization_speed = 0.4
+}
+
+sob_confu_ms_decrease_3 = {
+	potential = {
+			OR = { religion = confucianism religion = threeself religion =sob_catholic  religion =sob_reformed	religion = sob_orthodox 	religion = sob_coptic	religion = sob_mahayana	religion = sob_sunni religion =sob_shinto 		religion = sob_hinduism religion = sob_shamanism	religion = sob_anglican	}
+has_global_modifier_value = {
+    which = global_missionary_strength
+    value = 0.06
+}
+NOT = {
+has_global_modifier_value = {
+    which = global_missionary_strength
+    value = 0.08
+}
+}
+	}
+
+	trigger = { any_province = { ROOT = { is_harmonizing_with = PREV}  } 
+has_global_modifier_value = {
+    which = global_missionary_strength
+    value =0.06
+}
+NOT = {
+has_global_modifier_value = {
+    which = global_missionary_strength
+    value = 0.08
+}
+}
+
+	
+}
+		yearly_harmony = -3
+		#harmonization_speed = 0.6
+}
+
+sob_confu_ms_decrease_4 = {
+	potential = {
+			OR = { religion = confucianism religion = threeself religion =sob_catholic  religion =sob_reformed	religion = sob_orthodox 	religion = sob_coptic	religion = sob_mahayana	religion = sob_sunni religion =sob_shinto 		religion = sob_hinduism religion = sob_shamanism	religion = sob_anglican	}
+   has_global_modifier_value = {
+    which = global_missionary_strength
+    value = 0.08
+}
+NOT = {
+has_global_modifier_value = {
+    which = global_missionary_strength
+    value = 0.10
+}
+}
+	}
+
+	trigger = { any_province = { ROOT = { is_harmonizing_with = PREV}  } 
+   has_global_modifier_value = {
+    which = global_missionary_strength
+    value = 0.08
+}
+NOT = {
+has_global_modifier_value = {
+    which = global_missionary_strength
+    value = 0.10
+}
+}
+	
+}
+		yearly_harmony = -4
+		#harmonization_speed = 0.8
+}
+
+sob_confu_ms_decrease_5 = {
+	potential = {
+			OR = { religion = confucianism religion = threeself religion =sob_catholic  religion =sob_reformed	religion = sob_orthodox 	religion = sob_coptic	religion = sob_mahayana	religion = sob_sunni religion =sob_shinto 		religion = sob_hinduism religion = sob_shamanism	religion = sob_anglican	}
+   has_global_modifier_value = {
+    which = global_missionary_strength
+    value = 0.10
+}
+NOT = {
+has_global_modifier_value = {
+    which = global_missionary_strength
+    value = 0.12
+}
+}
+	}
+
+	trigger = { any_province = { ROOT = { is_harmonizing_with = PREV}  } 
+   has_global_modifier_value = {
+    which = global_missionary_strength
+    value = 0.10
+}
+NOT = {
+has_global_modifier_value = {
+    which = global_missionary_strength
+    value = 0.12
+}
+}
+	
+}
+		yearly_harmony = -5
+		#harmonization_speed = 1
+}
+sob_confu_ms_decrease_6 = {
+	potential = {
+			OR = { religion = confucianism religion = threeself religion =sob_catholic  religion =sob_reformed	religion = sob_orthodox 	religion = sob_coptic	religion = sob_mahayana	religion = sob_sunni religion =sob_shinto 		religion = sob_hinduism religion = sob_shamanism	religion = sob_anglican	}
+    has_global_modifier_value = {
+    which = global_missionary_strength
+    value = 0.12
+}
+NOT = {
+has_global_modifier_value = {
+    which = global_missionary_strength
+    value = 0.14
+}
+}
+	}
+
+	trigger = { any_province = { ROOT = { is_harmonizing_with = PREV}  } 
+    has_global_modifier_value = {
+    which = global_missionary_strength
+    value = 0.12
+}
+NOT = {
+has_global_modifier_value = {
+    which = global_missionary_strength
+    value = 0.14
+}
+}
+	
+}
+		yearly_harmony = -6
+		#harmonization_speed = 1.2
+}
+
+
+sob_confu_ms_decrease_7 = {
+	potential = {
+			OR = { religion = confucianism religion = threeself religion =sob_catholic  religion =sob_reformed	religion = sob_orthodox 	religion = sob_coptic	religion = sob_mahayana	religion = sob_sunni religion =sob_shinto 		religion = sob_hinduism religion = sob_shamanism	religion = sob_anglican	}
+    has_global_modifier_value = {
+    which = global_missionary_strength
+    value = 0.14
+}
+NOT = {
+has_global_modifier_value = {
+    which = global_missionary_strength
+    value = 0.16
+}
+}
+	}
+
+	trigger = { any_province = { ROOT = { is_harmonizing_with = PREV}  } 
+    has_global_modifier_value = {
+    which = global_missionary_strength
+    value = 0.14
+}
+NOT = {
+has_global_modifier_value = {
+    which = global_missionary_strength
+    value = 0.16
+}
+}
+	
+}
+		yearly_harmony = -7
+		#harmonization_speed = 1.4
+}
+
+sob_confu_ms_decrease_8 = {
+	potential = {
+			OR = { religion = confucianism religion = threeself religion =sob_catholic  religion =sob_reformed	religion = sob_orthodox 	religion = sob_coptic	religion = sob_mahayana	religion = sob_sunni religion =sob_shinto 		religion = sob_hinduism religion = sob_shamanism	religion = sob_anglican	}
+    has_global_modifier_value = {
+    which = global_missionary_strength
+    value = 0.16
+}
+NOT = {
+has_global_modifier_value = {
+    which = global_missionary_strength
+    value = 0.18
+}
+}
+	}
+
+	trigger = { any_province = { ROOT = { is_harmonizing_with = PREV}  } 
+    has_global_modifier_value = {
+    which = global_missionary_strength
+    value = 0.16
+}
+NOT = {
+has_global_modifier_value = {
+    which = global_missionary_strength
+    value = 0.18
+}
+}
+	
+}
+		yearly_harmony = -8
+		#harmonization_speed = 1.6
+}
+
+sob_confu_ms_decrease_9 = {
+	potential = {
+			OR = { religion = confucianism religion = threeself religion =sob_catholic  religion =sob_reformed	religion = sob_orthodox 	religion = sob_coptic	religion = sob_mahayana	religion = sob_sunni religion =sob_shinto 		religion = sob_hinduism religion = sob_shamanism	religion = sob_anglican	}
+    has_global_modifier_value = {
+    which = global_missionary_strength
+    value = 0.18
+}
+NOT = {
+has_global_modifier_value = {
+    which = global_missionary_strength
+    value = 0.20
+}
+}
+	}
+
+	trigger = { any_province = { ROOT = { is_harmonizing_with = PREV}  } 
+    has_global_modifier_value = {
+    which = global_missionary_strength
+    value = 0.18
+}
+NOT = {
+has_global_modifier_value = {
+    which = global_missionary_strength
+    value = 0.20
+}
+}
+	
+}
+		yearly_harmony = -9
+		#harmonization_speed = 1.8
+}
+sob_confu_ms_decrease_10 = {
+	potential = {
+			OR = { religion = confucianism religion = threeself religion =sob_catholic  religion =sob_reformed	religion = sob_orthodox 	religion = sob_coptic	religion = sob_mahayana	religion = sob_sunni religion =sob_shinto 		religion = sob_hinduism religion = sob_shamanism	religion = sob_anglican	}
+    has_global_modifier_value = {
+    which = global_missionary_strength
+    value = 0.20
+}
+NOT = {
+has_global_modifier_value = {
+    which = global_missionary_strength
+    value = 0.22
+}
+}
+	}
+
+	trigger = { any_province = { ROOT = { is_harmonizing_with = PREV}  } 
+    has_global_modifier_value = {
+    which = global_missionary_strength
+    value = 0.20
+}
+NOT = {
+has_global_modifier_value = {
+    which = global_missionary_strength
+    value = 0.22
+}
+}
+	
+}
+		yearly_harmony = -10
+		#harmonization_speed = 2
+}
+sob_confu_ms_decrease_11 = {
+	potential = {
+			OR = { religion = confucianism religion = threeself religion =sob_catholic  religion =sob_reformed	religion = sob_orthodox 	religion = sob_coptic	religion = sob_mahayana	religion = sob_sunni religion =sob_shinto 		religion = sob_hinduism religion = sob_shamanism	religion = sob_anglican	}
+    has_global_modifier_value = {
+    which = global_missionary_strength
+    value = 0.22
+}
+NOT = {
+has_global_modifier_value = {
+    which = global_missionary_strength
+    value = 0.24
+}
+}
+	}
+
+	trigger = { any_province = { ROOT = { is_harmonizing_with = PREV}  } 
+    has_global_modifier_value = {
+    which = global_missionary_strength
+    value = 0.22
+}
+NOT = {
+has_global_modifier_value = {
+    which = global_missionary_strength
+    value = 0.24
+}
+}
+	
+}
+		yearly_harmony = -11
+		#harmonization_speed = 2.2
+}
+sob_confu_ms_decrease_12 = {
+	potential = {
+			OR = { religion = confucianism religion = threeself religion =sob_catholic  religion =sob_reformed	religion = sob_orthodox 	religion = sob_coptic	religion = sob_mahayana	religion = sob_sunni religion =sob_shinto 		religion = sob_hinduism religion = sob_shamanism	religion = sob_anglican	}
+    has_global_modifier_value = {
+    which = global_missionary_strength
+    value = 0.24
+}
+NOT = {
+has_global_modifier_value = {
+    which = global_missionary_strength
+    value = 0.26
+}
+}
+	}
+
+	trigger = { any_province = { ROOT = { is_harmonizing_with = PREV}  } 
+    has_global_modifier_value = {
+    which = global_missionary_strength
+    value = 0.24
+}
+NOT = {
+has_global_modifier_value = {
+    which = global_missionary_strength
+    value = 0.26
+}
+}
+	
+}
+		yearly_harmony = -12
+		#harmonization_speed = 2.4
+}
+sob_confu_ms_decrease_13 = {
+	potential = {
+			OR = { religion = confucianism religion = threeself religion =sob_catholic  religion =sob_reformed	religion = sob_orthodox 	religion = sob_coptic	religion = sob_mahayana	religion = sob_sunni religion =sob_shinto 		religion = sob_hinduism religion = sob_shamanism	religion = sob_anglican	}
+    has_global_modifier_value = {
+    which = global_missionary_strength
+    value = 0.26
+}
+NOT = {
+has_global_modifier_value = {
+    which = global_missionary_strength
+    value = 0.28
+}
+}
+	}
+
+	trigger = { any_province = { ROOT = { is_harmonizing_with = PREV}  } 
+    has_global_modifier_value = {
+    which = global_missionary_strength
+    value = 0.26
+}
+NOT = {
+has_global_modifier_value = {
+    which = global_missionary_strength
+    value = 0.28
+}
+}
+	
+}
+		yearly_harmony = -13
+		#harmonization_speed = 2.6
+}
+sob_confu_ms_decrease_14 = {
+	potential = {
+			OR = { religion = confucianism religion = threeself religion =sob_catholic  religion =sob_reformed	religion = sob_orthodox 	religion = sob_coptic	religion = sob_mahayana	religion = sob_sunni religion =sob_shinto 		religion = sob_hinduism religion = sob_shamanism	religion = sob_anglican	}
+    has_global_modifier_value = {
+    which = global_missionary_strength
+    value = 0.28
+}
+NOT = {
+has_global_modifier_value = {
+    which = global_missionary_strength
+    value = 0.30
+}
+}
+	}
+
+	trigger = { any_province = { ROOT = { is_harmonizing_with = PREV}  } 
+    has_global_modifier_value = {
+    which = global_missionary_strength
+    value = 0.28
+}
+NOT = {
+has_global_modifier_value = {
+    which = global_missionary_strength
+    value = 0.30
+}
+}
+	
+}
+		yearly_harmony = -14
+		#harmonization_speed = 2.8
+}
+sob_confu_ms_decrease_15 = {
+	potential = {
+			OR = { religion = confucianism religion = threeself religion =sob_catholic  religion =sob_reformed	religion = sob_orthodox 	religion = sob_coptic	religion = sob_mahayana	religion = sob_sunni religion =sob_shinto 		religion = sob_hinduism religion = sob_shamanism	religion = sob_anglican	}
+    has_global_modifier_value = {
+    which = global_missionary_strength
+    value = 0.30
+}
+
+	}
+
+	trigger = { any_province = { ROOT = { is_harmonizing_with = PREV}  } 
+    has_global_modifier_value = {
+    which = global_missionary_strength
+    value = 0.30
+}
+
+	
+}
+		yearly_harmony = -15
+		#harmonization_speed = 3
+}

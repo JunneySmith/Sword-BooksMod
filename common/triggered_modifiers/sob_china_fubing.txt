@@ -1,0 +1,199 @@
+sob_sob_fubing_gov_no_china = {
+	potential = {
+	num_of_banners = 10
+    ai = yes
+NOT = {	OR = {culture_group = east_asian  culture_group = chinese_group } }
+	}
+	trigger = {
+num_of_banners = 30
+
+	}
+	
+ 	yearly_corruption = 0.65
+}
+
+sob_sob_fubing_gov_no_1 = {
+	potential = {NOT = { has_reform = sob_scelestial_empire_tng_reform}  NOT = { 	full_idea_group = sob_aristocracy_ideas}
+	num_of_banners = 10
+    ai = no	
+	OR = {culture_group = east_asian  culture_group = chinese_group }
+	}
+	trigger = { NOT = { has_reform = sob_scelestial_empire_tng_reform}  
+	OR = {culture_group = east_asian  culture_group = chinese_group }
+num_of_banners = 20
+		        		NOT ={	num_of_owned_provinces_with = {
+				value = 1
+				has_province_modifier = sob_fubing_headquarter
+			}
+			}
+	}
+	
+ 	diplomats = -1	
+}
+sob_sob_fubing_gov_no_2 = {
+	potential = {NOT = { has_reform = sob_scelestial_empire_tng_reform}  NOT = { 	full_idea_group = sob_aristocracy_ideas}
+	num_of_banners = 40
+    ai = no	
+	OR = {culture_group = east_asian  culture_group = chinese_group }
+	}
+	trigger = { NOT = { has_reform = sob_scelestial_empire_tng_reform}  
+	OR = {culture_group = east_asian  culture_group = chinese_group }
+num_of_banners = 40
+		        		NOT ={	num_of_owned_provinces_with = {
+				value = 2
+				has_province_modifier = sob_fubing_headquarter
+			}
+			}
+	}
+	
+ 	diplomats = -1
+}
+sob_sob_fubing_gov_no_3 = {
+	potential = {NOT = { has_reform = sob_scelestial_empire_tng_reform}  NOT = { 	full_idea_group = sob_aristocracy_ideas}
+	num_of_banners = 60
+    ai = no	
+	OR = {culture_group = east_asian  culture_group = chinese_group }
+	}
+	trigger = { NOT = { has_reform = sob_scelestial_empire_tng_reform}  
+	OR = {culture_group = east_asian  culture_group = chinese_group }
+num_of_banners = 60
+		        		NOT ={	num_of_owned_provinces_with = {
+				value = 3
+				has_province_modifier = sob_fubing_headquarter
+			}
+			}
+	}
+	
+ 	diplomats = -1
+}
+
+sob_sob_fubing_gov_no_4 = {
+	potential = {NOT = { has_reform = sob_scelestial_empire_tng_reform}  NOT = { 	full_idea_group = sob_aristocracy_ideas}
+	num_of_banners = 80
+    ai = no	
+	OR = {culture_group = east_asian  culture_group = chinese_group }
+	}
+	trigger = { NOT = { has_reform = sob_scelestial_empire_tng_reform}  
+	OR = {culture_group = east_asian  culture_group = chinese_group }
+num_of_banners = 80
+		        		NOT ={	num_of_owned_provinces_with = {
+				value = 4
+				has_province_modifier = sob_fubing_headquarter
+			}
+			}
+	}
+	
+ 	diplomats = -1
+}
+
+sob_sob_fubing_gov_no_5 = {
+	potential = {NOT = { has_reform = sob_scelestial_empire_tng_reform}   NOT = { 	full_idea_group = sob_aristocracy_ideas}
+	num_of_banners = 100
+    ai = no	
+	OR = {culture_group = east_asian  culture_group = chinese_group }
+	}
+	trigger = { NOT = { has_reform = sob_scelestial_empire_tng_reform}  
+	OR = {culture_group = east_asian  culture_group = chinese_group }
+num_of_banners = 100
+		        		NOT ={	num_of_owned_provinces_with = {
+				value = 5
+				has_province_modifier = sob_fubing_headquarter
+			}
+			}
+	}
+	
+ 	diplomats = -1
+}
+
+sob_sob_fubing_gov_no_6 = {
+	potential = {NOT = { has_reform = sob_scelestial_empire_tng_reform}   NOT = { 	full_idea_group = sob_aristocracy_ideas}
+    ai = no	
+	num_of_banners = 120
+	OR = {culture_group = east_asian  culture_group = chinese_group }
+	}
+	trigger = { NOT = { has_reform = sob_scelestial_empire_tng_reform}  
+	OR = {culture_group = east_asian  culture_group = chinese_group }
+num_of_banners = 120
+		        		NOT ={	num_of_owned_provinces_with = {
+				value = 6
+				has_province_modifier = sob_fubing_headquarter
+			}
+			}
+	}
+	
+ 	diplomats = -1
+}
+
+sob_sob_fubing_gov_no_7 = {
+	potential = {NOT = { has_reform = sob_scelestial_empire_tng_reform}   NOT = { 	full_idea_group = sob_aristocracy_ideas}
+	num_of_banners = 140
+    ai = no	
+	OR = {culture_group = east_asian  culture_group = chinese_group }
+	}
+	trigger = { NOT = { has_reform = sob_scelestial_empire_tng_reform}  
+	OR = {culture_group = east_asian  culture_group = chinese_group }
+num_of_banners = 140
+		        		NOT ={	num_of_owned_provinces_with = {
+				value = 7
+				has_province_modifier = sob_fubing_headquarter
+			}
+			}
+	}
+	
+ 	diplomats = -1
+}
+
+sob_sob_fubing_gov_no_8 = {
+	potential = {NOT = { has_reform = sob_scelestial_empire_tng_reform}   NOT = { 	full_idea_group = sob_aristocracy_ideas}
+	num_of_banners = 160
+    ai = no	
+	OR = {culture_group = east_asian  culture_group = chinese_group }
+	}
+	trigger = { NOT = { has_reform = sob_scelestial_empire_tng_reform}  
+	OR = {culture_group = east_asian  culture_group = chinese_group }
+num_of_banners = 160
+		        		NOT ={	num_of_owned_provinces_with = {
+				value = 8
+				has_province_modifier = sob_fubing_headquarter
+			}
+			}
+	}
+	
+ 	diplomats = -1
+}
+sob_sob_fubing_gov_no_9 = {
+	potential = {NOT = { has_reform = sob_scelestial_empire_tng_reform}   NOT = { 	full_idea_group = sob_aristocracy_ideas}
+	num_of_banners = 180
+    ai = no	
+	OR = {culture_group = east_asian  culture_group = chinese_group }
+	}
+	trigger = { NOT = { has_reform = sob_scelestial_empire_tng_reform}  
+	OR = {culture_group = east_asian  culture_group = chinese_group }
+num_of_banners = 180
+		        		NOT ={	num_of_owned_provinces_with = {
+				value = 9
+				has_province_modifier = sob_fubing_headquarter
+			}
+			}
+	}
+	
+ 	diplomats = -1
+}
+sob_sob_fubing_gov_no_10 = {
+	potential = {NOT = { has_reform = sob_scelestial_empire_tng_reform}   NOT = { 	full_idea_group = sob_aristocracy_ideas}
+	num_of_banners = 200
+    ai = no	
+	OR = {culture_group = east_asian  culture_group = chinese_group }
+	}
+	trigger = { NOT = { has_reform = sob_scelestial_empire_tng_reform}  
+	OR = {culture_group = east_asian  culture_group = chinese_group }
+num_of_banners = 200
+		        		NOT ={	num_of_owned_provinces_with = {
+				value = 10
+				has_province_modifier = sob_fubing_headquarter
+			}
+			}
+	}
+	
+ 	diplomats = -1
+}

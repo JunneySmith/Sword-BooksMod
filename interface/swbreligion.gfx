@@ -1,0 +1,109 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_sob_right_country_mission_view_bg"
+		texturefile = "gfx//interface//country_mission_view_bg.dds"
+		loadType = "INGAME"
+		transparencecheck = yes	
+	}
+	spriteType = {
+		name = "GFX_sob_right_country_mission_view_bg_large"
+		texturefile = "gfx//interface//country_mission_view_bg_large.dds"
+		loadType = "INGAME"
+		transparencecheck = yes	
+	}
+	spriteType = {
+		name = "GFX_sob_right_country_mission_view_bg_huge"
+		texturefile = "gfx//interface//sob_country_mission_view_bg_huge.dds"
+		loadType = "INGAME"
+		transparencecheck = yes	
+	}
+	spriteType = {
+		name = "GFX_great_project_sob_black_land_of_dongbei"	
+		texturefile = "gfx//interface//great_projects//great_project_sob_dongbei_black_lands.dds"
+	}
+		spriteType = {
+		name = "GFX_great_project_sob_liaoyang_the_great_wall_of_china"	
+		texturefile = "gfx//interface//great_projects//great_project_the_great_wall_of_china.dds"
+	}
+	spriteType = {
+		name = "GFX_holy_order_huguohui"
+		texturefile = "gfx/interface/holy_orders/huguohui.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_holy_order_shiyepai"
+		texturefile = "gfx/interface/holy_orders/shiyepai.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_holy_order_tiandi"
+		texturefile = "gfx/interface/holy_orders/tiandi.dds"
+		noOfFrames = 4
+	}
+		spriteType = {
+		name = "GFX_sob_summon_the_diet_mandate"
+		texturefile = "gfx/interface/estates/agenda.dds"
+	}
+			spriteType = {
+		name = "GFX_sobpr_bg"
+		texturefile = "gfx/interface/sobpr_bg.dds"
+	}	
+				spriteType = {
+		name = "GFX_sobpr_bgbg"
+		texturefile = "gfx/interface/sob_conf_background.dds"
+	}	
+
+		spriteType = {
+		name = "GFX_sob_give_crown_land_warrior"
+		texturefile = "gfx/interface/estates/agenda.dds"
+	}
+		spriteType = {
+		name = "GFX_sob_give_crown_land_shimin"
+		texturefile = "gfx/interface/estates/agenda.dds"
+	}
+
+	
+	spriteType = {
+		name = "GFX_icon_sob_school_tiandi"
+		texturefile = "gfx/interface/achievement_kow_tow.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_sob_ziran_school"
+		texturefile = "gfx/interface/achievement_industrial_powerhouse.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_sob_zhengyi_school"
+		texturefile = "gfx/interface/zhengyi.dds"
+	}
+	
+		spriteType = {
+		name = "GFX_icon_icon_sob_haotian"
+		texturefile = "gfx/interface/sob_haotian.dds"
+	}
+		spriteType = {
+		name = "GFX_icon_icon_sob_taiyi"
+		texturefile = "gfx/interface/icon_sob_taiyi.dds"
+	}
+		spriteType = {
+		name = "GFX_icon_icon_sob_zhenwudadi"
+		texturefile = "gfx/interface/sob_zhenwudadi.dds"
+	}
+		spriteType = {
+		name = "GFX_icon_icon_sob_wufangtiandi"
+		texturefile = "gfx/interface/sob_wufangtiandi.dds"
+	}
+		spriteType = {
+		name = "GFX_icon_icon_sob_minjian"
+		texturefile = "gfx/interface/sob_minjian.dds"
+	}
+		spriteType = {
+		name = "GFX_icon_icon_sob_wenchangdijun"
+		texturefile = "gfx/interface/sob_wenchangdijun.dds"
+	}
+	
+	
+}
+
+

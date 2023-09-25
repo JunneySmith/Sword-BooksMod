@@ -1,0 +1,70 @@
+
+
+estate_sobshishen = {
+	modifier_definition = {
+		type = loyalty
+		key = estate_sobshishen_loyalty_modifier
+		trigger = {
+			has_estate = estate_sobshishen
+		}
+	}
+	modifier_definition = {
+		type = influence
+		key = estate_sobshishen_influence_modifier
+		trigger = {
+			has_estate = estate_sobshishen
+		}
+	}
+}
+
+estate_sobshimin = {
+	modifier_definition = {
+		type = loyalty
+		key = estate_sobshimin_loyalty_modifier
+		trigger = {
+			has_estate = estate_sobshimin
+		}
+	}
+	modifier_definition = {
+		type = influence
+		key = estate_sobshimin_influence_modifier
+		trigger = {
+			has_estate = estate_sobshimin
+		}
+	}
+}
+
+estate_sobwarriors = {
+	modifier_definition = {
+		type = loyalty
+		key = estate_sobwarriors_loyalty_modifier
+		trigger = {
+			has_estate = estate_sobwarriors
+		}
+	}
+	modifier_definition = {
+		type = influence
+		key = estate_sobwarriors_influence_modifier
+		trigger = {
+			has_estate = estate_sobwarriors
+		}
+	}
+}
+
+estate_sobmongol = {
+	modifier_definition = {
+		type = loyalty
+		key = estate_sobmongol_loyalty_modifier
+		trigger = {
+			has_estate = estate_sobmongol
+		}
+	}
+
+	modifier_definition = {
+		type = influence
+		key = estate_sobmongol_influence_modifier
+		trigger = {
+			has_estate = estate_sobmongol
+		}
+	}
+}

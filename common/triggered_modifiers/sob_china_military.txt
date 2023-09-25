@@ -1,0 +1,76 @@
+sob_sob_warriors_modifier_1 = {
+
+	potential = {	
+	always = no
+	ai = no
+	OR = {culture_group = east_asian  culture_group = chinese_group }
+				NOT = { has_country_modifier = army_household_title_generated}
+				NOT = { has_country_flag = sob_wenwu_equal_reform_1}
+						NOT = { full_idea_group = sob_aristocracy_ideas}
+	}
+	trigger = {	
+				estate_influence = {
+			estate = estate_sobwarriors
+			influence = 60
+		    }
+			estate_loyalty = {
+					estate = estate_sobwarriors
+					loyalty = 60
+		    }
+			NOT = { has_country_modifier = army_household_title_generated}
+				NOT = { has_country_flag = sob_wenwu_equal_reform_1}
+			
+	}
+    
+	discipline = -0.025
+
+	
+}
+
+
+sob_sob_warriors_modifier_3 = {
+
+	potential = {	
+	always = no
+	ai = yes
+	OR = {culture_group = east_asian  culture_group = chinese_group }
+
+				full_idea_group = sob_aristocracy_ideas
+	}
+	trigger = {	
+	ai = yes
+	OR = {culture_group = east_asian  culture_group = chinese_group }
+
+				full_idea_group = sob_aristocracy_ideas
+	}
+    
+	discipline = 0.05
+
+	
+}
+
+sob_sob_warriors_modifier_2 = {
+
+	potential = {	
+	always = no
+	OR = {culture_group = east_asian  culture_group = chinese_group }
+	 has_country_modifier = sob_re_fed
+	}
+	trigger = {	
+				estate_influence = {
+			estate = estate_sobwarriors
+			influence = 60
+		    }
+			estate_loyalty = {
+					estate = estate_sobwarriors
+					loyalty = 60
+		    }
+		 has_country_modifier = sob_re_fed
+		
+			
+	}
+    
+	land_morale = 0.05
+
+	
+}

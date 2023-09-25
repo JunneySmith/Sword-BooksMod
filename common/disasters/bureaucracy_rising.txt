@@ -1,0 +1,228 @@
+bureaucracy_rising = {
+	potential = {
+	NOT = { has_country_flag = sob_reform_mode_setted_no_gov_mode_2}
+		OR = {culture_group = east_asian  culture_group = chinese_group }
+is_emperor_of_china = yes
+
+has_reform = celestial_empire
+
+
+		NOT = {has_country_modifier = confucianism_reform}
+	  
+	}
+	
+	
+	can_start = {
+         NOT = { has_country_modifier = sob_re_fed}
+
+  
+		NOT = {estate_influence = {
+			estate = estate_sobwarriors
+			influence = 40
+		}
+		
+		
+		}
+
+	}
+	
+	can_stop = {
+					 		estate_territory = {
+			estate = estate_sobwarriors
+		territory = 25
+		}
+	OR = {
+ has_country_modifier = sob_re_fed
+	AND = {
+					NOT = {
+					has_estate = estate_sobshishen
+					 		estate_territory = {
+			estate = estate_sobshishen
+		territory = 25
+		}
+ 
+						
+	}
+
+					custom_trigger_tooltip = {
+				tooltip = sob_bure_rising_tooltip
+		AND = {
+
+		OR  =  {
+		NOT = {has_estate = estate_nobles}
+		AND = {
+		has_estate = estate_nobles
+		estate_influence = {
+			estate = estate_nobles
+			influence = 50
+		}
+		}
+		}
+		OR  =  {
+		NOT = {has_estate = estate_burghers}
+		AND = {
+		has_estate = estate_burghers
+		estate_influence = {
+			estate = estate_burghers
+			influence = 50
+		}
+		}
+		}
+		OR  =  {
+		NOT = {has_estate = estate_sobwarriors}
+		AND = {
+		has_estate = estate_sobwarriors
+				estate_influence = {
+			estate = estate_sobwarriors
+			influence = 50
+		}
+
+		    }
+			}
+		}
+		}
+		has_country_modifier = army_household_title_generated
+		}
+		
+	
+	}
+	}
+	
+	
+	progress = {
+		modifier = {
+			factor = 0.05
+
+	num_of_owned_provinces_with = {
+							has_estate = estate_sobshishen
+							value = 5
+						}
+		  
+		}
+		modifier = {
+			factor = 0.025
+
+						estate_influence = {
+			estate = estate_sobshishen
+			influence = 70
+		    }
+
+
+		
+		}
+		modifier = {
+			factor = 0.025
+			is_at_war = no
+			NOT = {   has_country_modifier = army_household_title_generated}
+		}
+		modifier = {
+			factor = 0.03
+			is_at_war = no
+		  has_country_modifier = army_household_title_generated
+		  NOT = { army_tradition = 65}
+		}
+		
+		modifier = {
+			factor = 0.1
+			NOT ={			estate_influence = {
+			estate = estate_nobles
+			influence = 50
+		    }
+			}
+		}
+		modifier = {
+			factor = -0.185
+            ai = yes
+		}
+
+
+
+			modifier = {
+			factor = 0.012
+		NOT = {	estate_influence = {
+			estate = estate_sobshishen
+			influence = 70
+		    }
+			}
+	estate_influence = {
+			estate = estate_sobshishen
+			influence = 50
+		    }
+
+		}
+		
+		
+
+				modifier = {
+			factor = -0.1
+  has_country_modifier = army_household_title_generated
+  } 
+		
+
+		modifier = {
+			factor = -0.015
+			AND = {
+			estate_influence = {
+			estate = estate_nobles
+			influence = 50
+		    }
+			estate_loyalty = {
+					estate = estate_nobles
+					loyalty = 50
+		    }
+			}
+		}
+		
+		modifier = {
+			factor = -0.015
+			AND = {
+			estate_influence = {
+			estate = estate_sobwarriors
+			influence = 50
+		    }
+			}
+		}
+		modifier = {
+			factor = -0.01
+         		 OR = {
+
+ has_church_aspect = wuju_kuozhao_aspect 
+ has_church_aspect = junzi_liuyi_aspect 
+ 
+ }
+		}
+		modifier = {
+			factor = -0.03
+			is_at_war = yes
+		}
+			
+	}
+	
+	can_end = {
+	OR = {
+	 has_country_modifier = army_household_title_generated
+	 has_country_modifier = sob_re_fed
+	 }
+			
+	}
+	
+
+	modifier = {
+		land_morale = -0.2
+		discipline = -0.2
+		mercenary_discipline = 0.2
+		global_unrest = 3
+		yearly_corruption = 0.25
+		army_tradition = -1
+	}	
+	
+	on_monthly = {
+		events = {
+		
+		}
+		random_events = {
+			1000 = 0
+			#
+		}
+	}
+}

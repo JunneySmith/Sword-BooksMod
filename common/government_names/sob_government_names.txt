@@ -1,0 +1,104 @@
+sob_chinese_duhufu = {
+	rank = {
+		1 = SOBDUHUFU
+		2 = SOBDUHUFU
+		3 = SOBDIGUODUHUFU
+	}
+
+	ruler_male = {
+		1 = SOBDUHU
+		2 = DASOBDUHU
+		3 = DASOBDUHU
+	}
+
+	ruler_female = {
+		1 = SOBDUHU
+		2 = DASOBDUHU
+		3 = DASOBDUHU
+	}
+	
+	consort_male = {
+		1 = CONSORT
+		2 = CONSORT
+		3 = CONSORT
+	}
+
+	consort_female = {
+		1 = CONSORT
+		2 = CONSORT
+		3 = EMPRESS
+	}
+
+	trigger = {
+      is_subject_of_type = sob_duhu_vassal
+	}
+}
+
+sob_chinese_zhenshoufu = {
+	rank = {
+		1 = SOBZHENSHOUFU
+		2 = SOBZHENSHOUFU
+		3 = SOBHAIJUNSILINGBU
+	}
+	ruler_male = {
+		1 = SOBTIDU
+		2 = SOBTIDU
+		3 = SOBJIANDUISILING
+	}
+
+	ruler_female = {
+		1 = SOBTIDU
+		2 = SOBTIDU
+		3 = SOBJIANDUISILING
+	}
+		consort_male = {
+		1 = CONSORT
+		2 = CONSORT
+		3 = CONSORT
+	}
+
+	consort_female = {
+		1 = CONSORT
+		2 = CONSORT
+		3 = EMPRESS
+	}
+	
+
+	trigger = {
+		is_subject_of_type = sob_zhenshoufu_vassal
+	}
+}
+sob_chinese_zhengyi = {
+	rank = {
+		1 = SOBZHENGYIJIANGJUNFU
+		2 = SOBZHENGYIJIANGJUNFU
+		3 = SOBZHENGYIJIANGJUNFU
+	}
+	ruler_male = {
+		1 = ZHENGYIDAJIANGJUN
+		2 = ZHENGYIDAJIANGJUN
+		3 = ZHENGYIDAJIANGJUN
+	}
+
+	ruler_female = {
+		1 = ZHENGYIDAJIANGJUN
+		2 = ZHENGYIDAJIANGJUN
+		3 = ZHENGYIDAJIANGJUN
+	}
+		consort_male = {
+		1 = CONSORT
+		2 = CONSORT
+		3 = CONSORT
+	}
+
+	consort_female = {
+		1 = CONSORT
+		2 = CONSORT
+		3 = EMPRESS
+	}
+	
+
+	trigger = {
+		is_subject_of_type = sob_zhengyijiangjun_vassal
+	}
+}

@@ -1,0 +1,205 @@
+
+celestial_empire = {
+	icon = "celestial_empire"
+	allow_normal_conversion = no
+	potential = {
+		OR = {
+		is_emperor_of_china =yes
+		has_country_flag = sob_waizu_form_gov_flag
+culture_group = east_asian
+culture_group = chinese_group
+has_reform =celestial_empire
+}		
+
+	}
+trigger = { 
+OR = {
+          			custom_trigger_tooltip = {
+				tooltip = sob_waizu_allowed_celestial_empire_tooltip
+has_country_flag = sob_form_new_shishen_gov_flag
+}
+started_in = 998.1.1
+}
+OR = {
+has_reform =celestial_empire 
+          			custom_trigger_tooltip = {
+				tooltip = sob_waizu_allowed_celestial_empire_tooltip
+has_country_flag = sob_form_new_shishen_gov_flag
+}
+
+}
+ }
+	legacy_equivalent = celestial_empire_legacy
+	maintain_dynasty = yes
+	allow_force_tributary = no
+	valid_for_nation_designer = yes
+	nation_designer_cost = 10
+	lock_level_when_selected = yes
+	nation_designer_trigger = {
+		culture_group = east_asian
+		technology_group = chinese
+		capital_scope = {
+			OR = {
+				region = north_china_region
+				region = xinan_region
+				region = south_china_region
+			}
+		}
+	}
+	factions = {
+		temples
+		enuchs
+		bureaucrats
+	}
+
+	fixed_rank = 3
+	start_territory_to_estates = 0.9
+
+	modifiers = {
+		prestige = 1
+		church_influence_modifier = -0.1
+		nobles_influence_modifier = -0.1
+		burghers_influence_modifier = -0.1
+		governing_capacity = 560
+	}
+	
+	ai = {
+		factor = 0 # should always be picked if available
+	}
+
+	custom_attributes = {
+		locked_government_type = yes
+	}
+
+	conditional = {
+		allow = { has_dlc = "Mandate of Heaven" }
+		has_meritocracy = yes
+	}
+}
+sob_zhenshoufu_reform = {
+	icon = "pirate_republic"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	potential = {
+	has_reform = sob_zhenshoufu_reform
+	}
+	allow_force_tributary = no
+	valid_for_nation_designer = no
+	nation_designer_cost = 10
+	nation_designer_trigger = {
+		technology_group = chinese
+
+	}
+	modifiers = {
+land_forcelimit_modifier = -0.8
+naval_forcelimit = 20
+global_sailors = 20000
+global_naval_engagement_modifier = 0.25
+ 	galley_power = 0.1
+	transport_power = 0.1
+	ship_durability = 0.1
+	 	light_ship_power = 0.1
+		 	heavy_ship_power = 0.25
+naval_forcelimit_modifier = 0.5
+naval_maintenance_modifier = -0.5
+navy_tradition = 1
+ 	naval_morale = 0.25
+		capture_ship_chance = 0.33
+	}
+	custom_attributes = {
+		locked_government_type = yes
+	}
+}
+
+sob_jiaoqu_reform = {
+	icon = "papacy"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	potential = {
+	has_reform = sob_jiaoqu_reform
+	}
+	allow_force_tributary = no
+	valid_for_nation_designer = no
+	nation_designer_cost = 10
+	nation_designer_trigger = {
+		technology_group = chinese
+
+	}
+	modifiers = {
+land_forcelimit_modifier = -0.8
+	tolerance_heretic = 4
+	tolerance_heathen = 3
+religious_unity = 2
+harmonization_speed = -1000
+		 	missionaries = -100
+	}
+	custom_attributes = {
+		locked_government_type = yes
+	}
+}
+
+
+
+
+
+sob_jiaoqu_city = {
+	icon = "trading_city"
+	allow_normal_conversion = no
+	potential = {
+		has_reform = sob_jiaoqu_city
+	}
+	valid_for_nation_designer = no
+	lock_level_when_selected = yes
+	modifiers = {
+land_forcelimit_modifier = -0.8
+		prestige_per_development_from_conversion = 0.33
+		tolerance_own = 1
+		 	missionaries = -100
+	}
+
+	custom_attributes = {
+		locked_government_type = yes
+	}
+
+	conditional = {
+		allow = {
+			has_dlc = "Mare Nostrum"
+		}
+		trade_city_reform = sob_jiaoqu_con_reform # For trade cities this is their fallback government if they get more than 1 provinces
+	}
+
+}
+
+
+sob_jiaoqu_con_reform = {
+	icon = "politician"
+	lock_level_when_selected = yes
+	allow_normal_conversion = no
+	modifiers = {
+land_forcelimit_modifier = -0.8
+		prestige_per_development_from_conversion = 0.33
+		tolerance_own = 1
+		 	missionaries = -100
+	}
+	valid_for_nation_designer = no
+	nation_designer_cost = 40
+	potential = {
+ has_reform = sob_jiaoqu_con_reform
+	}
+
+
+
+	conditional = {
+		allow = {
+			has_dlc = "Mare Nostrum"
+		}
+		trade_city_reform = sob_jiaoqu_city
+	}
+
+	custom_attributes = {
+	locked_government_type = yes
+	}
+}
+
+
+

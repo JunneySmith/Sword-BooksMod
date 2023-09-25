@@ -1,0 +1,2267 @@
+namespace = sob_dutch_republic
+
+########################################
+# Dutch Republic Events
+#
+# written by Rufus Tronde
+########################################
+
+########################################
+# When Orangists are in power
+########################################
+
+# Absolute Power
+country_event = {
+	id = sob_dutch_republic.1
+	title = "sob_dutch_republic.1.t"
+	desc = "sob_dutch_republic.1.d"
+	picture = GOOD_WITH_MONARCH_eventPicture
+
+	
+
+	trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic }
+		OR=  {
+	NOT = {
+	has_country_flag = sob_han_menfa_vs_guizu
+	}
+	 	
+
+had_country_flag = {
+	flag = sob_han_menfa_vs_guizu
+	days = 1300
+}
+	}
+		has_dlc = "Res Publica"
+		has_states_general_mechanic = yes
+		is_orangists_in_power = yes
+		any_neighbor_country = {
+			government = monarchy
+			NOT = {
+				has_opinion_modifier = {
+					who = ROOT
+					modifier = embraced_absolutism
+				}
+			}
+			NOT = {
+				has_opinion_modifier = {
+					who = ROOT
+					modifier = rejected_absolutism
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		years = 4
+	}
+
+	# Approve of absolutism
+	option = { clr_country_flag = sob_han_menfa_vs_guizu   set_country_flag = sob_han_menfa_vs_guizu
+		name = "sob_dutch_republic.1.a"
+		change_statists_vs_orangists = 0.25
+		set_country_flag = supported_orangists
+		clr_country_flag = supported_statists
+		every_neighbor_country = {
+			limit = {
+				government = monarchy
+			}
+			add_opinion = {
+				who = ROOT
+				modifier = embraced_absolutism
+			}
+		}
+	}
+
+	# Reject absolutism
+	option = { clr_country_flag = sob_han_menfa_vs_guizu   set_country_flag = sob_han_menfa_vs_guizu
+		name = "sob_dutch_republic.1.b"
+		change_statists_vs_orangists = -0.25
+		set_country_flag = supported_statists
+		clr_country_flag = supported_orangists
+		every_neighbor_country = {
+			limit = {
+				government = monarchy
+			}
+			add_opinion = {
+				who = ROOT
+				modifier = rejected_absolutism
+			}
+		}
+	}
+}
+
+# Political Maxims of the Republc
+country_event = {
+	id = sob_dutch_republic.2
+	title = "sob_dutch_republic.2.t"
+	desc = {
+			trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic } has_reform = dutch_republic }
+		desc = sob_dutch_republic.2.da
+	}
+	
+	desc = {
+			trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic } NOT = { has_reform = dutch_republic } }
+		desc = sob_dutch_republic.2.db
+	}
+	picture = ADVISOR_eventPicture
+
+	
+
+		trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic }
+		OR=  {
+	NOT = {
+	has_country_flag = sob_han_menfa_vs_guizu
+	}
+	 	
+
+had_country_flag = {
+	flag = sob_han_menfa_vs_guizu
+	days = 1300
+}
+	}
+		has_dlc = "Res Publica"
+		has_states_general_mechanic = yes
+		is_orangists_in_power = yes
+		OR = {
+			advisor = statesman
+			advisor = diplomat
+			advisor = trader
+			advisor = colonial_governor
+		}
+	}
+
+	mean_time_to_happen = {
+		years = 4
+	}
+
+	# Fire the author
+	option = { clr_country_flag = sob_han_menfa_vs_guizu   set_country_flag = sob_han_menfa_vs_guizu
+		name = "sob_dutch_republic.2.a"
+		change_statists_vs_orangists = 0.25
+		set_country_flag = supported_orangists
+		clr_country_flag = supported_statists
+		remove_advisor = statesman
+		remove_advisor = diplomat
+		remove_advisor = trader
+		remove_advisor = colonial_governor
+	}
+
+	# Give him credit for his work
+	option = { clr_country_flag = sob_han_menfa_vs_guizu   set_country_flag = sob_han_menfa_vs_guizu
+		name = "sob_dutch_republic.2.b"
+		change_statists_vs_orangists = -0.25
+		set_country_flag = supported_statists
+		clr_country_flag = supported_orangists
+		add_dip_power = -50
+	}
+}
+
+# Sermons for Princes
+country_event = {
+	id = sob_dutch_republic.3
+	title = "sob_dutch_republic.3.t"
+	desc = {
+			trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic } has_reform = dutch_republic }
+		desc = sob_dutch_republic.3.da
+	}
+	
+	desc = {
+			trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic } NOT = { has_reform = dutch_republic } }
+		desc = sob_dutch_republic.3.db
+	}
+	picture = RELIGIOUS_TURMOIL_eventPicture
+
+	
+
+		trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic }
+			OR=  {
+	NOT = {
+	has_country_flag = sob_han_menfa_vs_guizu
+	}
+	 	
+
+had_country_flag = {
+	flag = sob_han_menfa_vs_guizu
+	days = 1300
+}
+	}
+		has_dlc = "Res Publica"
+		has_states_general_mechanic = yes
+		is_orangists_in_power = yes
+		has_reform = sob_peasant_united_empire
+		NOT = { religious_unity = 1.0 }
+	}
+
+	mean_time_to_happen = {
+		years = 4
+	}
+
+	# Strengthen pulpit propaganda
+	option = { clr_country_flag = sob_han_menfa_vs_guizu   set_country_flag = sob_han_menfa_vs_guizu
+		name = "sob_dutch_republic.3.b"
+		change_statists_vs_orangists = 0.25
+		set_country_flag = supported_orangists
+		clr_country_flag = supported_statists
+		if = {
+			limit = { has_reform = dutch_republic }
+			add_country_modifier = {
+				name = sermons_for_princes
+				duration = 1825
+			}
+		}
+		else = {
+			add_country_modifier = {
+				name = sermons_for_princes_monarchist
+				duration = 1825
+			}
+		}
+	}
+
+	# Tone down pulpit propaganda
+	option = { clr_country_flag = sob_han_menfa_vs_guizu   set_country_flag = sob_han_menfa_vs_guizu
+		name = "sob_dutch_republic.3.a"
+		change_statists_vs_orangists = -0.25
+		set_country_flag = supported_statists
+		clr_country_flag = supported_orangists
+		add_country_modifier = {
+			name = no_sermons_for_princes
+			duration = 1825
+		}
+	}
+}
+
+# The Republic and Free Trade
+country_event = {
+	id = sob_dutch_republic.4
+	title = "sob_dutch_republic.4.t"
+	desc = "sob_dutch_republic.4.d"
+	picture = ACCUSATION_eventPicture
+
+	
+
+		trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic }
+			OR=  {
+	NOT = {
+	has_country_flag = sob_han_menfa_vs_guizu
+	}
+	 	
+
+had_country_flag = {
+	flag = sob_han_menfa_vs_guizu
+	days = 1300
+}
+	}
+		has_dlc = "Res Publica"
+		has_states_general_mechanic = yes
+		is_orangists_in_power = yes
+	}
+
+	mean_time_to_happen = {
+		years = 4
+	}
+
+	# Tell traders to comply with the ruler
+	option = { clr_country_flag = sob_han_menfa_vs_guizu   set_country_flag = sob_han_menfa_vs_guizu
+		name = "sob_dutch_republic.4.a"
+		change_statists_vs_orangists = 0.25
+		set_country_flag = supported_orangists
+		clr_country_flag = supported_statists
+		add_country_modifier = {
+			name = angered_traders
+			duration = 1825
+		}
+	}
+
+	# Concede some of their points and reform accordingly
+	option = { clr_country_flag = sob_han_menfa_vs_guizu   set_country_flag = sob_han_menfa_vs_guizu
+		name = "sob_dutch_republic.4.b"
+		change_statists_vs_orangists = -0.25
+		set_country_flag = supported_statists
+		clr_country_flag = supported_orangists
+		add_adm_power = -25
+		add_dip_power = -25
+	}
+}
+
+# The King in Orange
+country_event = {
+	id = sob_dutch_republic.5
+	title = "sob_dutch_republic.5.t"
+	desc = {
+			trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic } has_reform = dutch_republic }
+		desc = sob_dutch_republic.5.da
+	}
+	desc = {
+			trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic } NOT = { has_reform = dutch_republic } }
+		desc = sob_dutch_republic.5.db
+	}
+
+	picture = RELIGION_eventPicture
+
+	
+
+		trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic }
+			OR=  {
+	NOT = {
+	has_country_flag = sob_han_menfa_vs_guizu
+	}
+	 	
+
+had_country_flag = {
+	flag = sob_han_menfa_vs_guizu
+	days = 1300
+}
+	}
+		has_dlc = "Res Publica"
+		has_states_general_mechanic = yes
+		is_orangists_in_power = yes
+		has_country_flag = supported_orangists
+	}
+
+	mean_time_to_happen = {
+		years = 4
+	}
+
+	# Make sure people know who saved them
+	option = { clr_country_flag = sob_han_menfa_vs_guizu   set_country_flag = sob_han_menfa_vs_guizu
+		name = "sob_dutch_republic.5.a"
+		clr_country_flag = supported_orangists
+		add_adm_power = 25
+		add_prestige = 10
+		add_republican_tradition = -5
+		add_legitimacy = -10
+	}
+
+	# Retain modesty
+	option = { clr_country_flag = sob_han_menfa_vs_guizu   set_country_flag = sob_han_menfa_vs_guizu
+		name = "sob_dutch_republic.5.b"
+		clr_country_flag = supported_orangists
+		add_papal_influence = 10
+		add_prestige = -5
+	}
+}
+
+# Nobles Look to Other Houses
+country_event = {
+	id = sob_dutch_republic.6
+	title = "sob_dutch_republic.6.t"
+	desc = {
+			trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic } has_reform = dutch_republic }
+		desc = sob_dutch_republic.6.da
+	}
+	desc = {
+			trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic } NOT = { has_reform = dutch_republic } }
+		desc = sob_dutch_republic.6.db
+	}
+	picture = DEBATE_REPUBLICAN_eventPicture
+
+	
+
+		trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic }
+			OR=  {
+	NOT = {
+	has_country_flag = sob_han_menfa_vs_guizu
+	}
+	 	
+
+had_country_flag = {
+	flag = sob_han_menfa_vs_guizu
+	days = 1300
+}
+	}
+		has_dlc = "Res Publica"
+		has_states_general_mechanic = yes
+		is_orangists_in_power = yes
+		has_country_flag = supported_statists
+	}
+
+	mean_time_to_happen = {
+		years = 4
+	}
+
+	# Let them leave
+	option = { clr_country_flag = sob_han_menfa_vs_guizu   set_country_flag = sob_han_menfa_vs_guizu
+		name = "sob_dutch_republic.6.a"
+		clr_country_flag = supported_statists
+		add_army_tradition = -10
+	}
+
+	# Try to appease them
+	option = { clr_country_flag = sob_han_menfa_vs_guizu   set_country_flag = sob_han_menfa_vs_guizu
+		name = "sob_dutch_republic.6.b"
+		clr_country_flag = supported_statists
+		add_mil_power = -50
+	}
+}
+
+# True Freedom
+country_event = {
+	id = sob_dutch_republic.7
+	title = "sob_dutch_republic.7.t"
+	desc = {
+			trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic } has_reform = dutch_republic }
+		desc = sob_dutch_republic.7.da
+	}
+	desc = {
+			trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic } NOT = { has_reform = dutch_republic } }
+		desc = sob_dutch_republic.7.db
+	}
+	picture = DEBATE_REPUBLICAN_eventPicture
+
+	
+
+		trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic }
+			OR=  {
+	NOT = {
+	has_country_flag = sob_han_menfa_vs_guizu
+	}
+	 	
+
+had_country_flag = {
+	flag = sob_han_menfa_vs_guizu
+	days = 1300
+}
+	}
+		has_dlc = "Res Publica"
+		has_states_general_mechanic = yes
+		is_orangists_in_power = yes
+		has_country_flag = supported_statists
+	}
+
+	mean_time_to_happen = {
+		years = 4
+	}
+
+	# Perhaps one day...
+	option = { clr_country_flag = sob_han_menfa_vs_guizu   set_country_flag = sob_han_menfa_vs_guizu
+		name = "sob_dutch_republic.7.a"
+		clr_country_flag = supported_statists
+		change_statists_vs_orangists = -0.1
+		add_republican_tradition = 5
+		add_legitimacy = 10
+	}
+}
+
+# No Taxes for Tyrants
+country_event = {
+	id = sob_dutch_republic.8
+	title = "sob_dutch_republic.8.t"
+	desc = {
+			trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic } has_reform = dutch_republic }
+		desc = sob_dutch_republic.8.da
+	}
+	desc = {
+			trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic } NOT = { has_reform = dutch_republic } }
+		desc = sob_dutch_republic.8.db
+	}
+	picture = LIBERUM_VETO_eventPicture
+
+	
+
+		trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic }
+			OR=  {
+	NOT = {
+	has_country_flag = sob_han_menfa_vs_guizu
+	}
+	 	
+
+had_country_flag = {
+	flag = sob_han_menfa_vs_guizu
+	days = 1300
+}
+	}
+		has_dlc = "Res Publica"
+		has_states_general_mechanic = yes
+		is_orangists_in_power = yes
+		has_country_flag = supported_orangists
+	}
+
+	mean_time_to_happen = {
+		years = 4
+	}
+
+	option = { clr_country_flag = sob_han_menfa_vs_guizu   set_country_flag = sob_han_menfa_vs_guizu
+		name = "sob_dutch_republic.8.a"
+		clr_country_flag = supported_orangists
+		add_country_modifier = {
+			name = no_taxes_for_tyrants
+			duration = 1825
+		}
+	}
+}
+
+# Sic Semper Tyrannis
+country_event = {
+	id = sob_dutch_republic.9
+	title = "sob_dutch_republic.9.t"
+	desc = {
+			trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic } has_reform = dutch_republic }
+		desc = sob_dutch_republic.9.da
+	}
+	desc = {
+			trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic } NOT = { has_reform = dutch_republic } }
+		desc = sob_dutch_republic.9.db
+	}
+	picture = ASSASSINATION_eventPicture
+
+	
+
+		trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic }
+			OR=  {
+	NOT = {
+	has_country_flag = sob_han_menfa_vs_guizu
+	}
+	 	
+
+had_country_flag = {
+	flag = sob_han_menfa_vs_guizu
+	days = 1300
+}
+	}
+		has_reform = sob_peasant_united_empire
+		has_dlc = "Res Publica"
+		has_states_general_mechanic = yes
+		statists_vs_orangists = 0.9
+		advisor = spymaster
+	}
+
+	mean_time_to_happen = {
+		years = 20
+	}
+
+	# For the Republican cause...
+	option = { clr_country_flag = sob_han_menfa_vs_guizu   set_country_flag = sob_han_menfa_vs_guizu
+		name = "sob_dutch_republic.9.a"
+		ai_chance = { factor = 20 }
+		change_statists_vs_orangists = -0.75
+		kill_ruler = yes
+		add_republican_tradition = -10
+		add_legitimacy = -20
+	}
+
+	# High treason must be punished
+	option = { clr_country_flag = sob_han_menfa_vs_guizu   set_country_flag = sob_han_menfa_vs_guizu
+		name = "sob_dutch_republic.9.b"
+		ai_chance = { factor = 80 }
+		custom_tooltip = "sob_dutch_republic.9.b.tt"
+		kill_advisor = spymaster
+		add_republican_tradition = 3
+		add_legitimacy = 5
+	}
+}
+
+# Republican Ideals Betrayed
+country_event = {
+	id = sob_dutch_republic.10
+	title = "sob_dutch_republic.10.t"
+	desc = {
+			trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic } has_reform = dutch_republic }
+		desc = sob_dutch_republic.10.da
+	}
+	desc = {
+			trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic } NOT = { has_reform = dutch_republic } }
+		desc = sob_dutch_republic.10.db
+	}
+	picture = LIBERUM_VETO_eventPicture
+
+	
+
+		trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic }
+			OR=  {
+	NOT = {
+	has_country_flag = sob_han_menfa_vs_guizu
+	}
+	 	
+
+had_country_flag = {
+	flag = sob_han_menfa_vs_guizu
+	days = 1300
+}
+	}
+		has_dlc = "Res Publica"
+		has_states_general_mechanic = yes
+		statists_vs_orangists = -0.9
+	}
+
+	mean_time_to_happen = {
+		years = 4
+	}
+
+	option = { clr_country_flag = sob_han_menfa_vs_guizu   set_country_flag = sob_han_menfa_vs_guizu
+		name = "sob_dutch_republic.10.a"
+		add_republican_tradition = 5
+		add_legitimacy = 10
+	}
+}
+
+########################################
+# When Statists are in power
+########################################
+
+# Suggest Act of Seclusion
+country_event = {
+	id = sob_dutch_republic.11
+	title = "sob_dutch_republic.11.t"
+	desc = "sob_dutch_republic.11.d"
+	picture = DIPLOMACY_eventPicture
+
+	
+
+		trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic }
+			OR=  {
+	NOT = {
+	has_country_flag = sob_han_menfa_vs_guizu
+	}
+	 	
+
+had_country_flag = {
+	flag = sob_han_menfa_vs_guizu
+	days = 1300
+}
+	}
+		has_dlc = "Res Publica"
+		had_recent_war = 3
+		has_truce = yes
+		any_known_country = {
+			truce_with = ROOT
+			has_reform = dutch_republic
+			is_statists_in_power = yes
+			NOT = { has_country_flag = accepted_act_of_seclusion }
+		}
+	}
+
+	mean_time_to_happen = {
+		years = 4
+	}
+
+	option = { clr_country_flag = sob_han_menfa_vs_guizu   set_country_flag = sob_han_menfa_vs_guizu
+		name = "sob_dutch_republic.11.a"
+		random_known_country = {
+			limit = {
+				truce_with = ROOT
+				has_reform = dutch_republic
+				is_statists_in_power = yes
+			}
+			country_event = {
+				id = sob_dutch_republic.12
+				days = 7
+				tooltip = "sob_dutch_republic.11.a.tt"
+			}
+		}
+	}
+
+	option = { clr_country_flag = sob_han_menfa_vs_guizu   set_country_flag = sob_han_menfa_vs_guizu
+		name = "sob_dutch_republic.11.b"
+		add_prestige = 5
+	}
+}
+
+# Act of Seclusion
+country_event = {
+	id = sob_dutch_republic.12
+	title = "sob_dutch_republic.12.t"
+	desc = "sob_dutch_republic.12.d"
+	picture = DIPLOMACY_eventPicture
+
+	is_triggered_only = yes
+
+	option = { clr_country_flag = sob_han_menfa_vs_guizu   set_country_flag = sob_han_menfa_vs_guizu
+		name = "sob_dutch_republic.12.a"
+		change_statists_vs_orangists = -0.75
+		ai_chance = { 
+			factor = 75 
+			modifier = {
+				factor = 0.1
+				NOT = { stability = 1 }
+			}
+		}
+		set_country_flag = supported_statists
+		clr_country_flag = supported_orangists
+		add_stability = -1
+		if = {
+			limit = { has_reform = dutch_republic }
+			add_country_modifier = {
+				name = act_of_seclusion
+				duration = 7300
+			}
+		}
+		else = {
+			add_country_modifier = {
+				name = act_of_seclusion_monarchists
+				duration = 7300
+			}
+		}
+		set_country_flag = accepted_act_of_seclusion
+	}
+
+	option = { clr_country_flag = sob_han_menfa_vs_guizu   set_country_flag = sob_han_menfa_vs_guizu
+		name = "sob_dutch_republic.12.b"
+		ai_chance = { factor = 25 }
+		change_statists_vs_orangists = 0.25
+		set_country_flag = supported_orangists
+		clr_country_flag = supported_statists
+		add_prestige = 10
+	}
+}
+
+# Unbreakable Bonds
+country_event = {
+	id = sob_dutch_republic.13
+	title = "sob_dutch_republic.13.t"
+	desc = {
+			trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic } has_reform = dutch_republic }
+		desc = sob_dutch_republic.13.da
+	}
+	desc = {
+			trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic } NOT = { has_reform = dutch_republic } }
+		desc = sob_dutch_republic.13.db
+	}
+	picture = DIPLOMACY_eventPicture
+
+	
+
+		trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic }
+			OR=  {
+	NOT = {
+	has_country_flag = sob_han_menfa_vs_guizu
+	}
+	 	
+
+had_country_flag = {
+	flag = sob_han_menfa_vs_guizu
+	days = 1300
+}
+	}
+		has_dlc = "Res Publica"
+		has_states_general_mechanic = yes
+		is_statists_in_power = yes
+		num_of_royal_marriages = 1
+	}
+
+	mean_time_to_happen = {
+		years = 4
+	}
+
+	option = { clr_country_flag = sob_han_menfa_vs_guizu   set_country_flag = sob_han_menfa_vs_guizu
+		name = "sob_dutch_republic.13.a"
+		change_statists_vs_orangists = -0.25
+		set_country_flag = supported_statists
+		clr_country_flag = supported_orangists
+		every_known_country = {
+			limit = {
+				marriage_with = ROOT
+			}
+			add_opinion = {
+				who = ROOT
+				modifier = uncertain_marriage_ties
+			}
+		}
+	}
+
+	option = { clr_country_flag = sob_han_menfa_vs_guizu   set_country_flag = sob_han_menfa_vs_guizu
+		name = "sob_dutch_republic.13.b"
+		change_statists_vs_orangists = 0.25
+		set_country_flag = supported_orangists
+		clr_country_flag = supported_statists
+		every_known_country = {
+			limit = {
+				marriage_with = ROOT
+			}
+			add_opinion = {
+				who = ROOT
+				modifier = ensured_stable_rule
+			}
+		}
+	}
+}
+
+# Orangist Ties in the Army
+country_event = {
+	id = sob_dutch_republic.14
+	title = "sob_dutch_republic.14.t"
+	desc = {
+			trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic } has_reform = dutch_republic }
+		desc = sob_dutch_republic.14.da
+	}
+	desc = {
+			trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic } NOT = { has_reform = dutch_republic } }
+		desc = sob_dutch_republic.14.db
+	}
+	picture = CONQUEST_eventPicture
+
+	
+
+		trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic }
+			OR=  {
+	NOT = {
+	has_country_flag = sob_han_menfa_vs_guizu
+	}
+	 	
+
+had_country_flag = {
+	flag = sob_han_menfa_vs_guizu
+	days = 1300
+}
+	}
+		has_dlc = "Res Publica"
+		has_states_general_mechanic = yes
+		is_statists_in_power = yes
+		OR = {
+			num_of_generals = 1
+			num_of_conquistadors = 1
+		}
+		is_monarch_leader = no
+		NOT = { num_of_admirals = 1 }
+	}
+
+	mean_time_to_happen = {
+		years = 4
+	}
+
+	option = { clr_country_flag = sob_han_menfa_vs_guizu   set_country_flag = sob_han_menfa_vs_guizu
+		name = "sob_dutch_republic.14.a"
+		change_statists_vs_orangists = -0.25
+		set_country_flag = supported_statists
+		clr_country_flag = supported_orangists
+		kill_leader = {
+			type = random
+		}
+		add_mil_power = 50
+	}
+
+	option = { clr_country_flag = sob_han_menfa_vs_guizu   set_country_flag = sob_han_menfa_vs_guizu
+		name = "sob_dutch_republic.14.b"
+		change_statists_vs_orangists = 0.25
+		set_country_flag = supported_orangists
+		clr_country_flag = supported_statists
+		create_advisor = commandant
+	}
+}
+
+# Nobles Look to the House of Orange
+country_event = {
+	id = sob_dutch_republic.15
+	title = "sob_dutch_republic.15.t"
+	desc = {
+			trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic } has_reform = dutch_republic }
+		desc = sob_dutch_republic.15.da
+	}
+	desc = {
+			trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic } NOT = { has_reform = dutch_republic } }
+		desc = sob_dutch_republic.15.db
+	}
+	picture = LIBERUM_VETO_eventPicture
+
+	
+
+		trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic }
+			OR=  {
+	NOT = {
+	has_country_flag = sob_han_menfa_vs_guizu
+	}
+	 	
+
+had_country_flag = {
+	flag = sob_han_menfa_vs_guizu
+	days = 1300
+}
+	}
+		has_dlc = "Res Publica"
+		has_states_general_mechanic = yes
+		is_statists_in_power = yes
+	}
+
+	mean_time_to_happen = {
+		years = 4
+	}
+
+	option = { clr_country_flag = sob_han_menfa_vs_guizu   set_country_flag = sob_han_menfa_vs_guizu
+		name = "sob_dutch_republic.15.a"
+		change_statists_vs_orangists = -0.25
+		set_country_flag = supported_statists
+		clr_country_flag = supported_orangists
+		random_owned_province = {
+			spawn_rebels = {
+				type = noble_rebels
+				size = 1
+			}
+		}
+	}
+
+	option = { clr_country_flag = sob_han_menfa_vs_guizu   set_country_flag = sob_han_menfa_vs_guizu
+		name = "sob_dutch_republic.15.b"
+		change_statists_vs_orangists = 0.25
+		set_country_flag = supported_orangists
+		clr_country_flag = supported_statists
+		add_country_modifier = {
+			name = aristocracy_modifier
+			duration = 1825
+		}
+	}
+}
+
+# Successes of the Republic
+country_event = {
+	id = sob_dutch_republic.16
+	title = "sob_dutch_republic.16.t"
+	desc = "sob_dutch_republic.16.d"
+	picture = FEAST_eventPicture
+
+	
+
+		trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic }
+			OR=  {
+	NOT = {
+	has_country_flag = sob_han_menfa_vs_guizu
+	}
+	 	
+
+had_country_flag = {
+	flag = sob_han_menfa_vs_guizu
+	days = 1300
+}
+	}
+		has_dlc = "Res Publica"
+		has_states_general_mechanic = yes
+		is_statists_in_power = yes
+		has_country_flag = supported_statists
+	}
+
+	mean_time_to_happen = {
+		years = 4
+	}
+
+	# Let it go
+	option = { clr_country_flag = sob_han_menfa_vs_guizu   set_country_flag = sob_han_menfa_vs_guizu
+		name = "sob_dutch_republic.16.a"
+		add_prestige = 20
+		add_adm_power = -25
+		add_dip_power = -25
+		clr_country_flag = supported_statists
+	}
+
+	# Let it goooo
+	option = { clr_country_flag = sob_han_menfa_vs_guizu   set_country_flag = sob_han_menfa_vs_guizu
+		name = "sob_dutch_republic.16.b"
+		add_republican_tradition = 5
+		add_legitimacy = 10
+		add_adm_power = -50
+		add_dip_power = -50
+		clr_country_flag = supported_statists
+	}
+}
+
+# A Country Without a King
+country_event = {
+	id = sob_dutch_republic.17
+	title = "sob_dutch_republic.17.t"
+	desc = {
+			trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic } has_reform = dutch_republic }
+		desc = sob_dutch_republic.17.da
+	}
+	desc = {
+			trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic } NOT = { has_reform = dutch_republic } }
+		desc = sob_dutch_republic.17.db
+	}
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	
+
+		trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic }
+			OR=  {
+	NOT = {
+	has_country_flag = sob_han_menfa_vs_guizu
+	}
+	 	
+
+had_country_flag = {
+	flag = sob_han_menfa_vs_guizu
+	days = 1300
+}
+	}
+		has_dlc = "Res Publica"
+		has_states_general_mechanic = yes
+		is_statists_in_power = yes
+		has_country_flag = supported_orangists
+	}
+
+	mean_time_to_happen = {
+		years = 4
+	}
+
+	option = { clr_country_flag = sob_han_menfa_vs_guizu   set_country_flag = sob_han_menfa_vs_guizu
+		name = "sob_dutch_republic.17.a"
+		add_prestige = -5
+		clr_country_flag = supported_orangists
+	}
+
+	option = { clr_country_flag = sob_han_menfa_vs_guizu   set_country_flag = sob_han_menfa_vs_guizu
+		name = "sob_dutch_republic.17.b"
+		add_adm_power = -10
+		add_dip_power = -10
+		add_mil_power = -10
+		clr_country_flag = supported_orangists
+	}
+}
+
+# The Orange Road to Glory
+country_event = {
+	id = sob_dutch_republic.18
+	title = "sob_dutch_republic.18.t"
+	desc = {
+			trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic } has_reform = dutch_republic }
+		desc = sob_dutch_republic.18.da
+	}
+	desc = {
+			trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic } NOT = { has_reform = dutch_republic } }
+		desc = sob_dutch_republic.18.db
+	}
+	picture = CONQUEST_eventPicture
+
+	
+
+		trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic }
+			OR=  {
+	NOT = {
+	has_country_flag = sob_han_menfa_vs_guizu
+	}
+	 	
+
+had_country_flag = {
+	flag = sob_han_menfa_vs_guizu
+	days = 1300
+}
+	}
+		has_dlc = "Res Publica"
+		has_states_general_mechanic = yes
+		is_statists_in_power = yes
+		has_country_flag = supported_orangists
+	}
+
+	mean_time_to_happen = {
+		years = 4
+	}
+
+	option = { clr_country_flag = sob_han_menfa_vs_guizu   set_country_flag = sob_han_menfa_vs_guizu
+		name = "sob_dutch_republic.18.a"
+		add_army_tradition = 10
+		change_statists_vs_orangists = 0.1
+		clr_country_flag = supported_orangists
+	}
+
+	option = { clr_country_flag = sob_han_menfa_vs_guizu   set_country_flag = sob_han_menfa_vs_guizu
+		name = "sob_dutch_republic.18.b"
+		add_navy_tradition = 10
+		change_statists_vs_orangists = 0.1
+		clr_country_flag = supported_orangists
+	}
+}
+
+# Generals Doubt the Administration
+country_event = {
+	id = sob_dutch_republic.19
+	title = "sob_dutch_republic.19.t"
+	desc = {
+			trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic } has_reform = dutch_republic }
+		desc = sob_dutch_republic.19.da
+	}
+	desc = {
+			trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic } NOT = { has_reform = dutch_republic } }
+		desc = sob_dutch_republic.19.db
+	}
+	picture = DEBATE_REPUBLICAN_eventPicture
+
+	
+
+		trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic }
+			OR=  {
+	NOT = {
+	has_country_flag = sob_han_menfa_vs_guizu
+	}
+	 	
+
+had_country_flag = {
+	flag = sob_han_menfa_vs_guizu
+	days = 1300
+}
+	}
+		has_dlc = "Res Publica"
+		has_states_general_mechanic = yes
+		is_statists_in_power = yes
+		has_country_flag = supported_statists
+	}
+
+	mean_time_to_happen = {
+		years = 4
+	}
+
+	option = { clr_country_flag = sob_han_menfa_vs_guizu   set_country_flag = sob_han_menfa_vs_guizu
+		name = "sob_dutch_republic.19.a"
+		if = {
+			limit = { has_reform = dutch_republic }
+			add_country_modifier = {
+				name = distrust_among_nobles
+				duration = 1825
+			}
+		}
+		else = {
+			add_country_modifier = {
+				name = distrust_among_nobles_monarchists
+				duration = 1825
+			}
+		}
+		clr_country_flag = supported_orangists
+	}
+}
+
+# The Coup
+country_event = {
+	id = sob_dutch_republic.20
+	title = "sob_dutch_republic.20.t"
+	desc = {
+			trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic } has_reform = dutch_republic }
+		desc = sob_dutch_republic.20.da
+	}
+	desc = {
+			trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic } NOT = { has_reform = dutch_republic } }
+		desc = sob_dutch_republic.20.db
+	}
+	
+	picture = ASSASSINATION_eventPicture
+
+	
+
+		trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic }
+		OR=  {
+	NOT = {
+	has_country_flag = sob_han_menfa_vs_guizu
+	}
+	 	
+
+had_country_flag = {
+	flag = sob_han_menfa_vs_guizu
+	days = 1300
+}
+	}
+		has_dlc = "Res Publica"
+		has_states_general_mechanic = yes
+		NOT = { statists_vs_orangists = 0.1 }
+		OR = {
+			advisor = army_organiser
+			advisor = commandant
+			advisor = quartermaster
+			advisor = grand_captain
+			advisor = recruitmaster
+		}
+	}
+
+	mean_time_to_happen = {
+		years = 20
+	}
+
+	# For the House of Orange!
+	option = { clr_country_flag = sob_han_menfa_vs_guizu   set_country_flag = sob_han_menfa_vs_guizu
+			trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic } has_reform = dutch_republic }
+		name = "sob_dutch_republic.20.a"
+		ai_chance = { factor = 20 }
+		change_statists_vs_orangists = 1.0
+		kill_ruler = yes
+		add_republican_tradition = -15
+		add_legitimacy = -30
+	}
+
+	# For the Republic!
+	option = { clr_country_flag = sob_han_menfa_vs_guizu   set_country_flag = sob_han_menfa_vs_guizu
+			trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic } has_reform = dutch_republic }
+		name = "sob_dutch_republic.20.b"
+		ai_chance = { factor = 80 }
+		if = {
+			limit = { advisor = army_organiser }
+			kill_advisor = army_organiser
+		}
+		if = {
+			limit = { advisor = commandant }
+			kill_advisor = commandant
+		}
+		if = {
+			limit = { advisor = quartermaster }
+			kill_advisor = quartermaster
+		}
+		if = {
+			limit = { advisor = grand_captain }
+			kill_advisor = grand_captain
+		}
+		if = {
+			limit = { advisor = recruitmaster }
+			kill_advisor = recruitmaster
+		}
+		capital_scope = {
+			spawn_rebels = {
+				type = noble_rebels
+				size = 2
+			}
+		}
+		add_republican_tradition = 5
+		add_legitimacy = 10
+	}
+
+	# For the Kingdom!
+	option = { clr_country_flag = sob_han_menfa_vs_guizu   set_country_flag = sob_han_menfa_vs_guizu
+			trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic } NOT = { has_reform = dutch_republic } }
+		name = "sob_dutch_republic.20.c"
+		ai_chance = { factor = 20 }
+		change_statists_vs_orangists = 1.0
+		kill_ruler = yes
+		add_republican_tradition = -15
+		add_legitimacy = -30
+	}
+
+	# For the Union!
+	option = { clr_country_flag = sob_han_menfa_vs_guizu   set_country_flag = sob_han_menfa_vs_guizu
+			trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic } NOT = { has_reform = dutch_republic } }
+		name = "sob_dutch_republic.20.d"
+		ai_chance = { factor = 80 }
+		if = {
+			limit = { advisor = army_organiser }
+			kill_advisor = army_organiser
+		}
+		if = {
+			limit = { advisor = commandant }
+			kill_advisor = commandant
+		}
+		if = {
+			limit = { advisor = quartermaster }
+			kill_advisor = quartermaster
+		}
+		if = {
+			limit = { advisor = grand_captain }
+			kill_advisor = grand_captain
+		}
+		if = {
+			limit = { advisor = recruitmaster }
+			kill_advisor = recruitmaster
+		}
+		capital_scope = {
+			spawn_rebels = {
+				type = noble_rebels
+				size = 2
+			}
+		}
+		add_republican_tradition = 5
+		add_legitimacy = 10
+	}
+}
+
+# No Consensus
+country_event = {
+	id = sob_dutch_republic.21
+	title = "sob_dutch_republic.21.t"
+	desc = "sob_dutch_republic.21.d"
+	picture = DEBATE_REPUBLICAN_eventPicture
+
+	
+
+		trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic }
+			OR=  {
+	NOT = {
+	has_country_flag = sob_han_menfa_vs_guizu
+	}
+	 	
+
+had_country_flag = {
+	flag = sob_han_menfa_vs_guizu
+	days = 1300
+}
+	}
+		has_dlc = "Res Publica"
+		has_states_general_mechanic = yes
+		NOT = { statists_vs_orangists = 0.1 }
+	}
+
+	mean_time_to_happen = {
+		years = 4
+	}
+
+	# Is the republic descending into anarchy?
+	option = { clr_country_flag = sob_han_menfa_vs_guizu   set_country_flag = sob_han_menfa_vs_guizu
+		name = "sob_dutch_republic.21.a"
+		add_adm_power = -25
+		add_dip_power = -25
+		add_mil_power = -25
+	}
+}
+
+# General Demands Control
+country_event = {
+	id = sob_dutch_republic.22
+	title = "sob_dutch_republic.22.t"
+	desc = "sob_dutch_republic.22.d"
+	picture = BATTLE_eventPicture
+
+	
+
+		trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic }
+			OR=  {
+	NOT = {
+	has_country_flag = sob_han_menfa_vs_guizu
+	}
+	 	
+
+had_country_flag = {
+	flag = sob_han_menfa_vs_guizu
+	days = 1300
+}
+	}
+		has_dlc = "Res Publica"
+		has_states_general_mechanic = yes
+		is_at_war = yes
+		OR = {
+			num_of_generals = 1
+			num_of_conquistadors = 1
+		}
+	}
+
+	mean_time_to_happen = {
+		years = 4
+	}
+
+	# Comply as necessary to secure victory
+	option = { clr_country_flag = sob_han_menfa_vs_guizu   set_country_flag = sob_han_menfa_vs_guizu
+		name = "sob_dutch_republic.22.a"
+		add_country_modifier = {
+			name = supported_orangists_in_war
+			duration = 3650
+			hidden = yes
+		}
+		change_statists_vs_orangists = 0.25
+		add_army_tradition = 10
+		add_mil_power = 100
+	}
+
+	# We will hold on to our ideals in the face of terror
+	option = { clr_country_flag = sob_han_menfa_vs_guizu   set_country_flag = sob_han_menfa_vs_guizu
+		name = "sob_dutch_republic.22.b"
+		change_statists_vs_orangists = -0.1
+		add_war_exhaustion = -2.5
+		add_republican_tradition = 2
+		add_legitimacy = 5
+	}
+}
+
+# Orangists Rally Nobles To War
+country_event = {
+	id = sob_dutch_republic.23
+	title = "sob_dutch_republic.23.t"
+	desc = {
+			trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic } has_reform = dutch_republic }
+		desc = sob_dutch_republic.23.da
+	}
+	desc = {
+			trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic } NOT = { has_reform = dutch_republic } }
+		desc = sob_dutch_republic.23.db
+	}
+	picture = BATTLE_eventPicture
+
+	
+
+		trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic }
+			OR=  {
+	NOT = {
+	has_country_flag = sob_han_menfa_vs_guizu
+	}
+	 	
+
+had_country_flag = {
+	flag = sob_han_menfa_vs_guizu
+	days = 1300
+}
+	}
+		has_dlc = "Res Publica"
+		has_states_general_mechanic = yes
+		is_at_war = yes
+		any_rival_country = {
+			war_with = ROOT
+		}
+	}
+
+	mean_time_to_happen = {
+		years = 4
+	}
+
+	# Let them lead us to glory!
+	option = { clr_country_flag = sob_han_menfa_vs_guizu   set_country_flag = sob_han_menfa_vs_guizu
+			trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic } has_reform = dutch_republic }
+		name = "sob_dutch_republic.23.a"
+		add_country_modifier = {
+			name = supported_orangists_in_war
+			duration = 3650
+			hidden = yes
+		}
+		change_statists_vs_orangists = 0.25
+		if = {
+			limit = { has_reform = dutch_republic }
+			add_country_modifier = {
+				name = orangists_rally_against_rival
+				duration = 1825
+			}
+		}
+		else = {
+			add_country_modifier = {
+				name = monarchists_rally_against_rival
+				duration = 1825
+			}
+		}
+	}
+
+	# Let them lead us to glory! (Non dutch)
+	option = { clr_country_flag = sob_han_menfa_vs_guizu   set_country_flag = sob_han_menfa_vs_guizu
+			trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic } NOT = { has_reform = dutch_republic } }
+		name = "sob_dutch_republic.23.c"
+		add_country_modifier = {
+			name = supported_orangists_in_war
+			duration = 3650
+			hidden = yes
+		}
+		change_statists_vs_orangists = 0.25
+		add_country_modifier = {
+			name = orangists_rally_against_rival
+			duration = 1825
+		}
+	}
+
+	# We will hold on to our ideals in the face of terror
+	option = { clr_country_flag = sob_han_menfa_vs_guizu   set_country_flag = sob_han_menfa_vs_guizu
+		name = "sob_dutch_republic.23.b"
+		change_statists_vs_orangists = -0.1
+		add_war_exhaustion = -2.5
+	}
+}
+
+# Statists Demand Return to Status Quo
+country_event = {
+	id = sob_dutch_republic.24
+	title = "sob_dutch_republic.24.t"
+	desc = {
+			trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic } has_reform = dutch_republic }
+		desc = sob_dutch_republic.23.da
+	}
+	desc = {
+			trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic } NOT = { has_reform = dutch_republic } }
+		desc = sob_dutch_republic.23.db
+	}
+	picture = DEBATE_REPUBLICAN_eventPicture
+
+	
+
+		trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic }
+			OR=  {
+	NOT = {
+	has_country_flag = sob_han_menfa_vs_guizu
+	}
+	 	
+
+had_country_flag = {
+	flag = sob_han_menfa_vs_guizu
+	days = 1300
+}
+	}
+		has_dlc = "Res Publica"
+		has_states_general_mechanic = yes
+		is_at_war = no
+		has_country_modifier = supported_orangists_in_war
+	}
+
+	mean_time_to_happen = {
+		years = 4
+	}
+
+	# Things must return to how they were
+	option = { clr_country_flag = sob_han_menfa_vs_guizu   set_country_flag = sob_han_menfa_vs_guizu
+		name = "sob_dutch_republic.24.a"
+		change_statists_vs_orangists = -0.25
+		add_mil_power = -100
+	}
+
+	# They faught our war, let them keep their power
+	option = { clr_country_flag = sob_han_menfa_vs_guizu   set_country_flag = sob_han_menfa_vs_guizu
+		name = "sob_dutch_republic.24.b"
+		add_republican_tradition = -5
+		add_legitimacy = -10
+	}
+}
+
+# Rebuilding the Republic
+country_event = {
+	id = sob_dutch_republic.25
+	title = "sob_dutch_republic.25.t"
+	desc = "sob_dutch_republic.25.d"
+	picture = WOUNDED_SOLDIERS_eventPicture
+
+	
+
+		trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic }
+			OR=  {
+	NOT = {
+	has_country_flag = sob_han_menfa_vs_guizu
+	}
+	 	
+
+had_country_flag = {
+	flag = sob_han_menfa_vs_guizu
+	days = 1300
+}
+	}
+		has_dlc = "Res Publica"
+		has_states_general_mechanic = yes
+		is_at_war = no
+		war_exhaustion = 7
+	}
+
+	mean_time_to_happen = {
+		years = 4
+	}
+
+	# Let us rebuild these ideals, for the people of [Country].
+	option = { clr_country_flag = sob_han_menfa_vs_guizu   set_country_flag = sob_han_menfa_vs_guizu
+		name = "sob_dutch_republic.25.a"
+		change_statists_vs_orangists = -0.25
+		add_war_exhaustion = -5
+	}
+
+	# The Prince of Orange could lead us to victory in the future.
+	option = { clr_country_flag = sob_han_menfa_vs_guizu   set_country_flag = sob_han_menfa_vs_guizu
+			trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic } has_reform = dutch_republic }
+		name = "sob_dutch_republic.25.b"
+		change_statists_vs_orangists = -0.1
+	}
+
+	# The Prince of [Root.GetName] could lead us to victory in the future. (Non dutch)
+	option = { clr_country_flag = sob_han_menfa_vs_guizu   set_country_flag = sob_han_menfa_vs_guizu
+			trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic } NOT = { has_reform = dutch_republic } }
+		name = "sob_dutch_republic.25.c"
+		change_statists_vs_orangists = -0.1
+	}
+}
+
+# Interest van [Province]
+province_event = {
+	id = sob_dutch_republic.26
+	title = "sob_dutch_republic.26.t"
+	desc = "sob_dutch_republic.26.d"
+	picture = MERCHANTS_TALKING_eventPicture
+
+	is_mtth_scaled_to_size = 1
+
+		trigger = {
+
+
+
+		has_dlc = "Res Publica"
+		OR = {
+			province_has_center_of_trade_of_level = 1
+			has_province_modifier = river_estuary_modifier
+		}
+		owner = { 
+				OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic }
+			OR=  {
+	NOT = {
+	has_country_flag = sob_han_menfa_vs_guizu
+	}
+	 	
+
+had_country_flag = {
+	flag = sob_han_menfa_vs_guizu
+	days = 1300
+}
+	}
+		has_states_general_mechanic = yes }
+		
+	}
+
+	mean_time_to_happen = {
+		months = 1000
+	}
+
+	# Listen to the locals
+	option = { clr_country_flag = sob_han_menfa_vs_guizu   set_country_flag = sob_han_menfa_vs_guizu
+		name = "sob_dutch_republic.26.a"
+		owner = {
+			change_statists_vs_orangists = -0.15
+		}
+	}
+
+	# Ignore the locals
+	option = { clr_country_flag = sob_han_menfa_vs_guizu   set_country_flag = sob_han_menfa_vs_guizu
+		name = "sob_dutch_republic.26.b"
+		add_province_modifier = {
+			name = local_regenten_upset
+			duration = 1095
+		}
+	}
+}
+
+# Concerns from our Border
+country_event = {
+	id = sob_dutch_republic.27
+	title = "sob_dutch_republic.27.t"
+	desc = "sob_dutch_republic.27.d"
+	picture = BORDER_TENSION_eventPicture
+
+	
+
+		trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic }
+			OR=  {
+	NOT = {
+	has_country_flag = sob_han_menfa_vs_guizu
+	}
+	 	
+
+had_country_flag = {
+	flag = sob_han_menfa_vs_guizu
+	days = 1300
+}
+	}
+		has_dlc = "Res Publica"
+		has_states_general_mechanic = yes
+		any_neighbor_country = {
+			NOT = { has_opinion = { who = ROOT value = 0 } }
+			ROOT = { is_threat = PREV }
+		}
+	}
+
+	mean_time_to_happen = {
+		years = 4
+	}
+
+	# Listen to the locals
+	option = { clr_country_flag = sob_han_menfa_vs_guizu   set_country_flag = sob_han_menfa_vs_guizu
+		name = "sob_dutch_republic.27.a"
+		change_statists_vs_orangists = -0.15
+	}
+
+	# Ignore the locals
+	option = { clr_country_flag = sob_han_menfa_vs_guizu   set_country_flag = sob_han_menfa_vs_guizu
+		name = "sob_dutch_republic.27.b"
+		random_owned_province = {
+			limit = {
+				any_neighbor_province = {
+					owner = {
+						NOT = { has_opinion = { who = ROOT value = 0 } }
+						ROOT = { is_threat = PREV }
+					}
+				}
+			}
+			add_province_modifier = {
+				name = local_regenten_upset
+				duration = 1095
+			}
+		}
+	}
+}
+
+# The Ambitions of [Province]
+province_event = {
+	id = sob_dutch_republic.28
+	title = "sob_dutch_republic.28.t"
+	desc = {
+			trigger = {
+			owner = {
+				OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic }
+				has_reform = dutch_republic
+			}
+		}
+		desc = sob_dutch_republic.28.da
+	}
+	desc = {
+			trigger = {
+			owner = {
+				OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic }
+				NOT = { has_reform = dutch_republic }
+			}
+		}
+		desc = sob_dutch_republic.28.db
+	}
+	picture = BORDER_TENSION_eventPicture
+
+	is_mtth_scaled_to_size = 1
+
+		trigger = {	
+		has_dlc = "Res Publica"
+		owner = { has_states_general_mechanic = yes 
+		OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic }
+				OR=  {
+	NOT = {
+	has_country_flag = sob_han_menfa_vs_guizu
+	}
+	 	
+
+had_country_flag = {
+	flag = sob_han_menfa_vs_guizu
+	days = 1300
+}
+	}
+		}
+		any_neighbor_province = {
+			owner = {
+				NOT = { has_opinion = { who = ROOT value = 0 } }
+				is_threat = ROOT
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 1000
+	}
+
+	# Listen to the locals
+	option = { clr_country_flag = sob_han_menfa_vs_guizu   set_country_flag = sob_han_menfa_vs_guizu
+		name = "sob_dutch_republic.28.a"
+		owner = {
+			change_statists_vs_orangists = 0.15
+		}
+	}
+
+	# Ignore the locals
+	option = { clr_country_flag = sob_han_menfa_vs_guizu   set_country_flag = sob_han_menfa_vs_guizu
+		name = "sob_dutch_republic.28.b"
+		add_province_modifier = {
+			name = local_nobles_upset
+			duration = 1095
+		}
+	}
+}
+
+# The Plans of [Province]
+province_event = {
+	id = sob_dutch_republic.29
+	title = "sob_dutch_republic.29.t"
+	desc = "sob_dutch_republic.29.d"
+	picture = MILITARY_CAMP_eventPicture
+
+	is_mtth_scaled_to_size = 1
+
+		trigger = {
+		has_dlc = "Res Publica"
+		owner = { has_states_general_mechanic = yes
+			OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic }
+		OR=  {
+	NOT = {
+	has_country_flag = sob_han_menfa_vs_guizu
+	}
+	 	
+
+had_country_flag = {
+	flag = sob_han_menfa_vs_guizu
+	days = 1300
+}
+	}
+		}
+		any_neighbor_province = {
+			owner = {
+				NOT = { has_opinion = { who = ROOT value = 0 } }
+				is_enemy = ROOT
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 1000
+	}
+
+	# Listen to the locals
+	option = { clr_country_flag = sob_han_menfa_vs_guizu   set_country_flag = sob_han_menfa_vs_guizu
+		name = "sob_dutch_republic.29.a"
+		owner = {
+			change_statists_vs_orangists = 0.15
+		}
+	}
+
+	# Ignore the locals
+	option = { clr_country_flag = sob_han_menfa_vs_guizu   set_country_flag = sob_han_menfa_vs_guizu
+		name = "sob_dutch_republic.29.b"
+		add_province_modifier = {
+			name = local_nobles_upset
+			duration = 1095
+		}
+	}
+}
+
+# Debate in [Province]
+province_event = {
+	id = sob_dutch_republic.30
+	title = "sob_dutch_republic.30.t"
+	desc = {
+			trigger = {
+			owner = {
+				has_reform = dutch_republic
+					OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic }
+			}
+		}
+		desc = sob_dutch_republic.30.da
+	}
+	desc = {
+			trigger = {
+			owner = {
+				NOT = { has_reform = dutch_republic }
+					OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic }
+			}
+		}
+		desc = sob_dutch_republic.30.db
+	}
+	picture = DEBATE_REPUBLICAN_eventPicture
+
+	is_mtth_scaled_to_size = 1
+
+		trigger = {	
+		has_dlc = "Res Publica"
+		owner = {
+		OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic }
+			has_states_general_mechanic = yes
+					OR=  {
+	NOT = {
+	has_country_flag = sob_han_menfa_vs_guizu
+	}
+	 	
+
+had_country_flag = {
+	flag = sob_han_menfa_vs_guizu
+	days = 1300
+}
+	}
+		}
+		OR = {
+			AND = {
+				NOT = {
+					owner = { has_reform = dutch_republic }
+				}
+				development = 15
+				is_core = owner
+			}
+			province_id = 96
+			province_id = 97
+			province_id = 98
+			province_id = 99
+			province_id = 100
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 1000
+	}
+
+	# Send someone to argue in favor of Orangists
+	option = { clr_country_flag = sob_han_menfa_vs_guizu   set_country_flag = sob_han_menfa_vs_guizu
+			trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic } owner = { has_reform = dutch_republic } }
+		name = "sob_dutch_republic.30.a"
+		owner = {
+			change_statists_vs_orangists = 0.15
+		}
+		if = {
+			limit = {
+				owner = {
+					is_statists_in_power = no
+				}
+			}
+			add_province_modifier = {
+				name = local_regenten_upset
+				duration = 1095
+			}
+		}
+	}
+
+	# Send someone to argue in favor of Monarchists
+	option = { clr_country_flag = sob_han_menfa_vs_guizu   set_country_flag = sob_han_menfa_vs_guizu
+			trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic }
+			NOT = {
+				owner = { has_reform = dutch_republic }
+			}
+		}
+		name = "sob_dutch_republic.30.c"
+		owner = {
+			change_statists_vs_orangists = 0.15
+		}
+		if = {
+			limit = {
+				owner = {
+					is_statists_in_power = no
+				}
+			}
+			add_province_modifier = {
+				name = local_regenten_upset
+				duration = 1095
+			}
+		}
+	}
+
+	# Send someone to argue in favor of Statists
+	option = { clr_country_flag = sob_han_menfa_vs_guizu   set_country_flag = sob_han_menfa_vs_guizu
+		name = "sob_dutch_republic.30.b"
+		owner = {
+			change_statists_vs_orangists = -0.15
+		}
+		if = {
+			limit = {
+				owner = {
+					is_orangists_in_power = no
+				}
+			}
+			add_province_modifier = {
+				name = local_nobles_upset
+				duration = 1095
+			}
+		}
+	}
+}
+
+########################################
+# When States General Falls under PU
+########################################
+# Hidden Bounce Event
+country_event = {
+	id = sob_dutch_republic.31
+	title = sob_dutch_republic.31.t
+	desc = sob_dutch_republic_31.d
+	picture = DEBATE_REPUBLICAN_eventPicture
+
+	
+	hidden = yes
+is_triggered_only = yes
+	immediate = {
+		FROM = {
+			country_event = { id = sob_dutch_republic.32 }
+		}
+	}
+
+	option = { clr_country_flag = sob_han_menfa_vs_guizu   set_country_flag = sob_han_menfa_vs_guizu
+		name = "sob_dutch_republic.31.a"
+	}
+}
+
+# Real Event
+country_event = {
+	id = sob_dutch_republic.32
+	title = sob_dutch_republic.32.t
+	desc = sob_dutch_republic.32.d
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+		trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic }
+		is_lesser_in_union = yes
+		has_government_attribute = states_general_mechanic
+				OR=  {
+	NOT = {
+	has_country_flag = sob_han_menfa_vs_guizu
+	}
+	 	
+
+had_country_flag = {
+	flag = sob_han_menfa_vs_guizu
+	days = 1300
+}
+	}
+	}
+
+	option = { clr_country_flag = sob_han_menfa_vs_guizu   set_country_flag = sob_han_menfa_vs_guizu
+		name = "sob_dutch_republic.32.a"
+		hidden_effect = {
+			change_statists_vs_monarchists = 2
+		}
+		custom_tooltip = STATES_GENERAL_PU_ELECTION_DISABLED
+	}
+}
+
+########################################
+# When States General is abolished
+########################################
+country_event = {
+	id = sob_dutch_republic.33
+	title = sob_dutch_republic.33.t
+	desc = {
+			trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic } 
+			exiled_same_dynasty_as_current = "states_general_abolished_@ROOT"
+		}
+		desc = sob_dutch_republic.33.d1
+	}
+	desc = {
+			trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic } 
+			NOT = { exiled_same_dynasty_as_current = "states_general_abolished_@ROOT" }
+		}
+		desc = sob_dutch_republic.33.d2
+	}
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = { NOT = { tag = NED }}
+				define_exiled_ruler = {
+					dynasty = "historic_dynasty"
+					exiled_as = "states_general_abolished_@ROOT"
+				}
+			}
+			else = {
+				define_exiled_ruler = {
+					dynasty = "van Oranje"
+					exiled_as = "states_general_abolished_@ROOT"
+				}
+			}
+		}
+	}
+
+	after = {
+		clear_exiled_ruler = "states_general_abolished_@ROOT"
+	}
+
+	option = { clr_country_flag = sob_han_menfa_vs_guizu   set_country_flag = sob_han_menfa_vs_guizu
+		name = "sob_dutch_republic.33.a"
+			trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic }
+			exiled_same_dynasty_as_current = "states_general_abolished_@ROOT"
+		}
+	}
+
+	option = { clr_country_flag = sob_han_menfa_vs_guizu   set_country_flag = sob_han_menfa_vs_guizu
+		name = "sob_dutch_republic.33.b"
+			trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic }
+			NOT = { exiled_same_dynasty_as_current = "states_general_abolished_@ROOT" }
+		}
+		set_ruler = "states_general_abolished_@ROOT"
+	}
+}
+
+country_event = {
+	id = sob_dutch_republic.50
+	title = "sob_dutch_republic.50.t"
+	desc = {
+			trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic } has_reform = dutch_republic }
+		desc = sob_dutch_republic.50.d
+	}
+	
+	desc = {
+			trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic } NOT = { has_reform = dutch_republic } }
+		desc = sob_dutch_republic.50.d
+	}
+	picture = ADVISOR_eventPicture
+
+	
+
+		trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic }
+		has_country_flag = sob_gov_lossing_control_to_confu
+		has_reform = sob_military_dictatorship_empire
+		has_dlc = "Res Publica"
+		NOT = { legitimacy = 35}
+		has_states_general_mechanic = yes
+		NOT = { statists_vs_orangists = -0.85 }
+	}
+
+	mean_time_to_happen = {
+		years = 1
+	}
+
+	# Fire the author
+	option = { clr_country_flag = sob_gov_lossing_control_to_confu
+				clr_country_flag = sob_gov_lossing_control_to_confu_1
+		name = "sob_dutch_republic.50.a"
+		remove_government_reform = sob_military_dictatorship_empire
+		add_government_reform = sob_confucianism_united_empire
+	}
+
+}
+
+country_event = {
+	id = sob_dutch_republic.51
+	title = "sob_dutch_republic.51.t"
+	desc = {
+			trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic } has_reform = dutch_republic }
+		desc = sob_dutch_republic.51.d
+	}
+	
+	desc = {
+			trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic } NOT = { has_reform = dutch_republic } }
+		desc = sob_dutch_republic.51.d
+	}
+	picture = ADVISOR_eventPicture
+
+	
+
+		trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic }
+		
+		NOT = {has_country_flag = sob_gov_lossing_control_to_confu_1}
+		has_reform = sob_military_dictatorship_empire
+		has_dlc = "Res Publica"
+		has_states_general_mechanic = yes
+		NOT = { statists_vs_orangists = -0.85 }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	# Fire the author
+	option = { 
+		name = "sob_dutch_republic.50.a"
+		set_country_flag = sob_gov_lossing_control_to_confu
+		set_country_flag = sob_gov_lossing_control_to_confu_1
+	}
+
+}
+
+country_event = {
+	id = sob_dutch_republic.52
+	title = "sob_dutch_republic.52.t"
+	desc = {
+			trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic } has_reform = dutch_republic }
+		desc = sob_dutch_republic.52.d
+	}
+	
+	desc = {
+			trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic } NOT = { has_reform = dutch_republic } }
+		desc = sob_dutch_republic.52.d
+	}
+	picture = ADVISOR_eventPicture
+
+	
+
+		trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic }
+		
+		NOT = {has_country_flag = sob_gov_lossing_control_to_jungongjue_2}
+		has_reform = sob_confucianism_united_empire
+		has_dlc = "Res Publica"
+		has_states_general_mechanic = yes
+		statists_vs_orangists = 0.85
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	# Fire the author
+	option = { 
+		name = "sob_dutch_republic.52.a"
+		set_country_flag = sob_gov_lossing_control_to_jungongjue
+		set_country_flag = sob_gov_lossing_control_to_jungongjue_2
+	}
+
+}
+
+country_event = {
+	id = sob_dutch_republic.53
+	title = "sob_dutch_republic.53.t"
+	desc = {
+			trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic } has_reform = dutch_republic }
+		desc = sob_dutch_republic.53.d
+	}
+	
+	desc = {
+			trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic } NOT = { has_reform = dutch_republic } }
+		desc = sob_dutch_republic.53.d
+	}
+	picture = ADVISOR_eventPicture
+
+	
+
+		trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic }
+		
+		has_country_flag = sob_gov_lossing_control_to_jungongjue
+		has_reform = sob_confucianism_united_empire
+		has_dlc = "Res Publica"
+		has_states_general_mechanic = yes
+		NOT = {meritocracy = 35}
+		statists_vs_orangists = 0.85
+	}
+
+	mean_time_to_happen = {
+		years = 1
+	}
+
+	# Fire the author
+	option = { 
+		name = "sob_dutch_republic.53.a"
+				remove_government_reform = sob_confucianism_united_empire
+		add_government_reform = sob_military_dictatorship_empire
+		clr_country_flag = sob_gov_lossing_control_to_jungongjue
+		clr_country_flag = sob_gov_lossing_control_to_jungongjue_2
+	}
+
+}
+
+country_event = {
+	id = sob_dutch_republic.54
+	title = "sob_dutch_republic.54.t"
+	desc = {
+			trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic } has_reform = dutch_republic }
+		desc = sob_dutch_republic.54.d
+	}
+	
+	desc = {
+			trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic } NOT = { has_reform = dutch_republic } }
+		desc = sob_dutch_republic.54.d
+	}
+	picture = ADVISOR_eventPicture
+
+	
+
+		trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic }
+		
+		NOT = {has_country_flag = sob_gov_lossing_control_to_jungongjue_3}
+		has_reform = sob_peasant_united_empire
+		has_dlc = "Res Publica"
+		has_states_general_mechanic = yes
+		statists_vs_orangists = 0.85
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	# Fire the author
+	option = { 
+		name = "sob_dutch_republic.54.a"
+		set_country_flag = sob_gov_lossing_control_to_n_jungongjue
+		set_country_flag = sob_gov_lossing_control_to_jungongjue_3
+	}
+
+}
+
+country_event = {
+	id = sob_dutch_republic.55
+	title = "sob_dutch_republic.55.t"
+	desc = {
+			trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic } has_reform = dutch_republic }
+		desc = sob_dutch_republic.55.d
+	}
+	
+	desc = {
+			trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic } NOT = { has_reform = dutch_republic } }
+		desc = sob_dutch_republic.55.d
+	}
+	picture = ADVISOR_eventPicture
+
+	
+
+		trigger = {	OR=  {  	has_reform = sob_chinese_republic_mechanic  has_reform = sob_chinese_monarchy_mechanic }
+		
+		has_country_flag = sob_gov_lossing_control_to_n_jungongjue
+		has_reform = sob_peasant_united_empire
+		has_dlc = "Res Publica"
+		has_states_general_mechanic = yes
+		NOT = {devotion = 35}
+		statists_vs_orangists = 0.85
+	}
+
+	mean_time_to_happen = {
+		years = 1
+	}
+
+	# Fire the author
+	option = { 
+		name = "sob_dutch_republic.55.a"
+				remove_government_reform = sob_peasant_united_empire
+		add_government_reform = sob_military_dictatorship_empire
+		clr_country_flag = sob_gov_lossing_control_to_jungongjue
+		clr_country_flag = sob_gov_lossing_control_to_jungongjue_2
+	}
+
+}

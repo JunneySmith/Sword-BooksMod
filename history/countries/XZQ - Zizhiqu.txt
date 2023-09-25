@@ -1,0 +1,12 @@
+government = sob_chinese_monarchy
+add_government_reform  = sob_celestial_empire_song_reformed 
+government_rank = 3
+technology_group = chinese
+religion = confucianism
+add_harmonized_religion = mahayana
+primary_culture = jianghuai
+capital = 1821
+1.1.1 = {
+	government = sob_chinese_monarchy
+add_government_reform = sob_celestial_empire_song_reformed 
+}

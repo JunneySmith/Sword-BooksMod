@@ -1,0 +1,638 @@
+namespace = sob_option_events
+country_event = {
+	id = sob_option_events.1
+	title = "sob_option_events.1.t"
+	desc = "sob_option_events.1.d"
+	picture = GIFTS_TO_EMPEROR_eventPicture
+	is_triggered_only = yes
+
+	trigger = {
+	      
+		ai = no
+
+	}
+					option = {
+		name = "sob_option_events.100865030.t"
+   country_event = { id = sob_option_events.100865030 } 
+		
+	}
+				option = {
+		name = "sob_option_events.100865.t"
+   country_event = { id = sob_option_events.100865 } 
+		
+	}
+			option = {
+		name = "sob_option_events.4.t"
+   country_event = { id = sob_option_events.4 } 
+		
+	}
+				option = {
+		name = "sob_option_events.200401.t"
+   country_event = { id = sob_option_events.200401 } 
+		
+	}
+				option = {
+		name = "sob_option_events.367952.t"
+   country_event = { id = sob_option_events.367952 } 
+		
+	}
+
+		option = {
+		name = "sob_option_events.1.bcade"
+   country_event = { id = sobchineseempire.1980 } 
+		
+	}
+	option = {
+		name = "sob_option_events.1.bca"
+   country_event = { id = sobchineseempire.920 } 
+		
+	}
+	option = {
+		name = "sob_option_events.921.t"
+  country_event = { id = sobchineseempire.921 } 
+	}
+		option = {
+		name = "sobchuanjiaojizhi.10086.t"
+  country_event = { id = sobchineseempire.10086119527 } 
+	}
+		option = {
+		name = "sobempireevents.90625623.t"
+		  country_event = { id = sobempireevents.9062562 } 
+	}
+		option = {
+		name = "sob_fubing_events.60.t"
+	    country_event = { id = sob_fubing_events.60 } 
+	}
+		#	option = {
+		#name = "sobevents.9552926.t"
+	   # country_event = { id = sobevents.9552926 } 
+	#}
+				option = {
+		name = "sob_option_events.27952.t"
+	    country_event = { id = sob_option_events.27952 } 
+	}
+				option = {
+		name = "sobevents.9552926.exit"
+	  
+	}
+}
+country_event = {
+	id = sob_option_events.100865
+	title = "sob_option_events.100865.t"
+	desc = "sob_option_events.100865.d"
+	picture = IMPERIAL_SEAL_eventPicture
+		
+ is_triggered_only = yes
+ 
+	option = {
+ 
+		name = "sob_option_events.100865.a" #Ignore these barbarians
+		set_global_flag = sob_great_project_sec_need
+	}
+ 	option = {
+ 
+		name = "sob_option_events.100865.b" #Ignore these barbarians
+		clr_global_flag = sob_great_project_sec_need
+		
+		
+		
+	}
+}
+country_event = {
+	id = sob_option_events.100865030
+	title = "sob_option_events.100865030.t"
+	desc = "sob_option_events.100865030.d"
+	picture = IMPERIAL_SEAL_eventPicture
+		
+ is_triggered_only = yes
+  	option = {
+ 
+		name = "sob_option_events.100865030.a" #Ignore these barbarians
+		set_global_flag = sob_enable_tianming_shenjun
+		
+		
+	}
+	option = {
+ 
+		name = "sob_option_events.100865030.b" #Ignore these barbarians
+		clr_global_flag = sob_enable_tianming_shenjun
+	}
+
+}
+country_event = {
+	id = sob_option_events.27952
+	title = "sob_option_events.27952.t"
+	desc = "sob_option_events.27952.d"
+	picture = IMPERIAL_SEAL_eventPicture
+		
+ is_triggered_only = yes
+ 
+	option = {
+ 
+		name = "sob_option_events.27952.a" #Ignore these barbarians
+		set_global_flag = sob_auto_fix_gov
+		clr_global_flag = sob_no_auto_fix_gov
+	}
+ 	option = {
+ 
+		name = "sob_option_events.27952.b" #Ignore these barbarians
+ 		set_global_flag = sob_no_auto_fix_gov
+		clr_global_flag = sob_auto_fix_gov
+		
+	}
+}
+country_event = {
+	id = sob_option_events.200401
+	title = "sob_option_events.200401.t"
+	desc = "sob_option_events.200401.d"
+	picture = IMPERIAL_SEAL_eventPicture
+		
+ is_triggered_only = yes
+ 
+	option = {
+ 
+		name = "sob_option_events.200401.a" #Ignore these barbarians
+		set_global_flag = sob_set_hegemon_on
+		clr_global_flag = sob_set_hegemon_off
+	}
+ 	option = {
+ 
+		name = "sob_option_events.200401.b" #Ignore these barbarians
+ 		set_global_flag = sob_set_hegemon_off
+		clr_global_flag = sob_set_hegemon_on
+		
+	}
+}
+country_event = {
+	id = sob_option_events.367952
+	title = "sob_option_events.367952.t"
+	desc = "sob_option_events.367952.d"
+	picture = IMPERIAL_SEAL_eventPicture
+		
+ is_triggered_only = yes
+ 
+	option = {
+ 
+		name = "sob_option_events.367952.a" #Ignore these barbarians
+		set_global_flag = sob_setted_no_heir_first_5
+		clr_global_flag = sob_setted_no_heir_first_5_no
+	}
+ 	option = {
+ 
+		name = "sob_option_events.367952.b" #Ignore these barbarians
+ 		set_global_flag = sob_setted_no_heir_first_5_no
+		clr_global_flag = sob_setted_no_heir_first_5
+		
+	}
+}
+country_event = {
+	id = sob_option_events.4
+	title = "sob_option_events.4.t"
+	desc = "sob_option_events.4.d"
+	picture = IMPERIAL_SEAL_eventPicture
+		
+ is_triggered_only = yes
+ 
+	option = {
+ 
+		name = "sob_option_events.4.a" #Ignore these barbarians
+		set_global_flag = sob_mng_faction_option
+		clr_global_flag = sob_mng_faction_option_off
+		add_faction = bureaucrats
+		add_faction = temples
+		add_faction = enuchs
+		
+	}
+ 	option = {
+ 
+		name = "sob_option_events.4.b" #Ignore these barbarians
+ 		set_global_flag = sob_mng_faction_option_off
+		clr_global_flag = sob_mng_faction_option
+				remove_faction = temples
+		remove_faction = enuchs
+		remove_faction = bureaucrats
+	}
+}
+
+country_event = {
+	id = sob_option_events.2
+	title = "sob_option_events.2.t"
+	desc = "sobdirection.927.d"
+	picture = GIFTS_TO_EMPEROR_eventPicture
+	is_triggered_only = yes
+
+	trigger = {
+		ai = no
+	}
+				option = {
+		name = "sob_reform_option_title_1"
+			# country_event = { id = sobevents.9552926 } 
+		set_global_flag = sob_abolish_tributary_system
+		custom_tooltip = sob_reform_gov_hardest_mode_desc_19
+set_country_flag = sob_reform_jingdian_mode_off
+set_country_flag = sob_reform_jingdian_mode_easy
+										hidden_effect = {
+		every_owned_province ={
+		remove_province_modifier =  sob_shishen_land_on
+	
+		
+		}
+		
+		
+					change_estate_land_share = {
+			estate = estate_sobshishen
+			share = -100.0
+		}	
+				change_estate_land_share = {
+			estate = estate_sobwarriors
+			share = -100.0
+		}	
+		change_estate_land_share = {
+			estate = estate_sobshimin
+			share = -100.0
+		}	
+							change_estate_land_share = {
+			estate = estate_nobles
+			share = -100.0
+		}	
+					change_estate_land_share = {
+			estate = estate_burghers
+			share = -100.0
+		}	
+		
+													set_country_flag =sob_reform_mode_setted_no_gov_mode_2
+	remove_estate_privilege = sob_estate_jianghu_siren_wen
+	remove_estate_privilege = sob_estate_jianghu_gongchang_wen
+	remove_estate_privilege = sob_estate_jianghu_education_wen
+	remove_estate_privilege = sob_estate_warrior_soldier_number_down
+	remove_estate_privilege = sob_estate_warrior_direct_reward_wen
+	remove_estate_privilege = sob_estate_warrior_education_wen
+							remove_government_reform = celestial_empire
+		set_country_flag = sob_shishua_reform_1
+		set_country_flag = sob_shishua_reform_2
+		set_country_flag = sob_shishua_reform_3
+		set_country_flag = sob_shishua_reform_4
+		set_country_flag = sob_shishua_reform_5
+					clr_country_flag = sob_celestial_empire_song
+		clr_country_flag = sob_cleasing_nobles
+		clr_country_flag = sob_keju_shicigefu
+		clr_country_flag = sob_shushengtongzhi
+		clr_country_flag = sob_quefa_baohu_shibing
+clr_country_flag =sob_ming_new_dlc_harder_flag
+				set_global_flag =sob_shishua_reform_global_1
+		set_global_flag =sob_shishua_reform_global_2
+		set_global_flag =sob_shishua_reform_global_3
+		set_global_flag =sob_shishua_reform_global_4
+		set_global_flag =sob_shishua_reform_global_5
+           set_country_flag = sob_reform_mode_setted
+		   set_country_flag = sob_reform_gov_mode_on
+
+}
+
+		change_estate_land_share = {
+			estate = estate_sobwarriors
+			share = 15.0
+		}	
+		change_estate_land_share = {
+			estate = estate_sobshimin
+			share = 10.0
+		}	
+							change_estate_land_share = {
+			estate = estate_nobles
+			share = 10.0
+		}	
+					change_estate_land_share = {
+			estate = estate_burghers
+			share = 10.0
+		}	
+	}
+
+			option = {
+		name = "sob_reform_option_title_2"
+			trigger = {
+		always = no
+	}
+			custom_tooltip = sob_reform_gov_hardest_mode_desc_20
+			custom_tooltip = sob_reform_gov_hardest_mode_desc_17
+		set_global_flag = sob_abolish_tributary_system
+		set_country_flag = sob_reform_jingdian_mode_easy
+                   set_country_flag =sob_reform_mode_setted
+				    set_country_flag =sob_reform_mode_setted_no_gov_mode_1
+					 set_country_flag =sob_reform_mode_setted_no_gov_mode_2
+	remove_estate_privilege = sob_estate_jianghu_siren_wen
+	remove_estate_privilege = sob_estate_jianghu_gongchang_wen
+	remove_estate_privilege = sob_estate_jianghu_education_wen
+	remove_estate_privilege = sob_estate_warrior_soldier_number_down
+	remove_estate_privilege = sob_estate_warrior_direct_reward_wen
+	remove_estate_privilege = sob_estate_warrior_education_wen
+							
+						#	 country_event = { id = sobevents.9552926 } 
+		set_country_flag = sob_shishua_reform_1
+		set_country_flag = sob_shishua_reform_2
+		set_country_flag = sob_shishua_reform_3
+		set_country_flag = sob_shishua_reform_4
+		set_country_flag = sob_shishua_reform_5
+
+			set_country_flag = sob_celestial_empire_song
+		set_country_flag = sob_cleasing_nobles
+		set_country_flag = sob_keju_shicigefu
+		set_country_flag = sob_shushengtongzhi
+		set_country_flag = sob_quefa_baohu_shibing
+
+		
+	}
+	
+	
+				option = {
+		name = "sob_reform_option_title_4"
+			custom_tooltip = sob_reform_gov_hardest_mode_desc_21
+			custom_tooltip = sob_reform_gov_hardest_mode_desc_21n
+			hidden_effect = {
+                   set_country_flag =sob_reform_mode_setted
+
+				    set_country_flag =sob_reform_mode_setted_no_gov_mode_1
+
+			set_country_flag = sob_celestial_empire_song
+		set_country_flag = sob_cleasing_nobles
+		set_country_flag = sob_keju_shicigefu
+		set_country_flag = sob_shushengtongzhi
+		set_country_flag = sob_quefa_baohu_shibing
+		
+				 	set_estate_privilege = sob_estate_inward_production_power
+	set_estate_privilege = sob_estate_bookperfection_taxes_direct
+	set_estate_privilege = sob_estate_shinonggongshang
+	set_estate_privilege = sob_estate_shishen_road_to_sky_rew
+
+					change_estate_land_share = {
+			estate = estate_sobwarriors
+			share = -100.0
+		}	
+			change_estate_land_share = {
+			estate = estate_sobshishen
+			share = -100.0
+		}	
+		change_estate_land_share = {
+			estate = estate_sobshimin
+			share = -100.0
+		}	
+
+		}
+							change_estate_land_share = {
+			estate = estate_sobshishen
+			share = 40.0
+		}
+							change_estate_land_share = {
+			estate = estate_sobwarriors
+			share = 5.0
+		}	
+	}
+	
+					option = {
+		name = "sob_reform_option_title_7"
+			custom_tooltip = sob_reform_gov_hardest_mode_desc_21
+			
+		custom_tooltip = sob_shishen_land_on_desc
+						   set_country_flag =sob_reform_mode_135_hard
+
+                   set_country_flag =sob_reform_mode_setted
+				    set_country_flag =sob_reform_mode_setted_no_gov_mode_1
+
+		hidden_effect = {
+		every_owned_province ={
+		add_province_modifier ={
+		name = sob_shishen_land_on
+		duration = -1
+		
+		}
+		
+		
+		}
+		
+		
+			set_country_flag = sob_celestial_empire_song
+		set_country_flag = sob_cleasing_nobles
+		set_country_flag = sob_keju_shicigefu
+		set_country_flag = sob_shushengtongzhi
+		set_country_flag = sob_quefa_baohu_shibing
+
+				 	set_estate_privilege = sob_estate_inward_production_power
+	set_estate_privilege = sob_estate_bookperfection_taxes_direct
+	set_estate_privilege = sob_estate_shinonggongshang
+	set_estate_privilege = sob_estate_shishen_road_to_sky_rew
+	set_estate_privilege = sob_estate_jianghu_siren_wen
+	set_estate_privilege = sob_estate_jianghu_gongchang_wen
+	set_estate_privilege = sob_estate_jianghu_education_wen
+	set_estate_privilege = sob_estate_warrior_soldier_number_down
+	set_estate_privilege = sob_estate_warrior_direct_reward_wen
+	set_estate_privilege = sob_estate_warrior_education_wen
+					change_estate_land_share = {
+			estate = estate_sobwarriors
+			share = -100.0
+		}	
+			change_estate_land_share = {
+			estate = estate_sobshishen
+			share = -100.0
+		}	
+		change_estate_land_share = {
+			estate = estate_sobshimin
+			share = -100.0
+		}	
+		}
+					change_estate_land_share = {
+			estate = estate_sobshishen
+			share = 70.0
+		}
+							change_estate_land_share = {
+			estate = estate_sobwarriors
+			share = 5.0
+		}	
+	}
+					option = {
+		name = "sob_reform_option_title_5"
+			custom_tooltip = sob_reform_gov_hardest_mode_desc_21
+			custom_tooltip = sob_reform_gov_hardest_mode_desc_21h
+		custom_tooltip = sob_shishen_land_on_desc
+		custom_tooltip = sob_shishen_land_on_desc_n
+                   set_country_flag =sob_reform_mode_setted
+				    set_country_flag =sob_reform_mode_setted_no_gov_mode_1
+		hidden_effect = {
+				set_country_flag =sob_reform_mode_135_harder
+		every_owned_province ={
+		add_province_modifier ={
+		name = sob_shishen_land_on
+		duration = -1
+		
+		}
+		
+		
+		}
+		
+		
+			set_estate_privilege = sob_estate_jianghu_siren_wen
+	set_estate_privilege = sob_estate_jianghu_gongchang_wen
+	set_estate_privilege = sob_estate_jianghu_education_wen
+	set_estate_privilege = sob_estate_warrior_soldier_number_down
+	set_estate_privilege = sob_estate_warrior_direct_reward_wen
+	set_estate_privilege = sob_estate_warrior_education_wen
+set_country_flag = sob_ming_ref_dif_harder
+set_country_flag = sob_ming_new_dlc_harder_flag
+			set_country_flag = sob_celestial_empire_song
+		set_country_flag = sob_cleasing_nobles
+		set_country_flag = sob_keju_shicigefu
+		set_country_flag = sob_shushengtongzhi
+		set_country_flag = sob_quefa_baohu_shibing
+
+				 	set_estate_privilege = sob_estate_inward_production_power
+	set_estate_privilege = sob_estate_bookperfection_taxes_direct
+	set_estate_privilege = sob_estate_shinonggongshang
+	set_estate_privilege = sob_estate_shishen_road_to_sky_rew
+						change_estate_land_share = {
+			estate = estate_church
+			share = -100.0
+		}	
+					change_estate_land_share = {
+			estate = estate_nobles
+			share = -100.0
+		}	
+					change_estate_land_share = {
+			estate = estate_burghers
+			share = -100.0
+		}	
+					change_estate_land_share = {
+			estate = estate_sobwarriors
+			share = -100.0
+		}	
+			change_estate_land_share = {
+			estate = estate_sobshishen
+			share = -100.0
+		}	
+		change_estate_land_share = {
+			estate = estate_sobshimin
+			share = -100.0
+		}	
+		}
+					change_estate_land_share = {
+			estate = estate_sobshishen
+			share = 75.0
+		}
+				change_estate_land_share = {
+			estate = estate_nobles
+			share = 10.0
+		}	
+							change_estate_land_share = {
+			estate = estate_burghers
+			share = 5.0
+		}	
+	}
+
+							option = {
+		name = "sob_reform_option_title_6"
+		set_country_flag = sob_ming_ref_dif_hardest
+		set_country_flag = sob_hard_mode_kuanxian
+		set_country_flag = sob_hard_mode_exm_1
+		custom_tooltip = sob_reform_gov_hardest_mode_desc_23
+		custom_tooltip = sob_reform_gov_hardest_mode_desc_24
+		 set_country_flag =sob_reform_mode_setted_no_gov_mode_1
+           set_country_flag = sob_reform_mode_setted
+		   set_country_flag = sob_reform_gov_hard_mode_on
+		    set_country_flag = sob_reform_gov_hardest_mode_on
+				set_country_flag = sob_reform_gov_extream_normal_mode_on
+			set_country_flag = sob_reform_gov_extream_mode_on
+			set_country_flag = sob_celestial_empire_song
+		set_country_flag = sob_cleasing_nobles
+		set_country_flag = sob_keju_shicigefu
+		set_country_flag = sob_shushengtongzhi
+		set_country_flag = sob_quefa_baohu_shibing
+		
+		hidden_effect = {
+			set_estate_privilege = sob_estate_jianghu_siren_wen
+	set_estate_privilege = sob_estate_jianghu_gongchang_wen
+	set_estate_privilege = sob_estate_jianghu_education_wen
+	set_estate_privilege = sob_estate_warrior_soldier_number_down
+	set_estate_privilege = sob_estate_warrior_direct_reward_wen
+	set_estate_privilege = sob_estate_warrior_education_wen
+			set_estate_privilege = sob_estate_inward_production_power
+	set_estate_privilege = sob_estate_bookperfection_taxes_direct
+	set_estate_privilege = sob_estate_shinonggongshang
+	set_estate_privilege = sob_estate_shishen_road_to_sky_rew
+					change_estate_land_share = {
+			estate = estate_church
+			share = -100.0
+		}	
+					change_estate_land_share = {
+			estate = estate_nobles
+			share = -100.0
+		}	
+					change_estate_land_share = {
+			estate = estate_burghers
+			share = -100.0
+		}	
+					change_estate_land_share = {
+			estate = estate_sobwarriors
+			share = -100.0
+		}	
+			change_estate_land_share = {
+			estate = estate_sobshishen
+			share = -100.0
+		}	
+		change_estate_land_share = {
+			estate = estate_sobshimin
+			share = -100.0
+		}	
+		}
+					change_estate_land_share = {
+			estate = estate_sobshishen
+			share = 85.0
+		}
+				change_estate_land_share = {
+			estate = estate_nobles
+			share = 4.0
+		}	
+							change_estate_land_share = {
+			estate = estate_burghers
+			share = 1.0
+		}	
+
+	}
+
+	
+	
+
+}
+
+
+country_event = {
+	id = sob_option_events.3
+	title = "sob_option_events.3.t"
+	desc = "sob_option_events.3.d"
+	picture = GIFTS_TO_EMPEROR_eventPicture
+	is_triggered_only = yes
+
+	
+	option = {
+		name = "sob_option_events.3.a"
+        add_church_power = 50
+						add_estate_loyalty = {
+				estate = estate_sobshishen
+				loyalty = 20
+			}
+	}
+	option = {
+		name = "sob_option_events.3.b"
+		if = {
+		limit = { ai = no}
+		add_stability = -1
+		
+						add_estate_loyalty = {
+				estate = estate_sobshishen
+				loyalty = -15
+			}
+			}
+              random_owned_province ={
+			  limit = {NOT = {religion = sob_taoist_religion}}
+			  change_religion = sob_taoist_religion
+			  add_reform_center = sob_taoist_religion
+			  }
+	}
+
+}

@@ -1,0 +1,432 @@
+namespace = sob_tributary_ndlc_events
+# Local Revolt
+
+
+country_event = {
+	id = sob_tributary_ndlc_events.2
+	title = sob_tributary_ndlc_events.2.t
+	desc = sob_tributary_ndlc_events.2.d
+	picture = IMPERIAL_EXAMINATION_eventPicture
+	
+     
+	trigger = {
+	 	is_at_war = no
+		
+	is_emperor_of_china =yes
+	OR = {
+	culture_group = east_asian
+	culture_group = chinese_group
+	}
+	ROOT = {
+	any_subject_country ={
+capital_scope = { superregion = china_superregion}
+OR = {
+AND = {
+NOT = {	military_strength = {
+	who = PREV
+	value = 0.8
+}
+	}
+	ROOT = {manpower_percentage = 0.5}
+	}
+	ROOT ={ai = no}
+	}
+	}
+
+	}
+	}
+		mean_time_to_happen = {
+		years = 10
+	}
+	immediate = {
+	random_subject_country ={
+	limit = {capital_scope = { superregion = china_superregion}
+	OR = {
+NOT = {	military_strength = {
+	who = PREV
+	value = 0.8
+}
+	}	ROOT ={ai = no} }
+
+	}
+	save_event_target_as = sob_china_wants_to_unite
+	
+	}
+	
+	}
+ 
+	
+			option = {
+		name = "sob_tributary_ndlc_events.2.a"
+         event_target:sob_china_wants_to_unite ={
+		country_event = { id = sob_tributary_ndlc_events.3	
+		}
+		 
+		 }
+	}
+
+	option = {
+		name = "sob_tributary_ndlc_events.2.b"
+       add_prestige = -5
+	}
+
+}
+
+
+
+country_event = {
+	id = sob_tributary_ndlc_events.3
+	title = sob_tributary_ndlc_events.3.t
+	desc = sob_tributary_ndlc_events.3.d
+	picture = IMPERIAL_EXAMINATION_eventPicture
+ is_triggered_only = yes
+
+	
+			option = {
+		name = "sob_tributary_ndlc_events.3.a"
+         FROM = {
+		  
+		country_event = { id = sob_tributary_ndlc_events.4
+		
+		 
+		 }
+		 }
+	}
+			option = {
+		name = "sob_tributary_ndlc_events.3.b"
+		trigger = {
+		any_owned_province ={
+
+		NOT = { superregion = china_superregion}
+		
+		
+		
+		}
+		}
+         FROM = {
+		     
+		country_event = { id = sob_tributary_ndlc_events.6
+		}
+		 
+		 
+		 }
+	}
+	option = {
+		name = "sob_tributary_ndlc_events.3.c"
+       add_prestige = 15
+	            FROM = {
+		 
+		country_event = { id = sob_tributary_ndlc_events.5
+		}
+		 
+		 
+		 }
+	}
+
+}
+country_event = {
+	id = sob_tributary_ndlc_events.4
+	title = sob_tributary_ndlc_events.4.t
+	desc = sob_tributary_ndlc_events.4.d
+	picture = IMPERIAL_EXAMINATION_eventPicture
+ is_triggered_only = yes
+
+	
+			option = {
+		name = "sob_tributary_ndlc_events.4.a"
+				ROOT = {
+            inherit = FROM
+			}
+			 add_prestige = 5
+		 
+	}
+
+
+}
+
+country_event = {
+	id = sob_tributary_ndlc_events.6
+	title = sob_tributary_ndlc_events.6.t
+	desc = sob_tributary_ndlc_events.6.d
+	picture = IMPERIAL_EXAMINATION_eventPicture
+ is_triggered_only = yes
+
+	
+			option = {
+		name = "sob_tributary_ndlc_events.6.a"
+          FROM = {
+		  every_owned_province = {
+		  limit = {
+		  OR= {
+		  superregion = china_superregion
+		  AND ={FROM ={NOT = { culture_group = east_asian}
+		  NOT = { culture_group = chinese_group}
+		  }
+		  
+		  OR = {
+		  culture_group = east_asian
+		  culture_group = chinese_group
+		  }
+		  }
+		  }
+		  }
+		  cede_province = ROOT
+		  
+		  }
+		  
+		  }
+			 
+		 
+	}
+
+
+}
+
+country_event = {
+	id = sob_tributary_ndlc_events.5
+	title = sob_tributary_ndlc_events.5.t
+	desc = sob_tributary_ndlc_events.5.d
+	picture = IMPERIAL_EXAMINATION_eventPicture
+ is_triggered_only = yes
+
+	
+	option = {
+		name = "sob_tributary_ndlc_events.5.a"
+			ai_chance = { factor = 10000 }
+			set_country_flag = sob_huangdi_win
+			if = {
+			limit = {FROM = {is_subject_of = ROOT}}
+			FROM = {
+			grant_independence = yes
+			set_country_flag = sob_zhongyuan_defeated
+			}
+			}
+        declare_war_with_cb = {
+    who = FROM
+    casus_belli = cb_annex
+}
+		add_prestige = 5
+		add_mandate = 5
+		 
+	}
+	
+	option = {
+		name = "sob_tributary_ndlc_events.5.b"
+			ai_chance = { factor = 0 }
+			 add_prestige = -5 
+	}
+
+}
+
+
+country_event = {
+	id = sob_tributary_ndlc_events.7
+	title = sob_tributary_ndlc_events.7.t
+	desc = sob_tributary_ndlc_events.7.d
+	picture = IMPERIAL_EXAMINATION_eventPicture
+	
+     
+	trigger = {
+	 	is_at_war = no
+		
+	is_emperor_of_china =yes
+	OR = {
+	culture_group = east_asian
+	culture_group = chinese_group
+	}
+	ROOT = {
+	any_neighbor_country ={
+	OR = {
+	NOT = {is_subject_of = ROOT}
+	NOT = {capital_scope = { superregion = china_superregion}}
+	}
+	OR = {
+any_owned_province = { superregion = china_superregion}
+any_owned_province = { is_core = ROOT}
+}
+OR = {
+AND = {
+ROOT = {manpower_percentage = 0.5 }
+NOT = {	military_strength = {
+	who = PREV
+	value = 0.8
+}
+	}
+	}
+	ROOT = {
+	ai = no
+	}
+	}
+	}
+
+	}
+	}
+			mean_time_to_happen = {
+		years = 10
+	}
+	immediate = {
+	random_neighbor_country ={
+	limit = {
+     OR = {
+	NOT = {is_subject_of = ROOT}
+	NOT = {
+	capital_scope = { superregion = china_superregion}
+
+	}
+	}
+	OR = {
+any_owned_province = { superregion = china_superregion}
+
+AND = {
+NOT = {
+	OR = {
+	culture_group = east_asian
+	culture_group = chinese_group
+	}
+
+}
+any_owned_province = {	OR = {
+	culture_group = east_asian
+	culture_group = chinese_group
+	}}
+}
+any_owned_province = { is_core = ROOT}
+}
+OR = {
+NOT = {	military_strength = {
+	who = PREV
+	value = 0.8
+}
+	} 
+	ROOT = {ai = no}
+	}
+	
+	}
+	save_event_target_as = sob_china_wants_to_unite_2
+	
+	}
+	
+	}
+ 
+	
+			option = {
+		name = "sob_tributary_ndlc_events.7.aa"
+		trigger = {
+		imperial_mandate = 60
+		}
+         event_target:sob_china_wants_to_unite_2 ={
+		country_event = { id = sob_tributary_ndlc_events.8	
+		}
+		 
+		 }
+	}
+
+	option = {
+		name = "sob_tributary_ndlc_events.7.b"
+		trigger = {imperial_mandate = 60}
+       add_prestige = -5
+	}
+	option = {
+		name = "sob_tributary_ndlc_events.7.ac"
+		trigger = {NOT = {imperial_mandate = 60}}
+       add_prestige = -5
+	}
+}
+
+
+
+country_event = {
+	id = sob_tributary_ndlc_events.8
+	title = sob_tributary_ndlc_events.8.t
+	desc = sob_tributary_ndlc_events.8.d
+	picture = IMPERIAL_EXAMINATION_eventPicture
+ is_triggered_only = yes
+
+	
+			option = {
+		name = "sob_tributary_ndlc_events.8.a"
+         FROM = {
+		        
+		country_event = { id = sob_tributary_ndlc_events.9
+		
+		 
+		 }
+		 }
+	}
+
+	option = {
+		name = "sob_tributary_ndlc_events.8.b"
+		add_prestige = 15
+	            FROM = {
+		
+		country_event = { id = sob_tributary_ndlc_events.5
+		
+		 
+		 }
+		 }
+	}
+	
+		#option = {
+	#	name = "sob_tributary_ndlc_events.8.c"
+      # add_prestige = 15
+	  #          FROM = {
+		#         event_target:sob_china_wants_to_unite ={
+	#	country_event = { id = sob_tributary_ndlc_events.11
+	#	}
+		 
+		# }
+		# }
+	#}
+
+}
+country_event = {
+	id = sob_tributary_ndlc_events.9
+	title = sob_tributary_ndlc_events.9.t
+	desc = sob_tributary_ndlc_events.9.d
+	picture = IMPERIAL_EXAMINATION_eventPicture
+ is_triggered_only = yes
+
+	
+			option = {
+		name = "sob_tributary_ndlc_events.9.a"
+          FROM = {
+		  every_owned_province = {
+		  limit = {
+		  OR= {
+		  superregion = china_superregion
+		  is_core = ROOT
+		  AND ={FROM ={NOT = { culture_group = east_asian}
+		  NOT = { culture_group = chinese_group}
+		  }
+		  
+		  OR = {
+		  culture_group = east_asian
+		  culture_group = chinese_group
+		  }
+		  }
+		  }
+		  }
+		  cede_province = ROOT
+		  
+		  }
+		  
+		  }
+			 add_mandate = -15
+		 
+	}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

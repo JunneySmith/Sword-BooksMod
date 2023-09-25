@@ -1,0 +1,496 @@
+on_mandate_reform_passed = {
+	if = {
+	limit = {
+	has_estate = estate_sobshishen
+				estate_influence = {
+				estate = estate_sobshishen
+				influence = 50
+				}
+				
+	}
+	custom_tooltip = sob_chinese_empire_golden_age_8
+		add_stability = -1
+	}
+			if = {
+	limit = {
+	has_estate = estate_sobshishen
+				estate_influence = {
+				estate = estate_sobshishen
+				influence = 40
+				}
+				
+	}
+	add_mandate = -10
+	}
+		if = {
+	limit = {
+	has_estate = estate_sobshishen
+				
+	}
+	custom_tooltip = sob_chinese_empire_golden_age_8
+		add_mandate = -15
+		
+	}
+	else = {
+	add_splendor = 300
+	add_prestige = -35
+	}
+	if = {
+		limit = { has_country_flag = mng_shengshi_reward_flag }
+		add_estate_loyalty = {
+			estate = estate_eunuchs 
+			loyalty = 10 
+		}
+		add_estate_loyalty = {
+			estate = estate_nobles 
+			loyalty = 10 
+		}
+		add_estate_loyalty = {
+			estate = estate_burghers 
+			loyalty = 10 
+		}
+		add_estate_loyalty = {
+			estate = estate_church 
+			loyalty = 10 
+		}
+		add_estate_loyalty = {
+			estate = estate_nomadic_tribes 
+			loyalty = 10 
+		}
+	}
+	if = {
+		limit = { has_country_flag = qng_passing_decree_reduces_autonomy_everywhere_by_5_flag } 
+		every_owned_province = {
+			add_local_autonomy = -10
+		}
+	}
+}
+on_battle_lost_unit = {
+    if = {
+        limit = {
+            unit_owner = {
+                tag = MNG
+                has_ruler_flag = mng_militry_incompetence
+            }
+            is_ruler_commanding_unit = yes
+			enemy_unit = {
+				unit_owner = {
+					tag = OIR
+				}
+			}
+        }
+        OIR = {
+            country_event = { id = flavor_oir.2 }
+        }
+    }
+	    if = {
+        limit = {
+            unit_owner = {
+                tag = OIR
+            }
+            is_ruler_commanding_unit = yes
+			enemy_unit = {
+				unit_owner = {
+					tag = MNG
+				}
+			}
+        }
+        MNG = {
+            country_event = { id = sobchineseempire.10086001 }
+        }
+    }
+}
+on_war_won = {
+if = {
+limit = { has_country_modifier =sob_dongyuan_effect}
+remove_country_modifier = sob_dongyuan_effect
+}
+if = {
+limit = { is_emperor_of_china = yes
+FROM = { has_country_flag = sob_fight_land_taking}
+}
+FROM ={
+		every_owned_province = {
+		limit = {   superregion = china_superregion}
+		add_core = ROOT
+		cede_province = ROOT
+		}
+		clr_country_flag = sob_defeated_fomer_emperor
+		clr_country_flag = sob_fight_land_taking
+
+}
+}
+
+if = {
+limit ={
+OR = {
+has_country_flag = sob_fight_land_taking
+has_country_flag = sob_defeated_fomer_emperor}
+}
+
+		clr_country_flag = sob_defeated_fomer_emperor
+		clr_country_flag = sob_fight_land_taking
+
+}
+	FROM = { country_event = { id = flavor_cri.6 } }
+	ROOT = { country_event = { id = tributary_events.32 } }
+	if = {
+	limit = { 
+	FROM = { OR = {culture_group = east_asian  culture_group = chinese_group }
+	is_subject_of_type = zhuhou_claim_state
+	ai = yes
+	}
+	ROOT = { OR = {culture_group = east_asian  culture_group = chinese_group }
+	is_subject_of_type = zhuhou_claim_state
+	ai = yes
+	}
+	NOT = {
+	any_country = { ai = no OR = {culture_group = east_asian  culture_group = chinese_group } 
+capital_scope = {superregion = china_superregion}
+	}
+	
+	}
+	}
+	ROOT = {
+	inherit = FROM
+	}
+	}
+	if = {
+	limit = { 
+	FROM = { has_country_flag = sob_zhongyuan_defeated}
+	ROOT = { has_country_flag = sob_huangdi_win}
+	}
+	FROM = {
+	clr_country_flag = sob_zhongyuan_defeated
+	
+ROOT = {
+clr_country_flag = sob_huangdi_win
+	}
+			  every_owned_province = {
+		  limit = {
+		  superregion = china_superregion}
+		  cede_province = ROOT
+		  }
+	}
+	}
+	
+	
+		if = {
+	limit = { 
+	FROM = { OR = {culture_group = east_asian  culture_group = chinese_group }
+	is_emperor_of_china = yes
+	ai = yes
+	}
+	ROOT = { OR = {culture_group = east_asian  culture_group = chinese_group }
+	capital_scope = {superregion = china_superregion}
+
+	ai = yes
+	}
+	NOT = {
+	any_country = { ai = no OR = {culture_group = east_asian  culture_group = chinese_group } 
+capital_scope = {superregion = china_superregion}
+	}
+	
+	}
+	}
+	ROOT = {
+	inherit = FROM
+	}
+	}
+}
+on_province_religion_converted = {
+	on_province_religion_converted_estate_privileges_effect = yes
+	if = {
+	limit ={
+	owner = {
+			OR = { religion = confucianism religion = threeself religion =sob_catholic  religion =sob_reformed	religion = sob_orthodox 	religion = sob_coptic	religion = sob_mahayana	religion = sob_sunni religion =sob_shinto 		religion = sob_hinduism religion = sob_shamanism	religion = sob_anglican	}}
+	
+	}
+	owner = {
+	
+	add_harmonization_progress = 1
+	}
+	}
+}
+
+
+on_diplomatic_annex = {
+	events = {
+		610
+	}
+	if = {
+	limit = {
+	ai = yes
+	FROM = {tag = NPS}
+	
+	}
+	set_country_flag = sob_no_nps_again
+	}
+}
+
+on_mandate_of_heaven_gained = {
+set_government_rank = 3
+	events = {
+		sobempireevents.5610087
+	}
+save_global_event_target_as = EmperorOfChina
+		
+		
+		if = {
+		limit = {
+						   NOT = {  
+				   has_reform =  celestial_empire
+				   has_estate = estate_sobshishen
+				   }
+		    is_emperor_of_china = yes
+			   NOT = { any_subject_country = {
+           tag = XZY
+   
+   }}
+			NOT = { OR = {culture_group = east_asian  culture_group = chinese_group } }
+		}
+		set_emperor_of_china = XCH
+		}
+		if = {
+		limit = {
+		NOT = { OR = {culture_group = east_asian  culture_group = chinese_group } }
+		}
+							every_subject_country = {
+						limit = {
+									OR = {
+is_subject_of_type = zhuhou_state
+is_subject_of_type = zhuhou_claim_state
+is_subject_of_type = sob_zhongyuan_claim_state
+is_subject_of_type = sob_celestial_member
+is_subject_of_type = sob_celestial_member_2
+is_subject_of_type = celestial_client_state
+}
+						}
+	grant_independence = yes
+						
+					}
+		}
+		grant_independence = yes
+if = {
+			limit = { OR = {culture_group = east_asian  culture_group = chinese_group }
+
+			}			
+FROM = {
+					every_subject_country = {
+						limit = {
+				OR= {
+is_subject_of_type = tributary_state
+ is_subject_of_type = tributary_state_2
+is_subject_of_type = sob_tributary_state_3
+ }
+						}
+ROOT = {
+	   		 		 create_subject = {
+    subject_type = tributary_state
+    subject = PREV
+}
+
+}
+						
+					}
+					every_subject_country = {
+						limit = {
+						OR = {
+is_subject_of_type = zhuhou_state
+is_subject_of_type = zhuhou_claim_state
+is_subject_of_type = celestial_client_state
+}
+						}
+ROOT = {
+	   		 		 create_subject = {
+    subject_type = celestial_client_state
+    subject = PREV
+}
+
+}
+						
+					}
+										every_subject_country = {
+						limit = {
+						OR = {
+is_subject_of_type = sob_duhu_vassal
+}
+						}
+ROOT = {
+	   		 		 create_subject = {
+    subject_type = sob_duhu_vassal
+    subject = PREV
+}
+
+}
+						
+					}
+					
+
+
+}
+	
+		}
+						
+
+
+	
+	if = {
+	limit = { OR = {culture_group = east_asian  culture_group = chinese_group } }
+	
+	country_event = { #Reforming the Bureaucracy
+		id = china_events.31
+		days = 5
+	}
+	set_mandate = 60
+	
+	
+			country_event = {
+		id = sob_fubing_events.296#Records of the last Empire
+		days = 5
+	}
+		country_event = {
+		id = sobchineseempire.123#Records of the last Empire
+		days = 5
+	}
+	
+	country_event = {
+		id = china_events.32 #Records of the last Empire
+		days = 5
+	}
+	country_event = {
+		id = celestial_empire_events.2
+		days = 5
+	}
+	china_superregion = {
+		limit = {
+			NOT = { is_core = ROOT }
+		}
+		
+		add_permanent_claim = ROOT
+		add_core = ROOT
+	}
+
+	}
+
+	if = {
+		limit = {
+			has_country_modifier = lost_mandate_of_heaven
+		}
+		remove_country_modifier = lost_mandate_of_heaven
+	}
+
+}
+
+# When a nation loses the Mandate of Heaven
+# FROM = New Emperor, ROOT = Old Emperor
+on_mandate_of_heaven_lost = {
+	if = {
+		limit = {
+			technology_group = chinese
+		}
+	add_government_reform = feudalism_reform
+	}
+	set_government_rank = 2
+	add_country_modifier = {
+		name = lost_mandate_of_heaven
+		duration = 7300	# 20 years
+	}
+	add_stability = -2
+	if = {
+	limit ={
+	FROM ={
+	 is_emperor_of_china = yes
+	 OR = {culture_group = east_asian  culture_group = chinese_group } 
+	}
+	}
+	china_superregion = {
+		limit = {
+			is_permanent_claim = ROOT
+		}
+		remove_claim = ROOT
+	}
+	set_country_flag = sob_defeated_fomer_emperor
+	}
+	
+	if = {
+	limit ={
+	ROOT ={
+	 is_emperor_of_china = yes
+	 NOT ={OR = {culture_group = east_asian  culture_group = chinese_group } }
+	}
+	}
+	china_superregion = {
+		limit = {
+			is_permanent_claim = ROOT
+		}
+		remove_claim = ROOT
+	}
+	
+			china_superregion = {
+		limit = {
+			owned_by = ROOT
+			
+		}
+		
+		add_nationalism = 8
+	}
+		china_superregion = {
+		limit = {
+			is_core = ROOT
+			
+		}
+		
+		add_core = FROM
+	}
+	
+	}
+}
+on_chinese_empire_dismantled = {
+clear_global_event_target = EmperorOfChina
+	events = {
+		
+	}
+}
+on_annexed = {
+	events = {
+		sobchineseempire.1111 # Empire dismantled
+	}
+	FROM = {
+	 if = {
+	 limit = { is_emperor_of_china = yes}
+	 change_tag = XCH
+				if = {
+			limit = { is_emperor_of_china = yes 
+			ROOT = { NOT = { OR = {culture_group = east_asian  culture_group = chinese_group }}}
+			}
+					every_subject_country = {
+						limit = {
+						OR = {
+is_subject_of_type = zhuhou_state
+is_subject_of_type = zhuhou_claim_state
+is_subject_of_type = celestial_client_state
+}
+						}
+grant_independence = yes
+						
+					}
+					ROOT = { 		every_subject_country = {
+						limit = {
+						OR = {
+is_subject_of_type = zhuhou_state
+is_subject_of_type = zhuhou_claim_state
+is_subject_of_type = celestial_client_state
+}
+						}
+grant_independence = yes
+						
+					}}
+					
+			
+			
+		
+		}
+	}
+	}
+}

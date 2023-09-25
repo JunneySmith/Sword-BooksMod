@@ -1,0 +1,348 @@
+estate_sobwarriors =
+{
+	icon = 2
+color = { 255 0 0 }
+	# If true, country will get estate
+	trigger = {	
+		OR = {culture_group = east_asian  culture_group = chinese_group 
+		
+		AND = {    is_emperor_of_china = yes    NOT = { any_country = { OR = {culture_group = east_asian  culture_group = chinese_group culture_group = sob_prc_chinese_group}  NOT = {is_subject_of = ROOT} } } }
+		}
+	}
+
+	country_modifier_happy = {
+		
+		
+		cav_to_inf_ratio = 0.2
+	
+			discipline = 0.025
+		drill_decay_modifier = -0.5
+	}
+	country_modifier_neutral = {
+	cav_to_inf_ratio = 0.15
+drill_decay_modifier = -0.3
+	discipline = 0.025
+			
+	}	
+	country_modifier_angry = {
+	    discipline = -0.05
+		land_morale = -0.1
+		mil_tech_cost_modifier = 0.1
+	}
+	land_ownership_modifier = {
+	sob_wu_a_influence = 0.1
+	cavalry_fire = 1.5
+
+	 	has_banners = yes
+		cavalry_shock =1.5
+		monthly_militarized_society = 1.5
+	}
+	province_independence_weight = {
+		factor = 1
+		modifier = {
+			factor = 1.5
+			culture_group = owner
+			religion_group = owner
+		}
+		modifier = {
+			factor = 1.5
+			base_manpower = 5
+		}
+		modifier = {
+			factor = 0.75
+			development = 20
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { is_state_core = owner }
+		}
+	}
+	# Influence modifiers
+	base_influence = 0
+
+
+	influence_modifier = {
+		desc = EST_VAL_CELESTIAL_EMPIRE_CHURCH
+		trigger = {
+		always = no
+			has_reform = celestial_empire
+num_of_owned_provinces_with = {
+							has_estate = estate_sobshishen
+							value = 25
+				}
+		}		
+		influence = -15
+	}
+	influence_modifier = {
+		desc = EST_VAL_CELESTIAL_EMPIRE_CHURCH
+		trigger = {
+		always = no
+ai  = yes
+NOT = { has_country_modifier = confucianism_reform}
+		}		
+		influence = -10
+	}
+		influence_modifier = {
+		desc = EST_VAL_CELESTIAL_EMPIRE_CHURCH
+		trigger = {
+		always = no
+ai  = yes
+has_country_modifier = confucianism_reform
+		}		
+		influence = -10
+	}
+	influence_modifier = {
+		desc = EST_VAL_CELESTIAL_EMPIRE_KARMA_A
+		trigger = {
+		always = no
+		NOT = { has_global_flag = wenwu_equal_on }
+ NOT = { has_church_aspect = junzi_liuyi_aspect }
+             NOT = { has_country_modifier = confucianism_reform}
+		}		
+		influence = -7.5
+	}
+	influence_modifier = {
+		desc = EST_VAL_CELESTIAL_EMPIRE_KARMA_B
+		trigger = {
+		always = no
+		NOT = { has_country_modifier = confucianism_reform}
+
+	NOT = { has_global_flag = wenwu_equal_on }
+ NOT = {  has_church_aspect = wuju_kuozhao_aspect  }
+             
+		}		
+		influence = -7.5
+	}
+			influence_modifier = {
+		desc = EST_VAL_CELESTIAL_EMPIRE_KARMA_D
+		trigger = {
+		ai = no
+		NOT = {
+						estate_territory = {
+					estate = estate_sobshishen
+					territory = 60
+				}
+		}
+            		         		OR  = {
+army_tradition = 35
+AND = {
+ has_church_aspect = wuju_kuozhao_aspect 
+ has_church_aspect = junzi_liuyi_aspect 
+ 
+ }
+ }
+		}		
+		influence = 15
+	}
+
+		influence_modifier = {
+		desc = EST_VAL_CELESTIAL_EMPIRE_COURT_SOB_REFORM
+		trigger = {
+			has_global_flag = sob_landhold_reform_passed
+
+		}		
+		influence = 10
+	}
+	influence_modifier = {
+		desc = EST_VAL_CELESTIAL_EMPIRE_DISASTER_WARRIORS
+		trigger = {
+		always = no
+		ai = no
+		OR = {
+			has_disaster = warrior_rising
+				NOT = {	num_of_owned_provinces_with = {
+							has_estate = estate_sobshishen
+							value = 7
+				}
+				}
+		}	
+			
+		}		
+		influence = 20
+	}
+	
+	# Influence modifiers from Events:
+	influence_modifier = {
+		desc = EST_VAL_CELESTIAL_EMPIRE_TITLE
+		trigger = {
+		 ai = yes
+ 
+		}	
+		influence = 10
+	}
+	influence_modifier = {
+		desc = EST_VAL_CELESTIAL_EMPIRE_TITLE
+		trigger = {
+		has_country_modifier = army_household_title_generated
+		has_estate = estate_sobshishen
+		}	
+		influence = 10
+	}
+		influence_modifier = {
+		desc = EST_VAL_CELESTIAL_EMPIRE_TITLE
+		trigger = {
+			has_idea = sob_wuweisheji_group_idea
+			ai = no
+			has_estate = estate_sobshishen
+		}	
+		influence = 5
+	}
+			loyalty_modifier = {
+		desc = EST_VAL_CELESTIAL_EMPIRE_COURT_SOB_REFORM_LOY
+		trigger = {
+has_global_flag = sob_landhold_reform_passed
+		}
+		loyalty = 10
+	}
+	# Loyalty modifiers
+		loyalty_modifier = {
+		desc = EST_VAL_CELESTIAL_EMPIRE_SON
+		trigger = {
+		has_reform = celestial_empire
+		NOT = { imperial_mandate = 30 }
+		}
+		loyalty = -20
+	}
+	    loyalty_modifier = {
+		desc = EST_VAL_CELESTIAL_EMPIRE_SON
+		trigger = {
+		has_reform = celestial_empire
+		 imperial_mandate = 85
+		}
+		loyalty = 15
+	}
+	loyalty_modifier = {
+		desc = EST_VAL_OTHER_ESTATE_IN_POWER_LOY
+		trigger = {
+			OR = {
+				has_disaster = estate_church_disaster
+				has_disaster = estate_burghers_disaster
+			}
+		}
+		loyalty = -20
+	}
+	
+	loyalty_modifier = {
+		desc = EST_VAL_NOBLE_CONSORT
+		trigger = {
+			has_dlc = "Rights of Man"
+			has_consort = yes
+			is_origin_of_consort = ROOT
+		}
+		loyalty = 5
+	}
+	
+	loyalty_modifier = {
+		desc = EST_VAL_JUNKERS
+		trigger = {
+			has_reform =  prussian_monarchy
+		}
+		loyalty = 10
+	}
+	
+	loyalty_modifier = {
+		desc = EST_VAL_VERY_LEGITIMATE
+		trigger = {
+			government = monarchy
+			legitimacy = 95
+		}
+		loyalty = 10
+	}
+	loyalty_modifier = {
+		desc = EST_VAL_LEGITIMATE
+		trigger = {
+			government = monarchy
+			legitimacy = 70
+			NOT = { legitimacy = 95 }
+		}
+		loyalty = 5
+	}
+	loyalty_modifier = {
+		desc = EST_VAL_LEGITIMATE
+		trigger = {
+				has_idea = sob_wuweisheji_group_idea
+				culture_group = east_asian
+			
+		}
+		loyalty = 15
+	}
+		loyalty_modifier = {
+		desc = EST_VAL_NOT_LEGITIMATE
+		trigger = {
+			government = monarchy
+			NOT = { legitimacy = 50 }
+			legitimacy = 25
+		}
+		loyalty = -5
+	}
+	loyalty_modifier = {
+		desc = EST_VAL_ILLEGITIMATE
+		trigger = {
+			government = monarchy
+			NOT = { legitimacy = 25 }
+		}
+		loyalty = -10
+	}
+	
+	loyalty_modifier = {
+		desc = EST_VAL_FULL_ARISTOCRATIC
+		trigger = {
+			full_idea_group = aristocracy_ideas
+		}
+		loyalty = 10
+	}
+	loyalty_modifier = {
+		desc = EST_VAL_FULL_ARISTOCRATIC
+		trigger = {
+			has_country_modifier = army_household_title_generated
+		}
+		loyalty = 15
+	}
+	#Alternative naming of estates
+
+	
+	privileges = {
+sob_estate_warrior_land_rights
+sob_estate_warrior_fund_rights
+sob_estate_warrior_soldier_number
+sob_estate_warrior_direct_reward
+sob_estate_warrior_education_wen
+sob_estate_warrior_soldier_number_down
+sob_estate_warrior_direct_reward_wen
+sob_estate_warrior_education
+sob_estate_warrior_only_power
+sob_estate_warrior_organized_colonist
+sob_estate_warrior_fund_rights_2
+sob_estate_warrior_noble_rew
+sob_estate_warrior_road_to_sky_rew
+	}
+
+	agendas = {
+	estate_sobwarriors_befriend_rival_of_rival
+	estate_sobwarriors_restore_legitimacy
+		estate_sobwarriors_develop_x
+		estate_sobwarriors_build_army_building_in_y
+		estate_sobwarriors_build_fort_building_in_y
+		estate_sobwarriors_build_university_in_y
+		estate_sobwarriors_build_manufactory_in_y
+		estate_sobwarriors_break_coalition
+		estate_sobwarriors_condottieri_rivals
+		estate_sobwarriors_support_independence
+		estate_sobwarriors_retake_core
+		estate_sobwarriors_crush_revolts
+		estate_sobwarriors_regain_liberty
+		estate_sobwarriors_convert_province_culture
+		estate_sobwarriors_protect_our_culture
+		estate_sobwarriors_vassalise_vulnerable_country
+		estate_sobwarriors_expand_into_x
+		estate_sobwarriors_complete_conquest_of_x
+		estate_sobwarriors_annex_subject
+		estate_sobwarriors_build_an_army
+		estate_sobwarriors_bigger_army_than_rival
+		estate_sobwarriors_build_up_manpower_reserves
+		estate_sobwarriors_hire_advisor
+		estate_sobwarriors_fire_advisor
+	}
+	
+	influence_from_dev_modifier = 1.5
+}

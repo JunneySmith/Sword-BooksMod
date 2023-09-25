@@ -1,0 +1,185 @@
+######################################################################
+# Confucianism rebels. Disgruntled fanatics.
+######################################################################
+sobshishen_rebels = {
+
+	color = { 230 175 175 }
+
+	area = nation 					# Sticks to provinces of their nation
+	has_reform = celestial_empire 			# Desires Theocracy
+	defection = none				# Will not defect
+	defect_delay = 120				# Held provinces will auto-defect after 18 months, regardless of accept/enforce demands.
+	independence = none				# Does not strive for independence
+	unit_transfer = no
+	gfx_type = culture_province
+	will_relocate = no
+	
+	resilient = no
+	reinforcing = yes
+	general = no
+	smart = no
+	
+	artillery = 0.0
+	infantry = 1.0
+	cavalry = 0.0
+	
+	morale = 0.01
+
+	# Possible handle actions
+	handle_action_negotiate = yes
+	handle_action_stability = yes
+	handle_action_build_core = yes
+	handle_action_send_missionary = yes		
+	
+	# The rebel type with the highest modifier for this province gets picked
+	spawn_chance = {
+		factor = 1
+				modifier = {
+			factor = 0
+			owner = {
+			NOT = {has_estate = estate_sobshishen}
+			}
+		}
+					modifier = {
+			factor = 0
+			NOT = {has_province_modifier = sob_shishen_land_on}
+		}
+		modifier = {
+			factor = 0
+			owner = {
+					estate_loyalty = {
+						estate = estate_sobshishen
+						loyalty = 30
+					}
+					}
+				
+		}
+			modifier = {
+			factor = 1000
+			has_province_modifier = sob_shishen_land_on
+			owner = {
+			has_estate = estate_sobshishen
+	NOT = {
+					estate_loyalty = {
+						estate = estate_sobshishen
+						loyalty = 40
+					}
+				}
+				}
+		}
+	}
+ 
+ 	# This is checked for EACH province in the Area of Operations
+	movement_evaluation = {
+		factor = 1
+		modifier = {
+			factor = 0.5
+			units_in_province = 1
+		}
+		modifier = {
+			factor = 0.001
+			controlled_by = REB
+		}
+		modifier = {
+			factor = 0.0
+			religion = confucianism
+			owner = { religion = confucianism }
+		}
+		modifier = {
+			factor = 2.0
+			NOT = { religion = confucianism }
+			any_neighbor_province = {
+	 			religion = confucianism
+	 			NOT = { has_province_modifier = "forced_conversion" }
+	 		}
+	 	}
+		modifier = {
+			factor = 5
+			has_estate = estate_sobshishen
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 2
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 4
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 6
+		}
+	}
+ 
+ 	# Province Scope
+ 	siege_won_trigger = {
+	owner = {
+	NOT = { has_country_modifier = confucianism_reform}
+	}
+NOT=  {has_province_flag = sob_recent_revoke_shishen_per}
+		
+ 	}
+	siege_won_effect = {
+		set_province_flag = sob_shishen_controlled
+		add_devastation = 15
+	}
+	
+	# Country scope
+	can_negotiate_trigger = {
+       always = no
+	}
+	
+	# Country scope
+	can_enforce_trigger = {
+		ai = no
+	}
+	
+	# Localisation for their demands
+	demands_description = "sobshishen_rebels_demand"
+	
+	# Country Scope	
+	demands_enforced_effect = {
+remove_church_aspect =wuju_kuozhao_aspect
+remove_church_aspect =junzi_liuyi_aspect
+remove_church_aspect =shinonggongshang_aspect
+add_church_aspect =only_books_aspect
+add_church_aspect =demilitarization_belief_aspect
+add_church_aspect =chongwenyanwu_aspect
+				 	set_estate_privilege = sob_estate_inward_production_power
+	set_estate_privilege = sob_estate_bookperfection_taxes_direct
+	set_estate_privilege = sob_estate_shinonggongshang
+	set_estate_privilege = sob_estate_shishen_road_to_sky_rew
+			add_prestige = -50
+			every_owned_province = {
+				limit = {
+					has_rebel_faction = REB
+				}
+						add_province_modifier ={
+		name = sob_shishen_land_on
+		duration = -1
+		
+		}
+		
+			}
+	
+
+		if = {
+			limit = {
+				has_estate = estate_sobshishen
+				NOT = {
+					has_estate_influence_modifier = {
+						estate = estate_sobshishen
+						modifier = EST_VAL_RELIGIOUS_ZEALOTS_TRIUMPH
+					}
+				}
+			}
+			add_estate_influence_modifier = {
+				estate = estate_sobshishen
+				desc = EST_VAL_RELIGIOUS_ZEALOTS_TRIUMPH
+				duration = 3650
+				influence = 15
+			}
+		}
+
+	}
+}

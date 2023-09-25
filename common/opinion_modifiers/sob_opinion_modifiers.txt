@@ -1,0 +1,30 @@
+imperial_consort_of_our_culture = {
+	opinion = 35
+	yearly_decay = 2
+}
+
+sob_same_tech_group = {
+	opinion = 10
+}
+sob_same_nation = {
+	opinion = 15
+}
+
+sob_hegemon = {
+	opinion = 50
+}
+
+sob_hegmon_small_country = {
+	opinion = 50
+}
+
+sob_hegmon_allied_super_power_country = {
+	opinion = 60
+	
+	}
+
+
+
+sob_hegmon_non_allied_super_power_country = {
+	opinion = 50
+}

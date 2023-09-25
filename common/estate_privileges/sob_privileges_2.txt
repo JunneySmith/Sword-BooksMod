@@ -1,0 +1,772 @@
+#All scopes are country scope
+#All parameters are optional
+
+# estate_privilege = {
+# 	is_valid = { triggers }						#Conditions for whether it is possible for the country to have this privilege (it will not display on the list if they are false, and will be revoked if it has already been granted)
+# 	can_select = { triggers } 					#Conditions for whether the country is allowed to select the privilege (with conditions for why not displayed)
+# 	on_granted = { effects } 					#Effects executed immediately upon the privilege being taken
+# 	can_revoke = { triggers } 					#Conditions for whether the country can revoke the privilege
+# 	on_revoked = { effects } 					#Effects executed upon the privilege being revoked by the country
+# 	on_invalid = { effects } 					#Effects executed upon the privilege being removed due to invalidity (is_valid becomes false or the estate is removed)
+# 	penalties = { modifiers } 					#Negative modifiers granted while the privilege is active (creates different tooltip to benefits)
+# 	conditional_modifier = { 					#Modifier that are applied if the specified conditions are true.
+# 		trigger = { triggers }
+# 		modifier = { modifiers }
+# 		is_bad = yes/no							#Specifies whether the modifier should be listed as positive or negative in the tooltips.
+# 	}
+# 	modifier_by_land_ownership = { modifiers } 	#Multiplies the modifier by the % of land owned by the estate.
+# 	mechanics = { mechanics } 					#Special mechanics the privilege enables
+# 	cooldown_years = int 						#Time limit before which the privilege cannot be revoked
+# 	on_cooldown_expires = { effects }			#Effect executed once the specified cooldown_years timer has run down
+#	ai_will_do									#If above ESTATE_PRIVILEGE_GRANT_THRESHOLD define, AI will try to apply. If below ESTATE_PRIVILEGE_REVOKE_THRESHOLD, AI will try to revoke.
+# }
+
+sob_estate_kuojian_gongchang = { #扩建官营手工业
+	icon = privilege_grant_autonomy
+	max_absolutism = -5
+	loyalty = 0.1
+	influence = 0.05
+	is_valid = { 
+	OR = {
+	NOT = { has_country_flag = sob_estate_jianghu_land_rights_shishen}
+	NOT = {had_country_flag = {
+	flag = sob_estate_jianghu_land_rights_shishen
+	days = 3650
+    }
+	}
+	}
+				estate_territory = {
+					estate = estate_sobshishen
+					territory = 1
+				}
+	}	
+	can_select = {
+	OR=  {
+ai = yes
+any_owned_province = {
+has_state_edict = sob_landreform_jianghu
+has_province_modifier = sob_shishen_land_on
+}
+
+}
+				OR = {
+				estate_territory = {
+					estate = estate_sobshishen
+					territory = 1
+				}
+				any_owned_province ={
+				has_province_modifier = sob_shishen_land_on
+				
+				}
+				}
+	}
+	can_revoke = { NOT = { has_estate = estate_sobshishen} } 	
+	on_revoked = { clr_country_flag = sob_estate_jianghu_land_rights_shishen } 
+	on_granted = {
+	set_province_flag = sob_jianghu_prov_d_loyal
+	set_country_flag = sob_estate_jianghu_land_rights_shishen
+	custom_tooltip = sob_estate_jianghu_land_rights_shishen_tooltip
+			add_estate_loyalty = {
+			estate = estate_sobshishen
+			loyalty = -10
+		}
+	}
+	on_invalid = {
+		if = {
+	limit = {NOT = { has_country_flag =sob_land_reform_start}}
+	add_war_exhaustion = 5
+	}
+		change_estate_land_share = {
+			estate = estate_sobshishen
+			share = -1.0
+		}	
+		change_estate_land_share = {
+			estate = estate_sobshimin
+			share = 1.0
+		}	
+							add_estate_loyalty = {
+			estate = estate_sobshimin
+			loyalty = 15
+		}
+		clr_country_flag = sob_estate_jianghu_land_rights_shishen
+				if = {
+		limit = {
+		NOT = { has_country_flag = sob_jikong_reform_tooltip_o_3} NOT = { has_global_flag = sob_jikong_reform_tooltip_o_3}
+		NOT = {has_country_modifier = confucianism_reform}
+			any_owned_province ={
+			has_province_modifier = sob_shishen_land_on
+			
+			}
+
+			
+		}
+		random_owned_province ={
+		limit ={
+		has_province_modifier = sob_shishen_land_on
+			NOT = { has_province_flag = sob_shishen_land_recovering }
+		}
+		remove_province_modifier = sob_shishen_land_on
+		set_province_flag = sob_wa_complete_tugai
+		
+		if = {
+		limit= {owner = {	ai = no			NOT = {
+					estate_loyalty = {
+						estate = estate_sobshishen
+						loyalty = 40
+					}
+				}}}
+				set_province_flag = sob_shishen_land_recovering
+				spawn_rebels = {
+			type = sobshishen_rebels
+			size = 2
+		}
+		
+		}
+				if = {
+		limit= {owner = {		ai = no		NOT = {
+					estate_loyalty = {
+						estate = estate_sobshishen
+						loyalty = 30
+					}
+				}}}
+				area = {
+				limit = { has_province_modifier = sob_shishen_land_on
+				NOT = { has_province_flag = sob_shishen_land_recovering }
+				}
+				set_province_flag = sob_shishen_land_recovering
+				spawn_rebels = {
+			type = sobshishen_rebels
+			size = 2
+		}
+		
+		}
+		}
+						if = {
+		limit= {
+		
+		owner = {		ai = no		NOT = {
+					estate_loyalty = {
+						estate = estate_sobshishen
+						loyalty = 20
+					}
+				}}}
+				region = {
+				limit = { has_province_modifier = sob_shishen_land_on
+								NOT = { has_province_flag = sob_shishen_land_recovering }
+				}
+				set_province_flag = sob_shishen_land_recovering
+				spawn_rebels = {
+			type = sobshishen_rebels
+			size = 2
+		}
+		
+		}
+		}
+		}
+		}
+		if = {
+		limit = {
+		always = no
+						NOT = { has_country_flag = sob_jikong_reform_tooltip_o_3} NOT = { has_global_flag = sob_jikong_reform_tooltip_o_3}
+		NOT = {has_country_modifier = confucianism_reform}
+								estate_territory = {
+					estate = estate_sobshimin
+					territory = 15
+				
+				
+				}
+
+			
+		}
+		random_owned_province ={
+				limit ={
+		OR = { culture_group = east_asian culture_group = chinese_group}
+		
+		}
+		area = {
+		set_province_flag = sob_wa_complete_tugai
+		}
+		if = {
+		limit= {owner = {				NOT = {
+					estate_loyalty = {
+						estate = estate_sobshishen
+						loyalty = 30
+					}
+				}}}
+				area = {
+				spawn_rebels = {
+			type = sobshishen_rebels
+			size = 2
+		}
+		}
+		}
+		}
+		}
+		if = {
+		limit = {
+		NOT = {
+										estate_territory = {
+					estate = estate_sobshishen
+					territory = 5
+				
+				
+				}
+		
+		}
+		
+		
+		}
+		every_owned_province = {
+		set_province_flag = sob_wa_complete_tugai
+		}
+		}
+	} 
+		mechanics = {
+		exempt_from_seize_land
+	}
+	penalties = {
+	}
+	modifier_by_land_ownership = { 
+	global_trade_goods_size_modifier = 0.25
+
+	}
+	benefits = {
+		
+	}
+	ai_will_do = {
+		factor = 15
+		modifier = {
+			factor = 12.8
+			is_absolutism_active = yes
+		}
+	}
+}
+
+
+sob_estate_jianghu_education_wen = {
+	icon = privilege_give_money
+	max_absolutism = 5
+influence = -0.05
+	is_valid = {
+		ai = no
+	OR = {
+				estate_territory = {
+					estate = estate_sobshishen
+					territory = 1
+				}
+				}
+	}
+	can_select = {
+		has_estate_privilege = sob_estate_jianghu_education_wen
+	}
+	on_revoked = { } 
+	on_granted = {
+	}
+	can_revoke = { 
+
+NOT = {any_owned_province = {
+has_state_edict = sob_landreform_jianghu
+has_province_modifier = sob_shishen_land_on
+}
+}
+	NOT = {		estate_territory = {
+					estate = estate_sobshishen
+					territory = 1
+				}}
+				
+				}
+	on_invalid = {
+		add_estate_loyalty = {
+			estate = estate_sobwarriors
+			loyalty = 20
+		}
+
+	} 
+	penalties = {
+	 	center_of_trade_upgrade_cost  = 0.15
+		mil_tech_cost_modifier = 0.05
+	}
+	benefits = {
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+sob_estate_jianghu_gongchang_wen = {
+	icon = privilege_monopoly_of_goods_wool
+	max_absolutism = 5
+influence = -0.1
+	is_valid = {
+		ai = no
+	OR = {
+				estate_territory = {
+					estate = estate_sobshishen
+					territory = 1
+				}
+				}
+	}
+	can_select = {
+	has_estate_privilege = sob_estate_jianghu_gongchang_wen
+	}
+	on_revoked = { } 
+	on_granted = {
+	}
+	can_revoke = { 
+
+NOT = {any_owned_province = {
+has_state_edict = sob_landreform_jianghu
+has_province_modifier = sob_shishen_land_on
+}
+}
+	NOT = {		estate_territory = {
+					estate = estate_sobshishen
+					territory = 1
+				}}
+				
+				}
+	on_invalid = {
+		add_estate_loyalty = {
+			estate = estate_sobwarriors
+			loyalty = 20
+		}
+
+	} 
+	penalties = {
+	 	 	great_project_upgrade_cost = 0.15
+			dip_tech_cost_modifier = 0.05
+	}
+	benefits = {
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+sob_estate_jianghu_siren_wen = {
+	icon = privilege_lighten_dhimmi_tax_burden
+	max_absolutism = 5
+influence = -0.05
+	is_valid = {
+		ai = no
+	OR = {
+				estate_territory = {
+					estate = estate_sobshishen
+					territory = 1
+				}
+				}
+	}
+	can_select = {
+	has_estate_privilege = sob_estate_jianghu_siren_wen
+	}
+	on_revoked = { } 
+	on_granted = {
+	}
+	can_revoke = { 
+
+NOT = {any_owned_province = {
+has_state_edict = sob_landreform_jianghu
+has_province_modifier = sob_shishen_land_on
+}
+}
+	NOT = {		estate_territory = {
+					estate = estate_sobshishen
+					territory = 1
+				}}
+				
+				}
+	on_invalid = {
+		add_estate_loyalty = {
+			estate = estate_sobwarriors
+			loyalty = 20
+		}
+
+	} 
+	penalties = {
+	 	 global_ship_trade_power = -0.1
+		 dip_tech_cost_modifier = 0.05
+	}
+	benefits = {
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+
+sob_estate_mianyiyin_gold = {#免役银
+	icon = privilege_give_money
+	max_absolutism = -10
+	loyalty = 0.1
+	influence = 0.15
+	land_share = 10
+
+		can_select = {
+treasury = 250
+	}
+	on_revoked = { } 
+	on_granted = {
+	add_treasury = -250
+	}
+	on_invalid = {
+					add_estate_loyalty = {
+			estate = estate_sobshimin
+			loyalty = 20
+		}
+
+	} 
+	penalties = {
+	}
+	benefits = {
+		build_time = -0.15
+	}
+	ai_will_do = {
+		factor = 15
+		modifier = {
+			factor = 13.8
+			is_absolutism_active = yes
+		}
+	}
+}
+
+sob_estate_jianghu_ziying = {#开放自营
+	icon = privilege_lighten_dhimmi_tax_burden
+	max_absolutism = -5
+		loyalty = 0.15
+	influence = 0.1
+	is_valid = {
+	has_estate = estate_sobshishen
+	NOT = { has_country_modifier =confucianism_reform}
+	}
+	can_select = {
+has_disaster = sob_shicigefu_dis
+	}
+	on_revoked = { } 
+	on_granted = {
+	}
+	on_invalid = {
+		add_estate_loyalty = {
+			estate = estate_sobshimin
+			loyalty = 20
+		}
+
+	} 
+	penalties = {
+	prestige = -0.5
+	}
+	benefits = {
+		global_tax_modifier = 0.25
+	}
+	ai_will_do = {
+		factor = 1300
+	}
+}
+sob_estate_jianghu_ziying_2 = {#开放自营
+	icon = privilege_lighten_dhimmi_tax_burden
+		loyalty = 0.05
+	influence = 0.1
+	max_absolutism = -5
+	is_valid = {
+ NOT = {has_disaster = sob_shicigefu_dis}
+	}
+	can_select = {
+ NOT = {has_disaster = sob_shicigefu_dis}
+	}
+	on_revoked = { } 
+	on_granted = {
+	}
+	on_invalid = {
+		add_estate_loyalty = {
+			estate = estate_sobshimin
+			loyalty = 20
+		}
+
+	} 
+	penalties = {
+	}
+	benefits = {
+		build_cost = -0.1
+	}
+	ai_will_do = {
+		factor = 1300
+	}
+}
+sob_estate_jianghu_direct_reward = {#皇室直管
+	icon = privilege_military_power
+	loyalty = 0.05
+	influence = 0.1
+	is_valid = {
+	has_estate = estate_sobshishen
+		NOT = { has_country_modifier =confucianism_reform}
+	}
+	can_select = {
+has_disaster = sob_cleansing_nobles_dis
+	}
+	on_revoked = { } 
+	on_granted = {
+						add_estate_loyalty = {
+			estate = estate_sobshishen
+			loyalty = -20
+		}
+	}
+	on_invalid = {
+
+					add_estate_loyalty = {
+			estate = estate_sobshimin
+			loyalty = 20
+		}
+
+	} 
+	penalties = {
+	state_maintenance_modifier = 0.3
+	}
+	benefits = {
+		
+		global_regiment_cost = -0.1
+		global_tax_modifier = 0.25
+  }
+	ai_will_do = {
+	factor = 1300
+	}
+}
+sob_estate_jianghu_direct_reward_2 = {#皇室直管
+	icon = privilege_military_power
+	max_absolutism = 5
+loyalty = 0.1
+	influence = 0.1
+	is_valid = {
+		NOT = { has_disaster = sob_cleansing_nobles_dis}
+	}
+	can_select = {
+NOT = { has_disaster = sob_cleansing_nobles_dis }
+	}
+	on_revoked = { } 
+	on_granted = {
+						add_estate_loyalty = {
+			estate = estate_sobshishen
+			loyalty = -20
+		}
+	}
+	on_invalid = {
+
+					add_estate_loyalty = {
+			estate = estate_sobshimin
+			loyalty = 20
+		}
+
+	} 
+	penalties = {
+	}
+	benefits = {
+		
+	 	land_attrition = -0.15
+  }
+	ai_will_do = {
+		factor = 1300
+	}
+}
+
+
+sob_estate_jianghu_education = {#增设官学
+	icon = privilege_recruit_rajput_general
+	max_absolutism = -10
+	loyalty = 0.1
+	influence = 0.2
+land_share = 5
+
+	can_select = {
+
+	has_institution = industrialization
+
+					estate_territory = {
+					estate = estate_sobshimin
+					territory = 25
+				}
+	NOT = {		estate_territory = {
+					estate = estate_sobshishen
+					territory = 65
+				} 
+				
+				}
+	
+	
+	} 
+	on_revoked = { } 
+	
+	
+	on_granted = {
+						add_estate_loyalty = {
+			estate = estate_sobshishen
+			loyalty = -20
+		}
+	}
+	penalties = {
+	}
+	mechanics = {
+		exempt_from_seize_land
+	}
+	benefits = {
+	technology_cost = -0.025
+	 	artillery_fire = 1
+	
+	
+		
+	}
+	modifier_by_land_ownership = {
+				
+		innovativeness_gain = 1
+
+	}
+	ai_will_do = {
+		factor = 1300
+	}
+}
+
+
+sob_estate_jianghu_production_power = {#生产主义
+	icon = privilege_monopoly_of_goods_wool
+		max_absolutism = -10
+	loyalty = 0.05
+	land_share = 10
+	influence = 0.1
+
+
+	can_select = 
+	{
+has_institution = global_trade
+	
+	} 
+	on_revoked = { } 
+	on_granted = {
+						add_estate_loyalty = {
+			estate = estate_sobshishen
+			loyalty = -20
+		}
+	}
+	penalties = {
+	}
+	benefits = {
+ship_durability = 0.1
+ 	reinforce_cost_modifier = -0.15
+
+	}
+	ai_will_do = {
+		factor = 1300
+	}
+}
+
+sob_estate_jianghu_taxes_direct = {#直辖商业税
+	icon = privilege_monopoly_of_goods_livestock
+	max_absolutism = -5
+	loyalty = 0.1
+influence = 0.05
+
+	can_select = { 
+	crown_land_share = 30
+
+	NOT = {		estate_territory = {
+					estate = estate_sobshishen
+					territory = 40
+				} 
+				
+				}
+	
+	
+	} 
+	on_revoked = { } 
+	on_granted = {
+						add_estate_loyalty = {
+			estate = estate_sobshishen
+			loyalty = -20
+		}
+	}
+	penalties = {
+	}
+	benefits = {
+	merchants = 1
+	yearly_corruption = -0.1
+	}
+	ai_will_do = {
+		factor = 1250
+	}
+}
+
+sob_estate_jianghu_keju = {#工业科举
+	icon = privilege_monopoly_of_goods_iron
+	
+	loyalty = 0.05
+	influence = 0.1
+
+
+	can_select = { 
+has_institution =  printing_press
+	NOT = {		estate_territory = {
+					estate = estate_sobshishen
+					territory = 5
+				} 
+				
+				}
+	
+	
+	} 
+	on_revoked = { } 
+	on_granted = {
+						add_estate_loyalty = {
+			estate = estate_sobshishen
+			loyalty = -20
+		}
+	}
+	penalties = {
+	}
+	benefits = {
+		development_cost = -0.1
+		global_trade_goods_size_modifier = 0.1
+		
+
+	}
+	ai_will_do = {
+		factor = 1250
+	}
+}
+
+sob_estate_jianghu_road_to_sky_rew = {#市民登天梯
+	icon = privilege_monopoly_of_goods_gems
+	max_absolutism = -15
+	loyalty = 0.15
+	influence = 0.2
+
+
+	can_select = { 	
+has_institution = enlightenment
+	NOT = {		estate_territory = {
+					estate = estate_sobshishen
+					territory = 5
+				} 
+				
+				}
+	
+	
+	} 
+	on_revoked = { } 
+	on_granted = {
+						add_estate_loyalty = {
+			estate = estate_sobshishen
+			loyalty = -20
+		}
+	}
+	penalties = {
+	}
+	benefits = {
+special_unit_forcelimit = 0.5
+infantry_fire = 1
+infantry_shock = 1
+	}
+	modifier_by_land_ownership = {
+				
+		 	war_exhaustion = -0.5
+
+	}
+	ai_will_do = {
+	factor = 12000
+	}
+}

@@ -1,0 +1,10 @@
+entity = {
+	name = "sobchinesegfx_magistrate"
+	pdxmesh = "asian_magistrate_mesh"
+	state = { name = "idle" 		animation = "idle" }
+}
+entity = {
+	name = "confucianism_missionary"
+	pdxmesh = "asian_magistrate_mesh"
+	state = { name = "idle" 		animation = "idle" }
+}

@@ -1,0 +1,15 @@
+name="Sword and Books5.1.52 Chinese for 1.35 local"
+tags={
+	"Balance"
+	"Events"
+	"Expansion"
+	"Gameplay"
+	"Graphics"
+	"Historical"
+	"Missions and Decisions"
+	"Religion"
+	"Translation"
+}
+version="5.1.52"
+supported_version="1.35.*"
+remote_file_id="1184867552"

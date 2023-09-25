@@ -1,0 +1,233 @@
+china_revolution = {
+ended_by_country_breaking_to_rebels = no
+	potential = {
+	is_year = 1444
+
+	NOT = {current_age = age_of_discovery}
+	NOT = {current_age = age_of_reformation}
+	NOT = {current_age = age_of_absolutism}
+	is_revolutionary = no
+	OR = {culture_group = east_asian  culture_group = chinese_group }
+	OR = {
+		NOT = { has_country_flag = had_revolution }
+				AND = { 
+				OR = {
+				has_reform = celestial_empire 
+				has_reform =  feudalism_reform
+				government = monarchy
+				government = sob_chinese_monarchy
+				}
+				}
+		}
+
+          NOT = { is_revolution_target = yes }
+		is_free_or_tributary_trigger = yes
+		uses_doom = no
+		num_of_cities = 30
+		if = {
+			limit = {
+				has_dlc = "Emperor"
+			}
+			is_great_power = yes
+			
+		}
+		else = {
+			num_of_cities = 30
+			NOT = { revolution_target_exists = yes }
+		}
+	
+	}
+	
+	
+	can_start = {
+	NOT = {stability = 0 }
+		has_country_modifier = confucianism_reform
+	revolution_spread = 0.5
+ NOT = { is_revolution_target = yes }
+			OR = {
+			NOT = { stability = -2 }
+			revolution_spread = 0.9
+			num_of_loans = 50
+			is_bankrupt = yes
+			inflation = 10
+			war_exhaustion = 10
+		}
+				
+				OR = {
+				has_reform = celestial_empire 
+			has_reform =  feudalism_reform
+			government = monarchy
+			government = sob_chinese_monarchy
+				}
+				
+
+
+	}
+	
+	can_stop = { 
+
+			stability = 0
+			 NOT = {			revolution_spread = 0.9}
+			 NOT = {num_of_loans = 50}
+			 NOT = {is_bankrupt = yes}
+			 NOT = {inflation = 10}
+			 NOT = {war_exhaustion = 10}
+		
+	}
+	
+	
+	progress = {
+			modifier = {
+			factor = 1
+			 has_church_aspect = buyiyanhuozui_aspect
+		}
+		modifier = {
+			factor = 1
+			 has_church_aspect = shinonggongshang_aspect
+		}
+		modifier = {
+			factor = 1
+			NOT = { prestige = 0 }
+		}
+		modifier = {
+			factor = 1
+			war_exhaustion = 5
+		} 
+		modifier = {
+			factor = 0.5
+			num_of_loans = 10
+			NOT = { num_of_loans = 25 }
+		}	
+		modifier = {
+			factor = 0.5
+			absolutism = 70
+		}
+		modifier = {
+			factor = 1
+			absolutism = 80
+		}
+		modifier = {
+			factor = 0.25
+			has_country_modifier = confucianism_reform
+		}
+		modifier = {
+			factor = 1
+			num_of_loans = 25
+		}
+		modifier = {
+			factor = 2
+			is_bankrupt = yes
+		}		
+				modifier = {
+			factor = 0.5
+			revolution_spread = 0.5
+			NOT = { revolution_spread = 0.65 }
+		}
+		modifier = {
+			factor = 0.75
+			revolution_spread = 0.65
+			NOT = { revolution_spread = 0.8 }
+		}
+
+	}
+	
+	can_end = {
+		OR = {
+		AND = {
+		NOT = { has_reform = celestial_empire }
+			NOT = { 	has_reform = feudalism_reform}
+		}
+		NOT = { num_of_rebel_controlled_provinces = 1 }
+		}
+				if = {
+			limit = {
+				has_dlc = "Emperor"
+			}
+			OR = {
+				custom_trigger_tooltip = {
+					tooltip = disaster_active_for_20_years_tooltip
+					had_country_flag = {
+						flag = had_revolution
+						days = 7300
+					}
+				}
+				stability = 3
+			}
+			NOT = { num_of_rebel_controlled_provinces = 1 }
+			NOT = { num_of_rebel_armies = 1 }
+		}
+		else = {
+			OR = {
+				AND = {
+					OR = {
+						custom_trigger_tooltip = {
+							tooltip = disaster_active_for_20_years_tooltip
+							had_country_flag = {
+								flag = had_revolution
+								days = 7300
+							}
+						}
+						stability = 3
+					}
+					NOT = { num_of_rebel_controlled_provinces = 1 }
+					NOT = { num_of_rebel_armies = 1 }
+					OR = {
+						government = monarchy
+						has_reform = revolutionary_republic_reform
+					}
+				}
+				AND = {
+					revolution_target_exists = yes
+					NOT = { root = { is_revolution_target = yes } }
+				}
+			}
+		}
+	}
+	
+
+	modifier = {
+		global_unrest = 15
+		stability_cost_modifier = 0.1
+	}	
+	
+	
+	on_start = chinarevolution.1
+	on_end = chinarevolution.9
+	
+	on_monthly = {
+		events = { #Revolution for different nations
+			chinarevolution.10 #Generic
+			chinarevolution.15 #France (non-monarchy)
+			flavor_rus.2000 #Russia
+			chinarevolution.31 #Spain
+			chinarevolution.32 #Scandinavia
+			chinarevolution.33 #UK
+			chinarevolution.34 #Ottomans
+			chinarevolution.37 #Germans
+			chinarevolution.38 #Austria and HRE
+			chinarevolution.39 #Netherlands
+			chinarevolution.40 #EoC
+			chinarevolution.45 #EoC
+			chinarevolution.41 #Indians
+		}
+		random_events = { 
+			1000 = 0
+			100 = chinarevolution.2
+			100 = chinarevolution.3
+			100 = chinarevolution.4
+			100 = chinarevolution.5
+			100 = chinarevolution.6
+			100 = chinarevolution.7
+			100 = chinarevolution.8
+			100 = chinarevolution.42
+			100 = french_revolution.10 #Revolutionary Republic - Manpower Drain
+			100 = french_revolution.11 #Revolutionary Republic - War Exhaustion
+			100 = french_revolution.12 #Revolutionary Republic - Financial Mismanagement
+			100 = french_revolution.13 #Revolutionary Republic - National Debt
+			100 = french_revolution.14 #Revolutionary Republic - Halting Revolution
+			100 = french_revolution.15 #Revolutionary Republic - Instability
+			100 = french_revolution.16 #Revolutionary Republic - Declining Popularity
+		}
+	}
+}
+

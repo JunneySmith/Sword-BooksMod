@@ -1,0 +1,671 @@
+forbidden_city = {
+	# province it starts in
+	start = 1816
+	
+	# date built in real life (so anything built during game time will be there if you start a game after that date)
+	date = 1406.01.01
+	
+	#time to build
+	time = {
+		months = 0
+	}
+	
+	#how much to build one
+	build_cost = 0
+	
+	#can we move it?
+	can_be_moved = no
+	
+	#time to move the project one unit of distance, in days
+	move_days_per_unit_distance = 10
+	
+	#tier that the project starts at when first placed in the game (be that at game start or when built by a country as the game progresses)
+	starting_tier = 1
+	
+	#project type
+	type = monument
+
+	#can we build it?
+	build_trigger = {
+		owner = {
+		OR = {
+			is_emperor_of_china = yes
+			
+			culture_group = east_asian
+			}
+		}
+	}
+
+	#what to do when it's built
+	on_built = {
+		show_ambient_object = forbidden_city
+	}
+	
+	#what to do when it's destroyed
+	on_destroyed = {
+		hide_ambient_object = forbidden_city
+	}
+
+	#can our country use it?
+	can_use_modifiers_trigger = {
+		owner = {
+				OR = {
+			is_emperor_of_china = yes
+			
+			culture_group = east_asian
+			}
+		}
+	}
+
+	#can our country upgrade it?
+	can_upgrade_trigger = {
+		owner = {
+					OR = {
+			is_emperor_of_china = yes
+			
+			culture_group = east_asian
+			}
+		}
+	}
+
+	#can our country keep it or is it destroyed when we get hold of it?
+	keep_trigger = {
+	}
+
+	#tier data
+	tier_0 = {
+		#time to upgrade to this level (0 for tier 0)
+		upgrade_time = {
+			months = 0
+		}
+
+		#cost to upgrade to this level (0 for tier 0)
+		cost_to_upgrade = {
+			factor = 0
+		}
+
+		#what modifiers are added to the province when we have this project here on this tier
+		province_modifiers = {
+		}
+
+		#what modifiers are added to the provinces in the map area when we have this project here on this tier
+		area_modifier = {
+		}
+
+		#what modifiers are added to the country when we have this project here on this tier
+		country_modifiers = {
+		}
+
+		#what effects happen when this tier is achieved
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		#time to upgrade to this level (0 for tier 0)
+		upgrade_time = {
+			months = 120
+		}
+
+		#cost to upgrade to this level (0 for tier 0)
+		cost_to_upgrade = {
+			factor = 1000
+		}
+
+		#what modifiers are added to the province when we have this project here on this tier
+		province_modifiers = {
+		}
+
+		#what modifiers are added to the provinces in the map area when we have this project here on this tier
+		area_modifier = {
+		}
+
+		#what modifiers are added to the country when we have this project here on this tier
+		country_modifiers = {
+			yearly_absolutism = 0.5
+			imperial_mandate = 0.05
+		}
+
+		#what effects happen when this tier is achieved
+		on_upgraded = {
+		}
+	}
+
+	tier_2 = {
+		#time to upgrade to this level (0 for tier 0)
+		upgrade_time = {
+			months = 240
+		}
+
+		#cost to upgrade to this level (0 for tier 0)
+		cost_to_upgrade = {
+			factor = 2500
+		}
+
+		#what modifiers are added to the province when we have this project here on this tier
+		province_modifiers = {
+		}
+
+		#what modifiers are added to the provinces in the map area when we have this project here on this tier
+		area_modifier = {
+		}
+
+		#what modifiers are added to the country when we have this project here on this tier
+		country_modifiers = {
+			yearly_absolutism = 1
+			imperial_mandate = 0.05
+			prestige_decay = -0.01
+		}
+
+		#what effects happen when this tier is achieved
+		on_upgraded = {
+		}
+	}
+
+	tier_3 = {
+		#time to upgrade to this level (0 for tier 0)
+		upgrade_time = {
+			months = 480
+		}
+
+		#cost to upgrade to this level (0 for tier 0)
+		cost_to_upgrade = {
+			factor = 5000
+		}
+
+		#what modifiers are added to the province when we have this project here on this tier
+		province_modifiers = {
+		}
+
+		#what modifiers are added to the provinces in the map area when we have this project here on this tier
+		area_modifier = {
+		}
+
+		#what modifiers are added to the country when we have this project here on this tier
+		country_modifiers = {
+			yearly_absolutism = 1
+			imperial_mandate = 0.075
+			prestige_decay = -0.02
+		}
+
+		#what effects happen when this tier is achieved
+		on_upgraded = {
+		}
+	}
+}
+sob_liaoyang_the_great_wall_of_china = {
+	# province it starts in
+	start = 4652
+	
+	# date built in real life (so anything built during game time will be there if you start a game after that date)
+	date = 1368.01.01 #Ming dynasty
+	
+	#time to build
+	time = {
+		months = 0
+	}
+	
+	#how much to build one
+	build_cost = 0
+	
+	#can we move it?
+	can_be_moved = no
+	
+	#time to move the project one unit of distance, in days
+	move_days_per_unit_distance = 1
+	
+	#tier that the project starts at when first placed in the game (be that at game start or when built by a country as the game progresses)
+	starting_tier = 0
+	
+	#project type
+	type = monument
+
+	#can we build it?
+	build_trigger = {
+		culture_group = east_asian
+		OR = {
+			has_owner_culture = yes
+			has_owner_accepted_culture = yes
+		}
+	}
+
+	#what to do when it's built
+	on_built = {
+		show_ambient_object = the_great_wall_of_china
+	}
+	
+	#what to do when it's destroyed
+	on_destroyed = {
+		hide_ambient_object = the_great_wall_of_china
+	}
+
+	#can our country use it?
+	can_use_modifiers_trigger = {
+		culture_group = east_asian
+		OR = {
+			has_owner_culture = yes
+			has_owner_accepted_culture = yes
+		}
+	}
+
+	#can our country upgrade it?
+	can_upgrade_trigger = {
+		culture_group = east_asian
+		OR = {
+			has_owner_culture = yes
+			has_owner_accepted_culture = yes
+		}
+	}
+
+	#can our country keep it or is it destroyed when we get hold of it?
+	keep_trigger = {
+	}
+
+	#tier data
+	tier_0 = {
+		#time to upgrade to this level (0 for tier 0)
+		upgrade_time = {
+			months = 0
+		}
+
+		#cost to upgrade to this level (0 for tier 0)
+		cost_to_upgrade = {
+			factor = 0
+		}
+
+		#what modifiers are added to the province when we have this project here on this tier
+		province_modifiers = {
+		}
+
+		#what modifiers are added to the provinces in the map area when we have this project here on this tier
+		area_modifier = {
+		}
+
+		#what modifiers are added to the country when we have this project here on this tier
+		country_modifiers = {
+		}
+
+		#what effects happen when this tier is achieved
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		#time to upgrade to this level (0 for tier 0)
+		upgrade_time = {
+			months = 120
+		}
+
+		#cost to upgrade to this level (0 for tier 0)
+		cost_to_upgrade = {
+			factor = 1000
+		}
+
+		#what modifiers are added to the province when we have this project here on this tier
+		province_modifiers = {
+			fort_level = 1
+			
+		}
+
+		#what modifiers are added to the provinces in the map area when we have this project here on this tier
+		area_modifier = {
+			local_defensiveness = 0.15
+					local_amount_of_banners = 0.5
+		local_has_banners = yes
+		}
+
+		#what modifiers are added to the country when we have this project here on this tier
+		country_modifiers = {
+		}
+
+		#what effects happen when this tier is achieved
+		on_upgraded = {
+		owner = {
+		2111 = {
+		cede_province = PREV
+		add_core = PREV
+		}
+		
+		}
+		}
+	}
+
+	tier_2 = {
+		#time to upgrade to this level (0 for tier 0)
+		upgrade_time = {
+			months = 240
+		}
+
+		#cost to upgrade to this level (0 for tier 0)
+		cost_to_upgrade = {
+			factor = 3500
+		}
+
+		#what modifiers are added to the province when we have this project here on this tier
+		province_modifiers = {
+		fort_level = 2
+
+		}
+
+		#what modifiers are added to the provinces in the map area when we have this project here on this tier
+		area_modifier = {
+		fort_level = 1
+			local_defensiveness = 0.2
+			garrison_size = 0.2
+					local_amount_of_banners = 0.5
+		local_has_banners = yes
+		}
+
+		#what modifiers are added to the country when we have this project here on this tier
+		country_modifiers = {
+			defensiveness = 0.05
+		}
+
+		#what effects happen when this tier is achieved
+		on_upgraded = {
+		owner = {
+		2110 = {
+		cede_province = PREV
+		add_core = PREV
+		}
+		
+		}
+		}
+	}
+
+	tier_3 = {
+		#time to upgrade to this level (0 for tier 0)
+		upgrade_time = {
+			months = 480
+		}
+
+		#cost to upgrade to this level (0 for tier 0)
+		cost_to_upgrade = {
+			factor = 7000
+		}
+
+		#what modifiers are added to the province when we have this project here on this tier
+		province_modifiers = {
+		fort_level = 2
+
+		}
+
+		#what modifiers are added to the provinces in the map area when we have this project here on this tier
+		area_modifier = {
+		fort_level = 2
+			local_defensiveness = 0.25
+			garrison_size = 0.3
+					local_amount_of_banners = 0.5
+		local_has_banners = yes
+		}
+
+		#what modifiers are added to the country when we have this project here on this tier
+		country_modifiers = {
+			defensiveness = 0.1
+		}
+
+		#what effects happen when this tier is achieved
+		on_upgraded = {
+		owner = {
+		1048 = {
+		cede_province = PREV
+		add_core = PREV
+		}
+		
+		}
+		}
+	}
+}
+sob_black_land_of_dongbei = {
+	# province it starts in
+	start = 730
+	
+	# date built in real life (so anything built during game time will be there if you start a game after that date)
+	date = 1911.10.10 #
+	
+	#time to build
+	time = {
+		months = 0
+	}
+	
+	#how much to build one
+	build_cost = 0
+	
+	#can we move it?
+	can_be_moved = no
+	
+	#time to move the project one unit of distance, in days
+	move_days_per_unit_distance = 1
+	
+	#tier that the project starts at when first placed in the game (be that at game start or when built by a country as the game progresses)
+	starting_tier = 0
+	
+	#project type
+	type = monument
+
+	#can we build it?
+	build_trigger = {
+	owner = {
+		OR = {culture_group = east_asian  culture_group = chinese_group }
+}
+	}
+
+	#what to do when it's built
+	on_built = {
+	region = {
+	add_nationalism = -10
+	
+	}
+	}
+	
+	#what to do when it's destroyed
+	on_destroyed = {
+	
+	}
+
+	#can our country use it?
+	can_use_modifiers_trigger = {
+			custom_trigger_tooltip = {
+				tooltip = sob_china_dongbei_yimin_tooltip
+	has_global_flag = sob_china_dongbei_yimin_flag
+	
+	}
+				owner = {
+		OR = {culture_group = east_asian  culture_group = chinese_group }
+}
+		OR = {
+			has_owner_culture = yes
+			has_owner_accepted_culture = yes
+		}
+	}
+
+	#can our country upgrade it?
+	can_upgrade_trigger = {
+		custom_trigger_tooltip = {
+				tooltip = sob_china_dongbei_yimin_tooltip
+	has_global_flag = sob_china_dongbei_yimin_flag
+	
+	}
+				owner = {
+		OR = {culture_group = east_asian  culture_group = chinese_group }
+}
+		OR = {
+			has_owner_culture = yes
+			has_owner_accepted_culture = yes
+		}
+	}
+
+	#can our country keep it or is it destroyed when we get hold of it?
+	keep_trigger = {
+	}
+
+	#tier data
+	tier_0 = {
+		#time to upgrade to this level (0 for tier 0)
+		upgrade_time = {
+			months = 0
+		}
+
+		#cost to upgrade to this level (0 for tier 0)
+		cost_to_upgrade = {
+			factor = 0
+		}
+
+		#what modifiers are added to the province when we have this project here on this tier
+		province_modifiers = {
+		}
+
+		#what modifiers are added to the provinces in the map area when we have this project here on this tier
+		area_modifier = {
+		}
+
+		#what modifiers are added to the country when we have this project here on this tier
+		country_modifiers = {
+		}
+
+		#what effects happen when this tier is achieved
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		#time to upgrade to this level (0 for tier 0)
+		upgrade_time = {
+			months = 120
+		}
+
+		#cost to upgrade to this level (0 for tier 0)
+		cost_to_upgrade = {
+			factor = 2000
+		}
+
+		#what modifiers are added to the province when we have this project here on this tier
+		province_modifiers = {
+		tax_income = 12
+			allowed_num_of_buildings = 1
+		}
+
+		#what modifiers are added to the provinces in the map area when we have this project here on this tier
+		area_modifier = {
+			local_development_cost = -0.1
+		}
+
+		#what modifiers are added to the country when we have this project here on this tier
+		country_modifiers = {
+		global_unrest = -0.5
+		}
+
+		#what effects happen when this tier is achieved
+		on_upgraded = {
+region = {
+		add_base_tax = 1
+		add_base_production = 1
+		add_base_manpower = 1
+		}
+		}
+
+		
+	}
+
+	tier_2 = {
+		#time to upgrade to this level (0 for tier 0)
+		upgrade_time = {
+			months = 240
+		}
+
+		#cost to upgrade to this level (0 for tier 0)
+		cost_to_upgrade = {
+			factor = 5000
+		}
+
+		#what modifiers are added to the province when we have this project here on this tier
+		province_modifiers = {
+		tax_income = 24
+			allowed_num_of_buildings = 3
+		}
+
+		#what modifiers are added to the provinces in the map area when we have this project here on this tier
+		area_modifier = {
+			local_development_cost = -0.15
+			trade_goods_size_modifier = 0.1
+		}
+
+		#what modifiers are added to the country when we have this project here on this tier
+		country_modifiers = {
+		global_unrest = -0.5
+		global_manpower_modifier = 0.10
+		}
+		#what effects happen when this tier is achieved
+		on_upgraded = {
+region = {
+					add_province_modifier = { 
+    name = sob_han_dongbei_kaifa
+    duration = -1
+
+}
+
+		add_base_tax = 1
+		add_base_production = 1
+		add_base_manpower = 1
+
+}
+
+	}
+	}
+
+	tier_3 = {
+		#time to upgrade to this level (0 for tier 0)
+		upgrade_time = {
+			months = 480
+		}
+
+		#cost to upgrade to this level (0 for tier 0)
+		cost_to_upgrade = {
+			factor = 10000
+		}
+
+		#what modifiers are added to the province when we have this project here on this tier
+		province_modifiers = {
+		tax_income = 60
+			allowed_num_of_buildings = 5
+		}
+
+		#what modifiers are added to the provinces in the map area when we have this project here on this tier
+		area_modifier = {
+		trade_goods_size_modifier = 0.1
+			local_development_cost = -0.15
+		}
+
+		#what modifiers are added to the country when we have this project here on this tier
+		country_modifiers = {
+		global_unrest = -0.5
+		global_manpower_modifier = 0.10
+		}
+
+		#what effects happen when this tier is achieved
+		on_upgraded = {
+
+region = {
+		add_base_tax = 2
+		add_base_production = 2
+		add_base_manpower = 1
+
+change_culture = sob_dongbei
+
+
+		
+		
+		}
+				hidden_effect = {
+		every_province = {
+		limit = {OR = {culture = manchu  culture = manchu_new}}
+		change_culture = sob_dongbei
+				add_base_tax = 2
+		add_base_production = 2
+		add_base_manpower = 1
+		
+		}
+		}
+	}
+	}
+}

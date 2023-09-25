@@ -1,0 +1,140 @@
+take_sob_capital_vassalize = {
+	type = take_capital
+	attacker = {
+	badboy_factor = 1
+	prestige_factor = 2
+	peace_cost_factor = 0.25
+		peace_options = {
+		po_become_vassal
+	}
+	}
+
+	
+	war_name = VASSAL_MISSION_WAR_NAME
+}
+take_capital_take_mandate = {
+	type = take_capital
+	
+	attacker = {
+		badboy_factor = 1
+		prestige_factor = 1.0
+		peace_cost_factor = 1
+
+		peace_options = {
+			po_demand_provinces
+		}
+
+		country_desc = CHINESE_EMPIRE_COUNTRY
+		prov_desc = ALL_PROVS
+	}
+	
+	defender = {
+		badboy_factor = 0.3
+		prestige_factor = 1.0
+		peace_cost_factor = 0.5
+
+		peace_options = {
+			po_demand_provinces
+		}
+
+		country_desc = ALL_COUNTRIES
+		prov_desc = ALL_PROVS
+	}
+	
+	war_name = CELESTIAL_EMPIRE_WAR_NAME
+}
+
+
+take_capital_take_mandate_real = {
+	type = take_capital
+	
+	attacker = {
+		badboy_factor = 0.5
+		prestige_factor = 1.0
+		peace_cost_factor = 0.5
+
+		peace_options = {
+			po_demand_provinces
+			po_take_mandate
+		}
+
+		country_desc = CHINESE_EMPIRE_COUNTRY
+		prov_desc = ALL_PROVS
+	}
+	
+	defender = {
+		badboy_factor = 0.5
+		prestige_factor = 1.0
+		peace_cost_factor = 0.5
+
+		peace_options = {
+			po_demand_provinces
+		}
+
+		country_desc = ALL_COUNTRIES
+		prov_desc = ALL_PROVS
+	}
+	
+	war_name = CELESTIAL_EMPIRE_WAR_NAME
+}
+sob_take_province_nationalist = {
+	type = take_core
+	
+	attacker = {
+		badboy_factor = 0.5
+		prestige_factor = 2
+		peace_cost_factor = 0.2
+		
+		allowed_provinces = {
+		OR = {
+		is_core = ROOT
+		is_permanent_claim = ROOT
+			culture_group = ROOT
+			superregion = china_superregion
+			}
+		}
+		
+		peace_options = {
+			po_demand_provinces
+		}
+		
+		country_desc = ALL_CGROUP_COUNTRIES
+		prov_desc = ALL_CGROUP_PROVS
+	}
+	
+	defender = {
+		badboy_factor = 0.5
+		prestige_factor = 1.5
+		peace_cost_factor = 0.5
+		
+		allowed_provinces = {
+			culture_group = FROM
+		}
+		
+		peace_options = {
+			po_demand_provinces
+		}
+		
+		country_desc = ALL_CGROUP_COUNTRIES
+		prov_desc = ALL_CGROUP_PROVS
+	}
+	
+	war_name = NATION_WAR_NAME	
+}
+
+take_capital_force_tributary = {
+	type = take_capital
+		attacker = {
+	badboy_factor = 0.5
+	prestige_factor = 2
+	peace_cost_factor = 0.5
+		peace_options = {
+		po_become_tributary_state
+		po_release_vassals
+		po_release_annexed
+	}
+	}
+
+	
+	war_name = TRIBUTARY_MISSION_WAR_NAME
+}

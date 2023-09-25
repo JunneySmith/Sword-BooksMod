@@ -1,0 +1,141 @@
+XCC_ideas = {
+	start = {
+	colonist_placement_chance =0.5
+	colonists = 3
+	}
+	
+	bonus = {
+		diplomatic_reputation = 2
+	}
+	
+	trigger = {
+			OR = {culture_group = east_asian  culture_group = chinese_group } #Chinese
+			is_colonial_nation = yes
+	}
+	free = yes		#will be added at load.
+	sob_zhuzibaijia_group_idea = {
+        technology_cost = -0.1
+		idea_cost = -0.1
+	}
+	sob_putianzhixia_group_idea = {
+administrative_efficiency = 0.1
+	}
+	sob_shuaituzhibin_group_idea = {
+		diplomatic_upkeep = 1
+		diplomatic_reputation = 2
+	}
+
+	sob_shiyeanmin_group_idea = {
+development_cost = -0.2
+	}
+		sob_wuweisheji_group_idea = {
+		 	local_amount_of_banners = 0.1
+	}
+	sob_chongzhulongji_idea = {
+garrison_size = 1
+land_morale = 0.15
+	}
+	sob_shijiediguo_idea = {
+		naval_morale = 0.15
+		naval_tradition_from_trade = 1.33
+	}
+}
+CCH_ideas = {
+	start = {
+	    garrison_size = 0.5
+		idea_cost = -0.10
+	}
+	
+	bonus = {
+		diplomatic_reputation = 2
+	}
+	
+	trigger = {
+			OR = {culture_group = east_asian  culture_group = chinese_group } #Chinese
+			is_colonial_nation = no
+			
+			always = no
+	}
+	free = yes		#will be added at load.
+	firearm_training = {
+		infantry_power = 0.2
+		shock_damage_received = -0.05
+	}
+	nine_garrisons_of_the_great_wall_chi = {
+		defensiveness = 0.2
+		mil_tech_cost_modifier = -0.025
+	}
+	revived_three_grand_divisions = {
+		discipline = 0.05
+	}
+	order_of_four_occupations = {
+		production_efficiency = 0.1
+		global_trade_goods_size_modifier = 0.1
+	}
+	son_of_heaven = {
+		legitimacy = 0.5
+		devotion = 0.5
+		horde_unity = 0.5
+		meritocracy = 0.5
+		republican_tradition = 0.5
+		reduced_liberty_desire = 10
+	}
+	single_whip_law_chi = {
+		global_tax_modifier = 0.10
+		yearly_corruption = -0.02
+	}
+	the_red_cannon_chi = {
+		artillery_power = 0.1
+		leader_land_fire = 1
+	}
+}
+
+sob_han_ideas = {
+	start = {
+discipline = 0.05
+culture_conversion_cost = -0.33
+
+	}
+	
+	bonus = {
+			legitimacy = 1
+		devotion = 1
+		horde_unity = 1
+		meritocracy = 1
+		republican_tradition = 1
+		yearly_absolutism = 1
+		
+	}
+	
+	trigger = {
+			OR = {culture_group = east_asian  culture_group = chinese_group } #Chinese
+			is_colonial_nation = no
+	}
+	free = yes		#will be added at load.
+	sob_zhuzibaijia_group_idea = {
+        technology_cost = -0.1
+		idea_cost = -0.1
+	}
+	sob_putianzhixia_group_idea = {
+administrative_efficiency = 0.1
+	}
+	sob_shuaituzhibin_group_idea = {
+		diplomatic_upkeep = 1
+		diplomatic_reputation = 2
+	}
+
+	sob_shiyeanmin_group_idea = {
+development_cost = -0.2
+	}
+		sob_wuweisheji_group_idea = {
+		 	local_amount_of_banners = 0.1
+	}
+	sob_chongzhulongji_idea = {
+garrison_size = 1
+land_morale = 0.15
+	}
+	sob_shijiediguo_idea = {
+		naval_morale = 0.15
+		naval_tradition_from_trade = 1.33
+	}
+}

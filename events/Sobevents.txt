@@ -1,0 +1,2280 @@
+namespace = sobevents
+
+#####################################RE
+country_event = {
+	id = sobevents.955292322
+	title = "sobevents.955292.t"
+	desc = "sobevents.955292.d"
+	picture = IMPERIAL_SEAL_eventPicture
+		
+ is_triggered_only = yes
+ 
+	option = {
+ 
+		name = "sobevents.955292.a" #Ignore these barbarians
+          1816 = {
+		  add_reform_center = confucianism
+		  }
+		            5001 = {
+		  add_reform_center = confucianism
+		  }
+		
+	}
+ 
+}
+country_event = {
+	id = sobevents.10086003
+	title = "sobevents.10086003.t"
+	desc = "sobevents.10086003.d"
+	picture = IMPERIAL_EXAMINATION_eventPicture
+	
+	fire_only_once = yes
+	major = yes
+	trigger = {
+	NOT = { has_global_flag = sob_mng_already_confirm_lost_dai_viet}
+	started_in = 1427.1.1
+	
+		has_dlc = "Mandate of Heaven"
+		OR = {culture_group = east_asian  culture_group = chinese_group }
+		tag = MNG
+		is_emperor_of_china = yes
+		is_at_war = no
+	}
+	immediate = { set_global_flag =sob_mng_already_confirm_lost_dai_viet }
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "sobevents.10086003.a"
+		trigger = {
+		started_in = 1427.1.1
+		imperial_mandate = 50
+		NOT = { started_in = 1460.1.1}
+		}
+		set_global_flag = sob_mng_fight_dai_viet_ind_again
+		if = {
+		limit = { ai = no}
+		add_mandate = -50
+		
+		}
+		TOK= {
+		change_primary_culture = vietnamese_new
+		every_owned_province = {
+		limit = { culture = vietnamese}
+		change_culture = vietnamese_new
+		}
+		}
+		ANN = {
+		change_primary_culture = vietnamese_new
+		every_owned_province = {
+		limit = { culture = vietnamese}
+		change_culture = vietnamese_new
+		}
+		}
+		DAI = {
+		change_primary_culture = vietnamese_new
+		every_owned_province = {
+		limit = { culture = vietnamese}
+		change_culture = vietnamese_new
+		}
+		}
+	}
+		option = {
+		name = "sobevents.10086003.b"
+				trigger = {
+		started_in = 1427.1.1
+		NOT = { started_in = 1460.1.1}
+		}
+set_global_flag = sob_mng_lost_dai_viet_ind_again
+add_years_of_income = 1
+	add_yearly_manpower = 3
+		}
+				option = {
+		name = "sobevents.10086003.c"
+				trigger = {
+		started_in = 1460.1.1
+		}
+set_global_flag = sob_mng_lost_dai_viet_ind_again
+
+		}
+}
+country_event = {
+	id = sobevents.10086002
+	title = "confucian_events.21.t"
+	desc = "confucian_events.21.d"
+	picture = IMPERIAL_EXAMINATION_eventPicture
+	
+	fire_only_once = yes
+	major = yes
+	trigger = {
+	OR = {
+	tag = TOK
+	tag = ANN
+	tag = DAI
+	}
+	OR = {
+	has_global_flag = sob_mng_already_confirm_lost_dai_viet
+	NOT = { started_in = 1460.1.1}
+	}
+	started_in = 1427.1.1
+		has_dlc = "Mandate of Heaven"
+		OR = {culture_group = east_asian  culture_group = chinese_group }
+		primary_culture = vietnamese
+		is_at_war = no
+	
+		is_year = 1460
+		
+		
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "confucian_events.21.a"
+		trigger = {
+		NOT = {started_in = 1460.1.1}
+		
+		}
+		ai_chance = { factor = 5 }
+		change_religion = confucianism
+		set_ruler_religion = confucianism
+		if = {
+			limit = { has_heir = yes }
+			set_heir_religion = confucianism
+		}
+		if = {
+		limit = { NOT = { has_harmonized_with = mahayana}}
+		add_harmonized_religion = mahayana
+		}
+	}
+	option = {
+		name = "confucian_events.21.b"
+		trigger = {
+				OR = {
+		 liberty_desire = 5
+		
+		 NOT = { has_global_flag = sob_mng_fight_dai_viet_ind_again}
+		overlord = {
+		NOT = { religion = ROOT}
+		
+		}
+		 
+		 }
+		}
+		ai_chance = { factor = 95 }
+		add_prestige = 20
+		change_primary_culture = vietnamese
+		every_owned_province = {
+		limit = { culture = vietnamese_new}
+		change_culture = vietnamese
+		}
+		change_religion = mahayana
+	}
+}
+country_event = {
+	id = sobevents.10086001
+	title = "sobevents.955292.t"
+	desc = "sobevents.955292.d"
+	picture = IMPERIAL_SEAL_eventPicture
+		
+ is_triggered_only = yes
+ 
+	option = {
+ 
+		name = "sobevents.955292.a" #Ignore these barbarians
+		set_global_flag = sob_china_dongbei_yimin_flag
+		tooltip = {
+
+			730 = {	
+				set_great_project_tier_1 = 
+				{ type = sob_black_land_of_dongbei
+				
+				}
+			}
+			}
+								set_great_project_tier_1 = {
+					type = sob_black_land_of_dongbei
+
+				}
+				
+		
+	}
+ 
+}
+country_event = {
+	id = sobevents.955292
+	title = "sobevents.955292.t"
+	desc = "sobevents.955292.d"
+	picture = IMPERIAL_SEAL_eventPicture
+		
+ is_triggered_only = yes
+ 
+	option = {
+ 
+		name = "sobevents.955292.a" #Ignore these barbarians
+		unlock_cult = yemoja_cult 
+unlock_cult = roog_cult 
+unlock_cult = nyame_cult
+unlock_cult = cwezi_cult
+unlock_cult = central_african_ancestor_cult
+unlock_cult = mwari_cult
+unlock_cult = enkai_cult
+unlock_cult = waaq_cult
+unlock_cult = zanahary_cult
+unlock_cult = waaq_cult 
+unlock_cult = zanahary_cult 
+unlock_cult = christianity_cult 
+unlock_cult = islam_cult 
+unlock_cult = buddhism_cult 
+unlock_cult = dharmic_cult 
+unlock_cult = south_central_american_cult 
+	unlock_cult = norse_cult 
+		unlock_cult = jewish_cult 
+			unlock_cult = zoroastrian_cult
+		
+	}
+ 
+}
+country_event = {
+	id = sobevents.9552926
+	title = "sobevents.9552926.t"
+	desc = "sobevents.9552926.d"
+	picture = IMPERIAL_SEAL_eventPicture
+		
+ is_triggered_only = yes
+ 	trigger = {
+	ai = no
+	religion = confucianism
+	NOT = { has_country_flag = sob_confu_actived}
+	}
+ 
+	option = {
+ 
+		name = "sobevents.9552926.a" #Ignore these barbarians
+        add_harmonized_religion = catholic
+		 		 enable_religion = threeself
+        enable_religion = sob_catholic
+		enable_religion = sob_anglican
+		enable_religion = sob_reformed
+		enable_religion = sob_orthodox
+		enable_religion = sob_coptic
+
+		set_country_flag = sob_confu_actived
+ 
+	}
+	 
+	option = {
+ 
+		name = "sobevents.9552926.a" #Ignore these barbarians
+		add_harmonized_religion = sunni
+
+ enable_religion = sob_sunni
+
+		set_country_flag = sob_confu_actived
+ 
+	}
+	 
+	option = {
+ 
+		name = "sobevents.9552926.a" #Ignore these barbarians
+		add_harmonized_religion = animism
+		add_harmonized_religion = hinduism
+		
+		 enable_religion = sob_hinduism
+		 enable_religion = sob_mahayana
+		 		 enable_religion = sob_shamanism
+		 enable_religion = sob_shinto
+ 
+
+		set_country_flag = sob_confu_actived
+ 
+	}
+		option = {
+ 
+		name = "sobevents.9552926.b" #Ignore these barbarians
+
+	}
+ 
+}
+country_event = {
+	id = sobevents.5001
+	title = "sobevents.5001.t"
+	desc = "sobevents.5001.d"
+	picture = IMPERIAL_SEAL_eventPicture
+	
+
+	trigger = {
+		NOT= {
+		any_province = {
+		religion = jewish
+		}
+		
+		}
+		OR = { religion = confucianism religion = threeself religion =sob_catholic  religion =sob_reformed	religion = sob_orthodox 	religion = sob_coptic	religion = sob_mahayana	religion = sob_sunni religion =sob_shinto 		religion = sob_hinduism religion = sob_shamanism	religion = sob_anglican	}
+
+		NOT = { has_global_flag = confucian_events_jewish}
+NOT = { has_harmonized_with = jewish}
+NOT = { has_harmonized_with = jewish_group}
+		
+	}
+	
+	immediate = {
+	set_global_flag = confucian_events_jewish
+
+	}
+	
+	mean_time_to_happen = {
+	 months = 80
+	}
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = "sobevents.5001.a" #Ignore these barbarians
+		random_owned_province = {
+		change_religion = jewish
+		
+		}
+		
+	}
+	option = {
+		ai_chance = {
+			factor = 0
+		}
+		name = "sobevents.5001.b" #Ignore these barbarians
+		add_prestige = 10
+		
+	}
+}
+country_event = {
+	id = sobevents.5119
+	title = "sobevents.5001.t"
+	desc = "sobevents.5001.d"
+	picture = IMPERIAL_SEAL_eventPicture
+		hidden = yes
+	trigger = {
+	always = no
+	culture_group  =  east_asian
+	 
+		
+		OR = { religion = confucianism religion = threeself religion =sob_catholic  religion =sob_reformed	religion = sob_orthodox 	religion = sob_coptic	religion = sob_mahayana	religion = sob_sunni religion =sob_shinto 		religion = sob_hinduism religion = sob_shamanism	religion = sob_anglican	}
+		      NOT = {   any_owned_province = {
+
+		 owner = {
+		is_harmonizing_with = PREV
+		}
+		}
+		}
+		NOT = { has_country_flag = confucian_events_tengri_pagan}
+NOT = { has_harmonized_with = tengri_pagan_group}
+NOT = { has_harmonized_with = tengri_pagan_reformed }
+NOT = { has_harmonized_with = tengri_pagan_moralized }
+
+	 has_harmonized_with = pagan
+	 any_province =  {
+	     
+          religion = tengri_pagan_reformed
+          religion_group = pagan
+		}
+		
+		}
+			
+	mean_time_to_happen = {
+		months = 3
+	}
+		
+	option = {
+
+		name = "sobevents.5001.a" #Ignore these barbarians
+	set_country_flag = confucian_events_tengri_pagan
+    add_harmonized_religion = tengri_pagan_moralized
+		
+	}
+
+}
+
+country_event = {
+	id = sobevents.5002
+	title = "sobevents.5002.t"
+	desc = "sobevents.5002.d"
+	picture = IMPERIAL_SEAL_eventPicture
+		
+	trigger = {
+		OR = { religion = confucianism religion = threeself religion =sob_catholic  religion =sob_reformed	religion = sob_orthodox 	religion = sob_coptic	religion = sob_mahayana	religion = sob_sunni religion =sob_shinto 		religion = sob_hinduism religion = sob_shamanism	religion = sob_anglican	}
+
+		NOT = { has_global_flag = confucian_events_zoroastrian}
+NOT = { has_harmonized_with = zoroastrian}
+NOT = {
+any_province = {
+religion = zoroastrian
+
+}
+}
+	}
+	
+	immediate = {
+	
+	set_global_flag = confucian_events_zoroastrian
+
+	}
+	
+	mean_time_to_happen = {
+		months = 100
+	}
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = "sobevents.5002.a" #Ignore these barbarians
+		random_owned_province = {
+		change_religion = zoroastrian
+		
+		}
+	}
+	option = {
+		ai_chance = {
+			factor = 0
+		}
+		name = "sobevents.5002.b" #Ignore these barbarians
+		add_prestige = 10
+	}
+}
+
+country_event = {
+	id = sobevents.111
+	title = "confucian_events.16.t"
+	desc = "confucian_events.16.d"
+	picture = IMPERIAL_SEAL_eventPicture
+    hidden = yes
+	trigger = {
+		always = no
+		OR = { religion = confucianism religion = threeself religion =sob_catholic  religion =sob_reformed	religion = sob_orthodox 	religion = sob_coptic	religion = sob_mahayana	religion = sob_sunni religion =sob_shinto 		religion = sob_hinduism religion = sob_shamanism	religion = sob_anglican	}
+        any_owned_province = {
+
+		 OR = {
+		 		 AND = {
+		 
+		  religion = vajrayana
+		  
+		  owner = { OR = {
+		   has_harmonized_with = vajrayana_confu_group
+		   	 has_harmonized_with = vajrayana
+		  }}
+		 }
+		 AND = {
+	
+		 		
+		 religion = buddhism
+		 
+		 owner = { OR = {		 has_harmonized_with = buddhism
+		 		
+		 has_harmonized_with = theravada_confu_group}}
+		 }
+		 AND = {
+		 OR = {
+		 religion = vajrayana_confu
+		  religion = vajrayana
+		  }
+		  owner = { OR = {
+		   has_harmonized_with = vajrayana_confu_group
+		   	 has_harmonized_with = vajrayana
+		  }}
+		 }
+		 AND = {
+
+		 OR = {
+		 religion = buddhism_confu
+		 		
+		 religion = buddhism
+		 }
+		 owner = { OR = {		 has_harmonized_with = buddhism
+		 		
+		 has_harmonized_with = theravada_confu_group}}
+		 }
+		 }
+		 }
+
+		
+	}
+	mean_time_to_happen = {
+		months =1
+	}
+	
+	option = {
+	
+		name = "confucian_events.16.a" #Ignore these barbarians
+	if = {
+	limit = {  OR = {has_harmonized_with = vajrayana
+	 has_harmonized_with = vajrayana_confu_group
+	}
+	
+	}
+		every_owned_province  ={
+		limit = {
+		OR = {religion = vajrayana_confu
+		religion = vajrayana
+		}
+		}
+		change_religion = ROOT
+		}
+
+		}
+	if = {
+	limit = {  OR = {has_harmonized_with = buddhism
+	 has_harmonized_with = theravada_confu_group
+	}
+	
+	}
+		every_owned_province  ={
+		limit = {
+
+		OR = {religion = buddhism_confu
+		religion = buddhism
+		}
+		}
+		change_religion = ROOT
+		}
+		}
+	}
+}
+#####################################
+
+country_event = {
+	id = sobevents.985
+	title = "sobevents.985.t"
+	desc = "sobevents.985.d"
+	picture = GIFTS_TO_EMPEROR_eventPicture
+	
+	hidden = yes
+
+	trigger = {
+	    has_country_flag = sob_setted_un_harmonized_religion
+	OR = { religion = confucianism religion = threeself religion =sob_catholic  religion =sob_reformed	religion = sob_orthodox 	religion = sob_coptic	religion = sob_mahayana	religion = sob_sunni religion =sob_shinto 		religion = sob_hinduism religion = sob_shamanism	religion = sob_anglican	}
+	
+		any_owned_province = {
+		NOT = { religion = ROOT }
+		   			 OR = {
+			 owner = {
+			 			 OR = {
+			has_country_flag = sob_religion_law_religion_off
+			 }
+			 OR = {
+			 has_country_flag = sob_religious_ideas_off
+			 full_idea_group = religious_ideas
+			  full_idea_group = sob_religious_ideas
+			  }
+			 }
+
+			  has_state_edict = sob_force_harmonized
+			  
+			 }
+
+		
+
+			         owner  = {
+			 has_harmonized_with = PREV
+			 }
+
+			 
+			 
+			 
+			 
+			 
+			 }
+			 
+		}
+		
+	immediate = { clr_country_flag = sob_setted_un_harmonized_religion}
+
+	mean_time_to_happen = {
+		days = 1 
+	}
+	
+	option = {
+		name = "confucian_events.17.b"
+			  
+	 
+			 every_owned_province ={
+		   limit = {religion = mahayana
+		   			 OR = {
+			 owner = {
+			 			 OR = {
+			has_country_flag = sob_religion_law_religion_off
+			 }
+			 OR = {
+			 has_country_flag = sob_religious_ideas_off
+			 			 full_idea_group = religious_ideas
+			  full_idea_group = sob_religious_ideas
+			  }
+			 }
+
+			  has_state_edict = sob_force_harmonized
+			  
+			 }
+		    owner  = {
+			 has_harmonized_with = PREV
+			 }}
+			
+			 
+		    change_religion = ROOT
+		   }
+
+####################
+
+		   
+		   #######M
+		   
+		   		   every_owned_province ={
+		   limit = {religion_group = muslim
+		   			 OR = {
+			 owner = {
+			 			 OR = {
+			has_country_flag = sob_religion_law_religion_off
+			 }
+			 OR = {
+			 has_country_flag = sob_religious_ideas_off
+			 			 full_idea_group = religious_ideas
+			  full_idea_group = sob_religious_ideas
+			  }
+			 }
+
+			  has_state_edict = sob_force_harmonized
+			  
+			 }
+
+				   owner  = {
+			 has_harmonized_with = PREV
+		religion = sob_sunni
+	
+
+			}}
+		    change_religion = ROOT
+		   }
+
+		   
+		   ##########################
+		   every_owned_province ={
+		   limit = {religion_group = christian
+		   			 OR = {
+			 owner = {
+			 			 OR = {
+			has_country_flag = sob_religion_law_religion_off
+			 }
+			 OR = {
+			 has_country_flag = sob_religious_ideas_off
+			 			 full_idea_group = religious_ideas
+			  full_idea_group = sob_religious_ideas
+			  }
+			 }
+
+			  has_state_edict = sob_force_harmonized
+			  
+			 }
+
+				   owner  = {
+			 has_harmonized_with = PREV
+			 OR = {
+		religion = threeself
+	
+													religion =sob_catholic 
+															religion =sob_reformed
+																	religion = sob_orthodox
+																			religion = sob_coptic
+																															religion = sob_anglican
+}
+			}}
+		    change_religion = ROOT
+		   }
+
+		   ###########################
+	
+		
+
+		##############################
+		
+		
+        ##############################
+
+	every_owned_province = {
+	limit = {
+	         owner  = {
+			 has_harmonized_with = PREV
+			 }
+		   			 OR = {
+			 owner = {
+			 			 OR = {
+			has_country_flag = sob_religion_law_religion_off
+			 }
+			 OR = {
+			 has_country_flag = sob_religious_ideas_off
+			 			 full_idea_group = religious_ideas
+			  full_idea_group = sob_religious_ideas
+			  }
+			 }
+
+			  has_state_edict = sob_force_harmonized
+			  
+			 }
+			 OR = {
+			 NOT = {religion = coptic}
+			 	         owner  = {
+			 has_harmonized_with = coptic_confu_group
+			 }
+			 }
+					 OR = {
+			 NOT = {religion = hussite}
+			 	         owner  = {
+			 has_harmonized_with = sob_hussite_confu_group
+			 }
+			 }
+			 				 OR = {
+			 NOT = {religion = dreamtime}
+			 	         owner  = {
+			 has_harmonized_with = sob_dreamtime_confu_group
+			 }
+			 }
+			 OR = {
+			   NOT = {religion = anglican}
+			   			 	         owner  = {
+			 has_harmonized_with = anglican_confu_group
+			 }
+			 }
+			  OR = {
+			    NOT = {religion = protestant}
+							   			 	         owner  = {
+			 has_harmonized_with = protestant_confu_group
+			 }
+			 }
+			   OR = {
+				 NOT = {religion = reformed}
+				 owner  = {
+			 has_harmonized_with = reformed_confu_group
+			 }
+			 }
+			 OR = {
+				  NOT = {religion = orthodox}
+				  				 owner  = {
+			 has_harmonized_with = orthodox_confu_group
+			 }
+			 }
+			  OR = {
+			   						     NOT = {religion  = shiite}
+										 				  				 owner  = {
+			 has_harmonized_with = shiite_confu_group
+			 }
+			 }
+			  OR = {
+				   NOT = {religion  = ibadi}
+				  owner  = {
+			 has_harmonized_with = ibadi_confu_group
+			 }
+			 }
+			  OR = {
+				     NOT = {religion  = shamanism}
+					 				  owner  = {
+			 has_harmonized_with = shamanism_confu_group
+			 }
+			 }
+			 OR = {
+					   NOT = {religion  = totemism}
+				owner  = {
+			 has_harmonized_with = totemism_confu_group
+			 }
+			 }
+			  OR = {
+					     NOT = {religion  = inti}
+						 				owner  = {
+			 has_harmonized_with = inti_confu_group
+			 }
+			 }
+			   OR = {
+						   NOT = {religion  = nahuatl}
+						   						 				owner  = {
+			 has_harmonized_with = nahuatl_confu_group
+			 }
+			 }
+			 OR ={
+						     NOT = {religion  = mesoamerican_religion}
+							 						   						 				owner  = {
+			 has_harmonized_with = mesoamerican_religion_confu_group
+			 }
+			 }
+			  OR ={
+							   NOT = {religion  = norse_pagan_reformed}
+							owner  = {
+			 has_harmonized_with = norse_pagan_reformed_confu_group
+			 }
+			 }
+			  OR ={
+							     NOT = {religion  = sikhism}
+			owner  = {
+			 has_harmonized_with = sikhism_confu_group
+			 }
+			 }
+	}
+	change_religion = ROOT
+			owner = {
+			
+				if = {
+	limit = { 
+	development = 5
+	NOT = { development = 10}}
+	add_papal_influence = 5
+	
+	}
+		if = {
+	limit = { 
+	development = 10
+	NOT = { development = 20}}
+	add_papal_influence = 10
+	
+	}
+			if = {
+	limit = { 
+	development = 20
+	NOT = { development = 30}}
+	add_papal_influence = 15
+	
+	}
+				if = {
+	limit = { 
+	development = 30
+}
+	add_papal_influence = 20
+	
+	}
+		if = {
+	limit = { 
+
+	NOT = { development = 5}}
+	add_papal_influence = 2.5
+	
+	}
+			
+			
+			}
+	
+	
+	}
+	
+	
+	
+	}
+}
+
+
+country_event = {
+	id = sobevents.5010
+	title = "confucian_events.21.t"
+	desc = "confucian_events.21.d"
+	picture = IMPERIAL_EXAMINATION_eventPicture
+	
+	hidden = yes
+
+ 	trigger = {
+	 religion = threeself
+	 any_owned_province = {
+	 religion = confucianism
+	 }
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "confucian_events.21.a"
+				 every_owned_province = {
+		 limit = {religion = confucianism}
+	 change_religion = threeself
+	 }
+	}
+}
+country_event = {
+	id = sobevents.5011
+	title = "confucian_events.21.t"
+	desc = "confucian_events.21.d"
+	picture = IMPERIAL_EXAMINATION_eventPicture
+	
+	hidden = yes
+
+ 	trigger = {
+	 religion = confucianism
+	 any_owned_province = {
+	 religion = threeself
+	 }
+	}
+	
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "confucian_events.21.a"
+				 every_owned_province = {
+		 limit = {religion = threeself}
+	 change_religion = confucianism
+	 }
+	}
+}
+
+
+
+country_event = {
+	id = sobevents.969
+	title = "confucian_events.16.a"
+	desc = "confucian_events.16.a"
+	picture = GIFTS_TO_EMPEROR_eventPicture
+	
+
+	trigger = {
+	OR = {
+	NOT= { is_subject_of_type = sob_jiaoqu_vassal}
+	overlord ={
+	NOT = { has_country_flag = sob_religious_new_system_subject}
+	
+	}
+	 
+	 }
+			OR = { religion = confucianism religion = threeself religion =sob_catholic  religion =sob_reformed	religion = sob_orthodox 	religion = sob_coptic	religion = sob_mahayana	religion = sob_sunni religion =sob_shinto 		religion = sob_hinduism religion = sob_shamanism	religion = sob_anglican	}
+			
+			any_owned_province = {
+			NOT = {OR = { religion = confucianism religion = threeself religion =sob_catholic  religion =sob_reformed	religion = sob_orthodox 	religion = sob_coptic	religion = sob_mahayana	religion = sob_sunni religion =sob_shinto 		religion = sob_hinduism religion = sob_shamanism	religion = sob_anglican	}}
+			}
+	OR = {culture_group = east_asian  culture_group = chinese_group } 
+      ai = yes  
+	  }
+  
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+name = "confucian_events.14.a" #Let us send our best and brightest to civilize them.
+		random_owned_province = {
+	limit = {
+
+	NOT = {OR = { religion = confucianism religion = threeself religion =sob_catholic  religion =sob_reformed	religion = sob_orthodox 	religion = sob_coptic	religion = sob_mahayana	religion = sob_sunni religion =sob_shinto 		religion = sob_hinduism religion = sob_shamanism	religion = sob_anglican	}}
+	
+			}
+  change_religion = ROOT
+	}
+
+
+	}
+
+}
+
+country_event = {
+	id = sobevents.10087001
+	title = "sobevents.985.t"
+	desc = "sobevents.985.d"
+	picture = GIFTS_TO_EMPEROR_eventPicture
+	
+	hidden = yes
+	trigger = {
+	    
+	OR = { religion = confucianism religion = threeself religion =sob_catholic  religion =sob_reformed	religion = sob_orthodox 	religion = sob_coptic	religion = sob_mahayana	religion = sob_sunni religion =sob_shinto 		religion = sob_hinduism religion = sob_shamanism	religion = sob_anglican	}
+	
+		any_owned_province = {
+		NOT = { religion = ROOT }
+
+		
+			OR = {
+			         owner  = {
+			 has_harmonized_with = PREV
+			 }
+			AND = {
+			religion_group = christian
+			owner = {
+			religion_group = christian
+			has_harmonized_with = christian
+			}
+			
+			
+			}
+			 			AND = {
+			religion_group = muslim
+			owner = {
+			religion_group = muslim
+			has_harmonized_with = muslim
+			}
+			
+			
+			}
+			 
+			 }
+			 
+			 
+			 }
+			 
+		}
+	mean_time_to_happen = {
+	months = 1
+	}
+	
+	
+	option = {
+	set_country_flag = sob_setted_un_harmonized_religion
+		if = {
+	limit = {
+
+	religion_group = muslim
+	has_harmonized_with = muslim
+	
+	
+	}
+	
+			   		   		    every_owned_province ={
+		   limit = {
+		   
+		   religion = shiite
+		   	         owner  = {
+			 has_harmonized_with = muslim
+			 NOT = { has_harmonized_with = shiite_confu_group }
+			 
+			 }}
+		    change_religion = shiite_confu
+		   }
+		
+			   		    every_owned_province ={
+		   limit = {religion = ibadi
+		   	         owner  = {
+			 has_harmonized_with = muslim
+			  NOT = { has_harmonized_with = ibadi_confu_group }
+			 }}
+		    change_religion = ibadi_confu
+		   }
+		   }
+	if = {
+	limit = {
+
+	religion_group = christian
+	has_harmonized_with = christian
+	
+	
+	}
+	   every_owned_province ={
+		   limit = {religion = anglican
+		   	         owner  = {
+			 has_harmonized_with = christian
+			NOT = { has_harmonized_with = anglican_confu_group }
+			 }}
+		    change_religion = anglican_confu
+		   }
+		   		   every_owned_province ={
+		   limit = {religion = protestant
+		   	         owner  = {
+			 has_harmonized_with = christian
+			 NOT = { has_harmonized_with = protestant_confu_group }
+			 
+			 }}
+		    change_religion = protestant_confu
+		   }
+		   		   every_owned_province ={
+		   limit = {religion = reformed
+		   	         owner  = {
+			 has_harmonized_with = christian
+			  NOT = { has_harmonized_with = reformed_confu_group }
+			 }}
+		    change_religion = reformed_confu
+		   }
+		   	   every_owned_province ={
+		   limit = {religion = orthodox
+		   	         owner  = {
+			 has_harmonized_with = christian
+			 NOT = { has_harmonized_with = orthodox_confu_group }
+			 }}
+		    change_religion = orthodox_confu
+		   }
+	   		    every_owned_province ={
+		   limit = {religion = coptic
+		   	         owner  = {
+			 has_harmonized_with = christian
+			 NOT = { has_harmonized_with = coptic_confu_group }
+			 }}
+		    change_religion = coptic_confu
+		   }
+		   	   		    every_owned_province ={
+		   limit = {religion = hussite
+		   	         owner  = {
+			 has_harmonized_with = christian
+			 NOT = { has_harmonized_with = sob_hussite_confu_group }
+			 }}
+		    change_religion = sob_hussite_confu
+		   }
+	}		   	   		    every_owned_province ={
+		   limit = {religion = hussite
+		   	         owner  = {
+			 has_harmonized_with = PREV
+			 NOT = { has_harmonized_with = sob_hussite_confu_group }
+			 }}
+		    change_religion = sob_hussite_confu
+		   }
+	         		   every_owned_province ={
+		   limit = {religion = anglican
+		   	         owner  = {
+			 has_harmonized_with = PREV
+			NOT = { has_harmonized_with = anglican_confu_group }
+			 }}
+		    change_religion = anglican_confu
+		   }
+		   		   every_owned_province ={
+		   limit = {religion = protestant
+		   	         owner  = {
+			 has_harmonized_with = PREV
+			 NOT = { has_harmonized_with = protestant_confu_group }
+			 
+			 }}
+		    change_religion = protestant_confu
+		   }
+		   		   every_owned_province ={
+		   limit = {religion = reformed
+		   	         owner  = {
+			 has_harmonized_with = PREV
+			  NOT = { has_harmonized_with = reformed_confu_group }
+			 }}
+		    change_religion = reformed_confu
+		   }
+		   	   every_owned_province ={
+		   limit = {religion = orthodox
+		   	         owner  = {
+			 has_harmonized_with = PREV
+			 NOT = { has_harmonized_with = orthodox_confu_group }
+			 }}
+		    change_religion = orthodox_confu
+		   }
+	   		    every_owned_province ={
+		   limit = {religion = coptic
+		   	         owner  = {
+			 has_harmonized_with = PREV
+			 NOT = { has_harmonized_with = coptic_confu_group }
+			 }}
+		    change_religion = coptic_confu
+		   }
+		   
+		   ##################################
+		   		   		    every_owned_province ={
+		   limit = {
+		   
+		   religion = shiite
+		   	         owner  = {
+			 has_harmonized_with = PREV
+			 NOT = { has_harmonized_with = shiite_confu_group }
+			 
+			 }}
+		    change_religion = shiite_confu
+		   }
+		
+			   		    every_owned_province ={
+		   limit = {religion = ibadi
+		   	         owner  = {
+			 has_harmonized_with = PREV
+			  NOT = { has_harmonized_with = ibadi_confu_group }
+			 }}
+		    change_religion = ibadi_confu
+		   }
+		   	   		    every_owned_province ={
+		   limit = {religion = shamanism
+		   	         owner  = {
+			 has_harmonized_with = PREV
+			 NOT = { has_harmonized_with = shamanism_confu_group }
+			 }}
+		    change_religion = shamanism_confu
+		   }
+		
+			   		    every_owned_province ={
+		   limit = {religion = totemism
+		   	         owner  = {
+			 has_harmonized_with = PREV
+			 NOT = { has_harmonized_with = totemism_confu_group }
+			 }}
+		    change_religion =totemism_confu
+		   }
+		   			   		    every_owned_province ={
+		   limit = {religion = dreamtime
+		   	         owner  = {
+			 has_harmonized_with = PREV
+			 NOT = { has_harmonized_with = sob_dreamtime_confu_group }
+			 }}
+		    change_religion =sob_dreamtime_confu
+		   }
+		
+			   		    every_owned_province ={
+		   limit = {religion = inti
+		   	         owner  = {
+			 has_harmonized_with = PREV
+			 NOT = { has_harmonized_with = inti_confu_group }
+			 }}
+		    change_religion = inti_confu
+		   }
+		
+			   		    every_owned_province ={
+		   limit = {religion =nahuatl
+		   	         owner  = {
+			 has_harmonized_with = PREV
+			  NOT = { has_harmonized_with = nahuatl_confu_group }
+			 }}
+		    change_religion = nahuatl_confu
+		   }
+		
+			   		    every_owned_province ={
+		   limit = {religion = mesoamerican_religion
+		   	         owner  = {
+			 has_harmonized_with = PREV
+			 NOT = { has_harmonized_with = mesoamerican_religion_confu_group }
+			 }}
+		    change_religion = mesoamerican_religion_confu
+		   }
+		
+			   		    every_owned_province ={
+		   limit = {religion = norse_pagan_reformed
+		   	         owner  = {
+			 has_harmonized_with = PREV
+			  NOT = { has_harmonized_with = norse_pagan_reformed_confu_group }
+			 }}
+		    change_religion = norse_pagan_reformed_confu
+		   }
+		
+			   		    every_owned_province ={
+		   limit = {religion =  sikhism
+		   	         owner  = {
+			 has_harmonized_with = PREV
+			 NOT = { has_harmonized_with = sikhism_confu_group }
+			 }}
+		    change_religion =  sikhism_confu
+		   }
+		   
+		   #####################
+	
+	}
+	
+	
+	}
+	
+	country_event = {
+	id = sobevents.10087002
+	title = "sobevents.985.t"
+	desc = "sobevents.985.d"
+	picture = GIFTS_TO_EMPEROR_eventPicture
+	hidden = yes
+	
+	trigger = {
+	    religion_group = christian
+OR ={
+		religion = threeself
+		
+															religion =sob_catholic 
+															religion =sob_reformed
+																	religion = sob_orthodox
+																			religion = sob_coptic
+																															religion = sob_anglican
+		
+		
+		}
+		any_owned_province = {
+		AND = {
+			 religion_group = christian
+		   									NOT = {
+			religion = catholic
+			religion = anglican
+			religion = protestant
+			religion = reformed
+			religion = orthodox
+			religion = coptic
+			religion = hussite
+			}
+			
+		   	         owner  = {
+					 NOT = {has_harmonized_with = PREV}
+
+			 }}
+			 }
+			 
+		}
+	mean_time_to_happen = {
+	months = 1
+	}
+	
+	
+	option = {
+			   		   		   every_owned_province ={
+		   limit = {religion_group = christian
+		   									NOT = {
+			religion = catholic
+			religion = anglican
+			religion = protestant
+			religion = reformed
+			religion = orthodox
+			religion = coptic
+			religion = hussite
+			}
+		   	         owner  = {
+					 NOT = {has_harmonized_with = PREV}
+OR = {
+		religion = threeself
+		
+															religion =sob_catholic 
+															religion =sob_reformed
+																	religion = sob_orthodox
+																			religion = sob_coptic
+																															religion = sob_anglican
+		}
+			 }}
+		    change_religion = ROOT
+		   }
+	
+	}
+	
+	
+	}
+
+
+
+
+country_event = {
+	id = sobevents.10087003
+	title = "sobevents.985.t"
+	desc = "sobevents.985.d"
+	picture = GIFTS_TO_EMPEROR_eventPicture
+	hidden = yes
+	
+	trigger = {
+religion = sob_muslim
+		any_owned_province = {
+			 		AND = {
+		religion_group = muslim
+		   									NOT = {
+											religion = sunni
+		religion = shiite
+			religion = ibadi
+			
+			}
+			
+		   	         owner  = {
+					 NOT = {has_harmonized_with = PREV}
+
+			 }}
+			 }
+			 
+		}
+	mean_time_to_happen = {
+	months = 1
+	}
+	
+	
+	option = {
+			 		   		   every_owned_province ={
+		   limit = {religion_group = muslim
+		   									NOT = {
+			religion = shiite
+			religion = ibadi
+			}
+		   	         owner  = {
+					 NOT = {has_harmonized_with = PREV}
+		religion = sob_sunni
+
+			 }}
+		    change_religion = ROOT
+		   }
+	}
+	
+	
+	}
+country_event = {
+	id = sobevents.10087010
+	title = "sobevents.985.t"
+	desc = "sobevents.985.d"
+	picture = GIFTS_TO_EMPEROR_eventPicture
+	hidden = yes
+	
+	trigger = {
+religion = sob_muslim
+		any_owned_province = {
+			religion_group = muslim
+		NOT = { religion = ROOT }
+		   			 OR = {
+			 owner = {
+			 			 OR = {
+			has_country_flag = sob_religion_law_religion_off
+			 }
+			 OR = {
+			 has_country_flag = sob_religious_ideas_off
+			 full_idea_group = religious_ideas
+			  full_idea_group = sob_religious_ideas
+			  }
+			 }
+
+			  has_state_edict = sob_force_harmonized
+			  
+			 }
+
+		
+
+			         owner  = {
+			 has_harmonized_with = muslim
+			 }
+
+			 
+			 
+			 
+			 
+			 
+			 }
+
+			 
+		}
+	mean_time_to_happen = {
+	months = 1
+	}
+	
+	
+	option = {
+				 every_owned_province ={
+		   limit = {religion = sunni
+		   			 OR = {
+			 owner = {
+			 			 OR = {
+			has_country_flag = sob_religion_law_religion_off
+			 }
+			 OR = {
+			 has_country_flag = sob_religious_ideas_off
+			 			 full_idea_group = religious_ideas
+			  full_idea_group = sob_religious_ideas
+			  }
+			 }
+
+			  has_state_edict = sob_force_harmonized
+			  
+			 }
+		    owner  = {
+			 has_harmonized_with = muslim
+			 }}
+			
+			 
+		    change_religion = ROOT
+		   }
+		   				 every_owned_province ={
+		   limit = {religion = shiite
+		   			 OR = {
+			 owner = {
+			 			 OR = {
+			has_country_flag = sob_religion_law_religion_off
+			 }
+			 OR = {
+			 has_country_flag = sob_religious_ideas_off
+			 			 full_idea_group = religious_ideas
+			  full_idea_group = sob_religious_ideas
+			  }
+			 }
+
+			  has_state_edict = sob_force_harmonized
+			  
+			 }
+		    owner  = {
+			 has_harmonized_with = muslim
+			 has_harmonized_with = shiite_confu_group
+			 }}
+			
+			 
+		    change_religion = ROOT
+		   }
+		   		   				 every_owned_province ={
+		   limit = {religion = ibadi
+		   			 OR = {
+			 owner = {
+			 			 OR = {
+			has_country_flag = sob_religion_law_religion_off
+			 }
+			 OR = {
+			 has_country_flag = sob_religious_ideas_off
+			 			 full_idea_group = religious_ideas
+			  full_idea_group = sob_religious_ideas
+			  }
+			 }
+
+			  has_state_edict = sob_force_harmonized
+			  
+			 }
+		    owner  = {
+			 has_harmonized_with = ibadi
+			  has_harmonized_with = ibadi_confu_group
+			 }}
+			
+			 
+		    change_religion = ROOT
+		   }
+
+	}
+	
+	
+	}
+	country_event = {
+	id = sobevents.10087018
+	title = "sobevents.985.t"
+	desc = "sobevents.985.d"
+	picture = GIFTS_TO_EMPEROR_eventPicture
+	hidden = yes
+	
+	trigger = {
+religion = sob_hinduism
+		any_owned_province = {
+			religion_group = dharmic
+		NOT = { religion = ROOT }
+		   			 OR = {
+			 owner = {
+			 			 OR = {
+			has_country_flag = sob_religion_law_religion_off
+			 }
+			 OR = {
+			 has_country_flag = sob_religious_ideas_off
+			 full_idea_group = religious_ideas
+			  full_idea_group = sob_religious_ideas
+			  }
+			 }
+
+			  has_state_edict = sob_force_harmonized
+			  
+			 }
+
+		
+
+			         owner  = {
+			 has_harmonized_with = dharmic
+			 }
+
+			 
+			 
+			 
+			 
+			 
+			 }
+
+			 
+		}
+	mean_time_to_happen = {
+	months = 1
+	}
+	
+	
+	option = {
+				 every_owned_province ={
+		   limit = {religion_group = dharmic
+		   			 OR = {
+			 owner = {
+			 			 OR = {
+			has_country_flag = sob_religion_law_religion_off
+			 }
+			 OR = {
+			 has_country_flag = sob_religious_ideas_off
+			 			 full_idea_group = religious_ideas
+			  full_idea_group = sob_religious_ideas
+			  }
+			 }
+
+			  has_state_edict = sob_force_harmonized
+			  
+			 }
+		    owner  = {
+			 has_harmonized_with = dharmic
+			 }}
+			
+			 
+		    change_religion = ROOT
+		   }
+		
+
+	}
+	
+	
+	}
+	
+country_event = {
+	id = sobevents.10087011
+	title = "sobevents.985.t"
+	desc = "sobevents.985.d"
+	picture = GIFTS_TO_EMPEROR_eventPicture
+	hidden = yes
+	
+	trigger = {
+	    religion_group = christian
+OR ={
+		religion = threeself
+		
+															religion =sob_catholic 
+															religion =sob_reformed
+																	religion = sob_orthodox
+																			religion = sob_coptic
+																															religion = sob_anglican
+		
+		
+		}
+		any_owned_province = {
+			religion_group = christian
+		NOT = { religion = ROOT }
+		   			 OR = {
+			 owner = {
+			 			 OR = {
+			has_country_flag = sob_religion_law_religion_off
+			 }
+			 OR = {
+			 has_country_flag = sob_religious_ideas_off
+			 full_idea_group = religious_ideas
+			  full_idea_group = sob_religious_ideas
+			  }
+			 }
+
+			  has_state_edict = sob_force_harmonized
+			  
+			 }
+
+		
+
+			         owner  = {
+			 has_harmonized_with = christian
+			 }
+
+			 
+			 
+			 
+			 
+			 
+			 }
+
+			 
+		}
+	mean_time_to_happen = {
+	months = 1
+	}
+	
+	
+	option = {
+				 every_owned_province ={
+		   limit = {religion = catholic
+		   			 OR = {
+			 owner = {
+			 			 OR = {
+			has_country_flag = sob_religion_law_religion_off
+			 }
+			 OR = {
+			 has_country_flag = sob_religious_ideas_off
+			 			 full_idea_group = religious_ideas
+			  full_idea_group = sob_religious_ideas
+			  }
+			 }
+
+			  has_state_edict = sob_force_harmonized
+			  
+			 }
+		    owner  = {
+			 has_harmonized_with = christian
+			 }}
+			
+			 
+		    change_religion = ROOT
+		   }
+		   				 every_owned_province ={
+		   limit = {religion = reformed
+		   			 OR = {
+			 owner = {
+			 			 OR = {
+			has_country_flag = sob_religion_law_religion_off
+			 }
+			 OR = {
+			 has_country_flag = sob_religious_ideas_off
+			 			 full_idea_group = religious_ideas
+			  full_idea_group = sob_religious_ideas
+			  }
+			 }
+
+			  has_state_edict = sob_force_harmonized
+			  
+			 }
+		    owner  = {
+			 has_harmonized_with = christian
+			 has_harmonized_with = reformed_confu_group
+			 }}
+			
+			 
+		    change_religion = ROOT
+		   }
+		   		   				 every_owned_province ={
+		   limit = {religion = orthodox
+		   			 OR = {
+			 owner = {
+			 			 OR = {
+			has_country_flag = sob_religion_law_religion_off
+			 }
+			 OR = {
+			 has_country_flag = sob_religious_ideas_off
+			 			 full_idea_group = religious_ideas
+			  full_idea_group = sob_religious_ideas
+			  }
+			 }
+
+			  has_state_edict = sob_force_harmonized
+			  
+			 }
+		    owner  = {
+			 has_harmonized_with = christian
+			 has_harmonized_with = orthodox_confu_group
+			 }}
+			
+			 
+		    change_religion = ROOT
+		   }
+		   		   		   				 every_owned_province ={
+		   limit = {religion = coptic
+		   			 OR = {
+			 owner = {
+			 			 OR = {
+			has_country_flag = sob_religion_law_religion_off
+			 }
+			 OR = {
+			 has_country_flag = sob_religious_ideas_off
+			 			 full_idea_group = religious_ideas
+			  full_idea_group = sob_religious_ideas
+			  }
+			 }
+
+			  has_state_edict = sob_force_harmonized
+			  
+			 }
+		    owner  = {
+			 has_harmonized_with = christian
+			 has_harmonized_with = coptic_confu_group
+			 }}
+			
+			 
+		    change_religion = ROOT
+		   }
+		   		   		   		   				 every_owned_province ={
+		   limit = {religion = anglican
+		   			 OR = {
+			 owner = {
+			 			 OR = {
+			has_country_flag = sob_religion_law_religion_off
+			 }
+			 OR = {
+			 has_country_flag = sob_religious_ideas_off
+			 			 full_idea_group = religious_ideas
+			  full_idea_group = sob_religious_ideas
+			  }
+			 }
+
+			  has_state_edict = sob_force_harmonized
+			  
+			 }
+		    owner  = {
+			 has_harmonized_with = christian
+			 has_harmonized_with = anglican_confu_group
+			 }}
+			
+			 
+		    change_religion = ROOT
+		   }
+		   		   		   		   		   				 every_owned_province ={
+		   limit = {religion = hussite
+		   			 OR = {
+			 owner = {
+			 			 OR = {
+			has_country_flag = sob_religion_law_religion_off
+			 }
+			 OR = {
+			 has_country_flag = sob_religious_ideas_off
+			 			 full_idea_group = religious_ideas
+			  full_idea_group = sob_religious_ideas
+			  }
+			 }
+
+			  has_state_edict = sob_force_harmonized
+			  
+			 }
+		    owner  = {
+			 has_harmonized_with = christian
+			 has_harmonized_with = sob_hussite_confu_group
+			 }}
+			
+			 
+		    change_religion = ROOT
+		   }
+
+	}
+	
+	
+	}
+
+
+
+country_event = {
+	id = sobevents.10087004
+	title = "sobevents.985.t"
+	desc = "sobevents.985.d"
+	picture = GIFTS_TO_EMPEROR_eventPicture
+	
+	hidden = yes
+	trigger = {
+	OR = { religion = confucianism religion = threeself religion =sob_catholic  religion =sob_reformed	religion = sob_orthodox 	religion = sob_coptic	religion = sob_mahayana	religion = sob_sunni religion =sob_shinto 		religion = sob_hinduism religion = sob_shamanism	religion = sob_anglican	}
+
+		any_owned_province = {
+		OR = {
+			 AND = {
+			 religion= sob_hussite_confu
+			 	         owner  = {
+			 has_harmonized_with = sob_hussite_confu_group
+			 }
+			 }
+	 AND = {
+			 religion= coptic_confu
+			 	         owner  = {
+			 has_harmonized_with = coptic_confu_group
+			 }
+			 }
+		
+			 AND = {
+			   religion= anglican_confu
+			   			 	         owner  = {
+			 has_harmonized_with = anglican_confu_group
+			 }
+			 }
+			  AND = {
+			    religion= protestant_confu
+							   			 	         owner  = {
+			 has_harmonized_with = protestant_confu_group
+			 }
+			 }
+			   AND = {
+				 religion= refANDmed_confu
+				 owner  = {
+			 has_harmonized_with = refANDmed_confu_group
+			 }
+			 }
+			 AND = {
+				  religion= ANDthodox_confu
+				  				 owner  = {
+			 has_harmonized_with = ANDthodox_confu_group
+			 }
+			 }
+			  AND = {
+			   						     religion = shiite_confu
+										 				  				 owner  = {
+			 has_harmonized_with = shiite_confu_group
+			 }
+			 }
+			  AND = {
+				   religion = ibadi_confu
+				  owner  = {
+			 has_harmonized_with = ibadi_confu_group
+			 }
+			 }
+			  AND = {
+				     religion = shamanism_confu
+					 				  owner  = {
+			 has_harmonized_with = shamanism_confu_group
+			 }
+			 }
+			 AND = {
+					   religion = totemism_confu
+				owner  = {
+			 has_harmonized_with = totemism_confu_group
+			 }
+			 }
+			  AND = {
+					     religion = inti_confu
+						 				owner  = {
+			 has_harmonized_with = inti_confu_group
+			 }
+			 }
+			   AND = {
+						   religion = nahuatl_confu
+						   						 				owner  = {
+			 has_harmonized_with = nahuatl_confu_group
+			 }
+			 }
+			 AND ={
+						     religion = mesoamerican_religion_confu
+							 						   						 				owner  = {
+			 has_harmonized_with = mesoamerican_religion_confu_group
+			 }
+			 }
+			  AND ={
+							   religion = nANDse_pagan_refANDmed_confu
+							owner  = {
+			 has_harmonized_with = nANDse_pagan_refANDmed_confu_group
+			 }
+			 }
+			  AND ={
+							     religion = sikhism_confu
+			owner  = {
+			 has_harmonized_with = sikhism_confu_group
+			 }
+			 }
+			 			  AND ={
+							     religion = sob_dreamtime_confu
+			owner  = {
+			 has_harmonized_with = sob_dreamtime_confu_group
+			 }
+			 }
+		
+		}
+			 }
+			 
+		}
+	mean_time_to_happen = {
+	days = 1
+	}
+	
+	
+	option = {
+ every_owned_province = {
+		   if = {
+		   limit = {
+		   owner = { has_harmonized_with = mahayana_confu_group}
+		   
+		   religion = mahayana_confu
+		   
+		   
+		   }
+		    change_religion = mahayana
+		   }
+		   		   if = {
+		   limit = {
+		   owner = { has_harmonized_with = sob_hussite_confu_group}
+		   
+		   religion = sob_hussite_confu
+		   
+		   
+		   }
+		    change_religion = hussite
+		   }
+		   		   		   if = {
+		   limit = {
+		   owner = { has_harmonized_with = sob_dreamtime_confu_group}
+		   
+		   religion = sob_dreamtime_confu
+		   
+		   
+		   }
+		    change_religion = dreamtime
+		   }
+         		   if = {
+		  		   limit = {
+		   owner = { has_harmonized_with = buddhism_confu_group}
+		   religion = buddhism_confu}
+		    change_religion = buddhism
+		   }
+		   		   if = {
+		   		   limit = {
+		   owner = { has_harmonized_with = vajrayana_confu_group}
+		   religion = vajrayana_confu}
+		    change_religion = vajrayana
+		   }
+
+		   		   if = {
+		 		   limit = {
+		   owner = { has_harmonized_with = shiite_confu_group}
+		   religion = shiite_confu}
+		    change_religion = shiite
+		   }
+         		   if = {
+		   		   limit = {
+		   owner = { has_harmonized_with = ibadi_confu_group}
+		   religion = ibadi_confu}
+		    change_religion = ibadi
+		   }
+		   		   if = {
+		   		   limit = {
+		   owner = { has_harmonized_with = shamanism_confu_group}
+		   religion = shamanism_confu}
+		    change_religion = shamanism
+		   }
+		   		   if = {
+		   		   limit = {
+		   owner = { has_harmonized_with = totemism_confu_group}
+		   religion = totemism_confu}
+		    change_religion = totemism
+		   }
+         		   if = {
+		   		   limit = {
+		   owner = { has_harmonized_with = inti_confu_group}
+		   religion = inti_confu}
+		    change_religion = inti
+		   }
+		   		   if = {
+		  		   limit = {
+		   owner = { has_harmonized_with = nahuatl_confu_group}
+		   religion = nahuatl_confu}
+		    change_religion = nahuatl
+		   }
+		   		   if = {
+		   		   limit = {
+		   owner = { has_harmonized_with = mesoamerican_religion_confu_group}
+		   religion = mesoamerican_religion_confu}
+		    change_religion = mesoamerican_religion
+		   }
+         		   if = {
+		   		   limit = {
+		   owner = { has_harmonized_with = norse_pagan_reformed_confu_group}
+		   religion = norse_pagan_reformed_confu}
+		    change_religion =norse_pagan_reformed
+		   }
+		   		   if = {
+		  		   limit = {
+		   owner = { has_harmonized_with = sikhism_confu_group}
+		   religion =  sikhism_confu}
+		    change_religion =  sikhism
+		   }
+         		   if = {
+		  		   limit = {
+		   owner = { has_harmonized_with = anglican_confu_group}
+		   religion = anglican_confu}
+		    change_religion = anglican
+		   }
+		   		   if = {
+		   		   limit = {
+		   owner = { has_harmonized_with = protestant_confu_group}
+		   religion = protestant_confu}
+		    change_religion = protestant
+		   }
+		   		   if = {
+		 		   limit = {
+		   owner = { has_harmonized_with = reformed_confu_group}
+		   religion = reformed_confu}
+		    change_religion = reformed
+		   }
+		   		   if = {
+		  		   limit = {
+		   owner = { has_harmonized_with =orthodox_confu_group}
+		   religion = orthodox_confu}
+		    change_religion = orthodox
+		   }
+	   		   if = {
+				   limit = {
+		   owner = { has_harmonized_with = coptic_confu_group}
+		   religion = coptic_confu}
+		    change_religion = coptic
+		   }
+		
+		
+	
+
+		   
+		   
+		
+}
+	}
+	
+	
+	}
+	
+country_event = {
+	id = sobevents.10086005
+	title = "sobevents.985.t"
+	desc = "sobevents.985.d"
+	picture = GIFTS_TO_EMPEROR_eventPicture
+	is_triggered_only = yes
+	option = {
+	add_harmonized_religion = catholic
+	
+	
+	
+	}
+	
+	}
+	country_event = {
+	id = sobevents.10086006
+	title = "sobevents.985.t"
+	desc = "sobevents.985.d"
+	picture = GIFTS_TO_EMPEROR_eventPicture
+	is_triggered_only = yes
+	option = {
+	add_harmonized_religion = buddhism
+	
+	
+	
+	}
+	
+	}
+	
+		country_event = {
+	id = sobevents.10086007
+	title = "sobevents.985.t"
+	desc = "sobevents.985.d"
+	picture = GIFTS_TO_EMPEROR_eventPicture
+	is_triggered_only = yes
+	option = {
+	add_harmonized_religion = muslim
+	
+	
+	
+	}
+	
+	}
+	
+			country_event = {
+	id = sobevents.10086008
+	title = "sobevents.985.t"
+	desc = "sobevents.985.d"
+	picture = GIFTS_TO_EMPEROR_eventPicture
+	is_triggered_only = yes
+	option = {
+	add_harmonized_religion = sunni
+	
+	
+	
+	}
+	
+	}
+				country_event = {
+	id = sobevents.10086015
+	title = "sobevents.985.t"
+	desc = "sobevents.985.d"
+	picture = GIFTS_TO_EMPEROR_eventPicture
+	is_triggered_only = yes
+	option = {
+	add_harmonized_religion = catholic
+	#add_harmonized_religion = christian
+	
+	
+	}
+	
+	}
+					country_event = {
+	id = sobevents.10086016
+	title = "sobevents.985.t"
+	desc = "sobevents.985.d"
+	picture = GIFTS_TO_EMPEROR_eventPicture
+	is_triggered_only = yes
+	option = {
+	#add_harmonized_religion = catholic
+	add_harmonized_religion = christian
+	
+	
+	}
+	
+	}
+						country_event = {
+	id = sobevents.10086017
+	title = "sobevents.985.t"
+	desc = "sobevents.985.d"
+	picture = GIFTS_TO_EMPEROR_eventPicture
+	hidden = yes
+	trigger = {
+	OR = {
+	AND = {
+		    religion_group = christian
+OR ={
+		religion = threeself
+		
+															religion =sob_catholic 
+															religion =sob_reformed
+																	religion = sob_orthodox
+																			religion = sob_coptic
+																															religion = sob_anglican
+		
+		
+		}
+		NOT = { has_harmonized_with = christian}
+	
+	}
+		AND = {
+		    religion_group = muslim
+			religion = sob_muslim
+		NOT = { has_harmonized_with = muslim}
+	
+	}
+			AND = {
+		    religion_group = dharmic
+			religion = sob_hinduism
+		NOT = { has_harmonized_with = dharmic}
+	
+	}
+	
+	}
+	
+	}
+	mean_time_to_happen = {
+	days = 1
+	
+	}
+	option = {
+	export_to_variable = {
+    variable_name = sobtempreligion
+    value = religion
+}
+
+	set_country_flag = sob_temp_confu_religion_convert
+	
+
+if = {
+limit = { religion_group = christian }
+change_religion = confucianism
+add_harmonized_religion = catholic
+
+}
+if = {
+limit = { religion_group = muslim }
+change_religion = confucianism
+add_harmonized_religion = sunni
+
+}
+if = {
+limit = { religion_group = dharmic }
+change_religion = confucianism
+add_harmonized_religion = hinduism
+
+}
+			
+
+	}
+	
+	}
+		country_event = {
+	id = sobevents.10086019
+	title = "sobevents.10086019.t"
+	desc = "sobevents.10086019.d"
+	picture = GIFTS_TO_EMPEROR_eventPicture
+
+	trigger = {
+	has_country_flag = sob_temp_confu_religion_convert
+	}
+			mean_time_to_happen = {
+	days = 1
+	
+	}
+	immediate = {
+	clr_country_flag = sob_temp_confu_religion_convert
+	}
+
+		option = {
+		change_religion = variable:sobtempreligion
+		}
+		
+		}
+	
+	
+				country_event = {
+	id = sobevents.10086009
+	title = "sobevents.985.t"
+	desc = "sobevents.985.d"
+	picture = GIFTS_TO_EMPEROR_eventPicture
+	is_triggered_only = yes
+	option = {
+	add_harmonized_religion = reformed_confu
+	
+	
+	
+	}
+	
+	}
+
+
+
+
+
+

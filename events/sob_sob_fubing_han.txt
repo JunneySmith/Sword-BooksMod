@@ -1,0 +1,1600 @@
+namespace = sob_fubing_events
+# Local Revolt
+
+country_event = {
+	id = sob_fubing_events.962
+	title = estate_privileges_and_agendas_events.3.name
+	desc = estate_privileges_and_agendas_events.3.desc
+	picture = NOBLE_ESTATE_DEMANDS_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			pick_random_estate_if_present = { flag = present_agenda estate_action = generate_estate_agenda }
+		}
+
+	}
+
+	after = {
+		clr_country_flag = estate_brahmins_present_agenda
+		clr_country_flag = estate_church_present_agenda
+		clr_country_flag = estate_maratha_present_agenda
+		clr_country_flag = estate_nobles_present_agenda
+		clr_country_flag = estate_burghers_present_agenda
+		clr_country_flag = estate_vaisyas_present_agenda
+		clr_country_flag = estate_cossacks_present_agenda
+		clr_country_flag = estate_nomadic_tribes_present_agenda
+		clr_country_flag = estate_dhimmi_present_agenda
+		clr_country_flag = estate_jains_present_agenda
+		clr_country_flag = estate_rajput_present_agenda
+		clear_estate_agenda_cache = ROOT
+	}
+
+	option = {
+		name = estate_privileges_and_agendas_events.3.x
+		trigger = { has_estate = estate_sobshimin }
+		start_estate_agenda = estate_sobshimin
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 1.5
+				NOT = {
+					estate_loyalty = {
+						loyalty = 30
+						estate = estate_sobshimin
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				NOT = {
+					estate_loyalty = {
+						loyalty = 20
+						estate = estate_sobshimin
+					}
+				}
+			}
+			modifier = {
+				factor = 1.5
+				estate_influence = {
+					influence = 70
+					estate = estate_sobshimin
+				}
+			}
+			modifier = {
+				factor = 2
+				is_absolutism_active = yes
+				num_of_estate_privileges = {
+					estate = estate_sobshimin
+					value = 1
+				}
+				estate_loyalty = {
+					estate = estate_sobshimin
+					higher_than_influence = no
+				}
+			}
+		}
+	}
+		option = {
+		name = estate_privileges_and_agendas_events.3.y
+		trigger = { has_estate = estate_sobwarriors }
+		start_estate_agenda = estate_sobwarriors
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 1.5
+				NOT = {
+					estate_loyalty = {
+						loyalty = 30
+						estate = estate_sobwarriors
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				NOT = {
+					estate_loyalty = {
+						loyalty = 20
+						estate = estate_sobwarriors
+					}
+				}
+			}
+			modifier = {
+				factor = 1.5
+				estate_influence = {
+					influence = 70
+					estate = estate_sobwarriors
+				}
+			}
+			modifier = {
+				factor = 2
+				is_absolutism_active = yes
+				num_of_estate_privileges = {
+					estate = estate_sobwarriors
+					value = 1
+				}
+				estate_loyalty = {
+					estate = estate_sobwarriors
+					higher_than_influence = no
+				}
+			}
+		}
+	}
+		option = {
+		name = estate_privileges_and_agendas_events.3.z
+		trigger = { has_estate = estate_sobmongol}
+		start_estate_agenda = estate_sobmongol
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 1.5
+				NOT = {
+					estate_loyalty = {
+						loyalty = 30
+						estate = estate_sobmongol
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				NOT = {
+					estate_loyalty = {
+						loyalty = 20
+						estate = estate_sobmongol
+					}
+				}
+			}
+			modifier = {
+				factor = 1.5
+				estate_influence = {
+					influence = 70
+					estate = estate_sobmongol
+				}
+			}
+			modifier = {
+				factor = 2
+				is_absolutism_active = yes
+				num_of_estate_privileges = {
+					estate = estate_sobmongol
+					value = 1
+				}
+				estate_loyalty = {
+					estate = estate_sobmongol
+					higher_than_influence = no
+				}
+			}
+		}
+	}
+		option = {
+		name = estate_privileges_and_agendas_events.3.w
+		trigger = { has_estate = estate_sobshishen}
+		start_estate_agenda = estate_sobshishen
+		ai_chance = {
+			factor = 0
+			modifier = {
+				factor = 1.5
+				NOT = {
+					estate_loyalty = {
+						loyalty = 30
+						estate = estate_sobshishen
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				NOT = {
+					estate_loyalty = {
+						loyalty = 20
+						estate = estate_sobshishen
+					}
+				}
+			}
+			modifier = {
+				factor = 1.5
+				estate_influence = {
+					influence = 70
+					estate = estate_sobshishen
+				}
+			}
+			modifier = {
+				factor = 2
+				is_absolutism_active = yes
+				num_of_estate_privileges = {
+					estate = estate_sobshishen
+					value = 1
+				}
+				estate_loyalty = {
+					estate = estate_sobshishen
+					higher_than_influence = no
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = sob_fubing_events.969
+	title = estate_privileges_and_agendas_events.3.name
+	desc = estate_privileges_and_agendas_events.3.desc
+	picture = NOBLE_ESTATE_DEMANDS_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			pick_random_estate_if_present = { flag = present_agenda estate_action = generate_estate_agenda }
+		}
+
+	}
+
+	after = {
+		clr_country_flag = estate_brahmins_present_agenda
+		clr_country_flag = estate_church_present_agenda
+		clr_country_flag = estate_maratha_present_agenda
+		clr_country_flag = estate_nobles_present_agenda
+		clr_country_flag = estate_burghers_present_agenda
+		clr_country_flag = estate_vaisyas_present_agenda
+		clr_country_flag = estate_cossacks_present_agenda
+		clr_country_flag = estate_nomadic_tribes_present_agenda
+		clr_country_flag = estate_dhimmi_present_agenda
+		clr_country_flag = estate_jains_present_agenda
+		clr_country_flag = estate_rajput_present_agenda
+		clear_estate_agenda_cache = ROOT
+	}
+
+		option = {
+		name = estate_privileges_and_agendas_events.3.w
+		trigger = { has_estate = estate_sobshishen}
+		start_estate_agenda = estate_sobshishen
+		ai_chance = {
+			factor = 0
+			modifier = {
+				factor = 1.5
+				NOT = {
+					estate_loyalty = {
+						loyalty = 30
+						estate = estate_sobshishen
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				NOT = {
+					estate_loyalty = {
+						loyalty = 20
+						estate = estate_sobshishen
+					}
+				}
+			}
+			modifier = {
+				factor = 1.5
+				estate_influence = {
+					influence = 70
+					estate = estate_sobshishen
+				}
+			}
+			modifier = {
+				factor = 2
+				is_absolutism_active = yes
+				num_of_estate_privileges = {
+					estate = estate_sobshishen
+					value = 1
+				}
+				estate_loyalty = {
+					estate = estate_sobshishen
+					higher_than_influence = no
+				}
+			}
+		}
+	}
+			option = {
+		name = estate_privileges_and_agendas_events.3.zh
+
+		add_prestige = -15
+
+	}
+}
+country_event = {
+	id = sob_fubing_events.963
+	title = sob_fubing_events.963.t
+	desc = sob_fubing_events.963.d
+	picture = IMPERIAL_EXAMINATION_eventPicture
+	
+	is_triggered_only = yes
+	
+
+
+option = {
+		name = sob_fubing_events.963.x
+		trigger = { has_estate = estate_sobshimin }
+		        give_estate_land_share_gigantic = { estate = estate_sobshimin }
+        add_estate_loyalty = {
+            estate = estate_sobshimin
+            loyalty = 15
+            short = yes
+        }
+		if = {
+			limit = {
+				has_country_flag = recent_land_distribution
+			}
+			clr_country_flag = recent_land_distribution
+		}
+		set_country_flag = recent_land_distribution
+	}
+	option = {
+		name = sob_fubing_events.963.y
+		trigger = { has_estate = estate_sobwarriors }
+		        give_estate_land_share_gigantic = { estate = estate_sobwarriors }
+        add_estate_loyalty = {
+            estate = estate_sobwarriors
+            loyalty = 15
+            short = yes
+        }
+		if = {
+			limit = {
+				has_country_flag = recent_land_distribution
+			}
+			clr_country_flag = recent_land_distribution
+		}
+		set_country_flag = recent_land_distribution
+	}
+	option = {
+		name = sob_fubing_events.963.z
+		trigger = { has_estate = estate_sobmongol }
+		        give_estate_land_share_gigantic = { estate = estate_sobmongol }
+        add_estate_loyalty = {
+            estate = estate_sobmongol
+            loyalty = 15
+            short = yes
+        }
+		if = {
+			limit = {
+				has_country_flag = recent_land_distribution
+			}
+			clr_country_flag = recent_land_distribution
+		}
+		set_country_flag = recent_land_distribution
+	}
+	option = {
+		name = sob_fubing_events.963.a
+		trigger = { has_estate = estate_sobshishen }
+		        give_estate_land_share_gigantic = { estate = estate_sobshishen }
+        add_estate_loyalty = {
+            estate = estate_sobshishen
+            loyalty = 5
+            short = yes
+        }
+		if = {
+			limit = {
+				has_country_flag = recent_land_distribution
+			}
+			clr_country_flag = recent_land_distribution
+		}
+		set_country_flag = recent_land_distribution
+	}
+}
+country_event = {
+	id = sob_fubing_events.296
+	title = celestial_empire_events.2.t
+	desc = celestial_empire_events.2.d
+	picture = IMPERIAL_EXAMINATION_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		is_emperor_of_china = yes
+		has_dlc = "Mandate of Heaven"
+		
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_country_flag = reacted_to_confucianism_event
+					dismantle_empire_of_china = no
+			
+		}
+	}
+	
+	option = {
+		name = "celestial_empire_events.2.a"
+		ai_chance = {
+			factor = 100
+		}
+		add_meritocracy_effect = yes
+		add_mandate_effect = yes
+	}
+	option = {
+		name = "celestial_empire_events.2.b"
+		ai_chance = {
+			factor = 0
+		}
+		add_stability = -1
+	}
+}
+country_event = {
+	id = sob_fubing_events.1
+	title = "flavor_mng.EVTNAME6"
+	desc = "flavor_mng.EVTDESC6"
+	picture = REFORM_eventPicture
+	hidden = yes
+	trigger = {
+	ai = no
+	any_owned_province = {
+has_state_edict = sob_han_fubing_effort
+	NOT = { has_province_modifier = sob_fubing_on}
+	
+	}
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = "flavor_mng.EVTOPTA6" #Go with the reforms
+	every_owned_province = {
+	limit = {has_state_edict = sob_han_fubing_effort}
+
+	add_province_modifier = {
+	name = "sob_fubing_on"
+	duration = -1
+	
+	
+	}
+	
+	}
+	}
+}
+country_event = {
+	id = sob_fubing_events.102002
+	title = "flavor_mng.EVTNAME6"
+	desc = "flavor_mng.EVTDESC6"
+	picture = REFORM_eventPicture
+	hidden = yes
+	trigger = {
+	any_owned_province = {
+NOT = {has_state_edict = sob_han_fubing_effort}
+ has_province_modifier = sob_fubing_on
+NOT = { has_province_flag = sob_fubing_on_timer}
+	}
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = "flavor_mng.EVTOPTA6" #Go with the reforms
+
+	every_owned_province = {
+	limit = { 
+	NOT = { has_province_flag =sob_fubing_on_timer }
+NOT = {has_state_edict = sob_han_fubing_effort}
+	has_province_modifier = sob_fubing_on}
+
+	
+	set_province_flag = sob_fubing_on_timer
+
+	
+	
+	}
+	
+	}
+	
+}
+country_event = {
+	id = sob_fubing_events.2
+	title = "flavor_mng.EVTNAME6"
+	desc = "flavor_mng.EVTDESC6"
+	picture = REFORM_eventPicture
+	hidden = yes
+	trigger = {
+	any_owned_province = {
+NOT = {has_state_edict = sob_han_fubing_effort}
+ has_province_modifier = sob_fubing_on
+	had_province_flag = {
+	flag = sob_fubing_on_timer
+	days = 365
+	}
+	}
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = "flavor_mng.EVTOPTA6" #Go with the reforms
+
+	every_owned_province = {
+	limit = { 
+NOT = {has_state_edict = sob_han_fubing_effort}
+	has_province_modifier = sob_fubing_on}
+
+	remove_province_modifier =  sob_fubing_on
+	clr_province_flag = sob_fubing_on_timer
+	
+	
+	}
+	
+	}
+	
+}
+
+country_event = {
+	id = sob_fubing_events.3
+	title = "flavor_mng.EVTNAME6"
+	desc = "flavor_mng.EVTDESC6"
+	picture = REFORM_eventPicture
+	hidden = yes
+	trigger = {
+	NOT = {has_estate = estate_sobshishen}
+	
+	NOT = {has_reform = sob_scelestial_empire_tng_reform_republic}
+		NOT = {  has_reform = sob_scelestial_empire_tng_reform}
+		
+num_of_missionaries = 1
+any_owned_province = {
+has_state_edict = sob_han_fubing_effort
+NOT = { has_province_modifier = sob_fubing_headquarter}
+NOT = {any_province_in_state = {has_province_modifier = sob_fubing_headquarter} }
+}
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = "flavor_mng.EVTOPTA6" #Go with the reforms
+
+	random_owned_province = {
+	limit = { 
+has_state_edict = sob_han_fubing_effort
+	NOT = {has_province_modifier = sob_fubing_headquarter}
+	NOT = {any_province_in_state = {has_province_modifier = sob_fubing_headquarter} }
+	}
+
+		add_province_modifier = {
+	name = "sob_fubing_headquarter"
+	duration = -1
+	
+	
+	}
+	
+	}
+	
+	}
+	
+}
+
+
+country_event = {
+	id = sob_fubing_events.4
+	title = "sob_fubing_events.EVTNAME6"
+	desc = "sob_fubing_events.EVTDESC6"
+	picture = REFORM_eventPicture
+	hidden = yes
+	trigger = {
+     OR = {
+	 has_estate =estate_sobshishen
+
+	any_owned_province = {
+OR = {
+NOT = {has_state_edict = sob_han_fubing_effort}
+	 	owner = {
+	OR = {has_reform = sob_scelestial_empire_tng_reform_republic
+		 has_reform = sob_scelestial_empire_tng_reform}
+		}
+}
+has_province_modifier = sob_fubing_headquarter
+
+	}
+		NOT = {num_of_diplomats = 0}
+	}
+
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = "flavor_mng.EVTOPTA6" #Go with the reforms
+
+	every_owned_province = {
+	limit = {
+
+	OR = {
+NOT = {has_state_edict = sob_han_fubing_effort}
+	 	owner = {
+	OR = {has_reform = sob_scelestial_empire_tng_reform_republic
+		 has_reform = sob_scelestial_empire_tng_reform}
+		}
+}
+	
+has_province_modifier = sob_fubing_headquarter}
+
+	remove_province_modifier =  sob_fubing_headquarter
+
+	
+	
+	}
+	if = {
+	limit = { NOT = {num_of_diplomats = 0 }}
+	random_owned_province = {
+	limit = {has_province_modifier = sob_fubing_headquarter}
+	remove_province_modifier =  sob_fubing_headquarter
+	}
+	}
+	
+	}
+	
+}
+country_event = {
+	id = sob_fubing_events.1016
+	title = "flavor_mng.EVTNAME6"
+	desc = "flavor_mng.EVTDESC6"
+	picture = REFORM_eventPicture
+	hidden = yes
+	trigger = {
+
+	any_owned_province = {
+	
+has_province_modifier = sob_fubing_culture_yes
+OR = {
+	owner = {
+	NOT = {has_reform = sob_scelestial_empire_tng_reform_republic}
+		NOT = {  has_reform = sob_scelestial_empire_tng_reform}
+		}
+		NOT = { culture_group = ROOT}
+		culture = ROOT
+	}
+
+	}
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = "flavor_mng.EVTOPTA6" #Go with the reforms
+
+	every_owned_province = {
+	limit = {
+OR = {
+	owner = {
+	NOT = {has_reform = sob_scelestial_empire_tng_reform_republic}
+		NOT = {  has_reform = sob_scelestial_empire_tng_reform}
+		
+		
+		}
+		NOT = { culture_group = ROOT}
+		culture = ROOT
+	}
+has_province_modifier = sob_fubing_culture_yes
+}
+
+		remove_province_modifier = sob_fubing_culture_yes
+
+	
+	
+	
+
+	
+	
+	}
+	
+	}
+	
+}
+
+country_event = {
+	id = sob_fubing_events.1015
+	title = "flavor_mng.EVTNAME6"
+	desc = "flavor_mng.EVTDESC6"
+	picture = REFORM_eventPicture
+	hidden = yes
+	trigger = {
+
+	any_owned_province = {
+	culture_group = ROOT 
+		NOT = {culture = ROOT} 
+	owner = {
+	OR = {
+	has_reform = sob_scelestial_empire_tng_reform_republic
+		  has_reform = sob_scelestial_empire_tng_reform
+		
+		}
+		}
+
+NOT = {has_province_modifier = sob_fubing_culture_yes}
+	}
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = "flavor_mng.EVTOPTA6" #Go with the reforms
+
+	every_owned_province = {
+	limit = {
+		culture_group = ROOT 
+		NOT = {culture = ROOT} 
+	owner = {
+	OR = {
+	has_reform = sob_scelestial_empire_tng_reform_republic
+		  has_reform = sob_scelestial_empire_tng_reform
+		
+		}
+		}
+	
+
+NOT = {has_province_modifier = sob_fubing_culture_yes}
+}
+
+		add_province_modifier = {
+	name = "sob_fubing_culture_yes"
+	duration = -1
+	
+	
+	}
+
+	
+	
+	}
+	
+	}
+	
+}
+country_event = {
+	id = sob_fubing_events.5
+	title = "flavor_mng.EVTNAME6"
+	desc = "flavor_mng.EVTDESC6"
+	picture = REFORM_eventPicture
+	hidden = yes
+	trigger = {
+
+	any_owned_province = {
+OR = {
+owner = {
+OR = {
+	OR = {
+	has_reform = sob_scelestial_empire_tng_reform_republic
+		  has_reform = sob_scelestial_empire_tng_reform
+		
+		}
+
+}
+
+}
+any_province_in_state = {has_province_modifier = sob_fubing_headquarter}
+has_province_modifier = sob_fubing_headquarter
+}
+
+NOT = {has_province_modifier = sob_fubing_yes}
+	}
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = "flavor_mng.EVTOPTA6" #Go with the reforms
+
+	every_owned_province = {
+	limit = {
+	OR = {
+	owner = {
+OR = {
+	OR = {
+	has_reform = sob_scelestial_empire_tng_reform_republic
+		  has_reform = sob_scelestial_empire_tng_reform
+		
+		}
+
+}
+
+}
+any_province_in_state = {has_province_modifier = sob_fubing_headquarter}
+has_province_modifier = sob_fubing_headquarter
+}
+NOT = {has_province_modifier = sob_fubing_yes}
+}
+
+		add_province_modifier = {
+	name = "sob_fubing_yes"
+	duration = -1
+	
+	
+	}
+
+	
+	
+	}
+	
+	}
+	
+}
+
+country_event = {
+	id = sob_fubing_events.7
+	title = "sob_fubing_events.7.t"
+	desc = "sob_fubing_events.7.d"
+	picture = REFORM_eventPicture
+    is_triggered_only = yes
+	trigger = {
+      ai = no
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+		option = {
+		name = "sob_fubing_events.21.a" #Go with the reforms
+		custom_tooltip = sob_fubing_jiaqiang_reform_tooltip_1
+         set_country_flag = sob_fubing_on
+		 clr_country_flag = sob_fubing_off
+		
+	}
+	option = {
+		name = "sob_fubing_events.21.b" #Go with the reforms
+		custom_tooltip = sob_jiaohui_jiaqiang_reform_tooltip_2
+         set_country_flag = sob_fubing_off
+		 clr_country_flag = sob_fubing_on
+		
+	}
+	
+}
+country_event = {
+	id = sob_fubing_events.6
+	title = "flavor_mng.EVTNAME6"
+	desc = "flavor_mng.EVTDESC6"
+	picture = REFORM_eventPicture
+	hidden = yes
+	trigger = {
+
+	any_owned_province = {
+has_province_modifier = sob_fubing_yes
+		AND = {
+		NOT = {
+		owner = {
+OR = {
+	OR = {
+	has_reform = sob_scelestial_empire_tng_reform_republic
+		  has_reform = sob_scelestial_empire_tng_reform
+		full_idea_group = sob_aristocracy_ideas
+		
+		}
+
+}
+
+}
+		
+		}
+NOT=  {any_province_in_state = {has_province_modifier = sob_fubing_headquarter}}
+NOT=  {has_province_modifier = sob_fubing_headquarter}
+
+	}
+	
+	}
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		name = "flavor_mng.EVTOPTA6" #Go with the reforms
+
+	every_owned_province = {
+	limit = {
+	
+		AND = {
+				NOT = {
+		owner = {
+OR = {
+	OR = {
+	has_reform = sob_scelestial_empire_tng_reform_republic
+		  has_reform = sob_scelestial_empire_tng_reform
+		full_idea_group = sob_aristocracy_ideas
+		
+		}
+
+}
+
+}
+		
+		}
+NOT=  {any_province_in_state = {has_province_modifier = sob_fubing_headquarter}}
+NOT=  {has_province_modifier = sob_fubing_headquarter}
+
+	}
+has_province_modifier = sob_fubing_yes
+}
+
+		remove_province_modifier = sob_fubing_yes
+
+	
+	
+	
+
+	
+	
+	}
+	
+	}
+	
+}
+
+
+country_event = {
+	id = sob_fubing_events.23
+	title = "sob_fubing_events.23.t"
+	desc = "sob_fubing_events.23.desc"
+	picture = REFORM_eventPicture
+
+	is_triggered_only = yes
+
+	
+ 			option = {
+		name = "sob_fubing_events.23.a" #Go with the reforms
+         set_global_flag = sob_40_on
+		 clr_global_flag= sob_liji_on
+		 clr_global_flag = sob_month_on
+		clr_global_flag = sob_all_mode_off
+	}
+		option = {
+		name = "sob_fubing_events.23.b" #Go with the reforms
+         set_global_flag = sob_liji_on
+		 clr_global_flag = sob_40_on
+		 clr_global_flag = sob_month_on
+		clr_global_flag = sob_all_mode_off
+	}
+			option = {
+		name = "sob_fubing_events.23.c" #Go with the reforms
+         set_global_flag = sob_month_on
+		 clr_global_flag = sob_40_on
+		clr_global_flag = sob_liji_on
+		clr_global_flag = sob_all_mode_off
+	}
+		option = {
+		name = "sob_fubing_events.23.d" #Go with the reforms
+         set_global_flag= sob_all_mode_off
+		 clr_global_flag = sob_40_on
+		clr_global_flag = sob_liji_on
+		clr_global_flag = sob_month_on
+	}
+
+}
+
+
+country_event = {
+	id = sob_fubing_events.70
+	title = "sob_fubing_events.70.t"
+	desc = "sob_fubing_events.70.desc"
+	picture = REFORM_eventPicture
+
+	is_triggered_only = yes
+
+	
+ 	option = {
+		name = "sob_fubing_events.70.a" #reform
+         set_global_flag = sob_mng_reform
+      clr_global_flag = sob_mng_stable
+	   clr_global_flag = sob_mng_boom
+	}
+	option = {
+		name = "sob_fubing_events.70.b" #Boom
+         set_global_flag = sob_mng_boom
+      clr_global_flag =sob_mng_reform
+	  
+	   clr_global_flag = sob_mng_stable
+	}
+
+	option = {
+		name = "sob_fubing_events.70.c" #Boom
+         clr_global_flag = sob_mng_boom
+      clr_global_flag =sob_mng_reform
+	  
+	   set_global_flag = sob_mng_stable
+	}
+}
+
+
+country_event = {
+	id = sob_fubing_events.80
+	title = "sob_fubing_events.70.t"
+	desc = "sob_fubing_events.70.desc"
+	picture = REFORM_eventPicture
+
+fire_only_once = yes
+     trigger = {
+	  	tag = MNG
+		
+      ai = yes
+	  has_global_flag = sob_mng_boom
+	 is_year = 1500
+	 }
+	mean_time_to_happen = {
+		years = 60
+	}
+	
+ 	option = {
+		name = "sob_fubing_events.70.a" #reform
+			set_global_flag = sob_celestial_boom
+			MNG = { 	set_country_flag = fanzhen_is_coming
+		every_owned_province = {
+		limit = { region = manchuria_region}
+		add_core = YAN 
+		cede_province = YAN
+		}
+				every_owned_province = {
+		limit = { region = mongolia_region}
+		add_core = CSH 
+		cede_province = CSH
+		}
+						every_owned_province = {
+		limit = { region = burma_region}
+		add_core = CDL
+		cede_province = CDL
+		}
+
+		every_owned_province = {
+		limit = { region = indo_china_region}
+		add_core = YUE
+		cede_province = YUE
+		}
+		every_owned_province = {
+		limit = { culture = zhuang}
+		add_core = CGS
+		cede_province = CGS
+		}
+
+
+		  every_owned_province = {
+		 limit = {
+		 culture = chihan
+	
+		 }
+		
+		add_core = YAN 
+		cede_province = YAN
+		 }
+				  every_owned_province = {
+		 limit = {
+		 culture = miao
+	
+		 }
+		add_core = CMI
+		cede_province = CMI
+		 }
+						  every_owned_province = {
+		 limit = {
+		 culture = cantonese
+	
+		 }
+		add_core = YUE
+		cede_province = YUE
+		 }
+		  every_owned_province = {
+		 limit = {
+		 culture = jin
+	
+		 }
+		add_core = JIN
+		cede_province = JIN
+		 }
+		 		  every_owned_province = {
+		 limit = {
+		 culture = wu
+	
+		 }
+		add_core = WUU
+		cede_province = WUU
+		 }
+		 		 		  every_owned_province = {
+		 limit = {
+		 culture = chimin
+	
+		 }
+		add_core = MIN
+		cede_province = MIN
+		 }
+		 
+		 every_owned_province = {
+		 limit = {
+		 culture = hakka
+	
+		 }
+		add_core = HUA
+		cede_province = HUA
+		 }
+		 		 every_owned_province = {
+		 limit = {
+		 culture = gan
+	
+		 }
+		add_core = NNG
+		cede_province = NNG
+		 }
+		 		 		 every_owned_province = {
+		 limit = {
+		 culture = xiang
+	
+		 }
+		add_core = CHC
+		cede_province = CHC
+		 }
+		 	 every_owned_province = {
+		 limit = {
+		 culture = sichuanese
+	
+		 }
+		add_core = SHU
+		cede_province = SHU
+		 }
+		 	 every_owned_province = {
+		 limit = {
+		 culture = xibei
+	
+		 }
+		add_core = CSH
+		cede_province = CSH
+		 }
+		 	 every_owned_province = {
+		 limit = {
+		 culture = hubei
+	
+		 }
+		add_core = CXI
+		cede_province = CXI
+		 }
+		 		 	 every_owned_province = {
+		 limit = {
+		 culture = zhongyuan
+	
+		 }
+		add_core = LNG
+		cede_province = LNG
+		 }
+		 		 		 	 every_owned_province = {
+		 limit = {
+		 culture = shandong_culture
+	
+		 }
+		add_core = QIC
+		cede_province = QIC
+		 }
+		  	 every_owned_province = {
+		 limit = {
+		 culture = jianghuai
+	
+		 }
+		remove_core = WUU
+		
+		 }
+ 
+         every_owned_province = {
+		 limit = {
+		 is_core = CDL
+		
+		 }
+		  set_province_flag = fanzhen_overlord
+		 cede_province = CDL 
+		
+		 }
+		          every_owned_province = {
+		 limit = {
+		 is_core = CYI
+		
+		 }
+		  set_province_flag = fanzhen_overlord
+		 cede_province = CYI 
+		
+		 }
+				 
+				 CDL = {
+				 capital_scope = {
+				 change_culture = xinan
+				 }
+				 change_primary_culture = xinan
+				 
+				 }
+
+
+
+         every_owned_province = {
+		 limit = {
+		 is_core = YAN
+		
+		 }
+		  set_province_flag = fanzhen_overlord
+		 cede_province = YAN 
+		
+		 }
+		 every_owned_province = {
+		 limit = {
+		 is_core = QIC
+		
+		 }
+		 		  set_province_flag = fanzhen_overlord
+		 cede_province = QIC
+
+		 }
+		     every_owned_province = {
+		 limit = {
+		 is_core = LNG
+		
+		 }
+		 		  set_province_flag = fanzhen_overlord
+		 cede_province = LNG
+		 }
+		     every_owned_province = {
+		 limit = {
+		 is_core = CXI
+		
+		 }
+		 		  set_province_flag = fanzhen_overlord
+		 cede_province = CXI
+		 }
+		     every_owned_province = {
+		 limit = {
+		 is_core = CSH
+		
+		 }
+		 		  set_province_flag = fanzhen_overlord
+		 cede_province = CSH 
+		 }
+		     every_owned_province = {
+		 limit = {
+		 is_core = SHU
+		
+		 }
+		 		  set_province_flag = fanzhen_overlord
+		 cede_province = SHU
+		 }
+		     every_owned_province = {
+		 limit = {
+		 is_core = CHC
+		
+		 }
+		 		  set_province_flag = fanzhen_overlord
+		 cede_province = CHC
+		 }
+		     every_owned_province = {
+		 limit = {
+		 is_core = NNG
+		
+		 }
+		 		  set_province_flag = fanzhen_overlord
+		 cede_province = NNG
+		 }
+		     every_owned_province = {
+		 limit = {
+		 is_core = HUA
+		
+		 }
+		 		  set_province_flag = fanzhen_overlord
+		 cede_province = HUA
+		 }
+		     every_owned_province = {
+		 limit = {
+		 is_core = MIN
+		
+		 }
+		 		  set_province_flag = fanzhen_overlord
+		 cede_province = MIN 
+		 }
+		     every_owned_province = {
+		 limit = {
+		 is_core = WUU
+		
+		 }
+		 		  set_province_flag = fanzhen_overlord
+		 cede_province = WUU
+		 }
+		     every_owned_province = {
+		 limit = {
+		 is_core = JIN
+		
+		 }
+		 		  set_province_flag = fanzhen_overlord
+		 cede_province = JIN
+		 }
+		     every_owned_province = {
+		 limit = {
+		 is_core = YUE
+		 
+		 }
+		 		  set_province_flag = fanzhen_overlord
+		 cede_province = YUE
+		 }}
+		
+	}
+
+
+}
+
+country_event = {
+	id = sob_fubing_events.24
+	title = "sob_fubing_events.24.t"
+	desc = "sob_fubing_events.24.d"
+	picture = REFORM_eventPicture
+
+     trigger = {
+	  	
+
+
+	 has_global_flag = sob_40_on
+	 any_country = {
+	 war_with = ROOT
+	 NOT = { OR = {culture_group = east_asian  culture_group = chinese_group }}
+	NOT={ war_score_against = {
+	who = ROOT
+	value = -49
+}
+}
+	 
+	 
+	 any_owned_province = {
+	 OR = {culture_group = east_asian  culture_group = chinese_group }
+	 controlled_by = ROOT
+	 }
+	 
+	 }
+	 
+	 
+	 }
+
+	
+ 
+		option = {
+		name = "sob_fubing_events.24.a" #Go with the reforms
+        every_country = {
+		limit = { 
+		
+			 war_with = ROOT
+	 NOT = { OR = {culture_group = east_asian  culture_group = chinese_group }}
+	NOT={ war_score_against = {
+	who = ROOT
+	value = -49
+}
+}
+	 
+	 
+	 any_owned_province = {
+	 OR = {culture_group = east_asian  culture_group = chinese_group }
+	 controlled_by = ROOT
+	 }
+	 
+		
+		}
+		every_owned_province = {
+		limit = {
+			 OR = {culture_group = east_asian  culture_group = chinese_group }
+	 controlled_by = ROOT
+		
+		}
+						  remove_core = owner
+				  add_core = ROOT
+          cede_province = ROOT
+		 
+		
+		}
+		
+		}
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+country_event = {
+	id = sob_fubing_events.25
+	title = "sob_fubing_events.25.t"
+	desc = "sob_fubing_events.25.d"
+	picture = REFORM_eventPicture
+
+	trigger = {
+      has_global_flag = sob_month_on
+	  OR = {culture_group = east_asian  culture_group = chinese_group }
+	  NOT = { has_country_flag = sob_month_on_1}
+	  any_province = {
+	  OR = {culture_group = east_asian  culture_group = chinese_group }
+	  NOT = { owned_by = ROOT}
+	  controlled_by = ROOT
+had_province_flag = {
+	flag = sob_month_on_province_1
+	days = 90
+}
+	  }
+	
+	}
+	immediate = {
+	set_country_flag = sob_month_on_1
+	
+	}
+	
+ 			option = {
+		name = "sob_fubing_events.25.a" #Go with the reforms
+ 
+		clr_country_flag = sob_month_on_1
+		random_province = {
+		limit = { controlled_by = ROOT
+		OR = {culture_group = east_asian  culture_group = chinese_group }
+		NOT = { owned_by =ROOT}
+		owner = {
+		NOT = {OR = {culture_group = east_asian  culture_group = chinese_group }}
+		}
+		had_province_flag = {
+	flag = sob_month_on_province_1
+	days = 90
+}
+		}
+		remove_core = owner
+		cede_province = ROOT
+		add_core = ROOT
+		
+		}
+				every_province = {
+		limit = { controlled_by = ROOT
+		OR = {culture_group = east_asian  culture_group = chinese_group }
+		has_province_flag  = sob_month_on_province_1
+		NOT = { owned_by =ROOT}
+		owner = {
+		NOT = {OR = {culture_group = east_asian  culture_group = chinese_group }}
+		}
+		}
+		clr_province_flag = sob_month_on_province_1
+		set_province_flag = sob_month_on_province_1
+		}
+
+	}
+
+
+}
+
+
+country_event = {
+	id = sob_fubing_events.30
+	title = "sob_fubing_events.23.t"
+	desc = "sob_fubing_events.23.d"
+	picture = REFORM_eventPicture
+  hidden = yes
+	trigger = {
+       is_at_war = no
+	   any_owned_province = {
+	   has_province_flag = sob_month_on_province_1
+	   }
+	}
+
+	
+ 			option = {
+		name = "sob_fubing_events.23.a" #Go with the reforms
+         every_owned_province = {
+		 clr_province_flag = sob_month_on_province_1
+		 }
+	}
+
+
+}
+country_event = {
+	id = sob_fubing_events.50
+	title = "sob_fubing_events.23.t"
+	desc = "sob_fubing_events.23.d"
+	picture = REFORM_eventPicture
+  hidden = yes
+	trigger = {
+        ai = yes
+		OR = {culture_group = east_asian  culture_group = chinese_group }
+		OR = {
+		has_country_flag = sob_newly_setted_government_republic
+		has_country_flag =sob_newly_setted_government
+		}
+		OR = {
+					has_reform =	sob_scelestial_empire_qin_reform_republic
+			has_reform =	sob_scelestial_empire_han_reform_republic
+			has_reform =	sob_scelestial_empire_zhou_reform_republic
+				has_reform =  sob_scelestial_empire_tng_reform_republic
+			has_reform =	sob_celestial_empire_song_reform_republic
+		
+					has_reform =	sob_merchants_reform
+			has_reform =	sob_trading_city
+			has_reform =	sob_scelestial_empire_qin_reform
+			has_reform =	sob_scelestial_empire_han_reform
+			has_reform =	sob_scelestial_empire_zhou_reform
+			has_reform =	sob_scelestial_empire_tng_reform
+			has_reform =	sob_celestial_empire_song_reformed
+			has_reform =  celestial_empire
+		
+		}
+		NOT = { has_country_flag = sob_zhuhou_helped_once}
+		NOT = { 	legitimacy_equivalent = 50}
+	}
+
+	
+ 			option = {
+		name = "sob_fubing_events.23.a" #Go with the reforms
+		set_country_flag = sob_zhuhou_helped_once
+          add_meritocracy = 80
+		  add_legitimacy = 80
+		  add_devotion = 80
+		  add_republican_tradition =80
+	}
+
+
+}
+country_event = {
+	id = sob_fubing_events.60
+	title = "sob_fubing_events.60.t"
+	desc = "sob_fubing_events.60.d"
+	picture = REFORM_eventPicture
+     is_triggered_only = yes
+	trigger = {
+        ai = no
+	}
+
+	
+ 			option = {
+		name = "sob_fubing_events.60.a" #Go with the reforms
+		set_country_flag = sob_ai_auto_gov_on
+clr_country_flag = sob_ai_auto_gov_off
+	}
+ 			option = {
+		name = "sob_fubing_events.60.b" #Go with the reforms
+		set_country_flag = sob_ai_auto_gov_off
+clr_country_flag = sob_ai_auto_gov_on
+	}
+
+}
+
+country_event = {
+	id = sob_fubing_events.128
+	title = "sob_fubing_events.60.t"
+	desc = "sob_fubing_events.60.d"
+	picture = REFORM_eventPicture
+    hidden = yes
+	trigger = {
+	has_estate = estate_sobwarriors
+        has_idea = sob_wuweisheji_group_idea
+		culture_group= east_asian
+		estate_loyalty = {
+    estate = estate_sobwarriors
+    loyalty = 40
+}
+NOT = {
+estate_loyalty = {
+    estate = estate_sobwarriors
+    loyalty = 65
+}
+
+}
+	}
+mean_time_to_happen = {
+
+days = 1
+}
+	
+ 			option = {
+		name = "sob_fubing_events.60.a" #Go with the reforms
+add_estate_loyalty = {
+    estate = estate_sobwarriors
+    loyalty = 1
+}
+	}
+
+}

@@ -1,0 +1,45 @@
+spriteTypes = {
+	spriteType = {
+		name = "government_reform_sob_celestial_empire_tng"
+		texturefile = "gfx//interface//government_reform_icons//sob_celestial_empire_tang.dds"
+	}
+		spriteType = {
+		name = "government_reform_sob_celestial_empire_qin"
+		texturefile = "gfx//interface//government_reform_icons//sob_celestial_empire_qin.dds"
+	}
+		spriteType = {
+		name = "government_reform_sob_celestial_empire_zhou"
+		texturefile = "gfx//interface//government_reform_icons//sob_celestial_empire_zhou.dds"
+	}
+		spriteType = {
+		name = "government_reform_sob_celestial_empire_han"
+		texturefile = "gfx//interface//government_reform_icons//sob_celestial_empire_han.dds"
+	}
+			spriteType = {
+		name = "government_reform_sob_celestial_empire_song"
+		texturefile = "gfx//interface//government_reform_icons//sob_celestial_empire_song.dds"
+	}
+		spriteType = {
+		name = "GFX_zhenshoufu_icon"
+		texturefile = "gfx//interface//icon_sob_zhenshoufu.dds"
+	}
+			spriteType = {
+		name = "GFX_jiaoqu_icon"
+		texturefile = "gfx//interface//icon_sob_jiaoqu.dds"
+	}
+			spriteType = {
+		name = "GFX_sob_new_nobles"
+		texturefile = "gfx/interface/monarchism_icon_strip.dds"
+	}
+	
+		spriteType = {
+		name = "GFX_sob_traditional_nobles"
+		texturefile = "gfx/interface/militarists.dds"
+	}
+
+	spriteType = {
+		name = "GFX_sob_nongmin_leader"
+		texturefile = "gfx/interface/theocrats.dds"
+	}
+
+}

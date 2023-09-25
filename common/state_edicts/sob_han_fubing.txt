@@ -1,0 +1,114 @@
+sob_han_fubing_effort = {
+	potential = {
+		OR = {culture_group = east_asian  culture_group = chinese_group }
+	}
+	
+	allow = {
+							culture_group = ROOT 
+					  			estate_territory = {
+					estate = estate_sobwarriors
+					territory = 10
+				}
+	}
+	modifier = {
+
+		local_amount_of_banners = 0.5
+		local_has_banners = yes
+		fort_level = 1
+		
+	}
+	
+	color = { 50 173 192 }
+	
+	
+	ai_will_do = {
+		# has to be around at least 10 to be picked (depends on maintainance cost and general economy)
+		factor = 0
+		modifier = {
+			factor = 5
+				all_province_in_state = {
+					
+			has_influencing_fort = yes
+						
+				}
+			
+		}
+
+	}
+}
+
+sob_force_harmonized = {
+	potential = {
+	OR = { religion = confucianism religion = threeself religion =sob_catholic  religion =sob_reformed	religion = sob_orthodox 	religion = sob_coptic	religion = sob_mahayana	religion = sob_sunni religion =sob_shinto 		religion = sob_hinduism religion = sob_shamanism	religion = sob_anglican	}
+			
+
+	}
+	
+	allow = {
+
+	}
+	
+	modifier = {
+	local_religious_conversion_resistance = 1.0
+		global_tax_income = -6
+		
+	}
+	
+	color = { 50 173 192 }
+	
+	
+	ai_will_do = {
+	  factor = 0
+	  
+	}
+}
+
+
+sob_landreform_junhu= {
+	potential = {
+			OR = {culture_group = east_asian  culture_group = chinese_group }
+			has_estate = estate_sobshishen
+	}
+	
+	allow = {
+
+	
+
+	}
+	
+	modifier = {
+		 	local_manpower_modifier = -0.25
+	}
+	
+	color = { 50 173 192 }
+	
+	
+	ai_will_do = {
+	  factor = 0
+	  
+	}
+}
+
+
+sob_landreform_jianghu= {
+	potential = {
+			OR = {culture_group = east_asian  culture_group = chinese_group }
+			has_estate = estate_sobshishen
+	}
+	
+	allow = {
+	
+	}
+	
+	modifier = {
+ 	trade_goods_size_modifier = -0.1
+	}
+	
+	color = { 50 173 192 }
+	
+	
+	ai_will_do = {
+	  factor = 0
+	  
+	}
+}

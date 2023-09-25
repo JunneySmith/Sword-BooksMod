@@ -1,0 +1,150 @@
+sishu_wujing_aspect = {
+	cost = 100  
+	modifier = {
+church_power_modifier = 0.2
+tolerance_own = 1
+	}
+	potential = {
+	}
+	ai_will_do = {
+		factor = 0
+		modifier = {
+			factor = 0
+			is_at_war = no
+		}
+
+	}
+}
+chengzhu_lixue_aspect = {
+	cost = 100 
+	modifier = { 
+ 	global_heretic_missionary_strength = 0.02
+	missionaries = 1
+         
+	}
+	ai_will_do = {
+		factor = 12
+		modifier = {
+			factor = 0
+			religious_unity = 0.9 
+		}
+	}
+}
+huai_rou_aspect = {
+	cost = 100   modifier = {
+		yearly_harmony = -2
+		tolerance_heathen = 1.5
+	}
+			potential = {
+NOT = { has_global_flag =sob_shishua_reform_global_1}
+ 
+	}
+	ai_will_do = {
+		factor = 0
+		modifier = {
+			factor = 0
+			is_at_war = no
+		}
+
+	}
+}
+demilitarization_belief_aspect = {
+	cost = 100   modifier = {
+army_tradition = -2
+tolerance_heathen = 1.5
+	}
+			potential = {
+NOT = { has_global_flag =sob_shishua_reform_global_3}
+	}
+	ai_will_do = {
+		factor = 0
+		modifier = {
+			factor = 0
+			is_at_war = no
+		}
+
+	}
+
+}
+
+
+
+zongjiao_kuanrong_aspect = {
+	cost = 100  
+		potential = {
+NOT = {has_global_flag =sob_shishua_reform_global_1}
+	}
+	modifier = {
+		missionaries = -1
+		tolerance_heathen = 1.5
+	}
+	ai_will_do = {
+		factor = 0
+		modifier = {
+			factor = 0
+			is_at_war = no
+		}
+
+	}
+}
+
+only_books_aspect = {
+	cost = 100  
+		potential = {
+ NOT = {    has_global_flag =sob_shishua_reform_global_2 }
+	}
+	modifier = {
+ all_power_cost = 0.1
+ 		tolerance_own = 1.5
+	}
+	ai_will_do = {
+		factor = 0
+		modifier = {
+			factor = 0
+			is_at_war = no
+		}
+
+	}
+}
+
+chongwenyanwu_aspect = {
+	cost = 100
+	modifier = {
+		discipline = -0.1
+		tolerance_heathen = 1.5
+	}
+	potential = {
+ NOT = {    has_global_flag =sob_shishua_reform_global_4 }
+ 
+	}
+	ai_will_do = {
+		factor = 0
+		modifier = {
+			factor = 0
+			NOT = { religious_unity = 0.8 }
+		}
+		modifier = {
+			factor = 0
+			unrest = 4
+			NOT = { stability = 0 }
+		}
+	}
+}
+
+mysticism_belief_aspect = {
+	cost = 100   modifier = {
+global_trade_power = -0.2
+tolerance_heathen = 1.5
+	}
+			potential = {
+ NOT = { has_global_flag =sob_shishua_reform_global_1}
+	}
+	ai_will_do = {
+		factor = 0
+		modifier = {
+			factor = 0
+			is_at_war = no
+		}
+
+	}
+}

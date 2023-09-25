@@ -1,0 +1,263 @@
+country_decisions = {
+	sob_celestial_member_creation = {
+		potential = {
+		is_emperor_of_china = no
+        OR = {culture_group = east_asian  culture_group = chinese_group }
+				   OR = {
+		   is_subject = no
+		   is_subject_of_type = zhuhou_state
+is_subject_of_type = zhuhou_claim_state
+is_subject_of_type = celestial_client_state
+		   }
+		}
+		allow = {
+		is_at_war = no
+		overlord = {
+		is_at_war = no
+		}
+		any_country = {
+		OR = {culture_group = east_asian culture_group = chinese_group}
+		is_emperor_of_china = yes
+		trust = { who = ROOT value = 100 }
+		NOT = { total_development = ROOT}
+		 	
+
+has_opinion = {
+	who = ROOT
+	value = 200
+}
+		}
+       				   OR = {
+		   is_subject = no
+		   is_subject_of_type = zhuhou_state
+is_subject_of_type = zhuhou_claim_state
+is_subject_of_type = celestial_client_state
+		   }
+		}
+		effect = {
+		random_country = {
+		limit = { OR = {culture_group = east_asian culture_group = chinese_group}
+		is_emperor_of_china = yes
+		}
+								create_subject = {
+		subject_type = sob_celestial_member
+		subject = ROOT}
+		
+		}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+		sob_celestial_member_2_creation = {
+		potential = {
+        OR = {culture_group = east_asian  culture_group = chinese_group }
+      is_subject_of_type=  sob_celestial_member
+		}
+		allow = {
+		any_country = {
+		OR = {culture_group = east_asian culture_group = chinese_group}
+		is_emperor_of_china = yes
+		}
+    is_subject_of_type=  sob_celestial_member
+		}
+		effect = {
+			hidden_effect = { grant_independence = yes}
+		random_country = {
+		limit = { OR = {culture_group = east_asian culture_group = chinese_group}
+		is_emperor_of_china = yes
+		}
+	
+								create_subject = {
+		subject_type = sob_celestial_member_2
+		subject = ROOT}
+		
+		}
+		}
+		ai_will_do = {
+			factor = 1000
+
+			
+						modifier = {
+				factor = 0
+          overlord = {
+			NOT = {any_country = {
+			NOT = {OR = {culture_group = east_asian  culture_group = chinese_group }}
+		
+			offensive_war_with = PREV
+			
+			
+				
+}			
+			}
+			}
+			}
+			
+		}
+	}
+	 
+				sob_celestial_member_defensive_creation = {
+		potential = {
+		ai = no
+		always = no
+        OR = {culture_group = east_asian  culture_group = chinese_group }
+				   OR = {
+		   is_subject = no
+		   is_subject_of_type = zhuhou_state
+is_subject_of_type = zhuhou_claim_state
+is_subject_of_type = celestial_client_state
+		   }
+		}
+		allow = {
+				   OR = {
+		   is_subject = no
+		   is_subject_of_type = zhuhou_state
+is_subject_of_type = zhuhou_claim_state
+is_subject_of_type = celestial_client_state
+		   }
+		}
+		effect = {
+		random_country = {
+		limit = { OR = {culture_group = east_asian culture_group = chinese_group}
+		is_emperor_of_china = yes
+		}
+join_all_defensive_wars_of = ROOT
+		
+		}
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+			sob_celestial_member_1_creation = {
+		potential = {
+        OR = {culture_group = east_asian  culture_group = chinese_group }
+      is_subject_of_type=  sob_celestial_member_2
+		}
+		allow = {
+		overlord = {
+		NOT = { has_country_modifier = sob_dongyuan_effect}
+		}
+          overlord = {
+			NOT = {any_country = {
+			NOT = {OR = {culture_group = east_asian  culture_group = chinese_group }}
+		
+			offensive_war_with = PREV
+			
+			
+				
+}			
+			}
+			}
+    is_subject_of_type=  sob_celestial_member_2
+		}
+		effect = {
+		random_country = {
+		limit = { OR = {culture_group = east_asian culture_group = chinese_group}
+		is_emperor_of_china = yes
+		}
+								create_subject = {
+		subject_type = sob_celestial_member
+		subject = ROOT}
+		
+		}
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+				sob_celestial_empire_nongmin_heir = {
+		potential = {
+		NOT = { has_country_flag = sob_nongmin_heir}
+			has_reform = sob_peasant_united_empire
+		}
+		allow = {
+			prestige = 65
+			heir_has_ruler_dynasty = no
+		}
+		effect = {
+			add_prestige =-65
+			add_devotion = -35
+			set_country_flag = sob_nongmin_heir
+			country_event = { id = sobchineseempire.10086029 }
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+					sob_celestial_zhuhou_creation = {
+		potential = {ai = yes
+        OR = {culture_group = east_asian  culture_group = chinese_group }
+      is_subject_of_type=  celestial_client_state
+		}
+		allow = {
+       
+	   liberty_desire = 60
+		}
+		effect = {
+		random_country = {
+		limit = { OR = {culture_group = east_asian culture_group = chinese_group}
+		is_emperor_of_china = yes
+		}
+								create_subject = {
+		subject_type = zhuhou_state
+		subject = ROOT}
+		
+		}
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+	sob_new_chinese_identity = {
+		potential = {
+        OR = {culture_group = east_asian  culture_group = chinese_group 
+		culture_group = tibetan_group   culture_group = altaic  culture_group = evenks  culture_group = southeastasian_group
+		}
+        government = republic
+		}
+		allow = {
+        OR = {culture_group = east_asian  culture_group = chinese_group 
+		culture_group = tibetan_group   culture_group = altaic  culture_group =  evenks culture_group =  southeastasian_group
+		}
+		
+		
+        
+		has_reform = sob_peace_reform
+		NOT = {any_province = {        OR = {culture_group = east_asian  culture_group = chinese_group 
+		culture_group = tibetan_group   culture_group = altaic  culture_group =  evenks culture_group =  southeastasian_group
+		}
+		NOT = {country_or_non_sovereign_subject_holds = ROOT}
+		}}
+		}
+		effect = {
+				 every_owned_province = {
+		  limit = { OR = {culture_group = southeastasian_group    culture_group =   tibetan_group    } NOT = {culture =tibetan}}
+		  change_culture = sob_prc_xinan_shaoshu_culture
+		 }
+		 		 every_owned_province = {
+		  limit = { OR = {culture_group = east_asian culture_group = chinese_group}}
+		  change_culture = sob_prc_han
+		 }
+		 		 every_owned_province = {
+		  limit = { culture = tibetan}
+		  change_culture = sob_prc_tibetan_culture
+		 }
+		 		 every_owned_province = {
+		  limit = { culture_group = altaic}
+		  change_culture = sob_prc_mongol_culture
+		 }
+		 		 every_owned_province = {
+		  limit = { culture_group = evenks}
+		  change_culture = sob_prc_manchu_culture
+		 }
+ change_primary_culture = sob_prc_chinese_culture
+		          
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	}

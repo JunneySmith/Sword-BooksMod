@@ -1,0 +1,735 @@
+sob_colony_zhenshou_state = {
+	category = emperor
+	alert_index = 30
+	alert_tooltip = sob_no_neighbor_tributary_state_tooltip
+	require_acceptance = no
+	is_visible = {
+	ai =no
+	OR = {culture_group = east_asian  culture_group = chinese_group }
+    is_emperor_of_china = yes
+	
+	FROM = {
+	OR = {
+        	is_subject = no
+			is_subject_of = ROOT
+ }
+        OR = {
+		has_reform = sob_merchants_reform
+		has_reform = sob_trading_city
+		
+		}
+		}
+	}
+	is_allowed = {
+	
+	FROM = {
+	OR = {
+        	is_subject = no
+			is_subject_of = ROOT
+ }
+        OR = {
+		has_reform = sob_merchants_reform
+		has_reform = sob_trading_city
+		
+		}
+		}
+     
+	}
+	on_accept = {
+
+	
+	
+      FROM = {
+      	remove_government_reform = sob_merchants_reform
+	  remove_government_reform = sob_trading_city
+	  change_government = sob_chinese_monarchy
+	  add_government_reform =sob_zhenshoufu_reform
+	  change_primary_culture = ROOT
+	  change_religion = ROOT
+		capital_scope = {
+				change_religion = ROOT
+				change_culture = ROOT
+
+		}
+	  }
+	  			create_subject = {
+		subject_type = sob_zhenshoufu_vassal
+		subject = FROM}
+         
+	}
+
+
+}
+sob_zhengtao_buchen_state = {
+	category = emperor
+	alert_index = 30
+	alert_tooltip = sob_no_neighbor_zhengtao_buchen_tooltip
+	require_acceptance = no
+	is_visible = {
+	OR = {culture_group = east_asian  culture_group = chinese_group }
+    is_emperor_of_china = yes
+	
+	FROM = {
+    is_subject_of_type = zhuhou_claim_state
+		}
+	}
+	is_allowed = {
+
+	imperial_mandate = 70
+
+		OR = {
+	
+			         has_opinion_modifier = {
+	who = FROM
+	modifier = tributary_harbored_criminals
+}
+	
+					has_casus_belli = {
+					type = cb_insult
+					target = FROM
+				}
+		         has_opinion_modifier = {
+	who = FROM
+	modifier = tributary_refused_tribute
+}
+
+
+}
+	FROM = {
+    is_subject_of_type = zhuhou_claim_state
+		}
+     
+	}
+	on_accept = {
+add_mandate = -50
+	
+	
+      FROM = {
+grant_independence = yes
+	  }
+        declare_war_with_cb = {
+    who = FROM
+    casus_belli = cb_annex
+}
+	}
+	ai_will_do = { 
+		imperial_mandate = 100
+		any_subject_country = {
+		is_subject_of_type = zhuhou_claim_state
+		liberty_desire = 51
+		NOT = {army_strength = {
+	who = ROOT
+	value = 0.66
+}
+		}
+		}
+	}
+
+}
+
+sob_zhongyuan_state_banjifenghuan = {
+	category = influence
+	alert_index = 30
+	alert_tooltip = sob_zhongyuan_state_banjifenghuan_tooltip
+	require_acceptance = no
+	is_visible = {
+	OR = {culture_group = east_asian  culture_group = chinese_group }
+	overlord = {
+    is_emperor_of_china = yes
+	}
+	any_owned_province = {
+	superregion = china_superregion
+	
+	}
+	}
+	is_allowed = {
+	OR = {
+	ai = no
+	any_owned_province = {
+	NOT = {superregion = china_superregion }
+	
+	}
+	
+	}
+	}
+	on_accept = {
+every_owned_province = {
+limit = {superregion = china_superregion }
+ROOT ={
+add_stability = 1
+add_prestige = 10
+add_treasury = 200
+		add_trust = {
+    who = FROM
+    value = 10
+    mutual = yes
+}
+}
+cede_province = FROM
+add_core = FROM
+}
+	}
+	ai_will_do = { 
+	overlord = {
+		imperial_mandate = 100
+		army_strength = {
+	who = ROOT
+	value = 2
+}
+		}
+	calc_true_if = {
+	all_owned_province = {
+		NOT = {superregion = china_superregion }
+	}
+	amount = 20
+}
+		}
+
+}
+sob_colony_war_announce_action = {
+	category = emperor
+	alert_index = 30
+	alert_tooltip = sob_no_neighbor_tributary_state_tooltip
+	require_acceptance = no
+	is_visible = {
+	OR = {culture_group = east_asian  culture_group = chinese_group }
+    is_emperor_of_china = yes
+	imperial_mandate = 60
+	FROM = {
+	OR = {
+        	is_subject = no
+		NOT = {	is_subject_of = ROOT }
+ }
+	}
+	}
+	is_allowed = {
+	
+	FROM = {
+	OR = {
+        	is_subject = no
+		NOT = {	is_subject_of = ROOT }
+ }
+
+		}
+     
+	}
+	on_accept = {
+	add_mandate = -10
+	add_country_modifier = {
+				name = sob_empire_war 
+			duration = 365
+	}
+		every_subject_country ={
+		limit = {
+		NOT = { is_subject_of_type = sob_tributary_state_3}
+		alliance_with = FROM
+		}
+		add_trust = {
+    who = FROM
+    value = -200
+    mutual = yes
+}
+		
+		}
+
+ }
+
+
+}
+sob_colony_s_state = {
+	category = emperor
+	alert_index = 30
+	alert_tooltip = sob_no_neighbor_tributary_state_tooltip
+	require_acceptance = no
+	is_visible = {
+	OR = {culture_group = east_asian  culture_group = chinese_group }
+    is_emperor_of_china = yes
+	
+	FROM = {
+	OR = {
+        	is_subject = no
+			is_subject_of = ROOT
+ }
+        OR = {
+		has_reform = sob_merchants_reform
+		has_reform = sob_trading_city
+		
+		}
+		}
+	}
+	is_allowed = {
+	
+	FROM = {
+	OR = {
+        	is_subject = no
+			is_subject_of = ROOT
+ }
+        OR = {
+		has_reform = sob_merchants_reform
+		has_reform = sob_trading_city
+		
+		}
+		}
+     
+	}
+	on_accept = {
+			create_subject = {
+		subject_type = sob_colony
+		subject = FROM}
+	
+	
+      FROM = {
+      	remove_government_reform = sob_merchants_reform
+	  remove_government_reform = sob_trading_city
+	  change_primary_culture = ROOT
+	  change_religion = ROOT
+		capital_scope = {
+				change_religion = ROOT
+				change_culture = ROOT
+
+		}
+	  }
+         
+	}
+
+
+}
+sob_colony_establish_fenfeng_state = {
+	category = emperor
+	alert_index = 30
+	alert_tooltip = sob_no_neighbor_tributary_state_tooltip
+	require_acceptance = no
+	is_visible = {
+	OR = {culture_group = east_asian  culture_group = chinese_group }
+    is_emperor_of_china = yes
+	
+	FROM = {
+	OR = {
+        	is_subject = no
+			is_subject_of = ROOT
+ }
+        OR = {
+		has_reform = sob_merchants_reform
+		has_reform = sob_trading_city
+		
+		}
+		}
+	}
+	is_allowed = {
+	
+	FROM = {
+	OR = {
+        	is_subject = no
+			is_subject_of = ROOT
+ }
+        OR = {
+		has_reform = sob_merchants_reform
+		has_reform = sob_trading_city
+		
+		}
+		}
+     
+	}
+	on_accept = {
+
+	
+	
+      FROM = {
+      	remove_government_reform = sob_merchants_reform
+	  remove_government_reform = sob_trading_city
+	  if = {
+	  limit ={ ROOT = {NOT = { government = republic}}}
+	  change_government = monarchy
+	  }
+	  	  if = {
+	  limit ={ ROOT = { government = republic}}
+	  change_government = republic
+	  }
+	  change_primary_culture = ROOT
+	  change_religion = ROOT
+		capital_scope = {
+				change_religion = ROOT
+				change_culture = ROOT
+
+		
+
+	  }
+	  		kill_ruler = yes
+		}
+	  			create_subject = {
+		subject_type = celestial_client_state
+		subject = FROM}
+         
+	}
+
+
+}
+sob_colony_establish_fenfeng_dynasty_state = {
+	category = emperor
+	alert_index = 30
+	alert_tooltip = sob_no_neighbor_tributary_state_tooltip
+	require_acceptance = no
+	is_visible = {
+	OR = {culture_group = east_asian  culture_group = chinese_group }
+    is_emperor_of_china = yes
+	
+	FROM = {
+	OR = {
+        	is_subject = no
+			is_subject_of = ROOT
+ }
+        OR = {
+		has_reform = sob_merchants_reform
+		has_reform = sob_trading_city
+		
+		}
+		}
+	}
+	is_allowed = {
+	
+	FROM = {
+	OR = {
+        	is_subject = no
+			is_subject_of = ROOT
+ }
+        OR = {
+		has_reform = sob_merchants_reform
+		has_reform = sob_trading_city
+		
+		}
+		}
+     
+	}
+	on_accept = {
+
+	
+	
+      FROM = {
+      	remove_government_reform = sob_merchants_reform
+	  remove_government_reform = sob_trading_city
+	  change_government = monarchy
+	  change_primary_culture = ROOT
+	  change_religion = ROOT
+		capital_scope = {
+				change_religion = ROOT
+				change_culture = ROOT
+
+		}
+		
+			  		kill_ruler = yes
+		set_dynasty = ROOT
+	  }
+	  			create_subject = {
+		subject_type = celestial_client_state
+		subject = FROM}
+         
+	}
+
+
+}
+sob_colony_establish_duhu_state = {
+	category = emperor
+	alert_index = 30
+	alert_tooltip = sob_no_neighbor_tributary_state_tooltip
+	require_acceptance = no
+	is_visible = {
+	OR = {culture_group = east_asian  culture_group = chinese_group }
+    is_emperor_of_china = yes
+	
+	FROM = {
+	OR = {
+        	is_subject = no
+			is_subject_of = ROOT
+ }
+        OR = {
+		has_reform = sob_merchants_reform
+		has_reform = sob_trading_city
+		
+		}
+		}
+	}
+	is_allowed = {
+	
+	FROM = {
+	OR = {
+        	is_subject = no
+			is_subject_of = ROOT
+ }
+        OR = {
+		has_reform = sob_merchants_reform
+		has_reform = sob_trading_city
+		
+		}
+		}
+     
+	}
+	on_accept = {
+			create_subject = {
+		subject_type = sob_duhu_vassal
+		subject = FROM}
+	
+	
+      FROM = {
+      	remove_government_reform = sob_merchants_reform
+	  remove_government_reform = sob_trading_city
+	  change_government = republic
+	  change_primary_culture = ROOT
+	  change_religion = ROOT
+		capital_scope = {
+				change_religion = ROOT
+				change_culture = ROOT
+
+		}
+	  }
+         
+	}
+
+
+}
+
+
+
+sob_free_invasion_1 = {
+	category = emperor
+	alert_index = 30
+	alert_tooltip = sob_no_neighbor_tributary_state_tooltip
+	require_acceptance = no
+	is_visible = {
+	OR = {culture_group = east_asian  culture_group = chinese_group }
+    is_emperor_of_china = yes
+	
+	FROM = {
+	liberty_desire = 50.0
+	NOT = {has_country_modifier = sob_chinese_free_invasion} 
+	is_subject_of =ROOT
+		   OR = {
+		   is_subject_of_type = zhuhou_state
+is_subject_of_type = zhuhou_claim_state
+is_subject_of_type = celestial_client_state
+		   }
+		}
+	}
+	is_allowed = {
+	stability = 1
+      ai = no
+	FROM = {
+	liberty_desire = 50.0
+             		   OR = {
+		   is_subject_of_type = zhuhou_state
+		   }
+		}
+     
+	}
+	on_accept = {
+	if = {
+	limit = { ai = no}
+       add_prestige = -25
+	   
+	   }
+	   	if = {
+	limit = { ai = yes
+	prestige = -25
+	}
+       add_prestige = -25
+	   
+	   }
+	if = {
+	limit = {
+      ai = no
+	NOT = { prestige = -50}}
+	add_stability = -1
+	}
+      FROM = {
+        add_country_modifier = {
+				name = "sob_chinese_free_invasion"
+				duration = 7300
+			}
+	  }
+         
+	}
+
+
+}
+sob_free_invasion_2 = {
+	category = emperor
+	alert_index = 30
+	alert_tooltip = sob_no_neighbor_tributary_state_tooltip
+	require_acceptance = no
+	is_visible = {
+	OR = {culture_group = east_asian  culture_group = chinese_group }
+    is_emperor_of_china = yes
+	
+	FROM = {
+	has_country_modifier = sob_chinese_free_invasion
+	is_subject_of =ROOT
+		   OR = {
+		   is_subject_of_type = zhuhou_state
+is_subject_of_type = zhuhou_claim_state
+is_subject_of_type = celestial_client_state
+		   }
+		}
+	}
+	is_allowed = {
+	ai = no
+	FROM = {
+	NOT = { liberty_desire = 50.0}
+	has_country_modifier = sob_chinese_free_invasion
+	is_subject_of =ROOT
+		   is_subject_of_type = zhuhou_state
+
+		   
+		}
+     
+	}
+	on_accept = {
+
+	
+	
+      FROM = {
+             remove_country_modifier = sob_chinese_free_invasion
+			 if ={
+			 limit = { ROOT = {ai = no}}
+			 add_liberty_desire = 10
+			 }
+	  }
+         
+	}
+
+
+}
+
+
+
+
+sob_tri_ask_for_religion = {
+	category = alliance
+	alert_index = 30
+	alert_tooltip = sob_no_neighbor_tributary_state_tooltip
+	require_acceptance = no
+	is_visible = {
+	ai = no
+is_subject_of = FROM
+   		   OR = {
+		   is_subject_of_type = sob_tributary_state_3
+		   is_subject_of_type = tributary_state
+is_subject_of_type = tributary_state_2
+is_subject_of_type = tusi_state
+		   }
+	
+	FROM = {
+	 is_emperor_of_china = yes
+	
+
+		}
+	}
+	is_allowed = {
+	
+	treasury = 100
+	any_owned_province = {
+	NOT = { religion = FROM}
+	}
+	NOT = { religion = FROM}
+	FROM = {
+	 is_emperor_of_china = yes
+	
+
+		}
+     
+	}
+	on_accept = {
+	add_treasury = -100
+      random_owned_province = {
+	  limit = { NOT = { religion = FROM}}
+	  change_religion = FROM
+	  }
+	        capital_scope = {
+	  change_religion = FROM
+	  }
+	  FROM = {
+	  add_treasury = 100
+	  		add_trust = {
+			who = ROOT
+			value = 2
+		}
+		}
+         
+	}
+
+
+}
+
+
+sob_tri_ask_for_culture = {
+	category = alliance
+	alert_index = 30
+	alert_tooltip = sob_no_neighbor_tributary_state_tooltip
+	require_acceptance = no
+	is_visible = {
+	ai = no
+is_subject_of = FROM
+   		   OR = {
+		   is_subject_of_type = sob_tributary_state_3
+		   is_subject_of_type = tributary_state
+is_subject_of_type = tributary_state_2
+is_subject_of_type = tusi_state
+
+		   }
+	
+	FROM = {
+	 is_emperor_of_china = yes
+	
+
+		}
+	}
+	is_allowed = {
+	OR = {
+	any_owned_province={
+	religion = FROM
+	}
+	culture_group = FROM
+	}
+	treasury = 200
+	any_owned_province = {
+	NOT = { culture_group = FROM}
+	}
+	FROM = {
+	 is_emperor_of_china = yes
+	
+
+		}
+     
+	}
+	on_accept = {
+	add_treasury = -200
+      random_owned_province = {
+	  limit = {
+        NOT = { culture_group = FROM}
+		culture = ROOT
+	}
+	  change_culture = FROM
+	  }
+	  if = {
+	  limit = {
+	  NOT = { any_owned_province = {
+	  culture = ROOT
+	  }}
+	  }
+	        random_owned_province = {
+	  limit = {
+        NOT = { culture_group = FROM}
+}
+	  change_culture = FROM
+	  }
+	  }
+	  FROM = {
+	  add_treasury = 200
+	  		add_trust = {
+			who = ROOT
+			value = 5
+		}
+		}
+         
+	}
+
+
+}

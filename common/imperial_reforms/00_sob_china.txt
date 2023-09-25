@@ -1,0 +1,1000 @@
+################################################宪法议会
+
+sob_global_empire_decision = { 
+	empire = celestial_empire
+	trigger = { 
+	OR = { prestige = 50  has_estate = estate_sobshishen}
+		empire_of_china_reform_passed = seaban2_decision 
+		empire_of_china_reform_passed = sob_free_land_decision 
+		empire_of_china_reform_passed = sob_abolish_tributary
+		empire_of_china_reform_passed = tributary_embassies_decision
+		empire_of_china_reform_passed = new_world_discovery_decision
+		  empire_of_china_reform_passed = imperial_constitution_and_congress_decision 
+		  }
+	emperor = {
+ liberty_desire_from_subject_development = -0.10
+		
+	}
+		member = {
+		global_trade_goods_size_modifier = 0.1
+	}
+
+	on_effect = {
+	if = { limit = { has_estate = estate_sobshishen }  custom_tooltip = sob_new_mandate_reform_shishen }  #add_prestige = -35
+	
+	set_global_flag = sob_reform_lev_100
+	
+	add_splendor = 200
+		custom_tooltip = sob_society_warrior_reform_tooltip_dip_1
+						
+	}
+}
+
+
+
+seaban2_decision = { 
+	empire = celestial_empire
+
+	emperor = {
+
+		global_trade_goods_size_modifier = 0.1
+	}
+		member = {
+		merchants = 1
+	}
+	trigger = { 
+	OR = { prestige = 50  has_estate = estate_sobshishen}
+	
+	}
+				on_effect = {
+				if = { limit = { has_estate = estate_sobshishen }  custom_tooltip = sob_new_mandate_reform_shishen }  #add_prestige = -35
+							if = {
+				limit = { has_country_modifier = haijin_policy_modifier }
+				remove_country_modifier = haijin_policy_modifier 
+			}
+			custom_tooltip = mng_repeal_and_replace_tt
+			add_country_modifier = {
+				name = mng_great_market_of_china_modifier
+				duration = -1 
+			}
+				custom_tooltip = sob_chinese_empire_no_more_seaban_2
+        set_global_flag = no_more_seaban
+		hidden_effect = {if = {
+		limit = { ai = yes}
+			remove_estate_privilege = sob_estate_jianghu_siren_wen
+	remove_estate_privilege = sob_estate_jianghu_gongchang_wen
+	remove_estate_privilege = sob_estate_jianghu_education_wen
+		}
+		}
+		if = {
+	limit = { has_global_flag = sob_reform_lev_7}
+		country_event = { id = sobzzqevent.10 }
+	
+	}
+	hidden_effect = {
+	every_owned_province = {
+	limit = { superregion = china_superregion}
+	add_center_of_trade_level = 1
+	}
+	}
+
+
+	set_global_flag = sob_reform_lev_7
+
+	}
+}
+sob_free_land_decision = { 
+	empire = celestial_empire
+
+	emperor = {
+		global_colonial_growth = 10
+	}
+		member = {
+development_cost = -0.1
+	}
+	trigger = { 
+	OR = { prestige = 50  has_estate = estate_sobshishen}
+	
+	}
+				on_effect = {
+				if = { limit = { has_estate = estate_sobshishen }  custom_tooltip = sob_new_mandate_reform_shishen }  #add_prestige = -35
+				custom_tooltip = sob_society_warrior_reform_tooltip_1
+				custom_tooltip = sob_confu_has_reformed_outland_2
+        set_global_flag = sob_confu_has_reformed_outland
+		if = {
+	limit = { has_global_flag = sob_reform_lev_16}
+		country_event = { id = sobzzqevent.10 }
+	
+	}
+	set_global_flag = sob_reform_lev_16
+
+	}
+}
+
+tributary_embassies_decision = {
+	empire = celestial_empire 
+	trigger = { 
+		OR = { prestige = 50  has_estate = estate_sobshishen}
+		
+			NOT = { 
+				any_subject_country = {
+					is_subject_of_type = tributary_state
+					liberty_desire = 50 
+				}
+			}
+		OR = { 
+			full_idea_group = diplomatic_ideas 
+			full_idea_group = influence_ideas 
+			crown_land_share = 50 
+			dip = 5
+		}
+	}
+	member = {
+		diplomatic_upkeep = 1
+	} 
+	emperor = { 
+		monthly_favor_modifier = 0.25 
+		diplomatic_reputation = 1 
+	}
+	
+
+				on_effect = {
+				if = { limit = { has_estate = estate_sobshishen }  custom_tooltip = sob_new_mandate_reform_shishen }  #add_prestige = -35
+				}
+}
+
+new_world_discovery_decision = {
+	empire = celestial_empire 
+	trigger = { 
+	OR = { prestige = 50  has_estate = estate_sobshishen}
+		num_of_explorers = 1 
+		num_of_light_ship = 50 
+	}
+	member = {
+		global_colonial_growth = 10 
+	} 
+	emperor = { 
+		colonists = 1 
+	}
+					on_effect = {
+				if = { limit = { has_estate = estate_sobshishen }  custom_tooltip = sob_new_mandate_reform_shishen }  #add_prestige = -35
+				}
+}
+
+sob_abolish_tributary= {
+	empire = celestial_empire
+
+	emperor = {
+treasure_fleet_income = 0.25
+	}
+	member = {
+envoy_travel_time = -0.2
+	}
+		trigger = { 
+	OR = { prestige = 50  has_estate = estate_sobshishen}
+	}
+					on_effect = {
+				if = { limit = { has_estate = estate_sobshishen }  custom_tooltip = sob_new_mandate_reform_shishen }  #add_prestige = -35
+	custom_tooltip = sob_confu_chinese_empire_refrom_lv8_distance
+	custom_tooltip = sob_chinese_empire_abo_tributary
+        set_global_flag = sob_abolish_tributary_system
+		add_country_modifier = { 
+    name = sob_recent_abolish_tributary
+    duration = 730
+
+}
+		if = {
+	limit = { has_global_flag = sob_reform_lev_8}
+		country_event = { id = sobzzqevent.10 }
+	
+	}
+	set_global_flag = sob_reform_lev_8
+
+	}
+}
+
+imperial_constitution_and_congress_decision = {
+	empire = celestial_empire
+		trigger = { 
+	OR = { prestige = 50  has_estate = estate_sobshishen}
+	
+											OR = {
+			colony = 5
+						self_governing_colony = 5
+private_enterprise = 5
+  crown_colony = 5 
+  
+  zhuhou_state = 5
+  celestial_client_state = 5
+  }
+	}
+		member = {
+	administrative_efficiency = 0.05
+	
+	}
+
+					on_effect = {
+				if = { limit = { has_estate = estate_sobshishen }  custom_tooltip = sob_new_mandate_reform_shishen }  #add_prestige = -35
+			custom_tooltip = sob_court_reform_buff_2_tooltip_2
+			set_global_flag = sob_court_reform_buff_2_yizhen
+			hidden_effect = {
+				if = {
+				limit = { ai = yes}
+						custom_tooltip = confucianism_reform_tooltip_4
+		set_country_flag = sob_tugai_reform_done
+		custom_tooltip = sobconfucianism_reform_tooltip_1
+
+		add_mandate = 50
+           add_meritocracy = 100
+		   											add_country_modifier = {
+						name = "old_days_memory_sob"
+						duration = -1 #25 years
+					}
+						custom_tooltip = sob_abolish_shishen_tianti_tooltip		
+		clr_country_flag = sob_cleasing_nobles
+		custom_tooltip = sob_court_reform_tooltip_6
+						set_country_flag = sob_all_land_for_nobles
+				
+						
+						
+				
+				   			add_country_modifier = {
+				name = "given_to_sobguizu"
+				duration = -1
+			}
+		  			add_country_modifier = {
+				name = "sob_royal_forever_acts"
+				duration = -1
+			}
+		   
+				}
+				}
+        set_global_flag = chinese_empire_unified_law
+		if = {
+	limit = { has_global_flag = sob_reform_lev_15}
+		country_event = { id = sobzzqevent.10 }
+	
+	}
+	set_global_flag = sob_reform_lev_15
+
+	}
+}
+#########################################government
+establish_goverment_on_countryside_decision = {
+	empire = celestial_empire
+	trigger = { 
+	OR = { prestige = 50  has_estate = estate_sobshishen}
+		empire_of_china_reform_passed = reform_land_tax2_decision 
+		empire_of_china_reform_passed = military_governors2_decision
+		empire_of_china_reform_passed = centralizing_top_government2_decision
+		empire_of_china_reform_passed = scholar_officials_decision
+		  
+	}
+	emperor = {
+	    administrative_efficiency = 0.025
+		
+	}
+	member = {
+	global_autonomy = -0.03
+	
+	}
+				on_effect = {
+if = { limit = { has_estate = estate_sobshishen }  custom_tooltip = sob_new_mandate_reform_shishen }  #add_prestige = -35
+				custom_tooltip = sob_confu_chinese_empire_xiaxiang
+        set_global_flag = countryside_gov
+		set_global_flag = sob_countryside_gov_passed
+		if = {
+	limit = { has_global_flag = sob_reform_lev_14}
+		country_event = { id = sobzzqevent.10 }
+	
+	}
+	set_global_flag = sob_reform_lev_14
+
+	}
+}
+
+
+
+reform_land_tax2_decision = {
+	empire = celestial_empire
+	trigger = { 
+	OR = { prestige = 50  has_estate = estate_sobshishen}
+	}
+	emperor = {
+global_tax_modifier = 0.1
+	}
+member = {
+		republican_tradition = 0.15
+		meritocracy = 0.5
+		legitimacy = 0.5
+}
+	on_effect = {
+	if = { limit = { has_estate = estate_sobshishen }  custom_tooltip = sob_new_mandate_reform_shishen }  #add_prestige = -35
+	custom_tooltip = sob_confu_chinese_empire_tudishui_2
+        set_global_flag = landhold_reform
+		set_global_flag = sob_landhold_reform_passed
+		if = {
+	limit = { has_global_flag = sob_reform_lev_9}
+		country_event = { id = sobzzqevent.10 }
+	
+	}
+	set_global_flag = sob_reform_lev_9
+
+	}
+}
+
+military_governors2_decision = {
+	empire = celestial_empire
+	trigger = { 
+	OR = { prestige = 50  has_estate = estate_sobshishen}
+	}
+	member = {
+		core_creation = -0.1
+	}
+						on_effect = {
+						if = { limit = { has_estate = estate_sobshishen }  custom_tooltip = sob_new_mandate_reform_shishen }  #add_prestige = -35
+															remove_country_modifier = mng_starting_malus_5_modifier
+				remove_country_modifier = mng_starting_malus_4_modifier
+				remove_country_modifier = mng_starting_malus_3_modifier
+				remove_country_modifier = mng_starting_malus_2_modifier
+				remove_country_modifier = mng_starting_malus_1_modifier
+								hidden_effect = {if = {
+		limit = { ai = yes}
+	remove_estate_privilege = sob_estate_warrior_soldier_number_down
+	remove_estate_privilege = sob_estate_warrior_direct_reward_wen
+	remove_estate_privilege = sob_estate_warrior_education_wen
+		}
+		}
+						custom_tooltip = sob_confu_chinese_empire_zhianguan_1
+								add_country_modifier = { 
+    name = sob_shishen_jingzheng
+    duration = 7300
+
+}
+        set_global_flag = chinese_governors
+		if = {
+	limit = { has_global_flag = sob_reform_lev_10}
+		country_event = { id = sobzzqevent.10 }
+	
+	}
+	
+	set_global_flag = sob_reform_lev_10
+
+	}
+}
+
+centralizing_top_government2_decision = {
+	empire = celestial_empire
+	trigger = { 
+	OR = { prestige = 50  has_estate = estate_sobshishen}
+	}
+	emperor = {
+
+		max_absolutism = 5
+	}
+	member = {
+		monarch_admin_power = 1
+
+	}
+							on_effect = {
+																remove_country_modifier = mng_starting_malus_5_modifier
+				remove_country_modifier = mng_starting_malus_4_modifier
+				remove_country_modifier = mng_starting_malus_3_modifier
+				remove_country_modifier = mng_starting_malus_2_modifier
+				remove_country_modifier = mng_starting_malus_1_modifier
+							if = { limit = { has_estate = estate_sobshishen }  custom_tooltip = sob_new_mandate_reform_shishen }  #add_prestige = -35
+							custom_tooltip = sob_confu_chinese_empire_chaifen
+								add_country_modifier = { 
+    name = sob_shishen_zhengfa
+    duration = 7300
+
+}
+        set_global_flag = top_governors
+			if = {
+	limit = { has_global_flag = sob_reform_lev_11}
+		country_event = { id = sobzzqevent.10 }
+	
+	}
+	set_global_flag = sob_reform_lev_11
+
+	}
+}
+
+
+scholar_officials_decision = {
+	empire = celestial_empire
+		trigger = { 
+	OR = { prestige = 50  has_estate = estate_sobshishen}
+	}
+	emperor = {
+		governing_capacity_modifier = 0.1
+
+	}
+	member = {
+		global_unrest = -1
+
+	}
+		on_effect = {
+											remove_country_modifier = mng_starting_malus_5_modifier
+				remove_country_modifier = mng_starting_malus_4_modifier
+				remove_country_modifier = mng_starting_malus_3_modifier
+				remove_country_modifier = mng_starting_malus_2_modifier
+				remove_country_modifier = mng_starting_malus_1_modifier
+		if = { limit = { has_estate = estate_sobshishen }  custom_tooltip = sob_new_mandate_reform_shishen }  #add_prestige = -35
+	hidden_effect = {
+		if = {
+		limit = { ai = yes
+		}
+				custom_tooltip = sob_abolish_shishen_shinonggongshang_tooltip
+		add_harmony = 100
+	
+		custom_tooltip = confucianism_reform_tooltip_3
+		custom_tooltip = sob_shisuhua_reform_tooltip_6
+		custom_tooltip = confucianism_reform_tooltip_14
+		custom_tooltip = confucianism_reform_tooltip_13
+set_country_flag = sob_shishua_reform_6
+
+		set_country_flag = sob_all_land_for_sobshimin
+		 set_country_flag = sob_comestate_sobshimin
+		                        add_estate_influence_modifier = {
+			estate = estate_sobshishen
+			desc = SOB_XUERUOSHISHEN
+			influence = -15
+			duration = -1
+		}
+		clr_country_flag = sob_keju_shicigefu
+		  remove_faction = enuchs
+		 add_faction = sob_balance_a
+		 			add_country_modifier = {
+				name = "gen_eur_defender"
+				duration = 5475
+			}
+		
+}
+}
+		 set_global_flag = sob_scholar_officials_passed
+		custom_tooltip = sob_confu_chinese_empire_xiucai
+        set_country_flag = scholar_officials
+		if = {
+	limit = { has_global_flag = sob_reform_lev_13}
+		country_event = { id = sobzzqevent.10 }
+	
+	}
+	set_global_flag = sob_reform_lev_13
+
+	}
+}
+#############################Culture 
+establish_gaituguiliu2_decision = {
+	empire = celestial_empire
+	trigger = { 
+	OR = { prestige = 50  has_estate = estate_sobshishen}
+		empire_of_china_reform_passed = establish_gaituguiliu_decision 
+		empire_of_china_reform_passed = military_governors_decision 
+		empire_of_china_reform_passed = reform_civil_registration_decision
+		empire_of_china_reform_passed = inclusive_monarchy_decision
+		empire_of_china_reform_passed = reform_land_tax_decision
+		  
+	}
+	emperor = {
+	    missionaries = 1
+		culture_conversion_cost = -0.1
+		
+	}
+	member = {
+	num_accepted_cultures = 1
+		promote_culture_cost = -0.1
+	}
+	on_effect = {
+	if = { limit = { has_estate = estate_sobshishen }  custom_tooltip = sob_new_mandate_reform_shishen }  #add_prestige = -35
+			custom_tooltip = sob_chinese_empire_culture_dep
+        set_global_flag = gaituguiliu
+		set_global_flag = sob_gaituguiliu_done
+			if = {
+	limit = { has_global_flag = sob_reform_lev_6}
+		country_event = { id = sobzzqevent.10 }
+	
+	}
+	set_global_flag = sob_reform_lev_6
+
+	}
+}
+
+establish_gaituguiliu_decision = {
+	empire = celestial_empire
+	trigger = {
+	OR = { prestige = 50  has_estate = estate_sobshishen}
+		if = { 
+			limit = { has_estate = estate_eunuchs } 
+			OR = { 
+				estate_loyalty = {
+					estate = estate_eunuchs 
+					loyalty = 60 
+				}
+				NOT = { corruption = 1 } 
+			}
+		}
+		else = { 
+			NOT = { corruption = 1 } 
+		}
+	}
+	member = { advisor_pool = 1 }
+	emperor = {
+		meritocracy = 0.5
+	}
+		on_effect = {
+	if = { limit = { has_estate = estate_sobshishen }  custom_tooltip = sob_new_mandate_reform_shishen }  #add_prestige = -35
+	}
+	
+}
+reform_civil_registration_decision = {
+	empire = celestial_empire
+		trigger = {
+	OR = { prestige = 50  has_estate = estate_sobshishen}
+	}
+	member = { global_tax_modifier = 0.1 }
+	emperor = { development_cost = -0.05 autonomy_change_time = -0.2 }
+	
+		on_effect = {
+	if = { limit = { has_estate = estate_sobshishen }  custom_tooltip = sob_new_mandate_reform_shishen }  #add_prestige = -35
+	}
+}
+military_governors_decision = {
+	empire = celestial_empire
+	trigger = {
+	OR = { prestige = 50  has_estate = estate_sobshishen}
+		OR = { 
+			monthly_mil = 10 
+			national_focus = MIL 
+			mil = 6
+		}
+	}
+	member = { autonomy_change_time = -0.2 }
+	emperor = {
+		nobles_loyalty_modifier = 0.1 
+		core_creation = -0.1
+	}
+		on_effect = {
+	if = { limit = { has_estate = estate_sobshishen }  custom_tooltip = sob_new_mandate_reform_shishen }  #add_prestige = -35
+	}
+	
+}
+reform_land_tax_decision = {
+	empire = celestial_empire
+	trigger = {
+	OR = { prestige = 50  has_estate = estate_sobshishen}
+		OR = { 
+			crown_land_share = 35
+			adm = 5 
+			AND = { 
+				treasurer = 3 
+				reform_level = 7
+			}
+		}
+	}
+	member = { state_maintenance_modifier = -0.25 } 
+	emperor = {
+		global_autonomy = -0.05
+	}
+			on_effect = {
+	if = { limit = { has_estate = estate_sobshishen }  custom_tooltip = sob_new_mandate_reform_shishen }  #add_prestige = -35
+	}
+}
+
+
+inclusive_monarchy_decision = {
+	empire = celestial_empire 
+	trigger = {
+	OR = { prestige = 50  has_estate = estate_sobshishen}
+		OR = { 
+			full_idea_group = humanist_ideas 
+			harmony = 80 
+			theologian = 2 
+		}
+		stability = 1 
+	}
+	member = { tolerance_heathen = 1 } 
+	emperor = { 
+		tolerance_of_heathens_capacity = 1 
+		tolerance_heathen = 1 
+	}
+				on_effect = {
+	if = { limit = { has_estate = estate_sobshishen }  custom_tooltip = sob_new_mandate_reform_shishen }  #add_prestige = -35
+	}
+}
+
+
+#################################Mandate of heaven
+
+
+
+
+
+
+
+centralizing_top_government_decision = {
+	empire = celestial_empire
+	trigger = { 
+	OR = { prestige = 50  has_estate = estate_sobshishen}
+		empire_of_china_reform_passed = codify_single_whip_law_decision 
+		empire_of_china_reform_passed = establish_silver_standard_decision 
+		empire_of_china_reform_passed = kanhe_certificate_decision
+		empire_of_china_reform_passed = reform_the_military_branch_decision
+		empire_of_china_reform_passed = new_keju_formats_decision
+		empire_of_china_reform_passed = reign_in_estates_decision
+		empire_of_china_reform_passed = promote_bureaucratic_faction_decision
+		empire_of_china_reform_passed = promote_military_faction_decision
+		empire_of_china_reform_passed = equal_right_decision
+		  
+	}
+	member = { all_estate_influence_modifier = -0.05 }
+	emperor = { monarch_admin_power = 1 }
+					on_effect = {
+	if = { limit = { has_estate = estate_sobshishen }  custom_tooltip = sob_new_mandate_reform_shishen }  #add_prestige = -35
+	custom_tooltip = sob_new_mandate_reform_disaster
+	end_disaster = bureaucracy_rising
+	end_disaster = sob_quefa_baohu_shibing_dis
+	end_disaster = sob_shicigefu_dis
+	end_disaster = sob_shushengtongzhi_dis
+	end_disaster = china_dyansty_cycle
+	end_disaster = sob_cleansing_nobles_dis
+	}
+}
+
+
+#### 1.35 #### Content for EoC
+ 
+codify_single_whip_law_decision = {
+	empire = celestial_empire
+	trigger = { 
+	OR = { prestige = 50  has_estate = estate_sobshishen}
+		empire_of_china_reform_passed = reform_land_tax_decision 
+		OR = { 
+			mission_completed = mng_single_whip_law
+			full_idea_group = economic_ideas 
+			reform_level = 7
+		}
+	}
+	member = { yearly_corruption = -0.05 } 
+	emperor = {
+		vassal_income = 0.25 
+		global_tax_modifier = 0.1
+	}
+	
+					on_effect = {
+	if = { limit = { has_estate = estate_sobshishen }  custom_tooltip = sob_new_mandate_reform_shishen }  #add_prestige = -35
+	}
+	
+}
+
+establish_silver_standard_decision = {
+	empire = celestial_empire 
+	trigger = {
+	OR = { prestige = 50  has_estate = estate_sobshishen}
+		NOT = { inflation = 1 } 
+		OR = { 
+			monthly_adm = 10 
+			adm = 5 
+			national_focus = ADM 
+		}
+		is_in_deficit = no 
+		empire_of_china_reform_passed = codify_single_whip_law_decision
+	}
+	member = { interest = -0.25 } 
+	emperor = { 
+		monthly_gold_inflation_modifier = -0.1 
+		inflation_reduction = 0.05
+	}
+						on_effect = {
+	if = { limit = { has_estate = estate_sobshishen }  custom_tooltip = sob_new_mandate_reform_shishen }  #add_prestige = -35
+	}
+}
+
+kanhe_certificate_decision = {
+	empire = celestial_empire 
+	trigger = {
+	OR = { prestige = 50  has_estate = estate_sobshishen}
+		OR = { 
+			full_idea_group = trade_ideas 
+			any_subject_country = { is_colonial_nation = yes } 
+			num_of_merchants = 4 
+			national_focus = DIP 
+		}
+	}
+	member = { trade_efficiency = 0.05 } 
+	emperor = { 
+		merchants = 1 
+		placed_merchant_power = 10 
+	}
+						on_effect = {
+						end_disaster = sob_shushengtongzhi_dis
+	if = { limit = { has_estate = estate_sobshishen }  custom_tooltip = sob_new_mandate_reform_shishen }  #add_prestige = -35
+	}
+}
+
+new_keju_formats_decision = {
+	empire = celestial_empire 
+	trigger = {
+	OR = { prestige = 50  has_estate = estate_sobshishen}
+		OR = {
+			has_reform = examination_system_reform
+			full_idea_group = administrative_ideas  
+		}
+		OR = { 
+			adm = 4 
+			monthly_adm = 9 
+		}
+	}
+	member = { governing_capacity_modifier = 0.05 } 
+	emperor = { 
+		reform_progress_growth = 0.15
+		imperial_mandate = 0.03
+	}
+							on_effect = {
+							end_disaster = sob_shicigefu_dis
+	if = { limit = { has_estate = estate_sobshishen }  custom_tooltip = sob_new_mandate_reform_shishen }  #add_prestige = -35
+	}
+}
+reign_in_estates_decision = {
+	empire = celestial_empire
+	trigger = {
+	OR = { prestige = 50  has_estate = estate_sobshishen}
+		OR = { 
+			crown_land_share = 90 
+			absolutism = 75 
+		}
+	}
+	member = { max_absolutism = 5 }
+	emperor = { administrative_efficiency = 0.025 all_estate_influence_modifier = -0.05 }
+							on_effect = {
+	if = { limit = { has_estate = estate_sobshishen }  custom_tooltip = sob_new_mandate_reform_shishen }  #add_prestige = -35
+	}
+}
+reform_the_military_branch_decision = {
+	empire = celestial_empire 
+	trigger = { 
+	OR = { prestige = 50  has_estate = estate_sobshishen}
+		if = {
+			limit = {
+				has_dlc = "Cradle of Civilization"
+			}
+			OR = { 
+				army_tradition = 60 
+				army_professionalism = 0.40 
+			}
+		}
+		else = {
+			army_tradition = 60 
+		}
+		monthly_mil = 10 
+	}
+	member = {
+		yearly_army_professionalism = 0.0025
+	} 
+	emperor = { 
+		movement_speed = 0.1
+		drill_decay_modifier = -0.25 
+	}
+							on_effect = {
+	if = { limit = { has_estate = estate_sobshishen }  custom_tooltip = sob_new_mandate_reform_shishen }  #add_prestige = -35
+	}
+}
+promote_bureaucratic_faction_decision = {
+	empire = celestial_empire 
+		trigger = { 
+	OR = { prestige = 50  has_estate = estate_sobshishen}
+	}
+	member = {
+		church_loyalty_modifier = 0.05
+	} 
+	emperor = { 
+		church_loyalty_modifier = 0.1
+		tolerance_own = 1 
+	}
+							on_effect = {
+							
+	if = { limit = { has_estate = estate_sobshishen }  custom_tooltip = sob_new_mandate_reform_shishen }  #add_prestige = -35
+	}
+}
+
+promote_military_faction_decision = {
+	empire = celestial_empire 
+			trigger = { 
+	OR = { prestige = 50  has_estate = estate_sobshishen}
+	}
+	member = {
+		nobles_loyalty_modifier = 0.05 
+	} 
+	emperor = { 
+		nobles_loyalty_modifier = 0.1 
+		army_tradition = 0.5 
+	}
+								on_effect = {
+								end_disaster = bureaucracy_rising
+	if = { limit = { has_estate = estate_sobshishen }  custom_tooltip = sob_new_mandate_reform_shishen }  #add_prestige = -35
+	}
+}
+
+equal_right_decision = {
+	empire = celestial_empire
+		trigger = { 
+		OR = { prestige = 50  has_estate = estate_sobshishen}
+				empire_of_china_reform_passed = promote_bureaucratic_faction_decision 
+		empire_of_china_reform_passed = promote_military_faction_decision 
+		}
+
+	member = {
+	discipline = 0.025
+
+	}
+		on_effect = {
+		if = { limit = { has_estate = estate_sobshishen }  custom_tooltip = sob_new_mandate_reform_shishen }  #add_prestige = -35
+		hidden_effect = {
+		if = {
+		limit = { ai = yes
+		}
+				add_splendor = -800
+				set_global_flag = sob_confu_has_reformed_mandate
+		custom_tooltip = sob_soc_reform_tooltip_6
+		custom_tooltip = sob_abolish_shishen_epbook_tooltip
+		custom_tooltip = sob_society_warrior_reform_tooltip_2
+							 												
+		set_country_flag = sob_soc_reform_tooltip_6
+clr_country_flag = sob_quefa_baohu_shibing
+           add_army_tradition = 100
+end_disaster = sob_quefa_baohu_shibing_dis
+		set_country_flag = sob_all_land_for_warriors
+				custom_tooltip = confucianism_reform_tooltip_12
+		custom_tooltip = confucianism_reform_tooltip_14
+		custom_tooltip = sob_confucianism_reform_tooltip_15
+		
+				 set_country_flag = sob_comestate_sobwarriors
+		 remove_faction = temples
+		 add_faction = sob_wu_a
+		
+		set_country_flag = sob_wenwu_equal_reform_1
+				add_country_modifier = {
+				name = "army_household_title_generated"
+				duration = -1
+			}
+			add_adm_power = 150
+			add_mil_power = 300
+			add_dip_power = 150
+		
+		
+             			 		  		add_country_modifier = {
+				name = "sob_re_fed"
+				duration = -1
+			}
+		}
+		custom_tooltip = sob_confu_chinese_empire_wenwu
+        set_country_flag = wenwu_equal
+		 set_global_flag = wenwu_equal_on
+		 }
+			if = {
+	limit = { has_global_flag = sob_reform_lev_12}
+		country_event = { id = sobzzqevent.10 }
+	
+	}
+	set_global_flag = sob_reform_lev_12
+	}
+}
+vassalize_tributaries_decision = {
+	empire = celestial_empire
+	trigger = { 
+	OR = { prestige = 50  has_estate = estate_sobshishen}
+		empire_of_china_reform_passed = seaban_decision 
+		empire_of_china_reform_passed = unifed_trade_market_decision 
+		empire_of_china_reform_passed = study_foreign_ship_designs_decision
+		empire_of_china_reform_passed = modernize_the_banners_decision
+		  
+	}
+	emperor = {
+		imperial_mandate = 0.05
+		liberty_desire_from_subject_development = -0.33
+	}
+	on_effect = {
+		if = { limit = { has_estate = estate_sobshishen }  custom_tooltip = sob_new_mandate_reform_shishen }  #add_prestige = -35
+		custom_tooltip = vassalize_tributaries_decision_tt
+		set_global_flag = eoc_vassalize_tributaries
+	}
+	off_effect = {
+		custom_tooltip = vassalize_tributaries_decision_ct
+		clr_global_flag = eoc_vassalize_tributaries
+	}
+	
+}
+
+seaban_decision = {
+	empire = celestial_empire
+		trigger = { 
+	OR = { prestige = 50  has_estate = estate_sobshishen}
+	}
+	emperor = {
+		diplomats = 1
+		trade_efficiency = 0.05
+	}
+	on_effect = {
+		if = { limit = { has_estate = estate_sobshishen }  custom_tooltip = sob_new_mandate_reform_shishen }  #add_prestige = -35
+	}
+}
+
+unifed_trade_market_decision = {
+	empire = celestial_empire 
+	trigger = { 
+	OR = { prestige = 50  has_estate = estate_sobshishen}
+		empire_of_china_reform_passed = seaban_decision
+		empire_of_china_reform_passed = kanhe_certificate_decision
+		OR = { 
+			mission_completed = mng_improve_haijin_policy
+			mission_completed = mng_repeal_haijin_policy
+			mercantilism = 50 
+			dip = 6
+		}
+		OR = {
+			full_idea_group = trade_ideas
+			trade_income_percentage = 0.35
+			home_trade_node = {
+				highest_value_trade_node = yes
+				is_strongest_trade_power = ROOT
+			}
+		}
+	}
+	member = {
+		global_trade_power = 0.1
+	} 
+	emperor = { 
+		merchants = 1 
+		global_trade_goods_size_modifier = 0.05
+	}
+			on_effect = {
+		if = { limit = { has_estate = estate_sobshishen }  custom_tooltip = sob_new_mandate_reform_shishen }  #add_prestige = -35
+	}
+}
+
+
+
+modernize_the_banners_decision = {
+	empire = celestial_empire 
+	trigger = { 
+	OR = { prestige = 50  has_estate = estate_sobshishen}
+		OR = {
+			num_of_banners = 25 
+			has_global_modifier_value = {
+				which = cavalry_power 
+				value = 0.15
+			}
+		}
+	}
+	member = {
+		cavalry_cost = -0.1
+	} 
+	emperor = { cav_to_inf_ratio = 0.1 cavalry_power = 0.05 }
+			on_effect = {
+		if = { limit = { has_estate = estate_sobshishen }  custom_tooltip = sob_new_mandate_reform_shishen }  #add_prestige = -35
+	}
+}
+
+study_foreign_ship_designs_decision = {
+	empire = celestial_empire 
+	trigger = { 
+	OR = { prestige = 50  has_estate = estate_sobshishen}
+		navy_tradition = 50 
+		OR = { 
+			num_of_heavy_ship = 50
+			full_idea_group = naval_ideas
+			full_idea_group = quality_ideas 
+		}
+	}
+	member = {
+		global_ship_cost = -0.05
+	} 
+	emperor = { 
+		heavy_ship_power = 0.1
+	}
+			on_effect = {
+		if = { limit = { has_estate = estate_sobshishen }  custom_tooltip = sob_new_mandate_reform_shishen }  #add_prestige = -35
+	}
+}
+
+

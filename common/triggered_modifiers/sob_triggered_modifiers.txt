@@ -1,0 +1,660 @@
+##################################################
+# China modifiers
+##################################################
+lost_control_of_beijing = {
+	potential = {
+		has_reform = celestial_empire
+		has_dlc = "Mandate of Heaven"
+	}
+
+	trigger = {
+	imperial_mandate = 60
+		OR = {
+			NOT = { owns = 1816 }
+			NOT = { controls = 1816 }
+		}
+	}
+
+	imperial_mandate = -0.05
+}
+
+lost_control_of_nanjing = {
+	potential = {
+		has_reform = celestial_empire
+		has_dlc = "Mandate of Heaven"
+	}
+
+	trigger = {
+	imperial_mandate = 60
+		OR = {
+			NOT = { owns = 1821 }
+			NOT = { controls = 1821 }
+		}
+	}
+
+	imperial_mandate = -0.05
+}
+sob_gov_lossing_control_nongmin = {
+	potential = {
+	ai = no
+		has_reform = sob_peasant_united_empire
+	}
+
+	trigger = {
+	 statists_vs_orangists = 0.85 
+	}
+	devotion = -1.5
+	global_autonomy = 0.05
+	global_unrest = 4
+}
+sob_gov_lossing_control_nongmin_jun = {
+	potential = {
+		ai = no
+		has_reform = sob_peasant_united_empire
+	}
+
+	trigger = {
+	NOT = { statists_vs_orangists = -0.85 }
+	}
+	 	institution_spread_from_true_faith = -0.25	
+	idea_cost = 0.2
+	yearly_corruption = 0.1
+}
+
+sob_gov_lossing_control_jungongjue = {
+	potential = {
+	ai = no
+	OR = {
+		has_reform = sob_confucianism_united_empire
+		has_reform =  sob_military_dictatorship_empire
+		}
+	}
+
+	trigger = {
+	NOT = { statists_vs_orangists = -0.85 }
+	
+	}
+	legitimacy = -1.5
+	 	manpower_recovery_speed = -0.25
+	army_tradition_decay = 0.03
+}
+
+sob_gov_lossing_control_confucianism = {
+	potential = {
+	ai = no
+	OR = {
+		has_reform = sob_confucianism_united_empire
+		has_reform =  sob_military_dictatorship_empire
+		}
+	}
+
+	trigger = {
+	 statists_vs_orangists = 0.85 
+	}
+	
+		global_unrest = 4
+		 	governing_capacity = -200
+	 	meritocracy = -1
+}
+
+
+lost_control_of_canton = {
+	potential = {
+		has_reform = celestial_empire
+		has_dlc = "Mandate of Heaven"
+	}
+
+	trigger = {
+	imperial_mandate = 60
+		OR = {
+			NOT = { owns = 667 }
+			NOT = { controls = 667 }
+		}
+	}
+
+	imperial_mandate = -0.05
+}
+sob_tributary_system = {
+	potential = {
+		is_emperor_of_china = yes
+		has_reform = celestial_empire
+	}
+	
+	trigger = {	
+	NOT = { imperial_mandate = 85}
+ NOT = { has_global_flag = sob_abolish_tributary_system}
+	any_subject_country = { is_subject_of_type = sob_tributary_state_3}
+	}
+diplomatic_upkeep = -2
+diplomats = -1
+}
+sob_qng_ai = {
+	potential = {
+	always = no
+		ai = yes
+		tag = QNG
+		is_emperor_of_china = yes
+	}
+	
+	trigger = {	
+	ai =  yes
+	}
+	governing_capacity = 600
+}
+sob_celestial_empire_good_age = {
+	potential = {
+	
+		is_emperor_of_china = yes
+	}
+	
+	trigger = {	
+	ai = no
+	legitimacy_equivalent = 85
+	stability = 1
+	NOT = {
+	any_owned_province = {
+	unrest = 1
+	
+	}
+	
+	}
+	}
+	imperial_mandate = 0.1
+}
+sob_celestial_empire_ai_stable_age = {
+	potential = {
+		is_emperor_of_china = yes
+		ai = yes
+	}
+	
+	trigger = {	
+	
+	stability = 1
+
+	}
+	monthly_splendor = 2
+	imperial_mandate = 0.1
+}
+sob_celestial_empire_ai_stable_prestige = {
+	potential = {
+		is_emperor_of_china = yes
+		ai = yes
+	}
+	
+	trigger = {	
+
+	prestige = 35
+
+	}
+	imperial_mandate = 0.1
+	monthly_splendor = 1
+}
+
+sob_celestial_empire_ai_stable_legitimacy = {
+	potential = {
+		is_emperor_of_china = yes
+		ai = yes
+	}
+	
+	trigger = {	
+
+	legitimacy_equivalent = 85
+
+	}
+	imperial_mandate = 0.15
+}
+sob_celestial_empire_united_country = {
+	potential = {
+		is_emperor_of_china = yes
+	}
+	
+	trigger = {
+num_of_cities = 100	
+	all_owned_province = {
+	OR = {
+		has_owner_culture = yes
+		has_owner_accepted_culture = yes
+	}
+	}
+
+all_owned_province = {
+	tolerance_to_this = 0 
+	
+	}
+	}
+
+	imperial_mandate = 0.1
+}
+
+sob_celestial_empire_ahead_of_time = {
+	potential = {
+		is_emperor_of_china = yes
+	}
+	
+	trigger = {	
+	is_great_power = yes
+		
+    NOT = {
+	any_country ={
+	is_great_power = yes
+	institution_difference = {
+	who = root
+	value = 1
+}
+	
+	
+	}
+	
+	}
+    NOT = {
+	any_country ={
+	is_great_power = yes
+	tech_difference = 1
+	
+	}
+	
+	}
+	}
+		monthly_splendor = 2
+	imperial_mandate = 0.1
+}
+
+
+tributary_system_celestial = {
+	potential = {
+		is_emperor_of_china = yes
+	}
+	
+	trigger = {	
+  
+	tributary_state = 15
+	NOT = { imperial_mandate = 85}
+	
+	}
+	imperial_mandate = 0.05
+diplomatic_upkeep = 2
+}
+
+sob_celestial_prestige_no = {
+	potential = {
+		is_emperor_of_china = yes
+	}
+	
+	trigger = {	
+  
+	NOT = { prestige = 0}
+	
+	imperial_mandate = 35
+	
+	}
+	imperial_mandate = -0.2
+}
+
+sob_celestial_legitimacy_no = {
+	potential = {
+		is_emperor_of_china = yes
+	}
+	
+	trigger = {	
+  
+	NOT = {legitimacy_equivalent = 60}
+	
+	}
+	imperial_mandate = -0.2
+}
+sob_devastation_mandate = {
+	potential = {
+is_emperor_of_china = yes
+}
+	
+	
+	trigger = {
+	
+num_of_owned_provinces_with = {
+	value = 15
+devastation = 5
+controlled_by = ROOT
+culture_group = ROOT
+}
+imperial_mandate = 25
+	}
+    
+  imperial_mandate = -0.3
+}
+sob_celestial_corrupted_country = {
+	potential = {
+		is_emperor_of_china = yes
+	}
+	
+	trigger = {	
+  
+corruption = 15
+	}
+	imperial_mandate = -0.2
+}
+sob_celestial_stability_no = {
+	potential = {
+		is_emperor_of_china = yes
+	}
+	
+	trigger = {	
+  
+	NOT = {stability = 0}
+
+	
+	
+	}
+	imperial_mandate = -0.2
+}
+the_celestial_sob_harming = {
+	potential = {
+	ai = no
+				OR = { religion = confucianism religion = threeself religion =sob_catholic  religion =sob_reformed	religion = sob_orthodox 	religion = sob_coptic	religion = sob_mahayana	religion = sob_sunni religion =sob_shinto 		religion = sob_hinduism religion = sob_shamanism	religion = sob_anglican	}
+	}
+	
+	trigger = {	
+	NOT = { harmony = 1}
+ any_owned_province = {
+ owner = {
+ is_harmonizing_with = PREV
+ }
+ 
+ }
+	}
+	tolerance_heathen = -15
+	tolerance_heretic = -15
+}
+the_celestial_sob_harming_culture = {
+	potential = {
+	ai = no
+				OR = { religion = confucianism religion = threeself religion =sob_catholic  religion =sob_reformed	religion = sob_orthodox 	religion = sob_coptic	religion = sob_mahayana	religion = sob_sunni religion =sob_shinto 		religion = sob_hinduism religion = sob_shamanism	religion = sob_anglican	}
+	}
+	
+	trigger = {	
+	NOT = { harmony = 5}
+	}
+	technology_cost = 0.2
+	core_creation = 0.5
+	embracement_cost = 0.3
+	idea_cost = 0.2	
+	global_institution_spread = -0.2
+}
+the_mandate_of_heavenaibuff = {
+	potential = {
+		OR = {culture_group = east_asian  culture_group = chinese_group }
+		ai = yes
+		always = no
+	}
+	
+	trigger = {	
+ai = yes
+	}
+
+missionaries = 1
+}
+
+sob_east_asian_religion_ai = {
+	potential = {
+	ai = yes
+	religion = confucianism
+OR = {culture_group = east_asian  culture_group = chinese_group }
+}
+	
+	
+	trigger = {
+       always = yes
+	}
+	missionaries = 1
+    yearly_harmony = 2.5
+  imperial_mandate = 0.1
+}
+
+
+confucianismbase_religion = {
+	potential = {
+ religion = confucianism 
+}
+	
+	
+	trigger = {
+ religion = confucianism 
+ NOT = { has_country_modifier = confucianism_reform}
+	}
+    
+   tolerance_own = -1
+}
+sob_chinese_gov = {
+
+	potential = {	
+	meritocracy = 0
+
+	}
+	trigger = {	
+	NOT = { total_development = 350}
+	}
+	meritocracy = 2
+	
+}
+
+sob_hre_gov = {
+
+	potential = {	
+	is_emperor = yes
+    tag = HLR
+	}
+	trigger = {	
+		tag = HLR
+
+	}
+	imperial_authority_value = 25
+	
+}
+
+sob_chinese_gov_2= {
+
+	potential = {	
+	meritocracy = 0
+
+	}
+	trigger = {	
+	total_development = 350
+	NOT = { total_development = 800}
+	}
+	meritocracy = 1
+	
+}
+
+sob_chinese_gov_3= {
+
+	potential = {	
+		meritocracy = 0
+
+	}
+	trigger = {	
+		total_development = 800
+	NOT = { total_development = 1100}
+	}
+	
+	meritocracy = 0.5
+	
+}
+sob_chinese_america = {
+
+	potential = {	
+   NOT = { culture_group = east_asian }
+      NOT = { culture_group = chinese_group }
+ NOT = { culture_group = sob_prc_chinese_group }
+	has_global_flag = sob_chinese_american_est
+	 any_owned_province = {
+ 		 OR = {
+		 continent = north_america
+continent = south_america  
+continent = new_world  
+}
+ is_city = no
+ }
+	}
+	trigger = {	
+	calc_true_if = {
+	all_province = {
+		OR = {culture_group = east_asian culture_group = chinese_group}
+							 OR = {
+		 continent = north_america
+continent = south_america  
+continent = new_world  
+}
+	}
+	amount = 200
+}
+   NOT = { culture_group = east_asian }
+      NOT = { culture_group = chinese_group }
+ NOT = { culture_group = sob_prc_chinese_group }
+ any_owned_province = {
+ 		 OR = {
+		 continent = north_america
+continent = south_america  
+continent = new_world  
+}
+ is_city = no
+ }
+ 
+	}
+	 	global_colonial_growth = -120
+	
+}
+ con_secondary_religion = {
+	potential = {
+		OR = {culture_group = east_asian  culture_group = chinese_group }
+
+	}
+	
+	trigger = {
+
+	has_secondary_religion = yes
+	
+	}
+    tolerance_own = 1
+	missionaries = 1
+	unjustified_demands = -0.1
+}
+
+ con_secondary_religion_ai = {
+	potential = {
+	always = no
+		OR = {culture_group = east_asian  culture_group = chinese_group }
+ai = yes
+	}
+	
+	trigger = {
+
+	ai = yes
+	
+	}
+
+missionaries = 1
+}
+
+han_pinyin= {
+
+	potential = {	
+		OR = {culture_group = east_asian  culture_group = chinese_group }
+
+	}
+	trigger = {	
+	OR = {culture_group = east_asian  culture_group = chinese_group }
+	}
+	technology_cost = -0.025
+	global_missionary_strength = 0.005
+	
+}
+sob_war_exhaustion = {
+	potential = {
+		is_emperor_of_china = yes
+	
+	}
+	trigger = {	
+     war_exhaustion = 10
+    imperial_mandate = 25
+	}
+imperial_mandate = -0.15
+	
+}
+
+sob_high_karma = {
+
+	potential = {	
+	uses_karma = yes
+	NOT = {religion = sob_mahayana }
+	}
+	trigger = {	
+	karma = 33
+	NOT = {religion = sob_mahayana }
+	}
+
+	 improve_relation_modifier = -0.3
+	diplomatic_reputation = -1
+	ae_impact = 0.15
+
+}
+sob_low_karma = {
+
+	potential = {	
+		uses_karma = yes
+	NOT = {religion = sob_mahayana }
+
+	}
+	trigger = {	
+	NOT = { karma= -33}
+	NOT = {religion = sob_mahayana }
+	}
+	land_morale = -0.1
+	discipline = -0.025
+
+	global_supply_limit_modifier = -0.2
+	
+}
+sob_medium_karma = {
+
+	potential = {	
+		uses_karma = yes
+	NOT = {religion = sob_mahayana }
+	}
+	trigger = {	
+	karma = -33
+	NOT = { karma= 33}
+	NOT = {religion = sob_mahayana }
+	}
+	development_cost = 0.2
+	global_trade_goods_size_modifier = -0.3
+	core_creation = 0.15
+	
+}
+sob_catholic_reform_desire = {
+
+	potential = {	
+	OR = {
+		religion = sob_catholic
+		religion = catholic
+}
+	}
+	trigger = {	
+ reform_desire = 1
+	}
+discipline = 0.025
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,1514 @@
+namespace = shishen_estate_events
+# Local Revolt
+province_event = {
+	id = shishen_estate_events.11
+	title = church_estate_events.11.t
+	desc = church_estate_events.11.d
+	picture = CHURCH_ESTATE_UPSET_eventPicture
+	
+	is_triggered_only = yes
+
+	
+	option = {
+		name = church_estate_events.11.a #
+	}
+}
+
+province_event = {
+	id = shishen_estate_events.13
+	title = shishen_estate_events.13.t
+	desc = shishen_estate_events.13.d
+	picture = CHURCH_ESTATE_UPSET_eventPicture
+	
+	is_triggered_only = yes
+
+	
+	option = {
+		name = shishen_estate_events.13.a #
+		
+				tooltip = {
+  add_dip_power = -15
+  add_mil_power = -30
+			add_adm_power = -40
+			add_war_exhaustion = 2.5
+		}
+	}
+}
+country_event = {
+	id = shishen_estate_events.29
+	title = church_estate_events.29.t
+	desc = church_estate_events.29.d
+	picture = CHURCH_ESTATE_UPSET_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = church_estate_events.13.a #
+	}
+}
+
+country_event = {
+	id = shishen_estate_events.28
+	title = shishen_estate_events.28.t
+	desc = shishen_estate_events.28.d
+	picture = CHURCH_ESTATE_UPSET_eventPicture
+	
+	 trigger ={
+	 OR = {
+	 ai = no
+	 AND = {
+	 is_emperor_of_china = yes
+	 NOT = {  OR = {culture_group = east_asian culture_group = chinese_group}}
+	 has_reform = celestial_empire
+	 }
+	 }
+	 OR = {
+	 AND = {
+	 has_estate_privilege = sob_estate_shishen_road_to_sky_rew
+	 has_estate = estate_sobshishen
+	 }
+	 meritocracy = 80
+	 }
+	 OR = {
+	 NOT = { has_country_flag = sob_shishen_d_loyal}
+	 	
+
+had_country_flag = {
+	flag = sob_shishen_d_loyal
+	days = 3650
+}
+	 
+	 }
+	 
+	 }
+immediate = {
+every_owned_province = {
+clr_province_flag = sob_keju_prov_1
+clr_province_flag = sob_keju_prov_2
+clr_province_flag = sob_keju_prov_3
+clr_province_flag = sob_keju_prov_4
+clr_province_flag = sob_keju_prov_5
+}
+every_owned_province = {
+limit = { 
+has_province_flag = sob_shishen_land_recovering
+NOT = { has_province_flag = sob_shishen_land_recovering_year_1}
+}
+set_province_flag = sob_shishen_land_recovering_year_1
+}
+every_owned_province = {
+limit = { 
+has_province_flag = sob_shishen_land_recovering
+has_province_flag = sob_shishen_land_recovering_year_1
+}
+clr_province_flag = sob_shishen_land_recovering_year_1
+clr_province_flag = sob_shishen_land_recovering
+}
+clr_country_flag = sob_shishen_d_loyal
+}
+	
+mean_time_to_happen = {
+days = 120
+
+
+}
+
+	
+		option = {
+		name = shishen_estate_events.28.a #
+		trigger = {
+	has_global_flag = sob_scholar_officials_passed
+		}
+									add_estate_loyalty = {
+			estate = estate_sobshishen
+			loyalty = 15
+		}
+		
+set_country_flag = sob_shishen_d_loyal
+		define_advisor  = {
+			type = natural_scientist
+			skill = 5
+			religion = root
+			discount = yes
+		}
+
+	}
+			option = {
+		name = shishen_estate_events.28.b #
+				trigger = {
+		has_estate = estate_sobshishen
+		always = no
+		}
+		
+											add_estate_loyalty = {
+			estate = estate_sobshishen
+			loyalty = 15
+		}
+		
+				if ={
+		limit = { has_global_flag = sob_scholar_officials_passed }
+		
+		define_advisor  = {
+			type = artist
+			skill = 5
+			religion = root
+			discount = yes
+		}
+							change_estate_land_share = {
+			estate = estate_sobshishen
+			share = -1.0
+		}
+		}
+		
+		if ={
+		limit = { NOT = {has_global_flag = sob_scholar_officials_passed} }
+		random_owned_province ={
+		limit = { NOT = { has_province_modifier = sob_shishen_land_on}}
+				add_province_modifier ={
+		name = sob_shishen_land_on
+		duration = -1
+		
+		}
+		set_province_flag = sob_keju_prov_1
+		}
+				random_owned_province ={
+		limit = { NOT = { has_province_modifier = sob_shishen_land_on}
+		NOT = { has_province_flag = sob_keju_prov_1}
+		
+		}
+				add_province_modifier ={
+		name = sob_shishen_land_on
+		duration = -1
+		
+		}
+		set_province_flag = sob_keju_prov_2
+		}
+				random_owned_province ={
+		limit = { NOT = { has_province_modifier = sob_shishen_land_on}
+		NOT = { has_province_flag = sob_keju_prov_1}
+		NOT = { has_province_flag = sob_keju_prov_2}
+		
+		}
+				add_province_modifier ={
+		name = sob_shishen_land_on
+		duration = -1
+		
+		}
+		set_province_flag = sob_keju_prov_3
+		}
+				random_owned_province ={
+		limit = { NOT = { has_province_modifier = sob_shishen_land_on}
+				NOT = { has_province_flag = sob_keju_prov_1}
+		NOT = { has_province_flag = sob_keju_prov_2}
+				NOT = { has_province_flag = sob_keju_prov_3}
+
+		}
+				add_province_modifier ={
+		name = sob_shishen_land_on
+		duration = -1
+		
+		}
+			set_province_flag = sob_keju_prov_4
+		}
+				random_owned_province ={
+		limit = { NOT = { has_province_modifier = sob_shishen_land_on}
+				NOT = { has_province_flag = sob_keju_prov_1}
+		NOT = { has_province_flag = sob_keju_prov_2}
+				NOT = { has_province_flag = sob_keju_prov_3}
+NOT = { has_province_flag = sob_keju_prov_4}
+		}
+				add_province_modifier ={
+		name = sob_shishen_land_on
+		duration = -1
+		
+		}
+			set_province_flag = sob_keju_prov_5
+		}
+						generate_scaled_advisor_of_type_and_religion_effect = {
+			type = artist
+			religion = root
+			discount = yes
+		}
+					add_estate_loyalty = {
+			estate = estate_sobshishen
+			loyalty = 10
+		}
+
+			set_country_flag = sob_shishen_d_loyal
+					change_estate_land_share = {
+			estate = estate_church
+			share = -1.0
+		}	
+					change_estate_land_share = {
+			estate = estate_nobles
+			share = -1.0
+		}	
+					change_estate_land_share = {
+			estate = estate_burghers
+			share = -1.0
+		}	
+		if = {
+		limit = {OR = {culture_group = east_asian culture_group = chinese_group}  }
+							change_estate_land_share = {
+			estate = estate_sobwarriors
+			share = -1.0
+		}
+					change_estate_land_share = {
+			estate = estate_sobshishen
+			share = 5.0
+		}
+		}
+				if = {
+		limit = {NOT = {OR = {culture_group = east_asian culture_group = chinese_group}  }}
+				 	set_estate_privilege = sob_estate_inward_production_power
+	set_estate_privilege = sob_estate_bookperfection_taxes_direct
+	set_estate_privilege = sob_estate_shinonggongshang
+	set_estate_privilege = sob_estate_shishen_road_to_sky_rew
+					if = {
+		limit = {		OR = {
+		ai = no
+		crown_land_share = 50}}
+					change_estate_land_share = {
+			estate = estate_sobshishen
+			share =5.0
+		}
+		}
+		}
+		}
+	}
+			option = {
+		name = shishen_estate_events.28.c #
+				trigger = {
+		has_estate = estate_sobshishen
+		
+		}
+					add_estate_loyalty = {
+			estate = estate_sobshishen
+			loyalty = 15
+		}
+						if ={
+		limit = { has_global_flag = sob_scholar_officials_passed }
+		
+		define_advisor  = {
+			type = global_tax_modifier
+			skill = 5
+			religion = root
+			discount = yes
+		}
+							change_estate_land_share = {
+			estate = estate_sobshishen
+			share = -1.0
+		}
+		}
+		
+		if ={
+		limit = { NOT = {has_global_flag = sob_scholar_officials_passed} }
+		random_owned_province ={
+		limit = { NOT = { has_province_modifier = sob_shishen_land_on}}
+				add_province_modifier ={
+		name = sob_shishen_land_on
+		duration = -1
+		
+		}
+		set_province_flag = sob_keju_prov_1
+		}
+				random_owned_province ={
+		limit = { NOT = { has_province_modifier = sob_shishen_land_on}
+		NOT = { has_province_flag = sob_keju_prov_1}
+		
+		}
+				add_province_modifier ={
+		name = sob_shishen_land_on
+		duration = -1
+		
+		}
+		set_province_flag = sob_keju_prov_2
+		}
+				random_owned_province ={
+		limit = { NOT = { has_province_modifier = sob_shishen_land_on}
+		NOT = { has_province_flag = sob_keju_prov_1}
+		NOT = { has_province_flag = sob_keju_prov_2}
+		
+		}
+				add_province_modifier ={
+		name = sob_shishen_land_on
+		duration = -1
+		
+		}
+		set_province_flag = sob_keju_prov_3
+		}
+				random_owned_province ={
+		limit = { NOT = { has_province_modifier = sob_shishen_land_on}
+				NOT = { has_province_flag = sob_keju_prov_1}
+		NOT = { has_province_flag = sob_keju_prov_2}
+				NOT = { has_province_flag = sob_keju_prov_3}
+
+		}
+				add_province_modifier ={
+		name = sob_shishen_land_on
+		duration = -1
+		
+		}
+			set_province_flag = sob_keju_prov_4
+		}
+				random_owned_province ={
+		limit = { NOT = { has_province_modifier = sob_shishen_land_on}
+				NOT = { has_province_flag = sob_keju_prov_1}
+		NOT = { has_province_flag = sob_keju_prov_2}
+				NOT = { has_province_flag = sob_keju_prov_3}
+NOT = { has_province_flag = sob_keju_prov_4}
+		}
+				add_province_modifier ={
+		name = sob_shishen_land_on
+		duration = -1
+		
+		}
+			set_province_flag = sob_keju_prov_5
+		}
+				generate_scaled_advisor_of_type_and_religion_effect = {
+			type = theologian
+			religion = root
+			discount = yes
+		}
+					add_estate_loyalty = {
+			estate = estate_sobshishen
+			loyalty = 10
+		}
+			set_country_flag = sob_shishen_d_loyal
+					change_estate_land_share = {
+			estate = estate_church
+			share = -1.0
+		}	
+					change_estate_land_share = {
+			estate = estate_nobles
+			share = -1.0
+		}	
+					change_estate_land_share = {
+			estate = estate_burghers
+			share = -1.0
+		}	
+		if = {
+		limit = {OR = {culture_group = east_asian culture_group = chinese_group}  }
+							change_estate_land_share = {
+			estate = estate_sobwarriors
+			share = -1.0
+		}
+					change_estate_land_share = {
+			estate = estate_sobshishen
+			share = 5.0
+		}
+		}
+				if = {
+		limit = {NOT = {OR = {culture_group = east_asian culture_group = chinese_group}  }}
+				 	set_estate_privilege = sob_estate_inward_production_power
+	set_estate_privilege = sob_estate_bookperfection_taxes_direct
+	set_estate_privilege = sob_estate_shinonggongshang
+	set_estate_privilege = sob_estate_shishen_road_to_sky_rew
+					if = {
+		limit = {
+		OR = {
+		ai = no
+		crown_land_share = 50}
+		}
+					change_estate_land_share = {
+			estate = estate_sobshishen
+			share =5.0
+		}
+		}
+		}
+		}
+	}
+				
+	
+				option = {
+		name = shishen_estate_events.28.f #
+		trigger = {
+		has_country_modifier = sob_abolish_official_ban
+		crown_land_share = 50
+						OR = {
+							custom_trigger_tooltip = {
+				tooltip = sob_hard_mode_exm_1_tooltip_2
+				NOT = { has_country_flag = sob_ming_new_dlc_harder_flag}
+				}
+				NOT = { any_owned_province ={
+				
+				has_province_modifier = sob_shishen_land_on
+				}}
+				}
+		
+		}
+		
+        add_estate_loyalty = {
+            estate = all
+            loyalty = 10
+            short = yes
+        }
+			set_country_flag = sob_shishen_d_loyal
+		
+	}
+		option = {
+		name = shishen_estate_events.28.g #
+		trigger = {
+				meritocracy = 80
+								OR = {
+							custom_trigger_tooltip = {
+				tooltip = sob_hard_mode_exm_1_tooltip_2
+				NOT = { has_country_flag = sob_ming_new_dlc_harder_flag}
+				}
+				NOT = { any_owned_province ={
+				
+				has_province_modifier = sob_shishen_land_on
+				}}
+				}
+									estate_territory = {
+					estate = estate_sobshimin
+					territory = 15
+				}
+				crown_land_share = 40
+		}
+		add_meritocracy = -10
+				random_owned_province ={
+		limit ={
+		has_province_modifier = sob_shishen_land_on
+		OR = {
+		has_state_edict = sob_landreform_jianghu
+		owner = {NOT = { any_owned_province = {
+		has_state_edict = sob_landreform_jianghu
+		has_province_modifier = sob_shishen_land_on
+		}}
+		
+		}
+		}
+		}
+		remove_province_modifier = sob_shishen_land_on
+		set_province_flag = sob_wa_complete_tugai
+		
+		}
+	random_owned_province ={
+add_prosperity = 100
+add_base_production = 2
+		}
+        add_estate_loyalty = {
+            estate = estate_sobshimin
+            loyalty = 10
+            short = yes
+        }
+			set_country_flag = sob_shishen_d_loyal
+					if = {
+		limit = {has_estate = estate_sobshishen}
+											add_estate_loyalty = {
+			estate = estate_sobshishen
+			loyalty = -10
+		}
+		}
+		
+	}
+						option = {
+		name = shishen_estate_events.28.h #
+		trigger = {
+		meritocracy = 80
+						OR = {
+							custom_trigger_tooltip = {
+				tooltip = sob_hard_mode_exm_1_tooltip_2
+				NOT = { has_country_flag = sob_ming_new_dlc_harder_flag}
+				}
+				NOT = { any_owned_province ={
+				
+				has_province_modifier = sob_shishen_land_on
+				}}
+				}
+							estate_territory = {
+					estate = estate_sobwarriors
+					territory = 15
+				}
+crown_land_share = 40
+		}
+		add_meritocracy = -15
+				random_owned_province ={
+		limit ={
+		has_province_modifier = sob_shishen_land_on
+		OR = {
+		has_state_edict = sob_landreform_junhu
+		owner = {NOT = { any_owned_province = {
+		has_state_edict = sob_landreform_junhu
+		has_province_modifier = sob_shishen_land_on
+		}}
+		
+		}
+		}
+		}
+		remove_province_modifier = sob_shishen_land_on
+		set_province_flag = sob_wa_complete_tugai
+		
+		}
+	random_owned_province ={
+cossack_cavalry = ROOT
+cossack_cavalry = ROOT
+cossack_cavalry = ROOT
+cossack_cavalry = ROOT
+		}
+        add_estate_loyalty = {
+            estate = estate_sobwarriors
+            loyalty = 10
+            short = yes
+        }
+			set_country_flag = sob_shishen_d_loyal
+					if = {
+		limit = {has_estate = estate_sobshishen}
+											add_estate_loyalty = {
+			estate = estate_sobshishen
+			loyalty = -10
+		}
+		}
+		
+	}
+							option = {
+		name = shishen_estate_events.28.i #
+		trigger = {
+		meritocracy = 80
+				OR = {
+							custom_trigger_tooltip = {
+				tooltip = sob_hard_mode_exm_1_tooltip_2
+				NOT = { has_country_flag = sob_ming_new_dlc_harder_flag}
+				}
+				NOT = { any_owned_province ={
+				
+				has_province_modifier = sob_shishen_land_on
+				}}
+				}
+		estate_territory = {
+					estate = estate_nobles
+					territory = 15
+				}
+crown_land_share = 40
+		}
+		add_meritocracy = -15
+				random_owned_province ={
+		limit ={
+		has_province_modifier = sob_shishen_land_on
+		OR = {
+		has_state_edict = sob_landreform_junhu
+		owner = {NOT = { any_owned_province = {
+		has_state_edict = sob_landreform_junhu
+		has_province_modifier = sob_shishen_land_on
+		}}
+		
+		}
+		}
+		}
+		remove_province_modifier = sob_shishen_land_on
+		set_province_flag = sob_wa_complete_tugai
+		
+		}
+
+	random_owned_province ={
+set_local_autonomy = 0
+streltsy_infantry = ROOT
+streltsy_infantry = ROOT
+streltsy_infantry = ROOT
+streltsy_infantry = ROOT
+		}
+        add_estate_loyalty = {
+            estate = estate_nobles
+            loyalty = 10
+            short = yes
+        }
+			set_country_flag = sob_shishen_d_loyal
+					if = {
+		limit = {has_estate = estate_sobshishen}
+											add_estate_loyalty = {
+			estate = estate_sobshishen
+			loyalty = -10
+		}
+		}
+		
+	}
+								option = {
+		name = shishen_estate_events.28.j #
+		trigger = {
+		meritocracy = 80
+						OR = {
+							custom_trigger_tooltip = {
+				tooltip = sob_hard_mode_exm_1_tooltip_2
+				NOT = { has_country_flag = sob_ming_new_dlc_harder_flag}
+				}
+				NOT = { any_owned_province ={
+				
+				has_province_modifier = sob_shishen_land_on
+				}}
+				}
+							estate_territory = {
+					estate = estate_church
+					territory = 15
+				}
+crown_land_share = 40
+		}
+		add_meritocracy = -5
+				random_owned_province ={
+		limit ={
+		has_province_modifier = sob_shishen_land_on
+		OR = {
+		has_state_edict = sob_landreform_jianghu
+		owner = {NOT = { any_owned_province = {
+		has_state_edict = sob_landreform_jianghu
+		has_province_modifier = sob_shishen_land_on
+		}}
+		
+		}
+		}
+		}
+		remove_province_modifier = sob_shishen_land_on
+		set_province_flag = sob_wa_complete_tugai
+
+		}
+add_harmonization_progress = 5
+        add_estate_loyalty = {
+            estate = estate_church
+            loyalty = 10
+            short = yes
+        }
+				if = {
+		limit = {has_estate = estate_sobshishen}
+											add_estate_loyalty = {
+			estate = estate_sobshishen
+			loyalty = -10
+		}
+		}
+			set_country_flag = sob_shishen_d_loyal
+		
+	}
+		option = {
+		name = shishen_estate_events.28.k #
+		trigger = {
+		meritocracy = 80
+						OR = {
+							custom_trigger_tooltip = {
+				tooltip = sob_hard_mode_exm_1_tooltip_2
+				NOT = { has_country_flag = sob_ming_new_dlc_harder_flag}
+				}
+				NOT = { any_owned_province ={
+				
+				has_province_modifier = sob_shishen_land_on
+				}}
+				}
+							estate_territory = {
+					estate = estate_burghers
+					territory = 15
+				}
+crown_land_share = 40
+		}
+		add_meritocracy = -10
+				random_owned_province ={
+		limit ={
+		has_province_modifier = sob_shishen_land_on
+		OR = {
+		has_state_edict = sob_landreform_jianghu
+		owner = {NOT = { any_owned_province = {
+		has_state_edict = sob_landreform_jianghu
+		has_province_modifier = sob_shishen_land_on
+		}}
+		
+		}
+		}
+		}
+		remove_province_modifier = sob_shishen_land_on
+		set_province_flag = sob_wa_complete_tugai
+		
+		}
+		    random_active_trade_node = {
+add_trade_modifier = {
+    who = ROOT
+    duration = 5475
+    power = 150
+    key = STRONG_MERCHANTS
+}
+    }
+			if = {
+		limit = {has_estate = estate_sobshishen}
+											add_estate_loyalty = {
+			estate = estate_sobshishen
+			loyalty = -10
+		}
+		}
+	random_owned_province ={
+    limit = { has_port = yes }
+    heavy_ship = ROOT
+		}
+        add_estate_loyalty = {
+            estate = estate_burghers
+            loyalty = 10
+            short = yes
+        }
+			set_country_flag = sob_shishen_d_loyal
+		
+	}
+	
+		option = {
+		name = shishen_estate_events.28.eh #
+				trigger = {
+		NOT = {has_estate = estate_sobshishen }
+		}
+				random_list = {
+    33 = {   
+	add_mercantilism = 2
+	add_war_exhaustion = -2
+	}
+	    33 = {   
+	add_meritocracy = 5
+	add_war_exhaustion = -2
+	}
+	    33 = {   
+	add_prestige = 5
+	add_war_exhaustion = -2
+	}
+	    1 = {   
+		add_years_of_income = 1
+		add_war_exhaustion = -2
+	}
+	}
+		set_country_flag = sob_shishen_d_loyal
+		}
+				option = {
+		name = shishen_estate_events.28.e #
+				trigger = {
+		has_estate = estate_sobshishen
+
+		}
+				random_owned_province ={
+		limit ={
+		NOT = { has_province_flag = sob_shishen_land_recovering }
+		has_province_modifier = sob_shishen_land_on
+		}
+		remove_province_modifier = sob_shishen_land_on
+		set_province_flag = sob_wa_complete_tugai
+
+		if = {
+		limit= {owner = {	ai = no			NOT = {
+					estate_loyalty = {
+						estate = estate_sobshishen
+						loyalty = 30
+					}
+				}}}
+				spawn_rebels = {
+			type = sobshishen_rebels
+			size = 2
+		}
+		
+		}
+				if = {
+		limit= {owner = {		ai = no		NOT = {
+					estate_loyalty = {
+						estate = estate_sobshishen
+						loyalty = 30
+					}
+				}}}
+				area = {
+				limit = { has_province_modifier = sob_shishen_land_on
+				NOT = { has_province_flag = sob_shishen_land_recovering }
+				}
+				spawn_rebels = {
+			type = sobshishen_rebels
+			size = 2
+		}
+		
+		}
+		}
+						if = {
+		limit= {
+		
+		owner = {		ai = no		NOT = {
+					estate_loyalty = {
+						estate = estate_sobshishen
+						loyalty = 10
+					}
+				}}}
+				region = {
+				limit = { has_province_modifier = sob_shishen_land_on
+				NOT = { has_province_flag = sob_shishen_land_recovering }
+				}
+				spawn_rebels = {
+			type = sobshishen_rebels
+			size = 2
+		}
+		
+		}
+		}
+		}
+			add_estate_loyalty = {
+			estate = estate_sobshishen
+			loyalty = -15
+		}
+			set_country_flag = sob_shishen_d_loyal
+		if = {
+		limit = { 		       estate_influence = {
+			    estate = estate_sobshishen
+			   influence = 50
+		           }  } 
+					change_estate_land_share = {
+			estate = estate_church
+			share = -1.0
+		}	
+					change_estate_land_share = {
+			estate = estate_nobles
+			share = -1.0
+		}	
+					change_estate_land_share = {
+			estate = estate_burghers
+			share = -1.0
+		}	
+		if = {
+		limit = {OR = {culture_group = east_asian culture_group = chinese_group}  }
+							change_estate_land_share = {
+			estate = estate_sobwarriors
+			share = -1.0
+		}
+					change_estate_land_share = {
+			estate = estate_sobshishen
+			share = 4.0
+		}
+		}
+				if = {
+		limit = {NOT = {OR = {culture_group = east_asian culture_group = chinese_group}  }}
+
+					change_estate_land_share = {
+			estate = estate_sobshishen
+			share =2.0
+		}
+		}
+		
+		}
+				if = {
+		limit = { 		   NOT = {    estate_influence = {
+			    estate = estate_sobshishen
+			   influence = 50
+		           }  } 
+				   }
+				   						add_estate_loyalty = {
+			estate = estate_church
+			loyalty = 10
+		}
+								add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = 10
+		}
+								add_estate_loyalty = {
+			estate = estate_sobshimin
+			loyalty = 10
+		}
+						add_estate_loyalty = {
+			estate = estate_sobwarriors
+			loyalty = 10
+		}
+
+
+		}
+						if = {
+		limit = { 		   NOT = {    estate_influence = {
+			    estate = estate_sobshishen
+			   influence = 20
+		           }  } 
+				   }
+				   
+				   							change_estate_land_share = {
+			estate = estate_sobshishen
+			share = -4.0
+		}
+							change_estate_land_share = {
+			estate = estate_church
+			share = 1.0
+		}	
+					change_estate_land_share = {
+			estate = estate_nobles
+			share = 1.0
+		}	
+					change_estate_land_share = {
+			estate = estate_burghers
+			share = 1.0
+		}	
+		if = {
+		limit = {OR = {culture_group = east_asian culture_group = chinese_group}}
+				change_estate_land_share = {
+			estate = estate_sobwarriors
+			share = 1.0
+		}	
+				   
+				   }
+				   }
+	}
+}
+
+country_event = {
+	id = shishen_estate_events.35
+	title = shishen_estate_events.35.t
+	desc = shishen_estate_events.35.d
+	picture = CHURCH_ESTATE_UPSET_eventPicture
+	
+	 trigger ={
+has_estate_privilege = sob_estate_warrior_land_rights
+OR=  {
+ai = yes
+any_owned_province = {
+has_state_edict = sob_landreform_junhu
+has_province_modifier = sob_shishen_land_on
+}
+
+}
+	 	 OR = {
+	 NOT = { has_country_flag = sob_junhu_prov_d_loyal}
+	 	
+
+had_country_flag = {
+	flag = sob_junhu_prov_d_loyal
+	days = 370
+}
+	 
+	 }
+	 }
+immediate = {
+		clr_country_flag = sob_junhu_prov_d_loyal
+			set_country_flag = sob_junhu_prov_d_loyal
+
+}
+	
+	option = {
+		name = shishen_estate_events.35.a #
+							add_estate_loyalty = {
+			estate = estate_sobwarriors
+			loyalty = 10
+		}
+									add_estate_loyalty = {
+			estate = estate_sobshishen
+			loyalty = -10
+		}
+				change_estate_land_share = {
+			estate = estate_sobshishen
+			share = -1.0
+		}	
+		change_estate_land_share = {
+			estate = estate_sobwarriors
+			share = 1.0
+		}	
+
+				if = {
+		limit = {
+			any_owned_province ={
+			has_province_modifier = sob_shishen_land_on
+			NOT = { has_province_flag = sob_shishen_land_recovering }
+			}
+
+			
+		}
+				if = {
+	limit = {NOT = { has_country_flag =sob_land_reform_start}}
+	add_war_exhaustion = 2
+	}
+		random_owned_province ={
+		limit ={
+		has_province_modifier = sob_shishen_land_on
+		NOT = { has_province_flag = sob_shishen_land_recovering }
+		OR = {
+		has_state_edict = sob_landreform_junhu
+		owner = {NOT = { any_owned_province = {
+		has_state_edict = sob_landreform_junhu
+		has_province_modifier = sob_shishen_land_on
+		}}
+		
+		}
+		}
+		}
+		remove_province_modifier = sob_shishen_land_on
+		set_province_flag = sob_wa_complete_tugai
+		
+		if = {
+		limit= {owner = {	
+				NOT = { has_country_flag = sob_jikong_reform_tooltip_o_3} NOT = { has_global_flag = sob_jikong_reform_tooltip_o_3}
+		NOT = {has_country_modifier = confucianism_reform}
+		ai = no			NOT = {
+					estate_loyalty = {
+						estate = estate_sobshishen
+						loyalty = 40
+					}
+				}}}
+				set_province_flag = sob_shishen_land_recovering
+				spawn_rebels = {
+			type = sobshishen_rebels
+			size = 2
+		}
+		
+		}
+				if = {
+		limit= {owner = {	
+		NOT = { has_country_flag = sob_jikong_reform_tooltip_o_3} NOT = { has_global_flag = sob_jikong_reform_tooltip_o_3}
+		NOT = {has_country_modifier = confucianism_reform}
+		ai = no		NOT = {
+					estate_loyalty = {
+						estate = estate_sobshishen
+						loyalty = 30
+					}
+				}}}
+				area = {
+				limit = { has_province_modifier = sob_shishen_land_on
+				NOT = { has_province_flag = sob_shishen_land_recovering }
+				}
+				set_province_flag = sob_shishen_land_recovering
+				spawn_rebels = {
+			type = sobshishen_rebels
+			size = 2
+		}
+		
+		}
+		}
+						if = {
+		limit= {
+		
+		owner = {	
+		NOT = { has_country_flag = sob_jikong_reform_tooltip_o_3} NOT = { has_global_flag = sob_jikong_reform_tooltip_o_3}
+		NOT = {has_country_modifier = confucianism_reform}
+		ai = no		NOT = {
+					estate_loyalty = {
+						estate = estate_sobshishen
+						loyalty = 20
+					}
+				}}}
+				region = {
+				limit = { has_province_modifier = sob_shishen_land_on
+				NOT = { has_province_flag = sob_shishen_land_recovering }
+				}
+				set_province_flag = sob_shishen_land_recovering
+				spawn_rebels = {
+			type = sobshishen_rebels
+			size = 2
+		}
+		
+		}
+		}
+		}
+		}
+	}
+		option = {
+		name = shishen_estate_events.35.b#
+					add_estate_loyalty = {
+			estate = estate_sobwarriors
+			loyalty = -10
+		}
+											add_estate_loyalty = {
+			estate = estate_sobshishen
+			loyalty = 5
+		}
+						change_estate_land_share = {
+			estate = estate_sobwarriors
+			share = -1.0
+		}	
+					change_estate_land_share = {
+			estate = estate_sobshishen
+			share = 1.0
+		}
+		
+		}
+}
+country_event = {
+	id = shishen_estate_events.45
+	title = shishen_estate_events.42.t
+	desc = shishen_estate_events.42.d
+	picture = CHURCH_ESTATE_UPSET_eventPicture
+	hidden = yes
+	 trigger ={
+any_owned_province = {
+has_province_flag =  sob_shishen_controlled
+
+	 NOT = {has_rebel_faction = sobshishen_rebels}
+	 }
+	 }
+immediate = {
+
+
+every_owned_province = {
+limit = {
+has_province_flag =  sob_shishen_controlled
+NOT = {has_rebel_faction = sobshishen_rebels}
+}
+clr_province_flag = sob_shishen_controlled
+}
+
+
+
+}
+mean_time_to_happen = {
+days = 1
+}
+
+	
+	option = {
+		name = shishen_estate_events.42.a #
+
+	}
+
+}
+
+country_event = {
+	id = shishen_estate_events.42
+	title = shishen_estate_events.42.t
+	desc = shishen_estate_events.42.d
+	picture = CHURCH_ESTATE_UPSET_eventPicture
+	
+	 trigger ={
+any_owned_province = {
+has_rebel_faction = sobshishen_rebels
+had_province_flag = {
+	flag = sob_shishen_controlled
+	days = 370
+}
+	 
+	 
+	 }
+	 }
+mean_time_to_happen = {
+months = 1
+}
+
+	
+	option = {
+		name = shishen_estate_events.42.a #
+		add_prestige = -10
+		every_owned_province = {
+		limit = {
+		had_province_flag = {
+	flag = sob_shishen_controlled
+	days = 370
+}
+has_rebel_faction = sobshishen_rebels
+		
+		}
+						add_province_modifier ={
+		name = sob_shishen_land_on
+		duration = -1
+		
+		}
+		}
+	}
+		option = {
+		name = shishen_estate_events.42.b#
+						add_estate_loyalty = {
+			estate = estate_sobshishen
+			loyalty = -10
+		}
+		add_mil_power = -100
+
+		}
+}
+country_event = {
+	id = shishen_estate_events.36
+	title = church_estate_events.36.t
+	desc = church_estate_events.36.d
+	picture = CHURCH_ESTATE_UPSET_eventPicture
+	
+	 trigger ={
+has_estate_privilege = sob_estate_kuojian_gongchang
+OR=  {
+ai = yes
+any_owned_province = {
+has_state_edict = sob_landreform_jianghu
+has_province_modifier = sob_shishen_land_on
+}
+
+}
+	 	 OR = {
+	 NOT = { has_country_flag = sob_jianghu_prov_d_loyal}
+	 	
+
+had_country_flag = {
+	flag = sob_jianghu_prov_d_loyal
+	days = 370
+}
+	 
+	 }
+	 }
+immediate = {
+		clr_country_flag = sob_jianghu_prov_d_loyal
+			set_country_flag = sob_jianghu_prov_d_loyal
+
+}
+	
+	option = {
+		name = church_estate_events.36.a #
+	add_estate_loyalty = {
+			estate = estate_sobshimin
+			loyalty = 10
+		}
+	add_estate_loyalty = {
+			estate = estate_sobshishen
+			loyalty = -10
+		}
+				change_estate_land_share = {
+			estate = estate_sobshishen
+			share = -1.0
+		}	
+		change_estate_land_share = {
+			estate = estate_sobshimin
+			share = 1.0
+		}	
+				if = {
+		limit = {
+			any_owned_province ={
+			has_province_modifier = sob_shishen_land_on
+			
+			}
+
+			
+		}
+				if = {
+	limit = {NOT = { has_country_flag =sob_land_reform_start}}
+	add_war_exhaustion = 2
+	}
+		random_owned_province ={
+		limit ={
+		NOT = { has_province_flag = sob_shishen_land_recovering }
+		has_province_modifier = sob_shishen_land_on
+		OR = {
+		has_state_edict = sob_landreform_jianghu
+		owner = {NOT = { any_owned_province = {
+		has_state_edict = sob_landreform_jianghu
+		has_province_modifier = sob_shishen_land_on
+		}}
+		
+		}
+		}
+		}
+		remove_province_modifier = sob_shishen_land_on
+		set_province_flag = sob_wa_complete_tugai
+		
+		if = {
+		limit= {owner = {
+		NOT = { has_country_flag = sob_jikong_reform_tooltip_o_3} NOT = { has_global_flag = sob_jikong_reform_tooltip_o_3}
+		NOT = {has_country_modifier = confucianism_reform}
+		ai = no			NOT = {
+					estate_loyalty = {
+						estate = estate_sobshishen
+						loyalty = 40
+					}
+				}}}
+				set_province_flag = sob_shishen_land_recovering
+				spawn_rebels = {
+			type = sobshishen_rebels
+			size = 2
+		}
+		
+		}
+				if = {
+		limit= {owner = {	
+		NOT = { has_country_flag = sob_jikong_reform_tooltip_o_3} NOT = { has_global_flag = sob_jikong_reform_tooltip_o_3}
+		NOT = {has_country_modifier = confucianism_reform}
+		ai = no		NOT = {
+					estate_loyalty = {
+						estate = estate_sobshishen
+						loyalty = 30
+					}
+				}}}
+				area = {
+				limit = { has_province_modifier = sob_shishen_land_on
+				NOT = { has_province_flag = sob_shishen_land_recovering }
+				}
+				set_province_flag = sob_shishen_land_recovering
+				spawn_rebels = {
+			type = sobshishen_rebels
+			size = 2
+		}
+		
+		}
+		}
+						if = {
+		limit= {
+		
+		owner = {	
+		NOT = { has_country_flag = sob_jikong_reform_tooltip_o_3} NOT = { has_global_flag = sob_jikong_reform_tooltip_o_3}
+		NOT = {has_country_modifier = confucianism_reform}
+		ai = no		NOT = {
+					estate_loyalty = {
+						estate = estate_sobshishen
+						loyalty = 20
+					}
+				}}}
+				region = {
+				limit = { has_province_modifier = sob_shishen_land_on
+				NOT = { has_province_flag = sob_shishen_land_recovering }
+				}
+				set_province_flag = sob_shishen_land_recovering
+				spawn_rebels = {
+			type = sobshishen_rebels
+			size = 2
+		}
+		
+		}
+		}
+		}
+		}
+	}
+		option = {
+		name = church_estate_events.36.b#
+					add_estate_loyalty = {
+			estate = estate_sobshimin
+			loyalty = -10
+		}
+			add_estate_loyalty = {
+			estate = estate_sobshishen
+			loyalty = 5
+		}
+						change_estate_land_share = {
+			estate = estate_sobshimin
+			share = -1.0
+		}	
+					change_estate_land_share = {
+			estate = estate_sobshishen
+			share = 1.0
+		}
+		
+		}
+}
+
+
+
+
+province_event = {
+	id = shishen_estate_events.14
+	title = church_estate_events.14.t
+	desc = church_estate_events.14.d
+	picture = CHURCH_ESTATE_UPSET_eventPicture
+	
+	
+	 trigger ={
+	 always = no
+	 has_estate = estate_sobshishen
+	 OR = {
+	 NOT = { has_country_flag = sob_shishen_i_loyal}
+	 	
+
+had_country_flag = {
+	flag = sob_shishen_i_loyal
+	days = 365
+}
+	 
+	 }
+	 
+	 }
+
+	
+	option = {
+		name = church_estate_events.13.a #
+		
+				clr_country_flag = sob_shishen_i_loyal
+		set_country_flag = sob_shishen_i_loyal
+		
+		if = {
+		limit = {
+        calc_true_if = {
+ has_church_aspect = huai_rou_aspect
+  has_church_aspect = demilitarization_belief_aspect
+   has_church_aspect = zongjiao_kuanrong_aspect
+    has_church_aspect = only_books_aspect
+	 has_church_aspect = chongwenyanwu_aspect
+	  has_church_aspect = mysticism_belief_aspect
+
+	amount = 1
+}
+NOT = {
+       calc_true_if = {
+ has_church_aspect = huai_rou_aspect
+  has_church_aspect = demilitarization_belief_aspect
+   has_church_aspect = zongjiao_kuanrong_aspect
+    has_church_aspect = only_books_aspect
+	 has_church_aspect = chongwenyanwu_aspect
+	  has_church_aspect = mysticism_belief_aspect
+
+	amount = 2
+}
+}
+}
+	add_estate_loyalty = {
+			estate = estate_sobshishen
+			loyalty = 3
+		}
+}
+		if = {
+		limit = {
+        calc_true_if = {
+ has_church_aspect = huai_rou_aspect
+  has_church_aspect = demilitarization_belief_aspect
+   has_church_aspect = zongjiao_kuanrong_aspect
+    has_church_aspect = only_books_aspect
+	 has_church_aspect = chongwenyanwu_aspect
+	  has_church_aspect = mysticism_belief_aspect
+
+	amount = 2
+}
+NOT = {       calc_true_if = {
+ has_church_aspect = huai_rou_aspect
+  has_church_aspect = demilitarization_belief_aspect
+   has_church_aspect = zongjiao_kuanrong_aspect
+    has_church_aspect = only_books_aspect
+	 has_church_aspect = chongwenyanwu_aspect
+	  has_church_aspect = mysticism_belief_aspect
+
+	amount = 3
+}}
+}
+	add_estate_loyalty = {
+			estate = estate_sobshishen
+			loyalty = 6
+		}
+}
+
+		if = {
+		limit = {
+        calc_true_if = {
+ has_church_aspect = huai_rou_aspect
+  has_church_aspect = demilitarization_belief_aspect
+   has_church_aspect = zongjiao_kuanrong_aspect
+    has_church_aspect = only_books_aspect
+	 has_church_aspect = chongwenyanwu_aspect
+	  has_church_aspect = mysticism_belief_aspect
+
+	amount = 3
+}
+}
+	add_estate_loyalty = {
+			estate = estate_sobshishen
+			loyalty = 9
+		}
+}
+
+	}
+}
+
+
+country_event = {
+	id = shishen_estate_events.12
+	title = estate_disasters.10.t
+	desc = estate_disasters.10.d
+	picture = COSSACK_ESTATE_UPSET_eventPicture
+	is_triggered_only = yes
+	
+	immediate = {
+		set_country_flag = estate_shihou_triggered
+	}
+	
+	option = {
+		name = estate_disasters.10.a	
+				create_independent_estate = {
+			estate = estate_shihou
+			play_as = no
+		}
+		every_owned_province = {
+		limit = { OR = {culture_group = east_asian  culture_group = chinese_group }}
+		add_nationalism = 25
+				spawn_rebels = {
+    type = nationalist_rebels
+    size = 25
+    leader = rebel_preacher
+}
+		}
+		add_country_modifier = {
+			name = "serf_desertion"
+			duration = 5475
+		}
+	}
+}

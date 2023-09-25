@@ -1,0 +1,143 @@
+sob_shushengtongzhi_dis = {
+	potential = {
+
+has_country_flag = sob_shushengtongzhi
+
+		NOT = {has_country_modifier = confucianism_reform}
+	  
+	}
+	
+	
+	can_start = {
+
+has_country_flag = sob_shushengtongzhi
+
+
+
+	}
+	
+	can_stop = {
+	OR = {
+	AND = {
+DIP = 5
+always = no
+}
+							custom_trigger_tooltip = {
+				tooltip = sob_shangren_reform_7
+has_country_flag = sob_all_land_for_shangren
+}
+}
+	}
+	
+	
+	progress = {
+
+		modifier = {
+			factor = 0.05
+		NOT = {DIP = 5}
+     
+
+	num_of_owned_provinces_with = {
+							has_estate = estate_sobshishen
+							value = 5
+						}
+		  
+		}
+		modifier = {
+			factor = 0.025
+			NOT = {DIP = 5}
+			
+						estate_influence = {
+			estate = estate_sobshishen
+			influence = 70
+		    }
+
+
+		
+		}
+		modifier = {
+			factor = 0.025
+			NOT = {DIP = 5}
+			NOT = {  trade_income_percentage = 0.4}
+		}
+		modifier = {
+			factor = 0.03
+			NOT = {DIP = 5}
+NOT = { trade_efficiency = 0.35}
+		}
+		
+		modifier = {
+			factor = 0.1
+			NOT = {DIP = 5}
+			NOT ={			estate_influence = {
+			estate = estate_nobles
+			influence = 50
+		    }
+			}
+		}
+		modifier = {
+			factor = -0.085
+            ai = yes
+		}
+
+
+
+		modifier = {
+			factor = -0.015
+DIP = 5
+		}
+
+		
+		modifier = {
+			factor = -0.015
+			AND = {
+			estate_influence = {
+			estate = estate_burghers
+			influence = 50
+		    }
+			}
+		}
+			
+	}
+	
+	can_end = {
+	OR = {
+	has_country_modifier = confucianism_reform
+	AND = {
+ DIP = 5
+ months_of_ruling = 60
+ OR = {
+ navy_tradition = 50
+ trade_income_percentage = 0.4
+ }
+ }
+							custom_trigger_tooltip = {
+				tooltip = sob_shangren_reform_7
+has_country_flag = sob_all_land_for_shangren
+}
+
+}
+	}
+	
+
+	modifier = {
+	global_unrest = 1
+	manpower_recovery_speed = -0.05
+	army_tradition_decay = 0.005
+	trade_efficiency = -0.25
+	imperial_mandate = -0.1
+ 	min_autonomy = 20
+	 	land_forcelimit_modifier = -0.05
+	global_trade_goods_size_modifier = -0.1
+	}	
+	
+	on_monthly = {
+		events = {
+		
+		}
+		random_events = {
+			1000 = 0
+			#
+		}
+	}
+}

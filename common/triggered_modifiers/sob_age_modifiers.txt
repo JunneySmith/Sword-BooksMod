@@ -1,0 +1,157 @@
+sob_age1_buff = {
+	potential = {
+		is_emperor_of_china =yes
+		
+		has_dlc = "Mandate of Heaven"
+		current_age = age_of_discovery
+	}
+
+	trigger = {
+current_age = age_of_discovery
+harmony = 50
+	tibet_region = {
+	type = all
+	owned_by = ROOT
+	}
+OR = {
+				 					custom_trigger_tooltip = {
+				tooltip = sob_conquer_mongol_empire_tumu_mission
+				has_country_flag = sob_tumubao_dajie
+				}
+AND = {
+OR = {
+NOT = {exists = KHA}
+KHA = {
+is_subject_of = ROOT
+}
+}
+OR = {
+NOT = {exists = OIR}
+OIR = {
+is_subject_of = ROOT
+}
+}
+}
+}
+	}
+monthly_splendor = 2
+	imperial_mandate = 0.15
+}
+sob_age2_buff = {
+	potential = {
+		is_emperor_of_china =yes
+		current_age = age_of_reformation
+		has_dlc = "Mandate of Heaven"
+	}
+
+	trigger = {
+current_age = age_of_reformation
+innovativeness = 15
+num_of_harmonized = 5
+NOT= {
+any_country = {
+OR = {
+num_of_heavy_ship = ROOT
+num_of_light_ship = ROOT
+}
+}
+
+}
+	}
+monthly_splendor = 2
+	imperial_mandate = 0.15
+}
+
+
+sob_age3_buff = {
+	potential = {
+		is_emperor_of_china =yes
+		current_age = age_of_absolutism
+		has_dlc = "Mandate of Heaven"
+	}
+
+	trigger = {
+current_age = age_of_absolutism
+num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+value = 50
+superregion = india_superregion
+
+}
+NOT = { any_province = {
+OR= {
+superregion = china_superregion
+superregion = east_indies_superregion
+superregion = far_east_superregion
+region = australia_region
+}
+
+}
+owner = {
+capital_scope = {
+superregion = europe_superregion
+
+}
+
+}
+}
+	}
+monthly_splendor = 2
+	imperial_mandate = 0.15
+}
+
+
+sob_age4_buff = {
+	potential = {
+		is_emperor_of_china =yes
+		current_age = age_of_revolutions
+		has_dlc = "Mandate of Heaven"
+	}
+
+	trigger = {
+	
+current_age = age_of_revolutions
+has_first_revolution_started = yes
+OR = {
+is_revolution_target = yes
+revolution_target_exists = no
+
+}
+great_power_rank = 1
+num_of_cities = 400
+NOT= {
+any_province = {
+superregion = north_america_superregion
+owner = {
+NOT = {culture_group = chinese_group}
+NOT = {culture_group = east_asian}
+}
+
+}
+
+}
+	}
+monthly_splendor = 2
+	imperial_mandate = 0.15
+}
+
+sob_age5_buff = {
+	potential = {
+		is_emperor_of_china =yes
+		
+		has_dlc = "Mandate of Heaven"
+	}
+
+	trigger = {
+	NOT= {current_age = age_of_discovery}
+	NOT= {current_age = age_of_reformation}
+NOT= {current_age = age_of_revolutions}
+NOT= {current_age = age_of_absolutism}
+adm_power = 200
+dip_power = 200
+mil_power = 200
+NOT = {great_power_rank = 2 }
+legitimacy_equivalent = 80
+	}
+monthly_splendor = 2
+	imperial_mandate = 0.15
+}

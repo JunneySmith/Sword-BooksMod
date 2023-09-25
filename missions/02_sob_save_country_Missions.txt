@@ -1,0 +1,331 @@
+sob_empire_of_china_save_mission_1= {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+	OR = {culture_group = east_asian culture_group = chinese_group}
+	is_subject = no
+	NOT = { tag = DAI}
+	NOT = { tag = CZH}
+			started_in = 1662.6.1
+	}
+	sob_china_fuguojieyi_mission = {
+		icon = mission_defy_the_dragon
+		position = 1
+		trigger = {
+		NOT = { 
+		num_of_cities = 2
+		}
+		NOT = { 
+			has_global_flag = sob_ming_fall_global_flag_1
+		}
+		OR= {
+		ai = no
+		NOT = {
+		any_country = {
+		ai = no
+		OR = {culture_group = east_asian culture_group = chinese_group}
+		
+		}
+		
+		}
+		
+		}
+		OR = {
+		any_country = {
+		is_emperor_of_china = yes
+		NOT = {OR = {culture_group = east_asian culture_group = chinese_group}}
+		ROOT = {
+		NOT = {	army_size = PREV}
+		
+		}
+		}
+		ai = no
+		}
+		}
+		effect = {
+		set_country_flag = sob_fuguojieyi_flag_1
+		set_government_rank = 2
+		remove_government_reform = celestial_empire
+		set_country_flag = sob_tugai_reform_done
+		
+		hidden_effect = {
+		if = {
+		limit = { QNG = { OR = {culture_group = east_asian culture_group = chinese_group} }}
+		QNG = {
+		change_primary_culture = manchu_evenks
+		
+		every_owned_province = {
+		limit = { OR = {
+		culture = manchu_new
+		culture = manchu_han
+		culture = manchu_chinese
+		}}
+		change_culture = manchu_evenks
+		}
+		
+		}
+		
+		}
+		
+		
+		every_province = {
+				limit = {
+					area = taiwan_area
+					is_empty = yes
+				}
+				add_core = ROOT
+				cede_province = ROOT
+		}
+		west_indian_ocean_region={
+		discover_country = ROOT
+		
+		}
+		south_atlantic_region={
+		discover_country = ROOT
+		
+		}
+north_east_pacific_region ={
+		discover_country = ROOT
+		
+		}
+		north_atlantic_area ={
+		discover_country = ROOT
+		
+		}
+		west_african_coast_sea_area ={
+		discover_country = ROOT
+		
+		}
+		south_atlantic_area ={
+		discover_country = ROOT
+		
+		}
+		east_pacific_ocean_area ={
+		discover_country = ROOT
+		
+		}
+		polynesian_triangle_area ={
+		discover_country = ROOT
+		
+		}
+		philipine_sea_area ={
+		discover_country = ROOT
+		
+		}
+		}
+		 country_event = { id = sob_save_mng_event.1 } 
+         add_prestige = -50
+		 set_country_flag = sob_china_fuguojieyi_mission_flag
+		custom_tooltip = sob_china_fuguojieyi_mission_flag_tooltip
+		QNG  = {
+		set_country_flag = sob_mng_fleed_to_out
+		}
+		add_treasury = 3000
+		add_manpower = 50
+		add_sailors = 20000
+			add_country_modifier = {
+				name = "sob_mng_fleed"
+				duration = 7300
+			}
+			add_country_modifier = {
+				name = "sob_mng_fleed_bad"
+				duration = -1
+			}
+						add_country_modifier = {
+				name = "sob_mng_flee_end"
+				duration = -1
+			}
+
+		}
+	}
+	sob_zuishicanghuang_cimiaosui = {
+		icon = mission_expel_the_moriscos
+		position = 2
+required_missions = { sob_china_fuguojieyi_mission }
+		trigger = {
+		num_of_transport = 24
+			738 = {
+		NOT = {	num_of_units_in_province = {
+    who = ROOT
+ 
+    amount = 1
+}
+		}
+		}
+					2155 = {
+		NOT = {	num_of_units_in_province = {
+    who = ROOT
+ 
+    amount = 1
+}
+		}
+		}
+							2154 = {
+		NOT = {	num_of_units_in_province = {
+    who = ROOT
+ 
+    amount = 1
+}
+		}
+		}
+		}
+		effect = {
+		set_country_flag = sob_mng_fleed_zhengbianjundui_flag
+		remove_country_modifier = sob_mng_flee_end
+		country_event = { id = sob_save_mng_event.2 } 
+		custom_tooltip = sob_mng_fleed_zhengbianjundui_tooltip
+		}
+	}
+		sob_chongxinjueqi_mission = {
+		icon = mission_mnd_dai_temples
+		position = 3
+required_missions = { sob_zuishicanghuang_cimiaosui }
+		trigger = {
+
+			stability = 3
+			prestige = 0
+			num_of_cities = 25
+			
+			num_of_allies = 3
+						army_strength = {
+	who = QNG
+	value = 0.3
+}
+		}
+		effect = {
+custom_tooltip = sob_china_fuguojieyi_mission_flag_7_tooltip
+remove_country_modifier = sob_mng_fleed_bad
+set_country_flag = sob_mng_fleed_settled_flag
+
+		if ={
+		limit = { has_country_flag = sob_mng_usa_flee}
+		country_event = { id = sob_save_mng_event.3 } 
+		}
+		if ={
+		limit = { has_country_flag = sob_mng_europe_flee}
+		country_event = { id = sob_save_mng_event.4 } 
+		}
+		if ={
+		limit = { has_country_flag = sob_mng_nanyang_flee}
+		country_event = { id = sob_save_mng_event.5 } 
+		}
+		}
+	}
+	sob_chinese_emperor_lijingtuzhi_mission = {
+		icon = mission_mnd_dai_imperial_citadel
+		position = 4
+required_missions = { sob_chongxinjueqi_mission }
+		trigger = {
+		is_great_power =yes
+			total_development = 1000
+			government_rank = 3
+			OR = {
+				custom_trigger_tooltip = {
+				tooltip = sob_mng_europe_flee_tooltip		
+				NOT = { has_country_flag = sob_mng_europe_flee}
+				}
+				151 = {
+				owned_by = ROOT
+				}
+			
+			
+			
+			
+			}
+						OR = {
+				custom_trigger_tooltip = {
+				tooltip = sob_mng_usa_flee_tooltip		
+				is_random_new_world = no
+				NOT = { has_country_flag = sob_mng_usa_flee}
+				}
+			california_region = {
+			type = all
+			
+			owned_by = ROOT
+			
+			}
+			
+			
+			
+			
+			}
+						OR = {
+				custom_trigger_tooltip = {
+				tooltip = sob_mng_nanyang_flee_tooltip		
+				NOT = { has_country_flag = sob_mng_nanyang_flee}
+				}
+				596 = {
+				owned_by = ROOT
+				}
+			
+			
+			
+			
+			}
+		}
+		effect = {
+		custom_tooltip =sob_china_fuguojieyi_mission_flag_3_tooltip
+						if ={
+		limit = { has_country_flag = sob_mng_usa_flee}
+		add_treasury = 2000
+		add_manpower = 50
+		add_sailors = 50
+		QNG = {
+		add_war_exhaustion = 20
+		}
+		country_event = { id = sob_save_mng_event.6 } 
+		}
+		if ={
+		limit = { has_country_flag = sob_mng_europe_flee}
+		anatolia_region = {
+		add_core = ROOT
+		}
+		country_event = { id = sob_save_mng_event.7 } 
+        
+		}
+		if ={
+		limit = { has_country_flag = sob_mng_nanyang_flee}
+		country_event = { id = sob_save_mng_event.8 } 
+        		add_treasury = 2000
+		add_manpower = 50
+		add_sailors = 50
+		QNG = {
+		add_war_exhaustion = 20
+		}
+		}
+		}
+	}
+	sob_chinese_emperor_again_mission = {
+		icon = mission_mnd_dai_imperial_citadel
+		position = 5
+required_missions = { sob_chinese_emperor_lijingtuzhi_mission }
+		trigger = {
+		total_development = 2000
+			is_neighbor_of = QNG
+			army_strength = {
+	who = QNG
+	value = 3
+}
+		}
+		effect = {
+					add_country_modifier = {
+				name = "sob_mng_justice_year"
+				duration = 3650
+			}
+		custom_tooltip = sob_china_fuguojieyi_mission_clear_flag
+		clr_country_flag = sob_china_fuguojieyi_mission_flag
+		set_country_flag = sob_china_clear_fuguojieyi_mission_flag
+		country_event = { id = sob_save_mng_event.9 } 
+		remove_country_modifier = sob_mng_fleed_sad
+
+if = {
+limit = { QNG = {OR = {culture_group = east_asian culture_group = chinese_group} }}
+QNG = { change_primary_culture = manchu_evenks
+add_mandate = -50
+}
+}
+		}
+	}
+
+}

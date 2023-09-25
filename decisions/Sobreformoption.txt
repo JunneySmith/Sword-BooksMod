@@ -1,0 +1,668 @@
+country_decisions = {
+	sob_become_zhuhou_1 = {
+		potential = {
+			is_subject_of_type = celestial_client_state
+			
+			ai = yes
+		}
+		allow = {
+			liberty_desire = 60
+			NOT = { capital_scope = { superregion = china_superregion}}
+		}
+		effect = {
+		overlord = {
+		  		create_subject = {
+			subject_type = zhuhou_state
+			subject = ROOT
+		}
+		
+		}
+		}
+		ai_will_do = {
+			factor = 2000
+		}
+	}
+	sob_tributary_state_ask_for_help = {
+		potential = {
+		any_country = {
+		is_emperor_of_china = yes
+		}
+		OR = {
+		is_subject = no
+	
+		overlord = {
+	is_emperor_of_china = yes
+	NOT = {	is_in_war = {
+    defender_leader = ROOT
+}
+		}
+		}
+		}
+		is_emperor_of_china = no
+		OR = {culture_group = east_asian culture_group = chinese_group}
+		
+		}
+		allow = {
+		OR= {
+		NOT = { war_score = -20}
+		ai = no
+		}
+							custom_trigger_tooltip = {
+				tooltip = sob_emperor_trouble_tooltip		
+		OR= {
+		
+	is_subject = yes
+		NOT = { has_country_flag = sob_had_asked_falg}
+		 	
+
+had_country_flag = {
+	flag = sob_had_asked_falg
+	days = 3650
+}
+		}				
+				any_country = {
+				is_emperor_of_china = yes
+		NOT = {		is_in_war = {
+    defender_leader = ROOT
+}
+}
+	NOT = {	has_country_flag = sob_emperor_trouble }
+		}
+		}
+			any_country = {
+	NOT = {
+	OR = {
+is_subject_of_type = zhuhou_state
+is_subject_of_type = zhuhou_claim_state
+is_subject_of_type = sob_zhongyuan_claim_state
+is_subject_of_type = sob_celestial_member
+is_subject_of_type = sob_celestial_member_2
+is_subject_of_type = celestial_client_state
+
+	}
+	}
+		is_in_war = {
+    defender_leader = ROOT
+	attacker_leader = THIS
+}
+
+}
+		}
+		effect = {
+		if = {
+		limit = { 
+		OR = {
+		is_subject = no
+		any_country = {
+is_emperor_of_china = yes
+ai = no
+
+}
+		}
+
+		}
+		random_country = {
+		limit= { is_emperor_of_china = yes}
+		
+		set_country_flag = sob_emperor_trouble
+		country_event = { id = sobchineseempire.100860017 }
+		}
+				clr_country_flag = sob_had_asked_falg
+		set_country_flag = sob_had_asked_falg
+		}
+				if = {
+		limit = { is_subject = yes 
+any_country = {
+is_emperor_of_china = yes
+ai = yes
+
+}
+		}
+		random_country = {
+		limit = { OR = {culture_group = east_asian culture_group = chinese_group}
+		is_emperor_of_china = yes
+		}
+join_all_defensive_wars_of = ROOT
+		
+		}
+		}
+		}
+		ai_will_do = {
+			factor = 2000
+		}
+	}
+	
+		sob_chinese_taoist_school_choose = {
+		potential = {
+        religion = sob_taoist_religion
+         ai = no
+		}
+		allow = {
+        religion = sob_taoist_religion
+		  dip_power =260
+		}
+		effect = {
+		  add_dip_power = -260
+
+				    country_event = { id = sob_chinese_school_events.21 } 
+
+
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	
+	
+			sob_sob_empire_zhuhou_creation = {
+		potential = {
+        OR = {culture_group = east_asian  culture_group = chinese_group }
+		is_subject_of_type = celestial_client_state
+		 ai = yes
+		}
+		allow = {
+		overlord = {
+		OR = {culture_group = east_asian  culture_group = chinese_group }
+		is_emperor_of_china = yes
+		
+		
+		}
+			overlord = {
+		NOT = {  	truce_with = ROOT}
+		
+		}
+             		is_subject_of_type = celestial_client_state
+		 ai = yes
+		 liberty_desire = 65
+		}
+		effect = {
+         		overlord = {
+            						create_subject = {
+		subject_type = zhuhou_state
+		subject = ROOT}
+		
+		
+		}
+
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+
+	
+	
+	sob_mng_reform_configurartion = {
+		potential = {
+	
+          ai = no
+		  MNG = { ai = yes}
+		  NOT = { has_global_flag = sob_ming_configured}
+		}
+		allow = {
+  ai = no
+  MNG = { ai = yes}
+		}
+		effect = {
+		set_global_flag  = sob_ming_configured
+			    country_event = { id = sob_fubing_events.70 } 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	
+
+		sob_fubing_or_church_config = {
+		potential = {
+		NOT = { has_country_flag = sob_already_fubing_choosen}
+		religion = sob_taoist_religion
+            	OR = {
+	has_country_modifier = sob_mongol_banners
+	has_country_modifier = sob_mongol_banners_1
+     }
+		}
+		allow = {
+		ai = no
+            	OR = {
+	has_country_modifier = sob_mongol_banners
+	has_country_modifier = sob_mongol_banners_1
+     }
+		}
+		effect = {
+		set_country_flag = sob_already_fubing_choosen
+            country_event = { id = sob_fubing_events.7 } 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+		sob_zhongyuan_mode_change = {
+		potential = {
+          OR = {culture_group = east_asian culture_group = chinese_group}
+		}
+		allow = {
+             ai = no
+		}
+		effect = {
+         country_event = { id = sob_fubing_events.23 } 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+		sob_han_reform_gov_jueyi_republic = {
+		potential = {
+           government = republic
+		  NOT= { has_reform = sob_chinese_republic_mechanic}
+          OR = {culture_group = east_asian culture_group = chinese_group
+		  is_emperor_of_china = yes
+		  }
+		}
+		allow = {
+
+		OR = {
+		ai = no
+		has_country_flag = sob_ai_auto_gov_on
+		}
+		
+		}
+		effect = {
+		set_country_flag = sob_newly_setted_government_republic
+		  		  change_government = sob_chinese_republic
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+		sob_han_reform_gov_jueyi_monarchy_rev = {
+		potential = {
+
+         has_reform = revolutionary_empire_reform
+          OR = {culture_group = east_asian culture_group = chinese_group
+		  is_emperor_of_china = yes
+		  }
+    NOT = {has_reform = sob_chinese_monarchy_mechanic}
+		}
+		allow = {
+
+		OR = {
+		ai = no
+		has_country_flag = sob_ai_auto_gov_on
+		}
+		
+		}
+		effect = {
+		set_country_flag = sob_newly_setted_government_rev
+		  		  change_government = sob_chinese_monarchy
+				  add_government_reform = revolutionary_empire_reform
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	sob_han_reform_gov_jueyi_republic_rev = {
+		potential = {
+		
+         has_reform = revolutionary_republic_reform
+          OR = {culture_group = east_asian culture_group = chinese_group}
+        NOT= { has_reform = sob_chinese_republic_mechanic}
+		}
+		allow = {
+
+		OR = {
+		ai = no
+		has_country_flag = sob_ai_auto_gov_on
+		}
+		
+		}
+		effect = {
+		set_country_flag = sob_newly_setted_government_rev_rep
+		  		  change_government = sob_chinese_republic
+				  add_government_reform = revolutionary_republic_reform
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	sob_han_reform_gov_jueyi = {
+		potential = {
+		OR = {
+           government = monarchy
+		  government = tribal
+		   }
+          OR = {culture_group = east_asian culture_group = chinese_group
+		 is_emperor_of_china = yes
+		  }
+         NOT = {has_reform = sob_chinese_monarchy_mechanic}
+		}
+		allow = {
+		OR = {
+		has_country_modifier = confucianism_reform
+
+        NOT = { has_reform=celestial_empire }
+		
+		
+		}
+		OR = {
+		ai = no
+		has_country_flag = sob_ai_auto_gov_on
+		}
+		
+		}
+		effect = {
+		set_country_flag = sob_newly_setted_government
+		  		  change_government = sob_chinese_monarchy
+		   add_government_reform =  quash_noble_power_reform
+		   add_meritocracy = 80
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	
+		confu_correct_sob_duhu = {
+		potential = {
+		OR = {
+            NPS = {
+			is_subject_of = ROOT
+			ai = yes
+				NOT = {is_subject_of_type = tributary_state }
+			NOT = { is_subject_of_type = sob_duhu_vassal}
+			}
+			            WPS = {
+			is_subject_of = ROOT
+			ai = yes
+				NOT = {is_subject_of_type = tributary_state }
+			NOT = { is_subject_of_type = sob_duhu_vassal}
+			}
+			}
+		}
+		allow = {
+      		OR = {
+            NPS = {
+			is_subject_of = ROOT
+				NOT = {is_subject_of_type = tributary_state }
+			NOT = { is_subject_of_type = sob_duhu_vassal}
+			}
+			            WPS = {
+			is_subject_of = ROOT
+			NOT = {is_subject_of_type = tributary_state }
+			NOT = { is_subject_of_type = sob_duhu_vassal}
+			}
+			}
+		}
+		effect = {
+          if = {
+		  limit = {
+		            NPS = {
+			is_subject_of = ROOT
+			ai = yes
+				NOT = {is_subject_of_type = tributary_state }
+			NOT = { is_subject_of_type = sob_duhu_vassal}
+			}
+		  }
+		  
+		create_subject = {
+		subject_type = sob_duhu_vassal
+		subject = NPS
+		}
+		  }
+          if = {
+		  limit = {
+		            WPS = {
+			is_subject_of = ROOT
+			ai = yes
+				NOT = {is_subject_of_type = tributary_state }
+			NOT = { is_subject_of_type = sob_duhu_vassal}
+			}
+		  }
+		  
+		create_subject = {
+		subject_type = sob_duhu_vassal
+		subject = WPS
+		}
+		  }
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	
+	
+	
+		sob_chongjian_faction = {
+		potential = {
+		OR = {
+		AND = {
+		has_country_flag = sob_comestate_gongwuyuan
+		OR = {
+		NOT = { has_faction = sob_wen_a}
+		has_faction = bureaucrats
+		}
+		}
+		
+		
+		
+		}
+            
+		}
+		allow = {
+		OR = {
+		AND = {
+		has_country_flag = sob_comestate_gongwuyuan
+		OR = {
+		NOT = { has_faction = sob_wen_a}
+		has_faction = bureaucrats
+		}
+		}
+		AND = {
+		has_country_flag = sob_comestate_sobwarriors
+		OR = {
+		NOT = { has_faction = sob_wu_a}
+		has_faction = temples
+		}
+		}
+		AND = {
+		has_country_flag = sob_chinese_gongnv
+		OR = {
+		NOT = { has_faction = sob_gongnv_faction}
+		has_faction = enuchs
+		}
+		}
+		
+		AND = {
+		has_country_flag = sob_comestate_sobshimin
+
+		NOT = { has_faction = sob_balance_a}
+
+		}
+		
+		}
+		}
+		effect = {
+		 if = {
+		 limit = {   		AND = {
+		has_country_flag = sob_comestate_sobwarriors
+         OR = {
+		NOT = { has_faction = sob_wu_a}
+        has_faction = temples
+		
+		}
+		}   }
+           remove_faction = temples
+		 add_faction = sob_wu_a
+		 
+		 }
+		 if = {
+		 limit = {   		AND = {
+		has_country_flag = sob_chinese_gongnv
+         OR = {
+		NOT = { has_faction = sob_gongnv_faction}
+        has_faction = enuchs
+		
+		}
+		}   }
+           remove_faction = enuchs
+		 add_faction = sob_gongnv_faction
+		 
+		 }
+		 if = {
+		 limit = {   		AND = {
+		has_country_flag = sob_comestate_sobshimin
+
+		NOT = { has_faction = sob_balance_a}
+
+		
+		
+		}   }
+
+		 add_faction = sob_balance_a
+		 
+		 }
+		 if = {
+		 limit = {   		AND = {
+		has_country_flag = sob_comestate_gongwuyuan
+         OR = {
+		NOT = { has_faction = sob_wen_a}
+        has_faction = bureaucrats
+		
+		}
+		}   }
+           remove_faction = bureaucrats
+		 add_faction = sob_wen_a
+		 
+		 }
+
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	
+
+			sob_establish_warriors_commity = {
+		potential = {
+		always = no
+		OR = {
+        NOT = {has_country_flag = sob_comestate_sobwarriors}
+		has_faction = temples
+		}
+       has_estate = estate_sobwarriors
+ 
+		}
+		allow = {
+		OR = {
+		mil_tech = 17
+		AND = {
+		has_country_modifier = confucianism_reform
+		has_country_flag = sob_all_land_for_warriors
+		
+		}
+		}
+         stability = 1
+estate_influence = {
+			estate = estate_sobwarriors
+			influence = 65
+		}
+		}
+		effect = {
+		custom_tooltip = confucianism_reform_tooltip_12
+		custom_tooltip = confucianism_reform_tooltip_14
+		 set_country_flag = sob_comestate_sobwarriors
+		 remove_faction = temples
+		 add_faction = sob_wu_a
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	sob_establish_shimin_commity = {
+		potential = {
+		always = no
+       has_estate = estate_sobshimin
+   NOT = {has_country_flag = sob_comestate_sobshimin}
+		}
+		allow = {
+				OR = {
+		dip_tech = 17
+		AND = {
+		has_country_modifier = confucianism_reform
+		OR = {
+		has_country_flag = sob_all_land_for_sobshimin
+		
+		has_country_flag = sob_all_land_for_shangren
+		}
+		}
+		}
+         stability = 1
+estate_influence = {
+			estate = estate_sobshimin
+			influence = 65
+		}
+		}
+		effect = {
+		custom_tooltip = confucianism_reform_tooltip_14
+		custom_tooltip = confucianism_reform_tooltip_13
+		 set_country_flag = sob_comestate_sobshimin
+		 remove_faction = enuchs
+		 add_faction = sob_balance_a
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+		sob_establish_gongwuyuan_commity = {
+		potential = {
+        has_estate = estate_sobshimin
+		OR = {
+         NOT = {has_country_flag = sob_comestate_gongwuyuan}
+		 has_faction = bureaucrats
+		 }
+		}
+		allow = {
+		OR = {
+		NOT = { is_year = 960}
+		AND = {
+        OR = {
+		adm_tech = 26
+       AND = {
+	   has_country_modifier = confucianism_reform
+	   adm_tech = 17
+	   }
+		
+		}
+         stability = 1
+NOT = {estate_influence = {
+			estate = estate_sobshishen
+			influence = 65
+		}
+		}
+		}
+		}
+		}
+		effect = {
+		 set_country_flag = sob_comestate_gongwuyuan
+		 remove_faction = bureaucrats
+		 add_faction = sob_wen_a
+		 if = {
+		 limit = { NOT = {has_country_modifier = confucianism_reform}}
+		 			add_country_modifier = {
+				name = "confucianism_reform"
+				duration = -1
+			}
+		 
+		 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	}

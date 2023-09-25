@@ -1,0 +1,127 @@
+namespace = sob_waizu_events
+country_event = {
+	id = sob_waizu_events.1
+	title = "sob_waizu_events.1.t"
+	desc = "sob_waizu_events.1.d"
+	picture = GIFTS_TO_EMPEROR_eventPicture
+	is_triggered_only = yes
+	immediate = {
+	set_country_flag =sob_waizu_had_revolution
+	
+	}
+
+	option = {
+		name = "sob_waizu_events.1.b"
+		hidden_effect = { 
+		set_emperor_of_china = xxx
+		}
+		custom_tooltip = sob_not_emperor_any_more
+		every_subject_country = {
+		add_liberty_desire = 60
+	}
+	}
+
+}
+
+country_event = {
+	id = sob_waizu_events.4
+	title = "sob_waizu_events.4.t"
+	desc = "sob_waizu_events.4.d"
+	picture = GIFTS_TO_EMPEROR_eventPicture
+	is_triggered_only = yes
+	immediate = {
+	set_country_flag =sob_waizu_had_revolution
+	
+	}
+
+	option = {
+		name = "sob_waizu_events.4.b"
+end_disaster = sob_china_low_mandate
+add_stability = 3
+	}
+
+}
+
+
+
+country_event = {
+	id = sob_waizu_events.5
+	title = "sob_waizu_events.5.t"
+	desc = "sob_waizu_events.5.d"
+	picture = REFORM_eventPicture
+
+	trigger = {
+	has_reform = celestial_empire
+       has_country_flag = sob_waizu_dailudang_celestial_empire
+	  NOT = { has_country_flag = sob_month_on_1}
+	  any_province = {
+	has_province_modifier = sob_shishen_land_on
+	  NOT = { owned_by = ROOT}
+	  controlled_by = ROOT
+	  NOT = {
+	  any_neighbor_province = {
+	  	fort_level = 1
+		OR = {
+		NOT = {controlled_by = ROOT}
+		owner = { war_with = ROOT}
+		}
+	  }
+	  
+	  }
+had_province_flag = {
+	flag = sob_month_on_province_1
+	days = 120
+}
+	  }
+	
+	}
+	immediate = {
+	set_country_flag = sob_month_on_1
+	
+	}
+	
+ 			option = {
+		name = "sob_waizu_events.5.a" #Go with the reforms
+ 
+		clr_country_flag = sob_month_on_1
+		random_province = {
+		limit= {
+	has_province_modifier = sob_shishen_land_on
+	  NOT = { owned_by = ROOT}
+	  controlled_by = ROOT
+	  NOT = {
+	  any_neighbor_province = {
+	  	fort_level = 1
+		OR = {
+		NOT = {controlled_by = ROOT}
+		owner = { war_with = ROOT}
+		}
+	  }
+	  
+	  }
+had_province_flag = {
+	flag = sob_month_on_province_1
+	days = 120
+}
+		}
+		remove_core = owner
+		cede_province = ROOT
+		add_core = ROOT
+		
+		}
+				every_province = {
+		limit = { 	has_province_modifier = sob_shishen_land_on
+	  NOT = { owned_by = ROOT}
+	  controlled_by = ROOT
+has_province_flag = sob_month_on_province_1
+
+		}
+		clr_province_flag = sob_month_on_province_1
+		}
+
+	}
+
+
+}
+
+

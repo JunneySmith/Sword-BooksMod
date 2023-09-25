@@ -1,0 +1,70 @@
+########################################
+# Celestial Empire Factions
+########################################
+# Cleared and replaced by Empire of China 
+# at start of game if MoH DLC is active.
+
+sob_wu_a =
+{
+allow = {
+	always = yes
+}
+	#Allows to fight wars.
+	monarch_power = MIL
+	always = yes
+
+	modifier = 
+	{
+drill_gain_modifier = 0.2
+army_tradition = 0.25
+	}
+}
+
+sob_balance_a =
+{
+allow = {
+	always = yes
+}
+	monarch_power = DIP
+	always = yes
+
+	#Merchants, Traders, Expansions.
+	modifier = 
+	{
+great_project_upgrade_cost = -0.15
+	spy_offence = 0.25
+	}
+}
+
+sob_gongnv_faction =
+{
+allow = {
+	always = yes
+}
+	monarch_power = DIP
+	always = yes
+
+	#Merchants, Traders, Expansions.
+	modifier = 
+	{
+heir_chance = 0.75
+yearly_absolutism = 0.25
+monarch_lifespan = 0.2
+	}
+}
+
+sob_wen_a =
+{
+allow = {
+	always = yes
+}
+	monarch_power = ADM
+	always = yes
+
+	#buildings, Internal Stability.
+	modifier = 
+	{
+	governing_capacity_modifier = 0.1
+	global_tax_modifier = 0.1
+	}
+}
