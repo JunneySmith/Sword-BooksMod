@@ -1,5 +1,7 @@
-# sword-booksmod-5.2-1.35
+# sword-booksmod
 Mod for Europa Universalis IV
+
+Master Branch version：V5.2 for 1.35
 
 Steam Workshop link：
 
