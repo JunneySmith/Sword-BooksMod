@@ -1,93 +1,0 @@
-﻿l_english:
-estate_sobshishen_religious_state:0"—RYeýV¶R"
-estate_sobshishen_independent_inquisition:1"^yLwŒ˜î•t‹NO"
-estate_sobshishen_new_world_mission:0"nxËz°e'YF–„v.OYeIm¨R"
-estate_sobshishen_papal_emissary:0"Ye—RyrO"
-estate_sobshishen_clerical_ministers:0"^yLw'Yã"
-estate_sobshishen_clerical_oversight:0"$ESTATE_NAME$Ñv¡r"
-estate_sobshishen_land_rights:0"$ESTATE_NAME$†˜0WCg"
-estate_sobshishen_inwards_perfection:0"…Q1WKNS"
-estate_sobshishen_enforced_interfaith_dialogue:0":V6R—RYeô•ùRÝ‹"
-estate_sobshishen_enforced_one_faith:0":VëßuNáOðN"
-estate_sobshishen_for_the_faith:0"ib.VÂríp"
-estate_sobshishen_statutory_rights:0"6–BSÕlšRCg)R"
-estate_sobshishen_monopoly_of_incense:0"„W­eq™™"
-estate_sobshishen_monopoly_of_incense_effect_tooltip:2"§RNÎN§Yq™™§!·ƒ—V6eeQ§!"
-estate_sobshishen_monopoly_of_incense_mod:1"„W­eq™™"
-desc_estate_sobshishen_monopoly_of_incense_mod:1"ýV¶RybÆQ†NëXÅuùRq™™uµN„v„W­eCg0"
-estate_sobshishen_monopoly_of_wool:0"„W­eŠÛk"
-estate_sobshishen_monopoly_of_wool_effect_tooltip:2"§RNÎN§YŠÛk§!·ƒ—V6eeQ§!"
-estate_sobshishen_monopoly_of_wool_mod:1"„W­eŠÛk"
-desc_estate_sobshishen_monopoly_of_wool_mod:1"ýV¶RybÆQ†NëXÅuùRŠÛkuµN„v„W­eCg0"
-estate_sobshishen_monopoly_of_wine:0"„W­eR‘‰|"
-estate_sobshishen_monopoly_of_wine_effect_tooltip:2"§RNÎN§YR‘‰|§!·ƒ—V6eeQ§!"
-estate_sobshishen_monopoly_of_wine_mod:1"„W­eR‘‰|"
-desc_estate_sobshishen_monopoly_of_wine_mod:1"ýV¶RybÆQ†NëXÅuùRR‘‰|uµN„v„W­eCg0"
-estate_sobshishen_monopoly_of_slaves:0"„W­etY¶–"
-estate_sobshishen_monopoly_of_slaves_effect_tooltip:2"§RNÎN§YtY¶–§!·ƒ—V6eeQ§!"
-estate_sobshishen_monopoly_of_slaves_mod:1"„W­etY¶–"
-desc_estate_sobshishen_monopoly_of_slaves_mod:1"ýV¶RybÆQ†NëXÅuùRtY¶–8f„v„W­eCgÿåNnxÝO	g³Y„vºN›RïS«ˆˆmw0"
-estate_sobshishen_for_the_faith_effect_tooltip:2"SVŒTVïzbVYe’VVböeF–›QëXl§G+5%§!\n\nSVŒTVïzŒTVYe’VjPb¾0R15t^öeF–›QëXl§R-5%§!"
-estate_sobshishen_build_temple_in_y:0"(W[agenda_province.GetName]tQú^Nµ^Üb<y¿k"
-estate_sobshishen_build_manufactory_in_y:0"(W[agenda_province.GetName]ú^.Nµ^åT:W"
-estate_sobshishen_build_university_in_y:0"(W[agenda_province.GetName]tQú^NNb'YfR"
-estate_sobshishen_give_us_money:0"eˆ46–BS„v!.s"
-estate_sobshishen_stop_convert_province_x:0"jPbk[agenda_province.GetName].OYe"
-estate_sobshishen_war_exhaustion:0"D©RëXÅuîOYb‰N4xOW"
-estate_sobshishen_recover_stability:0"3zšRœQQgéy^"
-estate_sobshishen_increase_stability:0"ÐcGSýV¶R3zšR¦^"
-estate_sobshishen_reduce_overextension:0"M–NOÇ¦^ib.V"
-estate_sobshishen_restore_devotion:0"b`YIY.s¦^"
-estate_sobshishen_root_out_heresy:0"(W[agenda_country.GetUsableName]„vib.VYeS"
-estate_sobshishen_relations_with_pope:0"9e„UNYe—R„vsQû|"
-estate_sobshishen_restore_the_holy_see:0"b`Y1Wµ^"
-estate_sobshishen_crush_religious_revolts:0"jPbkë³RVïz"
-estate_sobshishen_protect_brethren:0"ÝO²bbìN(W[agenda_province.GetName]„vTÞw"
-estate_sobshishen_propagate_religion:3"(W[agenda_trade_node.GetTradeNodeName]8f‚‚¹p.O­d[Root.GetReligionNoun]"
-estate_sobshishen_relations_with_dotf:1"9e„UN[Root.Religion.GetName]áOðNˆR²bw„vsQû|"
-estate_sobshishen_develop_x:0"ÐcØš[agenda_province.GetName]z6e"
-estate_sobshishen_hire_advisor:0"Xw÷‹NMOLˆ?eŒ˜î•"
-estate_sobshishen_fire_advisor:0"ã‰XwbýV„v›Q‹NŒ˜î•"
-estate_sobshishen_propagate_religion_trigger_tooltip:1"Nb	g§Y[agenda_trade_node.GetTradeNodeName]§!8f‚‚¹pƒôV…Q„v	gºNESOO„vwýNáOIY§Y[Root.Religion.GetName]§!0"
-estate_sobshishen_monopoly_of_incense_revoke_tooltip:0"ÎN§Y™™°…§!·ƒ—V„vuµN6eeQb`Y†N"
-estate_sobshishen_monopoly_of_wool_revoke_tooltip:0"ÎN§YŠÛk§!·ƒ—V„vuµN6eeQb`Y†N"
-estate_sobshishen_monopoly_of_wine_revoke_tooltip:0"ÎN§YR‘‰|§!·ƒ—V„vuµN6eeQb`Y†N"
-estate_sobshishen_monopoly_of_slaves_revoke_tooltip:0"ÎN§YtY¶–§!·ƒ—V„vuµN6eeQb`Y†N"
-estate_sobshishen_corruption:0"àeÆ‰P%"
-estate_sobshishen_corruption_desc:0"ØšHeÐl„výV¶R:ghVmc³R†NëXÅu(WµO:Y›Q7bW0WŒT.S7b³R¨Rbœg¹eb—„v6e·ƒÿëXÅu‰BlbìNQVNb—0"
-estate_sobshishen_restore_devotion:0"Ç:V„výV¶Rýw›R"
-estate_sobshishen_restore_devotion:0"ØšHeÐl„výV¶R:ghV(WˆVY¹eb—©‹ëXÅua0R¾–*XÿÖNìN‰BlVeQôfYëXÅu6–µu˜RÚPÛeQLˆ?eû|ßu0"
-estate_sobshishen_build_temple_in_y_desc:0"ëXÅufeÃObìN(W[agenda_province.GetName]îOú^Nµ^RO„v„v<yÜbXÿÙ7hÖNìN„váO’VìN1S	gT<h„v:WNb(Wå‹wýNÛLˆÆ–O0"
-estate_sobshishen_build_manufactory_in_y_desc:0"[agenda_province.GetName]„vëXÅu‰BlbìND©RNµ^°e[agenda_province.GetManufactory]„vú^¾‹0ÖNìNðXðyÙS=fNrÞV¥b0NšS„v•bDÿýwYOå‹w„v[agenda_province.GetTradeGoodsName]úQãSPžX0"
-estate_sobshishen_build_university_in_y_desc:0"ëXÅu‰BlbìND©R[agenda_province.GetName]ú^ËzNNb°e„v'YfRÿåN¿OýV¶RgOÀy„vºNMbïSåN=eØNfR9ÎN-N×SÊv0"
-estate_sobshishen_develop_x_desc:0"ëXÅu‰BlbìN:NÖNìN„v†˜0W[agenda_province.GetName]„vAucƒÛLˆ•bD0"
-estate_sobshishen_hire_advisor_desc:0"ëXÅuˆV^g[Root.Monarch.GetTitle]Xw÷‹NMO°e„vLˆ?eŒ˜î•0"
-estate_sobshishen_fire_advisor_desc:0"[Root.Mil_Advisor.GetTitle][Root.Mil_Advisor.GetName](WgÑ„v›Q‹NùRVrO®‹Nž±†NëXÅuÿ©‹ÖNìN>f—V^—8^àeåw0ÖNìN‰BlbìNã‰Ç–[Root.Mil_Advisor.GetHerHim]ÿ"
-estate_sobshishen_stop_convert_province_x_desc:0"ëXÅuùRNáOwçuíuXR(WŽNbìNýV¶Ra0RçVQ†ÿÅbÃV.OYeIm¨ROüRôØSqN0ÖNìN‰BlbìNÎNuIm(W[agenda_province.GetName]„vºNVËYNKbÿjPbk.OYeIm¨Rÿ"
-estate_sobshishen_war_exhaustion_desc:0"ëXÅuùRŽN[Root.GetUsableName]ÑS¨R„v‚YdkY„vb‰N(`ðX‹S0ÖNìN:VÈp‰BlbìNb`YýV¶RCQlKNTQÛLˆNNek„vib.V0wNyr+RcúQ†NýV¶R”^ùRåNëXÅu:N,gÿÇ·VØšgÍ‘weg1úWBS‹N¡R0"
-estate_sobshishen_recover_stability_desc:0"ëXÅuûRBl•EN3zšR0WIN°RúWBS0ÖNìN‰BlbìNÍ‘ú^[Root.GetUsableName]„véy^0"
-estate_sobshishen_increase_stability_desc:0"ëXÅuS[Root.GetUsableName]éy^„v3zšRÆ‰:NýVKNÍ‘‹N0ÖNìNZWc²‹:N‡v^ÅV‰˜‚Wñbw»lÿîO·V‰Q'`ÿåNFd1>yO¨Raƒ0"
-estate_sobshishen_reduce_overextension_desc:0"ëXÅuhˆ:ybýV„vLˆ?e¹RÏ‘òT6q¾0RgP–†N0ÖNìNðXfbýVÅV‰˜–™HQ‚fjPùRYib.Vwl:NéTúV(W,gW„vßu»l0wNhˆ°súQùRteTib.VbœgåTjOg'Y„vtQ±0"
-estate_sobshishen_restore_devotion_desc:0"ëXÅuNán[Root.Monarch.GetTitle]ùR—RYe‹NNtQô::ÿ‰Bl(W[Root.GetUsableName]b`Yp`SV„v—RYe`N×O0"
-estate_sobshishen_root_out_heresy_desc:0"ëXÅu²‹:N¡lýwYt‹YVïzáOðN(W[agenda_country.GetUsableName]'YLˆvQS=fùRbýVT‰Š„v·sal0ÖNìN‰BlËzsSÇ‘ÖSLˆ¨Rÿ&^†˜Ù›NáOðNVïzKNºNÍ‘ÔIQf0wN	gsQ›Q‹NLˆ¨R”^SVåNëXÅu6–µu>múQ„vÑv›Q:N–™0"
-estate_sobshishen_relations_with_pope_desc:0"ëXÅuùSo`Ye—RùRbýV:SsQèl0ÖNìN|TTÇéTúVN[PAP.Capital.GetCapitalName]„vsQû|ÿÍ‘3ubìNËYÈu=fT†Ú‹„vúWcw’V„vËz:W0"
-estate_sobshishen_restore_the_holy_see_desc:0"Ye—RNQESOO(WWlšOëXÅua0R2aha0ÖNìNs`BlbìNÇ.^©RYe—R:YÞV8lR`KNÎWegO1Wµ^ÞVRVŸSMO0"
-estate_sobshishen_crush_religious_revolts_desc:0"ëXÅu‰BlbìN¥c³uVïzRPR0"
-estate_sobshishen_protect_brethren_desc:0"ëXÅuÊ`ç`ŽN(W[agenda_country.GetAdjective]„vßu»lwùRNb^S„v[agenda_province.GetName]-NÖNìN„v[Root.Religion.GetName]DQV„vë³R0ÖNìN‰BlbìNËzIRÇ‘ÖSLˆ¨RSÖNìNã‰QeúQegÿøvsQ›Q‹NLˆ¨R”^SVåNëXÅu6–µu˜RÚP:N–™0"
-estate_sobshishen_propagate_religion_desc:0"ëXÅuckÃOObìN)R(u(W[agenda_trade_node.GetTradeNodeName]8f‚‚¹p„v„W­e0WMOŽNå‹0W:S…Q.O­dckáO0"
-estate_sobshishen_relations_with_dotf_desc:0"[agenda_country.GetUsableName]=fMckS[Root.Religion.GetName]áOðN„vÍ‘‰!X’W0ëXÅu^gbýVýw R:VNvQsQû|ÿåN ReQÖNìN„v‹NN0"
-estate_sobshishen_land_rights_desc:1"‚YœgÖNìNNýw(WˆcˆNÖNìN„vW0WN‰QImêñTÿëXÅuSàeÕleSLˆÖNìN„v¾|^yLw10"
-estate_sobshishen_religious_state_desc:0"Ç:VŒ—RYe‹N¡R„vOHQCgÿbìNSŠbbìN„výV¶RâVÓubN*NÝQZw›Rôf:V„vteSO0"
-estate_sobshishen_independent_inquisition_desc:0"ëXÅu„vN*NÍ‘‰1ûN1S=fT[Root.Monarch.GetTitle]ÐcúQú^®‹0SÙÍySOû|ckÄ‰SïSåNŽrSÙNÇzv^©‹ÖNìN„vzfgaôf‹Y0W:N[Root.GovernmentName]g¡RÿFOÙ7hmNOO—VÖNìN—VåNN×SØbmg0WT[Root.Monarch.GetTitle]ÛŠ0"
-estate_sobshishen_new_world_mission_desc:0"°e'YF–M0Wý=fVYe’Vÿ=föeP©‹ëXÅu:NÖNìN&^»S[Root.Religion.GetName]ÙNwckáOðN†N0"
-estate_sobshishen_papal_emissary_desc:0"Ye‡v„vO‚‚NÆR¢cNÅN”^(WbýV'Y×S0kÎÿ[Root.Monarch.GetTitle]Ø”^å‹ÝOÁ‹uÎNÖNìN„v2R­eÿv^NNQr^‰mSV0WëXÅuNYe‡v„vsQû|0"
-estate_sobshishen_clerical_ministers_desc:0"‚YœgbìN,TÎNëXÅu„vú^®‹v^NSÖNìNsQÃV„v‹N¡R>e(W–™MOÿbìNS(Wßu»lN·ƒÊvàewzÿv^ýwÁ‰Á‹[Root.GetReligionNoun]„váOðN(WlO-Nôf:N3zúV0"
-estate_sobshishen_clerical_oversight_desc:0"=UNýwnxÝO`Nï`Õl«ˆŒR‹YgbLˆ„v¹eÕl=fAQ¸‹ëXÅuegÑvcw[Root.Monarch.GetTitle]eSLˆvQ³QšR0"
-estate_sobshishen_inwards_perfection_desc:0"[Root.GetReligionNoun]KN,gCN=fîO‰Q…Q(Ww^—ø‹,‚Yøvÿdkô•å‚	gcƒ‰Šÿ¦N³Q^—egêfk›RVg0"
-estate_sobshishen_for_the_faith_desc:0"wck„váO’VÆ‰:NáOðNwb:N4YIr'Y‹N0"
-estate_sobshishen_enforced_one_faith_desc:0"[Root.GetReligionNoun]=f=UN„vckáOCN=fN‰N„v‹NžRÿbìN„váOðNNýwT±›N,TÎNVïzŒTVYeðXó—„vºN¥YOSÿ"
-estate_sobshishen_monopoly_of_incense_desc:0"(WbìN„v—RYe`N×O-Ng×S0kÎ„vq™™‡v^™™™e=føvSVf5„v0ëXÅuó`‰µc6R™™™e„vuµNÿåNOƒRìNb:NNÍyi`PÿwN=fˆmwÁT0"
-estate_sobshishen_monopoly_of_wool_desc:0"nf„vŠÛk=flOìNNïSb:„vFUÁT0ëXÅuó`‰¡rtŠÛk„vµNúQåNnxÝOÖNìN„vŠ²	gEQ³„vÛkÑSŠ¬QÿwN=f,T)Y1u‹T0"
-estate_sobshishen_monopoly_of_wine_desc:0"×OÝ‹ô‹„v‹YÿdUR‘=fºN.„vÿwa„„R‘=f^yR„v0SV6qÿëXÅug4ngµc6RÙèR„v6eeQ0©‹bìNHywyÖNìN:NbìNYN†N³Y„vµNÁTÿ"
-estate_sobshishen_monopoly_of_slaves_desc:0"bìN„v^yf—‰šRgmyNyåNs^o`ÖNìN„v`kp0äNëXÅuŒcµctY¶–8f=fnxÝOmyÁTEQ³›O”^„v”^ªcËe0"
-estate_sobshishen_statutory_rights_desc:0"jO:N(W	g—‰öe·ƒ—VÖNìN=ec„vÞV¥bÿ[Root.Monarch.GetTitle]TaˆcˆN6–BSïSÂ‰„vCg)RÿÙOO[Root.Monarch.GetHerHis]CgZ×S0R%N<h„vP–6R0"

@@ -1,80 +1,54 @@
 ﻿l_english:
-sob_shushengtongzhi_dis:0 "FUNNhh"
-sob_quefa_baohu_shibing_dis:0 "fkëX4xµN"
-sob_cleansing_nobles_dis:0 "‡v²RPKg"
-sob_shicigefu_dis:0 "KbåTNd+"
-manchu_new:0 "mlS"
-east_asian:0 "Il"
-sob_prc_chinese_group:0 "-NNSlÏe(PRC)"
-sob_prc_chinese_culture:0 "-NNSlÏe(PRC)"
-sob_prc_han:0 "IlÏe"
-sob_prc_manchu_culture:0 "ánÏe"
-sob_prc_mongol_culture:0 "™„äSÏe"
-sob_prc_tibetan_culture:0 "Ï…Ïe"
-sob_prc_xinan_shaoshu_culture:0 "‰WSTlÏe"
-sob_statment_reform_tooltip_1:0 "ŒRb‡v¶RûN¡R¿uS·ƒ—V‡v²RùR9ei—„v=ec0"
-sob_statment_reform_tooltip_2:0 "ŒRbòTfRûN¡R¿uS·ƒ—V.S7bùR9ei—„v=ec0"
-sob_statment_reform_tooltip_3:0 "ŒRb>yOûN¡R¿uS·ƒ—V›Q7bùR9ei—„v=ec0"
-sob_statment_reform_tooltip_4:0 "ŒRbÏuNmûN¡R¿uS·ƒ—VFUºNùR9ei—„v=ec0"
-sob_obj_discover_america_tooltip:0 "(W°e'YF–åb	gN*NwýN0"
-sob_obj_discover_america2_tooltip:0 "(W°e'YF–bWSŽ2m	gN*NwýN0"
-sob_obj_discover_america3_tooltip:0 "NóS	N*NWSŽ2mýV¶RsQû|(W75åNN0"
-sob_obj_discover_america4_tooltip:0 ",gýVbD–¸^ýVµc6RhQèŽ2mb–:g°e'YF–wýN0"
-sob_obj_discover_america5_tooltip:0 "ÑS°sNb	gMOŽNWS^—ØšŸS„vwýN0"
-sob_obj_discover_america6_tooltip:0 "(W‰'k=nãSåb	gÍ‘‹W9‚êS0"
-sob_statment_reform_tooltip_5:0 "N¹e^ýV„vúQ°s(W‰¹eVwp¨R0'k2m'YSýV¶R?eœ^·u·u>múQOâVMRŽVN¹eÿûRBl8fŒTTwßv:gO0wnflOŒTfRwR¨‹º‹Nw-NýVºNåVŽN'k2m„v`N×OŒTaÆ‹bV`0"
-XZY:0 "-NŸSg÷^"
-XZY_ADJ:0 "-NŸSg÷^"
-XZQ:0 "ê»l:S"
-XZQ_ADJ:0 "ê»l:S"
-sob_reform_mission:0 "lÁZÛwþv"
-sob_conquer_mongol_empire_mission:0 "D–¸^Nb	g?–Sðl‡eSÄu„výV¶RÿNNb	g™„äS0W:S„vW0Wý1u,gýVbD–¸^ýVµc6RÿND–¸^ýVNýwåb	g…Ç20ìrËz>PT0"
-sob_conquer_mongol_empire_1_mission:0 "TwTßu»l™„äS^ýV…Ç100t^"
-sobzzqevent.1.t:0 "ÛwþvNu"
-sobzzqevent.1.d:0 "0W¹e?eCgŒT-N.Y?eCg(WN›Nî•˜˜N„v²Qz	göePO–öeô•ïy=tv^rÑS0"
-sob_shisuhua_reform_splendor_tooltip_5:0 "‚Yœgåb	g…Ç800¹p‰Lq¹ppeÿ)Y‹T9ei—SNQM–NO3zšRÿlwˆmw800¹p‰Lq¹ppeÿN)Y‹T9ei—SOhQýVRÂˆININM–NO10ÿP%¦^M–NO50‚Yœgåb	gSŽN800¹p‰Lq¹ppeRÍNSˆmw3zšRÿNNÐc›Ockb—buff0"
+sob_shushengtongzhi_dis:0 "Frustrated Estate: Merchant"
+sob_quefa_baohu_shibing_dis:0 "Frustrated Estate: Warriors"
+sob_cleansing_nobles_dis:0 "Decadent Estate: Royal Family"
+sob_shicigefu_dis:0 "Frustrated Estate: Handicraftsman"
+manchu_new:0 "Outter Dongbei"
+east_asian:0 "Hannese"
+sob_prc_chinese_group:0 "Chinese People(PRC)"
+sob_prc_chinese_culture:0 "Chinese People(PRC)"
+sob_prc_han:0 "Chinese Han"
+sob_prc_manchu_culture:0 "Chinese Manchu"
+sob_prc_mongol_culture:0 "Chinese Mongol"
+sob_prc_tibetan_culture:0 "Chinese Tibetan"
+sob_prc_xinan_shaoshu_culture:0 "Chinese South-West Minorities"
+sob_new_chinese_identity_title:0 "Establish New Chinese Identity"
+sob_new_chinese_identity_desc:0 "Establish New Chinese Identity , in a country admire Equality in his Funding Statement, we can establish a new Indetity in Chinese Culture Circle---Chinese People."
 
-sobzzqevent.2.t:0 "?eCgteT"
-sobzzqevent.2.d:0 "–NwbýV‡eSŒT«ŽýN²‹T„vlØSÿbìNnVËYŠegŠY„vÇ-N.Y)YgËeLˆ?eäN0"
+sob_chinese_movingin:0 "Hannese from middle land" 
+sob_chinese_gov:0 "150% Administration Efficency" 
+sob_chinese_gov_2:0 "120% Administration Efficency" 
+sob_chinese_gov_3:0 "100% Administration Efficency" 
+sob_land_jiangnan_jingji_mission_title:0 "Developing Focus" 
+sob_land_jiangnan_jingji_mission_desc:0 "" 
+sob_land_jiangnan_fazhan_mission_title:0 "Yingtian Project" 
+sob_land_jiangnan_fazhan_mission_desc:0 "" 
+sob_harmonized_dharmic_title:0 "Harmonized Hindusim" 
+sob_harmonized_dharmic_desc:0 "" 
 
-sob_zzq_union_title:0 "ê»l:S"
-sob_zzq_union_title_plural:0 "ê»l:S"
-sob_zzq_union_is_our:0 "§Y$NAME$§! =fbìN„vê»l:S."
-sob_zzq_union_long_desc:1 "ê»l:Sÿ(Wê»l:S…Q1uSV0WlÏe	clINŸSRŒTlÏe.OßuõLˆºNllIN0"
-sob_tributary_events.95599.t:0 "ê»l:Sú^Ëzÿ"
-sob_tributary_events.95599.d:0 "Ç¾‹Ëzê»l:SSÍ‘SV0WlÏe.Oßuÿ°s(W-NýVºN=fbìN'YqQŒTýV„vZW:V›RÏ‘0"
+XZY:0 "Chinese Court"
+XZY_ADJ:0 "Chinese Court"
+sob_dynasty_union_title:0 "Chinese Court"
+sob_dynasty_union_title_plural:0 "Chinese Court"
+sob_dynasty_union_is_our:0 "§Y$NAME$§! is our Chinese Court."
+sob_dynasty_union_long_desc:1 "Chinese Court is a special vassal , Chinese people can keep their tradition and indentity in some cases."
+sob_tributary_events.95588.t:0 "New Dynasty!"
+sob_tributary_events.95588.d:0 "Chinese Empire has fall aparted.Now we are the controller of the Dragon Throne."
+sob_tributary_events.95588.b:0 "To Victory!"
+sob_chinese_dynasty_union_modifier:0 "Chinese Wealth"
+sob_zzq_union_title:0 "Autonomous Region"
+sob_zzq_union_title_plural:0 "Autonomous Region"
+sob_zzq_union_is_our:0 "§Y$NAME$§! is our Autonomous Region."
+sob_zzq_union_long_desc:1 "Autonomous Region is a special vassal , Chinese people can keep their tradition and indentity in some cases."
+sob_zhongyuan_court_title:0 "Establish Chinese Court"
+sob_zhongyuan_court_desc:0 "hinese Empire has fall aparted.Now we are the controller of the Dragon Throne."
 
+XZQ:0 "Chinese Autonomous Region"
+XZQ_ADJ:0 "Chinese Autonomous Region"
+sob_zizhiqu_title:0 "Establish Chinese Autonomous Region"
+sob_zizhiqu_desc:0 "hinese Empire has fall aparted.Now we are the controller of the Dragon Continent ."
+sobzzqevent.1.t:0 "Political Conflict"
+sobzzqevent.1.d:0 "Sometimes the local and central government will have conflict in some ways."
 
-sob_zizhiqu_title:0 "ú^Ëz-NŸSê»l:S"
-sob_zizhiqu_desc:0 "Ç¾‹Ëzê»l:SSÍ‘SV0WlÏe.Oßuÿ°s(W-NýVºN=fbìN'YqQŒTýV„vZW:V›RÏ‘0"
-
-
-sob_trimod_direction_title:0 "NVKNýVÿ'YgO"
-sob_trimod_direction_desc:0 "ìSÆ–hQè)Ygé…ãÿßuNnxšR!K0"
-ob_tributary_events.13.t:0 "'YgO"
-sob_tributary_events.13.d:0 "TýVOã”^ìS2UGlZw^y¬Nÿ°s(W)YgïSåNnxšR¥cNeg2Nt^Nb‰Bl„v!ÁT0"
-
-sob_dynasty_union_title:0 "-NŸSg÷^"
-sob_dynasty_union_title_plural:0 "-NŸSg÷^"
-sob_dynasty_union_is_our:0 "§Y$NAME$§! =fbìN„v-NVg÷^."
-sob_dynasty_union_long_desc:1 "-NŸSg÷^=fNÍyyrŠkbVV„vD–¸^ÿ1uYegVgwNbú^Ëz„v‹sgRú^ÿ(W²NúQ‡v QTÿ-NýV„vºNlïSåN(WNšRz¦^NÝOcêñT„v‡eSŒT?e»l.Oßu0"
-sob_tributary_events.95588.t:0 "°e‹sgú^Ëzÿ"
-sob_tributary_events.95588.d:0 "-NýV1Y»S†NÖNgTNWWW0WÿÙGrW0W1Y»S†N-NŸSºNNbô‹«Ž)Y‹T„vN)YKNPR0–NwbìN›Q–„vïQËeŒTSV0Wyrr‚„vÑy>N6R¦^„vÍ‘ú^ÿµb—bck(Wætã‰ÿßu»lck(WnxËzÿFOÙGrW0W	gNwåVŽN^ýV,gW„v`N×O0ËåNÊ‘Ÿ^ÿÑ‘åNQ¡NÿbìNNbú^Ëz„v-NŸSg÷^SåNIlºNNbðysQ…Q0W:S:N9h,gÿÅV‰˜µb6R-NýVëXÅuùRŽN^ýVvQÖN0W:SCg›R„vn0NÇ°s(Wÿ`Nï`ŽNwÕ‹)RÊvRM‘!jV„v-NýVëXÅu(W—V0RÑy>N6R„vbú‹KNTÿÌwV†NÖNìN”^SVHeàV„výV¶Rÿ&^†˜NwÖNìNNbßu»l„vºNlSSŽN°eVgwNÿÙg'Y0W R†NbìNú^Ëzßu»l„v¦^ÿ(WÖNìN„v.^©RNmNætã‰†NˆVY0W¹eµb—b¿R›R0"
-sob_tributary_events.95588.b:0 "Ù=f[ROOT.Culture.GetName]„vÜw)R!"
-sob_chinese_dynasty_union_modifier:0 "-NŸS0ÌR"
-SOB_MGE_ideas:0 "™„äSýøStõV"
-SOB_MGE_ideas_bonus:2 "™„äSýøSÄ–ÃV"
-
-SOB_MGE_ideas_start:2 "™„äSýøS.Oßu"
-sob_guard_succession_1:0 "Æ–Cg.Oßu"
-sob_guard_succession_2:0 "Æ–Cg.Oßu"
-sob_guard_succession_3:0 "Æ–Cg.Oßu"
-sob_guard_succession_4:0 "Æ–Cg.Oßu"
-sob_guard_succession_5:0 "Æ–Cg.Oßu"
-sob_guard_succession_6:0 "Æ–Cg.Oßu"
-sob_guard_succession_7:0 "Æ–Cg.Oßu"
-
-sob_zhongyuan_court_title:0 "ú^Ëz-NŸSg÷^"
-sob_zhongyuan_court_desc:0 "Vg†N-NNS^ýVNb	gW0WKNTÿbìNïSåNÇ(WsQ…Q0W:S¾‹Ëz-NVg÷^„v¹eVú^Ëzßu»lÿÙmNOObìN„vßu»lw·ƒ—V-NýV‡v^4YTˆ0-NŸSg÷^=fNÍyyrŠkbVV„vD–¸^ÿ1uYegVgwNbú^Ëz„v‹sgRú^ÿ(W²NúQ‡v QTÿ-NýV„vºNlïSåN(WNšRz¦^NÝOcêñT„v‡eSŒT?e»l.Oßu0"
-sob_new_chinese_identity_title:0 "ú^Ëz°e-NýVºNl²‹TSOû|"
-sob_new_chinese_identity_desc:0 "ˆmd–†NeRJRÿˆmd–†N‹SëÿžR°s†NlÏes^Ir„vbìNïSåN:N-NNS‡eSWÿÑyŽbÄu	ÿ„vºNìN&^eghQ°e„v-NNSlÏe²‹Tÿ©‹ÙGrW0WN„vºNìN8lÜ(WN*Nê1ulINŒTŒŽKN„vO'YýV¦^uImÑSUSN»S0ÙS‰V•^ˆm-VNšN0W:S„vÛwþv²Qz0"
+sobzzqevent.2.t:0 "Reorganized Society"
+sobzzqevent.2.d:0 "With the changes in our national indentity and culture,we use Chinese Empire system to organize our country."

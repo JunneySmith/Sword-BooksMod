@@ -1,4 +1,4 @@
-name="Sword and Books5.1.52 Chinese for 1.35 local"
+name="Sword and Books5.2 for 1.35"
 tags={
 	"Balance"
 	"Events"
@@ -10,6 +10,6 @@ tags={
 	"Religion"
 	"Translation"
 }
-version="5.1.52"
+version="5.2.0"
 supported_version="1.35.*"
-remote_file_id="1184867552"
+remote_file_id="846671075"

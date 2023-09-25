@@ -1,213 +1,199 @@
 ﻿l_english:
-sob_same_nation:0 "TlÏe"
-sob_same_tech_group:0 "T‡eSW"
-sob_option_events.1.abc:0 "AIêú^ýVê¨R ReQ^ýV¾‹n"
-sob_option_events.1.bca:0 "AI‡v^=f&TO6eg!ýV¾‹n"
-sob_fubing_events.24.t:0 "wýNIQY"
-sob_fubing_events.24.d:0 "cíu„v›Q‹NÜw)R©‹bìN‡eS„vwýNY×SŸ‚0‚YœgbìN„vb‰NRpe(W50åNNÿR°s(WbìNNb	g:YÖS„v,g‡eSwýNýSËzsSRV^SbìN0FOOWˆmo`=fLeºNSNQÆ‰bìNòTÏu·ƒ—V„vwýN`S	gb‰NRpe0"
-sob_mod_reform_taoist_religion_title:0 "QSKN‰N"
-sob_mod_reform_taoist_religion_desc:0 "QSKN‰NÿbìNïSåN	ébN*N—RYeÿjO:N¥cNeg„výVYeÑSUS¹eT0"
-sob_fubing_events.24.a:0 "‹Yˆmo`0"
-sob_taoist_religion_center_of_reformation:0 "SYe.OS-NÃV"
-sob_fubing_events.23.t:0 "NSY!k'YF–†˜W6eY:g6R¾‹n"
-sob_fubing_events.23.desc:0 "bìNïSåN=T(u	NÍyyrŠk„v†˜W6eY:g6R0,rNÍyÿ¨cPƒ	ÿb‰NRpe!jVÿbìN(W50¹pb‰NRpeTÿïSåN·ƒ—VNb	g`S†˜„v,g‡eSwýNÿòT·ƒ—V„vwýNSNQÐc›Ob‰NRpe0,rŒNÍyÿbìNSËzsSÿbÞVNb	g`S	g„v,g‡eSÄuwýN0,r	NÍyÿ¨cPƒ	ÿÿ	cöeô•6eYW0Wÿ‚YœgbìN`S†˜«ˆV‡eSßu»l„v,g‡eSW0WÿRµc6R	N*NgTbìNSïSåN·ƒ—Vå‹wýNÿv^Í‘nNb	gwýN„v6eY¡‹öe0"
-sob_fubing_events.23.b:0 "=T(u`S†˜sS6eY"
-sob_fubing_events.23.a:0 "=T(ub‰NRpe!jV"
-sob_fubing_events.23.c:0 "=T(u	cöeô•6eY"
-sob_fubing_events.23.d:0 "=T(uŸSHr:g6R"
-sob_zhongyuan_mode_change_title:0 "fNNQRÿ†˜W6eY:g6R¾‹n"
-sob_zhongyuan_mode_change_desc:0 "bìNïSåN=T(u	NÍyyrŠk„v†˜W6eY:g6RbÇ‘(uŸSHr:g6R0,rNÍyÿ¨cPƒ	ÿÿbìN(W50¹pb‰NRpeTÿïSåN·ƒ—VNb	g`S†˜„v,g‡eSwýNÿòT·ƒ—V„vwýNSNQÐc›Ob‰NRpe0,rŒNÍyÿbìNSËzsSÿbÞVNb	g`S	g„v,g‡eSÄuwýN0,r	NÍyÿ	cöeô•6eYW0Wÿ‚YœgbìN`S†˜«ˆV‡eSßu»l„v,g‡eSW0WÿRµc6R	N*NgTbìNSïSåN·ƒ—Vå‹wýNÿv^Í‘nNb	gwýN„v6eY¡‹öe0"
-sobzzqevent.5.t:0 "™„äS^ýV„vYtQ"
-sobzzqevent.5.d:0 "êfgú^ËzåNegÿiR?QêS²e¶RÏeòTÏu1Y»S-NýV‡vMOpeŒvt^ÿÊN)YNMOO'Y„vïSWlÍ‘°eÖS—V†N-NýV„vßu»lCgÿbìNïSåN	ébÊNT‹sgMRÛ„v¹eT0"
-sobzzqevent.5.a:0 "‹SgIƒŸS"
-sobzzqevent.5.b:0 "sQèlœQw"
-sob_devastation_mandate:0 "RƒŸ^¦^"
-sob_mod_reform_options_title:0 "fNNQRÿMod9ei—¾–¦^¾‹n"
-sob_mod_reform_options_desc:0 "VNS?eSO:N)Yg„vNSY‡eSÄuýV¶RS=T(uëXÅu6–µuv^SvQ'YèRW0WˆcˆNëXÅuÿ,g³Q®‹ïSåN(WVNS¾‹nO(uUOÍy9ei—¾–¦^0"
-sob_manchu_reclaim_title:0 "CRÑSfg"
-  sob_manchu_reclaim_title_desc:0 "egêIlºN„v‡eSJR1V†NbìNÿbìNÅV‰˜ÝOc¶RaN„v.OßuÿÝOÁ‹bìNN«ˆIlºNTS0"
-  sob_colony_usa_state_end:0 "bËz°ef"
-sob_colony_usa_state_end_desc:0 "Ž2m–kllQøSòTÏuŒRb†NO‹TÿŽ2m„vib.VÛeQ6e>S6–µk0°s(WbìNïSåNS–kllQøS„vW0WRR:N–klýVåN¹e¿O¡rtÿSV6qÙ—‰(WVÓblQøS„v=ecNMbýwŒRb0bìNS·ƒ—VVÓblQøS„vNb	gW0Wÿv^ê¨R	c0W:Sú^Ëz°e„v–klýV0"
-sob_colony_usa_state_end_dialog:0 "‡v^ÙuˆN†NbìNŒRte„v0W:S0"
-sob_colony_usa_state_end_title:0 "ÆbRVÓblQøS"
-sob_colony_usa_state_end_tooltip:4 "Ž2m–kllQøSòTÏuŒRb†NO‹TÿŽ2m„vib.VÛeQ6e>S6–µk0°s(WbìNïSåNS–kllQøS„vW0WRR:N–klýVåN¹e¿O¡rtÿSV6qÙ—‰(WVÓblQøS„v=ecNMbýwŒRb0bìNS·ƒ—VVÓblQøS„vNb	gW0Wÿv^ê¨R	c0W:Sú^Ëz°e„v–klýV0"
- sob_colony_usa_state_new:0 "bËz°ef"
-sob_colony_usa_state_new_desc:0 "Ž2m–kllQøSòTÏuŒRb†NO‹TÿŽ2m„vib.VÛeQ6e>S6–µk0bìNSÆbRVÓblQøSbËz°ef^ýVÿÖNìNSb:N‡v^ôv–„vTwßuýV00"
-sob_colony_usa_state_new_dialog:0 "‡v^ÙuˆN†NbìNŒRte„v0W:S0"
-sob_colony_usa_state_new_title:0 "bËz°ef"
-sob_colony_usa_state_new_tooltip:4 "Ž2m–kllQøSòTÏuŒRb†NO‹TÿŽ2m„vib.VÛeQ6e>S6–µk0°s(WbìNïSåNbËz°ef^ýVÿjO:N‡v^„vôv–0W:S0"
-   sob_option_events.4.t:0 "ŸSHr>mû|¾‹šR"
-   sob_option_events.4.d:0 "ïSåN¾‹nVNSNžX RŸSHr>mû|ÿmNïSåN·ƒÖSŸSHr>mû|0‚YœgN¾‹šRÿVNS‹NöNOê¨RžX R2N*NŸSHr>mû|ŒTN*N°e>mû|0"
-   sob_option_events.4.a:0 "V=TŸSHr>mû|"
-   sob_option_events.4.b:0 "sQí•ŸSHr>mû|"
-XNM:0 "°ef"
-XNM_ADJ:0 "°ef"
+sob_same_nation:0 "Same Nationality"
+sob_same_tech_group:0 "Same Culture Circle"
+sob_option_events.1.abc:0 "Ai Option : Joinning Empire"
+sob_option_events.1.bca:0 "Ai Emperor Option : Collect Tributary"
+sob_fubing_events.24.t:0 "Province Reclaimed"
+sob_fubing_events.24.d:0 "Our great victory are encouraging our provinces , provinces with our primary culture will be reclaimed immediatly if our warscore is above 50."
+sob_mod_reform_taoist_religion_title:0 "Conflict between Taoist and Confucianism"
+sob_mod_reform_taoist_religion_desc:0 "We can choose a new State Religion."
+sob_fubing_events.24.a:0 "Good"
+sob_taoist_religion_center_of_reformation:0 "Taoist Center"
+sob_fubing_events.23.t:0 "Rclaimnation Options"
+sob_fubing_events.23.desc:0 "There are  three new reclaimnation system.1. War score mode, we will reclaim our provinces immediatly if our war score is above 50.    2.We will reclaim our provinces immediatly when occupied.   3.Time mode.If we occupied provinces with our culture, after 3 months we will reclaim this province."
+sob_fubing_events.23.b:0 "Immediatly Reclaimnation"
+sob_fubing_events.23.a:0 "War Score Mode"
+sob_fubing_events.23.c:0 "Time Mode"
+sob_fubing_events.23.d:0 "Original Mode"
+sob_zhongyuan_mode_change_title:0 "S&B: Rclaimnation Options"
+sob_zhongyuan_mode_change_desc:0 "There are  three new reclaimnation system.1. War score mode, we will reclaim our provinces immediatly if our war score is above 50.    2.We will reclaim our provinces immediatly when occupied.   3.Time mode.If we occupied provinces with our culture, after 3 months we will reclaim this province."
 
-sob_option_events.2.t:0 "9ei—¾–¦^¾‹n"
-sobzzqevent.6.t:0 "*YT'YLˆ"
-sobzzqevent.6.d:0 "ßu»l†N-NýVˆV•öeô•„viR?QêS²e kR„^*YT¶gdž‰Lˆÿ(WMOgô•T†Ú‹0WuIY[Root.Religion.GetName]ÿåN:Vlx„vKbµkßu»lýV¶Rÿ‰vúWðy^TWy†NN+Y„vvQÖNPRsYÿSêñTÓYl QÙu‡vgáZ	0–Nw*YTßu»l„vK„U^ÿ°e‡v^°s(WïSåNZPúQ	ébÿ=fçuíu[Root.Monarch.GetSheHe]Ík²N„v‹NNØ=fYtQ6r²N„v^ýV0"
-sobzzqevent.6.a:0 "bìNZPúQ9eØS"
-sobzzqevent.6.b:0 "ÎÞV*YN‡v"
-sobzzqevent.6.C:0 "bìNÝOc°s¶r"
-sob_option_events.3.t:0 "QYeNSYe"
-sob_option_events.3.d:0 "Ï….OiOYe–CQz˜^SwúQ-NŸSKNTÿ-NŸSø‹Ye†˜–ˆKNMO•gzz¬`0QYeNSYejO:N2N*Ng:V„v,gW—R>mý	gžR›Rî•ŸýVYeKNMO0‚YœgbìN	ébQYejO:NýVYeÿRbìN—‰bÅb—RYe9ei—KNMR•g„voR Rb0‚YœgbìN	ébSYejO:NýVYeÿRQfRSQ!kb:NNè•òTfRŒT?e»lfRô‹ÿFOÙSùRbýV3zšRµNuN)RqVÍT0"
-sob_option_events.3.a:0 "bìNuIYó1WHQ^„vYeò‹0"
-sob_option_events.3.b:0 "^yµ^N”^SV›OIYVyHQO^yN)YS0"
+sob_mod_reform_options_title:0 "S&B:Reformation Options"
+sob_mod_reform_options_desc:0 "Countries with Celestial Empire government will give most of their lands to Shishen estate , you can take them back through reformation Missions. Here you can configure the difficulty of the reformation."
 
-sob_fubing_events.25.t:0 "wýNIQYÿ"
-sob_fubing_events.25.d:0 "N*N«ˆLeºN`Snc„vwýNÞVRV†NbìN„vßu»l0N!k·ƒ—V°e„vwýN„˜¡‹S±‚9bìN	N*Ngöeô•0"
-sob_fubing_events.25.a:0 "*Y‹Y†Nÿ"
-manchu_han:0 "NSIlºN"
-sob_jingdian_easy_or_hardest:0 "9ei—¾–¦^N=fnfŽrUS!jVbg¾–!jV"
+  
+  sob_colony_usa_state_end:0 "Establish New Ming"
+sob_colony_usa_state_end_desc:0 "American Colonial Company has finished its historical mission .Now we can transform this company to a colonial state, surely we need the local government to help with this."
+sob_colony_usa_state_end_dialog:0 "Emperor give us an entire region."
+sob_colony_usa_state_end_title:0 "Apart the Company"
+sob_colony_usa_state_end_tooltip:4 "American Colonial Company has finished its historical mission .Now we can transform this company to a colonial state, surely we need the local government to help with this"
+ sob_colony_usa_state_new:0 "Establish New Ming"
+sob_colony_usa_state_new_desc:0 "Establish New Ming, they will be Emperor's direct vassal."
+sob_colony_usa_state_new_dialog:0 ""
+sob_colony_usa_state_new_title:0 "Establish New Ming"
+sob_colony_usa_state_new_tooltip:4 "Establish New Ming, they will be Emperor's direct vassal."
+   
+XNM:0 "New Ming"
+XNM_ADJ:0 "New Ming"
 
-ANNEX_SOB_EMPERORS_LUANSHI:0 "qNN-N„v‡v^ùRY±Rb—‰ˆmw10¹p)Y‹TÿwNÅV‰˜ÝOÁ‹)Y‹T(W80åNNMbïS±Rb0åb	gûyG•ø‹¯OýVD–¸^±Rbt1u,6eÞV8hÃVt1uÿßuN-NýVt1ubY²N®O±±Rbt1uN×Sdk:g6RqVÍT0"
+sob_option_events.2.t:0 "Reformation Option"
 
-sob_sob_not_diplo_jianguo:0 "N=fÇ>mcÑvýVlS„vbXTÿbwb:N^ýV„vbXTÿg!ýVN—rZP^ýVbXT	ÿán30t^0"
+sob_option_events.3.t:0 "Taoist & Confucianism"
+sob_option_events.3.d:0 "After the decadent of Tibetan Buddism when Yuan Empire collapsed, the leader of Chinese religions are longly missed. Now we can choose one religion as Chinese State Religion."
+sob_option_events.3.a:0 "We will follow the theory of Confucian."
+sob_option_events.3.b:0 "We should admire our ancestors and gods."
 
-sob_sob_warriors_modifier_3:0 "ŒRb›QåTtõVtSNOÛbßRœ^uQ„vAI"
-   sob_great_celestial_empire_colony_1:0 "(§G1§!)qQT^:W"
-  sob_great_celestial_empire_colony_2:0 "(§G2§!)qQT^:W"
-  sob_great_celestial_empire_colony_3:0 "(§G3§!)qQT^:W"
-  sob_great_celestial_empire_colony_4:0 "(§G4§!)qQT^:W"
-  sob_great_celestial_empire_colony_5:0 "(§G5§!)qQT^:W"
-  sob_great_celestial_empire_colony_6:0 "(§G6§!)qQT^:W"
-  sob_great_celestial_empire_colony_7:0 "(§G7§!)qQT^:W"
-  sob_great_celestial_empire_colony_8:0 "(§G8§!)qQT^:W"
-  sob_great_celestial_empire_colony_9:0 "(§G9§!)qQT^:W"
-  sob_great_celestial_empire_colony_10:0 "(§G10§!)qQT^:W"
-  
-  sob_great_celestial_empire_vassal_1:0 "(§G1§!)qQT„v–kl0W"
-  sob_great_celestial_empire_vassal_2:0 "(§G2§!)qQT„v–kl0W"
-  sob_great_celestial_empire_vassal_3:0 "(§G3§!)qQT„v–kl0W"
-  sob_great_celestial_empire_vassal_4:0 "(§G4§!)qQT„v–kl0W"
-  sob_great_celestial_empire_vassal_5:0 "(§G5§!)qQT„v–kl0W"
-  sob_great_celestial_empire_vassal_6:0 "(§G6§!)qQT„v–kl0W"
-  sob_great_celestial_empire_vassal_7:0 "(§G7§!)qQT„v–kl0W"
-  sob_great_celestial_empire_vassal_8:0 "(§G8§!)qQT„v–kl0W"
-  sob_great_celestial_empire_vassal_9:0 "(§G9§!)qQT„v–kl0W"
-  sob_great_celestial_empire_vassal_10:0 "(§G10§!)qQT„v–kl0W"
+sob_fubing_events.25.t:0 "Province Reclaimed"
+sob_fubing_events.25.d:0 "A province was liberate from enemy's occupition. We can reclaim another province after 3 months."
+sob_fubing_events.25.a:0 "Great!"
+manchu_han:0 "Inner Dongbei"
+sob_jingdian_easy_or_hardest:0 "Not in easy mode or hard mode"
 
-  sob_great_celestial_empire_emperor_1:0 "sQzTßv"
-  sob_war_exhaustion:0 "ØšŒSb"
-    sob_luanshi_emperor:0 "qNN"
+ANNEX_SOB_EMPERORS_LUANSHI:0 "Declearing wars cost 10 mandate when emperor is in a warring state period,and need 80 mandate at least. Reclaim provinces are not limited."
+
+sob_sob_not_diplo_jianguo:0 "Not a converted member ,or be in the empire for at least 30 years."
+
+sob_sob_warriors_modifier_3:0 "Ai debuff"
+   sob_great_celestial_empire_colony_1:0 "(§G1§!)Same Market"
+  sob_great_celestial_empire_colony_2:0 "(§G2§!)Same Market"
+  sob_great_celestial_empire_colony_3:0 "(§G3§!)Same Market"
+  sob_great_celestial_empire_colony_4:0 "(§G4§!)Same Market"
+  sob_great_celestial_empire_colony_5:0 "(§G5§!)Same Market"
+  sob_great_celestial_empire_colony_6:0 "(§G6§!)Same Market"
+  sob_great_celestial_empire_colony_7:0 "(§G7§!)Same Market"
+  sob_great_celestial_empire_colony_8:0 "(§G8§!)Same Market"
+  sob_great_celestial_empire_colony_9:0 "(§G9§!)Same Market"
+  sob_great_celestial_empire_colony_10:0 "(§G10§!)Same Market"
+  
+  sob_great_celestial_empire_vassal_1:0 "(§G1§!)Global Empire"
+  sob_great_celestial_empire_vassal_2:0 "(§G2§!)Global Empire"
+  sob_great_celestial_empire_vassal_3:0 "(§G3§!)Global Empire"
+  sob_great_celestial_empire_vassal_4:0 "(§G4§!)Global Empire"
+  sob_great_celestial_empire_vassal_5:0 "(§G5§!)Global Empire"
+  sob_great_celestial_empire_vassal_6:0 "(§G6§!)Global Empire"
+  sob_great_celestial_empire_vassal_7:0 "(§G7§!)Global Empire"
+  sob_great_celestial_empire_vassal_8:0 "(§G8§!)Global Empire"
+  sob_great_celestial_empire_vassal_9:0 "(§G9§!)Global Empire"
+  sob_great_celestial_empire_vassal_10:0 "(§G10§!)Global Empire"
+
+  sob_great_celestial_empire_emperor_1:0 "Price Union"
+  sob_war_exhaustion:0 "High War Exhaustion"
+    sob_luanshi_emperor:0 "Warring Period"
   
   
-  SOBDUHUFU:0 "ý²bœ^"
-  SOBDIGUODUHUFU:0 "'Yý²bœ^"
-  SOBDUHU:0 "ý²b"
-  DASOBDUHU:0 "'Yý²b"
+  SOBDUHUFU:0 "Governor"
+  SOBDIGUODUHUFU:0 "Great Governor"
+  SOBDUHU:0 "Governor"
+  DASOBDUHU:0 "Great Governor"
   
-  SOBZHENSHOUFU:0 "G•ˆRœ^"
-  SOBHAIJUNSILINGBU:0 "wm›QøSäNè"
-  SOBTIDU:0 "Ðccw"
-  SOBJIANDUISILING:0 "0‚–øSäN"
+  SOBZHENSHOUFU:0 "Chinjufu"
+  SOBHAIJUNSILINGBU:0 "Chinjufu"
+  SOBTIDU:0 "General"
+  SOBJIANDUISILING:0 "General"
   
-  SOBZHENGYIJIANGJUNFU:0 "V7YS›Qœ^"
-  ZHENGYIDAJIANGJUN:0 "V7Y'YS›Q"
+  SOBZHENGYIJIANGJUNFU:0 "Shogun"
+  ZHENGYIDAJIANGJUN:0 "Shogun"
   
-  sobdirection.922.t:0 "QYe:g6Rô‹f"
-    sobdirection.922.d:0 " §G1§!.QYe„vŒTŒû|ßu¾‹šRôf9eÿ9eŒTŒ:NYeSÿ9eŒTŒ¦^:NYeS¦^0NOŒTŒ¦^'YÏ‘žX RVïzVYe¹RÍVÿØšŒTŒ¦^žX Rckßu¹RÍV0\n §G2§!.Nb	g«ˆŒTŒ—RYeýÆ‰jO«ˆQYeNbYeSÿNæe«ˆYeSÿýV…QNRå‹—RYewýNŒT°e·ƒ—VwýNýSê¨RØS:NQYe0\n §G3§!.Ïkåb	gN*N.OYeëXïSåN·ƒ—V25%úWNxYeS¦^ Rb0Ïkåb	g2N¹p.OYe›RÏ‘ïSåN·ƒ—V1¹pÏkt^YeS¦^ŒT10%YeS¦^ Rb0Ïkåb	g2N¹pùRVïz.OYe›RÏ‘ïSåN·ƒ—VÏkt^0.5„vYeS¦^ŒT5%YeS¦^ Rb0.OYeëXåb	g	Nch¦^yrŠk:g6Rÿ100¹pYeS¦^ÿÏk*N.OYeëXÐc›O50%¦^ Rb080¹påNNYeS¦^„vÏk*N.OYeëXÐc›O33%¦^ Rb080¹påNNÏk*N.OYeëXÐc›O25%¦^ Rb0Ù7h,gegëkàe(uY„v.OYeëXÍ‘°eùRQYeµNuaIN0IN‰©sÕl:NXØš.OYeëXpeÏ‘ÿKSëVŒTŒ—RYeÿXØš.OYe›RÏ‘ÿŠbYeS¦^ôuc(WØšMOÿôucØšYeS0\n §G4§!.:NNb	gŸSHr—RYeÐc›OhQ°e„vìrËz„vYeSHeœgÿàeº‹=f&TYŽNN¹e—RYeÄu0Ç°ežX—RYeÄužR°sÿwQ	g(u'`ÿÏuŒšòTÑS^ÿïSåN:N°e—RYemodÐc›OÂSw0 \n §G5§!.°e„vO(uŒTŒû|ßu„vIl.Oû|—RYeÿSìbIl.OiOYeÿIl.OpS¦^Yeÿ)YINYe1rýVOÿIl.O°eYe	Nê1rýVOÿIl.O9ei——R-9ei——R•wOÿëTYeÿIl.O9ei——RÿIl.O1WlQOÿ^ySYeÿIl.ONckYeÿIl.OÑynfyrYeÿIl.OYSLYe0àQ'YNSY,gWS„vYeg—RYeÿGWwQ	gŒRteû|ßuŒTYeSvQÖN—RYe„výw›RÿïSåN«ˆQYeýV¶RÇ‹NöN³Q®‹(WVNSV=T0\n §G6§!.QYeNb	gckb—áOagýYŽN•šR¶r`ÿÇûN¡Rhã‰•0"
-      sobdirection.922.a:0 "åwS†N0"
-  
-  
-    sobdirection.923.t:0 ")Y‹TŒTNSY^ýVîO9e"
-    sobdirection.923.d:0 "§B1.)Y‹TegnîO9e§!ÿNb	gg!ýVNQqVÍT)Y‹TÿìrËzýV¶RmNNQqVÍT)Y‹T0°s(WêS	g3zšR¦^ÿAucƒ¦^ÿZgÿckßu'`	N*NýV…Q^S'`ôv¥cqVÍT)Y‹TÿŒSb¦^ÇúVšRîOckqVÍT)Y‹T0^ýVû|ßu-Nÿ°ežX„vTµu^ýVbXT(WàVÚ‹öeÿ50>PTåNN	ÿSÐc›O0.02Ïkg)Y‹TÿNàVöeÏQS0.03Ïkg)Y‹TÿÏk*N–klýVÏkgžX R0.05)Y‹T0\n§B2.)YgSú^SOû|îO9e§!ÿ°ežX6Íy°e„vD–¸^‰|‹W0\n§B3.)YgY²N’N¨R0NÌR^ýV…Qè8nbSOŒš§!ÿÓbUS)Y‹T<PŸRýwÿ:N‡v^ŒTø‹¯OýVÿg!ýVKNô•°ežXYÍyY²N’N¨R0‡v^ïSåNÇY²N’N¨RžX:VvQùRø‹¯OýVqVÍTÿ±‚9)Y‹TM–NOø‹¯OýVìrËz>PT0ïSÇY²NIm¨R R:VùRg!ýV„vµc6RÿïSåNÇY²N’N¨RlSg!ýV—RYeŒT‡eS0N‡v^T‡eS„vg!ýVê¨RØS:N)YgkSfýV0ø‹¯OýVïSåN±‚9áOûN¦^ÿ‡v^3u÷‹ckßu'`ÿ3zšR¦^ŒT›Q‹Nýw›RbuffÿïSåNÇY²N’N¨RØS:N4NöeWøSÿ.^©R‡v^Sb×Nÿ·ƒ—V'YÏ‘áOûN0\n§B4.9hnc)YgSOû|XR(W„vî•˜˜ÿ°ežX10y˜)Yg9ei—§!ÿÐc›Oìryrw:V'YFONimba„v Rb0ŸSHr9ei——V0RÝOYuÿ159eKNTNb	gg!ýVê¨RØS:N±RpaøS0\n§B5.qNNû|ßu0§!‰|<OU^œ^û|ßuÿ:N-NýV0W:S ReQyrŠk„vqNN:g6Rÿ^ýV(WqNN-NSçuíuåNßuN„vSú^ýV¶RbVVXR(WÿNb	g0W¹e¿R›Rý=f‡v^„vD–¸^ÿê¨RØS:N-NŸSø‹¯Oÿ’Nøv‰NbÿùR‡v^ý	gyrŠk±Rbt1uÿ:YÖS)Y‹T0\n§B6.‡v^ôfÿf:g6R0§!·ƒ—V)Y‹TSê¨Rçub^ýV„vNb	g0µN0\n§B7.°e„vyrŠkY²NKbµkÿqNNã‰³Q¹eHhÿûyG•0§!‡v^ïSåN(Wán³agöNTÿS–™ýMOŽN-NŸS0W:S„vTµu^ýVbXTûyG•úQýVÿ0RýVYD–¸^ýV„vW0WNÿ·ƒ—VvQNb	g-NŸSW0W0Töe(WýV…Q	g-NŸSø‹¯OöeÿïSåNÇ¾‹šRûyG•îv„v0WY²NIm¨RùRNb	gìrËzýV¶R·ƒ—Vú^ËzD–¸^„v±Rbt1u0SvQSbbD–¸^KNTÿïSåNÇûyG•bXTýVY²N’N¨Rÿ·ƒ—VvQNb	gW0W0\n§B8.mGYegµOeubN`S	g,g‡eSÄuW0W„vYýVb—eöeÿNb	gbXTýVìrËz>PTSRVö–0§!\n §B9é…G•§!ÿ-NŸS0W:Sø‹¯OïS·ƒ—Vé…G•îOck0 \n§G10.3zšR:g6R§!ÿqNNöe‡v^ŒTø‹¯O„v3zšR•šR:N3ÿ‡v^ Rb•šR:N-10\n §B11.wmYg!ýV§!ÿÇY²NIm¨R·ƒ—VÿïSåN¾‹n=f&TˆmwY²NsQû|0\n§B12.é`Z§!ÿ(W«ˆg!ýVb^ýVbXTY²N®O±TÿïSåNùRvQÇY²N	y˜ÛLˆé`Zÿ'YÏ‘M–NOvQckßu'`ŒT3zšR0Töeôv¥càeOb0ŽúQg!ýV0\n§B13.·ƒ—V)Y‹TTïSåNÇ‹NöNØSôfýV÷S§!ÿ†SòSgãNýV÷S†vïS	0\n§B14.qNN-N„v‡v^ùRY±Rb§!—‰ˆmw10¹p)Y‹TÿwNÅV‰˜ÝOÁ‹)Y‹T(W80åNNMbïS±Rb0åb	gûyG•ø‹¯OýVD–¸^±Rbt1u,6eÞV8hÃVt1uÿßuN-NýVt1ubY²N®O±±Rbt1uN×Sdk:g6RqVÍT0"
-      sobdirection.924.a:0 "åwS†N0"
+  sobdirection.922.t:0 "儒教机制说明"
+    sobdirection.922.d:0 " §G1§!.儒教的和谐系统设定更改，改和谐为教化，改和谐度为教化度。低和谐度大量增加异端异教容忍，高和谐度增加正统容忍。\n §G2§!.所有被和谐宗教都视作被儒教所教化，一旦被教化，国内一切该宗教省份和新获得省份都将自动变为儒教。\n §G3§!.每拥有一个传教士可以获得25%基础教化速度加成。每拥有两点传教力量可以获得1点每年教化度和10%教化速度加成。每拥有两点对异端传教力量可以获得每年0.5的教化度和5%教化速度加成。传教士拥有三档速度特殊机制：100点教化度，每个传教士提供50%速度加成。80点以上教化度的每个传教士提供33%速度加成。80点以下每个传教士提供25%速度加成。这样本来毫无用处的传教士重新对儒教产生意义。主要玩法为堆高传教士数量，尽快和谐宗教，堆高传教力量，把教化度维持在高位，维持高速教化。\n §G4§!.为所有原版宗教提供全新的独立的教化效果，无论是否处于东方宗教组。通过新增宗教组实现，具有通用性，经验已发布，可以为新宗教mod提供参考。 \n §G5§!.新的使用和谐系统的汉传系宗教：包括汉传佛教，汉传印度教，天主教爱国会，汉传新教三自爱国会，汉传改革宗-改革宗长老会，巫教，汉传改革宗，汉传圣公会，神道教，汉传东正教，汉传科普特教，汉传YSL教。几大华夏本土化的外来宗教，均具有完整系统和教化其他宗教的能力，可以被儒教国家通过事件决议在开局开启。\n §G6§!.儒教所有正面信条都处于锁定状态，通过任务树解锁。"
+      sobdirection.922.a:0 "知道了。"
   
   
-    sobdirection.924.t:0 "TµubXTýVŸRýwô‹f"
-    sobdirection.924.d:0 "§G^ýVSOû|ibEQ§!ÿŸSHr‡v^----g!2NµuSOû|ÿØS:N‡v^----ý²bœ^------)YgkSfýVbRSýV-------ø‹¯OýVb-NŸSø‹¯O-------±RpaøS---------WøSÿ4Nöe	ÿ- - - - -g!ýVÿ6µuSOû|0TµubXTOncsQû|NT	gNT„vCg)RŒTIN¡R0\n§GbXTýVÍy‰|§!:§Bý²bœ^§!=f‡v^„vyrŠkD–¸^ÿÇûN¡Rb³Q®‹Rú^ÿïSåNTv^ïSåN.^©RSb×NÿvQ-NS­^ý²bœ^åb	gÄOW¯e„v‰=O)RšN–kl†˜ýw›RÿNˆmwY²NsQû|0\n §B-NŸSø‹¯Oÿø‹¯OÿkSfýVÿRSýV§!=fÛVÍy°e„vNSY^ýV„vbXTýV0\n§B-NŸSø‹¯O§!=fqNNöeg¸púQ„v–™ýMOŽNNSY,gW„vyrŠkbXTýVÿïSåN’Nøv‰Nbÿ—‰ÇûyG•Sø‹¯OýVûyúQ-NŸSbY²NTv^0\n §Bø‹¯OýV§!=fûyG•úQ»S„vø‹¯OýVbìrËz>PT65åNN„vkSfýVê¨RlS„vÿïSåN’Nøv‰NbÿïSåNÂS R‡v^b‰Nÿ¡‹—rìrËz>PTöeO¡‹—rNb	gø‹¯OýV„v›RÏ‘0\n§BkSfýV§!=fàVÚ‹„v^ýVbXTÿNýw(W^ýV…QVbÿFOýwùRìrËzýV¶RŒT‡v^„vg!ýV±RbÿìrËz>PTêSO¡‹—rêñT„vžR›R0\n §BRSýV§!êSýwÇhT6RNbD–&^„vûNUOöeãN(WûNUOwýNú^ËzêšRINRSýV„vŸRýwžR°sÿRSýVïSåNÂSbÿNˆmwY²NsQû|0"
-      sobdirection.924.b:0 "åwS†N0"
+    sobdirection.923.t:0 "天命和华夏帝国修改"
+    sobdirection.923.d:0 "§B1.天命来源修改§!，所有朝贡国不再影响天命，独立国家也不再影响天命。现在只有稳定度，繁荣度，威望，正统性三个国内属性直接影响天命，厌战度通过固定修正影响天命。帝国系统中，新增的各级帝国成员在忠诚时（50倾向以下）将提供0.02每月天命，不忠时减少0.03每月天命，每个殖民国每月增加0.05天命。\n§B2.天朝封建体系修改§!，新增6种新的附庸类型。\n§B3.天朝外交互动丰富帝国内部游戏体验§!，拓展天命值功能，为皇帝和诸侯国，朝贡国之间新增多种外交互动。皇帝可以通过外交互动增强其对诸侯国影响，花费天命降低诸侯国独立倾向。可通过外交活动加强对朝贡国的控制，可以通过外交互动转化朝贡国宗教和文化。与皇帝同文化的朝贡国自动变为天朝卫星国。诸侯国可以花费信任度，皇帝申请正统性，稳定度和军事能力buff，可以通过外交互动变为临时土司，帮助皇帝打仗，获得大量信任。\n§B4.根据天朝体系存在的问题，新增10项天朝改革§!，提供独特而强大但不imba的加成。原版改革得到保留，15改之后所有朝贡国自动变为宣慰司。\n§B5.乱世系统。§!类似幕府系统，为中国地区加入特殊的乱世机制，帝国在乱世中将继续以统一的封建国家形式存在，所有地方势力都是皇帝的附庸，自动变为中原诸侯，互相争战，对皇帝都有特殊宣战理由，夺取天命。\n§B6.皇帝更替机制。§!获得天命将自动继承帝国的所有财产。\n§B7.新的特殊外交手段，乱世解决方案，移镇。§!皇帝可以在满足条件后，将首都位于中原地区的各级帝国成员移镇出国，到国外附庸国的土地上，获得其所有中原土地。同时在国内有中原诸侯时，可以通过设定移镇目的地外交活动对所有独立国家获得建立附庸的宣战理由。将其打成附庸之后，可以通过移镇成员国外交互动，获得其所有土地。\n§B8.遭遇外来侵略或与占有本文化组土地的外国战斗时，所有成员国独立倾向将归零。§!\n §B9藩镇§!：中原地区诸侯可获得藩镇修正。 \n§G10.稳定机制§!：乱世时皇帝和诸侯的稳定锁定为3，皇帝加成锁定为-1。\n §B11.海外朝贡国§!，通过外交活动获得，可以设置是否消耗外交关系。\n§B12.惩罚§!：在被朝贡国或帝国成员外交侮辱后，可以对其通过外交选项进行惩罚，大量降低其正统性和稳定。同时直接无休战踢出朝贡国。\n§B13.获得天命后可以通过事件变更国号§!，历史朝代国号皆可选。\n§B14.乱世中的皇帝对外宣战§!需要消耗10点天命，而且必须保证天命在80以上才可宣战。拥有移镇诸侯国附庸宣战理由,收回核心理由，统一中国理由或外交侮辱宣战理由不受此机制影响。"
+      sobdirection.924.a:0 "知道了。"
   
-   sobdirection.925.t:0 "g!ýVlS:g6Rô‹f"
-    sobdirection.925.d:0 "‡v^ïSåNÇyr	g„vY²NIm¨RlSg!ýV—RYeŒT‡eS0Nb	g‡eSN‡v^øvT„vg!ýVSê¨RlS:N^ýVbXT-N„vø‹¯OýV0ø‹¯OýVïSåNÇŸ^d–±Rbê1uY²NIm¨Rÿˆmw)Y‹TSKNlS:NNýwùR…Qib.V„vkSfýV0\n TöeNb	g„vg!ýV·ƒ—V†NˆmwÑ‘±”T‡v^÷‹Bl‡eSŒT—RYelS„výw›RÿÇY²NIm¨R·ƒ—V0"
-      sobdirection.924.a:0 "åwS†N0"
+  
+    sobdirection.924.t:0 "各级成员国功能说明"
+    sobdirection.924.d:0 "§G帝国体系扩充§!：原版皇帝----朝贡两级体系，变为皇帝----都护府------天朝卫星国或分封国-------诸侯国或中原诸侯-------宣慰司---------土司（临时）- - - - -朝贡国，6级体系。各级成员依据关系不同有不同的权利和义务。\n§G成员国种类§!:§B都护府§!是皇帝的特殊附庸，通过任务或决议创建，可以吞并可以帮助打仗，其中北庭都护府拥有俄罗斯的西伯利亚殖民领能力，不消耗外交关系。\n §B中原诸侯，诸侯，卫星国，分封国§!是四种新的华夏帝国的成员国。\n§B中原诸侯§!是乱世时期炸出的首都位于华夏本土的特殊成员国，可以互相争战，需要通过移镇将诸侯国移出中原或外交吞并。\n §B诸侯国§!是移镇出去的诸侯国或独立倾向65以上的卫星国自动转化的，可以互相争战，可以参加皇帝战争，计算独立倾向时会计算所有诸侯国的力量。\n§B卫星国§!是忠诚的帝国成员，不能在帝国内征战，但能对独立国家和皇帝的朝贡国宣战，独立倾向只会计算自己的实力。\n §B分封国§!只能通过周制所附带的任何时代在任何省份建立自定义分封国的功能实现，分封国可以参战，不消耗外交关系。"
+      sobdirection.924.b:0 "知道了。"
+  
+   sobdirection.925.t:0 "朝贡国转化机制说明"
+    sobdirection.925.d:0 "皇帝可以通过特有的外交活动转化朝贡国宗教和文化。所有文化与皇帝相同的朝贡国将自动转化为帝国成员中的诸侯国。诸侯国可以通过废除宣战自由外交活动，消耗天命将之转化为不能对内扩张的卫星国。\n 同时所有的朝贡国获得了消耗金钱向皇帝请求文化和宗教转化的能力，通过外交活动获得。"
+      sobdirection.924.a:0 "知道了。"
   
     
-   sobdirection.926.t:0 "ø‹¯OûyG•:g6Rô‹f"
-    sobdirection.926.d:0 "§G°eýw›R§!ÿ‡v^·ƒ—V†NûyG•ø‹¯O„výw›R0ûyG•„va`=fŠbbXTýVÿ-NŸSø‹¯Oÿnfø‹¯OÿkSfýV	ÿÎNN*NMOn*c0RN*N°eMOnú^Ëzßu»lÿTöe‡v^·ƒ—VvQNb	g°s	gW0W0ÇûyG•ø‹¯OýVÿûyG•îvhÿ2N*NY²NIm¨RžR°s0\n §G‰Bl§!ûyG•„vîvh—‰=fN*NýV¶Rÿnf¶r`NêSýwùRêñT(W70ÑSUSýåNN„vD–¸^ýVbêú^D–¸^ýVO(u0¾‹šRŒRKNT1SïSåNÇûyG•ø‹¯OýVY²NIm¨R©‹ø‹¯OýV·ƒ—VNb	g„vîvhD–¸^ýVåb	g„vW0Wÿ‡v^·ƒ—VvQNb	g„vŸS	gW0W0\n §GyrŠkô‹f§!qNN-NûyG•	gNwyrŠk:g6R0(WýV…Q	g-NŸSø‹¯Oöeÿå‹Y²NIm¨RïSåNùRìrËzýV¶RO(uÿ·ƒ—V'YÏ‘M–NOD–¸^ˆmw„vD–¸^±Rb¥cãSÿSbbD–¸^TsSïSûyG•-NŸSø‹¯O0¾‹¡‹	g2–ån(u:g6RÿùRN*NìrËzýV¶RO(uKNTÿïSåNàeP–!kùRå‹ýVO(u·ƒ—VD–¸^PãSÿFONýwQùRvQÖNýV¶RO(uÿTöeÙÍy!jV·ƒ—V„vD–¸^ýVêSýw(uŽNûyG•-NŸSø‹¯O0"
-      sobdirection.924.a:0 "åwS†N0"
+   sobdirection.926.t:0 "诸侯移镇机制说明"
+    sobdirection.926.d:0 "§G新能力§!：皇帝获得了移镇诸侯的能力。移镇的意思是把成员国（中原诸侯，普通诸侯，卫星国）从一个位置挪到一个新位置建立统治，同时皇帝获得其所有现有土地。通过移镇诸侯国，移镇目标，两个外交活动实现。\n §G要求§!移镇的目标需要是一个国家，普通状态下只能对自己在70发展都以上的附庸国或自建附庸国使用。设定完之后就可以通过移镇诸侯国外交活动让诸侯国获得所有的目标附庸国拥有的土地，皇帝获得其所有的原有土地。\n §G特殊说明§!乱世中移镇有着特殊机制。在国内有中原诸侯时，该外交活动可以对独立国家使用，获得大量降低附庸消耗的附庸宣战接口，打成附庸后即可移镇中原诸侯。设计有防滥用机制，对一个独立国家使用之后，可以无限次对该国使用获得附庸借口，但不能再对其他国家使用，同时这种模式获得的附庸国只能用于移镇中原诸侯。"
+      sobdirection.924.a:0 "知道了。"
   
-     sobdirection.926.t:0 "9ei—û|ßuô‹f"
-    sobdirection.926.d:0 "§G0W¹e9ei—§!ÿ 8nbVNSÿ?eSO:N)Yg„výV¶RÿmN1S=ff	ÿúWBS'YÏ‘W0W«ˆNuµNÿN`NfkÿNLˆFUÿNˆPRêSåN×‹ŒTS·V‡eàz:N‹NN„vëXÅuµc6R0àV:NúWBSßu»lwôuc>yO0WMO„v¹eVN=fSVuQÿZ±”ÿuµNÿuóN=fxvzŒTÑSUSQ¶RfRô‹ÿNbåNëXÅu„vW0WgNOê6R¦^:N75%ÿmNNO‚Yck8^„v.OYeëX6–µuN7hÐc›Obuff0)Yg?eSOýV¶R„v9ei—(WúWBSåNN­e6eÞVW0WÿSW0WRM‘Ùuôf	g(u6–µu„vW0W9ei—bVVÛLˆ0 \n§G-N.Y9ei—§!ÿ Ñy>N¬Pu†NëXÅuÙ*NâeN‹NuµNÿmNNÎN›QkSýVÿtS`Sncßu»l0WMO„v6–µu0Ñy>N=f>yOT*N6–µuÐcGSè•,rÿÂSNýV¶R)RÊvRM‘„v„V0‚YdkÑy>NNbwßR„vNšR=fN*NöeãNNb	g	gýw›R¥c×SYe²w„v×VëXNbý„v0NbåN‚YœgÑy>NNbwKNÑyîvùRýV¶Ràe(uÿR)YN¾|ñ‚NbfRàe(uÿãNãN¾|ñ‚†vNbfRàe(uÿRÈuSŒvN†vŸ^0NbåN(W-N.Y9ei—„vÛLˆRIN‰åNÑy>NSO6R9ei—:NIN0åNžX R°e„vÑy>NÑyîv:NINÿ8T³uôfYºNMbÛeQg÷^:N‰bVV0 \n§G9ei—ô‹f§!ÿ 0W¹e9ei—(WNVËYSˆmw)Y‹TÿZgÿ2ýw<Pÿv^SžX RŒSb0—‰Ç·ƒÖSvQÖN6–µu=ecN­eJR1V9ei—ùRýV¶R„vqVÍT0ŒRb‰Bl9ei—„vûN¡RSOW9eNQˆmw)Y‹T0·ƒÖSN*N6–µu=ecSOW9eNQžX RŒSbÿv^N2ýw<PˆmwÏQJS0·ƒÖS2N*NåNN6–µu=ecRW9eNQˆmw2ýw<Pÿv^NZgˆmwÏQJS0·ƒÖS	N*NåNN6–µuSOW9eNQ	gˆmwÿv^žX R2ýw<PÿZg<P0·ƒÖSÛV*N6–µu=ecÿSïSåNôv¥cnd–úWBSëXÅuwýN0ÏkŒRbNag9ei—ûN¡R¿uÿSÆ‰:N·ƒ—VN*N6–µu=ec0 \n -N.Y9ei—mNåNûN¡RbVV:NINÿÏkŒRbN*NûN¡R¿uïSåNˆmd–N*Ndebuff?eSO9ei—0\n§B›Q7bSûyd–µc6RW0Wê6R¦^&^eg„vF–›QNP–ŒTºN›RÏQb0§!\n§B.S7bSûyd–ê6R¦^&^eg„vz6eŒT8fuµNÏQb0§!\n§Bnf„v.OYeëXSûyd–SV0Wz6eÏQb0§!"
-      sobdirection.924.a:0 "åwS†N0"
+     sobdirection.926.t:0 "改革系统说明"
+    sobdirection.926.d:0 "§G地方改革§!： 游戏开局，政体为天朝的国家（也就是明）基层大量土地被不生产，不习武，不行商，一辈子只以诗和道德文章为事业的士绅控制。因为基层统治者维持社会地位的方式不是当兵，赚钱，生产，甚至不是研究和发展儒家学说，所以士绅的土地最低自制度为75%，也不会如正常的传教士阶级一样提供buff。天朝政体国家的改革在基层以不断收回土地，将土地分配给更有用阶级的土地改革形式进行。 \n §G中央改革§!： 科举催生了士绅这个既不事生产，也不从军卫国，却占据统治地位的阶级。科举是社会各个阶级提升门第，参与国家利益分配的途径。如此科举所考察的一定是一个时代所有有能力接受教育的志士所追逐的。所以如果科举所考之科目对国家无用，则天下精英所学无用，代代精英皆所学无用，则终将百业皆废。所以在中央改革的进行则主要以科举体制改革为主。以增加新的科举科目为主，吸纳更多人才进入朝廷为要形式。 \n §G改革说明§!： 地方改革在一开始将消耗天命，威望，贤能值，并将增加厌战。需要通过获取其他阶级支持不断削弱改革对国家的影响。完成要求改革的任务将使土改不再消耗天命。获取一个阶级支持将使土改不再增加厌战，并且贤能值消耗减半。获取两个以上阶级支持则土改不再消耗贤能值，并且威望消耗减半。获取三个以上阶级将使土改不再有消耗，并增加贤能值，威望值。获取四个阶级支持，将可以直接清除基层士绅省份。每完成一条改革任务线，将视为获得一个阶级支持。 \n 中央改革也以任务形式为主，每完成一个任务线可以消除一个debuff政体改革。\n §B军户将移除控制土地自制度带来的陆军上限和人力减成。§!\n§B匠户将移除自制度带来的税收和贸易生产减成。§!\n§B普通的传教士将移除当地税收减成。§!"
+      sobdirection.924.a:0 "知道了。"
   
   
-       sobdirection.927.t:0 "9ei—¾–¦^ô‹f"
-    sobdirection.927.d:0 "§G(1)sQí•§!ÿsQí•ëXÅu6–µuÊSvQD–^Sû|ßu0Nb	gQYeáOagVNSã‰•0\n§G(2)nf!jV§!ÿ1444	ÿÿVNSëXÅuµc6R40%„vW0WÿVNSNXR(WßyCOÏuNmdebuffÿÑy>N6R¦^-Nçuíu	ébëXÅu6–µuSN­e¨cÛßyCOÏuNm0)YNbs^åeENÿÑy>NëXÅuN­e•†ß˜úWBS.S7b0›Q7bW0WÿFO-N.YŒT0W¹eÍN	g³Y„vžR›R6Raˆ‡e˜R¿R›R0œQQgúWBSS*g«ˆëXÅuãNhˆ„v0WINNb	gSuµNwßyCOuµN„v!jVNbßu»lÿ›Q7b„v„^íVLw0uŒT.S7b„výV%„FUNO6q(WýV¶Rµc6R-NÿïSåNæ‰ÑSŒp¾–ÿv^ïSåNÇTÍy„Vã‰bˆmd–0\n§G(3)ðV¾–!jV§!ÿ1570	ÿÿVNSëXÅuµc6R70%„vW0WÿhQèW0WýwQ	gßyCOÏuNmdebuff0)YNbs^åeENÿÑy>NëXÅuN­e•†ß˜úWBS.S7b0›Q7bW0WÿFO-N.YŒT0W¹eÍN	g³Y„vžR›R6Raˆ‡e˜R¿R›RÿúWBSÏuNm!jVåen:NCO7bßyCO6R¦^Nbµc6RÿFO°eÏuNmbV¿RÍN	gÑSUS0\n§G(4)g¾–!jV§!ÿ1618	ÿÿVNSëXÅuµc6R75%„vW0WÿhQèW0WýwQ	gßyCOÏuNmdebuff0ëXÅu¿R›RòTÏuM^-N.YŒT0W¹eÿ›Q7b0.S7b‹NžRN¦l:NœQtYŒTtYåTÿT¹G•I`uQÍNác	gNšRžR›RFOmNàeÕlckb—ùR—b‡e˜R¿R›RÿúWBSòTÏu«ˆSœQßyCOÏuNmŒRhQµc6Rÿnåg›Q0uŒTýV%„åT:WyrCgSÏkt^9eØSNWWwýN„vuµN¹eV0‡v^O6qác	gCgZÿO6qïSåNÇ…Q÷^	gHeµc6RýV¶R0å‹¾–¦^NXR(WëXÅu6–µuÿïSåNæ‰ÑSŒp¾–ÿNVNSTŒp¾–û‹ag50%0å‹¾–¦^NT6–µuòTÏu«ˆëXÅuŒRhQgdÁkÿnd–ëXÅuàeÕlôv¥cŒRb9ei—ÿ—‰ÇûN¡R¿uÍ‘ú^T6–µužR›Rÿv^(WhQýVŒRbW0W9ei—TMbïSåNÇÑy>NRÑy9ei—‰V•^ã‰³QTy˜>yOî•˜˜0\n§G(5)+gåe!jV§!ÿ1644	ÿÿ¡NýVMRY0VNSëXÅuµc6R85%hQýVW0WÿNb	gŒp¾–VNSæ‰ÑSÿßyCOÏuNmé`Z‡eQŒp¾–0"
-     sobdirection.924.a:0 "åwS†N0"
+       sobdirection.927.t:0 "Reformation difficulty Configurations"
+    sobdirection.927.d:0 "1.With Shishen estate and Chinese Disasters. 2.Only Chinese Disasters."
+     sobdirection.924.a:0 "OK."
       
-          sobdirection.928.t:0 "vQÖNyrŠk:g6Rô‹f"
-    sobdirection.928.d:0 "§G1.IlWRèló—0§!¥c×SpS7R:g`noŒTKNMRNb	g`noTïS(u0ßuN‡eSÄuÿÐc›O`no.O­dbuff0\n §G2.œ^uQ6R§!ÿÇwýNÕlHhÿ(Wœ^uQ6RV=TKNT©‹ôv–†˜0W·ƒÖSïS(u„vœ^uQpeÏ‘ÿœ^uQVìS:g„gSˆmwN*NY²N˜R0Y²N˜RN³ÿê¨RÖSˆm–:gN*N:g„g0\n §G3.ú^Ëzßv×e6R¦^§!ÿÇSÛûN¡R¿u·ƒ—ViVË†TwßuýV™„äS^ýVŒTVìSœ^uQ„výw›Rÿ·ƒ—Vgrl6–µuÿŸRýw‚YTåT(„KQ0\n §G4.i—‹T:g6R§!ÿïSåNÇQYe9ei—ŒRbT„vi—‹TŒp¾–l:NqQŒTýV0NOÐc›Oi—‹TîvhbuffŒTi—‹T?eSO0i—‹TT(W'Yi—‹TöeãNïSåNÇ³Q®‹·ƒÖSøvsQbuff0\n §G5.¦R˜R6R¦^§!0)YPRwQ	g„vVNSdebuffÿïSåN³Q®‹ˆmd–0\n 6.sY˜R6R¦^0Ÿ^d–¦R˜R6R¦^KNTïSåN·ƒ—VsY˜R>mû|0\n §G7.yrŠk>mû|§!ÿ›QºNÿåTFUNwÿlQ¡RXT0ïSåNÎNûN¡R·ƒ—VÿTöeŸ^d–çe„vQYeÿ¦R˜Rÿ‡e˜R>mû|0\n §G8.yrŠk³Q®‹§!ÿ(Wlbc?eSO1Y»S>mû|KNTÿïSåNÇ³Q®‹ŠbòT·ƒ—V„v>mû|ŒbÞVeg0\n 9.	N*N°e„vYeOÿ)Y^OÿžRN>mÿ‰RýV>y0\n §G10.žX R†NNØSôf?eSO„v9ei—	y˜0§!åNM‘TN›N?eSON8nbÓuT'tÆR„vmodO(u0 \n §G11.sQzTßv:g6R§!ÿ‡v^„v–kl0WŒTD–¸^ýVŠYÿ^ýVbXTS×S0RŠegŠ:V„vÏuNm01uÑSUSýµNu„vìrËz>PTmNOŠegŠNO0\n §G12.:Nyrr‚TIN6RŒTqQŒT6R ReQ°e?eSO§!ÿhTæyIlU‹Rÿ”NÍywQ	gìryrýw›R„v?eœ^9ei—0hT	g–aú^ËzêšRIND–¸^ýV„výw›Rÿæy	g›Q‹NS>yOýw›R0Il	g‘šuQŒT°e5ÏeVSçeè•–:g6RÿU	gœ^uQÿ‹R=fO(u2ýw<P„v^6RFUNqQŒTýV0"
-      sobdirection.924.a:0 "åwS†N0"
-
-         sobdirection.929.t:0 "fNNQRModô‹ffN"
-    sobdirection.929.d:0 "S+TmodT*NŸRýw„vô‹fÿ	ébN*NPRÜƒUSÛLˆågw0"
-      sobdirection.924.a:0 "åwS†N0"
+          sobdirection.928.t:0 "其他特殊机制说明"
+    sobdirection.928.d:0 "§G1.汉字注音。§!接受印刷机思潮和之前所有思潮后可用。统一文化组，提供思潮传播buff。\n §G2.府兵制§!，通过省份法案，在府兵制开启之后让直辖领地获取可用的府兵数量，府兵征召机构将消耗一个外交官。外交官不足，自动取消随机一个机构。\n §G3.建立盟旗制度§!，通过北进任务线获得彩蛋联统国蒙古帝国和征召府兵的能力，获得牧民阶级，功能如同哥萨克。\n §G4.革命机制§!，可以通过儒教改革完成后的革命灾难转为共和国。不会提供革命目标buff和革命政体。革命后在大革命时代可以通过决议获取相关buff。\n §G5.宦官制度§!。天子具有的开局debuff，可以决议消除。\n 6.女官制度。废除宦官制度之后可以获得女官派系。\n §G7.特殊派系§!，军人，工商业者，公务员。可以从任务获得，同时废除旧的儒教，宦官，文官派系。\n §G8.特殊决议§!，在转换政体失去派系之后，可以通过决议把已获得的派系找回来。\n 9.三个新的教会，天帝会，实业派，安国社。\n §G10.增加了不变更政体的改革选项。§!以配合一些政体与游戏结合紧密的mod使用。 \n §G11.关税同盟机制§!，皇帝的殖民地和附庸国越多，帝国成员将受到越来越强的经济。由发展都产生的独立倾向也会越来越低。\n §G12.为特色君主制和共和制加入新政体§!：周秦汉唐宋，五种具有独特能力的政府改革。周有随意建立自定义附庸国的能力，秦有军事化社会能力。汉有骑兵和新贵族VS旧门阀机制，唐有府兵，宋是使用贤能值的帝制商业共和国。"
+      sobdirection.924.a:0 "知道了。"
+      sob_chongjian_fubing:0 "Fubing system"
+          sob_chongjian_fubing_desc:0 "Fubing system guaranted the social prosition of soldiers and encouraged our people to serve their country by joining the army.\n -§GFuBing will not cost  Missionaries§!\n -§Same Culture Group provinces will provide 1.25% Fubing amount§!"
+         sobdirection.929.t:0 "S&B:Mod Direction"
+    sobdirection.929.d:0 "Instructions to the functions of mod."
+      sobdirection.924.a:0 "OK"
       
-      sob_option_events.1.t:0 "fNNQRModŸRýw¾‹n"
-      sob_option_events.1.d:0 "fNNQRMod„vTy˜¾‹nÿ	ébN*NPRy˜îvÛLˆ¾‹n0"
+      sob_option_events.1.t:0 "S&B:Mod Configurations"
+      sob_option_events.1.d:0 "Confugrations to the functions of mod."
 
-      sob_mod_options_title:0 "fNNQRÿModŸRýw¾‹n"
-      sob_mod_options_desc:0 "fNNQRMod„vTy˜¾‹n0ïSåN¾‹nY*N8nb…Q:g6R„vVsQ0"
-      sob_chujiangruxiang:0 "fkfR9ei—ÿúQSeQøv"
-           sob_chujiangruxiang_desc:0 "(W‹RgMRÿ-NýV†SãNg÷^‡efkKNô•v^^—Šk0Q¶RTfR>mmN²‹vzžR(uININÿ‡efkÌShQ0çeëXÏeè•–?e»l„v¾|ñ‚Ye²wNÿQuëXPR†v`NTPRmQz‚ÿKbàe!žKN›R„v1VfNuŒTîvNÆ‹N„vfkSý=fg:NzS„vXR(WÿúQSeQøv=fTPRg:NúW,g„v‰BlKNN0‹RgKNT‡efkR¶RÿNÅN=fGSÁ„V­e»yÿÞYe²wSOû|ý«ˆ:g°h„vRrR:N‡efk2Nè0TöeT‡e„výVVrNÿ›QºNYe²w„v4ls^ý%`gRNM–0°s(WTÍy°eVfkhVùR›QºNŒTS†˜.t(‰BlŠegŠØšÿbìNÅV‰˜9ei—›QºNYe²wSOû|ÿÍ‘ú^‡efkÌShQ„v÷N<PÂ‰0"
-sob_mod_direction_title:0 "fNNQRÿMod:g6Rô‹f"
-            sob_mod_direction_desc:0 "fNNQRÿMod:g6Rô‹f0"
+      sob_mod_options_title:0 "S&B:Mod Configurations"
+      sob_mod_options_desc:0 "Confugrations to the functions of mod."
+      sob_chujiangruxiang:0 "Education Reformation: Elite"
+           sob_chujiangruxiang_desc:0 "Before Song dynasty Chinese officals are taught to be elite in both Wen and Wu. Song Taizu and Taizong lost their trust in generals, so they promote scholars and suppress the loyal warriors, directly cause the collapse of Chinese Empire. Our emperor are legitimate Tianzi , so now we can make this right , we should let the heros suffer from their own country when they bleed for their fatherland."
+      sob_gov_mode_easist_no_gov_title:0 "S&B:Reformation Easy Mode"
+      sob_gov_mode_easist_no_gov_desc:0 "No shishen estate , no disasters , all confucian aspects are unlocked."
+      sob_mod_direction_title:0 "S&B:Mod Direction"
+            sob_mod_direction_desc:0 "Instructions to the functions of mod."
             
             
-  sob_emperors_loyaity_vassal_tooltip_3:0 "òTÏuRšR†NS‰ˆcˆNå‹ýV„vkSb:S0"
-  sob_emperors_loyaity_vassal_tooltip_1:0 "¡l	gNé…^SýV	gck(WÛLˆ-N„vkSb:SŒ2R0"
+  sob_emperors_loyaity_vassal_tooltip_3:0 "Generate regions to our vassal"
+  sob_emperors_loyaity_vassal_tooltip_1:0 "No region negoations with vassals"
   
   
   
-  sob_daojian_shengyushu:0 "RQRÜwŽNfN"
-  sob_fubing_pingcetixi:0 "œ^uQN¶RIN¡RYe²w"
-  sob_yimintuan_junshi:0 "–âVfkëX"
-  sob_jiaohua_tuzhu:0 "–âV‡eëX"
+  sob_daojian_shengyushu:0 "Long live the sword"
+  sob_fubing_pingcetixi:0 "Free education for Fubing family"
+  sob_yimintuan_junshi:0 "Warriors in colony"
+  sob_jiaohua_tuzhu:0 "Schoolars in colony"
   
-  sob_xingzhengqu:0 "Lˆ?e:S"
-sob_bianjiangqu:0 "¹†u:S"
-sob_fanguo_empire:0 "^ýVbXT"
-sobzzqevent.10.t:0 "YtïyHh"
-sobzzqevent.10.d:0 "‡v^ýV÷S„vØSS:Nte*NNSYNLu&^eg†NNšR„v÷mqNÿˆVYz^'`‡eöN—‰Í‘°eŒrrÿØSôfpSàz0"
-  sobzzqevent.10.a:0 " RëV¦^ÿ"
+  sob_xingzhengqu:0 "State"
+sob_bianjiangqu:0 "Board"
+sob_fanguo_empire:0 "Empire Member"
+
+
   
-  
-    sob_colony_zhenshou_state:0 "¾‹ËzG•ˆRœ^"
-sob_colony_zhenshou_state_desc:0 "(WRSýVú^ËzyrŠk„vßu»l:g„g--G•ˆRœ^0G•ˆRœ^^SŽNLˆ?e:SÿSÏQSSV0WÛSqNÿO(uôfS„v±‚9(WSV0Wú^.8hÃV0G•ˆRœ^1u‡v^ôv¥cßu»lÿF–›QNP–ÏQS90%ÿFO×S0Rg'Y„vwm›QpeÏ‘ŒTb—e›R Rb0"
-sob_colony_zhenshou_state_dialog:0 "‡v^(WbìN„v0W:S¾‹ËzG•ˆRœ^0"
-sob_colony_zhenshou_state_title:0 "¾‹ËzG•ˆRœ^"
-sob_colony_zhenshou_state_tooltip:4 "(WRSýVú^ËzyrŠk„vßu»l:g„g--G•ˆRœ^0G•ˆRœ^1u‡v^ôv¥cßu»lÿF–›QNP–ÏQS90%ÿFO×S0Rg'Y„vwm›QpeÏ‘ŒTb—e›R Rb0"
+    sob_colony_zhenshou_state:0 "Establish Chinjufu"
+sob_colony_zhenshou_state_desc:0 "Low army amount, great naval power buff."
+sob_colony_zhenshou_state_dialog:0 "Establish Chinjufu"
+sob_colony_zhenshou_state_title:0 "Establish Chinjufu"
+sob_colony_zhenshou_state_tooltip:4 "Low army amount, great naval power buff."
    
-    sob_colony_war_announce_action:0 "ˆcˆNkSb:S"
-sob_colony_war_announce_action_desc:0 "±R^å‹îvh:N-NNS^ýV„vLeºNÿžX RvQ5%F–›Qôu²b9(uÿv^NNb	gNvQ	gßv¦u„vD–¸^ýVýS(WN*NgKNTNvQ­eÝußv¦u0ˆmw10¹p)Y‹T0NVKNýVNO(Wag÷^Nb¾‹šR„vLeºN0"
-sob_colony_war_announce_action_dialog:0 "‡v^ÙuˆN†NbìNŒRte„v0W:S0"
-sob_colony_war_announce_action_title:0 "b‰N±RJT"
-sob_colony_war_announce_action_tooltip:4 "±R^å‹îvh:N-NNS^ýV„vLeºNÿNb	gNvQ	gßv¦u„vD–¸^ýVýS(WN*NgKNTNvQ­eÝußv¦u0ˆmw10¹p)Y‹T0"
   
   
-  sob_emperors_loyaity_vassal:0 "ˆcˆNkSb:S"
-sob_emperors_loyaity_vassal_desc:0 "ˆcˆNå‹ýVbìNNb	gåb	g„vÿNvQ–™ýT0W:S„vwýNßu»lCgÊS8hÃV0"
-sob_emperors_loyaity_vassal_dialog:0 "‡v^ÙuˆN†NbìNŒRte„v0W:S0"
-sob_emperors_loyaity_vassal_title:0 "ˆcˆN0W:S"
-sob_emperors_loyaity_vassal_tooltip:4 "ˆcˆNå‹ýVbìNNb	gåb	g„vÿNvQ–™ýT0W:S„vwýNÊS8hÃV0"
+  
+  sob_emperors_loyaity_vassal:0 "Generate Region"
+sob_emperors_loyaity_vassal_desc:0 "Generate Region to our vassal."
+sob_emperors_loyaity_vassal_dialog:0 "Generate Region"
+sob_emperors_loyaity_vassal_title:0 "Generate Region"
+sob_emperors_loyaity_vassal_tooltip:4 "Generate Region to our vassal in this region."
    
-   sob_zhenshoufu_vassal_title:0 "G•ˆRœ^"
-sob_zhenshoufu_vassal_title_plural:0 "G•ˆRœ^"
-sob_zhenshoufu_vassal_is_our:0 "§Y$NAME$§! =fbìN„vG•ˆRœ^."
-sob_zhenshoufu_vassal_long_desc:1 "G•ˆRœ^=fNÍyyrŠk„vD–¸^ÿG•ˆRœ^^SŽNLˆ?e:SÿSÏQSSV0WÛSqNÿO(uôfS„v±‚9(WSV0Wú^.8hÃV0S ReQ‡v^b‰NÿNïSåN’NøvVbÿêSýwÇY²NIm¨RŽNRSýVKNNú^Ëz0ôv¥c×S‡v^,gºNßu»l0"
+   sob_zhenshoufu_vassal_title:0 "Chinjufu"
+sob_zhenshoufu_vassal_title_plural:0 "Chinjufu"
+sob_zhenshoufu_vassal_is_our:0 "§Y$NAME$§! is our Chinjufu."
+sob_zhenshoufu_vassal_long_desc:1 "Low army amount, great naval power buff."
 
 
-   sob_zhengyijiangjun_vassal_title:0 "V7YS›Q"
-sob_zhengyijiangjun_vassal_title_plural:0 "V7YS›Q"
-sob_zhengyijiangjun_vassal_is_our:0 "§Y$NAME$§! =fbìN„vV7YS›Q."
-sob_zhengyijiangjun_vassal_long_desc:1 "V7YS›Q=fåe,g0W:S„vyrŠkD–¸^ÿ^SŽN¹†u:SÿNb	g¹†u:SO×S0R2–¡V RbÿLeºNO×S0Rb×S¹†u:S&qW?eVr&^eg„vèT'Ymcw0S ReQ‡v^b‰NÿNïSåN’NøvVbÿSÐc›OŒT'YT‰|‹WD–¸^Nô„vŸRýw."
+   sob_zhengyijiangjun_vassal_title:0 "Shogun"
+sob_zhengyijiangjun_vassal_title_plural:0 "Shogun"
+sob_zhengyijiangjun_vassal_is_our:0 "§Y$NAME$§! is our Shogun vassal."
+sob_zhengyijiangjun_vassal_long_desc:1 "Shogun is our special vassal in japanese region."
 
 
 
-sob_emperors_loyaity_vassal_1_desc:0 "RšRkSb:SÿnxšRå‹ýVNb”^SV¡rt„v0W:Sÿ:NˆcˆNå‹ýVN–™ýT0W:S„vNb	g†˜WŒRbKbíu0‚Yœg(WRšRŒRbMRùRùR°eýV¶RO(uÿROÖSˆmNNN*NÛLˆ-N„vRšR0"
-sob_emperors_loyaity_vassal_1_title:0 "RšRkSb:S"
-sob_emperors_loyaity_vassal_1_dialog:0 "‡v^^gbìNÛ¬NžRt†˜WKbíu0"
-sob_emperors_loyaity_vassal_1_tooltip:0 "RšRkSb:SÿnxšRå‹ýVNb”^SV¡rt„v0W:Sÿ:NˆcˆNå‹ýVN–™ýøvT0W:S„v†˜WŒRbKbíu0‚Yœg(WRšRŒRbMRùRùR°eýV¶RO(uÿROÖSˆmNNN*NÛLˆ-N„vRšR0"
+sob_emperors_loyaity_vassal_1_desc:0 "Generate Entire region to our vassal in same region."
+sob_emperors_loyaity_vassal_1_title:0 "Generate Entire region"
+sob_emperors_loyaity_vassal_1_dialog:0 "Generate Entire region"
+sob_emperors_loyaity_vassal_1_tooltip:0 "Generate Entire region to our vassal in same region."
   

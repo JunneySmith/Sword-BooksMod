@@ -1,71 +1,376 @@
 ﻿l_english:
-sob_dongbei:0 "NSIlºN"
-SOB_REV_CHINA_STRING:0 "ê1uNSY"
-SOB_REV_CHINA_STRING_ADJ:0 "NSY„v"
-chinese_group:0 "-NNSlÏeÿPRC	ÿ"
-sob_han_nationalist_rebels:0 "Il lÏeã‰>e›Q"
-sob_sob_fubing_gov_no_china:0 "èK„ºNãSqS:g"
-sob_low_karma:0 "iOYeÿNON›R"
-sob_medium_karma:0 "iOYeÿ-NN›R"
-sob_high_karma:0 "iOYeÿØšN›R"
-sob_catholic_reform_desire:0 "ASWR›Q9ei—"
- sob_new_religion_mission:0 "V=T°e—RYe"
-shishen_estate_events.13.t:0 "W0W9ei—m0RëXÅuÍSùR"
-  shishen_estate_events.13.d:0 "ëXÅuµNuê‹RãN=fbýV„vßu»l9húWÿ:N?eœ^Ðc›O˜RXTÿßu»l0W¹e0Ñy>N6R¦^„vXR(WÿüRô†NåNfR`NQYefRô‹ÿ×‹<y.O¶R:NyrV„vëXÅu„vúQ°s0Ñy>N6R¦^„vúQ°sS)YNºNÂSNýV¶R)RÊvRM‘„v¹eV¾‹šR:NùRQ¶Rtº‹„vtã‰ŒT–ðÿO‡eÎ˜åeGSÿfk›Råepˆ0QfRjO:NNè•le<›^ywÜKNòTfRŒTS·VÄ‰ƒÿ(WäSãNNLuòTfR-NþfYŽNHQÛ0WMO0NÇôuc>yONbO`—„vv^NêS	gÐgNè•fRî•0òTfRmNêS	gjO:NcüRfRô‹wN=f‹SPvQÖNfRÑy„v=UN'YS„vöePÿMbùR>yOuµN›RwQÃOÛjO(u0êQfRb:N>ffRÿåTfRœQfR›QfRIrIrfRî•ÿàVàeÕl3zšR„vÂSNýV¶R)RÊvRM‘w¦l:NSS0NýV¾|ñ‚†v=fòTfR¶RÿFOýV¶RwQSO‹N¡R—‰„vtS=fwQYžRE–žR‹Nýw›R„vžRfR˜RÚPÿ=gN	gNIeQ¶RfRô‹	g'YQxvzã‰Ê‘ÿvQÖN„vºNfR`N†˜Oxvzbœg1S³Y†N.‚YœgbìNó`9eØSQfRùRvQÖNfRÑy„v‹S6Rÿ©‹QfRÞVRVáOIYsS³ãw„vcüR`ó`0WMOÿSýVºNÎNùRQfRtº‹“v–™wzÏu-Nã‰QeúQegÿ±HNbìN1S—‰vQÖNT6–µu„v=ec0åb	gN*N6–µu„v=ecïSåNÏQSW9e„vˆmw0ÛV*N6–µu=ecÿïSåNàeˆmwÛLˆW0W9ei—ÿv^Ð(uûN¡Rôv¥cnd–ëXÅu6–µu0"
-  shishen_estate_events.13.a:0 "åwS†N."
-sob_catholic:0 ")YINYe1rýVO"
-sob_catholic_religion_desc:0 ")YINYe1rýVO=f1uhQýV)YINYe^y•YeËSê?aÓub„v1rýV1rYe„v²OâVSO0,rNagÿ,gO—Rèe:NÿâVÓu0&^†˜hQýV)YINYe^y•YeËSÿåb²b-NýVqQµNZQ„v†˜üRŒT>yOININ6R¦^ÿuˆRýV¶RªRÕl0Õl‹V0ÕlÄ‰ŒT?eVrÿØš>N1rýV1rYe×e^ÿ(W?e»l0ÏuNmŒTYeO‹N¡RNZWcìrËzêINêžRŸSRÿôu²býV¶RINCgŒTYeO‹N¡RêINCgÿN>yOININ>yOøv”^ÿcgqlINžRYe¾|^yOS©RYe¡RÄuÇuZP‹Ygrupy.OåTjOÿVüRhQýV^y•YeËS(WÃOÛÏuNm>yOÑSUS-NÑS%cïygjO(uÿ:Nôu²bVyýVßuN0lÏeâVÓu0>yOŒTŒ0—RYeŒTfw0NLuŒTs^jO!.s0"
-sob_reformed:0 "9ei——R1W¦uO"
-sob_reformed_religion_desc:0 "Il.O9ei——RR=e"
-sob_orthodox:0 "Il.ONckYeO"
-sob_orthodox_religion_desc:0 "Il.ONckYeO"
-sob_coptic:0 "Il.OÑynfyrckYeO"
+sob_no_song_tooltip:0"Before AD960, Before Song Dynasty destory Confucianism."
+HHE_ideas:0 "Han Ideas"
+HHE_ideas_bonus:0 "Han Ambition"
+sob_guangfu:0 "National Restoration"
+sob_guangfu_desc:0 "Han nationality has fall since the Ming collapse, we recover our old country and bring peace and equality to our nation."
+sob_liansheng_republic:0 "United Provinces"
+sob_liansheng_republic_desc:0 ""
+sob_junzhengfu:0 "Military Governement"
+sob_junzhengfu_desc:0 ""
+sob_sanminzhuyi:0 "Three principles of the people"
+sob_sanminzhuyi_desc:0 ""
+sob_guozutongyuanlun:0 "Nationality Homology"
+sob_guozutongyuanlun_desc:0 "Han-nationality is the majority of our country. But People from Minority groups are also equal citizens. So according to the newest history research. All the nationality groups in China are homologous, they are the Branching peoples of Han-Nationality, we will  survive together in our great Nation for ever."
+sob_jianbianling:0 "Recover Han Civilization"
+sob_jianbianling_desc:0 ""
+sob_junguomin_dongyuan:0 "Mobilization System"
+sob_junguomin_dongyuan_desc:0 "Song and Ming dynasty were all fall because of the ignorance on National Defense. To keep our great nation proud and strong forever, we must establish a system make every Citizen in our country ready to protect the country and themselves."
+   sob_jitian_title:0 "Declearation Of the Refound"   
+   sob_jitian_desc:0 "Declear the return of the Celestial Empire"
+ COUNTRY_CANNOT_EMBRACE_REVOLUTION_CELESTIAL_EMPIRE:0 "The Emperor of China can only embrace the Revolution through event or disaster."
+   sob_hre_convert_tooltip_1:0"Unlock Religious Peace casus belli on Holy Roman Empire"
 
-sob_coptic_religion_desc:0 "Il.OÑynfyrckYeO"
- sob_mahayana:0 "Il.OiOYe"
-  sob_mahayana_religion_desc:0 "Il.OiOYeÿ=fåN0WtMOnRR„viOYe>m+RÿAm.OŽN-NýV0åe,g0gœœJS›SIr0Wÿ:NS.OiOYe-N„vN=eÿIN‰åN'YXNiOYe:NIN0(W†SòSNÿIl.OiOYeTöe×S0RS.OiOYeNWS.OiOYe„vqVÍTÿFOåNS.OiOYe„vqVÍT›Rƒ'YÿWS.OiOYeêS(W‘NWSIr0WAm.O0Il.OiOYe„vqVÍT›Rÿ4O–-NýV¿R›R.O­dógœœJS›S0åe,gNŠWSIr0Wÿv^NqVÍT†NTN„vÏ….OiOYe0"
+   sob_fubing_bili_modifier:0 "Focus On Footman Banners"
+sob_fubing_bili_title:0 "Focus On Footman"
+sob_fubing_bili_desc:0 "Focus On Footman"
+   
+     sob_duhu_vassal_title:0 "Protectorate"
+  sob_duhu_vassal_title_plural:0 "Protectorate"
+  sob_duhu_vassal_is_our:0 "§Y$NAME$§!Is Our Protectorate."
+  sob_duhu_vassal_long_desc:1 "Protectorate will protect our border."
+   sob_land_jiangnan_mission_title:0 "JiangNan Land Reform" 
+sob_land_jiangnan_mission_desc:0 ""
+sob_land_abolish_shishen_mission_title:0 "Abolish Shishen privileges." 
+sob_land_abolish_shishen_mission_desc:0 ""
+
+sob_land_reform_mission_title:0 "Land Reform" 
+sob_land_reform_mission_desc:0 ""
+
+sob_land_reform_cannon_mission_title:0 "ShanDong Land Reform" 
+sob_land_reform_cannon_mission_desc:0 ""
+sob_land_shu_mission_title:0 "Hebei Weisuo Soldiers" 
+sob_land_shu_mission_desc:0 ""
+sob_land_qin_mission_title:0 "Qin Weisuo Soldiers" 
+sob_land_qin_mission_desc:0 ""
+
+sob_land_reform_mission_tooltip_1:0 "Has one estate support our reformation" 
+
+sob_land_reform_mission_tooltip_2:0 "Has 4 estate support our reformation" 
+
+sob_land_nongmin_mission_desc:0 ""
+sob_land_nongmin_mission_title:0 "Help Peasants"
+
+sob_land_jikong_mission_title:0 "Confucian's Old way"
+sob_land_jikong_mission_desc:0 ""
+sob_jikong_reform_tooltip_1:0 ""
+
+   
+   
+sob_daolian_fangxian_title:0 "Pacific Bases"
+sob_daolian_fangxian_desc:0 ""
+sob_chinese_fleet:0 "Pacific Bases and Fleet"
+
+sob_songshu_1:0 "Kangaroo"
+sob_no_aosong:0 ""
+sob_no_aosong_1:0 "We find Kangaroo."
+
+sob_way_to_daishu_desc:0 ""
+sob_way_to_daishu_title:0 "Kangaroo"
+sob_way_to_aosong_title:0 "Colonize Australia"
+sob_way_to_aosong_desc:0 ""
+sob_conquer_sib_title:0 "Road to North"
+sob_conquer_sib_desc:0 ""
+
+sob_arrive_europe_title:0 "Arrive in Europe"
+sob_arrive_europe_desc:0 ""
+sob_continue_haowangjiao_title:0 "Good Hope"
+sob_continue_haowangjiao_desc:0 ""
+sob_continue_zhenghe_cruse_title:0 "Continue Zhenghe's Journey"
+sob_continue_zhenghe_cruse_desc:0 ""
+sob_conquer_chongjian_title:0 "Expand Royal Navy"
+sob_conquer_chongjian_desc:0 ""
+sob_chinese_american_mission_title:0 "East Chinese Empire"
+sob_chinese_american_mission_desc:0 ""
+
+sob_conquer_new_never_had_title:0 "Out World Expansion"
+sob_conquer_new_never_had_desc:0 ""
+
+sob_chinese_nammei_mission_title:0 "South America"
+sob_chinese_nammei_mission_desc:0 ""
+
+sob_chinese_panama_mission_title:0 "Colonize Panama"
+sob_chinese_panama_mission_desc:0 ""
+
+sob_chinese_donghai_mission_title:0 "Explorer East China Sea"
+sob_chinese_donghai_mission_desc:0 ""
+
+sob_dongbei_tooltip:0 ""
+
+sob_chongjian_faction_title:0 "Reorganize Factions"
+sob_chongjian_faction_desc:0 ""
+
+   
+   
+   
+cb_sob_yizhenzhuhou:0 "Moving Target of the Zhuhou State"
+cb_sob_yizhenzhuhou_desc:0 "Our Zhuhou state chosen this country as their target."
+ cb_sob_yizhenzhuhou_desc:0 "Take Their land for the emperor's Zhuhou."
+   take_sob_capital_vassalize:0 "Moving Target of the Zhuhou State"
+   
+      sob_confu_msn_rank_three_1:0 "(§G1§!)Missionary(Rank 1)"
+  sob_confu_msn_rank_three_2:0 "(§G2§!)Missionary(Rank 1)"
+  sob_confu_msn_rank_three_3:0 "(§G3§!)Missionary(Rank 1)"
+  sob_confu_msn_rank_three_4:0 "(§G4§!)Missionary(Rank 1)"
+  sob_confu_msn_rank_three_5:0 "(§G5§!)Missionary(Rank 1)"
+  sob_confu_msn_rank_three_6:0 "(§G6§!)Missionary(Rank 1)"
+  sob_confu_msn_rank_three_7:0 "(§G7§!)Missionary(Rank 1)"
+  sob_confu_msn_rank_three_8:0 "(§G8§!)Missionary(Rank 1)"
+  sob_confu_msn_rank_three_9:0 "(§G9§!)Missionary(Rank 1)"
+  sob_confu_msn_rank_three_10:0 "(§G10§!)Missionary(Rank 1)"
+  sob_confu_msn_rank_three_11:0 "(§G11§!)Missionary(Rank 1)"
+  sob_confu_msn_rank_three_12:0 "(§G12§!)Missionary(Rank 1)"
+  sob_confu_msn_rank_three_13:0 "(§G13§!)Missionary(Rank 1)"
+  sob_confu_msn_rank_three_14:0 "(§G14§!)Missionary(Rank 1)"
+  sob_confu_msn_rank_three_15:0 "(§G15§!)Missionary(Rank 1)"
+  sob_confu_msn_rank_three_16:0 "(§G16§!)Missionary(Rank 1)"
+  sob_confu_msn_rank_three_17:0 "(§G17§!)Missionary(Rank 1)"
+  sob_confu_msn_rank_three_18:0 "(§G18§!)Missionary(Rank 1)"
+  sob_confu_msn_rank_three_19:0 "(§G19§!)Missionary(Rank 1)"
+  sob_confu_msn_rank_three_20:0 "(§G20§!)Missionary(Rank 1)"
+  sob_confu_msn_rank_three_21:0 "(§G21§!)Missionary(Rank 1)"
+  sob_confu_msn_rank_three_22:0 "(§G22§!)Missionary(Rank 1)"
+     sob_confu_msn_rank_two_1:0 "(§G1§!)Missionary(Rank2)"
+  sob_confu_msn_rank_two_2:0 "(§G2§!)Missionary(Rank2)"
+  sob_confu_msn_rank_two_3:0 "(§G3§!)Missionary(Rank2)"
+  sob_confu_msn_rank_two_4:0 "(§G4§!)Missionary(Rank2)"
+  sob_confu_msn_rank_two_5:0 "(§G5§!)Missionary(Rank2)"
+  sob_confu_msn_rank_two_6:0 "(§G6§!)Missionary(Rank2)"
+  sob_confu_msn_rank_two_7:0 "(§G7§!)Missionary(Rank2)"
+  sob_confu_msn_rank_two_8:0 "(§G8§!)Missionary(Rank2)"
+  sob_confu_msn_rank_two_9:0 "(§G9§!)Missionary(Rank2)"
+  sob_confu_msn_rank_two_10:0 "(§G10§!)Missionary(Rank2)"
+  sob_confu_msn_rank_two_11:0 "(§G11§!)Missionary(Rank2)"
+  sob_confu_msn_rank_two_12:0 "(§G12§!)Missionary(Rank2)"
+  sob_confu_msn_rank_two_13:0 "(§G13§!)Missionary(Rank2)"
+  sob_confu_msn_rank_two_14:0 "(§G14§!)Missionary(Rank2)"
+  sob_confu_msn_rank_two_15:0 "(§G15§!)Missionary(Rank2)"
+  sob_confu_msn_rank_two_16:0 "(§G16§!)Missionary(Rank2)"
+  sob_confu_msn_rank_two_17:0 "(§G17§!)Missionary(Rank2)"
+  sob_confu_msn_rank_two_18:0 "(§G18§!)Missionary(Rank2)"
+  sob_confu_msn_rank_two_19:0 "(§G19§!)Missionary(Rank2)"
+  sob_confu_msn_rank_two_20:0 "(§G20§!)Missionary(Rank2)"
+  sob_confu_msn_rank_two_21:0 "(§G21§!)Missionary(Rank2)"
+  sob_confu_msn_rank_two_22:0 "(§G22§!)Missionary(Rank2)"
+     sob_confu_msn_1:0 "(§G1§!)Missionary(Rank1)"
+  sob_confu_msn_2:0 "(§G2§!)Missionary(Rank1)"
+  sob_confu_msn_3:0 "(§G3§!)Missionary(Rank1)"
+  sob_confu_msn_4:0 "(§G4§!)Missionary(Rank1)"
+  sob_confu_msn_5:0 "(§G5§!)Missionary(Rank1)"
+  sob_confu_msn_6:0 "(§G6§!)Missionary(Rank1)"
+  sob_confu_msn_7:0 "(§G7§!)Missionary(Rank1)"
+  sob_confu_msn_8:0 "(§G8§!)Missionary(Rank1)"
+  sob_confu_msn_9:0 "(§G9§!)Missionary(Rank1)"
+  sob_confu_msn_10:0 "(§G10§!)Missionary(Rank1)"
+  sob_confu_msn_11:0 "(§G11§!)Missionary(Rank1)"
+  sob_confu_msn_12:0 "(§G12§!)Missionary(Rank1)"
+  sob_confu_msn_13:0 "(§G13§!)Missionary(Rank1)"
+  sob_confu_msn_14:0 "(§G14§!)Missionary(Rank1)"
+  sob_confu_msn_15:0 "(§G15§!)Missionary(Rank1)"
+  sob_confu_msn_16:0 "(§G16§!)Missionary(Rank1)"
+  sob_confu_msn_17:0 "(§G17§!)Missionary(Rank1)"
+  sob_confu_msn_18:0 "(§G18§!)Missionary(Rank1)"
+  sob_confu_msn_19:0 "(§G19§!)Missionary(Rank1)"
+  sob_confu_msn_20:0 "(§G20§!)Missionary(Rank1)"
+  sob_confu_msn_21:0 "(§G21§!)Missionary(Rank1)"
+  sob_confu_msn_22:0 "(§G22§!)Missionary(Rank1)"
+   
+   
+sob_han_hre_empire_converted_title:0"Enforce Religious Peace"
+sob_han_hre_empire_converted_desc:0"Unlock Religious Peace casus belli on Holy Roman Empire"
+sob_reform_new_religion_dec_title:0"Enable New Religion "
+sob_reform_new_religion_dec_desc:0""
+
+sobevents.9552926.t:0"Cheat:Enable New Religion Directly(This is CHEAT!! Only use if you don't want to play With Confucianism)"
+sobevents.9552926.d:0"New Religions Can be enabled.This is CHEAT!! Only use if you don't want to play With Confucianism"
+sobevents.9552926.a:0"Go ahead"
+sobevents.9552926.b:0"no"
+   
+   
+PRC_ideas:0 "People's Republic Ideas"
+PRC_ideas_bonus:0 "People's Republic Ambition"
+sob_minzhugemingjichengren:0 "Successor of the Great Revolution"
+sob_minzhugemingjichengren_desc:0 "Revolution of 1911 has grant Freedom and equality to Han-Nationality and all the majority groups including Manchu.But Yuan Shikai quickly seized the fruits of the victory of the 1911 Revolution.The New revolution is needed, Chinese people need us to lead them to a bright feture."
+sob_renmingongheguo:0 "People's Republic"
+sob_renmingongheguo_desc:0 "We are the People's Republic, all interest and power belongs to our people, no matter which nationality group, no matter which estate he or she belongs to."
+sob_renminjundui:0 "The people's Army"
+sob_renminjundui_desc:0 ""
+sob_gaigekaifang:0 "Chinese Economic Reform"
+sob_gaigekaifang_desc:0 ""
+sob_baxiangguiding:0 "The Eight Rules"
+sob_baxiangguiding_desc:0 ""
+sob_minzupingdeng:0 "Equality among Nationality groups"
+sob_minzupingdeng_desc:0 "All Nationality groups are equal in our country, No Minority groups are allowed to rule the majority group. And the majority group is also banned to rule the Minority groups.China is a Civil Society, when taking part in social activities Citizenship is the only thing being considered."
+sob_anti_xuwuzhuyi:0 "Oppose Nihilism"
+sob_anti_xuwuzhuyi_desc:0 "National Nihilism and historic Nihilism will take our great nation apart if not suppressed."
+
+
+
+ sob_new_religion_mission:0 "Enable new Religion"
+  
+  shishen_estate_events.13.t:0 "Land Reform was opposed"
+  
+  shishen_estate_events.13.d:0 "Shishen estate is the basis of our country. Our works focusing on rebalancing the local intrest share were strongly opposed by the Shishen people. They completly rule both porvinces and our central government. If we want to increase our share in the taxes or place a more useful estate as local land lords, we need to promoted an estate to provide us officals,knowledges,and their own government system to help us ruling the country. Or we after we lost the support from the Shishen estate, there will soon be no officals to run our government."
+  shishen_estate_events.13.a:0 "Too Bad."
+  
+sob_catholic:0 "Han-Catholic"
+sob_catholic_religion_desc:0 "Han-Catholic"
+sob_reformed:0 "Han-Reformed"
+sob_reformed_religion_desc:0 "Han-Reformed"
+sob_orthodox:0 "Han-Orthodox PA"
+sob_orthodox_religion_desc:0 "Han-Orthodox"
+sob_coptic:0 "Han-Coptic PA"
+
+sob_coptic_religion_desc:0 "Han-Coptic"
+ sob_mahayana:0 "Han-Buddhism"
+  sob_mahayana_religion_desc:0 "Han-Buddhism"
  
-sob_sunni:0 "-NýVO¯epQYeOSO"
-sob_sunni_religion_desc:0 "VlbO¯epQYe1rýV1rYeOo‚.OßuÿõLˆleIN1rºNÿ!PüR2NN	T†^ÿÉycŒTs^-NS`ó`ÿZWcìrËzêINêžRŸSRÿôu²b—RYeŒTfw0lÏeâVÓu0>yO3zšR0VyýVßuNŒTNLuŒTs^ÿ:NÃOÛÏuNm>yOÑSUSÿ„gú^ŒTŒ>yOZPúQ!.s."
-sob_shinto:0 "QS^ySYe"
-sob_shinto_religion_desc:0 "QS^ySYe"
+sob_sunni:0 "Han-Muslim"
+sob_sunni_religion_desc:0 "Han-Muslim"
+sob_shinto:0 "Han-Shinto"
+sob_shinto_religion_desc:0 "Han-Shinto"
 
- sob_hinduism:0 "Il.OpS¦^Ye"
-  sob_hinduism_religion_desc:0 "Il.OpS¦^Ye"
+ sob_hinduism:0 "Han-Hinduism"
+  sob_hinduism_religion_desc:0 "Han-Hinduism"
  
- sob_shamanism:0 "×‚†uëTYe"
-  sob_shamanism_religion_desc:0 "×‚†uëTYe"
- sob_anglican:0 "Il.O1WlQO"
-  sob_anglican_religion_desc:0"Il.O1WlQO"
-  sob_shisuhua_reform_tooltip_1:0 "ã‰•  §YAm>e6R¦^§! ,Ÿ^d– §R—RYe§! :ËR¹R ,§RáOag§! : S·VININ "
-    sob_shisuhua_reform_tooltip_2:0 "ã‰• §GáOag§! :žR(uININ, ã‰• §YNåNŠ·ƒj§! , Ÿ^d– §RÑy>N§! : ×‹Í‹LkK"
-        sob_shisuhua_reform_tooltip_3:0 "ã‰• žRÁ‹ININ,  Ÿ^d– §RáOag§! : »S›Q‹NS."
-             sob_shisuhua_reform_tooltip_4:0 "ã‰• §GÑy>N§! : QR§! ,§GáOag§! : TPRmQz‚§! ."
-                    sob_shisuhua_reform_tooltip_5:0"ã‰•§GàVT1rýV§!ÿ§GëXœQåTFU§!ÿ§GfNT‡e§!,§Gû|ßuSYe²w§! áOag0Ÿ^d–§G`Ôg§!ŒT§GS·VININáOag§!0"
-                         sob_shisuhua_reform_tooltip_6:0 "^l6–BSqVÍT›RÐcGSv^S=ecW9e"
-sob_society_warrior_reform_tooltip_1:0 "AQ¸‹ûyG•-NŸSø‹¯OŒTkSfýV0" 
-sob_society_warrior_reform_tooltip_2:0 "›Q7b6–µuqVÍT›RÍ‘ú^v^SO=ecW9e" 
-sob_shangren_reform_7:0 "FUºN6–µuqVÍT›RÐcGSv^S=ecW9e"        
-sob_court_reform_tooltip_6:0 "‡v²RqVÍT›RÍ‘ú^v^S=ecW9e"                      
-                                              
-       
-                            
-            sob_diss_qinwang_title:0 "Ÿ^d–é…y"                          
-                            
-            sob_diss_qinwang_desc:0 "êfbVyV—¾–sSMOKNTçuíuJRé…?eVrÿé…yîh%NÿNÅNé…‹s,g«ŽNýwÅd»yS0Wÿte*N‡v²Rý«ˆbrbr0WW‰Q†NwegÿNýwSVuQZP˜RÏuFUÿêSýwOVg÷^	gP–„vøO„y›O‰Q0•gWy?eVr‹†6qNšRz¦^NMQ†N‡v²RbXTùRlô•‹N¡R0Wr^pbÿFOmN&^eg†N‡v²RqVÍT›RNM–ÿøO„y=eúQåeÊvž^'YIrNû|Rî•˜˜0wNmN.b†N%NÍ‘„vºN›RDnjm9ÿ‡v²R=f‡v^(WgX-NgZWšR„v=ec>mû|ÿ‡v²RpˆK„KNTfgTINCgZåe‹NÑn0Ÿ^d–é…yNÅNïSåNÏQ‰0?e‹S›RÿwNmN=f©‹‡v²Rb:N6RaˆëXÅu¿R›Rib.V„vMRÐc0"                      
-          
-sob_religion_reform_title:0 "—RYe"
-sob_religion_reform_desc:0 "Ñy>N6R¦^„vXR(WÿüRô†NåNfR`NQYefRô‹ÿ×‹<y.O¶R:NyrV„vëXÅu„vúQ°s0Ñy>N6R¦^„vúQ°sS)YNºNÂSNýV¶R)RÊvRM‘„v¹eV¾‹šR:NùRQ¶Rtº‹„vtã‰ŒT–ðÿO‡eÎ˜åeGSÿýV¶R3–låepˆ0QfRjO:NNè•le<›^ywÜKNòTfRŒTS·VÄ‰ƒÿ(WäSãNNLuþf•gYŽNHQÛ0WMO0NÇôuc>yONbO`—„vv^NêS=fNè•fRî•0òTfRmNêS	gjO:NcüRfRô‹wN=f‹SPvQÖNfRÑy„v=UN'YS„vöePÿMbùR>yOuµN›RwQÃOÛjO(u0êQfRb:N>ffRÿåTfRISfRœQfR›QfRIrIrfRî•ÿàVàeÕl3zšR„vÂSNýV¶R)RÊvRM‘w¦l:NSS0NýV¾|ñ‚†v=fòTfR¶RÿFOýV¶RwQSO‹N¡R—‰„vtS=fžRE–žR‹Nýw›R„vžRfR˜RÚP.‚YœgbìNó`9eØSQfRùRvQÖNfRÑy„v‹S6Rÿ©‹QfRÞVRVáOIYsS³ãw„vcüR`ó`0WMOÿSýVºNÎNùRQfRtº‹“v–™wzÏu-Nã‰QeúQegÿxvzòTfR„vQfR—RYeºNXT1SY†NÿvQÖNLˆNmN=fýV¶RAucƒNbÅVNïSS„v0"
-sob_religion_import_title:0 "—RYeÛãS"
-sob_religion_import_desc:0 "–NwqNNÓumgÿ8f„vYtQÿˆVY°e—RYeÛeQ†NbìN„výV¶Rÿ:N†NMQjo(W„vZÁwÿbìNg‹YTvQÖNýV¶RûRBlåwÆ‹ÿåN¿Oôf‹Y0Wµc6RýV…Q„vYeO0"
-sob_harmonized_pagan_title:0 "YeSŸSËY—RYe"
-sob_harmonized_pagan_desc:0 "ŸSËY—RYe=fºN‰|>yOéegµNu„váOðNÿY:NÜbirÛlupbVyHQTÜb0‹†6qŸSËYÿvQ6eÆ–„vê6q0Wt°saŒåwÆ‹Ø=fASR	g(u„v0"
-sob_harmonized_chr_title:0 "YeSúWcwYe"
-sob_harmonized_chr_desc:0 ""
+ sob_shamanism:0 "Han-Shamanism"
+  sob_shamanism_religion_desc:0 "Han-Shamanism"
+ sob_anglican:0 "Anglican PA"
+  sob_anglican_religion_desc:0 "Anglican PA"
+  sob_shisuhua_reform_tooltip_1:0 "Unlock §RReligion§! : Harmony aspect, unlock §YDeported Criminals§! aspect,abolish §RIdeology§! : DaoTe Mysticism aspect"
+    sob_shisuhua_reform_tooltip_2:0 "Unlock §GIdeology§! : Pragmatism aspect, unlock §YNo Literary Inquisition§! aspect, abolish §RBooks§! : Four forms of poetry aspcet"
+        sob_shisuhua_reform_tooltip_3:0 "Unlock knowledges&investagation,  abolish §RBelief§! : Demilitarization, abolish Huairou Policy."
+             sob_shisuhua_reform_tooltip_4:0 "Unlock §GKeJu§! : Swords§! aspect,§GBelief§! : Classical Six-Arts§! aspect."
+                    sob_shisuhua_reform_tooltip_5:0 "Unlock  Junziliuyi aspect,Allegiance inheritance aspect, unlock Expand wuju aspcet.Unlock  Superior Education aspcet."
+                         sob_shisuhua_reform_tooltip_6:0 ".Citizens will support us on Land Reformation"
 
-sob_harmonized_mu_title:0 "YeSO¯epQYe"
+                            
+sob_society_warrior_reform_tooltip_1:0 "Allow Culture Conversion in tributary countries" 
+sob_society_warrior_reform_tooltip_2:0 "Warriors will support us on Land Reformation" 
+sob_shangren_reform_7:0 "Shangren will support us on Land Reformation"        
+sob_court_reform_tooltip_6:0 "Nobles will support us on Land Reformation"   
+sob_sob_society_warrior_reform_dip_tooltip:0 "Finish New Vassals Mission"                             
+                            
+  sob_nobles_power_up_title:0 "Rising Warriors"                          
+                            
+            sob_reform_mission_desc:0 " "                
+                            
+            sob_diss_qinwang_title:0 "Weaken Qinwang"                          
+                            
+            sob_diss_qinwang_desc:0 " "                      
+
+                            
+sob_reform_mission_title:0 "Call For Reformation"
+sob_reform_mission_desc:0 " "
+sob_religion_reform_title:0 "Religion Reform"
+sob_religion_reform_desc:0 " "
+sob_religion_import_title:0 "Religion Import"
+sob_religion_import_desc:0 " "
+sob_harmonized_pagan_title:0 "Moralized Pagan"
+sob_harmonized_pagan_desc:0 " "
+sob_harmonized_chr_title:0 "Moralized Christian"
+sob_harmonized_chr_desc:0 " "
+
+sob_harmonized_mu_title:0 "Moralized Muslim"
 sob_harmonized_mu_desc:0 " "
-sob_religious_idea_group_mission_title:0 "teTfNb–"
-sob_religious_idea_group_mission_desc:0 "–NwYeg—RYe„vAmeQÿçe	gSO6RòTÏuNýwán³QYeÝOcYeOáOðN„v—BlÿNbåNÇtetT—RYe&^eg„v°e„vÄuÇuåwÆ‹ÿbìNïSåNåN”^)Yœ^fNb–0³S“žfNb–0‹vžmfNb–0ówŸfNb–”N'YfNb–:N!jƒÿteTú^ËzhQýVfNb–SOû|ÿ¾‹Ëz°e„v:g„gÝOÁ‹.OYe:g6RÐlck8^0"
+sob_religious_idea_group_mission_title:0 "Religious Idea Group"
+sob_religious_idea_group_mission_desc:0 " "
+
+sob_court_reform_title:0 "Court Reformation"
+sob_court_reform_desc:0 " "
+
+sob_abolish_royal_shangye_ban_title:0 "Allow Royal Engaging Commerce"
+sob_abolish_royal_shangye_ban_desc:0 " "
+
+sob_rise_royal_army_title:0 "Rise Royal Army"
+sob_rise_royal_army_desc:0 " "
+sob_abolish_royal_official_ban_title:0 "Allow Royal Being Officials"
+sob_abolish_royal_official_ban_desc:0 " "
+sob_abolish_royalforever_title:0 "Abolish Royal-Forever"
+sob_abolish_royalforever_desc:0 " "
+
+sob_shisuhua_reform_title:0 "Secularization"
+sob_shisuhua_reform_desc:0 " "
+
+sob_lixinghua_title:0 "Rationalization"
+sob_lixinghua_desc:0 " "
+
+sob_new_knowledge_title:0 "New Knowledge"
+sob_new_knowledge_desc:0 " "
+
+sob_kejufugu_aspect_title:0 "Old school Imperial Examnation"
+sob_kejufugu_aspect_desc:0 " "
+
+sob_shuyeyouzhuangong_title:0 "Equality among Shi Nong Gong Shang"
+sob_shuyeyouzhuangong_desc:0 " "
+
+sob_weiwuzhuyi_zhexuehua_title:0 "Materialism"
+sob_weiwuzhuyi_zhexuehua_desc:0 " "
+
+sob_society_reform_title:0 "Society"
+sob_society_reform_desc:0 " "
+
+sob_nobles_idea_title:0 "Nobles Ideas"
+sob_nobles_idea_desc:0 " "
+
+sob_conquer_new_lands_title:0 "Conquer New Land"
+sob_conquer_new_lands_desc:0 " "
+
+sob_new_vassal_title:0 "New Vassals"
+sob_new_vassal_desc:0 " "
+
+sob_refed_title:0 "RE-Feudalization"
+sob_refed_desc:0 " "
+
+sob_new_vassal_title:0 "New Vassals"
+sob_new_vassal_desc:0 " "
+
+sob_new_national_religious_mission_title:0"New National Religion"
+sob_new_national_religious_mission_desc:0" "
+
+sob_royal_forever_acts:0"Abolish Royal forever"
+sob_china_naval_dominance:0"China Naval Dominance"
+sob_abolish_official_ban:0"Royal Officials Allowance"
+sob_nobles_rework:0"New Nobles"
+sob_re_fed:0"RE-Feudalization"
+
+sob_suijun_mushi:0 "Noble Missionaries"
+
+sob_confuzeal_act:0 "Endless Zeal"
 
 
+
+
+sob_aristocracy_ideas:0 "Aristocratic Ideas"
+ sob_aristocracy_ideas_bonus:0 "Full Aristocracy"
+ sob_noble_knights:0 "Noble Knights"
+ sob_noble_knights_desc:0 "Supporting cavalry requires an economic system that produces a large number of surplus horses. If we were to guarantee the privileges of our noble class not only would they be much happier they would do much of the work to produce the needed horses. Our court fool described it as service guarantees serfs."
+ sob_weisuo_system_i:0 "Reform WeiSuo System"
+ sob_serfdom_desc:0 "Make them knights."
+ sob_noble_officers:0 "Noble Officers"
+ sob_noble_officers_desc:0 "Who leads our troops is an important choice. Our nobility is seeking to ensure that preference is given to them. It will give them a chance to show their valor by giving the enemy cold steel and we will allow them to do this."
+ sob_local_nobility:0 "Local Nobility"
+ sob_local_nobility_desc:0 "The nobility know they are simply better than normal people and will give their loyalty to those that are worthy. If we confirm their privileges they will of course remember our largess and be more resistant to the inducements of foreign powers."
+ sob_international_nobility:0 "International Nobility"
+ sob_international_nobility_desc:0 "International relations are a tricky business. Some say that the merchant class who are used to dealing with foreigners are best for this. Those who say this ignore the kindred ties that our noble families have established through the years, these ties should be taken advantage of to help our cause diplomatically."
+ sob_noble_resilience:0 "Noble Connections"
+ sob_noble_resilience_desc:0 "The various mercenary groups of this continent are often headed by lesser nobles. By befriending the nobility we can make use of their network of contacts to seek out more and larger groups of mercenary soldiers."
+ sob_fanshang_fa:0 "Fanshang Law"
+sob_fanshang_fa_desc:0 "Choose emperor's royal army from local knights."
+
+
+ revolution.43.name:0 "The Heavenly Revolution"
+ revolution.43.desc:0 "The Revolution has arrived! Large crowds gathered in [Root.Capital.GetCapitalName] to demand an end to the millennia-old imperial regime that many feel does little for the majority of its people. Initially demanding a constitution to limit the [Root.Monarch.GetTitle]’s power and increase their own influence in government, the crowd was incensed at the violent crackdown by Qinwang's forces and fought back, storming the Forbidden City.If [Root.Monarch.GetTitle] [Root.Monarch.GetName] orders Imperial Army to crackdown, few indeed felt merciful towards [Root.Monarch.GetHerHim] including Soldiers. Seeing no possible escape, [Root.Monarch.GetName] accepts [Root.Monarch.GetHerHis] people's request .\n\nThe new government leader of [Root.Capital.GetCapitalName] have declared China a Constitutional Monarchy, promising to reorganize the state by redistributing the nobility's land to the peasantry and establishing full equality under the law. They declare that the future will be glorious and free for all the people of China!"
+ 
+ 
+ revolution.45.name:0 "The Heavenly Revolution"
+ revolution.45.desc:0 "The Revolution has arrived! Large crowds gathered in [Root.Capital.GetCapitalName] to demand an end to the millennia-old imperial regime that many feel does little for the majority of its people asking the reclaimation of Han nationality and drive out of the manchu dynasty. Initially demanding a constitution to limit the [Root.Monarch.GetTitle]’s power and increase their own influence in government, but the manchu dynasty brought in royal cabinet and manchu cabinet to the government. These acts shows the Manchu-Han family theory was only a lie in this dynasty. No freedom will be set until this dynasty Fall. The crowd was incensed at the violent crackdown by imperial forces and fought back, storming the Forbidden City. As the sheer scale of [Root.Monarch.GetTitle] [Root.Monarch.GetName]’s luxurious lifestyle was laid bare, few indeed felt merciful towards [Root.Monarch.GetHerHim]. Seeing no possible escape, [Root.Monarch.GetName] took [Root.Monarch.GetHerHis] own life rather than face the indignity of a public execution.\n\nThe new rulers of [Root.Capital.GetCapitalName] have declared China a Republic, promising to reorganize the state by redistributing the nobility's land to the peasantry, establishing full equality under the law, and the reclaimation of Han traditions. They declare that the future will be glorious and free for all the people of China!"
+ 
+ 
+ 
+ revolution.44.name:0 "The Heavenly Revolution"
+ revolution.44.desc:0 "The Revolution has arrived! Large crowds gathered in [Root.Capital.GetCapitalName] to demand an end to the millennia-old imperial regime that many feel does little for the majority of its people asking the reclaimation of Han nationality and drive out of the manchu dynasty. Initially demanding a constitution to limit the [Root.Monarch.GetTitle]’s power and increase their own influence in government, but the manchu dynasty brought in royal cabinet and manchu cabinet to the government. These acts shows the Manchu-Han family theory was only a lie in this dynasty. No freedom will be set until this dynasty Fall. The crowd was incensed at the violent crackdown by imperial forces and fought back, storming the Forbidden City. As the sheer scale of [Root.Monarch.GetTitle] [Root.Monarch.GetName]’s luxurious lifestyle was laid bare, few indeed felt merciful towards [Root.Monarch.GetHerHim]. Seeing no possible escape, [Root.Monarch.GetName] took [Root.Monarch.GetHerHis] own life rather than face the indignity of a public execution.\n\nThe new rulers of [Root.Capital.GetCapitalName] have declared China a Republic, promising to reorganize the state by redistributing the nobility's land to the peasantry, establishing full equality under the law , and the reclaimation of Han traditions. They declare that the future will be glorious and free for all the people of China!"
+ 
+ 
+ 
+ 

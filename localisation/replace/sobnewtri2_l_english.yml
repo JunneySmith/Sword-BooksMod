@@ -1,9 +1,250 @@
 ﻿l_english:
-sob_conquer_mongol_empire_mission_vassal:0 "Nb	g™„äS‡eSNb^S‡eSÄu„výV¶R=f,gýV„vD–^SýVbg!ýV"
-sob_conquer_mongol_empire_mission_20_desire:0 "åb	g„vNb	g™„äSNb^S‡eSÄu^SýV„vìrËz>PTN—VØšŽN20"
-sob_conquer_mongol_empire_mission_land:0 "Nb	g™„äS0W:S„v0^—*g–kl„vwýN1uD–^SýV0g!ýVb,gýVôv¥cµc6R"
-sob_nan_yang_officals_title:0 "WSmý²b"
-sob_nan_yang_officals_desc:0 ""
-sob_chi_nanyang_time_tooltip:0 "ßu»lWSmóS20t^"
-sob_chi_nanyang_time_con:0 "§GhQèWSmé…ýVS ReQWSmý²bœ^§!"
-SOB_NANYANG_DUHU:0 "WSmý²bœ^"
+sob_tributary_events.2.t:0 "Education Mission Report: [sob_tributary_events_province_religion.GetName] and [sob_tributary_events_province_religion_2.GetName] are converted into the State Church"
+sob_tributary_events.2.d:0 "Our efforts to integrate [From.GetName] subjects have finally begun to reap rewards. Our [From.GetName] provinces [sob_tributary_events_province_religion.GetName] and [sob_tributary_events_province_religion_2.GetName] believe in [From.Religion. The subjects of the GetName] faith began to accept the idea of ​​[Root.Religion.GetName], and our local officials also incorporated the elements of [Root.Religion.GetName] religion and culture into the idea of ​​[sob_tributary_events_province_religion.GetName]. With the participation of the central bureaucracy In the local administration, the custom of [Root.Religion.GetName] has also gradually penetrated into the upper layers."
+sob_tributary_events.2.b:0 "I know."
+
+
+sob_tributary_events.3.t:0 "Education group report: [From.GetName] believes in the state religion"
+sob_tributary_events.3.d:0 "Our efforts to integrate [From.GetName] subjects have finally begun to reap rewards. Our [From.GetName] believers in [From.Religion.GetName] faith began to accept [Root.Religion.GetName ] Thoughts, and our local officials also incorporated [Root.Religion.GetName] religious and cultural elements into local thoughts. With the participation of central bureaucrats in local administration, the custom of [Root.Religion.GetName] also Began to gradually penetrate the upper layers."
+sob_tributary_events.3.b:0 "I know."
+
+
+sob_tributary_events.5.t:0 "Jianguo Report: [sob_tributary_events_province_religion.GetName] and [sob_tributary_events_province_religion_2.GetName] accepted [Root.Culture.GetName] culture"
+sob_tributary_events.5.d:0 "Our efforts to integrate [From.GetName] subjects have finally begun to reap rewards. Our provinces [From.GetName] [sob_tributary_events_province_religion.GetName] and [sob_tributary_events_province_religion_2.GetName] respect [From.Culture. The subjects of the GetName] faith began to accept the idea of ​​[Root.Culture.GetName], and our local officials also incorporated the religious and cultural elements of [Root.Culture.GetName] into the local thought. With the participation of the central bureaucracy in the local administration In management, the custom of [Root.Culture.GetName] has also gradually penetrated into the upper layers."
+sob_tributary_events.5.b:0 "I know."
+
+sob_tributary_events.6.t:0 "Jianguo Report: [From.GetName] accepted [Root.Culture.GetName] culture"
+sob_tributary_events.6.d:0 "Our efforts to integrate [From.GetName] subjects are now finally beginning to reap rewards. Our [From.GetName] honoring subjects of [From.Culture.GetName] faith began to accept [Root.Culture.GetName ] Thoughts, and our local officials also incorporated [Root.Culture.GetName] religious and cultural elements into local thoughts. With the participation of central bureaucrats in local administration, the custom of [Root.Culture.GetName] also Began to gradually penetrate the upper layers."
+sob_tributary_events.6.b:0 "Our ancestors are protecting the heavenly dynasty."
+
+sob_tributary_events.102.t:0 "Education Mission Report: [From.GetName]'s consultants converted to state religion"
+sob_tributary_events.102.d:0 "Our efforts to integrate [From.GetName] subjects have finally begun to reap rewards. Our [From.GetName] consultants believe in [From.Religion.GetName] faith subjects and begin to accept [Root.Religion .GetName] thoughts, and our local officials also incorporated [Root.Religion.GetName] religious and cultural elements into local thoughts. With the participation of central bureaucrats in local administration, [Root.Religion.GetName]’s Customs have also gradually penetrated into the upper layers."
+sob_tributary_events.2.b:0 "I know."
+
+
+sob_tributary_events.103.t:0 "Education group report: [From.GetName] believes in the state religion"
+sob_tributary_events.103.d:0 "Our efforts to integrate [From.GetName] subjects have finally begun to reap rewards. Our [From.GetName] believers in [From.Religion.GetName] faith began to accept [Root.Religion.GetName ] Thoughts, and our local officials also incorporated [Root.Religion.GetName] religious and cultural elements into local thoughts. With the participation of central bureaucrats in local administration, the custom of [Root.Religion.GetName] also Began to gradually penetrate the upper layers."
+sob_tributary_events.3.b:0 "I know."
+
+
+sob_tributary_events.105.t:0 "Jianguo Report: The successor of [From.GetName] accepted [Root.Culture.GetName] culture"
+sob_tributary_events.105.d:0 "Our efforts to integrate [From.GetName] subjects are now finally beginning to pay off. Our heir to [From.GetName], who originally respected [From.Culture.GetName] traditional subjects, began to accept [Root. .Culture.GetName] thoughts, and our local officials also incorporated [Root.Culture.GetName] religious and cultural elements into local thoughts. With the participation of central bureaucrats in local administration, [Root.Culture.GetName] ] The customs have also gradually penetrated into the upper layers."
+sob_tributary_events.5.b:0 "I know."
+
+sob_tributary_events.106.t:0 "Jianguo Report: [From.GetName] accepted [Root.Culture.GetName] culture"
+sob_tributary_events.106.d:0 "Our efforts to integrate [From.GetName] subjects have finally begun to reap rewards. With the new ruler ascended, our [From.GetName] honored subjects of [From.Culture.GetName] faith began Accept the idea of ​​[Root.Culture.GetName], and our local officials also incorporate the religious and cultural elements of [Root.Culture.GetName] into the local thought. With the participation of the central bureaucracy in the local administration, [Root. Culture.GetName]'s customs have also gradually penetrated into the upper layers."
+sob_tributary_events.6.b:0 "Our ancestors are protecting the heavenly dynasty."
+
+cb_sobguangfu:0 "Liberation"
+cb_sobguangfu_desc:0 "People of the same culture are being oppressed and can recover the same culture or own permanently claimed land at a very low diplomatic cost."
+
+sob_tributary_events.9.t:0 "To summon [From.GetName] tribute"
+sob_tributary_events.9.d:0 "[From.GetName] The tribute came to [Root.GetCapitalName]'s court pilgrimage to the emperor. We can request the tribute that [From.GetName] needs to provide next. The request can be changed every two years Tribute."
+sob_tributary_system_rice_import_modifier:0 "Tribute Food"
+sob_tributary_system_trade_permission_modifier:0 "Inland Trading Fleet"
+sob_tributary_system_offical_import_modifier:0 "Tribute Doctor"
+sob_tributary_system_development_modifier:0 "Tribute Craftsman"
+sob_tributary_system_prestige_modifier:0 "Resident Mission"
+sob_tributary_system_mil_amount_modifier:0 "Tribute Commander"
+sob_tributary_system_mil_maintance_modifier:0 "Tributary Quartermaster"
+sob_tributary_system_mil_ca_modifier:0 "Tribute Cavalry Equipment"
+sob_tributary_system_mil_ft_modifier:0 "Tribute Infantry Equipment"
+sob_tributary_system_mil_naval_amount_modifier:0 "Tribute Navy Commander"
+sob_tributary_system_mil_naval_maintance_modifier:0 "Tribute Naval Munitions"
+sob_tributary_system_mil_naval_moral_modifier:0 "Resident Fleet"
+sob_tributary_system_mil_naval_shipdru_modifier:0 "Tribute Naval Equipment"
+sob_tributary_system_mil_naval_sailorrec_modifier:0 "Tribute Sailor"
+sob_tributary_system_mil_naval_ship_buildspeed_modifier:0 "Tribute Ship Artisan"
+sob_tributary_system_debuff:0 "The Kingdom of Unexpedition"
+sob_tributary_events.12.t:0 "[From.GetName] notified all neighboring countries"
+sob_tributary_events.12.d:0 "[From.GetName] notified the tributaries of the neighboring countries to come to [Root.GetCapitalName]'s court pilgrimage to the emperor. We can request all the neighboring countries from [From.GetName] Tribute. The required tribute can be changed every two years."
+
+
+
+
+
+  sob_tributary_state_3_for_celestial_empire:0 "Grant to the Garrison"
+sob_tributary_state_3_for_celestial_empire_desc:0 "Adjust the tribute of the country, which can be adjusted every two years."
+sob_tributary_state_3_for_celestial_empire_dialog:0 "Tianzi wants to adjust our tribute."
+sob_tributary_state_3_for_celestial_empire_title:0 "To summon the tribute (the country)"
+sob_tributary_state_3_for_celestial_empire_tooltip:4 "Adjust the tribute of the country, it can be adjusted every two years."
+
+  sob_tributary_state_3_for_celestial_empire3:0 "Grant to the Garrison"
+sob_tributary_state_3_for_celestial_empire3_desc:0 "Adjust the tribute of the country and all its neighbors. It can be adjusted every two years."
+sob_tributary_state_3_for_celestial_empire3_dialog:0 "Tianzi wants to adjust our tribute."
+sob_tributary_state_3_for_celestial_empire3_title:0 "To summon the tribute (all neighboring countries)"
+sob_tributary_state_3_for_celestial_empire3_tooltip:4 "Adjust the tribute of the country and all its neighbors. It can be adjusted every two years."
+
+  cancel_for_celestial_empire_3:0 "Grant to the Garrison"
+cancel_for_celestial_empire_3_desc:0 "Revoke the status of the country that is not enlisted, which will reduce the pressure on our foreign affairs, but destroying the ancestral system of the Taizu emperor will be regarded as a disrespectful ancestor by the domestic gentry, and it will reduce the destiny by 25 points."
+cancel_for_celestial_empire_3_dialog:0 "The emperor revoked the status of our country as an unconquered country."
+cancel_for_celestial_empire_3_title:0 "Revoke the Unexpected Nation"
+cancel_for_celestial_empire_3_tooltip:4 "Revoke the status of the country that is not enlisted, which will reduce the pressure on my country's foreign affairs, but the destruction of the ancestral system of the emperor Taizu will be regarded as a disrespectful ancestor by the domestic gentry, and will be reduced by 25 points."
+
+
+
+  sob_tributary_state_4_for_celestial_empire:0 "Grant to the Garrison"
+cancel_for_celestial_empire_4_desc:0 "We will no longer pay tribute to the suzerain and leave the status of vassal. A truce agreement will result."
+cancel_for_celestial_empire_4_dialog:0 "Our country will stop the tributary relationship with the suzerain."
+cancel_for_celestial_empire_4_title:0 "Stop Tribute"
+cancel_for_celestial_empire_4_tooltip:4 "We will no longer pay tribute to the patriarch and leave the vassal status. A truce agreement will result."
+
+sob_tributary_system:0 "Tributary System: The Land of Unquestion"
+soboption.922.c:0 "New Tributary Mechanism: The Land of No Levy"
+sob_recent_abolish_tributary:0 "Site in the Sun"
+sob_abolish_tributary_title:0 "Revoke the Land of Unquestion"
+sob_abolish_tributary_desc:0 "The imperial country under the tributary system established by the Ming Taizu during the founding of the country was intended to ensure the harmony of the four seas under the premise of ensuring the sovereignty of the Chinese emperor. But as the decline of the military force of the Ming Dynasty became a yoke that constrained China’s expansion, it was maintained. The tributary relationship drained the Ming Dynasty's foreign affairs energy. Now it's time to reform, abolish the system of unenlisted state, establish the authority of the dynasty, and the rule and obligations of the Ming dynasty. The nominal servants who deceive themselves should disappear from the land of the East, and the emperor will personally command the East world."
+sob_abolish_tributary_emperor:0 "Revoke the country not to be levied"
+sob_option_events.921.t:0 "Tributary State Mechanism Settings"
+sobevents.9552926.exit:0 "Exit"
+sob_celestial_member_2_title:0 "Defense Alliance"
+sob_celestial_member_2_title_plural:0 "Defense Alliance"
+sob_celestial_member_2_is_our:0 "§Y$NAME$§! is our defensive alliance."
+sob_celestial_member_2_long_desc:1 "The defensive alliance is a special affiliation within the China Empire. It is transformed by ordinary independent member states with a high degree of independence when the emperor is in a state of war through the war resolution, and will join the war of the emperor, but will be in peace in the empire. After the state is restored, the state of ordinary member states that will not join the war will be restored."
+
+sob_celestial_member_title:0 "Joining Countries"
+sob_celestial_member_title_plural:0 "Joining Countries"
+sob_celestial_member_is_our:0 "§Y$NAME$§! is our member country of China."
+sob_celestial_member_long_desc:1 "The franchise is a subordinate relationship within the China Empire. The franchise has a government system recognized by the emperor and is independent of the territorial jurisdiction of the emperor. It will not be called to join the war. It will not be separated from military forces due to its own development. . Using the tariff mechanism, you can pay tribute to Tianzi every year."
+
+sob_celestial_member_creation_title:0 "China Empire: Become a Member"
+sob_celestial_member_creation_desc:0 "We have a sufficiently strong influence in the Chinese world. The country ruled by our leaders has surpassed the direct jurisdiction of the current Emperor. We can choose to declare the destiny and let the strongest lead the empire, or to ensure the unity of the empire. Tianzi applied to become a franchise independent of the administrative system of the emperor, but would remain in the empire. The franchise would not be called into the war of the emperor, nor would it calculate the tendency of independence brought about by development and military power. You can join the emperor by resolution war."
+sob_celestial_member_2_creation_title:0 "Chinese Empire: Join the War of the Emperor"
+sob_celestial_member_creation_desc:0 "The empire is in a state of war, we can choose to join the war to support our brother country."
+sob_celestial_member_creation_title:0 "China Empire: Become a Member"
+sob_celestial_member_creation_desc:0 "The war is over, we should end the temporary alliance."
+   
+sob_tributary_state_3_title:0 "The Kingdom of No Levy"
+sob_tributary_state_3_title_plural:0 "The Kingdom of No Levy"
+sob_tributary_state_3_is_our:0 "§Y$NAME$§! is our country of no enlistment."
+sob_tributary_state_3_long_desc:1 "The unexploited country is a special kind of sectarian relationship. The sectarian promises not to carry out military operations, and the vassal state will pay tribute year after year as requested by the sectmaster. The Chinese emperor is nominally the master of the entire Eastern world However, in practice, due to the innate confrontation between the gentry class and the industry, the relationship between the clan and the clan became nominal and became a tool for various small countries to invade the interests of the sovereign state through tribute. However, the foreign affairs department of the Tian Dynasty controlled by the scholars was because of the ubiquitous clan and clan relationship. Low work efficiency, soaring foreign affairs costs, and extremely limited expansion capacity. (Can be closed in the settings. After closing, all countries that are not enlisted will automatically become ordinary tributaries)"
+
+
+
+
+sob_dongbei:0 "Northeast Han Chinese"
+sob_low_karma:0 "Chinese Buddhism: Low Karma"
+sob_medium_karma:0 "Chinese Buddhism: Middle Karma"
+sob_high_karma:0 "Chinese Buddhism: High Karma"
+sob_catholic_reform_desire:0 "Crusade Reform"
+ sob_new_religion_mission:0 "Open a new religion"
+shishen_estate_events.13.t:0 "Land reform was opposed by gentry"
+shishen_estate_events.13.d:0 "Gentry was born in the Song Dynasty as the foundation of our country’s rule, providing officials for the government and ruling the place. The existence of the imperial examination system has led to the emergence of gentry characterized by learning Confucian teaching theory and poetry ritual heirs. The imperial examination The emergence of the system sets the way in which the world’s people participate in the distribution of national interests as an understanding and elaboration of Confucian theory, so that the style of literature rises and the strength of force declines day by day. Confucianism is a philosophy and moral code that respects ghosts and gods. China used to be in an advanced position. However, it is not only a certain science that depends on maintaining society. Philosophy can only promote social productivity when it is used as a guiding doctrine rather than the only "avenue" that overwhelms other disciplines. Self-Confucianism becomes Studies such as Xianxue, engineering, agriculture and military science have been reduced to "paths" because of the inability to participate in the distribution of national interests. The elites of a country are all philosophers, but what the country needs for specific affairs is actual bureaucracy with practical ability. Profession specializes in Confucianism, and there are great Confucian studies and explanations. It is enough for other people to learn and understand the research results. If we want to change the suppression of Confucianism in other disciplines, let Confucianism return to its guiding ideological status, which is enough to confuse the people from Confucianism. Hao first rescued from the poor scriptures, then we need the support of other classes. Having one class of support can consume no land reform. Four classes of support, each time you complete the land reform, you will get 1 military tradition, 10 tail king and 10 points. Elite."
+  shishen_estate_events.13.a:0 "Got it."
+sob_catholic:0 "Catholic Patriotic Association"
+sob_catholic_religion_desc:0 ""The Catholic Patriotic Association is a group of patriotic and loving people voluntarily formed by Catholic priests across the country. "第၎ag: "The purpose of the association is to unite and lead the Catholic priests across the country, support the leadership of the Chinese Communist Party and the socialist system, abide by the national constitution, laws, regulations and policies; hold high the banner of patriotism and love education. Adhere to the principle of independence and self-management in economic and church affairs, maintain national sovereignty and autonomy in church affairs, and adapt to the socialist society. ၣgq democratic teaching spirit assists educational administration organizations in doing pastoral evangelization work; guides the nation’s ministers Play an active role in promoting economic and social development and contribute to the maintenance of the motherland's unity, national unity, social harmony, religious harmony, and world peace. ""
+sob_reformed:0 "Reformed Holy Date"
+sob_reformed_religion_desc:0 "Han Biography Reformed Branch"
+sob_orthodox:0 "Han Chuan Orthodox Church"
+sob_orthodox_religion_desc:0 "Han Chuan Orthodox Church"
+sob_coptic:0 "Chinese Coptic Orthodox Church"
+
+sob_coptic_religion_desc:0 "Chinese Coptic Orthodox Church"
+ sob_mahayana:0 "Chinese Buddhism"
+  sob_mahayana_religion_desc:0 "Chinese Buddhism is a Buddhist school divided by geographical location, spread in China, Japan, the Korean Peninsula and other places. It is a branch of Northern Buddhism, mainly Mahayana Buddhism. Historically, Han Buddhism Buddhism is influenced by both Northern Buddhism and Southern Buddhism, but Northern Buddhism is more influential, and Southern Buddhism only spreads in Yunnan and other places. The influence of Han Buddhism spread with Chinese forces to the Korean Peninsula and Japan With Vietnam and other places, and has influenced Tibetan Buddhism in later generations."
+ 
+sob_sunni:0 "Chinese Islamic Association"
+sob_sunni_religion_desc:0 "Promote the fine tradition of patriotism and love in Islam, practise respecting the Lord and loving people, advocating for the two generations of Jiqing, adhering to the idea of ​​peace and middleway, adhering to the principle of independence and self-management, maintaining religious harmony, national unity, social stability, motherland unity and the world Peace, contribute to the promotion of economic and social development and the construction of a harmonious society."
+sob_shinto:0 "Confucianized Shintoism"
+sob_shinto_religion_desc:0 "Confucianized Shintoism"
+
+ sob_hinduism:0 "Han Biography of Hinduism"
+  sob_hinduism_religion_desc:0 "Han Biography of Hinduism"
+ 
+ sob_shamanism:0 "Miao Frontier Witch"
+  sob_shamanism_religion_desc:0 "Miaojiang Witch"
+ sob_anglican:0 "Han Chuan Sheng Kung Hui"
+  sob_anglican_religion_desc:0 "Han Chuan Sheng Kung Hui"
+  sob_shisuhua_reform_tooltip_1:0 "Unlock §R Religion§!: Tolerance, §Y Exile System§!, Abolish §R Creed§!: Moralism"
+    sob_shisuhua_reform_tooltip_2:0 "Unlock §G Creed§!: Pragmatism, Unlock §Y Don’t Offend by Word§!, Abolish §R Imperial Examination§!: Poetry and Song Fu"
+        sob_shisuhua_reform_tooltip_3:0 "Unlock positivism, abolish §R Creed§!: Demilitarization."
+             sob_shisuhua_reform_tooltip_4:0 "Unlock §G Imperial Examination§!: Sword§!, §G Creed§!: Gentleman Six Arts§! ."
+                    sob_shisuhua_reform_tooltip_5:0"Unlock Zhongjun Patriotic, Unlock Shinong Industry and Commerce, Unlock Book Essay, Unlock Integrity Education Creed."
+                         sob_shisuhua_reform_tooltip_6:0 "The citizen class will support land reform"
+sob_society_warrior_reform_tooltip_1:0 "It is allowed to move the town of Central Plains princes and satellite nations."
+sob_society_warrior_reform_tooltip_2:0 "Soldier will support land reform"
+sob_shangren_reform_7:0 "Businessmen will support land reform"
+sob_court_reform_tooltip_6:0 "The royal family will support land reform"
+sob_sob_society_warrior_reform_dip_tooltip:0 "Complete 10 vassal quests"
+                            
+  sob_nobles_power_up_title:0 "Rise of the Army"
+                            
+                          
+            sob_diss_qinwang_title:0 "Cut Fan"
+                            
+            sob_diss_qinwang_desc:0 "Although the princes have nothing to do in their territories, most of them enjoy privileges. If we want to smash the shackles that bind the royal family, then we better abolish these unreasonable privileges."
+          
+                            
+                            
+sob_reform_mission_title:0 "Transferring Contradictions"
+sob_reform_mission_desc:0 "The country gradually lost its former glory under the influence of Chaotang, social and religious issues. In order to reduce the resistance to reform, we can transfer out the domestic contradictions."
+sob_religion_reform_title:0 "Religion"
+sob_religion_reform_desc:0 "The existence of the imperial examination system has led to the emergence of gentry characterized by the teaching theory of Confucianism and the heirlooms of poetry and rituals. The emergence of the imperial examination system sets the way for people to participate in the distribution of national interests as an understanding and elaboration of Confucian theory As a result, the literary style is rising day by day, and the country's yang energy is declining. Confucianism, as a philosophy and moral code that respects ghosts and gods, has long been in an advanced position in the ancient world. However, maintaining society depends on more than a subject. Philosophy also Only ၧ (W as a guiding doctrine and not the only "avenue" that overwhelms other disciplines, has an effect on social productivity. Self-Confucianism has become a prominent science, engineering, medicine, agriculture and military science, etc., because it cannot participate in the distribution of national interests steadily. It is reduced to a "small path." The elites of a country are all philosophers, but what the country needs for specific affairs is the bureaucratic bureaucracy of ቧ᝾R's ability to do things. If we want to change the suppression of Confucianism on other disciplines, it is enough to return to Confucianism. The guiding ideological status of the people has rescued the people from the Confucian theory, and the Confucian religious personnel who study philosophy are enough. Other industries are also essential for the prosperity of the country."
+sob_religion_import_title:0 "Religious Import"
+sob_religion_import_desc:0 "With the end of the troubled times and the revival of trade, many new religions have entered our country. To avoid potential threats, we'd better seek knowledge from other countries in order to better control the churches in the country."
+sob_harmonized_pagan_title:0 "Educate the Primitive Religion"
+sob_harmonized_pagan_desc:0 "Primitive religion is a belief generated in the early days of human society, mostly fetishism or ancestor worship. Although primitive, its collected knowledge of natural geographical phenomena is still very useful."
+sob_harmonized_chr_title:0 "Educate Christianity"
+sob_harmonized_chr_desc:0 ""
+
+sob_harmonized_mu_title:0 "Cultivate Islam"
+sob_harmonized_mu_desc:0 ""
+sob_religious_idea_group_mission_title:0 "Religious Commission"
+sob_religious_idea_group_mission_desc:0 "With the influx of foreign religions, the old system can no longer meet the state’s leadership of the new churches, so by sorting out the new organizational knowledge brought by each religion, we can set up new institutions to ensure normal operation."
+
+sob_court_reform_title:0 "Royal"
+sob_court_reform_desc:0 "The royal family is the head of the world's nobles. However, to prevent the rebellion of the vassal and restrict the princes from committing traitors, the emperor Chengzu formulated the policy of cutting the vassal and forbidding the closure of the city and the prohibition of the royal family from political and business affairs. In addition to the policy of the eternal royal family, It directly led to the growth of the population of the first family that should have been the pillar of the country, but it has been dying. It is forbidden to go into politics and business, although it does not objectively compete with the people, but the huge clan can only rely on financial support, and later it has actually become More serious burden. In the middle and late Ming Dynasty, many emperors also carried out reforms to reduce the financial burden, but there was a clan of the general title, which could only beg on the streets. The prohibition of political and economic commerce, the royal family directly restricted the royal family to the country. Ability to contribute."
+
+sob_abolish_royal_shangye_ban_title:0 "Repeal the ban on doing business"
+sob_abolish_royal_shangye_ban_desc:0 "Allow clan children to make their own living and engage in business"
+
+sob_rise_royal_army_title:0 "Recruit Clan Army"
+sob_rise_royal_army_desc:0 "By recruiting the impoverished clan to join the army, it can solve the problem of clan employment and protect the army's loyalty and quality."
+sob_abolish_royal_official_ban_title:0 "Repeal Ban on Officials"
+sob_abolish_royal_official_ban_desc:0 "Allow the clan to break the shackles for the official imperial examination, giving the emperor an additional support force in the court."
+sob_abolish_royalforever_title:0 "Abolish the Eternal Royal"
+sob_abolish_royalforever_desc:0 "Clan status diminishes, unless military merit, three generations for the people."
+
+sob_shisuhua_reform_title:0 "Philosophy"
+sob_shisuhua_reform_desc:0 "Confucianism has been increasingly superstitious since Cheng Zhuli established the concept of "avenue" and "heavenly principle", and he has lost the original meaning of exploration.
+
+sob_lixinghua_title:0 "Rationalization"
+sob_lixinghua_desc:0 "Transfer the focus of Confucianism work from Superstition Avenue to actual work."
+
+sob_new_knowledge_title:0 "New Learning"
+sob_new_knowledge_desc:0 "Recently, merchants in the far west brought news of the revival of ancient Greek and Roman culture. Stones from other mountains can attack jade, and the introduction of new studies will promote the progress of Confucianism."
+sob_kejufugu_aspect_title:0 "Examination Retro"
+sob_kejufugu_aspect_desc:0 "The imperial examinations in the past were divided into a number of subjects such as Ming Jing Ming Jing Ming Jing, and not only philosophers in Jinshi subjects, but also talents in practical subjects such as doctors and soldiers. The retrograde movement of the Imperial Examination can not only weaken the opposition of the gentry, It can also allow the knowledge that has been kept for a long time to be re-learned and practiced by our elites."
+
+sob_shuyeyouzhuangong_title:0 "Shen Nong Business"
+sob_shuyeyouzhuangong_desc:0 "Shandong, industry and commerce are all businesses."
+
+sob_weiwuzhuyi_zhexuehua_title:0 "Materialism"
+sob_weiwuzhuyi_zhexuehua_desc:0 ""
+
+sob_society_reform_title:0 "Society"
+sob_society_reform_desc:0 ""
+
+sob_nobles_idea_title:0 "New Noble"
+sob_nobles_idea_desc:0 ""
+
+sob_conquer_new_lands_title:0 "Conquer New Land"
+sob_conquer_new_lands_desc:0 ""
+
+sob_new_vassal_title:0 "10 vassals"
+sob_new_vassal_desc:0 "The land within the customs is already the limit of the expansion of the tyrannical dictatorship. In order to adapt to the needs of ruling more extensive and remote and underdeveloped land, we need to separate the princes and rural lords locally."
+
+sob_refed_title:0 "Refeudalization"
+sob_refed_desc:0 "As a feudal country in feudal times, the basis of military power lies in the noble class, a group of soldiers eager for military feudal lords. Otherwise, once the financial crisis is encountered, the current recruitment system will collapse, leaving the court with no soldiers available. Situation..."
+
+
+sob_new_national_religious_mission_title:0 "New National Church"
+sob_new_national_religious_mission_desc:0" "
+
+sob_royal_forever_acts:0 "Abolish the Eternal Royal"
+sob_china_naval_dominance:0 "Naval Hegemony"
+sob_abolish_official_ban:0 "Royal Military and Political Bureaucracy"
+sob_nobles_rework:0 "New Noble"
+sob_re_fed:0 "Refeudalization"
+
+

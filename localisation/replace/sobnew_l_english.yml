@@ -1,0 +1,282 @@
+﻿l_english:
+sob_han_reform_gov_jueyi_title:0 "Chinese Empire Reform"
+sob_han_reform_gov_jueyi_desc:0 ""
+sob_keju_shangwu:0 "Promote Warriors"
+sob_keju_shangwu_desc:0 ""
+sob_keju_shicigefu:0 "Promote Poets"
+sob_keju_shicigefu_desc:0 ""
+sob_ai_mission_tooltip:0""
+sob_keju_fenke:0 "More Subjects"
+sob_keju_fenke_desc:0 ""
+
+
+sob_jingdian_easy_no_gov_mode_title:0 "Reformation：Classical(No government Changes)"
+sob_jingdian_easy_no_gov_mode_desc:0 ""
+
+sob_east_ming_modifier:0 "Future Empire"
+
+
+
+sob_zhongshang:0 "Merchant"
+sob_zhongshang_desc:0 ""
+sob_shushengtongzhi:0 "Shishen"
+sob_shushengtongzhi_desc:0 ""
+sob_qunonggengzhan:0 "Soldiers"
+sob_qunonggengzhan_desc:0 ""
+sob_quefa_baohu_shibing:0 "Inward Perfection"
+sob_quefa_baohu_shibing_desc:0 ""
+sob_shibing:0 "Warriors' Empire"
+sob_shibing_desc:0 ""
+sob_shangren:0 "Merchants' Empire"
+sob_shangren_desc:0 ""
+sob_gongren:0 "Workers' Empire"
+sob_gongren_desc:0 ""
+sob_chinese_monarchy_name:0 "Chinese Empire"
+sob_chinese_monarchy_desc:0""
+
+sob_qinwang_ling:0 "Qinwang State"
+sob_qinwang_ling_desc:0""
+
+
+
+CALL_DIET_SOB_WARRIOR:0"Imperial Combat Examnation"
+sob_fubing_jiaqiang_reform_tooltip_1:0"Promote Banners, no Churches"
+sob_jiaohui_jiaqiang_reform_tooltip_2:0"Promote Churches , no Banners"
+
+sob_jingdian_easy_mode_title:0 "Reformation：Classical(easy mode)"
+sob_jingdian_easy_mode_desc:0"Revoking Shishen's land costs nothing."
+sob_jingdian_hard_mode_title:0 "Reformation：Classical(hard mode)"
+sob_jingdian_hard_mode_desc:0"Decreases mandate prestige when revoking Shishen's land"
+sob_reform_gov_mode_title:0 "Reformation：Government(new mode)"
+sob_reform_gov_mode_desc:0"No shishen estate. All debuffs are now government reforms, can be removed through Reformation Mission Tree"
+sob_reform_gov_hard_mode_title:0 "Reformation：Both(Very hard)"
+sob_reform_gov_hard_mode_desc:0"Have to deal with government reformation and countryside reformation at the same time."
+
+
+
+ sob_scelestial_empire_han:0 "Han Empire System"
+ sob_scelestial_empire_han_desc:0 ""
+sob_scelestial_empire_tng:0 "Tang Empire System"
+ sob_scelestial_empire_tng_desc:0 "\n -§GFuBing won't cost Diplomats or Missionaries§!\n -§Same Culture Group provinces will provide 1.25% Fubing amount§!"
+ sob_scelestial_empire_zhou:0 "Zhou Empire System"
+ sob_scelestial_empire_zhou_desc:0 ""
+sob_scelestial_empire_qin:0 "Qin Empire System"
+sob_scelestial_empire_qin_desc:0 ""
+  sob_scelestial_empire_song:0 "Song Empire System"
+ sob_scelestial_empire_song_desc:0 ""
+ 
+ sob_chinese_monarchy_name:0 "Chinese Empire"
+
+ celestial_empire:0 "Song System(Ming)"
+ celestial_empire_desc:0 ""
+
+
+ 
+
+sob_keju_reform_gov:0 "Imperial Examnation"
+sob_ecnomy_reform_gov:0 "Ecnomy"
+sob_shehuidiwei_reform_gov:0 "Society"
+sob_huguo_order:0 "Retired Officers"
+sob_huguo_order_desc:0 ""
+sob_gewu_order:0 "Workers' Committe"
+sob_gewu_order_desc:0 ""
+sob_tiandi_order:0 "Tiandi Church"
+sob_tiandi_order_desc:0 ""
+
+
+
+sob_huguo_order_1:0 "Retired Officers""
+sob_huguo_order_1_desc:0 ""
+sob_gewu_order_1:0 "Workers' Committe"
+sob_gewu_order_1_desc:0 ""
+sob_tiandi_order_1:0 "Tiandi Church"
+sob_tiandi_order_1_desc:0 ""
+
+ 
+ 
+ 
+ sob_sob_warriors_modifier_1:0 "No stable military Reward System" 
+sob_sob_warriors_modifier_2:0 "No offical Promoting Warrior policy" 
+sob_confucianism_reform_tooltip_16:0 "Establish stable military Reward System"
+sob_confucianism_reform_tooltip_15:0 "Establish offical Promoting Warrior polic"
+
+
+sob_land_jiangnan_mission_title:0 "Jiangnan" 
+sob_land_jiangnan_mission_desc:0 ""
+sob_land_abolish_shishen_mission_title:0 "Abolish Shishen Estate" 
+sob_land_abolish_shishen_mission_desc:0 ""
+
+sob_land_reform_mission_title:0 "Land Reform" 
+sob_land_reform_mission_desc:0 ""
+
+sob_land_reform_cannon_mission_title:0 "Shandong" 
+sob_land_reform_cannon_mission_desc:0 ""
+sob_land_shu_mission_title:0 "Liaoning" 
+sob_land_shu_mission_desc:0 ""
+sob_land_qin_mission_title:0 "Xian" 
+sob_land_qin_mission_desc:0 ""
+
+sob_land_reform_mission_tooltip_1:0 "Have one estate supporting our land reformation" 
+
+sob_land_reform_mission_tooltip_2:0 "All four estates are supporting our land reformation" 
+
+sob_fubing_headquarter:0 "Zhechong Fu" 
+sob_fubing_yes:0 "Army Organization" 
+sob_fubing_events.7.t:0 "Restablish Fubing System" 
+sob_fubing_events.7.d:0 "Fu bing system was restablished. We need to choose between Banners and Church." 
+sob_fubing_tooltip_on_of_off:0 "Need to active Banner system, and disable Church System" 
+sob_fubing_events.21.b:0 "Buff Church"
+sob_fubing_events.21.a:0 "Buff Banners"  
+   sob_jitian_title:0 "Reclaim Chinese Empire"   
+   sob_jitian_desc:0 "Remove enemy cores in Chinese areas"                    
+  sob_duhu_vassal_title:0 "Duhu State"
+  sob_duhu_vassal_title_plural:0 "Duhu State"
+  sob_duhu_vassal_is_our:0 "§Y$NAME$§!is our Duhu State."
+  sob_duhu_vassal_long_desc:1 ""
+
+sob_han_roman_empire_converted_title:0 "Reestablish Roman Empire"
+sob_han_roman_empire_converted_desc:0 ""
+
+ 
+
+sob_han_byz_empire_converted_title:0 "Reestablish"
+sob_han_byz_empire_converted_desc:0 ""
+
+ 
+ 
+ sob_fubing_or_church_config_title:0 "Choose our Banner&Church policy" 
+sob_fubing_or_church_config_desc:0 "" 
+ 
+ 
+ 
+ sob_celestial_han:0 "Han" 
+ 
+ 
+ 
+ 
+ sob_new_nobles:0 "New Promoted Noble"
+sob_traditional_nobles:0 "Classical Noble"
+
+sob_new_nobles_MECHANIC_TOOLTIP:0 "New Promoted Noble"
+sob_traditional_nobles_MECHANIC_TOOLTIP:0 "Classical Noble"
+
+ sob_scelestial_empire_han_reform_republic:0 "Han Empire Legacy"
+ sob_scelestial_empire_han_reform_republic_desc:0 ""
+sob_scelestial_empire_tng_reform_republic:0 "Tang Empire Legacy"
+ sob_scelestial_empire_tng_reform_republic_desc:0 "\n -§GFuBing won't cost Diplomats or Missionaries§!\n -§Same Culture Group provinces will provide 1.25% Fubing amount§!"
+ sob_scelestial_empire_zhou_reform_republic:0 "Zhou Empire Legacy"
+ sob_scelestial_empire_zhou_reform_republic_desc:0 ""
+sob_scelestial_empire_qin_reform_republic:0 "Qin Empire Legacy"
+sob_scelestial_empire_qin_reform_republic_desc:0 ""
+sob_celestial_empire_song_reform_republic:0 "Song Empire Legacy"
+sob_celestial_empire_song_reform_republic_desc:0 ""
+ 
+ sob_chinese_republic_name:0 "Chinese Republic"
+ sob_chinese_republic_name_desc:0 ""
+ sob_chinese_republic_desc:0 ""
+ sob_keju_reform_republic_gov:0 "Examnation"
+ sob_change_to_monarchy_reform:0 "Convert to Monarchy"
+ sob_change_to_monarchy_reform_desc:0 ""
+ sob_top_change_monarchy_reform:0 "Top Government Reform"
+ sob_top_change_monarchy_reform_desc:0 ""
+ sob_tradition_reform_legacy_china:0 "Empire Legacy"
+ 
+ sob_han_reform_gov_jueyi_republic_title:0 "Convert to Chinese Republic"
+ sob_han_reform_gov_jueyi_republic_desc:0 ""
+ 
+ sob_celstial_top_gov_vs:0 "Celestial Empire System"
+ 
+ sob_han_reform_gov_jueyi_republic_rev_title:0 "Revolutionary Republic under Chinese Republic"
+ sob_han_reform_gov_jueyi_republic_rev_desc:0 ""
+ 
+ sob_han_reform_gov_jueyi_monarchy_rev_title:0 "Revolutionary Empire under Chinese Empire"
+ 
+ sob_han_reform_gov_jueyi_monarchy_rev_desc:0 ""
+ 
+ sob_trading_city:0 "Chinese Client State"
+ sob_trading_city_desc:0 "Can be convert to Zongdu State through Diplomacy action"
+ 
+ sob_merchants_reform:0 "Chinese Client State"
+ sob_merchants_reform_desc:0 "Can be convert to Zongdu State through Diplomacy action"
+ TRADING_CITY_TOOLTIP:0 "Establish§YTrading City§!or§YChinese Client State§!"
+sob_colony_title:0 "Zongdu State"
+sob_colony_title_plural:0 "Zongdu State"
+sob_colony_is_our:0 "§Y$NAME$§!is our Zongdu State."
+sob_colony_long_desc:1 "Organizations to manage old world Colonies."
+ 
+ sob_change_to_republic_reform:0 "Convert to Chinese Republic"
+ sob_change_to_republic_reform_desc:0 ""
+
+ 
+sob_colony_s_state_title:0 "Establish Zongdu Area"
+sob_colony_s_state_tooltip:0 "Establish ZongDu area, this is an old world colony"
+sob_colony_s_state_desc:0 "Establish ZongDu area, this is an old world colony"
+sob_colony_s_state_dialog:0 "Establish ZongDu area, this is an old world colony."
+
+sob_colony_global_state_title:0 "Re-organized Imperial Colonies"
+sob_colony_global_state_tooltip:0 "Take their colonies vassals and Duhu states. Give them open market buff."
+sob_colony_global_state_desc:0 "Take their colonies vassals and Duhu states. Give them open market buff."
+sob_colony_global_state_dialog:0 "Take their colonies vassals and Duhu states. Give them open market buff."
+
+
+sob_fanguo:0 "Chinese Market"
+sob_colony_global_state:0 "Re-organized Imperial Colonies"
+
+sob_china_market:0 "Open Market"
+
+sob_china_low_mandate:0 "Lost Mandate"
+
+
+sob_free_invasion_1_title:0 "Confirm Free War"
+sob_free_invasion_1_tooltip:0 "Confirm They have right to fight who-ever they want, stop them from influencing our mandate."
+sob_free_invasion_1_desc:0 "Confirm They have right to fight who-ever they want, stop them from influencing our mandate."
+sob_free_invasion_1_dialog:0 "Confirm They have right to fight who-ever they want, stop them from influencing our mandate."
+
+sob_free_invasion_2_title:0 "Cancel Free War Confirmation"
+sob_free_invasion_2_tooltip:0 "Revoke Confirmation,  them will influence our mandate."
+sob_free_invasion_2_desc:0 "Revoke Confirmation,  them will influence our mandate."
+sob_free_invasion_2_dialog:0 "Revoke Confirmation,  them will influence our mandate."
+
+
+sob_tri_ask_for_religion_title:0 "Ask For Religion Converting Help"
+sob_tri_ask_for_religion_tooltip:0 "Add 3 trust,cost 100 gold, one of our province will become the imperial religion."
+sob_tri_ask_for_religion_desc:0 "Add 3 trust,cost 100 gold, one of our province will become the imperial religion."
+sob_tri_ask_for_religion_dialog:0 "Add 3 trust,cost 100 gold, one of our province will become the imperial religion."
+
+sob_tri_ask_for_culture_title:0 "Ask For Culture Converting Help"
+sob_tri_ask_for_culture_tooltip:0 "Add 5 trust,cost 200 gold, one of our province will become the imperial culture."
+sob_tri_ask_for_culture_desc:0 "Add 5 trust,cost 200 gold, one of our province will become the imperial culture."
+sob_tri_ask_for_culture_dialog:0 "Add 5 trust,cost 200 gold, one of our province will become the imperial culture."
+
+
+ sob_fubing_events.60.t:0 "Will ai convert to Chinese Empire?"
+sob_fubing_events.60.d:0 "Set if ai will convert to Chinese Empire automatically when it's possible."
+sob_fubing_events.60.a:0 "Yes!"
+
+sob_fubing_events.60.b:0 "No!"
+
+
+sob_testing_mode_extream_farming_off_title:0 "Testing:Maximum Absolutism(Disable)"
+sob_testing_mode_extream_farming_off_desc:0 ""
+sob_testing_mode_extream_farming_title:0 "Testing:Maximum Absolutism(Enable)"
+sob_testing_mode_extream_farming_desc:0 ""
+sob_testing_farmming:0 "Absolutism's Limitation"
+
+
+
+
+
+
+
+
+
+
+
+sob_reform_gov_hard_mode_title:0 "Reformation：Both (Normal Mode)"
+sob_reform_gov_hard_mode_desc:0"With shishen estate and government debuffs.But the debuffs are nerfed."
+sob_reform_gov_hardest_mode_desc:0"With shishen estate and government debuffs."
+
+sob_sob_hard_gov_1:0 "Normal Mode: Keju"
+sob_sob_hard_gov_2:0 "Normal Mode: Top government"
+sob_sob_hard_gov_3:0 "Normal Mode: Society"
+sob_sob_hard_gov_4:0 "Normal Mode: Ecnomy"
